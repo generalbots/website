@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>General Bots — Open Source AI Bot Platform</title>
+  <meta name="description" content="General Bots® — The Open Source AI Bot Platform. Build AI bots with the simplicity of BASIC. Deploy on WhatsApp, Teams, Slack, and more. Self-host or choose a certified hosting provider.">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="General Bots — Open Source AI Bot Platform">
+  <meta property="og:description" content="Build AI bots with the simplicity of BASIC. Open source LLM orchestration. Deploy on WhatsApp, Teams, Slack, and more.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://generalbots.org">
+  <meta property="og:image" content="https://generalbots.org/logo-square.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="/css/site.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "General Bots",
+    "url": "https://generalbots.org",
+    "logo": "https://generalbots.org/logo-square.svg",
+    "description": "The Open Source AI Bot Platform. Self-host or choose a certified hosting provider.",
+    "telephone": "+55-21-4040-2160",
+    "areaServed": "BR",
+    "sameAs": [
+      "https://github.com/GeneralBots",
+      "https://instagram.com/generalbots"
+    ]
+  }
+  </script>
+  <style>
+    .phone-bar{background:#111;color:#fff;font-size:.75rem;padding:.375rem 0;text-align:center;letter-spacing:.02em}
+    .phone-bar a{color:#fff;text-decoration:none}
+    .nav-header{background:rgba(255,255,255,.8);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid rgba(0,0,0,.06);position:sticky;top:0;z-index:100}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:.75rem 1rem;max-width:1200px;margin:0 auto}
+    .nav-logo{display:flex;align-items:center;gap:.5rem}
+    .nav-logo img{height:33px;width:140px}
+    .nav-desktop{display:flex;align-items:center;gap:.25rem}
+    .nav-link{padding:.5rem .75rem;font-size:.8125rem;font-weight:500;color:var(--foreground);border-radius:.375rem;transition:background .15s;white-space:nowrap}
+    .nav-link:hover{background:var(--muted)}
+    .nav-dropdown{position:relative}
+    .nav-dropdown-trigger{padding:.5rem .75rem;font-size:.8125rem;font-weight:500;color:var(--foreground);border-radius:.375rem;cursor:pointer;display:inline-flex;align-items:center;gap:.25rem;background:none;border:none;transition:background .15s;white-space:nowrap}
+    .nav-dropdown-trigger:hover{background:var(--muted)}
+    .nav-dropdown-trigger svg{width:.75rem;height:.75rem;transition:transform .2s}
+    .nav-dropdown-content{position:absolute;top:100%;left:0;background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:.5rem;box-shadow:0 8px 24px rgba(0,0,0,.1);padding:.375rem 0;min-width:200px;z-index:200}
+    .nav-dropdown-content a{display:block;padding:.5rem 1rem;font-size:.8125rem;font-weight:400;color:var(--foreground);transition:background .15s;white-space:nowrap}
+    .nav-dropdown-content a:hover{background:var(--muted)}
+    .nav-mobile-toggle{display:flex;align-items:center;justify-content:center;width:2.5rem;height:2.5rem;background:none;border:1px solid var(--border);border-radius:.375rem;cursor:pointer;color:var(--foreground)}
+    .mobile-menu{background:#fff;border-bottom:1px solid var(--border);padding:1rem}
+    .mobile-menu a,.mobile-menu button{display:block;width:100%;text-align:left;padding:.625rem .75rem;font-size:.875rem;font-weight:500;color:var(--foreground);background:none;border:none;border-radius:.375rem;cursor:pointer}
+    .mobile-menu a:hover,.mobile-menu button:hover{background:var(--muted)}
+    .mobile-menu .mobile-sub{padding-left:1.25rem;font-weight:400;font-size:.8125rem;color:var(--muted-foreground)}
+    .mobile-dropdown-content{padding-left:1rem}
+    .mobile-dropdown-content a{font-size:.8125rem;font-weight:400;color:var(--muted-foreground)}
+    .hero-section{position:relative;overflow:hidden;padding:6rem 0 4rem;background:linear-gradient(135deg,#f8f8f8 0%,#fff 50%,#f8f8f8 100%)}
+    .hero-gear{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);opacity:.03;pointer-events:none}
+    .hero-content{position:relative;z-index:1;text-align:center;max-width:48rem;margin:0 auto;padding:0 1rem}
+    .hero-content .badge{margin-bottom:1.5rem}
+    .hero-content h1{font-size:3rem;font-weight:700;line-height:1.1;letter-spacing:-.04em;margin-bottom:1.25rem}
+    @media(min-width:768px){.hero-content h1{font-size:3.75rem}}
+    .hero-content .subtitle{font-size:1.125rem;color:var(--muted-foreground);max-width:36rem;margin:0 auto 2rem;line-height:1.6}
+    .hero-buttons{display:flex;align-items:center;justify-content:center;gap:1rem;flex-wrap:wrap;margin-bottom:3rem}
+    .works-with{text-align:center;padding-top:2rem;border-top:1px solid rgba(0,0,0,.06)}
+    .works-with-label{font-size:.75rem;font-weight:500;color:var(--muted-foreground);text-transform:uppercase;letter-spacing:.05em;margin-bottom:.75rem}
+    .works-with-logos{display:flex;align-items:center;justify-content:center;gap:2rem;flex-wrap:wrap}
+    .works-with-logos .works-logo{display:flex;align-items:center;gap:.5rem;font-size:.8125rem;font-weight:500;color:var(--muted-foreground);opacity:.6;transition:opacity .2s}
+    .works-with-logos .works-logo:hover{opacity:1}
+    .works-with-logos .works-logo svg{width:24px;height:24px}
+    .stats-section{padding:3rem 0;border-top:1px solid rgba(0,0,0,.06);border-bottom:1px solid rgba(0,0,0,.06)}
+    .stats-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;max-width:56rem;margin:0 auto;text-align:center}
+    @media(min-width:768px){.stats-grid{grid-template-columns:1fr 1fr 1fr 1fr}}
+    .stat-item .stat-value{font-size:2.25rem;font-weight:700;font-family:var(--font-display),sans-serif;color:var(--foreground)}
+    .stat-item .stat-label{font-size:.8125rem;color:var(--muted-foreground);margin-top:.25rem}
+    .section-label{display:inline-flex;align-items:center;gap:.375rem;padding:.375rem .75rem;font-size:.75rem;font-weight:500;border:1px solid var(--border);border-radius:9999px;background:rgba(255,255,255,.8);color:var(--muted-foreground);margin-bottom:1rem}
+    .section-heading{font-size:2.25rem;font-weight:700;letter-spacing:-.03em;line-height:1.15;margin-bottom:.75rem}
+    @media(min-width:768px){.section-heading{font-size:2.75rem}}
+    .section-subtitle{font-size:1.0625rem;color:var(--muted-foreground);max-width:36rem;margin:0 auto;line-height:1.6}
+    .feature-card{background:#fff;border:1px solid rgba(0,0,0,.06);border-radius:1rem;padding:2rem;transition:transform .3s ease,box-shadow .3s ease}
+    .feature-card:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(0,0,0,.08)}
+    .feature-card .icon-box{margin-bottom:1rem}
+    .feature-card h3{font-size:1.125rem;font-weight:600;margin-bottom:.5rem;color:var(--foreground)}
+    .feature-card p{font-size:.875rem;color:var(--muted-foreground);margin-bottom:1rem;line-height:1.5}
+    .use-case-card{background:#fff;border:1px solid rgba(0,0,0,.06);border-radius:1rem;padding:2rem;transition:transform .3s ease,box-shadow .3s ease}
+    .use-case-card:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(0,0,0,.08)}
+    .use-case-card .icon-box{margin-bottom:1rem}
+    .use-case-card h3{font-size:1.125rem;font-weight:600;margin-bottom:.5rem}
+    .use-case-card p{font-size:.875rem;color:var(--muted-foreground);line-height:1.5}
+    .hosting-card{background:#fff;border:1px solid rgba(0,0,0,.06);border-radius:1rem;padding:1.5rem;text-align:center;transition:transform .3s ease,box-shadow .3s ease}
+    .hosting-card:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(0,0,0,.08)}
+    .hosting-card .hosting-name{font-size:1rem;font-weight:600;margin-bottom:.25rem}
+    .hosting-card .hosting-type{font-size:.75rem;font-weight:500;color:var(--muted-foreground);display:inline-flex;align-items:center;gap:.25rem;padding:.25rem .5rem;background:var(--secondary);border-radius:9999px;margin-bottom:.75rem}
+    .hosting-card .hosting-url{font-size:.8125rem;color:var(--muted-foreground)}
+    .hosting-card .hosting-url a{color:var(--foreground);font-weight:500;text-decoration:underline;text-underline-offset:2px}
+    .faq-section details{background:#fff;border:1px solid rgba(0,0,0,.06);border-radius:.75rem;margin-bottom:.75rem;overflow:hidden}
+    .faq-section summary{padding:1rem 1.25rem;font-weight:600;font-size:.9375rem;cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+    .faq-section summary::-webkit-details-marker{display:none}
+    .faq-section summary::after{content:'';width:1.25rem;height:1.25rem;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%236b7280' stroke-width='2'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E") center/contain no-repeat;flex-shrink:0;transition:transform .2s}
+    .faq-section details[open] summary::after{transform:rotate(180deg)}
+    .faq-section details .faq-answer{padding:0 1.25rem 1.25rem;font-size:.875rem;color:var(--muted-foreground);line-height:1.6}
+    .cta-section{background:var(--foreground);color:#fff;padding:5rem 0;text-align:center}
+    .cta-section h2{font-size:2.25rem;font-weight:700;margin-bottom:1rem}
+    @media(min-width:768px){.cta-section h2{font-size:2.75rem}}
+    .cta-section p{font-size:1.0625rem;color:rgba(255,255,255,.7);max-width:36rem;margin:0 auto 2rem}
+    .btn-white{background:#fff;color:var(--foreground);box-shadow:0 1px 3px rgba(0,0,0,.1)}
+    .btn-white:hover{background:#f3f4f6}
+    .btn-outline-white{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.3)}
+    .btn-outline-white:hover{border-color:#fff;color:#fff}
+    .footer{background:#111;color:rgba(255,255,255,.7);padding:4rem 0 0}
+    .footer-grid{display:grid;grid-template-columns:1fr;gap:2rem;margin-bottom:3rem}
+    @media(min-width:768px){.footer-grid{grid-template-columns:2fr 1fr 1fr 1fr}}
+    .footer-brand p{font-size:.875rem;line-height:1.6;margin-top:1rem;max-width:20rem}
+    .footer-col h4{font-size:.8125rem;font-weight:600;color:#fff;text-transform:uppercase;letter-spacing:.05em;margin-bottom:1rem}
+    .footer-col a{display:block;font-size:.8125rem;color:rgba(255,255,255,.6);padding:.25rem 0;transition:color .15s}
+    .footer-col a:hover{color:#fff}
+    .footer-dpo{font-size:.8125rem;line-height:1.6;margin-top:1rem}
+    .footer-dpo strong{color:#fff}
+    .footer-social{display:flex;gap:1rem;margin-top:1.5rem}
+    .footer-social a{display:flex;align-items:center;justify-content:center;width:2.25rem;height:2.25rem;border-radius:.5rem;background:rgba(255,255,255,.1);color:rgba(255,255,255,.7);transition:background .15s,color .15s}
+    .footer-social a:hover{background:rgba(255,255,255,.2);color:#fff}
+    .footer-social a svg{width:1.125rem;height:1.125rem}
+    .footer-bottom{border-top:1px solid rgba(255,255,255,.1);padding:1.5rem 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+    .footer-bottom p{font-size:.75rem;color:rgba(255,255,255,.5)}
+    .footer-bottom-links{display:flex;gap:1.5rem}
+    .footer-bottom-links a{font-size:.75rem;color:rgba(255,255,255,.5);transition:color .15s}
+    .footer-bottom-links a:hover{color:#fff}
+    .footer-logo{height:33px;width:140px;filter:brightness(10)}
+  </style>
+</head>
+<body>
+
+  <div class="phone-bar">
+    <a href="tel:+552140402160">+55 21 4040-2160</a>
+  </div>
+
+  <header class="nav-header">
+    <nav class="nav-inner">
+      <a href="/" class="nav-logo">
+        <img src="/gb-logo.png" alt="General Bots" width="140" height="33">
+      </a>
+      <div class="nav-desktop">
+        <a href="/" class="nav-link">Home</a>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-trigger">
+            General Bots
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="nav-dropdown-content hidden">
+            <a href="/general-bots/llms">LLMs</a>
+            <a href="/general-bots/vector-retrieval">Vector Retrieval</a>
+            <a href="/general-bots/open-source">Open Source</a>
+          </div>
+        </div>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-trigger">
+            Features
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="nav-dropdown-content hidden">
+            <a href="/features/ai-search">AI Search</a>
+            <a href="/features/content-generation">Content Generation</a>
+            <a href="/features/bot-factory">Bot Factory</a>
+            <a href="/features/talk-to-data">Talk to Data</a>
+            <a href="/features/broadcast">Broadcast</a>
+            <a href="/features/train">Train with Well-Known Tools</a>
+            <a href="/features/web-automation">Web Automation</a>
+            <a href="/features/llm-tools">LLM Tools</a>
+            <a href="/features/calling-apis">Calling APIs</a>
+          </div>
+        </div>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-trigger">
+            Integrations
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="nav-dropdown-content hidden">
+            <a href="/integrations/whatsapp">WhatsApp</a>
+            <a href="/integrations/sms">SMS</a>
+            <a href="/integrations/web-chat">Web Chat</a>
+            <a href="/integrations/instagram">Instagram</a>
+            <a href="/integrations/email">E-Mail</a>
+            <a href="/integrations/microsoft-teams">Microsoft Teams</a>
+            <a href="/integrations/google-chat">Google Chat</a>
+            <a href="/integrations/facebook-pages">Facebook Pages</a>
+            <a href="/integrations/slack">Slack</a>
+          </div>
+        </div>
+        <a href="/templates" class="nav-link">Templates</a>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-trigger">
+            Resources
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="nav-dropdown-content hidden">
+            <a href="/resources/considering">Considering</a>
+            <a href="/resources/already-using">Already Using</a>
+            <a href="/resources/community">Community</a>
+            <a href="/resources/marketplaces">Marketplaces</a>
+          </div>
+        </div>
+        <a href="/hosting" class="nav-link">Hosting</a>
+        <a href="/contact" class="nav-link">Contact</a>
+      </div>
+      <div class="gtranslate_wrapper"></div>
+      <button id="mobile-menu-toggle" class="nav-mobile-toggle" aria-label="Toggle menu">
+        <svg class="menu-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        <svg class="close-icon hidden" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+    </nav>
+    <div id="mobile-menu" class="mobile-menu hidden">
+      <a href="/" class="mobile-nav-link">Home</a>
+      <a href="/general-bots/llms" class="mobile-nav-link mobile-sub">LLMs</a>
+      <a href="/general-bots/vector-retrieval" class="mobile-nav-link mobile-sub">Vector Retrieval</a>
+      <a href="/general-bots/open-source" class="mobile-nav-link mobile-sub">Open Source</a>
+      <a href="/features/ai-search" class="mobile-nav-link">AI Search</a>
+      <a href="/features/content-generation" class="mobile-nav-link mobile-sub">Content Generation</a>
+      <a href="/features/bot-factory" class="mobile-nav-link mobile-sub">Bot Factory</a>
+      <a href="/features/talk-to-data" class="mobile-nav-link mobile-sub">Talk to Data</a>
+      <a href="/features/broadcast" class="mobile-nav-link mobile-sub">Broadcast</a>
+      <a href="/features/train" class="mobile-nav-link mobile-sub">Train with Well-Known Tools</a>
+      <a href="/features/web-automation" class="mobile-nav-link mobile-sub">Web Automation</a>
+      <a href="/features/llm-tools" class="mobile-nav-link mobile-sub">LLM Tools</a>
+      <a href="/features/calling-apis" class="mobile-nav-link mobile-sub">Calling APIs</a>
+      <a href="/integrations/whatsapp" class="mobile-nav-link">WhatsApp</a>
+      <a href="/integrations/sms" class="mobile-nav-link mobile-sub">SMS</a>
+      <a href="/integrations/web-chat" class="mobile-nav-link mobile-sub">Web Chat</a>
+      <a href="/integrations/instagram" class="mobile-nav-link mobile-sub">Instagram</a>
+      <a href="/integrations/email" class="mobile-nav-link mobile-sub">E-Mail</a>
+      <a href="/integrations/microsoft-teams" class="mobile-nav-link mobile-sub">Microsoft Teams</a>
+      <a href="/integrations/google-chat" class="mobile-nav-link mobile-sub">Google Chat</a>
+      <a href="/integrations/facebook-pages" class="mobile-nav-link mobile-sub">Facebook Pages</a>
+      <a href="/integrations/slack" class="mobile-nav-link mobile-sub">Slack</a>
+      <a href="/templates" class="mobile-nav-link">Templates</a>
+      <a href="/resources/considering" class="mobile-nav-link">Considering</a>
+      <a href="/resources/already-using" class="mobile-nav-link mobile-sub">Already Using</a>
+      <a href="/resources/community" class="mobile-nav-link mobile-sub">Community</a>
+      <a href="/resources/marketplaces" class="mobile-nav-link mobile-sub">Marketplaces</a>
+      <a href="/hosting" class="mobile-nav-link">Hosting</a>
+      <a href="/contact" class="mobile-nav-link">Contact</a>
+    </div>
+  </header>
+
+  <section class="hero-section">
+    <div class="hero-gear animate-gear-spin">
+      <svg width="600" height="600" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M50 20 L53 30 L60 25 L57 35 L65 33 L60 40 L68 42 L60 47 L65 55 L57 52 L58 60 L53 55 L50 63 L47 55 L42 60 L43 52 L35 55 L40 47 L32 42 L40 40 L35 33 L43 35 L40 25 L47 30 Z" fill="#111" opacity="0.5"/>
+        <circle cx="50" cy="42" r="8" fill="none" stroke="#111" stroke-width="1"/>
+      </svg>
+    </div>
+    <div class="hero-content">
+      <div class="badge">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+        Open Source AI Platform
+      </div>
+      <h1><span class="gradient-text">Build AI Bots with the Simplicity of BASIC</span></h1>
+      <p class="subtitle">Open source LLM orchestration. Deploy on WhatsApp, Teams, Slack, and more. Write bot logic in BASIC — directly in Microsoft Word.</p>
+      <div class="hero-buttons">
+        <a href="/contact" class="btn btn-primary btn-lg">Get Started</a>
+        <a href="https://github.com/GeneralBots" class="btn btn-outline btn-lg" target="_blank" rel="noopener noreferrer">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          View on GitHub
+        </a>
+      </div>
+      <div class="works-with">
+        <p class="works-with-label">Works with</p>
+        <div class="works-with-logos">
+          <div class="works-logo">
+            <svg viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            WhatsApp
+          </div>
+          <div class="works-logo">
+            <svg viewBox="0 0 24 24" fill="#6264A7"><path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm5.25 16.5h-2.25v-3.75h-4.5v3.75H8.25v-9h2.25v3.75h4.5V7.5h2.25v9z"/></svg>
+            Microsoft Teams
+          </div>
+          <div class="works-logo">
+            <svg viewBox="0 0 24 24" fill="#4A154B"><path d="M5.042 15.165a2.285 2.285 0 01-2.286 2.286A2.285 2.285 0 01.47 15.165a2.285 2.285 0 012.286-2.286h2.286v2.286zm1.143 0a2.285 2.285 0 012.286-2.286 2.285 2.285 0 012.286 2.286v5.714a2.285 2.285 0 01-2.286 2.286 2.285 2.285 0 01-2.286-2.286v-5.714zM8.47 10.118A2.285 2.285 0 016.184 7.832a2.285 2.285 0 012.286-2.286 2.285 2.285 0 012.286 2.286v2.286H8.47zm0-1.143a2.285 2.285 0 012.286-2.286 2.285 2.285 0 012.286 2.286 2.285 2.285 0 01-2.286 2.286H8.47V8.975zm5.714 1.143a2.285 2.285 0 012.286-2.286 2.285 2.285 0 012.286 2.286 2.285 2.285 0 01-2.286 2.286h-2.286V10.118zm-1.143 0a2.285 2.285 0 01-2.286 2.286 2.285 2.285 0 01-2.286-2.286V4.404a2.285 2.285 0 012.286-2.286 2.285 2.285 0 012.286 2.286v5.714zm-2.286 5.714a2.285 2.285 0 012.286 2.286 2.285 2.285 0 01-2.286 2.286 2.285 2.285 0 01-2.286-2.286v-2.286h2.286zm1.143 0a2.285 2.285 0 012.286-2.286 2.285 2.285 0 012.286 2.286v5.714a2.285 2.285 0 01-2.286 2.286 2.285 2.285 0 01-2.286-2.286v-5.714zm5.714-2.286a2.285 2.285 0 012.286 2.286 2.285 2.285 0 01-2.286 2.286 2.285 2.285 0 01-2.286-2.286v-2.286h2.286zm0-1.143h-2.286V10.12a2.285 2.285 0 012.286-2.286 2.285 2.285 0 012.286 2.286 2.285 2.285 0 01-2.286 2.286z"/></svg>
+            Slack
+          </div>
+          <div class="works-logo">
+            <svg viewBox="0 0 24 24" fill="#00AC47"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-6h2v6zm4 0h-2v-6h2v6zm-2-8c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1z" opacity=".3"/><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-6h2v6zm4 0h-2v-6h2v6zm-2-8c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1z"/></svg>
+            Google Chat
+          </div>
+          <div class="works-logo">
+            <svg viewBox="0 0 24 24" fill="#E4405F"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            Instagram
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="stats-section reveal">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-value">100%</div>
+          <div class="stat-label">Open Source (MIT Licensed)</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value">10+</div>
+          <div class="stat-label">Channels</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value">5+</div>
+          <div class="stat-label">LLM Providers</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value">&infin;</div>
+          <div class="stat-label">Bots (Unlimited deployments)</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section-lg reveal">
+    <div class="container text-center">
+      <div class="section-label">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+        Core Features
+      </div>
+      <h2 class="section-heading">Everything You Need to Build AI Bots</h2>
+      <p class="section-subtitle mb-12">A complete platform for creating, deploying, and managing intelligent conversational agents across any channel.</p>
+      <div class="grid-3">
+        <div class="feature-card">
+          <div class="icon-box icon-box-lg">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+          </div>
+          <h3>LLM Orchestration</h3>
+          <p>Route tasks to the right model — OpenAI, Anthropic, Google, or self-hosted</p>
+          <ul class="feature-list">
+            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Multi-model routing and fallback</li>
+            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Self-hosted model support</li>
+            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Cost optimization across providers</li>
+          </ul>
+        </div>
+        <div class="feature-card">
+          <div class="icon-box icon-box-lg">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+          </div>
+          <h3>Channel Integration</h3>
+          <p>Deploy on WhatsApp, Teams, Slack, Instagram, Google Chat, SMS, Email, Web Chat</p>
+          <ul class="feature-list">
+            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>One bot, multiple channels</li>
+            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Unified conversation context</li>
+            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Channel-specific formatting</li>
+          </ul>
+        </div>
+        <div class="feature-card">
+          <div class="icon-box icon-box-lg">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+          </div>
+          <h3>BASIC Programming</h3>
+          <p>Write custom bot logic in BASIC — directly in Microsoft Word</p>
+          <ul class="feature-list">
+            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Word-based bot authoring</li>
+            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Simple, readable syntax</li>
+            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Rapid prototyping and iteration</li>
+          </ul>
+        </div>
+        <div class="feature-card">
+          <div class="icon-box icon-box-lg">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+          </div>
+          <h3>AI Search &amp; RAG</h3>
+          <p>Upload documents, index them, let AI search deliver precise answers</p>
+          <ul class="feature-list">
+            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Document ingestion and indexing</li>
+            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Semantic search with embeddings</li>
+            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Context-aware answer generation</li>
+          </ul>
+        </div>
+        <div class="feature-card">
+          <div class="icon-box icon-box-lg">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
+          </div>
+          <h3>Bot Factory</h3>
+          <p>Mass-produce bots from templates, configure once deploy everywhere</p>
+          <ul class="feature-list">
+            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Template-based bot creation</li>
+            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Bulk deployment and management</li>
+            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Centralized configuration</li>
+          </ul>
+        </div>
+        <div class="feature-card">
+          <div class="icon-box icon-box-lg">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          </div>
+          <h3>Security &amp; Privacy</h3>
+          <p>Self-host for full data control, LGPD/GDPR compliance</p>
+          <ul class="feature-list">
+            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Complete data sovereignty</li>
+            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>LGPD and GDPR compliant</li>
+            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>On-premises deployment option</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section-lg reveal" style="background:var(--secondary)">
+    <div class="container text-center">
+      <div class="section-label">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 10h16M4 14h16M4 18h16"/></svg>
+        Use Cases
+      </div>
+      <h2 class="section-heading">Built for Every Team</h2>
+      <p class="section-subtitle mb-12">From customer support to internal automation, General Bots adapts to your workflow.</p>
+      <div class="grid-4">
+        <div class="use-case-card">
+          <div class="icon-box icon-box-lg">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+          </div>
+          <h3>Customer Support</h3>
+          <p>Automate responses, escalate intelligently, and provide 24/7 support across all your channels with consistent quality.</p>
+        </div>
+        <div class="use-case-card">
+          <div class="icon-box icon-box-lg">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          </div>
+          <h3>Process Automation</h3>
+          <p>Streamline repetitive tasks, integrate with internal systems, and reduce manual work with bot-driven workflows.</p>
+        </div>
+        <div class="use-case-card">
+          <div class="icon-box icon-box-lg">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+          </div>
+          <h3>Knowledge Management</h3>
+          <p>Let AI search across your documents, wikis, and databases to deliver precise answers instantly.</p>
+        </div>
+        <div class="use-case-card">
+          <div class="icon-box icon-box-lg">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+          </div>
+          <h3>Team Collaboration</h3>
+          <p>Connect your team with AI assistants in Slack, Teams, or Google Chat for faster decision-making.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section-lg reveal">
+    <div class="container text-center">
+      <div class="section-label">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2"/></svg>
+        Hosting Providers
+      </div>
+      <h2 class="section-heading">Certified Hosting Providers</h2>
+      <p class="section-subtitle mb-12">Self-host or choose a certified hosting provider for managed deployments.</p>
+      <div class="grid-3" style="max-width:56rem;margin:0 auto">
+        <div class="hosting-card">
+          <div class="hosting-type">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            Certified Host
+          </div>
+          <div class="hosting-name">Pragmatismo</div>
+          <div class="hosting-url">pragmatismo.com.br</div>
+        </div>
+        <div class="hosting-card">
+          <div class="hosting-type">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            Certified Host
+          </div>
+          <div class="hosting-name">OERLabs</div>
+          <div class="hosting-url"><a href="https://oerlabs.com.br" target="_blank" rel="noopener noreferrer">oerlabs.com.br</a></div>
+        </div>
+        <div class="hosting-card">
+          <div class="hosting-type">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            Certified Host
+          </div>
+          <div class="hosting-name">Map Agency</div>
+          <div class="hosting-url"><a href="https://mapagency.com.br" target="_blank" rel="noopener noreferrer">mapagency.com.br</a></div>
+        </div>
+        <div class="hosting-card">
+          <div class="hosting-type">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            Certified Host
+          </div>
+          <div class="hosting-name">Sentient</div>
+          <div class="hosting-url"><a href="https://sentient.net.br" target="_blank" rel="noopener noreferrer">sentient.net.br</a></div>
+        </div>
+        <div class="hosting-card">
+          <div class="hosting-type">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            Microsoft Sales
+          </div>
+          <div class="hosting-name">Dario Executive Sales</div>
+          <div class="hosting-url"><a href="https://darioexecutivesales.com" target="_blank" rel="noopener noreferrer">darioexecutivesales.com</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section-lg faq-section reveal">
+    <div class="container" style="max-width:48rem">
+      <div class="text-center mb-12">
+        <div class="section-label">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          FAQ
+        </div>
+        <h2 class="section-heading">Frequently Asked Questions</h2>
+        <p class="section-subtitle">Everything you need to know about General Bots.</p>
+      </div>
+      <details>
+        <summary>What is General Bots?</summary>
+        <div class="faq-answer">General Bots is an open source AI bot platform that lets you build, deploy, and manage intelligent conversational agents. It provides LLM orchestration, multi-channel deployment, and a unique BASIC programming model that lets you author bot logic directly in Microsoft Word.</div>
+      </details>
+      <details>
+        <summary>Is it really free?</summary>
+        <div class="faq-answer">Yes. General Bots is licensed under the MIT License, which means you can use, modify, and distribute it freely — including for commercial purposes. There are no per-seat or per-bot fees. You only pay for infrastructure and LLM API usage if you use external providers.</div>
+      </details>
+      <details>
+        <summary>What does BASIC programming mean?</summary>
+        <div class="faq-answer">General Bots uses a simplified BASIC dialect as its primary programming language. You can write bot logic in .bas files using a familiar, readable syntax — and even author them directly in Microsoft Word. This lowers the barrier to entry compared to Python or JavaScript-based frameworks.</div>
+      </details>
+      <details>
+        <summary>Which LLM providers are supported?</summary>
+        <div class="faq-answer">General Bots supports OpenAI (GPT-4, GPT-3.5), Anthropic (Claude), Google (Gemini), and self-hosted models via local inference. The orchestration layer lets you route different tasks to different models based on cost, latency, and capability requirements.</div>
+      </details>
+      <details>
+        <summary>Can I self-host?</summary>
+        <div class="faq-answer">Absolutely. General Bots is designed for self-hosting. You can deploy it on your own infrastructure — on-premises, cloud, or hybrid — for complete data sovereignty and compliance with LGPD, GDPR, and other data protection regulations.</div>
+      </details>
+      <details>
+        <summary>What channels are supported?</summary>
+        <div class="faq-answer">General Bots supports WhatsApp, Microsoft Teams, Slack, Google Chat, Instagram, SMS, Email, Web Chat, Facebook Pages, and more. A single bot can be deployed across all channels simultaneously with unified conversation context.</div>
+      </details>
+      <details>
+        <summary>How is this different from LangChain or Bot Framework?</summary>
+        <div class="faq-answer">LangChain is a framework for building LLM applications in Python/JavaScript — it requires developers. Bot Framework is Microsoft's channel-focused SDK. General Bots combines both: it provides LLM orchestration like LangChain and multi-channel deployment like Bot Framework, but with a no-code/low-code BASIC programming model that non-developers can use directly in Word.</div>
+      </details>
+      <details>
+        <summary>Who are the certified hosting providers?</summary>
+        <div class="faq-answer">Certified hosting providers include Pragmatismo, OERLabs, Map Agency, and Sentient. Dario Executive Sales provides Microsoft licensing and sales support. These providers offer managed General Bots deployments with guaranteed uptime, support, and compliance.</div>
+      </details>
+    </div>
+  </section>
+
+  <section class="cta-section reveal">
+    <div class="container text-center">
+      <h2>Ready to Build Your First Bot?</h2>
+      <p>Get started with General Bots today — free, open source, and ready to deploy.</p>
+      <div class="flex items-center justify-center gap-4 flex-wrap">
+        <a href="/contact" class="btn btn-white btn-lg">Get Started</a>
+        <a href="https://github.com/GeneralBots" class="btn btn-outline-white btn-lg" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="/gb-logo.png" alt="General Bots" class="footer-logo" width="140" height="33">
+          <p>General Bots® — The Open Source AI Bot Platform. Self-host or choose a certified hosting provider.</p>
+          <div class="footer-dpo">
+            <strong>DPO:</strong> Rodrigo Rodriguez<br>
+            <a href="mailto:security@pragmatismo.com.br" style="color:rgba(255,255,255,.8)">security@pragmatismo.com.br</a><br>
+            Rio de Janeiro – São Paulo – Paraná, Brazil<br>
+            <a href="tel:+552140402160" style="color:rgba(255,255,255,.8)">+55 21 4040-2160</a>
+          </div>
+          <div class="footer-social">
+            <a href="https://github.com/GeneralBots" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            </a>
+            <a href="https://instagram.com/generalbots" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </a>
+            <a href="https://wa.me/552140402160" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>General Bots</h4>
+          <a href="/general-bots/llms">LLM</a>
+          <a href="/general-bots/vector-retrieval">Vector Search</a>
+          <a href="/general-bots/open-source">Open Source</a>
+          <a href="/features/ai-search">AI Search</a>
+          <a href="/features/bot-factory">Bot Factory</a>
+        </div>
+        <div class="footer-col">
+          <h4>Hosting</h4>
+          <a href="https://pragmatismo.com.br" target="_blank" rel="noopener noreferrer">Pragmatismo</a>
+          <a href="https://oerlabs.com.br" target="_blank" rel="noopener noreferrer">OERLabs</a>
+          <a href="https://mapagency.com.br" target="_blank" rel="noopener noreferrer">Map Agency</a>
+          <a href="https://sentient.net.br" target="_blank" rel="noopener noreferrer">Sentient</a>
+          <a href="https://darioexecutivesales.com" target="_blank" rel="noopener noreferrer">Dario Executive Sales</a>
+        </div>
+        <div class="footer-col">
+          <h4>Community</h4>
+          <a href="/resources/considering">Documentation</a>
+          <a href="/resources/already-using">Help Center</a>
+          <a href="/resources/community">Become a Partner</a>
+          <a href="/blog">Blog</a>
+          <a href="https://github.com/GeneralBots" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>Copyright &copy; 2016-2026 Pragmatismo. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="/terms">Terms of Service</a>
+          <a href="/privacy">Privacy Policy</a>
+        </div>
+      </div>
+      <div style="text-align:center;padding-bottom:1.5rem">
+        <p style="font-size:.75rem;color:rgba(255,255,255,.4)">General Bots — Open Source AI Orchestration Platform</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/site.js"></script>
+</body>
+</html>

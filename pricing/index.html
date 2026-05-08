@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hosting Providers | General Bots</title>
+  <meta name="description" content="General Bots is open source — self-host for free, or choose a certified hosting provider for managed services, enterprise support, and guaranteed uptime.">
+  <meta name="keywords" content="General Bots, hosting, certified host, managed hosting, AI bot platform, open source, LLM orchestration, enterprise support, uptime SLA">
+  <meta name="author" content="General Bots">
+  <meta name="robots" content="index, follow">
+  <meta name="google" content="translate">
+  <meta property="og:title" content="Hosting Providers | General Bots">
+  <meta property="og:description" content="Choose a certified General Bots hosting provider for managed services, enterprise support, and guaranteed uptime.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://generalbots.org/pricing/">
+  <meta property="og:image" content="https://generalbots.org/gb-logo.png">
+  <meta property="og:site_name" content="General Bots">
+  <link rel="canonical" href="https://generalbots.org/pricing/">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="stylesheet" href="/css/site.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"General Bots","url":"https://generalbots.org","logo":"https://generalbots.org/gb-logo.png","description":"Open source LLM orchestration and AI platform with General Bots","contactPoint":{"@type":"ContactPoint","telephone":"+55-21-4040-2160","contactType":"customer service"},"sameAs":["https://www.facebook.com/generalbots","https://www.youtube.com/@generalbots","https://www.github.com/generalbots"]}</script>
+  <style>
+    .site-header{position:fixed;top:0;left:0;width:100%;z-index:40;background:rgba(255,255,255,.8);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(0,0,0,.06)}
+    .header-top{display:flex;justify-content:flex-end;align-items:center;padding:.75rem 1.5rem;font-size:.75rem;color:var(--muted-foreground)}
+    .header-top a{color:var(--muted-foreground);font-weight:500;transition:color .2s}
+    .header-top a:hover{color:var(--primary)}
+    .header-main{display:flex;align-items:center;justify-content:space-between;padding:0 1.5rem;min-height:3.5rem;margin-top:-1rem}
+    .header-logo img{height:2rem;width:auto;border-radius:.25rem}
+    .nav-desktop{display:flex;align-items:center;gap:.25rem}
+    .nav-desktop a,.nav-link{display:inline-flex;align-items:center;padding:.5rem .75rem;font-size:.875rem;font-weight:500;color:var(--foreground);border-radius:.5rem;transition:background .2s,color .2s;white-space:nowrap}
+    .nav-desktop a:hover,.nav-link:hover{background:var(--muted);color:var(--primary)}
+    .nav-link.active{color:var(--primary);font-weight:600}
+    .nav-dropdown{position:relative}
+    .nav-dropdown-trigger{cursor:pointer;user-select:none}
+    .nav-dropdown-trigger::after{content:'';display:inline-block;width:0;height:0;margin-left:.375rem;vertical-align:middle;border-left:4px solid transparent;border-right:4px solid transparent;border-top:4px solid var(--muted-foreground)}
+    .nav-dropdown-content{position:absolute;top:100%;left:0;min-width:220px;background:#fff;border:1px solid var(--border);border-radius:.75rem;box-shadow:0 12px 32px rgba(0,0,0,.1);padding:.5rem;z-index:50;margin-top:.25rem}
+    .nav-dropdown-content a{display:flex;align-items:center;gap:.5rem;padding:.5rem .75rem;font-size:.8125rem;color:var(--muted-foreground);border-radius:.375rem;transition:all .15s}
+    .nav-dropdown-content a:hover{background:var(--muted);color:var(--foreground)}
+    .nav-mobile-toggle{display:flex;align-items:center;justify-content:center;width:2.5rem;height:2.5rem;background:transparent;border:none;cursor:pointer;border-radius:.5rem;color:var(--foreground)}
+    .nav-mobile-toggle:hover{background:var(--muted)}
+    #mobile-menu{position:absolute;top:100%;left:0;width:100%;background:#fff;border-top:1px solid var(--border);box-shadow:0 8px 24px rgba(0,0,0,.08);padding:1rem;z-index:50}
+    #mobile-menu a{display:flex;justify-content:space-between;align-items:center;padding:.75rem 1rem;font-size:.9375rem;color:var(--foreground);border-radius:.375rem;transition:background .15s}
+    #mobile-menu a:hover{background:var(--muted)}
+    .mobile-sub-links{padding-left:1rem}
+    .mobile-sub-links a{font-size:.8125rem;color:var(--muted-foreground)}
+    .site-footer{background:hsl(220 15% 8%);color:hsl(220 10% 65%);padding:5rem 0 0}
+    .site-footer a{color:hsl(220 10% 55%);transition:color .2s}
+    .site-footer a:hover{color:hsl(280 60% 65%)}
+    .footer-grid{display:grid;grid-template-columns:1fr;gap:3rem}
+    @media(min-width:768px){.footer-grid{grid-template-columns:1fr 1fr;gap:4rem}}
+    .footer-col h4{color:#fff;font-size:1rem;font-weight:600;margin-bottom:.75rem}
+    .footer-col a{display:block;font-size:.8125rem;padding:.25rem 0}
+    .footer-social{display:flex;gap:.5rem;margin-top:1.5rem}
+    .footer-social a{display:inline-flex;align-items:center;justify-content:center;width:2.5rem;height:2.5rem;border-radius:.5rem;color:hsl(220 10% 45%);transition:color .2s}
+    .footer-social a:hover{color:hsl(280 60% 65%)}
+    .footer-bottom{margin-top:3rem;padding:1.5rem 0;border-top:1px solid rgba(255,255,255,.05);text-align:center;font-size:.6875rem;color:hsl(220 10% 30%);text-transform:uppercase;letter-spacing:.05em}
+    .provider-card{background:#fff;border:1px solid var(--border);border-radius:1rem;overflow:hidden;transition:transform .3s ease,box-shadow .3s ease}
+    .provider-card:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(0,0,0,.08)}
+    .provider-card-inner{padding:2rem}
+    .provider-icon{display:inline-flex;align-items:center;justify-content:center;width:3.5rem;height:3.5rem;border-radius:.75rem;flex-shrink:0}
+    .provider-icon.purple{background:#f3e8ff;color:#9333ea}
+    .provider-icon.blue{background:#dbeafe;color:#2563eb}
+    .provider-icon.emerald{background:#d1fae5;color:#059669}
+    .provider-icon.amber{background:#fef3c7;color:#d97706}
+    .provider-icon.rose{background:#ffe4e6;color:#e11d48}
+    .cert-badge{display:inline-flex;align-items:center;gap:.25rem;padding:.25rem .5rem;font-size:.6875rem;font-weight:500;background:var(--secondary);border:1px solid var(--border);border-radius:9999px;color:var(--muted-foreground)}
+    .provider-badge{display:inline-flex;align-items:center;gap:.25rem;padding:.25rem .625rem;font-size:.6875rem;font-weight:600;border-radius:9999px}
+    .provider-badge.certified{background:#dbeafe;color:#1d4ed8;border:1px solid #bfdbfe}
+    .provider-badge.founding{background:#f3e8ff;color:#7c3aed;border:1px solid #e9d5ff}
+    .provider-badge.microsoft-sales{background:#fef3c7;color:#b45309;border:1px solid #fde68a}
+    .provider-visit-btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;width:100%;padding:.75rem 1.25rem;font-size:.875rem;font-weight:500;border-radius:var(--radius);border:none;cursor:pointer;transition:all .2s;line-height:1.25}
+    .provider-visit-btn.purple{background:linear-gradient(135deg,#7c3aed,#4f46e5);color:#fff;box-shadow:0 1px 3px rgba(0,0,0,.08)}
+    .provider-visit-btn.purple:hover{background:linear-gradient(135deg,#6d28d9,#4338ca)}
+    .provider-visit-btn.blue{background:linear-gradient(135deg,#2563eb,#1d4ed8);color:#fff;box-shadow:0 1px 3px rgba(0,0,0,.08)}
+    .provider-visit-btn.blue:hover{background:linear-gradient(135deg,#1d4ed8,#1e40af)}
+    .provider-visit-btn.emerald{background:linear-gradient(135deg,#059669,#047857);color:#fff;box-shadow:0 1px 3px rgba(0,0,0,.08)}
+    .provider-visit-btn.emerald:hover{background:linear-gradient(135deg,#047857,#065f46)}
+    .provider-visit-btn.amber{background:linear-gradient(135deg,#d97706,#b45309);color:#fff;box-shadow:0 1px 3px rgba(0,0,0,.08)}
+    .provider-visit-btn.amber:hover{background:linear-gradient(135deg,#b45309,#92400e)}
+    .provider-visit-btn.rose{background:linear-gradient(135deg,#e11d48,#be123c);color:#fff;box-shadow:0 1px 3px rgba(0,0,0,.08)}
+    .provider-visit-btn.rose:hover{background:linear-gradient(135deg,#be123c,#9f1239)}
+    .self-host-card{background:linear-gradient(135deg,hsl(220 10% 12%),hsl(230 30% 8%));border-radius:1.5rem;overflow:hidden;position:relative;box-shadow:0 12px 40px rgba(0,0,0,.12)}
+    .self-host-card::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at top right,rgba(139,92,246,.15),transparent 60%);pointer-events:none}
+    .self-host-card::after{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,rgba(255,255,255,.03) 1px,transparent 1px);background-size:24px 24px;pointer-events:none}
+    .self-host-inner{position:relative;z-index:1;padding:2.5rem}
+    @media(min-width:768px){.self-host-inner{padding:3rem}}
+    .trust-badge{display:inline-flex;align-items:center;gap:.375rem;font-size:.8125rem;color:var(--muted-foreground)}
+    .trust-badge svg{color:#9333ea}
+    @media(min-width:768px){.provider-card-centered{grid-column:1/-1;max-width:calc(50% - 1rem);margin:0 auto}}
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-top">
+      <a href="tel:+552140402160">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:4px"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        +55 21 4040-2160
+      </a>
+      <div class="gtranslate_wrapper" style="margin-left:1rem"></div>
+    </div>
+    <div class="header-main">
+      <a href="/" class="header-logo" aria-label="General Bots Home">
+        <img src="/gb-logo.png" alt="General Bots Logo" width="140" height="33" loading="lazy">
+      </a>
+
+      <nav class="nav-desktop" aria-label="Main navigation">
+        <a href="/">Home</a>
+
+        <div class="nav-dropdown">
+          <span class="nav-link nav-dropdown-trigger">General Bots</span>
+          <div class="nav-dropdown-content hidden">
+            <a href="/general-bots/llm/">LLMs</a>
+            <a href="/general-bots/vector-retrieval/">Vector Retrieval</a>
+            <a href="/general-bots/open-source/">Open Source</a>
+          </div>
+        </div>
+
+        <div class="nav-dropdown">
+          <span class="nav-link nav-dropdown-trigger">Features</span>
+          <div class="nav-dropdown-content hidden">
+            <a href="/features/ai-search/">AI Search</a>
+            <a href="/features/content-generation/">Content Generation</a>
+            <a href="/features/bot-factory/">Bot Factory</a>
+            <a href="/features/talk-to-data/">Talk to Data</a>
+            <a href="/features/broadcast/">Broadcast</a>
+            <a href="/features/trainning/">Train with Well-Known Tools</a>
+            <a href="/features/web-automation/">Web Automation</a>
+            <a href="/features/llm-tools/">LLM Tools</a>
+            <a href="/features/create-apis-in-word/">Calling APIs</a>
+          </div>
+        </div>
+
+        <div class="nav-dropdown">
+          <span class="nav-link nav-dropdown-trigger">Integrations</span>
+          <div class="nav-dropdown-content hidden">
+            <a href="/integrations/channels/whatsapp/">WhatsApp</a>
+            <a href="/integrations/channels/sms/">SMS</a>
+            <a href="/integrations/channels/web-chat/">Web Chat</a>
+            <a href="/integrations/channels/instagram/">Instagram</a>
+            <a href="/integrations/channels/email/">E-mail</a>
+            <a href="/integrations/channels/microsoft-teams/">Microsoft Teams</a>
+            <a href="/integrations/channels/google-chat/">Google Chat</a>
+            <a href="/integrations/channels/facebook-pages/">Facebook Pages</a>
+            <a href="/integrations/channels/slack/">Slack</a>
+          </div>
+        </div>
+
+        <a href="/templates/">Templates</a>
+
+        <div class="nav-dropdown">
+          <span class="nav-link nav-dropdown-trigger">Resources</span>
+          <div class="nav-dropdown-content hidden">
+            <a href="/resources/considering/ai-powered-org/">Considering</a>
+            <a href="/resources/already-using/essential-resources/">Already Using</a>
+            <a href="/resources/community/become-a-partner/">Community</a>
+            <a href="https://appsource.microsoft.com/pt-pt/product/web-apps/pragmatismoio-4835990.generalbot?tab=overview">Marketplaces</a>
+          </div>
+        </div>
+
+        <a href="/pricing/" class="nav-link active">Hosting</a>
+        <a href="/contact/">Contact</a>
+      </nav>
+
+      <button class="nav-mobile-toggle" id="mobile-menu-toggle" aria-label="Toggle menu">
+        <svg class="menu-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        <svg class="close-icon hidden" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+
+    <div id="mobile-menu" class="hidden">
+      <a href="/">Home</a>
+      <div class="mobile-sub-links">
+        <a href="/general-bots/llm/">General Bots &mdash; LLMs</a>
+        <a href="/general-bots/vector-retrieval/">General Bots &mdash; Vector Retrieval</a>
+        <a href="/general-bots/open-source/">General Bots &mdash; Open Source</a>
+      </div>
+      <div class="mobile-sub-links">
+        <a href="/features/ai-search/">Features &mdash; AI Search</a>
+        <a href="/features/content-generation/">Features &mdash; Content Generation</a>
+        <a href="/features/bot-factory/">Features &mdash; Bot Factory</a>
+        <a href="/features/talk-to-data/">Features &mdash; Talk to Data</a>
+        <a href="/features/broadcast/">Features &mdash; Broadcast</a>
+        <a href="/features/web-automation/">Features &mdash; Web Automation</a>
+        <a href="/features/llm-tools/">Features &mdash; LLM Tools</a>
+      </div>
+      <div class="mobile-sub-links">
+        <a href="/integrations/channels/whatsapp/">Integrations &mdash; WhatsApp</a>
+        <a href="/integrations/channels/microsoft-teams/">Integrations &mdash; Microsoft Teams</a>
+        <a href="/integrations/channels/google-chat/">Integrations &mdash; Google Chat</a>
+        <a href="/integrations/channels/web-chat/">Integrations &mdash; Web Chat</a>
+      </div>
+      <a href="/templates/">Templates</a>
+      <div class="mobile-sub-links">
+        <a href="/resources/considering/ai-powered-org/">Resources &mdash; Considering</a>
+        <a href="/resources/already-using/essential-resources/">Resources &mdash; Already Using</a>
+        <a href="/resources/community/become-a-partner/">Resources &mdash; Community</a>
+      </div>
+      <a href="/pricing/" style="font-weight:600">Hosting</a>
+      <a href="/contact/">Contact</a>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="pt-32 pb-16" style="background:linear-gradient(to bottom,#f9fafb,#fff,#fff)">
+      <div class="container">
+        <div class="max-w-4xl mx-auto text-center">
+          <div class="badge mb-6" style="border-color:rgba(147,51,234,.3)">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#9333ea" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19H9a7 7 0 010-14h.5"/><path d="M18.5 5H11a7 7 0 000 14h.5"/><path d="M5 12h14"/></svg>
+            <span style="color:#6b21a8;font-weight:500">Hosting Providers</span>
+          </div>
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6" style="color:var(--foreground)">
+            Choose a Certified<br>
+            <span class="gradient-text" style="background:linear-gradient(90deg,#9333ea,#6366f1,#3b82f6);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">General Bots</span> Host
+          </h1>
+          <p class="text-xl max-w-2xl mx-auto leading-relaxed mb-12" style="color:var(--muted-foreground)">
+            General Bots is open source &mdash; self-host for free, or choose a certified hosting provider for managed services, enterprise support, and guaranteed uptime.
+          </p>
+          <div class="flex justify-center gap-8 flex-wrap">
+            <div class="trust-badge">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#9333ea" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              Certified Infrastructure
+            </div>
+            <div class="trust-badge">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#9333ea" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+              Multi-Region Availability
+            </div>
+            <div class="trust-badge">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#9333ea" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+              99.9% Uptime SLA
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pb-24 reveal">
+      <div class="container">
+        <div class="grid-2 max-w-6xl mx-auto">
+
+          <div class="provider-card">
+            <div class="provider-card-inner">
+              <div class="flex items-center gap-4 mb-6">
+                <div class="provider-icon purple">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01"/><path d="M16 6h.01"/><path d="M12 6h.01"/><path d="M12 10h.01"/><path d="M12 14h.01"/><path d="M16 10h.01"/><path d="M16 14h.01"/><path d="M8 10h.01"/><path d="M8 14h.01"/></svg>
+                </div>
+                <div>
+                  <div class="flex items-center gap-3 flex-wrap">
+                    <h3 class="text-xl font-bold" style="color:var(--foreground)">Pragmatismo</h3>
+                    <span class="provider-badge founding">Certified Host</span>
+                  </div>
+                  <p class="text-sm" style="color:var(--muted-foreground)">Rio de Janeiro, Brazil</p>
+                </div>
+              </div>
+              <p class="text-sm leading-relaxed mb-6" style="color:var(--muted-foreground)">The original creator of General Bots. Full-service AI consulting, custom bot development, and managed hosting with direct platform expertise.</p>
+              <div class="flex flex-wrap gap-2 mb-6">
+                <span class="cert-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg> General Bots Certified</span>
+                <span class="cert-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg> ISO 27001</span>
+                <span class="cert-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg> LGPD Compliant</span>
+                <span class="cert-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg> Microsoft Partner</span>
+              </div>
+              <ul class="feature-list mb-8">
+                <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="#9333ea" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span class="text-sm" style="color:var(--muted-foreground)">Full General Bots platform management</span></li>
+                <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="#9333ea" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span class="text-sm" style="color:var(--muted-foreground)">Custom AI model development</span></li>
+                <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="#9333ea" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span class="text-sm" style="color:var(--muted-foreground)">LLM orchestration and tuning</span></li>
+                <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="#9333ea" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span class="text-sm" style="color:var(--muted-foreground)">24x7 admin support</span></li>
+                <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="#9333ea" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span class="text-sm" style="color:var(--muted-foreground)">Official WhatsApp integration</span></li>
+                <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="#9333ea" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span class="text-sm" style="color:var(--muted-foreground)">Enterprise IT integration</span></li>
+              </ul>
+              <a href="https://pragmatismo.com.br" target="_blank" rel="noopener noreferrer" class="provider-visit-btn purple">
+                Visit Pragmatismo
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="provider-card">
+            <div class="provider-card-inner">
+              <div class="flex items-center gap-4 mb-6">
+                <div class="provider-icon blue">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19H9a7 7 0 010-14h.5"/><path d="M18.5 5H11a7 7 0 000 14h.5"/><path d="M5 12h14"/></svg>
+                </div>
+                <div>
+                  <div class="flex items-center gap-3 flex-wrap">
+                    <h3 class="text-xl font-bold" style="color:var(--foreground)">OERLabs</h3>
+                    <span class="provider-badge certified">Certified Host</span>
+                  </div>
+                  <p class="text-sm" style="color:var(--muted-foreground)">Global</p>
+                </div>
+              </div>
+              <p class="text-sm leading-relaxed mb-6" style="color:var(--muted-foreground)">Open Enterprise Research Labs specializing in AI-first infrastructure and scalable bot deployments for organizations of all sizes.</p>
+              <div class="flex flex-wrap gap-2 mb-6">
+                <span class="cert-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg> General Bots Certified</span>
+                <span class="cert-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg> SOC 2 Type II</span>
+                <span class="cert-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg> Cloud Security Alliance</span>
+              </div>
+              <ul class="feature-list mb-8">
+                <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span class="text-sm" style="color:var(--muted-foreground)">Scalable cloud infrastructure</span></li>
+                <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span class="text-sm" style="color:var(--muted-foreground)">Multi-region deployment</span></li>
+                <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span class="text-sm" style="color:var(--muted-foreground)">High-availability setups</span></li>
+                <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span class="text-sm" style="color:var(--muted-foreground)">DevOps and CI/CD integration</span></li>
+                <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span class="text-sm" style="color:var(--muted-foreground)">Custom training programs</span></li>
+                <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span class="text-sm" style="color:var(--muted-foreground)">SLA-backed uptime guarantees</span></li>
+              </ul>
+              <a href="https://oerlabs.com.br" target="_blank" rel="noopener noreferrer" class="provider-visit-btn blue">
+                Visit OERLabs
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="provider-card">
+            <div class="provider-card-inner">
+              <div class="flex items-center gap-4 mb-6">
+                <div class="provider-icon emerald">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+                </div>
+                <div>
+                  <div class="flex items-center gap-3 flex-wrap">
+                    <h3 class="text-xl font-bold" style="color:var(--foreground)">Map Agency</h3>
+                    <span class="provider-badge certified">Certified Host</span>
+                  </div>
+                  <p class="text-sm" style="color:var(--muted-foreground)">S&atilde;o Paulo, Brazil</p>
+                </div>
+              </div>
+              <p class="text-sm leading-relaxed mb-6" style="color:var(--muted-foreground)">Digital agency focused on conversational AI and customer experience. Specializes in WhatsApp Business and multichannel bot strategies.</p>
+              <div class="flex flex-wrap gap-2 mb-6">
+                <span class="cert-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg> General Bots Certified</span>
+                <span class="cert-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg> Meta Business Partner</span>
+                <span class="cert-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg> LGPD Compliant</span>
+              </div>
+              <ul class="feature-list mb-8">
+                <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span class="text-sm" style="color:var(--muted-foreground)">WhatsApp Business API setup</span></li>
+                <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span class="text-sm" style="color:var(--muted-foreground)">Conversational design</span></li>
+                <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span class="text-sm" style="color:var(--muted-foreground)">Customer experience optimization</span></li>
+                <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span class="text-sm" style="color:var(--muted-foreground)">Marketing automation bots</span></li>
+                <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span class="text-sm" style="color:var(--muted-foreground)">Analytics and reporting dashboards</span></li>
+                <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span class="text-sm" style="color:var(--muted-foreground)">Team training and onboarding</span></li>
+              </ul>
+              <a href="https://mapagency.com.br" target="_blank" rel="noopener noreferrer" class="provider-visit-btn emerald">
+                Visit Map Agency
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="provider-card">
+            <div class="provider-card-inner">
+              <div class="flex items-center gap-4 mb-6">
+                <div class="provider-icon amber">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M15 2v2"/><path d="M15 20v2"/><path d="M2 15h2"/><path d="M2 9h2"/><path d="M20 15h2"/><path d="M20 9h2"/><path d="M9 2v2"/><path d="M9 20v2"/></svg>
+                </div>
+                <div>
+                  <div class="flex items-center gap-3 flex-wrap">
+                    <h3 class="text-xl font-bold" style="color:var(--foreground)">Sentient</h3>
+                    <span class="provider-badge certified">Certified Host</span>
+                  </div>
+                  <p class="text-sm" style="color:var(--muted-foreground)">United States</p>
+                </div>
+              </div>
+              <p class="text-sm leading-relaxed mb-6" style="color:var(--muted-foreground)">Advanced AI research company providing cutting-edge LLM hosting with custom model fine-tuning and enterprise-grade security.</p>
+              <div class="flex flex-wrap gap-2 mb-6">
+                <span class="cert-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg> General Bots Certified</span>
+                <span class="cert-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg> SOC 2 Type II</span>
+                <span class="cert-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg> HIPAA Ready</span>
+                <span class="cert-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg> FedRAMP</span>
+              </div>
+              <ul class="feature-list mb-8">
+                <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span class="text-sm" style="color:var(--muted-foreground)">Custom LLM fine-tuning</span></li>
+                <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span class="text-sm" style="color:var(--muted-foreground)">Private cloud deployments</span></li>
+                <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span class="text-sm" style="color:var(--muted-foreground)">Enterprise security hardening</span></li>
+                <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span class="text-sm" style="color:var(--muted-foreground)">On-premise options</span></li>
+                <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span class="text-sm" style="color:var(--muted-foreground)">GPU-optimized inference</span></li>
+                <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span class="text-sm" style="color:var(--muted-foreground)">AI governance and compliance</span></li>
+              </ul>
+              <a href="https://sentient.net.br" target="_blank" rel="noopener noreferrer" class="provider-visit-btn amber">
+                Visit Sentient
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="provider-card provider-card-centered">
+            <div class="provider-card-inner">
+              <div class="flex items-center gap-4 mb-6">
+                <div class="provider-icon rose">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a9 9 0 0118 0v6"/><path d="M21 19a2 2 0 01-2 2h-1a2 2 0 01-2-2v-3a2 2 0 012-2h3zM3 19a2 2 0 002 2h1a2 2 0 002-2v-3a2 2 0 00-2-2H3z"/><path d="M12 9v6"/><path d="M9 12h6"/></svg>
+                </div>
+                <div>
+                  <div class="flex items-center gap-3 flex-wrap">
+                    <h3 class="text-xl font-bold" style="color:var(--foreground)">Dario Executive Sales</h3>
+                    <span class="provider-badge microsoft-sales">Microsoft Sales</span>
+                  </div>
+                  <p class="text-sm" style="color:var(--muted-foreground)">Latin America</p>
+                </div>
+              </div>
+              <p class="text-sm leading-relaxed mb-6" style="color:var(--muted-foreground)">Executive sales automation and AI-powered CRM hosting. Specializes in sales bots, lead qualification, and revenue intelligence.</p>
+              <div class="flex flex-wrap gap-2 mb-6">
+                <span class="cert-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg> General Bots Certified</span>
+                <span class="cert-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg> LGPD Compliant</span>
+                <span class="cert-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg> Salesforce Partner</span>
+              </div>
+              <ul class="feature-list mb-8">
+                <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="#e11d48" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span class="text-sm" style="color:var(--muted-foreground)">Sales automation bots</span></li>
+                <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="#e11d48" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span class="text-sm" style="color:var(--muted-foreground)">CRM integration (Salesforce, HubSpot)</span></li>
+                <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="#e11d48" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span class="text-sm" style="color:var(--muted-foreground)">Lead qualification and scoring</span></li>
+                <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="#e11d48" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span class="text-sm" style="color:var(--muted-foreground)">Revenue intelligence dashboards</span></li>
+                <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="#e11d48" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span class="text-sm" style="color:var(--muted-foreground)">Pipeline management automation</span></li>
+                <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="#e11d48" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span class="text-sm" style="color:var(--muted-foreground)">Executive reporting and analytics</span></li>
+              </ul>
+              <a href="https://darioexecutivesales.com" target="_blank" rel="noopener noreferrer" class="provider-visit-btn rose">
+                Visit Dario Executive Sales
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="py-24 reveal" style="background:linear-gradient(to bottom,rgba(249,250,251,.5),#fff);border-top:1px solid var(--border)">
+      <div class="container">
+        <div class="max-w-4xl mx-auto">
+          <div class="self-host-card">
+            <div class="self-host-inner">
+              <div class="badge mb-6" style="background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.2);backdrop-filter:blur(8px)">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4ade80" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
+                <span style="color:#86efac;font-weight:500">Self-Host</span>
+              </div>
+              <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+                Or Run It Yourself &mdash; It&rsquo;s Open Source
+              </h2>
+              <p class="text-xl mb-8 max-w-2xl leading-relaxed" style="color:rgba(165,180,252,.85)">
+                General Bots is 100% open source under the MIT license. Download, deploy on your own infrastructure, and maintain full control. No vendor lock-in, no restrictions.
+              </p>
+              <div class="flex flex-col sm:flex-row gap-4">
+                <a href="https://github.com/GeneralBots" target="_blank" rel="noopener noreferrer" class="btn btn-lg" style="background:#fff;color:var(--foreground);box-shadow:0 4px 16px rgba(0,0,0,.15);font-weight:600;padding:1rem 2rem;font-size:1rem">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                  Download from GitHub
+                </a>
+                <a href="/general-bots/open-source/" class="btn btn-lg" style="border:2px solid rgba(255,255,255,.2);color:#fff;background:transparent;padding:1rem 2rem;font-size:1rem">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                  Learn About Open Source
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-8 reveal" style="border-top:1px solid var(--border)">
+      <div class="container">
+        <div class="max-w-4xl mx-auto" style="font-size:.6875rem;color:var(--muted-foreground);line-height:1.8">
+          <p>1. LLM Credits: $3 USD in LLM credits included in each paid plan via hosting providers. Additional credits may be purchased separately.</p>
+          <p>2. Fair Use Policy: Hosting providers reserve the right to limit or suspend accounts with excessive or abusive usage patterns.</p>
+          <p>3. Content Responsibility: Users are responsible for content they create, share, or store using the services.</p>
+          <p>4. Availability: While providers strive for 99.9% uptime, uninterrupted service is not guaranteed.</p>
+          <p>5. Data Retention: Providers may delete data from inactive accounts after 90 days of inactivity.</p>
+          <p>6. API Limits: API calls may be rate-limited based on plan level to ensure fair usage.</p>
+          <p>7. Plan Changes: Providers reserve the right to modify, suspend, or discontinue plan features with prior notice.</p>
+          <p>8. Refund Policy: No refunds for partially used service periods or unused LLM credits.</p>
+          <p>9. WhatsApp Integration: Subject to WhatsApp terms of service and may be modified or revoked at any time.</p>
+          <p>10. Storage Limits: Exceeding storage limits may result in additional charges or limited functionality.</p>
+          <p>11. Support SLAs: Response times for support requests vary by plan level and are not guaranteed.</p>
+          <p>12. Third-Party Integrations: No liability for the functionality or security of third-party integrations.</p>
+          <p>13. Compliance: Users are responsible for ensuring their use of services complies with all applicable laws and regulations.</p>
+          <p>14. Intellectual Property: All rights to Pragmatismo intellectual property are retained, outside of the otherwise licensed open-source core.</p>
+          <p>15. Prohibited Uses: Services may not be used for illegal activities, spam, or any purpose that violates terms of service.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="/" aria-label="General Bots Home">
+            <img src="/gb-logo.png" alt="General Bots Logo" width="302" height="77" loading="lazy" style="border-radius:.75rem">
+          </a>
+          <p style="font-size:.8125rem;max-width:28rem;line-height:1.625;margin-top:1rem;color:hsl(220 10% 45%)">
+            General Bots&reg; &mdash; The Open Source AI Bot Platform
+          </p>
+          <div style="margin-top:1.5rem;font-size:.8125rem;line-height:1.625;color:hsl(220 10% 40%)">
+            Data Protection Officer (DPO):<br>
+            Rodrigo Rodriguez (security@pragmatismo.com.br)
+          </div>
+          <div style="margin-top:1rem">
+            <a href="/terms/" style="font-size:.8125rem;display:block;margin-bottom:.25rem">Terms of Service</a>
+            <a href="/privacy/" style="font-size:.8125rem;display:block">Privacy Policy</a>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(10rem,1fr));gap:2.5rem">
+          <div class="footer-col">
+            <h4>General Bots</h4>
+            <a href="/general-bots/llm/">LLM</a>
+            <a href="/general-bots/vector-retrieval/">Vector Search</a>
+            <a href="/general-bots/open-source/">Open Source</a>
+            <a href="/features/ai-search/">AI Search</a>
+            <a href="/features/bot-factory/">Bot Factory</a>
+          </div>
+          <div class="footer-col">
+            <h4>Hosting</h4>
+            <a href="https://pragmatismo.com.br">Pragmatismo</a>
+            <a href="https://oerlabs.com.br">OERLabs</a>
+            <a href="https://mapagency.com.br">Map Agency</a>
+            <a href="https://sentient.net.br">Sentient</a>
+            <a href="https://darioexecutivesales.com">Dario Executive Sales</a>
+          </div>
+          <div class="footer-col">
+            <h4>Community</h4>
+            <a href="https://docs.generalbots.org">Documentation</a>
+            <a href="https://gb.pragmatismo.com.br/pragmatismohelpcenter">Help Center</a>
+            <a href="/resources/community/become-a-partner/">Become a Partner</a>
+            <a href="/blog/">Blog</a>
+            <a href="https://github.com/generalbots">GitHub</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-social">
+        <a href="https://www.github.com/GeneralBots" aria-label="GitHub">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/general.bots/" aria-label="Instagram">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+        </a>
+        <a href="https://web.whatsapp.com/send?phone=+552140402160" aria-label="WhatsApp">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c0-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.881 11.881 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      Copyright &copy; 2016-2026 Pragmatismo &mdash; General Bots &mdash; Open Source AI Orchestration Platform
+    </div>
+  </footer>
+
+  <div class="gtranslate_wrapper"></div>
+  <script src="/js/site.js"></script>
+</body>
+</html>

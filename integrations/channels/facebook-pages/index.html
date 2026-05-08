@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Facebook Pages Integration | General Bots</title>
+<meta name="description" content="Automate Facebook Pages with AI bots. Comment replies, Messenger handoff, post scheduling, and customer engagement at scale.">
+<meta name="robots" content="index, follow">
+<link rel="icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="stylesheet" href="/css/site.css">
+</head>
+<body>
+
+<header class="site-header">
+<div class="header-inner">
+<a href="/" class="logo-link"><img src="/gb-logo.png" alt="General Bots" width="140" height="33"></a>
+<a href="tel:+552140402160" class="phone-link">+55 21 4040-2160</a>
+<nav class="nav-desktop">
+<a href="/">Home</a>
+<div class="nav-dropdown"><button class="nav-dropdown-trigger" aria-expanded="false">General Bots<svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 5l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="nav-dropdown-content hidden"><a href="/general-bots/llms">LLMs</a><a href="/general-bots/vector-retrieval">Vector Retrieval</a><a href="/general-bots/open-source">Open Source</a></div></div>
+<div class="nav-dropdown"><button class="nav-dropdown-trigger" aria-expanded="false">Features<svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 5l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="nav-dropdown-content hidden"><a href="/features/ai-search">AI Search</a><a href="/features/content-generation">Content Generation</a><a href="/features/custom-copilot">Custom Copilot</a><a href="/features/data-analysis">Data Analysis</a><a href="/features/help-center">Help Center</a><a href="/features/knowledge-retrieval">Knowledge Retrieval</a><a href="/features/llm-orchestration">LLM Orchestration</a><a href="/features/process-automation">Process Automation</a><a href="/features/web-automation">Web Automation</a></div></div>
+<div class="nav-dropdown"><button class="nav-dropdown-trigger" aria-expanded="false">Integrations<svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 5l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="nav-dropdown-content hidden"><a href="/integrations/channels/email">Email</a><a href="/integrations/channels/facebook-pages">Facebook Pages</a><a href="/integrations/channels/google-chat">Google Chat</a><a href="/integrations/channels/instagram">Instagram</a><a href="/integrations/channels/microsoft-teams">Microsoft Teams</a><a href="/integrations/channels/slack">Slack</a><a href="/integrations/channels/sms">SMS</a><a href="/integrations/channels/web-chat">Web Chat</a><a href="/integrations/channels/whatsapp">WhatsApp</a></div></div>
+<a href="/templates">Templates</a>
+<div class="nav-dropdown"><button class="nav-dropdown-trigger" aria-expanded="false">Resources<svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 5l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="nav-dropdown-content hidden"><a href="/resources/considering">Considering</a><a href="/resources/already-using">Already Using</a><a href="/resources/community">Community</a><a href="/resources/marketplaces">Marketplaces</a></div></div>
+<a href="/pricing">Hosting</a><a href="/contact">Contact</a>
+</nav>
+<div class="gtranslate_wrapper"></div>
+<button id="mobile-menu-toggle" class="nav-mobile-toggle" aria-label="Toggle menu"><svg class="menu-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg><svg class="close-icon hidden" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="6" y1="18" x2="18" y2="6"/></svg></button>
+</div>
+<div id="mobile-menu" class="hidden">
+<a href="/" class="mobile-nav-link">Home</a>
+<button class="mobile-dropdown-trigger" data-target="mob-general-bots">General Bots<svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 5l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div id="mob-general-bots" class="mobile-dropdown-content hidden"><a href="/general-bots/llms">LLMs</a><a href="/general-bots/vector-retrieval">Vector Retrieval</a><a href="/general-bots/open-source">Open Source</a></div>
+<button class="mobile-dropdown-trigger" data-target="mob-features">Features<svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 5l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div id="mob-features" class="mobile-dropdown-content hidden"><a href="/features/ai-search">AI Search</a><a href="/features/content-generation">Content Generation</a><a href="/features/custom-copilot">Custom Copilot</a><a href="/features/data-analysis">Data Analysis</a><a href="/features/help-center">Help Center</a><a href="/features/knowledge-retrieval">Knowledge Retrieval</a><a href="/features/llm-orchestration">LLM Orchestration</a><a href="/features/process-automation">Process Automation</a><a href="/features/web-automation">Web Automation</a></div>
+<button class="mobile-dropdown-trigger" data-target="mob-integrations">Integrations<svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 5l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div id="mob-integrations" class="mobile-dropdown-content hidden"><a href="/integrations/channels/email">Email</a><a href="/integrations/channels/facebook-pages">Facebook Pages</a><a href="/integrations/channels/google-chat">Google Chat</a><a href="/integrations/channels/instagram">Instagram</a><a href="/integrations/channels/microsoft-teams">Microsoft Teams</a><a href="/integrations/channels/slack">Slack</a><a href="/integrations/channels/sms">SMS</a><a href="/integrations/channels/web-chat">Web Chat</a><a href="/integrations/channels/whatsapp">WhatsApp</a></div>
+<a href="/templates" class="mobile-nav-link">Templates</a>
+<button class="mobile-dropdown-trigger" data-target="mob-resources">Resources<svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 5l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div id="mob-resources" class="mobile-dropdown-content hidden"><a href="/resources/considering">Considering</a><a href="/resources/already-using">Already Using</a><a href="/resources/community">Community</a><a href="/resources/marketplaces">Marketplaces</a></div>
+<a href="/pricing" class="mobile-nav-link">Hosting</a><a href="/contact" class="mobile-nav-link">Contact</a><a href="tel:+552140402160" class="mobile-phone">+55 21 4040-2160</a>
+</div>
+</header>
+
+<main style="padding-top:4rem;">
+
+<section class="page-section-lg hero-gradient vitral-bg">
+<div class="container">
+<div class="reveal">
+<a href="/integrations" class="text-sm text-muted" style="display:inline-flex;align-items:center;gap:.375rem;margin-bottom:1.5rem"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>Back to Integrations</a>
+<div class="badge mb-4" style="width:fit-content"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>Facebook Pages</div>
+<h1 class="text-4xl font-bold tracking-tighter mb-4" style="font-size:clamp(2rem,5vw,3rem)">AI Bots for Facebook Pages</h1>
+<p class="text-lg text-muted max-w-3xl leading-relaxed mb-8">Automate comment replies, Messenger handoffs, post scheduling, and customer engagement across your Facebook Pages at scale.</p>
+<div class="flex flex-wrap gap-4 mb-8">
+<a href="/contact" class="btn btn-primary btn-lg">Get in Touch</a>
+<a href="#features" class="btn btn-outline btn-lg">Learn More</a>
+</div>
+</div>
+<div class="reveal" style="margin-top:2rem"><div class="glass-card-bright" style="padding:2rem;text-align:center;max-width:32rem"><div style="width:100%;aspect-ratio:16/10;background:var(--muted);border-radius:var(--radius);display:flex;align-items:center;justify-content:center"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" style="opacity:.15"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></div></div></div>
+</div>
+</section>
+
+<section id="features" class="page-section-lg">
+<div class="container">
+<div class="text-center reveal">
+<div class="badge mb-4" style="margin-left:auto;margin-right:auto;width:fit-content"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>Features</div>
+<h2 class="text-3xl font-bold tracking-tighter mb-4">Powerful Facebook Pages Features</h2>
+<p class="text-lg text-muted max-w-2xl mx-auto leading-relaxed mb-12">Everything you need to automate and scale Facebook Page engagement.</p>
+</div>
+<div class="grid-3">
+<div class="glass-card-bright card-hover reveal" style="padding:2rem">
+<div class="icon-box icon-box-lg mb-4" style="background:linear-gradient(135deg,#f0fdf4,#dcfce7);color:#059669"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+<h3 class="text-xl font-semibold mb-2">Comment Replies</h3>
+<p class="text-sm text-muted leading-relaxed mb-4">AI-powered responses to page comments that match your brand voice and handle common questions.</p>
+<ul class="feature-list">
+<li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>Auto-reply rules</li>
+<li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>Sentiment-aware responses</li>
+<li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>Brand voice matching</li>
+</ul>
+</div>
+<div class="glass-card-bright card-hover reveal" style="padding:2rem">
+<div class="icon-box icon-box-lg mb-4" style="background:linear-gradient(135deg,#eff6ff,#dbeafe);color:#2563eb"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 10h.01"/><path d="M12 10h.01"/><path d="M16 10h.01"/></svg></div>
+<h3 class="text-xl font-semibold mb-2">Messenger Handoff</h3>
+<p class="text-sm text-muted leading-relaxed mb-4">Seamlessly transition public comment conversations to private Messenger for deeper support.</p>
+<ul class="feature-list">
+<li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>Auto handoff triggers</li>
+<li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>Context preservation</li>
+<li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>Human escalation</li>
+</ul>
+</div>
+<div class="glass-card-bright card-hover reveal" style="padding:2rem">
+<div class="icon-box icon-box-lg mb-4" style="background:linear-gradient(135deg,#fefce8,#fef08a);color:#ca8a04"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+<h3 class="text-xl font-semibold mb-2">Post Scheduling</h3>
+<p class="text-sm text-muted leading-relaxed mb-4">Plan and schedule posts with AI-generated content suggestions and optimal timing recommendations.</p>
+<ul class="feature-list">
+<li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>Optimal timing</li>
+<li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>Content suggestions</li>
+<li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>Multi-page scheduling</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+
+<section class="page-section vitral-bg">
+<div class="container">
+<div class="text-center reveal">
+<div class="badge mb-4" style="margin-left:auto;margin-right:auto;width:fit-content"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>Advanced Capabilities</div>
+<h2 class="text-3xl font-bold tracking-tighter mb-4">Advanced Facebook Pages Capabilities</h2>
+<p class="text-lg text-muted max-w-2xl mx-auto leading-relaxed mb-12">Enterprise-grade social media automation for businesses at scale.</p>
+</div>
+<div class="grid-3">
+<div class="glass-card-bright card-hover reveal" style="padding:2rem">
+<div class="icon-box icon-box-lg mb-4"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div>
+<h3 class="text-xl font-semibold mb-2">Audience Insights</h3>
+<p class="text-sm text-muted leading-relaxed">AI-powered analysis of comment trends, sentiment patterns, and audience behavior to refine your social strategy.</p>
+</div>
+<div class="glass-card-bright card-hover reveal" style="padding:2rem">
+<div class="icon-box icon-box-lg mb-4"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg></div>
+<h3 class="text-xl font-semibold mb-2">Review Management</h3>
+<p class="text-sm text-muted leading-relaxed">Automatically respond to page reviews with personalized, brand-consistent replies that protect your reputation.</p>
+</div>
+<div class="glass-card-bright card-hover reveal" style="padding:2rem">
+<div class="icon-box icon-box-lg mb-4"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><circle cx="12" cy="12" r="3"/></svg></div>
+<h3 class="text-xl font-semibold mb-2">Multi-Page Management</h3>
+<p class="text-sm text-muted leading-relaxed">Manage bots across multiple Facebook Pages from a single dashboard with consistent rules and reporting.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="page-section-lg">
+<div class="container">
+<div class="text-center reveal">
+<div class="badge mb-4" style="margin-left:auto;margin-right:auto;width:fit-content"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>Use Cases</div>
+<h2 class="text-3xl font-bold tracking-tighter mb-4">How Teams Use Facebook Pages Bots</h2>
+<p class="text-lg text-muted max-w-2xl mx-auto leading-relaxed mb-12">Real-world Facebook Pages automation scenarios that grow engagement.</p>
+</div>
+<div class="grid-3">
+<div class="glass-card-bright card-hover reveal" style="padding:2rem">
+<div class="icon-box icon-box-lg mb-4" style="background:linear-gradient(135deg,#f0fdf4,#dcfce7);color:#059669"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"/></svg></div>
+<h3 class="text-xl font-semibold mb-2">E-Commerce Support</h3>
+<p class="text-sm text-muted leading-relaxed">Answer product questions, handle order inquiries, and drive sales through automated comment and Messenger interactions.</p>
+</div>
+<div class="glass-card-bright card-hover reveal" style="padding:2rem">
+<div class="icon-box icon-box-lg mb-4" style="background:linear-gradient(135deg,#eff6ff,#dbeafe);color:#2563eb"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><circle cx="12" cy="12" r="3"/></svg></div>
+<h3 class="text-xl font-semibold mb-2">Brand Reputation</h3>
+<p class="text-sm text-muted leading-relaxed">Monitor brand mentions, respond to reviews, and manage public perception with timely, AI-crafted replies.</p>
+</div>
+<div class="glass-card-bright card-hover reveal" style="padding:2rem">
+<div class="icon-box icon-box-lg mb-4" style="background:linear-gradient(135deg,#fefce8,#fef08a);color:#ca8a04"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+<h3 class="text-xl font-semibold mb-2">Lead Generation</h3>
+<p class="text-sm text-muted leading-relaxed">Capture and qualify leads from page interactions, then route them to your CRM for follow-up.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="page-section vitral-bg">
+<div class="container">
+<div class="text-center reveal">
+<div class="badge mb-4" style="margin-left:auto;margin-right:auto;width:fit-content"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>Benefits</div>
+<h2 class="text-3xl font-bold tracking-tighter mb-4">Why Choose Facebook Pages Integration</h2>
+<p class="text-lg text-muted max-w-2xl mx-auto leading-relaxed mb-12">Key advantages that transform your social media engagement.</p>
+</div>
+<div class="grid-3">
+<div class="glass-card-bright card-hover reveal" style="padding:2rem">
+<div class="icon-box icon-box-lg mb-4" style="background:linear-gradient(135deg,#f0fdf4,#dcfce7);color:#059669"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+<h3 class="text-xl font-semibold mb-2">24/7 Engagement</h3>
+<p class="text-sm text-muted leading-relaxed">Never miss a comment or message — AI bots respond instantly around the clock, even outside business hours.</p>
+</div>
+<div class="glass-card-bright card-hover reveal" style="padding:2rem">
+<div class="icon-box icon-box-lg mb-4" style="background:linear-gradient(135deg,#eff6ff,#dbeafe);color:#2563eb"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+<h3 class="text-xl font-semibold mb-2">Consistent Brand Voice</h3>
+<p class="text-sm text-muted leading-relaxed">AI-generated responses maintain your brand tone and messaging standards across every interaction.</p>
+</div>
+<div class="glass-card-bright card-hover reveal" style="padding:2rem">
+<div class="icon-box icon-box-lg mb-4" style="background:linear-gradient(135deg,#fefce8,#fef08a);color:#ca8a04"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><circle cx="12" cy="12" r="3"/></svg></div>
+<h3 class="text-xl font-semibold mb-2">Scalable Support</h3>
+<p class="text-sm text-muted leading-relaxed">Handle thousands of comments and messages without adding headcount — AI scales to match your audience growth.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="page-section-lg bg-gray-900 text-white">
+<div class="container text-center reveal">
+<h2 class="text-3xl font-bold tracking-tighter mb-4" style="color:#fff">Ready to Transform?</h2>
+<p class="text-lg max-w-2xl mx-auto leading-relaxed mb-8" style="color:rgba(255,255,255,.7)">Start automating your Facebook Pages engagement with AI-powered bots today.</p>
+<div class="flex flex-wrap gap-4 justify-center">
+<a href="/contact" class="btn btn-lg" style="background:#fff;color:var(--primary)">Contact Us</a>
+<a href="/contact" class="btn btn-outline btn-lg" style="border-color:rgba(255,255,255,.3);color:#fff">Request Demo</a>
+</div>
+</div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+<div class="container">
+<div class="footer-top">
+<div class="footer-brand">
+<img src="/gb-logo.png" alt="General Bots" width="140" height="33" class="footer-logo">
+<p>General Bots® — The Open Source AI Bot Platform</p>
+<p>DPO: Rodrigo Rodriguez<br><a href="mailto:security@pragmatismo.com.br">security@pragmatismo.com.br</a></p>
+</div>
+<div class="footer-col"><h5>General Bots</h5><a href="/general-bots/llms">LLMs</a><a href="/general-bots/vector-retrieval">Vector Retrieval</a><a href="/general-bots/open-source">Open Source</a><a href="/features">Features</a><a href="/integrations">Integrations</a></div>
+<div class="footer-col"><h5>Hosting</h5><a href="/pricing/azure">Azure</a><a href="/pricing/aws">AWS</a><a href="/pricing/google-cloud">Google Cloud</a><a href="/pricing/digital-ocean">Digital Ocean</a><a href="/pricing/on-premises">On Premises</a></div>
+<div class="footer-col"><h5>Community</h5><a href="https://github.com/GeneralBots" target="_blank" rel="noopener">GitHub</a><a href="/resources/community">Community</a><a href="/resources/community/become-a-partner">Become a Partner</a><a href="/blog">Blog</a></div>
+</div>
+<div class="footer-middle">
+<div class="footer-social">
+<a href="https://github.com/GeneralBots" target="_blank" rel="noopener" aria-label="GitHub"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
+<a href="https://instagram.com/generalbots" target="_blank" rel="noopener" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+<a href="https://wa.me/552140402160" target="_blank" rel="noopener" aria-label="WhatsApp"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+</div>
+<div><a href="/terms">Terms</a> &nbsp;·&nbsp; <a href="/privacy">Privacy</a></div>
+</div>
+<div class="footer-bottom"><p>Copyright &copy; 2016-2026 Pragmatismo. All rights reserved.</p></div>
+</div>
+</footer>
+
+<script src="/js/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI Search | General Bots</title>
+<meta name="description" content="Discover advanced AI-powered search with vector databases and large language models. Semantic search, contextual understanding, and seamless integration with General Bots.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://generalbots.org/features/ai-search/">
+<meta property="og:title" content="AI Search | General Bots">
+<meta property="og:description" content="Discover advanced AI-powered search with vector databases and large language models for precise, contextual answers.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://generalbots.org/features/ai-search/">
+<link rel="icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="stylesheet" href="/css/site.css">
+</head>
+<body>
+<header class="site-header">
+<div class="header-inner">
+<a href="/" class="logo-link"><img src="/gb-logo.png" alt="General Bots" width="140" height="33"></a>
+<nav class="nav-desktop">
+<a href="/">Home</a>
+<div class="nav-dropdown">
+<button class="nav-dropdown-trigger">General Bots <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5l3 3 3-3"/></svg></button>
+<div class="nav-dropdown-content hidden">
+<a href="/general-bots/llm">LLMs</a>
+<a href="/general-bots/vector-retrieval">Vector Retrieval</a>
+<a href="/general-bots/open-source">Open Source</a>
+</div>
+</div>
+<div class="nav-dropdown">
+<button class="nav-dropdown-trigger">Features <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5l3 3 3-3"/></svg></button>
+<div class="nav-dropdown-content hidden">
+<a href="/features/" style="font-weight:600">All Features</a>
+<a href="/features/ai-search/">AI Search</a>
+<a href="/features/bot-factory/">Bot Factory</a>
+<a href="/features/broadcast/">Broadcast</a>
+<a href="/features/content-generation/">Content Generation</a>
+<a href="/features/create-apis-in-word/">Create APIs in BASIC</a>
+<a href="/features/llm-tools/">LLM Tools</a>
+<a href="/features/talk-to-data/">Talk to Data</a>
+<a href="/features/trainning/">Training</a>
+<a href="/features/web-automation/">Web Automation</a>
+</div>
+</div>
+<div class="nav-dropdown">
+<button class="nav-dropdown-trigger">Integrations <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5l3 3 3-3"/></svg></button>
+<div class="nav-dropdown-content hidden">
+<a href="/integrations/">Overview</a>
+</div>
+</div>
+<a href="/templates/">Templates</a>
+<div class="nav-dropdown">
+<button class="nav-dropdown-trigger">Resources <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5l3 3 3-3"/></svg></button>
+<div class="nav-dropdown-content hidden">
+<a href="/blog/">Blog</a>
+<a href="/resources/">Documentation</a>
+</div>
+</div>
+<a href="/pricing/">Hosting</a>
+<a href="/contact/">Contact</a>
+<a href="tel:+552140402160" class="phone-link">
+<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
++55 21 4040-2160
+</a>
+<div class="gtranslate_wrapper"></div>
+</nav>
+<div class="flex items-center gap-4">
+<button class="nav-mobile-toggle" id="mobile-menu-toggle" aria-label="Toggle menu">
+<svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+<svg class="close-icon hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M6 18L18 6"/></svg>
+</button>
+</div>
+</div>
+<div id="mobile-menu" class="hidden">
+<a href="/" class="mobile-nav-link">Home</a>
+<button class="mobile-dropdown-trigger">General Bots <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
+<div class="mobile-dropdown-content hidden">
+<a href="/general-bots/llm">LLMs</a>
+<a href="/general-bots/vector-retrieval">Vector Retrieval</a>
+<a href="/general-bots/open-source">Open Source</a>
+</div>
+<button class="mobile-dropdown-trigger">Features <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
+<div class="mobile-dropdown-content hidden">
+<a href="/features/" style="font-weight:600">All Features</a>
+<a href="/features/ai-search/">AI Search</a>
+<a href="/features/bot-factory/">Bot Factory</a>
+<a href="/features/broadcast/">Broadcast</a>
+<a href="/features/content-generation/">Content Generation</a>
+<a href="/features/create-apis-in-word/">Create APIs in BASIC</a>
+<a href="/features/llm-tools/">LLM Tools</a>
+<a href="/features/talk-to-data/">Talk to Data</a>
+<a href="/features/trainning/">Training</a>
+<a href="/features/web-automation/">Web Automation</a>
+</div>
+<button class="mobile-dropdown-trigger">Integrations <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
+<div class="mobile-dropdown-content hidden">
+<a href="/integrations/">Overview</a>
+</div>
+<a href="/templates/" class="mobile-nav-link">Templates</a>
+<button class="mobile-dropdown-trigger">Resources <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
+<div class="mobile-dropdown-content hidden">
+<a href="/blog/">Blog</a>
+<a href="/resources/">Documentation</a>
+</div>
+<a href="/pricing/" class="mobile-nav-link">Hosting</a>
+<a href="/contact/" class="mobile-nav-link">Contact</a>
+<a href="tel:+552140402160" class="mobile-phone">+55 21 4040-2160</a>
+</div>
+</header>
+<main style="padding-top:4rem">
+<section class="page-section bg-gray-50 vitral-bg">
+<div class="container text-center">
+<div class="reveal">
+<a href="/features/" class="text-sm text-muted" style="display:inline-flex;align-items:center;gap:.375rem;margin-bottom:1.5rem">
+<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+Back to Features
+</a>
+<div class="badge mb-4" style="margin-left:auto;margin-right:auto;width:fit-content">
+<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+AI Search Revolutionized
+</div>
+<h1 class="text-4xl font-bold tracking-tighter mb-4" style="font-size:clamp(2rem,5vw,3rem)">Discover Advanced Search with AI!</h1>
+<p class="text-lg text-muted max-w-2xl mx-auto leading-relaxed mb-8">Harness the power of vector databases and large language models to deliver precise, contextual answers from your documents and data.</p>
+<div class="flex flex-wrap gap-4 justify-center mb-8">
+<a href="/features/ai-search/#vector-databases" class="btn btn-outline btn-lg">Learn More</a>
+<a href="/contact/" class="btn btn-primary btn-lg">Get Started</a>
+</div>
+<div style="max-width:40rem;margin:0 auto;background:var(--card);border:1px solid var(--border);border-radius:1rem;aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;color:var(--muted-foreground);font-size:.875rem">
+<svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" style="opacity:.15"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+</div>
+</div>
+</div>
+</section>
+<section id="vector-databases" class="page-section-lg reveal">
+<div class="container">
+<div class="text-center mb-12">
+<div class="badge mb-4" style="margin-left:auto;margin-right:auto;width:fit-content">Vector Databases</div>
+<h2 class="text-3xl font-bold tracking-tighter mb-4">Vector Database Integration</h2>
+<p class="text-lg text-muted max-w-2xl mx-auto leading-relaxed">Store and retrieve information using advanced vector embeddings for semantic understanding beyond keyword matching.</p>
+</div>
+<div class="grid-2">
+<div>
+<ul class="feature-list">
+<li>
+<svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>
+<div><strong>Enhanced Search Accuracy</strong><p class="text-sm text-muted mt-1">Deliver precise results using semantic similarity instead of simple keyword matching, understanding the intent behind every query.</p></div>
+</li>
+<li>
+<svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>
+<div><strong>Contextual Understanding</strong><p class="text-sm text-muted mt-1">Vector embeddings capture meaning and relationships, enabling your bot to find relevant information even when exact terms differ.</p></div>
+</li>
+</ul>
+</div>
+<div style="background:var(--card);border:1px solid var(--border);border-radius:1rem;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;color:var(--muted-foreground);font-size:.875rem">
+<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" style="opacity:.15"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+</div>
+</div>
+</div>
+</section>
+<section class="page-section-lg bg-gray-50 reveal">
+<div class="container">
+<div class="text-center mb-12">
+<div class="badge mb-4" style="margin-left:auto;margin-right:auto;width:fit-content">Large Language Models</div>
+<h2 class="text-3xl font-bold tracking-tighter mb-4">LLM-Powered Intelligence</h2>
+<p class="text-lg text-muted max-w-2xl mx-auto leading-relaxed">Leverage large language models to understand queries naturally and generate human-quality responses.</p>
+</div>
+<div class="grid-2">
+<div style="background:var(--card);border:1px solid var(--border);border-radius:1rem;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;color:var(--muted-foreground);font-size:.875rem">
+<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" style="opacity:.15"><path d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+</div>
+<div>
+<ul class="feature-list">
+<li>
+<svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>
+<div><strong>Advanced Query Understanding</strong><p class="text-sm text-muted mt-1">Natural language processing interprets complex questions, disambiguates intent, and routes to the optimal retrieval strategy.</p></div>
+</li>
+<li>
+<svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>
+<div><strong>Natural Language Responses</strong><p class="text-sm text-muted mt-1">Generate coherent, contextually grounded answers that synthesize information from multiple retrieved documents.</p></div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section class="page-section-lg reveal">
+<div class="container">
+<div class="text-center mb-12">
+<div class="badge mb-4" style="margin-left:auto;margin-right:auto;width:fit-content">Seamless Integration</div>
+<h2 class="text-3xl font-bold tracking-tighter mb-4">Easy Integration with Your Workflow</h2>
+<p class="text-lg text-muted max-w-2xl mx-auto leading-relaxed">Configure AI search using simple BASIC commands and deploy across your channels with minimal setup.</p>
+</div>
+<div class="grid-2">
+<div>
+<ul class="feature-list">
+<li>
+<svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>
+<div><strong>Easy Configuration with BASIC commands</strong><p class="text-sm text-muted mt-1">Set up vector stores, define search parameters, and customize retrieval behavior using simple BASIC syntax in Word documents.</p></div>
+</li>
+<li>
+<svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>
+<div><strong>Flexible Deployment</strong><p class="text-sm text-muted mt-1">Deploy on-premises or in the cloud, with support for multiple vector database backends and LLM providers.</p></div>
+</li>
+<li>
+<svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>
+<div><strong>Scalable Solutions</strong><p class="text-sm text-muted mt-1">From small knowledge bases to enterprise-scale document repositories, AI Search scales with your needs.</p></div>
+</li>
+</ul>
+</div>
+<div style="background:var(--card);border:1px solid var(--border);border-radius:1rem;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;color:var(--muted-foreground);font-size:.875rem">
+<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" style="opacity:.15"><path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+</div>
+</div>
+</div>
+</section>
+<section class="page-section-lg vitral-bg reveal">
+<div class="container text-center">
+<h2 class="text-3xl font-bold tracking-tighter mb-4">Transform Your Search Experience</h2>
+<p class="text-lg text-muted max-w-2xl mx-auto mb-8 leading-relaxed">Move beyond keyword matching. Deliver AI-powered answers that understand context, intent, and meaning.</p>
+<div class="flex flex-wrap gap-4 justify-center">
+<a href="/contact/" class="btn btn-outline btn-lg">Contact Us</a>
+<a href="/contact/" class="btn btn-primary btn-lg">Get Started</a>
+</div>
+</div>
+</section>
+</main>
+<footer class="site-footer">
+<div class="container">
+<div class="footer-top">
+<div class="footer-brand">
+<img src="/gb-logo.png" alt="General Bots" class="footer-logo" width="140" height="33">
+<p>General Bots&#174; &#8212; The Open Source AI Bot Platform. Self-host or choose a certified hosting provider.</p>
+<p style="margin-top:.75rem;font-size:.75rem">DPO: Rodrigo Rodriguez (<a href="mailto:security@pragmatismo.com.br" style="color:rgba(255,255,255,.7)">security@pragmatismo.com.br</a>)</p>
+<p style="font-size:.75rem;margin-top:.25rem">Rio de Janeiro &#8211; S&#227;o Paulo &#8211; Paran&#225;, Brazil</p>
+<p style="font-size:.75rem;margin-top:.25rem"><a href="tel:+552140402160" style="color:rgba(255,255,255,.7)">+55 21 4040-2160</a></p>
+</div>
+<div class="footer-col">
+<h5>General Bots</h5>
+<a href="/general-bots/llm">LLM</a>
+<a href="/general-bots/vector-retrieval">Vector Search</a>
+<a href="/general-bots/open-source">Open Source</a>
+<a href="/features/ai-search/">AI Search</a>
+<a href="/features/bot-factory/">Bot Factory</a>
+</div>
+<div class="footer-col">
+<h5>Hosting</h5>
+<a href="https://pragmatismo.com.br" target="_blank" rel="noopener">Pragmatismo</a>
+<a href="https://oerlabs.com.br" target="_blank" rel="noopener">OERLabs</a>
+<a href="https://mapagency.com.br" target="_blank" rel="noopener">Map Agency</a>
+<a href="https://sentient.net.br" target="_blank" rel="noopener">Sentient</a>
+<a href="https://darioexecutivesales.com" target="_blank" rel="noopener">Dario Executive Sales</a>
+</div>
+<div class="footer-col">
+<h5>Community</h5>
+<a href="https://docs.generalbots.org" target="_blank" rel="noopener">Documentation</a>
+<a href="https://gb.pragmatismo.com.br/pragmatismohelpcenter" target="_blank" rel="noopener">Help Center</a>
+<a href="/resources/community/become-a-partner">Become a Partner</a>
+<a href="/blog/">Blog</a>
+<a href="https://github.com/generalbots" target="_blank" rel="noopener">GitHub</a>
+</div>
+</div>
+<div class="footer-middle">
+<span>Copyright &#169; 2016-2026 Pragmatismo</span>
+<div class="flex items-center gap-4">
+<a href="/terms/">Terms of Service</a>
+<a href="/privacy/">Privacy Policy</a>
+</div>
+</div>
+<div class="footer-bottom">
+<span>General Bots &#8212; Open Source AI Orchestration Platform</span>
+<div class="footer-social">
+<a href="https://github.com/GeneralBots" target="_blank" rel="noopener" aria-label="GitHub"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg></a>
+<a href="https://instagram.com/generalbots" target="_blank" rel="noopener" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg></a>
+<a href="https://wa.me/552140402160" target="_blank" rel="noopener" aria-label="WhatsApp"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+</div>
+</div>
+</div>
+</footer>
+<script src="/js/site.js"></script>
+</body>
+</html>
