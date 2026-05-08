@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Carl vs Wilson | General Bots Blog</title>
+<meta name="description" content="Two teenagers, two AI philosophies. A deep analysis of how your AI stack choice can define the future of your company.">
+<link rel="stylesheet" href="/css/site.css">
+<link rel="icon" href="/favicon.ico">
+</head>
+<body>
+<header class="site-header"><div class="header-inner">
+<a href="/" class="logo-link"><img src="/gb-logo.png" alt="General Bots" width="140" height="33"></a>
+<nav class="nav-desktop"><a href="/">Home</a><div class="nav-dropdown"><button class="nav-dropdown-trigger">General Bots <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5l3 3 3-3"/></svg></button><div class="nav-dropdown-content hidden"><a href="/general-bots/llm">LLMs</a><a href="/general-bots/vector-retrieval">Vector Retrieval</a><a href="/general-bots/open-source">Open Source</a></div></div><div class="nav-dropdown"><button class="nav-dropdown-trigger">Features <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5l3 3 3-3"/></svg></button><div class="nav-dropdown-content hidden"><a href="/features/ai-search">AI Search</a><a href="/features/content-generation">Content Generation</a><a href="/features/bot-factory">Bot Factory</a><a href="/features/talk-to-data">Talk to data</a><a href="/features/broadcast">Broadcast</a><a href="/features/trainning">Train</a><a href="/features/web-automation">Web Automation</a><a href="/features/llm-tools">LLM Tools</a><a href="/features/create-apis-in-word">Calling APIs</a></div></div><div class="nav-dropdown"><button class="nav-dropdown-trigger">Integrations <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5l3 3 3-3"/></svg></button><div class="nav-dropdown-content hidden"><a href="/integrations/channels/whatsapp">WhatsApp</a><a href="/integrations/channels/sms">SMS</a><a href="/integrations/channels/web-chat">Web Chat</a><a href="/integrations/channels/instagram">Instagram</a><a href="/integrations/channels/email">E-mail</a><a href="/integrations/channels/microsoft-teams">Microsoft Teams</a><a href="/integrations/channels/google-chat">Google Chat</a><a href="/integrations/channels/facebook-pages">Facebook Pages</a><a href="/integrations/channels/slack">Slack</a></div></div><a href="/templates">Templates</a><div class="nav-dropdown"><button class="nav-dropdown-trigger">Resources <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5l3 3 3-3"/></svg></button><div class="nav-dropdown-content hidden"><a href="/resources/considering/ai-powered-org">Considering</a><a href="/resources/already-using/essential-resources">Already Using</a><a href="/resources/community/become-a-partner">Community</a></div></div><a href="/pricing">Hosting</a><a href="/contact">Contact</a></nav>
+<div class="flex items-center gap-4"><a href="tel:+552140402160" class="phone-link" style="display:none" id="header-phone">+55 21 4040-2160</a><div class="gtranslate_wrapper"></div><button class="nav-mobile-toggle" id="mobile-menu-toggle" aria-label="Toggle menu"><svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg><svg class="close-icon hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M6 18L18 6"/></svg></button></div>
+</div></header>
+<div id="mobile-menu" class="hidden">
+<a href="/" class="mobile-nav-link">Home</a>
+<div><button class="mobile-dropdown-trigger">General Bots <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><path d="M3 5l3 3 3-3"/></svg></button><div class="mobile-dropdown-content hidden"><a href="/general-bots/llm" class="mobile-nav-link">LLMs</a><a href="/general-bots/vector-retrieval" class="mobile-nav-link">Vector Retrieval</a><a href="/general-bots/open-source" class="mobile-nav-link">Open Source</a></div></div>
+<div><button class="mobile-dropdown-trigger">Features <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><path d="M3 5l3 3 3-3"/></svg></button><div class="mobile-dropdown-content hidden"><a href="/features/ai-search" class="mobile-nav-link">AI Search</a><a href="/features/content-generation" class="mobile-nav-link">Content Generation</a><a href="/features/bot-factory" class="mobile-nav-link">Bot Factory</a><a href="/features/talk-to-data" class="mobile-nav-link">Talk to data</a><a href="/features/broadcast" class="mobile-nav-link">Broadcast</a><a href="/features/trainning" class="mobile-nav-link">Train</a><a href="/features/web-automation" class="mobile-nav-link">Web Automation</a><a href="/features/llm-tools" class="mobile-nav-link">LLM Tools</a><a href="/features/create-apis-in-word" class="mobile-nav-link">Calling APIs</a></div></div>
+<div><button class="mobile-dropdown-trigger">Integrations <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><path d="M3 5l3 3 3-3"/></svg></button><div class="mobile-dropdown-content hidden"><a href="/integrations/channels/whatsapp" class="mobile-nav-link">WhatsApp</a><a href="/integrations/channels/sms" class="mobile-nav-link">SMS</a><a href="/integrations/channels/web-chat" class="mobile-nav-link">Web Chat</a><a href="/integrations/channels/instagram" class="mobile-nav-link">Instagram</a><a href="/integrations/channels/email" class="mobile-nav-link">E-mail</a><a href="/integrations/channels/microsoft-teams" class="mobile-nav-link">Microsoft Teams</a><a href="/integrations/channels/google-chat" class="mobile-nav-link">Google Chat</a><a href="/integrations/channels/facebook-pages" class="mobile-nav-link">Facebook Pages</a><a href="/integrations/channels/slack" class="mobile-nav-link">Slack</a></div></div>
+<a href="/templates" class="mobile-nav-link">Templates</a>
+<div><button class="mobile-dropdown-trigger">Resources <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><path d="M3 5l3 3 3-3"/></svg></button><div class="mobile-dropdown-content hidden"><a href="/resources/considering/ai-powered-org" class="mobile-nav-link">Considering</a><a href="/resources/already-using/essential-resources" class="mobile-nav-link">Already Using</a><a href="/resources/community/become-a-partner" class="mobile-nav-link">Community</a></div></div>
+<a href="/pricing" class="mobile-nav-link">Hosting</a>
+<a href="/contact" class="mobile-nav-link">Contact</a>
+<span class="mobile-phone">+55 21 4040-2160</span>
+</div>
+<main style="padding-top:5rem">
+<section class="page-section vitral-bg">
+<div class="max-w-3xl mx-auto" style="padding:0 1rem">
+<a href="/blog" class="text-sm text-muted" style="display:inline-flex;align-items:center;gap:.375rem;margin-bottom:1.5rem"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> Back to Blog</a>
+<div class="reveal">
+<span class="badge badge-featured mb-4" style="display:inline-flex">Strategy</span>
+<h1 class="text-4xl font-bold tracking-tight mb-4">Carl vs Wilson: Two AI Philosophies</h1>
+<p class="text-sm text-muted mb-8">Author: Pragmatismo Team</p>
+</div>
+<article class="reveal" style="font-size:1.0625rem;line-height:1.75;color:var(--foreground)">
+
+<p style="margin-bottom:1.5rem">Dois Adolescentes, Duas Filosofias de IA. Uma análise profunda sobre como a escolha da sua stack de IA pode definir o futuro da sua empresa.</p>
+
+<h2 style="font-size:1.5rem;font-weight:700;margin:2rem 0 1rem;color:var(--foreground)">Meet Carl and Wilson</h2>
+
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem;margin-bottom:2rem">
+<div class="glass-card" style="padding:1.5rem">
+<h3 style="font-size:1.25rem;font-weight:700;margin-bottom:1rem;color:var(--foreground)">Carl, 17 anos</h3>
+<p style="margin-bottom:1rem;color:var(--muted-foreground)">Ama o Marketing das Big Techs</p>
+<p style="margin-bottom:1rem">Carl representa a mentalidade corporativa clássica: "se funciona para todo mundo, funciona para mim". Ele genuinamente acredita que seguir o caminho já trilhado por milhões é a estratégia mais inteligente. Afinal, por que reinventar a roda quando a Microsoft já fez o trabalho?</p>
+<ul style="margin-bottom:1rem;padding-left:1.25rem">
+<li style="margin-bottom:.5rem"><strong>Prompts copiados do ChatGPT</strong> — "Por que criar quando posso copiar?"</li>
+<li style="margin-bottom:.5rem"><strong>Documentação oficial é lei</strong> — Só confia se tem logo da Microsoft</li>
+<li style="margin-bottom:.5rem"><strong>Setup em 5 minutos</strong> — Orgulha-se de não pensar muito</li>
+<li style="margin-bottom:.5rem"><strong>Stack Overflow como bíblia</strong> — A comunidade sempre tem a resposta</li>
+<li style="margin-bottom:.5rem"><strong>Atualizações automáticas</strong> — Deixa a Big Tech decidir por ele</li>
+</ul>
+<div class="glass-card" style="padding:.75rem;margin-top:1rem;border-left:3px solid var(--border)">
+<p style="font-style:italic;font-size:.875rem;color:var(--muted-foreground)">Carl não percebe que está construindo exatamente o mesmo produto que seus concorrentes...</p>
+</div>
+</div>
+
+<div class="glass-card" style="padding:1.5rem">
+<h3 style="font-size:1.25rem;font-weight:700;margin-bottom:1rem;color:var(--foreground)">Wilson, 17 anos</h3>
+<p style="margin-bottom:1rem;color:var(--muted-foreground)">O Inovador Independente</p>
+<p style="margin-bottom:1rem">Wilson é aquela pessoa que não consegue usar algo sem antes entender como funciona por dentro. Ele vê cada problema como uma oportunidade de criar algo verdadeiramente novo, mesmo que isso signifique mais tempo.</p>
+<ul style="margin-bottom:1rem;padding-left:1.25rem">
+<li style="margin-bottom:.5rem"><strong>LLMs diversos e local</strong> — "Meus dados, minhas regras"</li>
+<li style="margin-bottom:.5rem"><strong>Prompts que ninguém pensou</strong> — Experimenta abordagens disruptivas</li>
+<li style="margin-bottom:.5rem"><strong>Código completamente original</strong> — Stack orientado a gastar menos o planeta</li>
+<li style="margin-bottom:.5rem"><strong>Infraestrutura personalizada</strong> — Cada decisão é intencional</li>
+<li style="margin-bottom:.5rem"><strong>Algoritmos sob medida</strong> — Vantagem competitiva real</li>
+</ul>
+<div class="glass-card" style="padding:.75rem;margin-top:1rem;border-left:3px solid var(--border)">
+<p style="font-style:italic;font-size:.875rem;color:var(--muted-foreground)">Wilson está construindo o que será padrão da indústria em 3-5 anos...</p>
+</div>
+</div>
+</div>
+
+<h2 style="font-size:1.5rem;font-weight:700;margin:2rem 0 1rem;color:var(--foreground)">Duas Filosofias, Dois Resultados</h2>
+
+<p style="margin-bottom:1.5rem">A diferença entre Carl e Wilson não está apenas nas ferramentas que escolhem, mas na mentalidade que trazem para resolver problemas. Cada abordagem tem suas vantagens e representa uma estratégia empresarial completamente diferente.</p>
+
+<p style="margin-bottom:1.5rem">Carl representa empresas que valorizam estabilidade, previsibilidade e rapidez na implementação. Sua abordagem funciona muito bem para organizações que precisam de resultados consistentes e têm processos bem estabelecidos.</p>
+
+<p style="margin-bottom:1.5rem">Wilson representa empresas que buscam diferenciação competitiva através da inovação tecnológica. Sua abordagem é ideal para organizações que querem criar soluções únicas e ter controle total sobre sua stack tecnológica.</p>
+
+<h3 style="font-size:1.25rem;font-weight:700;margin:1.5rem 0 1rem;color:var(--foreground)">Mundo das Big Techs: A Zona de Conforto</h3>
+
+<blockquote style="border-left:3px solid var(--border);padding:1rem 1.5rem;margin:1.5rem 0;color:var(--muted-foreground);font-style:italic">"Por que pensar quando as Big Techs já pensaram por você?"</blockquote>
+
+<p style="margin-bottom:1.5rem"><strong>Segurança de Rebanho</strong> — Certificações ISO, SOC2, GDPR... tudo muito bonito no papel. Mas quando todo mundo usa a mesma solução, <strong>hackers também sabem exatamente onde atacar</strong>. É como usar a mesma fechadura em todas as casas da cidade.</p>
+
+<p style="margin-bottom:1.5rem"><strong>Previsibilidade... ou Armadilha?</strong> — Começou barato, né? Mas quando sua empresa cresce e se torna dependente, <strong>os preços magicamente aumentam</strong>. E aí você descobre que migrar custa mais caro que ficar pagando o preço premium.</p>
+
+<p style="margin-bottom:1.5rem"><strong>Comunidade... de Clones</strong> — Documentação extensa? Ótimo! Milhões de desenvolvedores fazendo a mesma coisa? <strong>Sua empresa vira mais uma na multidão</strong>. Zero diferenciação, zero vantagem competitiva.</p>
+
+<div class="glass-card" style="padding:1rem;margin:1.5rem 0;border-left:3px solid var(--primary)">
+<p style="font-size:.875rem;font-weight:600;color:var(--foreground)">Realidade: Você não está comprando tecnologia, está alugando dependência.</p>
+</div>
+
+<h3 style="font-size:1.25rem;font-weight:700;margin:1.5rem 0 1rem;color:var(--foreground)">Abordagem Open Source</h3>
+
+<p style="margin-bottom:1.5rem"><strong>Inovação Diferenciada</strong> — Capacidade de criar soluções verdadeiramente únicas que não existem no mercado. Permite desenvolver funcionalidades específicas que se tornam vantagens competitivas sustentáveis e difíceis de replicar.</p>
+
+<p style="margin-bottom:1.5rem"><strong>Autonomia Total</strong> — Controle completo sobre dados, algoritmos e infraestrutura. Sem dependência de terceiros para funcionalidades críticas, com possibilidade de modificar qualquer aspecto do sistema conforme necessário.</p>
+
+<p style="margin-bottom:1.5rem"><strong>Escalabilidade Personalizada</strong> — Arquitetura otimizada para as necessidades específicas da empresa, resultando em melhor performance e custos otimizados. Possibilidade de escalar apenas os componentes necessários.</p>
+
+<h2 style="font-size:1.5rem;font-weight:700;margin:2rem 0 1rem;color:var(--foreground)">Comparação Técnica Detalhada</h2>
+
+<div style="overflow-x:auto;margin-bottom:2rem">
+<table style="width:100%;border-collapse:collapse">
+<thead>
+<tr style="border-bottom:2px solid var(--border)">
+<th style="text-align:left;padding:.75rem 1rem;font-weight:600;background:var(--muted)">Aspecto</th>
+<th style="text-align:center;padding:.75rem 1rem;font-weight:600;background:var(--muted)">Carl (OpenAI)</th>
+<th style="text-align:center;padding:.75rem 1rem;font-weight:600;background:var(--muted)">Wilson (Open Source)</th>
+</tr>
+</thead>
+<tbody>
+<tr style="border-bottom:1px solid var(--border)">
+<td style="padding:.75rem 1rem;font-weight:500">Tempo de Implementação</td>
+<td style="padding:.75rem 1rem;text-align:center">1-2 semanas</td>
+<td style="padding:.75rem 1rem;text-align:center">2-3 meses</td>
+</tr>
+<tr style="border-bottom:1px solid var(--border);background:var(--muted)">
+<td style="padding:.75rem 1rem;font-weight:500">Custo Inicial</td>
+<td style="padding:.75rem 1rem;text-align:center">Médio</td>
+<td style="padding:.75rem 1rem;text-align:center">Baixo</td>
+</tr>
+<tr style="border-bottom:1px solid var(--border)">
+<td style="padding:.75rem 1rem;font-weight:500">Customização</td>
+<td style="padding:.75rem 1rem;text-align:center">Limitada</td>
+<td style="padding:.75rem 1rem;text-align:center">Total</td>
+</tr>
+<tr style="border-bottom:1px solid var(--border);background:var(--muted)">
+<td style="padding:.75rem 1rem;font-weight:500">Controle de Dados</td>
+<td style="padding:.75rem 1rem;text-align:center">Parcial</td>
+<td style="padding:.75rem 1rem;text-align:center">Completo</td>
+</tr>
+<tr style="border-bottom:1px solid var(--border)">
+<td style="padding:.75rem 1rem;font-weight:500">Escalabilidade</td>
+<td style="padding:.75rem 1rem;text-align:center">Alta</td>
+<td style="padding:.75rem 1rem;text-align:center">Ilimitada</td>
+</tr>
+<tr style="border-bottom:1px solid var(--border);background:var(--muted)">
+<td style="padding:.75rem 1rem;font-weight:500">Inovação</td>
+<td style="padding:.75rem 1rem;text-align:center">Incremental</td>
+<td style="padding:.75rem 1rem;text-align:center">Disruptiva</td>
+</tr>
+<tr>
+<td style="padding:.75rem 1rem;font-weight:500">Vantagem Competitiva</td>
+<td style="padding:.75rem 1rem;text-align:center">Commoditizada</td>
+<td style="padding:.75rem 1rem;text-align:center">Única</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<h2 style="font-size:1.5rem;font-weight:700;margin:2rem 0 1rem;color:var(--foreground)">Framework de Decisão para CTOs</h2>
+
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem;margin-bottom:2rem">
+<div class="glass-card" style="padding:1.5rem;text-align:center">
+<div style="width:3rem;height:3rem;border-radius:50%;background:var(--muted);display:flex;align-items:center;justify-content:center;margin:0 auto 1rem"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+<h3 style="font-size:1.125rem;font-weight:700;margin-bottom:.5rem;color:var(--foreground)">Urgência</h3>
+<p style="font-size:.875rem;color:var(--muted-foreground)">CEO outdated, convencido por BigTechs? Carl é sua escolha.</p>
+</div>
+<div class="glass-card" style="padding:1.5rem;text-align:center">
+<div style="width:3rem;height:3rem;border-radius:50%;background:var(--muted);display:flex;align-items:center;justify-content:center;margin:0 auto 1rem"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a8 8 0 018 8c0 3.4-2.1 6.3-5 7.5V20H9v-2.5C6.1 16.3 4 13.4 4 10a8 8 0 018-8z"/></svg></div>
+<h3 style="font-size:1.125rem;font-weight:700;margin-bottom:.5rem;color:var(--foreground)">Estratégia</h3>
+<p style="font-size:.875rem;color:var(--muted-foreground)">Tem liberdade para o futuro? Wilson oferece vantagem competitiva única.</p>
+</div>
+<div class="glass-card" style="padding:1.5rem;text-align:center">
+<div style="width:3rem;height:3rem;border-radius:50%;background:var(--muted);display:flex;align-items:center;justify-content:center;margin:0 auto 1rem"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+<h3 style="font-size:1.125rem;font-weight:700;margin-bottom:.5rem;color:var(--foreground)">Compliance</h3>
+<p style="font-size:.875rem;color:var(--muted-foreground)">Regulamentação crítica? Avalie controle vs conveniência.</p>
+</div>
+</div>
+
+<h2 style="font-size:1.5rem;font-weight:700;margin:2rem 0 1rem;color:var(--foreground)">O Futuro Está em Suas Mãos</h2>
+
+<p style="margin-bottom:1.5rem">A escolha entre Carl e Wilson não é apenas sobre tecnologia. É sobre definir se sua empresa será uma seguidora ou uma pioneira na era da IA. <em>"O futuro pertence àqueles que controlam sua própria stack de IA"</em></p>
+
+</article>
+<div class="glass-card-bright text-center reveal" style="padding:3rem 2rem;margin-top:3rem">
+<h3 class="text-2xl font-bold tracking-tight mb-2">We'll set up your first automation for free.</h3>
+<p class="text-muted mb-6" style="max-width:28rem;margin-left:auto;margin-right:auto">Get started with General Bots or reach out with your questions.</p>
+<div class="flex items-center justify-center gap-4 flex-wrap">
+<a href="https://github.com/GeneralBots/BotServer" target="_blank" rel="noopener" class="btn btn-primary btn-lg">Try It Now</a>
+<a href="/contact" class="btn btn-outline btn-lg">Ask Questions</a>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="site-footer"><div class="container">
+<div class="footer-top">
+<div class="footer-brand"><img src="/gb-logo.png" alt="General Bots" class="footer-logo" width="140" height="33"><p>General Bots® — The Open Source AI Bot Platform. Self-host or choose a certified hosting provider.</p><p style="margin-top:.75rem;font-size:.75rem">DPO: Rodrigo Rodriguez (<a href="mailto:security@pragmatismo.com.br" style="color:rgba(255,255,255,.7)">security@pragmatismo.com.br</a>)</p><p style="font-size:.75rem;margin-top:.25rem"><a href="tel:+552140402160" style="color:rgba(255,255,255,.7)">+55 21 4040-2160</a></p></div>
+<div class="footer-col"><h5>General Bots</h5><a href="/general-bots/llm">LLM</a><a href="/general-bots/vector-retrieval">Vector Search</a><a href="/general-bots/open-source">Open Source</a><a href="/features/ai-search">AI Search</a><a href="/features/bot-factory">Bot Factory</a></div>
+<div class="footer-col"><h5>Hosting</h5><a href="https://pragmatismo.com.br" target="_blank" rel="noopener">Pragmatismo</a><a href="https://oerlabs.com.br" target="_blank" rel="noopener">OERLabs</a><a href="https://mapagency.com.br" target="_blank" rel="noopener">Map Agency</a><a href="https://sentient.net.br" target="_blank" rel="noopener">Sentient</a><a href="https://darioexecutivesales.com" target="_blank" rel="noopener">Dario Executive Sales</a></div>
+<div class="footer-col"><h5>Community</h5><a href="https://docs.generalbots.org" target="_blank" rel="noopener">Documentation</a><a href="https://gb.pragmatismo.com.br/pragmatismohelpcenter" target="_blank" rel="noopener">Help Center</a><a href="/resources/community/become-a-partner">Become a Partner</a><a href="/blog">Blog</a><a href="https://github.com/generalbots" target="_blank" rel="noopener">GitHub</a></div>
+</div>
+<div class="footer-middle"><span>Copyright &copy; 2016-2026 Pragmatismo</span><div class="flex items-center gap-4"><a href="/terms">Terms of Service</a><a href="/privacy">Privacy Policy</a></div></div>
+<div class="footer-bottom"><span>General Bots — Open Source AI Orchestration Platform</span><div class="footer-social"><a href="https://www.github.com/GeneralBots" target="_blank" rel="noopener" aria-label="GitHub"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg></a><a href="https://www.instagram.com/general.bots/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg></a><a href="https://web.whatsapp.com/send?phone=+552140402160" target="_blank" rel="noopener" aria-label="WhatsApp"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a></div></div>
+</div></footer>
+<style>@media(min-width:768px){#header-phone{display:inline-flex !important}}</style>
+<script src="/js/site.js"></script>
+</body>
+</html>

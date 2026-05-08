@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>BASIC LLM Tools | General Bots Blog</title>
-<meta name="description" content="BASIC powering LLM — extending the closed box of LLMs with open-source tools and callable functions.">
+<title>Building LLM-Powered Enrollment Tools with BASIC | General Bots Blog</title>
+<meta name="description" content="How General Bots bridges human knowledge with actionable tools using BASIC and LLM integration.">
 <link rel="stylesheet" href="/css/site.css">
 <link rel="icon" href="/favicon.ico">
 </head>
@@ -14,21 +14,426 @@
 <nav class="nav-desktop"><a href="/">Home</a><div class="nav-dropdown"><button class="nav-dropdown-trigger">General Bots <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5l3 3 3-3"/></svg></button><div class="nav-dropdown-content hidden"><a href="/general-bots/llm">LLMs</a><a href="/general-bots/vector-retrieval">Vector Retrieval</a><a href="/general-bots/open-source">Open Source</a></div></div><div class="nav-dropdown"><button class="nav-dropdown-trigger">Features <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5l3 3 3-3"/></svg></button><div class="nav-dropdown-content hidden"><a href="/features/ai-search">AI Search</a><a href="/features/content-generation">Content Generation</a><a href="/features/bot-factory">Bot Factory</a><a href="/features/talk-to-data">Talk to data</a><a href="/features/broadcast">Broadcast</a><a href="/features/trainning">Train</a><a href="/features/web-automation">Web Automation</a><a href="/features/llm-tools">LLM Tools</a><a href="/features/create-apis-in-word">Calling APIs</a></div></div><div class="nav-dropdown"><button class="nav-dropdown-trigger">Integrations <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5l3 3 3-3"/></svg></button><div class="nav-dropdown-content hidden"><a href="/integrations/channels/whatsapp">WhatsApp</a><a href="/integrations/channels/sms">SMS</a><a href="/integrations/channels/web-chat">Web Chat</a><a href="/integrations/channels/instagram">Instagram</a><a href="/integrations/channels/email">E-mail</a><a href="/integrations/channels/microsoft-teams">Microsoft Teams</a><a href="/integrations/channels/google-chat">Google Chat</a><a href="/integrations/channels/facebook-pages">Facebook Pages</a><a href="/integrations/channels/slack">Slack</a></div></div><a href="/templates">Templates</a><div class="nav-dropdown"><button class="nav-dropdown-trigger">Resources <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5l3 3 3-3"/></svg></button><div class="nav-dropdown-content hidden"><a href="/resources/considering/ai-powered-org">Considering</a><a href="/resources/already-using/essential-resources">Already Using</a><a href="/resources/community/become-a-partner">Community</a></div></div><a href="/pricing">Hosting</a><a href="/contact">Contact</a></nav>
 <div class="flex items-center gap-4"><a href="tel:+552140402160" class="phone-link" style="display:none" id="header-phone">+55 21 4040-2160</a><div class="gtranslate_wrapper"></div><button class="nav-mobile-toggle" id="mobile-menu-toggle" aria-label="Toggle menu"><svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg><svg class="close-icon hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M6 18L18 6"/></svg></button></div>
 </div></header>
-<div id="mobile-menu" class="hidden"><a href="/" class="mobile-nav-link">Home</a><div><button class="mobile-dropdown-trigger">General Bots <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><path d="M3 5l3 3 3-3"/></svg></button><div class="mobile-dropdown-content hidden"><a href="/general-bots/llm" class="mobile-nav-link">LLMs</a><a href="/general-bots/vector-retrieval" class="mobile-nav-link">Vector Retrieval</a><a href="/general-bots/open-source" class="mobile-nav-link">Open Source</a></div></div><div><button class="mobile-dropdown-trigger">Features <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><path d="M3 5l3 3 3-3"/></svg></button><div class="mobile-dropdown-content hidden"><a href="/features/ai-search" class="mobile-nav-link">AI Search</a><a href="/features/content-generation" class="mobile-nav-link">Content Generation</a><a href="/features/bot-factory" class="mobile-nav-link">Bot Factory</a><a href="/features/talk-to-data" class="mobile-nav-link">Talk to data</a><a href="/features/broadcast" class="mobile-nav-link">Broadcast</a><a href="/features/trainning" class="mobile-nav-link">Train</a><a href="/features/web-automation" class="mobile-nav-link">Web Automation</a><a href="/features/llm-tools" class="mobile-nav-link">LLM Tools</a><a href="/features/create-apis-in-word" class="mobile-nav-link">Calling APIs</a></div></div><div><button class="mobile-dropdown-trigger">Integrations <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><path d="M3 5l3 3 3-3"/></svg></button><div class="mobile-dropdown-content hidden"><a href="/integrations/channels/whatsapp" class="mobile-nav-link">WhatsApp</a><a href="/integrations/channels/sms" class="mobile-nav-link">SMS</a><a href="/integrations/channels/web-chat" class="mobile-nav-link">Web Chat</a><a href="/integrations/channels/instagram" class="mobile-nav-link">Instagram</a><a href="/integrations/channels/email" class="mobile-nav-link">E-mail</a><a href="/integrations/channels/microsoft-teams" class="mobile-nav-link">Microsoft Teams</a><a href="/integrations/channels/google-chat" class="mobile-nav-link">Google Chat</a><a href="/integrations/channels/facebook-pages" class="mobile-nav-link">Facebook Pages</a><a href="/integrations/channels/slack" class="mobile-nav-link">Slack</a></div></div><a href="/templates" class="mobile-nav-link">Templates</a><div><button class="mobile-dropdown-trigger">Resources <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><path d="M3 5l3 3 3-3"/></svg></button><div class="mobile-dropdown-content hidden"><a href="/resources/considering/ai-powered-org" class="mobile-nav-link">Considering</a><a href="/resources/already-using/essential-resources" class="mobile-nav-link">Already Using</a><a href="/resources/community/become-a-partner" class="mobile-nav-link">Community</a></div></div><a href="/pricing" class="mobile-nav-link">Hosting</a><a href="/contact" class="mobile-nav-link">Contact</a><span class="mobile-phone">+55 21 4040-2160</span></div>
+<div id="mobile-menu" class="hidden">
+<a href="/" class="mobile-nav-link">Home</a>
+<div><button class="mobile-dropdown-trigger">General Bots <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><path d="M3 5l3 3 3-3"/></svg></button><div class="mobile-dropdown-content hidden"><a href="/general-bots/llm" class="mobile-nav-link">LLMs</a><a href="/general-bots/vector-retrieval" class="mobile-nav-link">Vector Retrieval</a><a href="/general-bots/open-source" class="mobile-nav-link">Open Source</a></div></div>
+<div><button class="mobile-dropdown-trigger">Features <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><path d="M3 5l3 3 3-3"/></svg></button><div class="mobile-dropdown-content hidden"><a href="/features/ai-search" class="mobile-nav-link">AI Search</a><a href="/features/content-generation" class="mobile-nav-link">Content Generation</a><a href="/features/bot-factory" class="mobile-nav-link">Bot Factory</a><a href="/features/talk-to-data" class="mobile-nav-link">Talk to data</a><a href="/features/broadcast" class="mobile-nav-link">Broadcast</a><a href="/features/trainning" class="mobile-nav-link">Train</a><a href="/features/web-automation" class="mobile-nav-link">Web Automation</a><a href="/features/llm-tools" class="mobile-nav-link">LLM Tools</a><a href="/features/create-apis-in-word" class="mobile-nav-link">Calling APIs</a></div></div>
+<div><button class="mobile-dropdown-trigger">Integrations <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><path d="M3 5l3 3 3-3"/></svg></button><div class="mobile-dropdown-content hidden"><a href="/integrations/channels/whatsapp" class="mobile-nav-link">WhatsApp</a><a href="/integrations/channels/sms" class="mobile-nav-link">SMS</a><a href="/integrations/channels/web-chat" class="mobile-nav-link">Web Chat</a><a href="/integrations/channels/instagram" class="mobile-nav-link">Instagram</a><a href="/integrations/channels/email" class="mobile-nav-link">E-mail</a><a href="/integrations/channels/microsoft-teams" class="mobile-nav-link">Microsoft Teams</a><a href="/integrations/channels/google-chat" class="mobile-nav-link">Google Chat</a><a href="/integrations/channels/facebook-pages" class="mobile-nav-link">Facebook Pages</a><a href="/integrations/channels/slack" class="mobile-nav-link">Slack</a></div></div>
+<a href="/templates" class="mobile-nav-link">Templates</a>
+<div><button class="mobile-dropdown-trigger">Resources <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><path d="M3 5l3 3 3-3"/></svg></button><div class="mobile-dropdown-content hidden"><a href="/resources/considering/ai-powered-org" class="mobile-nav-link">Considering</a><a href="/resources/already-using/essential-resources" class="mobile-nav-link">Already Using</a><a href="/resources/community/become-a-partner" class="mobile-nav-link">Community</a></div></div>
+<a href="/pricing" class="mobile-nav-link">Hosting</a>
+<a href="/contact" class="mobile-nav-link">Contact</a>
+<span class="mobile-phone">+55 21 4040-2160</span>
+</div>
 <main style="padding-top:5rem">
 <section class="page-section vitral-bg">
 <div class="max-w-3xl mx-auto" style="padding:0 1rem">
 <a href="/blog" class="text-sm text-muted" style="display:inline-flex;align-items:center;gap:.375rem;margin-bottom:1.5rem"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> Back to Blog</a>
 <div class="reveal">
-<span class="badge badge-basics mb-4" style="display:inline-flex">Basics</span>
-<h1 class="text-4xl font-bold tracking-tight mb-4">BASIC LLM Tools</h1>
-<p class="text-sm text-muted mb-8">Author: Pragmatismo Team</p>
+<span class="badge badge-featured mb-4" style="display:inline-flex">LLM Tools</span>
+<h1 class="text-4xl font-bold tracking-tight mb-4">Building LLM-Powered Enrollment Tools with BASIC</h1>
+<p class="text-sm text-muted mb-8">How General Bots bridges human knowledge with actionable tools</p>
 </div>
 <article class="reveal" style="font-size:1.0625rem;line-height:1.75;color:var(--foreground)">
-<p style="margin-bottom:1.5rem">Large language models are powerful reasoning engines, but they operate inside a closed box. An LLM can generate text, analyze sentiment, and draft documents, but it cannot query your database, call your internal APIs, or execute business logic. It can only reason about what it has been trained on and what you provide in the prompt. This limitation is not a flaw — it is a fundamental architectural constraint. The question is not whether LLMs need tools, but how those tools get built and connected.</p>
-<p style="margin-bottom:1.5rem">General Bots answers this with BASIC LLM Tools — a framework where every callable function the model can use is defined in BASIC, the same language used for bot logic. This is a significant departure from the Python-centric tooling that dominates the LLM ecosystem. In typical setups, each tool is a Python function decorated with a schema definition, deployed in a serverless environment, and connected through a function-calling API. This works for engineering teams, but it creates the same bottleneck that cripples traditional bot development: only developers can create and modify tools.</p>
-<p style="margin-bottom:1.5rem">With BASIC LLM Tools, a business analyst can define a tool that looks up a customer by CPF, checks their order history, and returns a structured result — all in a few lines of BASIC. The General Bots platform automatically generates the function schema that the LLM needs to understand when and how to call the tool. No separate deployment step. No API gateway configuration. The tool is available to the model as soon as the BASIC file is saved to the bot package.</p>
-<p style="margin-bottom:1.5rem">Practical examples illustrate the power of this approach. A financial services bot can expose a tool that calculates loan payments given principal, rate, and term — the LLM decides when to call it based on the conversation context. A logistics bot can offer a shipment tracking tool that queries the carrier API, translates the response into natural language, and presents it to the user. A healthcare bot can provide a tool that checks medication interactions against a local database. In each case, the tool extends the LLM's closed box with real-time, authoritative data and computation — and the tool builder needs only BASIC, not Python, not JavaScript, not a serverless deployment pipeline.</p>
+
+<div class="reveal">
+<h2 style="font-size:1.5rem;font-weight:700;margin:2rem 0 1rem;color:var(--foreground)">LLM-Tool Integration Architecture</h2>
+<svg viewBox="0 0 800 400" style="width:100%;margin:1.5rem 0">
+<rect x="0" y="0" width="800" height="400" fill="#f8f9fa" rx="10" ry="10"/>
+<g>
+<rect x="50" y="100" width="200" height="200" fill="#f0f0f0" stroke="#999" stroke-width="2" rx="10" ry="10"/>
+<text x="150" y="80" text-anchor="middle" font-size="20" font-weight="bold" fill="#333">LLM System</text>
+<circle cx="150" cy="150" r="40" fill="#e0e0e0" stroke="#999" stroke-width="1"/>
+<text x="150" y="155" text-anchor="middle" font-size="16" fill="#333">NLP</text>
+<rect x="110" y="210" width="80" height="30" fill="#e0e0e0" rx="5" ry="5" stroke="#999" stroke-width="1"/>
+<text x="150" y="230" text-anchor="middle" font-size="14" fill="#333">Intent</text>
+<rect x="110" y="250" width="80" height="30" fill="#e0e0e0" rx="5" ry="5" stroke="#999" stroke-width="1"/>
+<text x="150" y="270" text-anchor="middle" font-size="14" fill="#333">Context</text>
+</g>
+<g>
+<rect x="550" y="100" width="200" height="200" fill="#f0f0f0" stroke="#999" stroke-width="2" rx="10" ry="10"/>
+<text x="650" y="80" text-anchor="middle" font-size="20" font-weight="bold" fill="#333">BASIC Tools</text>
+<rect x="580" y="130" width="140" height="30" fill="#e0e0e0" rx="5" ry="5" stroke="#999" stroke-width="1"/>
+<text x="650" y="150" text-anchor="middle" font-size="14" fill="#333">enrollment.bas</text>
+<rect x="580" y="170" width="140" height="30" fill="#e0e0e0" rx="5" ry="5" stroke="#999" stroke-width="1"/>
+<text x="650" y="190" text-anchor="middle" font-size="14" fill="#333">courses.bas</text>
+<rect x="580" y="210" width="140" height="30" fill="#e0e0e0" rx="5" ry="5" stroke="#999" stroke-width="1"/>
+<text x="650" y="230" text-anchor="middle" font-size="14" fill="#333">schedule.bas</text>
+<rect x="580" y="250" width="140" height="30" fill="#e0e0e0" rx="5" ry="5" stroke="#999" stroke-width="1"/>
+<text x="650" y="270" text-anchor="middle" font-size="14" fill="#333">payment.bas</text>
+</g>
+<g>
+<rect x="300" y="160" width="200" height="80" fill="#f0f0f0" stroke="#999" stroke-width="2" rx="10" ry="10"/>
+<text x="400" y="190" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">General Bots</text>
+<text x="400" y="215" text-anchor="middle" font-size="14" fill="#555">Tool Orchestration</text>
+<path d="M250,200 L300,200" stroke="#666" stroke-width="3" fill="none"/>
+<polygon points="295,195 305,200 295,205" fill="#666"/>
+<path d="M500,200 L550,200" stroke="#666" stroke-width="3" fill="none"/>
+<polygon points="545,195 555,200 545,205" fill="#666"/>
+</g>
+<g>
+<rect x="350" y="320" width="100" height="60" fill="#f0f0f0" stroke="#999" stroke-width="2" rx="10" ry="10"/>
+<text x="400" y="345" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">Data</text>
+<text x="400" y="365" text-anchor="middle" font-size="12" fill="#555">CSV Files</text>
+<path d="M400,320 L400,240" stroke="#666" stroke-width="2" stroke-dasharray="5,5" fill="none"/>
+<polygon points="395,245 400,235 405,245" fill="#666"/>
+</g>
+</svg>
+</div>
+
+<div class="reveal">
+<h2 style="font-size:1.5rem;font-weight:700;margin:2rem 0 1rem;color:var(--foreground)">The Fundamental Problem</h2>
+<p style="margin-bottom:1.5rem">Why simple Q&amp;A isn't enough for real-world applications.</p>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem;margin-bottom:1.5rem">
+<div class="glass-card" style="padding:1.5rem">
+<h3 style="font-size:1.125rem;font-weight:600;margin-bottom:.5rem">Standard LLM Knowledge</h3>
+<pre class="code-block" style="background:#1e1e1e;color:#d4d4d4;padding:1rem;border-radius:.5rem;overflow-x:auto;font-size:.8rem;line-height:1.5">User: What's the capital of Italy?
+<span style="color:#6a9955">AI: The capital of Italy is Rome.</span></pre>
+<p style="margin-top:.75rem;font-size:.9375rem;color:var(--muted-foreground)">Pure information recall — no action required.</p>
+</div>
+<div class="glass-card" style="padding:1.5rem">
+<h3 style="font-size:1.125rem;font-weight:600;margin-bottom:.5rem">Real-World Scenario</h3>
+<pre class="code-block" style="background:#1e1e1e;color:#d4d4d4;padding:1rem;border-radius:.5rem;overflow-x:auto;font-size:.8rem;line-height:1.5">User: I want to enroll in the CS program
+<span style="color:#f44747">AI: I can't perform that action.</span></pre>
+<p style="margin-top:.75rem;font-size:.9375rem;color:var(--muted-foreground)">Requires system integration — this is where BASIC tools come in.</p>
+</div>
+</div>
+<div class="glass-card" style="padding:1rem;margin:1.5rem 0;border-left:3px solid var(--primary)">
+<strong>The General Bots Solution:</strong> We extend LLMs with executable tools written in BASIC that can:
+<ul style="margin-top:.5rem;padding-left:1.5rem">
+<li>Collect structured data (enrollment forms)</li>
+<li>Interact with databases and CSV files</li>
+<li>Trigger real system actions</li>
+<li>Maintain audit logs</li>
+</ul>
+</div>
+</div>
+
+<div class="reveal">
+<h2 style="font-size:1.5rem;font-weight:700;margin:2rem 0 1rem;color:var(--foreground)">Enrollment Process Flow</h2>
+<svg viewBox="0 0 800 300" style="width:100%;margin:1.5rem 0">
+<rect x="0" y="0" width="800" height="300" fill="#f8fafc" rx="10" ry="10"/>
+<circle cx="100" cy="150" r="50" fill="#f0f0f0" stroke="#999" stroke-width="2"/>
+<text x="100" y="140" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">Intent</text>
+<text x="100" y="160" text-anchor="middle" font-size="14" fill="#333">Detection</text>
+<path d="M150,150 L200,150" stroke="#666" stroke-width="3" fill="none"/><polygon points="195,145 205,150 195,155" fill="#666"/>
+<circle cx="250" cy="150" r="50" fill="#f0f0f0" stroke="#999" stroke-width="2"/>
+<text x="250" y="140" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">Tool</text>
+<text x="250" y="160" text-anchor="middle" font-size="14" fill="#333">Activation</text>
+<path d="M300,150 L350,150" stroke="#666" stroke-width="3" fill="none"/><polygon points="345,145 355,150 345,155" fill="#666"/>
+<circle cx="400" cy="150" r="50" fill="#f0f0f0" stroke="#999" stroke-width="2"/>
+<text x="400" y="140" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">Data</text>
+<text x="400" y="160" text-anchor="middle" font-size="14" fill="#333">Collection</text>
+<path d="M450,150 L500,150" stroke="#666" stroke-width="3" fill="none"/><polygon points="495,145 505,150 495,155" fill="#666"/>
+<circle cx="550" cy="150" r="50" fill="#f0f0f0" stroke="#999" stroke-width="2"/>
+<text x="550" y="140" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">Data</text>
+<text x="550" y="160" text-anchor="middle" font-size="14" fill="#333">Storage</text>
+<path d="M600,150 L650,150" stroke="#666" stroke-width="3" fill="none"/><polygon points="645,145 655,150 645,155" fill="#666"/>
+<circle cx="700" cy="150" r="50" fill="#f0f0f0" stroke="#999" stroke-width="2"/>
+<text x="700" y="140" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">Confirmation</text>
+<text x="700" y="160" text-anchor="middle" font-size="14" fill="#333">Response</text>
+<circle cx="100" cy="50" r="20" fill="#e0e0e0" stroke="#999" stroke-width="1"/>
+<circle cx="100" cy="30" r="10" fill="#e0e0e0" stroke="#999" stroke-width="1"/>
+<text x="140" y="50" font-size="16" fill="#333">User Request</text>
+<rect x="530" y="230" width="40" height="30" fill="#e0e0e0" stroke="#999" stroke-width="2" rx="5" ry="5"/>
+<rect x="530" y="250" width="40" height="10" fill="#e0e0e0" stroke="#999" stroke-width="2" rx="2" ry="2"/>
+<text x="590" y="245" font-size="16" fill="#333">CSV Storage</text>
+<path d="M100,70 L100,100" stroke="#999" stroke-width="2" stroke-dasharray="5,5" fill="none"/>
+<path d="M550,230 L550,200" stroke="#999" stroke-width="2" stroke-dasharray="5,5" fill="none"/>
+</svg>
+</div>
+
+<div class="reveal">
+<h2 style="font-size:1.5rem;font-weight:700;margin:2rem 0 1rem;color:var(--foreground)">Anatomy of an Enrollment Tool</h2>
+<h3 style="font-size:1.25rem;font-weight:600;margin:1.5rem 0 .75rem">File Structure</h3>
+<p style="margin-bottom:1rem">How General Bots organizes tool implementations.</p>
+<pre class="code-block" style="background:#1e1e1e;color:#d4d4d4;padding:1.25rem;border-radius:.5rem;overflow-x:auto;font-size:.875rem;line-height:1.6">BotServer/
+  └── templates/
+      └── edu.gbai/
+          ├── edu.gbdata/
+          │   └── enrollments.csv
+          ├── edu.gbdialog/
+          │   ├── enrollment.bas
+          │   └── start.bas
+          └── edu.gbot/
+              └── config.csv</pre>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem;margin:1.5rem 0">
+<div class="glass-card" style="padding:1.5rem">
+<h4 style="font-weight:600;margin-bottom:.5rem">gbdata/</h4>
+<p style="margin-bottom:0;font-size:.9375rem;color:var(--muted-foreground)">Contains all data files (CSV, JSON, etc.)</p>
+</div>
+<div class="glass-card" style="padding:1.5rem">
+<h4 style="font-weight:600;margin-bottom:.5rem">gbdialog/</h4>
+<p style="margin-bottom:0;font-size:.9375rem;color:var(--muted-foreground)">BASIC files defining tool behavior</p>
+</div>
+<div class="glass-card" style="padding:1.5rem">
+<h4 style="font-weight:600;margin-bottom:.5rem">gbot/</h4>
+<p style="margin-bottom:0;font-size:.9375rem;color:var(--muted-foreground)">Configuration and metadata</p>
+</div>
+</div>
+
+<h3 style="font-size:1.25rem;font-weight:600;margin:1.5rem 0 .75rem">Dialog Implementation</h3>
+<p style="margin-bottom:1rem">The enrollment.bas tool that handles student registration.</p>
+<pre class="code-block" style="background:#1e1e1e;color:#d4d4d4;padding:1.25rem;border-radius:.5rem;overflow-x:auto;font-size:.875rem;line-height:1.6"><span style="color:#569cd6">PARAM</span> name <span style="color:#569cd6">AS</span> string <span style="color:#569cd6">LIKE</span> <span style="color:#ce9178">"Abreu Silva"</span> <span style="color:#569cd6">DESCRIPTION</span> <span style="color:#ce9178">"Required full name"</span>
+<span style="color:#569cd6">PARAM</span> birthday <span style="color:#569cd6">AS</span> date <span style="color:#569cd6">LIKE</span> <span style="color:#ce9178">"23/09/2001"</span> <span style="color:#569cd6">DESCRIPTION</span> <span style="color:#ce9178">"Birth date in DD/MM/YYYY"</span>
+<span style="color:#569cd6">PARAM</span> email <span style="color:#569cd6">AS</span> string <span style="color:#569cd6">LIKE</span> <span style="color:#ce9178">"abreu.silva@example.com"</span> <span style="color:#569cd6">DESCRIPTION</span> <span style="color:#ce9178">"Contact email"</span>
+<span style="color:#569cd6">PARAM</span> personalid <span style="color:#569cd6">AS</span> integer <span style="color:#569cd6">LIKE</span> <span style="color:#ce9178">"12345678900"</span> <span style="color:#569cd6">DESCRIPTION</span> <span style="color:#ce9178">"Personal ID number"</span>
+<span style="color:#569cd6">PARAM</span> address <span style="color:#569cd6">AS</span> string <span style="color:#569cd6">LIKE</span> <span style="color:#ce9178">"Rua das Flores, 123"</span> <span style="color:#569cd6">DESCRIPTION</span> <span style="color:#ce9178">"Full address"</span>
+
+<span style="color:#569cd6">DESCRIPTION</span> <span style="color:#ce9178">"Enrollment process triggered when user wants to enroll"</span>
+
+<span style="color:#9cdcfe">SAVE</span> <span style="color:#ce9178">"enrollments.csv"</span>, id, name, birthday, email, personalid, address</pre>
+<p style="margin-bottom:1.5rem"><strong>Key Features:</strong> Parameter Validation, Data Collection, CSV Integration, Structured Input.</p>
+<p style="margin-bottom:1.5rem"><strong>How It Works:</strong></p>
+<ol style="padding-left:1.5rem;margin-bottom:1.5rem">
+<li>LLM detects enrollment intent</li>
+<li>Triggers the enrollment.bas tool</li>
+<li>Collects each parameter through conversation</li>
+<li>Validates and saves to CSV</li>
+<li>Returns confirmation to user</li>
+</ol>
+
+<h3 style="font-size:1.25rem;font-weight:600;margin:1.5rem 0 .75rem">System Configuration</h3>
+<p style="margin-bottom:1rem">The config.csv that defines bot behavior.</p>
+<pre class="code-block" style="background:#1e1e1e;color:#d4d4d4;padding:1.25rem;border-radius:.5rem;overflow-x:auto;font-size:.875rem;line-height:1.6">name,value
+Answer Mode,tool
+Start Dialog,start
+Theme Color,indigo</pre>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem;margin:1.5rem 0">
+<div class="glass-card" style="padding:1.5rem"><h4 style="font-weight:600;margin-bottom:.5rem">Answer Mode</h4><p style="margin-bottom:0;font-size:.9375rem;color:var(--muted-foreground)">"tool" enables BASIC tool execution</p></div>
+<div class="glass-card" style="padding:1.5rem"><h4 style="font-weight:600;margin-bottom:.5rem">Start Dialog</h4><p style="margin-bottom:0;font-size:.9375rem;color:var(--muted-foreground)">Initial prompt file (start.bas)</p></div>
+<div class="glass-card" style="padding:1.5rem"><h4 style="font-weight:600;margin-bottom:.5rem">Theme Color</h4><p style="margin-bottom:0;font-size:.9375rem;color:var(--muted-foreground)">UI branding color</p></div>
+</div>
+</div>
+
+<div class="reveal">
+<h2 style="font-size:1.5rem;font-weight:700;margin:2rem 0 1rem;color:var(--foreground)">BASIC Syntax Guide</h2>
+<svg viewBox="0 0 800 350" style="width:100%;margin:1.5rem 0">
+<rect x="0" y="0" width="800" height="350" fill="#f8fafc" rx="10" ry="10"/>
+<text x="400" y="40" text-anchor="middle" font-size="24" font-weight="bold" fill="#333">BASIC Tool Command Reference</text>
+<rect x="50" y="70" width="700" height="260" fill="#f1f5f9" rx="10" ry="10" stroke="#cbd5e1" stroke-width="1"/>
+<rect x="70" y="90" width="320" height="60" fill="#f0f0f0" rx="5" ry="5" stroke="#ccc" stroke-width="1"/>
+<text x="80" y="110" font-size="14" font-weight="bold" fill="#333">PARAM Syntax</text>
+<text x="80" y="130" font-size="12" font-family="monospace" fill="#555">PARAM name AS type LIKE "example"</text>
+<text x="80" y="145" font-size="12" font-family="monospace" fill="#555">DESCRIPTION "parameter explanation"</text>
+<rect x="410" y="90" width="320" height="60" fill="#f0f0f0" rx="5" ry="5" stroke="#ccc" stroke-width="1"/>
+<text x="420" y="110" font-size="14" font-weight="bold" fill="#333">Conditional Logic</text>
+<text x="420" y="130" font-size="12" font-family="monospace" fill="#555">IF condition THEN action</text>
+<text x="420" y="145" font-size="12" font-family="monospace" fill="#555">ELSE alternative_action</text>
+<rect x="70" y="170" width="320" height="60" fill="#f0f0f0" rx="5" ry="5" stroke="#ccc" stroke-width="1"/>
+<text x="80" y="190" font-size="14" font-weight="bold" fill="#333">Data Operations</text>
+<text x="80" y="210" font-size="12" font-family="monospace" fill="#555">SAVE "filename.csv", field1, field2</text>
+<text x="80" y="225" font-size="12" font-family="monospace" fill="#555">LOAD "filename.csv", field1, field2</text>
+<rect x="410" y="170" width="320" height="60" fill="#f0f0f0" rx="5" ry="5" stroke="#ccc" stroke-width="1"/>
+<text x="420" y="190" font-size="14" font-weight="bold" fill="#333">Tool Controls</text>
+<text x="420" y="210" font-size="12" font-family="monospace" fill="#555">DESCRIPTION "tool explanation"</text>
+<text x="420" y="225" font-size="12" font-family="monospace" fill="#555">RETURN "response message"</text>
+<rect x="70" y="250" width="320" height="60" fill="#f0f0f0" rx="5" ry="5" stroke="#ccc" stroke-width="1"/>
+<text x="80" y="270" font-size="14" font-weight="bold" fill="#333">API Integration</text>
+<text x="80" y="290" font-size="12" font-family="monospace" fill="#555">CALL "api/endpoint", param1, param2</text>
+<text x="80" y="305" font-size="12" font-family="monospace" fill="#555">RESPONSE = RESULT</text>
+<rect x="410" y="250" width="320" height="60" fill="#f0f0f0" rx="5" ry="5" stroke="#ccc" stroke-width="1"/>
+<text x="420" y="270" font-size="14" font-weight="bold" fill="#333">Validation</text>
+<text x="420" y="290" font-size="12" font-family="monospace" fill="#555">VALIDATE param "error message"</text>
+<text x="420" y="305" font-size="12" font-family="monospace" fill="#555">REQUIRE param1, param2</text>
+</svg>
+</div>
+
+<div class="reveal">
+<h2 style="font-size:1.5rem;font-weight:700;margin:2rem 0 1rem;color:var(--foreground)">Conversation Based on That Code</h2>
+<p style="margin-bottom:1rem">Experience how the enrollment tool works in practice.</p>
+<div class="glass-card" style="padding:1.5rem;margin-bottom:1.5rem">
+<div style="margin-bottom:1rem">
+<div class="glass-card" style="padding:.75rem;margin-bottom:.75rem;max-width:80%"><p style="margin:0">I'd like to enroll in the Computer Science program</p></div>
+<div class="glass-card" style="padding:.75rem;margin-bottom:.75rem;max-width:80%;margin-left:auto;background:var(--muted)"><p style="margin:0">Certainly! Let's begin your enrollment. What's your full name?</p><p style="margin:.25rem 0 0;font-size:.75rem;color:var(--muted-foreground)">[enrollment.bas triggered]</p></div>
+<div class="glass-card" style="padding:.75rem;margin-bottom:.75rem;max-width:80%"><p style="margin:0">Maria Silva</p></div>
+<div class="glass-card" style="padding:.75rem;margin-bottom:.75rem;max-width:80%;margin-left:auto;background:var(--muted)"><p style="margin:0">Thanks, Maria. Could you provide your date of birth in DD/MM/YYYY format?</p></div>
+<div class="glass-card" style="padding:.75rem;margin-bottom:.75rem;max-width:80%"><p style="margin:0">15/07/2002</p></div>
+<div class="glass-card" style="padding:.75rem;max-width:80%;margin-left:auto;background:var(--muted)"><p style="margin:0">Thank you. What email address should we use for communications?</p></div>
+</div>
+<div style="background:var(--muted);padding:1rem;border-radius:.5rem;margin-top:1rem">
+<h4 style="font-weight:600;margin-bottom:.5rem">Behind the Scenes</h4>
+<p style="margin-bottom:.25rem"><strong>Tool Activated:</strong> enrollment.bas</p>
+<p style="margin-bottom:.25rem"><strong>Parameters Collected:</strong> name, birthday, email, etc.</p>
+<p style="margin-bottom:0"><strong>Data Saved To:</strong> enrollments.csv</p>
+</div>
+</div>
+</div>
+
+<div class="reveal">
+<h2 style="font-size:1.5rem;font-weight:700;margin:2rem 0 1rem;color:var(--foreground)">Building Your Own Tools</h2>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem;margin-bottom:1.5rem">
+<div class="glass-card" style="padding:1.5rem">
+<h3 style="font-size:1.125rem;font-weight:600;margin-bottom:.5rem">1. Define Parameters</h3>
+<pre class="code-block" style="background:#1e1e1e;color:#d4d4d4;padding:1rem;border-radius:.5rem;overflow-x:auto;font-size:.75rem;line-height:1.5">PARAM fieldname AS type LIKE "example"
+DESCRIPTION "parameter explanation"</pre>
+<p style="margin-top:.75rem;font-size:.9375rem">Declare each piece of data you need to collect with type safety and examples.</p>
+</div>
+<div class="glass-card" style="padding:1.5rem">
+<h3 style="font-size:1.125rem;font-weight:600;margin-bottom:.5rem">2. Implement Logic</h3>
+<pre class="code-block" style="background:#1e1e1e;color:#d4d4d4;padding:1rem;border-radius:.5rem;overflow-x:auto;font-size:.75rem;line-height:1.5">IF condition THEN action
+SAVE "file.csv", data1, data2
+RETURN "message"</pre>
+<p style="margin-top:.75rem;font-size:.9375rem">Add any conditional logic, data saving, or API calls needed.</p>
+</div>
+<div class="glass-card" style="padding:1.5rem">
+<h3 style="font-size:1.125rem;font-weight:600;margin-bottom:.5rem">3. Configure Integration</h3>
+<pre class="code-block" style="background:#1e1e1e;color:#d4d4d4;padding:1rem;border-radius:.5rem;overflow-x:auto;font-size:.75rem;line-height:1.5"># In config.csv
+Answer Mode,tool
+Start Dialog,start</pre>
+<p style="margin-top:.75rem;font-size:.9375rem">Set up how and when your tool should be triggered.</p>
+</div>
+</div>
+</div>
+
+<div class="reveal">
+<h2 style="font-size:1.5rem;font-weight:700;margin:2rem 0 1rem;color:var(--foreground)">Application Areas</h2>
+<svg viewBox="0 0 800 400" style="width:100%;margin:1.5rem 0">
+<rect x="0" y="0" width="800" height="400" fill="#f8fafc" rx="10" ry="10"/>
+<circle cx="400" cy="200" r="70" fill="#f0f0f0" stroke="#999" stroke-width="2"/>
+<text x="400" y="190" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">LLM-BASIC</text>
+<text x="400" y="210" text-anchor="middle" font-size="16" fill="#333">Tools</text>
+<circle cx="200" cy="120" r="50" fill="#f0f0f0" stroke="#999" stroke-width="2"/>
+<text x="200" y="120" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">Education</text>
+<path d="M260,145 L350,170" stroke="#999" stroke-width="2" fill="none"/>
+<rect x="90" y="40" width="220" height="60" rx="5" ry="5" fill="#f0f0f0" stroke="#ccc" stroke-width="1"/>
+<text x="100" y="60" font-size="12" fill="#333">&#8226; Course enrollment automation</text>
+<text x="100" y="80" font-size="12" fill="#333">&#8226; Student registration workflows</text>
+<text x="100" y="95" font-size="12" fill="#333">&#8226; Academic record management</text>
+<path d="M200,70 L200,115" stroke="#999" stroke-width="1" stroke-dasharray="3,3" fill="none"/>
+<circle cx="200" cy="280" r="50" fill="#f0f0f0" stroke="#999" stroke-width="2"/>
+<text x="200" y="280" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">Healthcare</text>
+<path d="M260,265 L350,225" stroke="#999" stroke-width="2" fill="none"/>
+<rect x="90" y="340" width="220" height="60" rx="5" ry="5" fill="#f0f0f0" stroke="#ccc" stroke-width="1"/>
+<text x="100" y="360" font-size="12" fill="#333">&#8226; Patient intake automation</text>
+<text x="100" y="375" font-size="12" fill="#333">&#8226; Appointment scheduling</text>
+<text x="100" y="390" font-size="12" fill="#333">&#8226; Medical record tools</text>
+<path d="M200,285 L200,340" stroke="#999" stroke-width="1" stroke-dasharray="3,3" fill="none"/>
+<circle cx="600" cy="120" r="50" fill="#f0f0f0" stroke="#999" stroke-width="2"/>
+<text x="600" y="120" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">Finance</text>
+<path d="M540,145 L450,170" stroke="#999" stroke-width="2" fill="none"/>
+<rect x="490" y="40" width="220" height="60" rx="5" ry="5" fill="#f0f0f0" stroke="#ccc" stroke-width="1"/>
+<text x="500" y="60" font-size="12" fill="#333">&#8226; Transaction processing</text>
+<text x="500" y="75" font-size="12" fill="#333">&#8226; Budget allocation tools</text>
+<text x="500" y="90" font-size="12" fill="#333">&#8226; Financial reporting automation</text>
+<path d="M600,70 L600,115" stroke="#999" stroke-width="1" stroke-dasharray="3,3" fill="none"/>
+<circle cx="600" cy="280" r="50" fill="#f0f0f0" stroke="#999" stroke-width="2"/>
+<text x="600" y="275" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">Customer</text>
+<text x="600" y="290" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">Service</text>
+<path d="M540,265 L450,225" stroke="#999" stroke-width="2" fill="none"/>
+<rect x="490" y="340" width="220" height="60" rx="5" ry="5" fill="#f0f0f0" stroke="#ccc" stroke-width="1"/>
+<text x="500" y="360" font-size="12" fill="#333">&#8226; Support ticket management</text>
+<text x="500" y="375" font-size="12" fill="#333">&#8226; Order processing workflows</text>
+<text x="500" y="390" font-size="12" fill="#333">&#8226; Customer onboarding tools</text>
+<path d="M600,285 L600,340" stroke="#999" stroke-width="1" stroke-dasharray="3,3" fill="none"/>
+</svg>
+</div>
+
+<div class="reveal">
+<h2 style="font-size:1.5rem;font-weight:700;margin:2rem 0 1rem;color:var(--foreground)">Comparing Approaches: Traditional LLMs vs. LLM + BASIC Tools</h2>
+<table style="width:100%;border-collapse:collapse">
+<thead><tr>
+<th style="background:var(--muted);padding:.75rem;text-align:left;border-bottom:2px solid var(--border)">Feature</th>
+<th style="background:var(--muted);padding:.75rem;text-align:left;border-bottom:2px solid var(--border)">Traditional LLM</th>
+<th style="background:var(--muted);padding:.75rem;text-align:left;border-bottom:2px solid var(--border)">LLM + BASIC Tools</th>
+</tr></thead>
+<tbody>
+<tr><td style="padding:.75rem;border-bottom:1px solid var(--border);font-weight:600">Data Storage</td><td style="padding:.75rem;border-bottom:1px solid var(--border)">No persistent storage</td><td style="padding:.75rem;border-bottom:1px solid var(--border)">CSV/database storage</td></tr>
+<tr><td style="padding:.75rem;border-bottom:1px solid var(--border);font-weight:600">Structured Input</td><td style="padding:.75rem;border-bottom:1px solid var(--border)">Inconsistent extraction</td><td style="padding:.75rem;border-bottom:1px solid var(--border)">Typed parameters with validation</td></tr>
+<tr><td style="padding:.75rem;border-bottom:1px solid var(--border);font-weight:600">System Actions</td><td style="padding:.75rem;border-bottom:1px solid var(--border)">Cannot perform actions</td><td style="padding:.75rem;border-bottom:1px solid var(--border)">Can execute real-world tasks</td></tr>
+<tr><td style="padding:.75rem;border-bottom:1px solid var(--border);font-weight:600">Context Window</td><td style="padding:.75rem;border-bottom:1px solid var(--border)">Limited by token count</td><td style="padding:.75rem;border-bottom:1px solid var(--border)">External data access</td></tr>
+<tr><td style="padding:.75rem;border-bottom:1px solid var(--border);font-weight:600">Audit Trail</td><td style="padding:.75rem;border-bottom:1px solid var(--border)">No built-in logging</td><td style="padding:.75rem;border-bottom:1px solid var(--border)">Built-in logging capabilities</td></tr>
+<tr><td style="padding:.75rem;border-bottom:1px solid var(--border);font-weight:600">Knowledge</td><td style="padding:.75rem;border-bottom:1px solid var(--border)">Broad knowledge base</td><td style="padding:.75rem;border-bottom:1px solid var(--border)">Combines broad knowledge with specialized tools</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="reveal">
+<h2 style="font-size:1.5rem;font-weight:700;margin:2rem 0 1rem;color:var(--foreground)">Data Flow Architecture</h2>
+<svg viewBox="0 0 800 300" style="width:100%;margin:1.5rem 0">
+<rect x="0" y="0" width="800" height="300" fill="#f8fafc" rx="10" ry="10"/>
+<rect x="50" y="50" width="150" height="60" rx="5" ry="5" fill="#f0f0f0" stroke="#999" stroke-width="2"/>
+<text x="125" y="85" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">User Input</text>
+<path d="M200,80 L250,80" stroke="#666" stroke-width="2" fill="none"/><polygon points="245,75 255,80 245,85" fill="#666"/>
+<rect x="250" y="50" width="150" height="60" rx="5" ry="5" fill="#f0f0f0" stroke="#999" stroke-width="2"/>
+<text x="325" y="75" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">Intent</text>
+<text x="325" y="95" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">Recognition</text>
+<path d="M400,80 L450,80" stroke="#666" stroke-width="2" fill="none"/><polygon points="445,75 455,80 445,85" fill="#666"/>
+<rect x="450" y="50" width="150" height="60" rx="5" ry="5" fill="#f0f0f0" stroke="#999" stroke-width="2"/>
+<text x="525" y="85" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">Tool Selection</text>
+<path d="M525,110 L525,140" stroke="#666" stroke-width="2" fill="none"/><polygon points="520,135 525,145 530,135" fill="#666"/>
+<rect x="450" y="140" width="150" height="60" rx="5" ry="5" fill="#f0f0f0" stroke="#999" stroke-width="2"/>
+<text x="525" y="175" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">Tool Execution</text>
+<path d="M450,170 L300,170" stroke="#666" stroke-width="2" fill="none"/><polygon points="305,165 295,170 305,175" fill="#666"/>
+<rect x="150" y="140" width="150" height="60" rx="5" ry="5" fill="#f0f0f0" stroke="#999" stroke-width="2"/>
+<text x="225" y="175" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">Data Storage</text>
+<path d="M525,200 L525,230" stroke="#666" stroke-width="2" fill="none"/><polygon points="520,225 525,235 530,225" fill="#666"/>
+<rect x="450" y="230" width="150" height="60" rx="5" ry="5" fill="#f0f0f0" stroke="#999" stroke-width="2"/>
+<text x="525" y="255" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">Response</text>
+<text x="525" y="275" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">Generation</text>
+<path d="M450,260 L300,260" stroke="#666" stroke-width="2" fill="none"/><polygon points="305,255 295,260 305,265" fill="#666"/>
+<rect x="150" y="230" width="150" height="60" rx="5" ry="5" fill="#f0f0f0" stroke="#999" stroke-width="2"/>
+<text x="225" y="265" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">User Output</text>
+<path d="M150,260 L80,260 L80,100 L150,100" stroke="#999" stroke-width="2" stroke-dasharray="5,5" fill="none"/>
+<polygon points="145,95 155,100 145,105" fill="#999"/>
+<text x="90" y="180" text-anchor="middle" font-size="14" fill="#666" transform="rotate(-90, 90, 180)">Feedback Loop</text>
+</svg>
+</div>
+
+<div class="reveal">
+<h2 style="font-size:1.5rem;font-weight:700;margin:2rem 0 1rem;color:var(--foreground)">Real-World Use Cases</h2>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem;margin-bottom:1.5rem">
+<div class="glass-card" style="padding:1.5rem">
+<h3 style="font-size:1.125rem;font-weight:600;margin-bottom:.75rem">Enrollment Management</h3>
+<p style="margin-bottom:.5rem;font-size:.9375rem;color:var(--muted-foreground)">Streamlining registration:</p>
+<ul style="padding-left:1.25rem;margin:0"><li>Student information collection and validation</li><li>Course catalog browsing and selection</li><li>Automatic waitlist management</li><li>Prerequisite checking and enforcement</li></ul>
+</div>
+<div class="glass-card" style="padding:1.5rem">
+<h3 style="font-size:1.125rem;font-weight:600;margin-bottom:.75rem">Academic Advising</h3>
+<p style="margin-bottom:.5rem;font-size:.9375rem;color:var(--muted-foreground)">AI-powered student guidance:</p>
+<ul style="padding-left:1.25rem;margin:0"><li>Degree progress tracking and reporting</li><li>Personalized course recommendations</li><li>Scheduling conflict detection</li><li>Academic performance monitoring</li></ul>
+</div>
+</div>
+</div>
+
+<div class="reveal">
+<h2 style="font-size:1.5rem;font-weight:700;margin:2rem 0 1rem;color:var(--foreground)">Implementation Considerations</h2>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem;margin-bottom:1.5rem">
+<div>
+<h3 style="font-size:1.125rem;font-weight:600;margin-bottom:.75rem">Technical Challenges</h3>
+<ul style="padding-left:1.25rem">
+<li style="margin-bottom:1rem"><strong>Intent Recognition Accuracy</strong> &#8212; LLMs may incorrectly trigger tools based on ambiguous requests</li>
+<li style="margin-bottom:1rem"><strong>Data Security</strong> &#8212; Need for proper authentication and authorization controls</li>
+</ul>
+</div>
+<div>
+<h3 style="font-size:1.125rem;font-weight:600;margin-bottom:.75rem">Best Practices</h3>
+<ul style="padding-left:1.25rem">
+<li style="margin-bottom:1rem"><strong>Clear Parameter Definitions</strong> &#8212; Define precise data types and validation constraints</li>
+<li style="margin-bottom:1rem"><strong>Comprehensive Error Handling</strong> &#8212; Design tools with graceful failure modes and clear messages</li>
+</ul>
+</div>
+</div>
+<div class="glass-card" style="padding:1rem;margin:1.5rem 0;border-left:3px solid var(--primary)">
+<strong>Integration Tips:</strong> When implementing LLM-BASIC integration for systems:
+<ol style="padding-left:1.5rem;margin-top:.5rem">
+<li>Start with simple, well-defined tools before complex workflows</li>
+<li>Add comprehensive logging to track tool usage and errors</li>
+<li>Implement user feedback mechanisms to improve recognition</li>
+<li>Consider privacy requirements for data</li>
+</ol>
+</div>
+</div>
+
+<div class="reveal" style="margin-top:2rem">
+<div class="glass-card" style="padding:1rem;margin:1.5rem 0;border-left:3px solid var(--primary)">
+<strong>Combine LLM knowledge with executable BASIC tools</strong> to create truly capable AI systems that can handle real-world tasks and beyond.
+</div>
+<p style="margin-bottom:1.5rem">Transform how you work with AI-powered assistants tailored to your exact needs.</p>
+<p style="margin-bottom:1.5rem"><a href="https://docs.pragmatismo.com.br" style="color:var(--foreground);font-weight:600">Documentation</a></p>
+<p style="margin-bottom:1.5rem;font-size:.9375rem;color:var(--muted-foreground)">Our experts will help you create the perfect specialized bot for your requirements.</p>
+</div>
+
 </article>
 <div class="glass-card-bright text-center reveal" style="padding:3rem 2rem;margin-top:3rem">
 <h3 class="text-2xl font-bold tracking-tight mb-2">We'll set up your first automation for free.</h3>
