@@ -235,6 +235,14 @@ cursor:pointer;border-radius:.5rem;color:var(--foreground);
 .nav-mobile-toggle:hover{background:var(--secondary)}
 .nav-mobile-toggle svg{width:1.25rem;height:1.25rem}
 
+.header-shrunk{box-shadow:0 2px 12px rgba(0,0,0,.08)}
+.header-shrunk .nav-inner{min-height:3rem}
+.header-shrunk .nav-logo img{height:24px;width:102px}
+.header-shrunk .site-header .logo-link img{height:24px;width:auto}
+.header-shrunk .header-inner{height:3rem}
+.header-shrunk .header-main{min-height:3rem}
+.header-shrunk .header-logo img{height:1.5rem;width:auto}
+
 #mobile-menu{
 position:fixed;top:4rem;left:0;right:0;bottom:0;z-index:45;
 background:rgba(255,255,255,.98);

@@ -127,8 +127,35 @@ Custom Bot Training
 <a href="/features/trainning/#document-training" class="btn btn-outline btn-lg">Learn More</a>
 <a href="/contact/" class="btn btn-primary btn-lg">Get Started</a>
 </div>
-<div style="max-width:40rem;margin:0 auto;background:var(--card);border:1px solid var(--border);border-radius:1rem;aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;color:var(--muted-foreground);font-size:.875rem">
-<svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" style="opacity:.15"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
+<div style="max-width:40rem;margin:0 auto;background:var(--card);border:1px solid var(--border);border-radius:1rem;aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;color:var(--muted-foreground);overflow:hidden;position:relative">
+<svg width="100%" height="100%" viewBox="0 0 800 450" fill="none">
+  <defs>
+    <linearGradient id="trainGrad" x1="0" y1="0" x2="800" y2="450" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#f8f8f8"/>
+      <stop offset="100%" stop-color="#eaeaea"/>
+    </linearGradient>
+    <pattern id="grid2" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(0,0,0,0.03)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="450" fill="url(#trainGrad)"/>
+  <rect width="800" height="450" fill="url(#grid2)"/>
+  <!-- Document -->
+  <g transform="translate(250, 150)" fill="#fff" stroke="currentColor" stroke-width="2">
+    <rect x="0" y="0" width="80" height="100" rx="4" />
+    <line x1="20" y1="30" x2="60" y2="30" stroke-linecap="round"/>
+    <line x1="20" y1="50" x2="60" y2="50" stroke-linecap="round"/>
+    <line x1="20" y1="70" x2="40" y2="70" stroke-linecap="round"/>
+  </g>
+  <!-- Arrow -->
+  <path d="M350 200 L450 200 M430 180 L450 200 L430 220" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+  <!-- Bot Brain / Gear -->
+  <g transform="translate(480, 150)" fill="#fff" stroke="currentColor" stroke-width="2">
+    <circle cx="50" cy="50" r="40" />
+    <circle cx="50" cy="50" r="15" fill="currentColor" opacity="0.1"/>
+    <path d="M50 10 L50 -5 M50 90 L50 105 M10 50 L-5 50 M90 50 L105 50 M21 21 L10 10 M79 79 L90 90 M21 79 L10 90 M79 21 L90 10" stroke-width="3" stroke-linecap="round" />
+  </g>
+</svg>
 </div>
 </div>
 </div>
@@ -151,11 +178,29 @@ Custom Bot Training
 <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>
 <div><strong>FAQ Auto-Generation</strong><p class="text-sm text-muted mt-1">Structure your Word documents with Q&amp;A pairs and the bot learns to answer questions directly from your content.</p></div>
 </li>
+<li>
+<svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>
+<div><strong>Vector Embeddings</strong><p class="text-sm text-muted mt-1">Uploaded documents are automatically chunked, embedded, and stored in Qdrant or FAISS for sub-200ms semantic search retrieval.</p></div>
+</li>
+<li>
+<svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>
+<div><strong>Multi-Format Support</strong><p class="text-sm text-muted mt-1">Beyond Word, ingest PDFs, Excel spreadsheets, and images. The system uses parallel OCR and extraction to index everything.</p></div>
+</li>
 </ul>
 </div>
 <div>
-<div style="background:var(--card);border:1px solid var(--border);border-radius:1rem;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;color:var(--muted-foreground);font-size:.875rem">
-<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" style="opacity:.15"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/></svg>
+<div style="background:var(--card);border:1px solid var(--border);border-radius:1rem;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;color:var(--muted-foreground);overflow:hidden">
+<svg width="100%" height="100%" viewBox="0 0 400 300" fill="none">
+  <rect width="400" height="300" fill="#fafafa"/>
+  <g transform="translate(140, 80)" fill="#fff" stroke="currentColor" stroke-width="2">
+    <path d="M20 0 L100 0 L100 120 L20 120 Z" />
+    <path d="M0 10 L20 10 M0 30 L20 30 M0 50 L20 50" stroke-width="4"/>
+    <rect x="40" y="20" width="40" height="8" rx="2" fill="currentColor" opacity="0.2" stroke="none"/>
+    <rect x="40" y="40" width="40" height="8" rx="2" fill="currentColor" opacity="0.2" stroke="none"/>
+    <circle cx="60" cy="80" r="16" />
+    <path d="M55 85 L65 75 M55 75 L65 85" stroke-width="2"/>
+  </g>
+</svg>
 </div>
 </div>
 </div>
@@ -170,8 +215,22 @@ Custom Bot Training
 </div>
 <div class="grid-2">
 <div>
-<div style="background:var(--card);border:1px solid var(--border);border-radius:1rem;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;color:var(--muted-foreground);font-size:.875rem">
-<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" style="opacity:.15"><circle cx="12" cy="12" r="10"/><path d="M8 12l2 2 4-4"/></svg>
+<div style="background:var(--card);border:1px solid var(--border);border-radius:1rem;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;color:var(--muted-foreground);overflow:hidden">
+<svg width="100%" height="100%" viewBox="0 0 400 300" fill="none">
+  <rect width="400" height="300" fill="#fafafa"/>
+  <g transform="translate(100, 60)" fill="#fff" stroke="currentColor" stroke-width="2">
+    <!-- Flowchart -->
+    <rect x="60" y="0" width="80" height="30" rx="4" />
+    <line x1="100" y1="30" x2="100" y2="60" />
+    <polygon points="100,60 130,90 100,120 70,90" />
+    <line x1="70" y1="90" x2="40" y2="90" />
+    <line x1="40" y1="90" x2="40" y2="120" />
+    <line x1="130" y1="90" x2="160" y2="90" />
+    <line x1="160" y1="90" x2="160" y2="120" />
+    <rect x="0" y="120" width="80" height="30" rx="4" />
+    <rect x="120" y="120" width="80" height="30" rx="4" />
+  </g>
+</svg>
 </div>
 </div>
 <div>
@@ -183,6 +242,14 @@ Custom Bot Training
 <li>
 <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>
 <div><strong>Decision Trees</strong><p class="text-sm text-muted mt-1">Create decision tree structures that guide users through complex processes with conditional branching.</p></div>
+</li>
+<li>
+<svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>
+<div><strong>Tool Execution</strong><p class="text-sm text-muted mt-1">Train the bot on when to call external APIs or trigger workflows as part of the conversational script, using seamless BASIC integration.</p></div>
+</li>
+<li>
+<svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>
+<div><strong>Human Handoff Rules</strong><p class="text-sm text-muted mt-1">Define explicit conditions in your script for when the bot should escalate to a human agent, passing the full context summary.</p></div>
 </li>
 </ul>
 </div>
@@ -214,8 +281,29 @@ Custom Bot Training
 </ul>
 </div>
 <div>
-<div style="background:var(--card);border:1px solid var(--border);border-radius:1rem;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;color:var(--muted-foreground);font-size:.875rem">
-<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" style="opacity:.15"><path d="M23 4v6h-6"/><path d="M1 20v-6h6"/><path d="M3.51 9a9 9 0 0114.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0020.49 15"/></svg>
+<div style="background:var(--card);border:1px solid var(--border);border-radius:1rem;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;color:var(--muted-foreground);overflow:hidden">
+<svg width="100%" height="100%" viewBox="0 0 400 300" fill="none">
+  <rect width="400" height="300" fill="#fafafa"/>
+  <g transform="translate(100, 50)" fill="#fff" stroke="currentColor" stroke-width="2">
+    <!-- Cycle arrow -->
+    <path d="M100 20 A 80 80 0 1 1 20 100" fill="none" stroke-linecap="round" stroke-dasharray="12 12" opacity="0.4"/>
+    <path d="M20 100 A 80 80 0 0 1 100 20" fill="none" stroke-linecap="round"/>
+    
+    <path d="M110 10 L100 20 L90 10" stroke-linecap="round" stroke-linejoin="round"/>
+    
+    <!-- Iteration steps -->
+    <rect x="70" y="70" width="60" height="60" rx="8" />
+    <path d="M85 90 L115 90 M85 110 L100 110" stroke-linecap="round"/>
+    <circle cx="100" cy="100" r="40" fill="currentColor" opacity="0.05" stroke="none"/>
+    
+    <!-- Testing / A/B -->
+    <rect x="-10" y="40" width="40" height="40" rx="4" />
+    <text x="10" y="65" font-family="sans-serif" font-weight="bold" font-size="14" fill="currentColor" stroke="none" text-anchor="middle">A</text>
+    
+    <rect x="170" y="40" width="40" height="40" rx="4" />
+    <text x="190" y="65" font-family="sans-serif" font-weight="bold" font-size="14" fill="currentColor" stroke="none" text-anchor="middle">B</text>
+  </g>
+</svg>
 </div>
 </div>
 </div>

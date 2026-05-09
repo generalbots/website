@@ -130,8 +130,63 @@ Bot Factory
 <a href="/features/bot-factory/#template-creation" class="btn btn-outline btn-lg">Learn More</a>
 <a href="/contact/" class="btn btn-primary btn-lg">Get Started</a>
 </div>
-<div style="max-width:40rem;margin:0 auto;background:var(--card);border:1px solid var(--border);border-radius:1rem;aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;color:var(--muted-foreground);font-size:.875rem">
-<svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" style="opacity:.15"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="9" cy="16" r="1"/><circle cx="15" cy="16" r="1"/><path d="M6 11V7a6 6 0 0112 0v4"/></svg>
+<div style="max-width:40rem;margin:0 auto;background:var(--card);border:1px solid var(--border);border-radius:1rem;aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;color:var(--muted-foreground);overflow:hidden;position:relative">
+<svg width="100%" height="100%" viewBox="0 0 800 450" fill="none">
+  <defs>
+    <linearGradient id="factoryGrad" x1="0" y1="0" x2="800" y2="450" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#f8f8f8"/>
+      <stop offset="100%" stop-color="#eaeaea"/>
+    </linearGradient>
+    <pattern id="grid6" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(0,0,0,0.03)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="450" fill="url(#factoryGrad)"/>
+  <rect width="800" height="450" fill="url(#grid6)"/>
+  <!-- Factory / Assembly Line -->
+  <g transform="translate(150, 250)" stroke="currentColor" stroke-width="2" fill="#fff">
+    <!-- Conveyor belt -->
+    <rect x="0" y="50" width="500" height="20" rx="10" />
+    <circle cx="20" cy="60" r="4" fill="currentColor"/>
+    <circle cx="80" cy="60" r="4" fill="currentColor"/>
+    <circle cx="140" cy="60" r="4" fill="currentColor"/>
+    <circle cx="200" cy="60" r="4" fill="currentColor"/>
+    <circle cx="260" cy="60" r="4" fill="currentColor"/>
+    <circle cx="320" cy="60" r="4" fill="currentColor"/>
+    <circle cx="380" cy="60" r="4" fill="currentColor"/>
+    <circle cx="440" cy="60" r="4" fill="currentColor"/>
+    <circle cx="480" cy="60" r="4" fill="currentColor"/>
+    <!-- Bots on belt -->
+    <!-- Template -->
+    <rect x="40" y="-20" width="60" height="60" rx="4" stroke-dasharray="4 4" fill="none"/>
+    <path d="M70 0 L70 20 M60 10 L80 10" stroke-linecap="round"/>
+    <!-- Bot 1 -->
+    <g transform="translate(160, -20)">
+      <rect x="0" y="0" width="60" height="60" rx="4" />
+      <circle cx="20" cy="20" r="4" fill="currentColor" stroke="none"/>
+      <circle cx="40" cy="20" r="4" fill="currentColor" stroke="none"/>
+      <path d="M20 40 Q30 50 40 40" stroke-linecap="round" fill="none"/>
+    </g>
+    <!-- Bot 2 -->
+    <g transform="translate(280, -20)">
+      <rect x="0" y="0" width="60" height="60" rx="4" />
+      <circle cx="20" cy="20" r="4" fill="currentColor" stroke="none"/>
+      <circle cx="40" cy="20" r="4" fill="currentColor" stroke="none"/>
+      <path d="M20 40 Q30 50 40 40" stroke-linecap="round" fill="none"/>
+    </g>
+    <!-- Bot 3 -->
+    <g transform="translate(400, -20)">
+      <rect x="0" y="0" width="60" height="60" rx="4" />
+      <circle cx="20" cy="20" r="4" fill="currentColor" stroke="none"/>
+      <circle cx="40" cy="20" r="4" fill="currentColor" stroke="none"/>
+      <path d="M20 40 Q30 50 40 40" stroke-linecap="round" fill="none"/>
+    </g>
+    <!-- Robotic Arm -->
+    <path d="M100 -120 L100 -80 L190 -40" stroke-width="6" stroke-linecap="round" fill="none"/>
+    <circle cx="100" cy="-120" r="10" />
+    <circle cx="100" cy="-80" r="8" fill="currentColor"/>
+  </g>
+</svg>
 </div>
 </div>
 </div>
@@ -159,10 +214,29 @@ Bot Factory
 <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>
 <div><strong>Custom branding</strong><p class="text-sm text-muted mt-1">Apply your brand identity, tone of voice, and visual style to any template with simple configuration.</p></div>
 </li>
+<li>
+<svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>
+<div><strong>Continuous Synchronization</strong><p class="text-sm text-muted mt-1">Link bots to their parent template. When the template updates, all child bots inherit the changes automatically without manual redeployment.</p></div>
+</li>
 </ul>
 </div>
-<div style="background:var(--card);border:1px solid var(--border);border-radius:1rem;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;color:var(--muted-foreground);font-size:.875rem">
-<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" style="opacity:.15"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+<div style="background:var(--card);border:1px solid var(--border);border-radius:1rem;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;color:var(--muted-foreground);overflow:hidden">
+<svg width="100%" height="100%" viewBox="0 0 400 300" fill="none">
+  <rect width="400" height="300" fill="#fafafa"/>
+  <g transform="translate(80, 80)" fill="#fff" stroke="currentColor" stroke-width="2">
+    <!-- Center template -->
+    <rect x="90" y="40" width="60" height="60" rx="8" />
+    <path d="M120 60 L120 80 M110 70 L130 70" stroke-linecap="round"/>
+    <!-- Copies -->
+    <rect x="0" y="40" width="40" height="40" rx="4" stroke-dasharray="4 4" />
+    <rect x="200" y="40" width="40" height="40" rx="4" stroke-dasharray="4 4" />
+    <rect x="90" y="140" width="40" height="40" rx="4" stroke-dasharray="4 4" />
+    <!-- Arrows -->
+    <path d="M80 70 L50 60" stroke-linecap="round" />
+    <path d="M160 70 L190 60" stroke-linecap="round" />
+    <path d="M120 110 L110 130" stroke-linecap="round" />
+  </g>
+</svg>
 </div>
 </div>
 </div>
@@ -176,8 +250,24 @@ Bot Factory
 <p class="text-lg text-muted max-w-2xl mx-auto leading-relaxed">Run multiple bot instances with complete isolation, each with its own configuration, data, and branding.</p>
 </div>
 <div class="grid-2">
-<div style="background:var(--card);border:1px solid var(--border);border-radius:1rem;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;color:var(--muted-foreground);font-size:.875rem">
-<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" style="opacity:.15"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+<div style="background:var(--card);border:1px solid var(--border);border-radius:1rem;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;color:var(--muted-foreground);overflow:hidden">
+<svg width="100%" height="100%" viewBox="0 0 400 300" fill="none">
+  <rect width="400" height="300" fill="#fafafa"/>
+  <g transform="translate(100, 60)" fill="#fff" stroke="currentColor" stroke-width="2">
+    <!-- Server blocks isolated -->
+    <rect x="0" y="0" width="80" height="80" rx="4" />
+    <circle cx="40" cy="40" r="15" fill="currentColor" opacity="0.1" stroke="none"/>
+    <path d="M20 20 L60 60 M60 20 L20 60" stroke-width="1" opacity="0.3"/>
+    
+    <rect x="120" y="0" width="80" height="80" rx="4" />
+    <circle cx="160" cy="40" r="15" fill="currentColor" opacity="0.1" stroke="none"/>
+    <path d="M140 20 L180 60 M180 20 L140 60" stroke-width="1" opacity="0.3"/>
+    
+    <rect x="60" y="100" width="80" height="80" rx="4" />
+    <circle cx="100" cy="140" r="15" fill="currentColor" opacity="0.1" stroke="none"/>
+    <path d="M80 120 L120 160 M120 120 L80 160" stroke-width="1" opacity="0.3"/>
+  </g>
+</svg>
 </div>
 <div>
 <ul class="feature-list">
@@ -192,6 +282,10 @@ Bot Factory
 <li>
 <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>
 <div><strong>Scalable architecture</strong><p class="text-sm text-muted mt-1">Add new tenants without affecting existing deployments. Scale horizontally as your client base grows.</p></div>
+</li>
+<li>
+<svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>
+<div><strong>Role-Based Access Control (RBAC)</strong><p class="text-sm text-muted mt-1">Assign granular permissions to tenant administrators so they can manage their own prompts and analytics without accessing global system settings.</p></div>
 </li>
 </ul>
 </div>
@@ -221,10 +315,29 @@ Bot Factory
 <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>
 <div><strong>Update management</strong><p class="text-sm text-muted mt-1">Roll out updates, new features, and configuration changes across selected bots with version control.</p></div>
 </li>
+<li>
+<svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>
+<div><strong>Zero-Downtime Rollbacks</strong><p class="text-sm text-muted mt-1">Instantly revert any bot to a previous configuration version if an update causes unexpected behavior in production.</p></div>
+</li>
 </ul>
 </div>
-<div style="background:var(--card);border:1px solid var(--border);border-radius:1rem;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;color:var(--muted-foreground);font-size:.875rem">
-<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" style="opacity:.15"><path d="M12 20V10M18 20V4M6 20v-4"/></svg>
+<div style="background:var(--card);border:1px solid var(--border);border-radius:1rem;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;color:var(--muted-foreground);overflow:hidden">
+<svg width="100%" height="100%" viewBox="0 0 400 300" fill="none">
+  <rect width="400" height="300" fill="#fafafa"/>
+  <g transform="translate(100, 70)" fill="#fff" stroke="currentColor" stroke-width="2">
+    <!-- Dashboard -->
+    <rect x="0" y="0" width="200" height="140" rx="8" />
+    <line x1="0" y1="30" x2="200" y2="30" />
+    <!-- Metrics -->
+    <rect x="20" y="50" width="40" height="40" rx="4" />
+    <rect x="80" y="50" width="40" height="40" rx="4" />
+    <rect x="140" y="50" width="40" height="40" rx="4" />
+    <!-- Graph -->
+    <rect x="20" y="110" width="160" height="10" rx="2" />
+    <path d="M30 65 L40 70 L50 60" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <path d="M90 70 L100 65 L110 60" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  </g>
+</svg>
 </div>
 </div>
 </div>

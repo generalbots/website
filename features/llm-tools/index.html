@@ -127,8 +127,34 @@ LLM-Powered Intelligence
 <a href="/features/llm-tools/#multi-model" class="btn btn-outline btn-lg">Learn More</a>
 <a href="/contact/" class="btn btn-primary btn-lg">Get Started</a>
 </div>
-<div style="max-width:40rem;margin:0 auto;background:var(--card);border:1px solid var(--border);border-radius:1rem;aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;color:var(--muted-foreground);font-size:.875rem">
-<svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" style="opacity:.15"><path d="M12 2a10 10 0 0110 10 10 10 0 01-10 10A10 10 0 012 12 10 10 0 0112 2z"/><path d="M12 16v-4M12 8h.01"/></svg>
+<div style="max-width:40rem;margin:0 auto;background:var(--card);border:1px solid var(--border);border-radius:1rem;aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;color:var(--muted-foreground);overflow:hidden;position:relative">
+<svg width="100%" height="100%" viewBox="0 0 800 450" fill="none">
+  <defs>
+    <linearGradient id="llmGrad" x1="0" y1="0" x2="800" y2="450" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#f8f8f8"/>
+      <stop offset="100%" stop-color="#eaeaea"/>
+    </linearGradient>
+    <pattern id="grid4" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(0,0,0,0.03)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="450" fill="url(#llmGrad)"/>
+  <rect width="800" height="450" fill="url(#grid4)"/>
+  <!-- Central Sparkle / Brain -->
+  <g transform="translate(400, 225)" fill="#fff" stroke="currentColor" stroke-width="2">
+    <!-- Starburst -->
+    <path d="M0 -60 Q0 0 60 0 Q0 0 0 60 Q0 0 -60 0 Q0 0 0 -60 Z" fill="#fff" />
+    <path d="M0 -60 Q0 0 60 0 Q0 0 0 60 Q0 0 -60 0 Q0 0 0 -60 Z" opacity="0.1" fill="currentColor" stroke="none" />
+    <!-- Small stars -->
+    <path d="M50 -50 Q50 -30 70 -30 Q50 -30 50 -10 Q50 -30 30 -30 Q50 -30 50 -50 Z" />
+    <path d="M-60 40 Q-60 55 -45 55 Q-60 55 -60 70 Q-60 55 -75 55 Q-60 55 -60 40 Z" />
+    <!-- Bot nodes connecting -->
+    <circle cx="-120" cy="-60" r="10" />
+    <circle cx="120" cy="80" r="10" />
+    <path d="M-110 -55 C-50 -20 -20 -10 0 0" stroke-width="2" stroke-dasharray="4 4" fill="none" opacity="0.5"/>
+    <path d="M110 75 C60 40 20 10 0 0" stroke-width="2" stroke-dasharray="4 4" fill="none" opacity="0.5"/>
+  </g>
+</svg>
 </div>
 </div>
 </div>
@@ -145,16 +171,38 @@ LLM-Powered Intelligence
 <ul class="feature-list">
 <li>
 <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>
-<div><strong>Provider Flexibility</strong><p class="text-sm text-muted mt-1">Connect to OpenAI, Azure OpenAI, Anthropic Claude, LLaMA, Mistral, or any OpenAI-compatible API endpoint without code changes.</p></div>
+<div><strong>Provider Flexibility</strong><p class="text-sm text-muted mt-1">Connect to OpenAI, Azure OpenAI, Anthropic Claude, Google Gemini, Groq, LLaMA, Mistral, or any OpenAI-compatible API endpoint. Switch providers with a single configuration change — no code rewrites.</p></div>
 </li>
 <li>
 <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>
-<div><strong>On-Premises Models</strong><p class="text-sm text-muted mt-1">Run local LLMs for data privacy and compliance. Keep sensitive conversations within your infrastructure.</p></div>
+<div><strong>On-Premises Models</strong><p class="text-sm text-muted mt-1">Run local LLMs on your own hardware for data privacy and compliance. NVIDIA CUDA acceleration is supported when GPUs are available, delivering faster inference for self-hosted models.</p></div>
+</li>
+<li>
+<svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>
+<div><strong>PROMPT.md Personality System</strong><p class="text-sm text-muted mt-1">Define your bot's personality, tone, constraints, and behavior in a single PROMPT.md file per project. This one file governs how the LLM responds across every channel and feature — consistent personality everywhere.</p></div>
+</li>
+<li>
+<svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>
+<div><strong>Semantic Caching (95% Hit Ratio)</strong><p class="text-sm text-muted mt-1">Similar questions receive cached responses without calling the LLM again. The semantic cache understands meaning, not just exact matches — reducing costs and latency dramatically.</p></div>
 </li>
 </ul>
 </div>
-<div style="background:var(--card);border:1px solid var(--border);border-radius:1rem;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;color:var(--muted-foreground);font-size:.875rem">
-<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" style="opacity:.15"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+<div style="background:var(--card);border:1px solid var(--border);border-radius:1rem;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;color:var(--muted-foreground);overflow:hidden">
+<svg width="100%" height="100%" viewBox="0 0 400 300" fill="none">
+  <rect width="400" height="300" fill="#fafafa"/>
+  <g transform="translate(100, 70)" stroke="currentColor" stroke-width="2" fill="#fff">
+    <!-- Center node -->
+    <circle cx="100" cy="80" r="30" fill="currentColor" fill-opacity="0.05" />
+    <!-- Three models -->
+    <rect x="0" y="0" width="50" height="40" rx="4" />
+    <rect x="150" y="0" width="50" height="40" rx="4" />
+    <rect x="75" y="160" width="50" height="40" rx="4" />
+    <!-- Connections -->
+    <path d="M25 40 L80 60" />
+    <path d="M175 40 L120 60" />
+    <path d="M100 160 L100 110" />
+  </g>
+</svg>
 </div>
 </div>
 </div>
@@ -167,18 +215,39 @@ LLM-Powered Intelligence
 <p class="text-lg text-muted max-w-2xl mx-auto leading-relaxed">Go beyond simple chat — leverage LLMs for summarization, translation, classification, and complex reasoning within your bot flows.</p>
 </div>
 <div class="grid-2">
-<div style="background:var(--card);border:1px solid var(--border);border-radius:1rem;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;color:var(--muted-foreground);font-size:.875rem">
-<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" style="opacity:.15"><path d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+<div style="background:var(--card);border:1px solid var(--border);border-radius:1rem;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;color:var(--muted-foreground);overflow:hidden">
+<svg width="100%" height="100%" viewBox="0 0 400 300" fill="none">
+  <rect width="400" height="300" fill="#fafafa"/>
+  <g transform="translate(100, 70)" stroke="currentColor" stroke-width="2" fill="#fff">
+    <!-- Document -->
+    <rect x="60" y="0" width="80" height="100" rx="4" />
+    <line x1="75" y1="20" x2="125" y2="20" />
+    <line x1="75" y1="40" x2="125" y2="40" />
+    <line x1="75" y1="60" x2="100" y2="60" />
+    <!-- Magnifying glass / Sparkle -->
+    <circle cx="120" cy="80" r="25" fill="rgba(255,255,255,0.9)" />
+    <line x1="135" y1="95" x2="160" y2="120" stroke-width="4"/>
+    <path d="M110 80 Q120 70 120 60 Q120 70 130 80 Q120 80 120 90 Q120 80 110 80 Z" fill="#111" stroke="none"/>
+  </g>
+</svg>
 </div>
 <div>
 <ul class="feature-list">
 <li>
 <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>
-<div><strong>Summarization &amp; Extraction</strong><p class="text-sm text-muted mt-1">Automatically summarize long documents, extract key information, and present concise answers to user queries.</p></div>
+<div><strong>Summarization & Extraction</strong><p class="text-sm text-muted mt-1">Automatically summarize long documents, extract key entities (names, dates, amounts), and present concise answers. Process 1,000+ documents per minute with parallel PDF, DOCX, and Excel extraction.</p></div>
 </li>
 <li>
 <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>
-<div><strong>Translation &amp; Localization</strong><p class="text-sm text-muted mt-1">Serve multilingual audiences with real-time translation powered by LLMs, maintaining context and tone.</p></div>
+<div><strong>Translation & Localization</strong><p class="text-sm text-muted mt-1">Serve multilingual audiences with real-time translation powered by LLMs. The system maintains context and tone across languages — a question in Portuguese gets an answer from English documents.</p></div>
+</li>
+<li>
+<svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>
+<div><strong>Sentiment Analysis & Escalation</strong><p class="text-sm text-muted mt-1">The LLM monitors emotional state in real time during conversations. If frustration or urgency is detected, the system automatically escalates to a human agent with a full context summary.</p></div>
+</li>
+<li>
+<svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>
+<div><strong>Voice Processing</strong><p class="text-sm text-muted mt-1">Speech-to-text and text-to-speech capabilities let users interact with bots by voice. Voice commands trigger the same BASIC workflows as text messages — same logic, different modality.</p></div>
 </li>
 </ul>
 </div>
@@ -209,8 +278,22 @@ LLM-Powered Intelligence
 </li>
 </ul>
 </div>
-<div style="background:var(--card);border:1px solid var(--border);border-radius:1rem;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;color:var(--muted-foreground);font-size:.875rem">
-<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" style="opacity:.15"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+<div style="background:var(--card);border:1px solid var(--border);border-radius:1rem;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;color:var(--muted-foreground);overflow:hidden">
+<svg width="100%" height="100%" viewBox="0 0 400 300" fill="none">
+  <rect width="400" height="300" fill="#fafafa"/>
+  <g transform="translate(100, 70)" fill="#fff" stroke="currentColor" stroke-width="2">
+    <!-- BASIC / Code blocks -->
+    <rect x="20" y="20" width="160" height="40" rx="4" />
+    <path d="M40 30 L50 40 L40 50 M60 50 L80 50" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    
+    <rect x="20" y="80" width="160" height="40" rx="4" />
+    <circle cx="45" cy="100" r="4" fill="currentColor"/>
+    <line x1="60" y1="100" x2="100" y2="100" stroke-width="2" stroke-linecap="round"/>
+    
+    <rect x="20" y="140" width="160" height="40" rx="4" />
+    <path d="M40 150 Q45 160 40 170 Q45 160 50 150" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  </g>
+</svg>
 </div>
 </div>
 </div>

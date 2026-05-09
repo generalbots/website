@@ -127,8 +127,41 @@ APIs from Word Documents
 <a href="/features/create-apis-in-word/#word-based" class="btn btn-outline btn-lg">Learn More</a>
 <a href="/contact/" class="btn btn-primary btn-lg">Get Started</a>
 </div>
-<div style="max-width:40rem;margin:0 auto;background:var(--card);border:1px solid var(--border);border-radius:1rem;aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;color:var(--muted-foreground);font-size:.875rem">
-<svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" style="opacity:.15"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>
+<div style="max-width:40rem;margin:0 auto;background:var(--card);border:1px solid var(--border);border-radius:1rem;aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;color:var(--muted-foreground);overflow:hidden;position:relative">
+<svg width="100%" height="100%" viewBox="0 0 800 450" fill="none">
+  <defs>
+    <linearGradient id="apiGrad" x1="0" y1="0" x2="800" y2="450" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#f8f8f8"/>
+      <stop offset="100%" stop-color="#eaeaea"/>
+    </linearGradient>
+    <pattern id="grid5" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(0,0,0,0.03)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="450" fill="url(#apiGrad)"/>
+  <rect width="800" height="450" fill="url(#grid5)"/>
+  <!-- Document -->
+  <g transform="translate(180, 150)" fill="#fff" stroke="currentColor" stroke-width="2">
+    <rect x="0" y="0" width="100" height="130" rx="4" />
+    <path d="M20 30 L80 30 M20 50 L80 50 M20 70 L50 70" stroke-linecap="round"/>
+    <rect x="15" y="90" width="70" height="20" rx="2" fill="currentColor" opacity="0.1" stroke="none"/>
+    <text x="50" y="104" font-family="monospace" font-size="10" text-anchor="middle" fill="currentColor" stroke="none">BASIC</text>
+  </g>
+  <!-- Arrow -->
+  <path d="M320 215 L450 215 M430 195 L450 215 L430 235" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+  <circle cx="385" cy="215" r="15" fill="#fafafa" stroke="currentColor" stroke-width="2"/>
+  <path d="M380 205 L390 225 L380 225 Z" fill="currentColor" stroke="none" transform="translate(1, -2) rotate(45 385 215)"/>
+  <!-- API Server / JSON -->
+  <g transform="translate(490, 140)" fill="#fff" stroke="currentColor" stroke-width="2">
+    <rect x="0" y="0" width="120" height="150" rx="8" />
+    <circle cx="60" cy="30" r="10" />
+    <circle cx="60" cy="30" r="4" fill="currentColor" stroke="none"/>
+    <path d="M20 70 L30 60 L20 50 M40 70 L50 70" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <rect x="20" y="90" width="80" height="10" rx="2" />
+    <rect x="20" y="110" width="50" height="10" rx="2" />
+    <rect x="20" y="130" width="70" height="10" rx="2" />
+  </g>
+</svg>
 </div>
 </div>
 </div>
@@ -145,16 +178,40 @@ APIs from Word Documents
 <ul class="feature-list">
 <li>
 <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>
-<div><strong>No IDE Required</strong><p class="text-sm text-muted mt-1">Write and edit API code directly in Microsoft Word or any .docx-compatible editor. No development environment setup needed.</p></div>
+<div><strong>No IDE Required</strong><p class="text-sm text-muted mt-1">Write and edit API code directly in Microsoft Word or any .docx-compatible editor. No development environment setup needed — anyone who can open a Word document can build an API.</p></div>
 </li>
 <li>
 <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>
-<div><strong>Business-Readable Logic</strong><p class="text-sm text-muted mt-1">BASIC syntax is approachable for non-developers, enabling business analysts and domain experts to review and contribute to API design.</p></div>
+<div><strong>Business-Readable Logic</strong><p class="text-sm text-muted mt-1">BASIC syntax reads like plain English, so business analysts and domain experts can review, audit, and even write API logic themselves — no translation layer between requirements and implementation.</p></div>
+</li>
+<li>
+<svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>
+<div><strong>LLM-Assisted Code Generation</strong><p class="text-sm text-muted mt-1">Describe what your API should do in plain English and the LLM generates the BASIC code for you. Review, edit in Word, and deploy — no programming skills required.</p></div>
+</li>
+<li>
+<svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>
+<div><strong>Version Control via Documents</strong><p class="text-sm text-muted mt-1">Track changes using Word's built-in revision history. Share .docx files with colleagues for review. Your API source code lives where your team already works.</p></div>
 </li>
 </ul>
 </div>
-<div style="background:var(--card);border:1px solid var(--border);border-radius:1rem;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;color:var(--muted-foreground);font-size:.875rem">
-<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" style="opacity:.15"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/></svg>
+<div style="background:var(--card);border:1px solid var(--border);border-radius:1rem;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;color:var(--muted-foreground);overflow:hidden">
+<svg width="100%" height="100%" viewBox="0 0 400 300" fill="none">
+  <rect width="400" height="300" fill="#fafafa"/>
+  <g transform="translate(100, 50)" fill="#fff" stroke="currentColor" stroke-width="2">
+    <!-- Word Document with Code inside -->
+    <rect x="20" y="20" width="160" height="200" rx="4" />
+    <path d="M140 20 L180 60 L180 220 C180 222 178 220 180 220" fill="none" opacity="0"/>
+    <path d="M140 20 L140 60 L180 60" />
+    <!-- Headers -->
+    <rect x="40" y="40" width="80" height="10" rx="2" fill="currentColor" opacity="0.1" stroke="none"/>
+    <rect x="40" y="60" width="50" height="6" rx="2" fill="currentColor" opacity="0.1" stroke="none"/>
+    <!-- Code block -->
+    <rect x="40" y="90" width="120" height="100" rx="4" stroke="#111"/>
+    <path d="M50 110 L60 120 L50 130 M70 130 L90 130" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <rect x="50" y="150" width="60" height="4" rx="2" fill="currentColor" opacity="0.3" stroke="none"/>
+    <rect x="50" y="170" width="90" height="4" rx="2" fill="currentColor" opacity="0.3" stroke="none"/>
+  </g>
+</svg>
 </div>
 </div>
 </div>
@@ -167,18 +224,39 @@ APIs from Word Documents
 <p class="text-lg text-muted max-w-2xl mx-auto leading-relaxed">Upload your Word document and General Bots automatically parses, compiles, and deploys your API endpoints.</p>
 </div>
 <div class="grid-2">
-<div style="background:var(--card);border:1px solid var(--border);border-radius:1rem;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;color:var(--muted-foreground);font-size:.875rem">
-<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" style="opacity:.15"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+<div style="background:var(--card);border:1px solid var(--border);border-radius:1rem;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;color:var(--muted-foreground);overflow:hidden">
+<svg width="100%" height="100%" viewBox="0 0 400 300" fill="none">
+  <rect width="400" height="300" fill="#fafafa"/>
+  <g transform="translate(80, 100)" stroke="currentColor" stroke-width="2" fill="#fff">
+    <!-- Cloud -->
+    <path d="M60 60 C60 40 80 30 100 30 C130 30 140 50 140 60 C160 60 170 80 160 100 C150 120 130 120 110 120 L50 120 C30 120 20 100 30 80 C40 60 60 60 60 60 Z" />
+    <!-- API Endpoint -->
+    <rect x="180" y="55" width="80" height="30" rx="15" />
+    <circle cx="195" cy="70" r="4" fill="currentColor"/>
+    <!-- Connection -->
+    <path d="M140 80 L180 80" stroke-width="3" stroke-dasharray="6 6" opacity="0.4"/>
+    <!-- Speed lines -->
+    <path d="M40 30 L60 30 M20 60 L40 60 M40 90 L60 90" stroke-width="2" stroke-linecap="round" opacity="0.3"/>
+  </g>
+</svg>
 </div>
 <div>
 <ul class="feature-list">
 <li>
 <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>
-<div><strong>Instant Compilation</strong><p class="text-sm text-muted mt-1">Upload a .docx and your BASIC code is compiled into executable API endpoints instantly — no build pipeline or CI/CD required.</p></div>
+<div><strong>Instant Compilation</strong><p class="text-sm text-muted mt-1">Upload a .docx and your BASIC code is compiled into executable API endpoints instantly — no build pipeline, no CI/CD, no Docker containers. Save the file and the API is live.</p></div>
 </li>
 <li>
 <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>
-<div><strong>Hot Reloading</strong><p class="text-sm text-muted mt-1">Re-upload updated documents and changes take effect immediately, enabling rapid iteration and testing cycles.</p></div>
+<div><strong>Hot Reloading</strong><p class="text-sm text-muted mt-1">Re-upload updated documents and changes take effect immediately. Edit a single line in Word, save, and the API behavior changes in seconds — enabling rapid iteration.</p></div>
+</li>
+<li>
+<svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>
+<div><strong>S3-Compatible Storage</strong><p class="text-sm text-muted mt-1">Documents are stored in S3-compatible object storage with automatic processing. Upload via the API, via the web UI, or sync from your existing drive — files are indexed and available immediately.</p></div>
+</li>
+<li>
+<svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>
+<div><strong>Built-in Authentication</strong><p class="text-sm text-muted mt-1">APIs created in BASIC automatically inherit the platform's enterprise security: JWT tokens, Argon2 password hashing, and TLS encryption — no security code to write.</p></div>
 </li>
 </ul>
 </div>
@@ -209,8 +287,24 @@ APIs from Word Documents
 </li>
 </ul>
 </div>
-<div style="background:var(--card);border:1px solid var(--border);border-radius:1rem;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;color:var(--muted-foreground);font-size:.875rem">
-<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" style="opacity:.15"><path d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+<div style="background:var(--card);border:1px solid var(--border);border-radius:1rem;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;color:var(--muted-foreground);overflow:hidden">
+<svg width="100%" height="100%" viewBox="0 0 400 300" fill="none">
+  <rect width="400" height="300" fill="#fafafa"/>
+  <g transform="translate(100, 70)" stroke="currentColor" stroke-width="2" fill="#fff">
+    <!-- Server Rack -->
+    <rect x="60" y="20" width="80" height="120" rx="4" />
+    <line x1="60" y1="60" x2="140" y2="60" />
+    <line x1="60" y1="100" x2="140" y2="100" />
+    <circle cx="80" cy="40" r="4" fill="currentColor" stroke="none"/>
+    <circle cx="80" cy="80" r="4" fill="currentColor" stroke="none"/>
+    <circle cx="80" cy="120" r="4" fill="currentColor" stroke="none"/>
+    
+    <!-- Code tags floating around -->
+    <path d="M30 30 L20 40 L30 50" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M170 110 L180 120 L170 130" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M170 30 L180 40 L170 50" stroke-linecap="round" stroke-linejoin="round" opacity="0.3"/>
+  </g>
+</svg>
 </div>
 </div>
 </div>

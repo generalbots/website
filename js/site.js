@@ -77,4 +77,16 @@ document.addEventListener('DOMContentLoaded', function () {
   gt.src = 'https://cdn.gtranslate.net/widgets/latest/float.js';
   gt.defer = true;
   document.body.appendChild(gt);
+
+  var header = document.querySelector('.nav-header') || document.querySelector('.site-header');
+  if (header) {
+    var shrunk = false;
+    window.addEventListener('scroll', function () {
+      var shouldShrink = window.scrollY > 60;
+      if (shouldShrink !== shrunk) {
+        shrunk = shouldShrink;
+        header.classList.toggle('header-shrunk', shouldShrink);
+      }
+    }, { passive: true });
+  }
 });

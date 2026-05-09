@@ -130,8 +130,37 @@ Content Generation
 <a href="/features/content-generation/#templates" class="btn btn-outline btn-lg">Learn More</a>
 <a href="/contact/" class="btn btn-primary btn-lg">Get Started</a>
 </div>
-<div style="max-width:40rem;margin:0 auto;background:var(--card);border:1px solid var(--border);border-radius:1rem;aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;color:var(--muted-foreground);font-size:.875rem">
-<svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" style="opacity:.15"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+<div style="max-width:40rem;margin:0 auto;background:var(--card);border:1px solid var(--border);border-radius:1rem;aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;color:var(--muted-foreground);overflow:hidden;position:relative">
+<svg width="100%" height="100%" viewBox="0 0 800 450" fill="none">
+  <defs>
+    <linearGradient id="contentGrad" x1="0" y1="0" x2="800" y2="450" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#f8f8f8"/>
+      <stop offset="100%" stop-color="#eaeaea"/>
+    </linearGradient>
+    <pattern id="grid8" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(0,0,0,0.03)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="450" fill="url(#contentGrad)"/>
+  <rect width="800" height="450" fill="url(#grid8)"/>
+  <g transform="translate(250, 100)" stroke="currentColor" stroke-width="2" fill="#fff">
+    <!-- Main document -->
+    <rect x="50" y="20" width="160" height="200" rx="8" />
+    <path d="M80 60 L180 60" stroke-linecap="round"/>
+    <path d="M80 90 L160 90" stroke-linecap="round"/>
+    <path d="M80 120 L180 120" stroke-linecap="round"/>
+    <path d="M80 150 L140 150" stroke-linecap="round"/>
+    
+    <!-- AI Sparkles -->
+    <path d="M20 -10 L30 -30 L40 -10 L60 0 L40 10 L30 30 L20 10 L0 0 Z" fill="currentColor" opacity="0.1" stroke="none"/>
+    <path d="M220 100 L225 90 L230 100 L240 105 L230 110 L225 120 L220 110 L210 105 Z" fill="currentColor" opacity="0.1" stroke="none"/>
+    
+    <!-- Pencil / Edit -->
+    <path d="M160 170 L210 120 L230 140 L180 190 Z" fill="#fafafa"/>
+    <path d="M160 170 L150 200 L180 190 Z" fill="#fafafa"/>
+    <path d="M220 130 L170 180" stroke-linecap="round" opacity="0.5"/>
+  </g>
+</svg>
 </div>
 </div>
 </div>
@@ -159,10 +188,33 @@ Content Generation
 <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>
 <div><strong>Multi-format output</strong><p class="text-sm text-muted mt-1">Generate content in multiple formats — text, HTML, Markdown — ready for any platform or channel.</p></div>
 </li>
+<li>
+<svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>
+<div><strong>Dynamic Data Injection</strong><p class="text-sm text-muted mt-1">Pull live data (like product specs or pricing from a database) directly into your content templates at generation time so you never publish outdated information.</p></div>
+</li>
 </ul>
 </div>
-<div style="background:var(--card);border:1px solid var(--border);border-radius:1rem;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;color:var(--muted-foreground);font-size:.875rem">
-<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" style="opacity:.15"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+<div style="background:var(--card);border:1px solid var(--border);border-radius:1rem;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;color:var(--muted-foreground);overflow:hidden">
+<svg width="100%" height="100%" viewBox="0 0 400 300" fill="none">
+  <rect width="400" height="300" fill="#fafafa"/>
+  <g transform="translate(100, 60)" fill="#fff" stroke="currentColor" stroke-width="2">
+    <!-- Template blueprint -->
+    <rect x="0" y="0" width="80" height="120" rx="4" stroke-dasharray="4 4" />
+    <rect x="10" y="10" width="60" height="20" rx="2" fill="currentColor" opacity="0.1" stroke="none"/>
+    <rect x="10" y="40" width="60" height="10" rx="2" fill="currentColor" opacity="0.1" stroke="none"/>
+    <rect x="10" y="60" width="40" height="10" rx="2" fill="currentColor" opacity="0.1" stroke="none"/>
+    
+    <!-- Arrow -->
+    <path d="M100 60 L140 60 M130 50 L140 60 L130 70" stroke-width="2" fill="none" stroke-linecap="round"/>
+    
+    <!-- Completed documents -->
+    <rect x="160" y="-10" width="80" height="120" rx="4" />
+    <path d="M170 10 L230 10 M170 30 L230 30 M170 50 L210 50" stroke-width="2" stroke-linecap="round"/>
+    
+    <rect x="180" y="30" width="80" height="120" rx="4" />
+    <path d="M190 50 L250 50 M190 70 L250 70 M190 90 L230 90" stroke-width="2" stroke-linecap="round"/>
+  </g>
+</svg>
 </div>
 </div>
 </div>
@@ -176,8 +228,30 @@ Content Generation
 <p class="text-lg text-muted max-w-2xl mx-auto leading-relaxed">Generate content that ranks. AI handles keyword research, meta tags, and content scoring automatically.</p>
 </div>
 <div class="grid-2">
-<div style="background:var(--card);border:1px solid var(--border);border-radius:1rem;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;color:var(--muted-foreground);font-size:.875rem">
-<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" style="opacity:.15"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+<div style="background:var(--card);border:1px solid var(--border);border-radius:1rem;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;color:var(--muted-foreground);overflow:hidden">
+<svg width="100%" height="100%" viewBox="0 0 400 300" fill="none">
+  <rect width="400" height="300" fill="#fafafa"/>
+  <g transform="translate(100, 70)" fill="#fff" stroke="currentColor" stroke-width="2">
+    <!-- Browser/Search -->
+    <rect x="0" y="0" width="200" height="120" rx="8" />
+    <line x1="0" y1="30" x2="200" y2="30" />
+    <circle cx="20" cy="15" r="4" />
+    <circle cx="40" cy="15" r="4" />
+    
+    <!-- SEO tags -->
+    <rect x="20" y="50" width="100" height="10" rx="2" />
+    <rect x="20" y="70" width="160" height="6" rx="2" fill="currentColor" opacity="0.3" stroke="none"/>
+    <rect x="20" y="85" width="140" height="6" rx="2" fill="currentColor" opacity="0.3" stroke="none"/>
+    
+    <!-- Target -->
+    <circle cx="160" cy="70" r="15" />
+    <circle cx="160" cy="70" r="5" fill="currentColor" stroke="none"/>
+    <line x1="160" y1="45" x2="160" y2="55" />
+    <line x1="160" y1="85" x2="160" y2="95" />
+    <line x1="135" y1="70" x2="145" y2="70" />
+    <line x1="175" y1="70" x2="185" y2="70" />
+  </g>
+</svg>
 </div>
 <div>
 <ul class="feature-list">
@@ -192,6 +266,10 @@ Content Generation
 <li>
 <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>
 <div><strong>Content scoring</strong><p class="text-sm text-muted mt-1">Evaluate content quality and SEO readiness with automated scoring before publishing.</p></div>
+</li>
+<li>
+<svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>
+<div><strong>Competitor Benchmarking</strong><p class="text-sm text-muted mt-1">Automatically compare generated drafts against top-ranking articles for the target keyword, ensuring your content meets the semantic depth needed to rank on Google.</p></div>
 </li>
 </ul>
 </div>
@@ -221,10 +299,29 @@ Content Generation
 <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>
 <div><strong>Custom vocabulary</strong><p class="text-sm text-muted mt-1">Define preferred terms, product names, and industry-specific language to ensure accuracy and consistency.</p></div>
 </li>
+<li>
+<svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>
+<div><strong>Compliance Rules Engine</strong><p class="text-sm text-muted mt-1">Define strict non-negotiable rules—such as words you are legally forbidden to use—and the AI will enforce them across all generations.</p></div>
+</li>
 </ul>
 </div>
-<div style="background:var(--card);border:1px solid var(--border);border-radius:1rem;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;color:var(--muted-foreground);font-size:.875rem">
-<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" style="opacity:.15"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+<div style="background:var(--card);border:1px solid var(--border);border-radius:1rem;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;color:var(--muted-foreground);overflow:hidden">
+<svg width="100%" height="100%" viewBox="0 0 400 300" fill="none">
+  <rect width="400" height="300" fill="#fafafa"/>
+  <g transform="translate(100, 70)" fill="#fff" stroke="currentColor" stroke-width="2">
+    <!-- Megaphone / Talk -->
+    <path d="M40 80 L100 50 L100 110 L40 80 Z" stroke-linejoin="round"/>
+    <path d="M40 80 L20 80 C20 80 15 85 20 90 L40 90" stroke-linejoin="round"/>
+    <!-- Voice waves with checks -->
+    <path d="M130 60 Q150 80 130 100" fill="none" stroke-linecap="round"/>
+    <path d="M150 40 Q180 80 150 120" fill="none" stroke-linecap="round"/>
+    <circle cx="160" cy="40" r="10" fill="#fafafa"/>
+    <path d="M155 40 L160 45 L165 35" stroke-linecap="round" stroke-linejoin="round"/>
+    
+    <circle cx="130" cy="110" r="10" fill="#fafafa"/>
+    <path d="M125 110 L130 115 L135 105" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>
 </div>
 </div>
 </div>
