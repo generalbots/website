@@ -4,436 +4,60 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Blog | General Bots</title>
-<meta name="description" content="Insights on AI orchestration, LLM tools, bot development, and open source automation from the General Bots team.">
+<meta name="description" content="Technical analysis, architecture deep-dives, and insights on AI orchestration, LLM tools, and open source automation from the General Bots team.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://generalbots.org/blog/">
+<meta property="og:title" content="Blog | General Bots">
+<meta property="og:description" content="Insights on AI orchestration, LLM tools, bot development, and open source automation from the General Bots team.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://generalbots.org/blog/">
+<link rel="icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="stylesheet" href="/css/site.css">
-<link rel="icon" href="/favicon.ico" type="image/x-icon">
 </head>
 <body>
-
-<header class="site-header">
-<div class="header-inner">
-<a href="/" class="logo-link"><img src="/gb-logo.png" alt="General Bots" width="140" height="33"></a>
-<nav class="nav-desktop">
-<a href="/">Home</a>
-<div class="nav-dropdown">
-<button class="nav-dropdown-trigger">General Bots <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5l3 3 3-3"/></svg></button>
-<div class="nav-dropdown-content hidden">
-<a href="/general-bots/llm">LLMs</a>
-<a href="/general-bots/vector-retrieval">Vector Retrieval</a>
-<a href="/general-bots/open-source">Open Source</a>
-</div>
-</div>
-<div class="nav-dropdown">
-<button class="nav-dropdown-trigger">Features <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5l3 3 3-3"/></svg></button>
-<div class="nav-dropdown-content hidden">
-<a href="/features/ai-search">AI Search</a>
-<a href="/features/content-generation">Content Generation</a>
-<a href="/features/bot-factory">Bot Factory</a>
-<a href="/features/talk-to-data">Talk to data</a>
-<a href="/features/broadcast">Broadcast</a>
-<a href="/features/trainning">Train</a>
-<a href="/features/web-automation">Web Automation</a>
-<a href="/features/llm-tools">LLM Tools</a>
-<a href="/features/create-apis-in-word">Calling APIs</a>
-</div>
-</div>
-<div class="nav-dropdown">
-<button class="nav-dropdown-trigger">Integrations <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5l3 3 3-3"/></svg></button>
-<div class="nav-dropdown-content hidden">
-<a href="/integrations/channels/whatsapp">WhatsApp</a>
-<a href="/integrations/channels/sms">SMS</a>
-<a href="/integrations/channels/web-chat">Web Chat</a>
-<a href="/integrations/channels/instagram">Instagram</a>
-<a href="/integrations/channels/email">E-mail</a>
-<a href="/integrations/channels/microsoft-teams">Microsoft Teams</a>
-<a href="/integrations/channels/google-chat">Google Chat</a>
-<a href="/integrations/channels/facebook-pages">Facebook Pages</a>
-<a href="/integrations/channels/slack">Slack</a>
-</div>
-</div>
-<a href="/templates">Templates</a>
-<div class="nav-dropdown">
-<button class="nav-dropdown-trigger">Resources <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5l3 3 3-3"/></svg></button>
-<div class="nav-dropdown-content hidden">
-<a href="/resources/considering/ai-powered-org">Considering</a>
-<a href="/resources/already-using/essential-resources">Already Using</a>
-<a href="/resources/community/become-a-partner">Community</a>
-<a href="https://appsource.microsoft.com/pt-pt/product/web-apps/pragmatismoio-4835990.generalbot?tab=overview" target="_blank" rel="noopener">Marketplaces</a>
-</div>
-</div>
-<a href="/pricing">Hosting</a>
-<a href="/contact">Contact</a>
-</nav>
-<div class="flex items-center gap-4">
-<a href="tel:+552140402160" class="phone-link" style="display:none" id="header-phone">+55 21 4040-2160</a>
-<div class="gtranslate_wrapper"></div>
-<button class="nav-mobile-toggle" id="mobile-menu-toggle" aria-label="Toggle menu">
-<svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
-<svg class="close-icon hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M6 18L18 6"/></svg>
-</button>
-</div>
-</div>
-</header>
-
-<div id="mobile-menu" class="hidden">
-<a href="/" class="mobile-nav-link">Home</a>
-<div>
-<button class="mobile-dropdown-trigger">General Bots <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><path d="M3 5l3 3 3-3"/></svg></button>
-<div class="mobile-dropdown-content hidden">
-<a href="/general-bots/llm" class="mobile-nav-link">LLMs</a>
-<a href="/general-bots/vector-retrieval" class="mobile-nav-link">Vector Retrieval</a>
-<a href="/general-bots/open-source" class="mobile-nav-link">Open Source</a>
-</div>
-</div>
-<div>
-<button class="mobile-dropdown-trigger">Features <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><path d="M3 5l3 3 3-3"/></svg></button>
-<div class="mobile-dropdown-content hidden">
-<a href="/features/ai-search" class="mobile-nav-link">AI Search</a>
-<a href="/features/content-generation" class="mobile-nav-link">Content Generation</a>
-<a href="/features/bot-factory" class="mobile-nav-link">Bot Factory</a>
-<a href="/features/talk-to-data" class="mobile-nav-link">Talk to data</a>
-<a href="/features/broadcast" class="mobile-nav-link">Broadcast</a>
-<a href="/features/trainning" class="mobile-nav-link">Train</a>
-<a href="/features/web-automation" class="mobile-nav-link">Web Automation</a>
-<a href="/features/llm-tools" class="mobile-nav-link">LLM Tools</a>
-<a href="/features/create-apis-in-word" class="mobile-nav-link">Calling APIs</a>
-</div>
-</div>
-<div>
-<button class="mobile-dropdown-trigger">Integrations <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><path d="M3 5l3 3 3-3"/></svg></button>
-<div class="mobile-dropdown-content hidden">
-<a href="/integrations/channels/whatsapp" class="mobile-nav-link">WhatsApp</a>
-<a href="/integrations/channels/sms" class="mobile-nav-link">SMS</a>
-<a href="/integrations/channels/web-chat" class="mobile-nav-link">Web Chat</a>
-<a href="/integrations/channels/instagram" class="mobile-nav-link">Instagram</a>
-<a href="/integrations/channels/email" class="mobile-nav-link">E-mail</a>
-<a href="/integrations/channels/microsoft-teams" class="mobile-nav-link">Microsoft Teams</a>
-<a href="/integrations/channels/google-chat" class="mobile-nav-link">Google Chat</a>
-<a href="/integrations/channels/facebook-pages" class="mobile-nav-link">Facebook Pages</a>
-<a href="/integrations/channels/slack" class="mobile-nav-link">Slack</a>
-</div>
-</div>
-<a href="/templates" class="mobile-nav-link">Templates</a>
-<div>
-<button class="mobile-dropdown-trigger">Resources <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><path d="M3 5l3 3 3-3"/></svg></button>
-<div class="mobile-dropdown-content hidden">
-<a href="/resources/considering/ai-powered-org" class="mobile-nav-link">Considering</a>
-<a href="/resources/already-using/essential-resources" class="mobile-nav-link">Already Using</a>
-<a href="/resources/community/become-a-partner" class="mobile-nav-link">Community</a>
-<a href="https://appsource.microsoft.com/pt-pt/product/web-apps/pragmatismoio-4835990.generalbot?tab=overview" target="_blank" rel="noopener" class="mobile-nav-link">Marketplaces</a>
-</div>
-</div>
-<a href="/pricing" class="mobile-nav-link">Hosting</a>
-<a href="/contact" class="mobile-nav-link">Contact</a>
-<span class="mobile-phone">+55 21 4040-2160</span>
-</div>
-
-<main style="padding-top:5rem">
-<section class="page-section vitral-bg">
-<div class="container">
+<div hx-get="/partials/header.html" hx-swap="innerHTML" hx-trigger="load"></div>
+<main style="padding-top:4rem">
+<section class="page-section bg-gray-50 vitral-bg">
+<div class="container text-center">
 <div class="reveal">
-<div class="text-center mb-12">
-<div class="badge mb-4">Blog</div>
-<h1 class="text-4xl font-bold tracking-tight mb-4">Insights &amp; Updates</h1>
-<p class="text-lg text-muted max-w-2xl mx-auto">Deep dives into AI orchestration, LLM tools, open source automation, and the future of conversational platforms.</p>
+<div class="badge mb-4" style="margin-left:auto;margin-right:auto;width:fit-content">General Bots Blog</div>
+<h1 class="text-4xl font-bold tracking-tighter mb-4" style="font-size:clamp(2rem,5vw,3rem)">Technical Insights.</h1>
+<p class="text-lg text-muted max-w-2xl mx-auto leading-relaxed">Deep dives into AI orchestration, industrial bot architecture, and the future of open source automation.</p>
 </div>
-</div>
-
-<div class="grid-2 reveal">
-
-<a href="/blog/own-your-authenticator" class="blog-card card-hover">
-<div class="card-image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6M9 13h4"/></svg></div>
-<div class="card-content">
-<div class="card-badge"><span class="badge badge-featured">Featured</span></div>
-<p class="card-author">Pragmatismo Team</p>
-<h3 class="card-title">Own Your Authenticator Stack</h3>
-<p class="card-desc">Take control of your authentication infrastructure instead of relying on opaque third-party services.</p>
-</div>
-</a>
-
-<a href="/blog/llm-boom-is-over" class="blog-card card-hover">
-<div class="card-image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l2 2"/></svg></div>
-<div class="card-content">
-<div class="card-badge"><span class="badge badge-reflection">Reflection</span></div>
-<p class="card-author">Pragmatismo Team</p>
-<h3 class="card-title">LLM Boom Is Over</h3>
-<p class="card-desc">Why the hype cycle is settling and what matters now for sustainable AI adoption.</p>
-</div>
-</a>
-
-<a href="/blog/digital-twins" class="blog-card card-hover">
-<div class="card-image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/><path d="M8 12a4 4 0 108 0 4 4 0 00-8 0z"/></svg></div>
-<div class="card-content">
-<div class="card-badge"><span class="badge badge-featured">Featured</span></div>
-<p class="card-author">Pragmatismo Team</p>
-<h3 class="card-title">Digital Twins</h3>
-<p class="card-desc">How digital twins powered by AI are transforming business operations and decision-making.</p>
-</div>
-</a>
-
-<a href="/blog/mcp-is-the-new-api" class="blog-card card-hover">
-<div class="card-image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 6h16M4 12h16M4 18h16"/></svg></div>
-<div class="card-content">
-<div class="card-badge"><span class="badge badge-featured">Featured</span></div>
-<p class="card-author">Pragmatismo Team</p>
-<h3 class="card-title">MCP is the new API</h3>
-<p class="card-desc">The Model Context Protocol is reshaping how AI systems connect to data and tools.</p>
-</div>
-</a>
-
-<a href="/blog/basic-for-everyone" class="blog-card card-hover">
-<div class="card-image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8"/></svg></div>
-<div class="card-content">
-<div class="card-badge"><span class="badge badge-featured">Featured</span></div>
-<p class="card-author">Pragmatismo Team</p>
-<h3 class="card-title">BASIC for Everyone: Making AI Accessible</h3>
-<p class="card-desc">Bringing the simplicity of BASIC to modern AI orchestration for non-programmers.</p>
-</div>
-</a>
-
-<a href="/blog/cost-effective-bot-orchestration" class="blog-card card-hover">
-<div class="card-image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
-<div class="card-content">
-<div class="card-badge"><span class="badge badge-featured">Featured</span></div>
-<p class="card-author">Pragmatismo Team</p>
-<h3 class="card-title">Cost-Effective Bot Orchestration</h3>
-<p class="card-desc">Reduce infrastructure costs while scaling your bot deployment intelligently.</p>
-</div>
-</a>
-
-<a href="/blog/basic-llm-tools" class="blog-card card-hover">
-<div class="card-image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg></div>
-<div class="card-content">
-<div class="card-badge"><span class="badge badge-basics">Basics</span></div>
-<p class="card-author">Pragmatismo Team</p>
-<h3 class="card-title">BASIC LLM Tools</h3>
-<p class="card-desc">A practical introduction to the LLM tools available in the General Bots platform.</p>
-</div>
-</a>
-
-<a href="/blog/marginalized-e-mail-services" class="blog-card card-hover">
-<div class="card-image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg></div>
-<div class="card-content">
-<div class="card-badge"><span class="badge badge-featured">Featured</span></div>
-<p class="card-author">Pragmatismo Team</p>
-<h3 class="card-title">Marginalized E-mail Services</h3>
-<p class="card-desc">Why e-mail remains an underestimated channel and how AI is revitalizing it.</p>
-</div>
-</a>
-
-<a href="/blog/llm-myths-2025" class="blog-card card-hover">
-<div class="card-image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><path d="M12 9v4M12 17h.01"/></svg></div>
-<div class="card-content">
-<div class="card-badge"><span class="badge badge-featured">Featured</span></div>
-<p class="card-author">Pragmatismo Team</p>
-<h3 class="card-title">LLM Myths in 2025</h3>
-<p class="card-desc">Debunking persistent misconceptions about large language models and their capabilities.</p>
-</div>
-</a>
-
-<a href="/blog/illusion-of-intelligence" class="blog-card card-hover">
-<div class="card-image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
-<div class="card-content">
-<div class="card-badge"><span class="badge badge-basics">Basics</span></div>
-<p class="card-author">Pragmatismo Team</p>
-<h3 class="card-title">Illusion of Intelligence</h3>
-<p class="card-desc">Understanding the gap between perceived and actual AI intelligence in conversational systems.</p>
-</div>
-</a>
-
-<a href="/blog/saas-hidden-costs" class="blog-card card-hover">
-<div class="card-image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
-<div class="card-content">
-<div class="card-badge"><span class="badge badge-comparison">Comparison</span></div>
-<p class="card-author">Pragmatismo Team</p>
-<h3 class="card-title">SaaS Hidden Costs</h3>
-<p class="card-desc">Uncovering the true cost of SaaS bot platforms versus self-hosted open source solutions.</p>
-</div>
-</a>
-
-<a href="/blog/rcs-vs-whatsapp" class="blog-card card-hover">
-<div class="card-image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg></div>
-<div class="card-content">
-<div class="card-badge"><span class="badge badge-basics">Basics</span></div>
-<p class="card-author">Pragmatismo Team</p>
-<h3 class="card-title">RCS vs. WhatsApp</h3>
-<p class="card-desc">A practical comparison of RCS and WhatsApp for business messaging and bot deployment.</p>
-</div>
-</a>
-
-<a href="/blog/general-bots-ai-templates" class="blog-card card-hover">
-<div class="card-image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg></div>
-<div class="card-content">
-<div class="card-badge"><span class="badge badge-templates">Templates</span></div>
-<p class="card-author">Pragmatismo Team</p>
-<h3 class="card-title">Ready-to-Use AI Templates</h3>
-<p class="card-desc">Jump-start your bot project with production-ready templates for common use cases.</p>
-</div>
-</a>
-
-<a href="/blog/what-is-llm" class="blog-card card-hover">
-<div class="card-image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg></div>
-<div class="card-content">
-<div class="card-badge"><span class="badge badge-basics">Basics</span></div>
-<p class="card-author">Pragmatismo Team</p>
-<h3 class="card-title">What is LLM?</h3>
-<p class="card-desc">A clear, jargon-free explanation of large language models and how they power modern AI.</p>
-</div>
-</a>
-
-  <a href="/blog/beyond-chatbots" class="blog-card card-hover">
-  <div class="card-image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><path d="M3.27 6.96L12 12.01l8.73-5.05M12 22.08V12"/></svg></div>
-  <div class="card-content">
-  <div class="card-badge"><span class="badge badge-basics">Basics</span></div>
-  <p class="card-author">Pragmatismo Team</p>
-  <h3 class="card-title">Beyond Chatbots</h3>
-  <p class="card-desc">Moving past simple chat interfaces to full AI orchestration platforms that automate workflows.</p>
-  </div>
-  </a>
-
-  <a href="/blog/carl-vs-wilson" class="blog-card card-hover">
-  <div class="card-image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div>
-  <div class="card-content">
-  <div class="card-badge"><span class="badge badge-featured">Strategy</span></div>
-  <p class="card-author">Pragmatismo Team</p>
-  <h3 class="card-title">Carl vs Wilson</h3>
-  <p class="card-desc">Two teenagers, two AI philosophies. How your AI stack choice defines the future of your company.</p>
-  </div>
-  </a>
-
-  <a href="/blog/deswindonization" class="blog-card card-hover">
-  <div class="card-image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18.36 6.64A9 9 0 0120.77 15M3.23 15A9 9 0 015.64 6.64"/><path d="M9 17l3 3 3-3M15 7l-3-3-3 3"/><circle cx="12" cy="12" r="2"/></svg></div>
-  <div class="card-content">
-  <div class="card-badge"><span class="badge badge-featured">Open Source</span></div>
-  <p class="card-author">Pragmatismo Team</p>
-  <h3 class="card-title">Deswindonization for Developers</h3>
-  <p class="card-desc">Breaking free from proprietary ecosystems and embracing the future of collaborative development.</p>
-  </div>
-  </a>
-
-  <a href="/blog/escape-from-bigtech" class="blog-card card-hover">
-  <div class="card-image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/></svg></div>
-  <div class="card-content">
-  <div class="card-badge"><span class="badge badge-featured">Enterprise Strategy</span></div>
-  <p class="card-author">Pragmatismo Team</p>
-  <h3 class="card-title">Breaking Free From Big Tech</h3>
-  <p class="card-desc">Why pay 10x more for locked-in solutions when open source delivers superior functionality with complete control?</p>
-  </div>
-  </a>
-
-  <a href="/blog/no-forms" class="blog-card card-hover">
-  <div class="card-image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div>
-  <div class="card-content">
-  <div class="card-badge"><span class="badge badge-featured">Design Philosophy</span></div>
-  <p class="card-author">Pragmatismo Team</p>
-  <h3 class="card-title">NO FORMS</h3>
-  <p class="card-desc">Why conversational interfaces are replacing traditional UI paradigms and how Pragmatismo pioneered the No Forms movement.</p>
-  </div>
-  </a>
-
-  <a href="/blog/sdg-ai" class="blog-card card-hover">
-  <div class="card-image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg></div>
-  <div class="card-content">
-  <div class="card-badge"><span class="badge badge-featured">Sustainable Development</span></div>
-  <p class="card-author">Pragmatismo Team</p>
-  <h3 class="card-title">Sustainable Development Goals and AI</h3>
-  <p class="card-desc">How an open-source LLM orchestration platform is empowering communities worldwide to address the UN 17 SDGs.</p>
-  </div>
-  </a>
-
-  <a href="/blog/the-economic-impact-of-us-tariffs-on-ai" class="blog-card card-hover">
-  <div class="card-image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
-  <div class="card-content">
-  <div class="card-badge"><span class="badge badge-featured">Economics</span></div>
-  <p class="card-author">Pragmatismo Team</p>
-  <h3 class="card-title">The Economic Impact of US Tariffs on AI</h3>
-  <p class="card-desc">How US trade policies are accelerating global adoption of open-source AI infrastructure.</p>
-  </div>
-  </a>
-
-  <a href="/blog/why-pragmatismo-selected-open-source" class="blog-card card-hover">
-  <div class="card-image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg></div>
-  <div class="card-content">
-  <div class="card-badge"><span class="badge badge-featured">Open Source</span></div>
-  <p class="card-author">Pragmatismo Team</p>
-  <h3 class="card-title">Why Pragmatismo Open-Source?</h3>
-  <p class="card-desc">We breathe life into abandoned projects and combine the best of cloud and local computing to push AI and LLM boundaries.</p>
-  </div>
-  </a>
-
-</div>
-
-<div class="reveal" style="margin-top:4rem">
-<div class="glass-card-bright text-center" style="padding:3rem 2rem">
-<h3 class="text-2xl font-bold tracking-tight mb-2">Need specific help?</h3>
-<p class="text-muted mb-6" style="max-width:28rem;margin-left:auto;margin-right:auto">Get started with General Bots or reach out with your questions.</p>
-<div class="flex items-center justify-center gap-4 flex-wrap">
-<a href="https://github.com/GeneralBots/BotServer" target="_blank" rel="noopener" class="btn btn-primary btn-lg">Try It Now</a>
-<a href="/contact" class="btn btn-outline btn-lg">Ask Questions</a>
-</div>
-</div>
-</div>
-
 </div>
 </section>
-</main>
 
-<footer class="site-footer">
+<section class="page-section-lg reveal">
 <div class="container">
-<div class="footer-top">
-<div class="footer-brand">
-<img src="/gb-logo.png" alt="General Bots" class="footer-logo" width="140" height="33">
-<p>General Bots® — The Open Source AI Bot Platform. Self-host or choose a certified hosting provider.</p>
-<p style="margin-top:.75rem;font-size:.75rem">DPO: Rodrigo Rodriguez (<a href="mailto:security@pragmatismo.com.br" style="color:rgba(255,255,255,.7)">security@pragmatismo.com.br</a>)</p>
-<p style="font-size:.75rem;margin-top:.25rem">Rio de Janeiro – São Paulo – Paraná, Brazil</p>
-<p style="font-size:.75rem;margin-top:.25rem"><a href="tel:+552140402160" style="color:rgba(255,255,255,.7)">+55 21 4040-2160</a></p>
-</div>
-<div class="footer-col">
-<h5>General Bots</h5>
-<a href="/general-bots/llm">LLM</a>
-<a href="/general-bots/vector-retrieval">Vector Search</a>
-<a href="/general-bots/open-source">Open Source</a>
-<a href="/features/ai-search">AI Search</a>
-<a href="/features/bot-factory">Bot Factory</a>
-</div>
-<div class="footer-col">
-<h5>Hosting</h5>
-<a href="https://pragmatismo.com.br" target="_blank" rel="noopener">Pragmatismo</a>
-<a href="https://oerlabs.com.br" target="_blank" rel="noopener">OERLabs</a>
-<a href="https://mapagency.com.br" target="_blank" rel="noopener">Map Agency</a>
-<a href="https://sentient.net.br" target="_blank" rel="noopener">Sentient</a>
-<a href="https://darioexecutivesales.com" target="_blank" rel="noopener">Dario Executive Sales</a>
-</div>
-<div class="footer-col">
-<h5>Community</h5>
-<a href="https://docs.generalbots.org" target="_blank" rel="noopener">Documentation</a>
-<a href="https://gb.pragmatismo.com.br/pragmatismohelpcenter" target="_blank" rel="noopener">Help Center</a>
-<a href="/resources/community/become-a-partner">Become a Partner</a>
-<a href="/blog">Blog</a>
-<a href="https://github.com/generalbots" target="_blank" rel="noopener">GitHub</a>
+<div class="grid-2">
+<a href="/blog/mcp-is-the-new-api" class="glass-card p-6 block hover:translate-y-[-4px] transition-transform">
+<div class="badge mb-4">Architecture</div>
+<h3 class="text-xl font-bold mb-2">MCP is the new API</h3>
+<p class="text-sm text-muted">The Model Context Protocol is reshaping how AI systems connect to data and tools.</p>
+</a>
+<a href="/blog/llm-boom-is-over" class="glass-card p-6 block hover:translate-y-[-4px] transition-transform">
+<div class="badge mb-4">Market Analysis</div>
+<h3 class="text-xl font-bold mb-2">LLM Boom Is Over</h3>
+<p class="text-sm text-muted">Why the hype cycle is settling and what matters now for sustainable AI adoption.</p>
+</a>
+<a href="/blog/own-your-authenticator" class="glass-card p-6 block hover:translate-y-[-4px] transition-transform">
+<div class="badge mb-4">Security</div>
+<h3 class="text-xl font-bold mb-2">Own Your Authenticator Stack</h3>
+<p class="text-sm text-muted">Take control of your authentication infrastructure instead of relying on opaque third-party services.</p>
+</a>
+<a href="/blog/digital-twins" class="glass-card p-6 block hover:translate-y-[-4px] transition-transform">
+<div class="badge mb-4">Trends</div>
+<h3 class="text-xl font-bold mb-2">Digital Twins & AI</h3>
+<p class="text-sm text-muted">How digital twins powered by AI are transforming business operations and decision-making.</p>
+</a>
 </div>
 </div>
-<div class="footer-middle">
-<span>Copyright &copy; 2016-2026 Pragmatismo</span>
-<div class="flex items-center gap-4">
-<a href="/terms">Terms of Service</a>
-<a href="/privacy">Privacy Policy</a>
-</div>
-</div>
-<div class="footer-bottom">
-<span>General Bots — Open Source AI Orchestration Platform</span>
-<div class="footer-social">
-<a href="https://www.github.com/GeneralBots" target="_blank" rel="noopener" aria-label="GitHub"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg></a>
-<a href="https://www.instagram.com/general.bots/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg></a>
-<a href="https://web.whatsapp.com/send?phone=+552140402160" target="_blank" rel="noopener" aria-label="WhatsApp"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
-</div>
-</div>
-</div>
-</footer>
+</section>
 
-<style>
-@media(min-width:768px){#header-phone{display:inline-flex !important}}
-</style>
+</main>
+<div hx-get="/partials/footer.html" hx-swap="innerHTML" hx-trigger="load"></div>
+<script src="https://unpkg.com/htmx.org@2.0.4"></script>
 <script src="/js/site.js"></script>
 </body>
 </html>

@@ -3,586 +3,65 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Sustainable Development Goals and AI | General Bots Blog</title>
-<meta name="description" content="How an open-source LLM orchestration platform is empowering communities worldwide to address the UN 17 Sustainable Development Goals.">
-<link rel="stylesheet" href="/css/site.css">
+<title>SDGs &amp; Sovereign AI: Democratizing Intelligence | General Bots Blog</title>
+<meta name="description" content="Technical analysis of how open-source AI Search and sovereign infrastructure address the UN Sustainable Development Goals. Bridging the digital divide with GLM 5.1.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://generalbots.org/blog/sdg-ai/">
+<meta property="og:title" content="SDGs &amp; Sovereign AI: Democratizing Intelligence | General Bots Blog">
+<meta property="og:description" content="Technical analysis of SDGs &amp; AI.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://generalbots.org/blog/sdg-ai/">
 <link rel="icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="stylesheet" href="/css/site.css">
 </head>
 <body>
-<header class="site-header"><div class="header-inner">
-<a href="/" class="logo-link"><img src="/gb-logo.png" alt="General Bots" width="140" height="33"></a>
-<nav class="nav-desktop"><a href="/">Home</a><div class="nav-dropdown"><button class="nav-dropdown-trigger">General Bots <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5l3 3 3-3"/></svg></button><div class="nav-dropdown-content hidden"><a href="/general-bots/llm">LLMs</a><a href="/general-bots/vector-retrieval">Vector Retrieval</a><a href="/general-bots/open-source">Open Source</a></div></div><div class="nav-dropdown"><button class="nav-dropdown-trigger">Features <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5l3 3 3-3"/></svg></button><div class="nav-dropdown-content hidden"><a href="/features/ai-search">AI Search</a><a href="/features/content-generation">Content Generation</a><a href="/features/bot-factory">Bot Factory</a><a href="/features/talk-to-data">Talk to data</a><a href="/features/broadcast">Broadcast</a><a href="/features/trainning">Train</a><a href="/features/web-automation">Web Automation</a><a href="/features/llm-tools">LLM Tools</a><a href="/features/create-apis-in-word">Calling APIs</a></div></div><div class="nav-dropdown"><button class="nav-dropdown-trigger">Integrations <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5l3 3 3-3"/></svg></button><div class="nav-dropdown-content hidden"><a href="/integrations/channels/whatsapp">WhatsApp</a><a href="/integrations/channels/sms">SMS</a><a href="/integrations/channels/web-chat">Web Chat</a><a href="/integrations/channels/instagram">Instagram</a><a href="/integrations/channels/email">E-mail</a><a href="/integrations/channels/microsoft-teams">Microsoft Teams</a><a href="/integrations/channels/google-chat">Google Chat</a><a href="/integrations/channels/facebook-pages">Facebook Pages</a><a href="/integrations/channels/slack">Slack</a></div></div><a href="/templates">Templates</a><div class="nav-dropdown"><button class="nav-dropdown-trigger">Resources <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5l3 3 3-3"/></svg></button><div class="nav-dropdown-content hidden"><a href="/resources/considering/ai-powered-org">Considering</a><a href="/resources/already-using/essential-resources">Already Using</a><a href="/resources/community/become-a-partner">Community</a></div></div><a href="/pricing">Hosting</a><a href="/contact">Contact</a></nav>
-<div class="flex items-center gap-4"><a href="tel:+552140402160" class="phone-link" style="display:none" id="header-phone">+55 21 4040-2160</a><div class="gtranslate_wrapper"></div><button class="nav-mobile-toggle" id="mobile-menu-toggle" aria-label="Toggle menu"><svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg><svg class="close-icon hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M6 18L18 6"/></svg></button></div>
-</div></header>
-<div id="mobile-menu" class="hidden">
-<a href="/" class="mobile-nav-link">Home</a>
-<div><button class="mobile-dropdown-trigger">General Bots <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><path d="M3 5l3 3 3-3"/></svg></button><div class="mobile-dropdown-content hidden"><a href="/general-bots/llm" class="mobile-nav-link">LLMs</a><a href="/general-bots/vector-retrieval" class="mobile-nav-link">Vector Retrieval</a><a href="/general-bots/open-source" class="mobile-nav-link">Open Source</a></div></div>
-<div><button class="mobile-dropdown-trigger">Features <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><path d="M3 5l3 3 3-3"/></svg></button><div class="mobile-dropdown-content hidden"><a href="/features/ai-search" class="mobile-nav-link">AI Search</a><a href="/features/content-generation" class="mobile-nav-link">Content Generation</a><a href="/features/bot-factory" class="mobile-nav-link">Bot Factory</a><a href="/features/talk-to-data" class="mobile-nav-link">Talk to data</a><a href="/features/broadcast" class="mobile-nav-link">Broadcast</a><a href="/features/trainning" class="mobile-nav-link">Train</a><a href="/features/web-automation" class="mobile-nav-link">Web Automation</a><a href="/features/llm-tools" class="mobile-nav-link">LLM Tools</a><a href="/features/create-apis-in-word" class="mobile-nav-link">Calling APIs</a></div></div>
-<div><button class="mobile-dropdown-trigger">Integrations <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><path d="M3 5l3 3 3-3"/></svg></button><div class="mobile-dropdown-content hidden"><a href="/integrations/channels/whatsapp" class="mobile-nav-link">WhatsApp</a><a href="/integrations/channels/sms" class="mobile-nav-link">SMS</a><a href="/integrations/channels/web-chat" class="mobile-nav-link">Web Chat</a><a href="/integrations/channels/instagram" class="mobile-nav-link">Instagram</a><a href="/integrations/channels/email" class="mobile-nav-link">E-mail</a><a href="/integrations/channels/microsoft-teams" class="mobile-nav-link">Microsoft Teams</a><a href="/integrations/channels/google-chat" class="mobile-nav-link">Google Chat</a><a href="/integrations/channels/facebook-pages" class="mobile-nav-link">Facebook Pages</a><a href="/integrations/channels/slack" class="mobile-nav-link">Slack</a></div></div>
-<a href="/templates" class="mobile-nav-link">Templates</a>
-<div><button class="mobile-dropdown-trigger">Resources <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><path d="M3 5l3 3 3-3"/></svg></button><div class="mobile-dropdown-content hidden"><a href="/resources/considering/ai-powered-org" class="mobile-nav-link">Considering</a><a href="/resources/already-using/essential-resources" class="mobile-nav-link">Already Using</a><a href="/resources/community/become-a-partner" class="mobile-nav-link">Community</a></div></div>
-<a href="/pricing" class="mobile-nav-link">Hosting</a>
-<a href="/contact" class="mobile-nav-link">Contact</a>
-<span class="mobile-phone">+55 21 4040-2160</span>
-</div>
-<main style="padding-top:5rem">
-<section class="page-section vitral-bg">
-<div class="max-w-3xl mx-auto" style="padding:0 1rem">
-<a href="/blog" class="text-sm text-muted" style="display:inline-flex;align-items:center;gap:.375rem;margin-bottom:1.5rem"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> Back to Blog</a>
-<div class="reveal">
-<span class="badge badge-featured mb-4" style="display:inline-flex">Sustainable Development</span>
-<h1 class="text-4xl font-bold tracking-tight mb-4">Sustainable Development Goals and AI</h1>
-<p class="text-sm text-muted mb-8">Author: Pragmatismo Team</p>
-</div>
-<article class="reveal" style="font-size:1.0625rem;line-height:1.75;color:var(--foreground)">
+<div hx-get="/partials/header.html" hx-swap="innerHTML" hx-trigger="load"></div>
+<main style="padding-top:4rem">
+<article class="page-section reveal">
+<div class="container-narrow">
+<a href="/blog/" class="text-sm text-muted" style="display:inline-flex;align-items:center;gap:.375rem;margin-bottom:1.5rem">
+<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+Back to Blog
+</a>
+<div class="badge mb-4">Global Impact</div>
+<h1 class="text-4xl font-bold tracking-tighter mb-6" style="line-height:1.1">SDGs &amp; Sovereign AI: Democratizing Intelligence.</h1>
+<p class="text-lg text-muted mb-8 leading-relaxed">Technical analysis of how open-source AI Search and sovereign infrastructure address the UN Sustainable Development Goals. Bridging the digital divide with GLM 5.1 orchestration.</p>
+<div class="blog-content prose">
+<p>The United Nations Sustainable Development Goals (SDGs) are currently defined by a "Digital Divide." While advanced economies leverage AI for optimization, the Global South often faces a "Big Tech Tax" that prevents the adoption of these tools. To reach investor-ready global parity, we must adopt a didactic approach to AI—one based on sovereign infrastructure and open-source orchestration.</p>
 
-<div class="reveal">
-<h2 style="font-size:1.5rem;font-weight:700;margin:2rem 0 1rem;color:var(--foreground)">Bridging Technology and Sustainable Development</h2>
-<p style="margin-bottom:1.5rem">In today's rapidly evolving technological landscape, access to artificial intelligence and advanced computing tools remains unequally distributed globally. General Bots, an open-source LLM orchestration platform, directly addresses this inequity by democratizing access to powerful AI technologies through a unique approach that combines the simplicity of BASIC programming with modern Large Language Models (LLMs).</p>
-<p style="margin-bottom:1.5rem">By leveraging the familiar and accessible BASIC programming language—which has historically served as an entry point for millions of people into computing—General Bots creates a bridge between cutting-edge AI capabilities and communities that might otherwise be left behind in the technological revolution. This approach is particularly powerful for addressing the United Nations' 17 Sustainable Development Goals (SDGs), as it enables organizations with limited technical resources to harness AI for local solutions to global challenges.</p>
-<p style="margin-bottom:1.5rem">The platform's focus on simplicity and accessibility doesn't compromise its capabilities. Through General Bots, organizations can develop sophisticated applications that analyze data, provide personalized education, facilitate healthcare access, optimize resource management, and support numerous other initiatives aligned with sustainable development. Most importantly, by teaching BASIC programming in schools and community centers, we're not just providing technology solutions—we're empowering the next generation of problem-solvers with the skills they need to create their own solutions.</p>
-
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem;margin:2rem 0">
-<div class="glass-card" style="padding:1.25rem">
-<h3 style="font-size:1.1rem;font-weight:600;margin-bottom:.5rem">Global Accessibility</h3>
-<p style="font-size:.875rem">Breaking down barriers to technology access across geographic and economic divides by using simple programming interfaces that work even in resource-constrained environments.</p>
-</div>
-<div class="glass-card" style="padding:1.25rem">
-<h3 style="font-size:1.1rem;font-weight:600;margin-bottom:.5rem">Technical Simplicity</h3>
-<p style="font-size:.875rem">Leveraging BASIC programming to make AI accessible to non-technical users worldwide, creating a gradual learning path from simple commands to complex AI applications.</p>
-</div>
-<div class="glass-card" style="padding:1.25rem">
-<h3 style="font-size:1.1rem;font-weight:600;margin-bottom:.5rem">Knowledge Democratization</h3>
-<p style="font-size:.875rem">Providing equal access to education and information through AI-powered bots that adapt to local languages, cultural contexts, and specific community needs.</p>
-</div>
-</div>
+<div style="width:100%;aspect-ratio:16/9;background:#f8f8f8;border-radius:1rem;margin:2rem 0;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;border:1px solid rgba(0,0,0,0.06)">
+  <svg width="100%" height="100%" viewBox="0 0 800 450" fill="none">
+    <defs><pattern id="gridSDG" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(0,0,0,0.03)" stroke-width="1"/></pattern></defs>
+    <rect width="800" height="450" fill="url(#gridSDG)"/>
+    <path d="M400 50 L400 400" stroke="#111" stroke-width="0.5" opacity="0.1" />
+    <path d="M50 225 L750 225" stroke="#111" stroke-width="0.5" opacity="0.1" />
+    <circle cx="400" cy="225" r="150" stroke="#059669" stroke-width="2" fill="none" />
+    <path d="M400 75 L400 120" stroke="#059669" stroke-width="2" />
+    <path d="M400 330 L400 375" stroke="#059669" stroke-width="2" />
+    <path d="M250 225 L295 225" stroke="#059669" stroke-width="2" />
+    <path d="M505 225 L550 225" stroke="#059669" stroke-width="2" />
+    <text x="400" y="225" text-anchor="middle" fill="#059669" style="font-size:12px;font-weight:700">SDG NODES</text>
+  </svg>
 </div>
 
-<div class="reveal">
-<h2 style="font-size:1.5rem;font-weight:700;margin:2rem 0 1rem;color:var(--foreground)">Why BASIC Is Key to Democratizing Programming</h2>
-<p style="margin-bottom:1rem;color:var(--muted-foreground)">Our approach uses BASIC programming as a foundation to make technology education accessible globally, creating a clear pathway from beginner to AI developer</p>
+<h3>AI Search: The De Facto Knowledge Standard</h3>
+<p>AI Search is the de facto standard for democratizing information. By providing a high-fidelity, sovereign search layer, General Bots enables local organizations to index agricultural, medical, and educational data. This addresses **Goal 4 (Quality Education)** and **Goal 3 (Good Health)** by ensuring that knowledge is not locked behind proprietary paywalls or platform gates.</p>
 
-<div class="glass-card" style="padding:1.25rem;margin:1.5rem 0">
-<h3 style="font-weight:600;margin-bottom:.5rem">The Power of BASIC in Education</h3>
-<p style="margin-bottom:1rem">BASIC (Beginner's All-purpose Symbolic Instruction Code) was originally designed to democratize computer programming by making it accessible to non-specialists. Today, it serves as an ideal entry point for AI education because:</p>
-<ul style="padding-left:1.25rem;margin-bottom:1rem">
-<li style="margin-bottom:.5rem">Its simple syntax reduces the learning curve for beginners</li>
-<li style="margin-bottom:.5rem">It works well even on legacy and low-resource computing systems</li>
-<li style="margin-bottom:.5rem">The language's focus on readability makes code sharing and collaboration easier</li>
-<li style="margin-bottom:.5rem">Its sequential execution model helps students understand program flow before tackling more complex concepts</li>
-<li style="margin-bottom:.5rem">It creates a foundation that can be gradually built upon to introduce more advanced programming concepts</li>
-</ul>
-</div>
+<h3>Sovereignty as a Sustainable Goal</h3>
+<p>True sustainability requires technical sovereignty. Relying on foreign cloud providers creates a didactic dependency that is antithetical to long-term resilience. General Bots allows for "Local-First" AI—intelligence that runs on regional nodes, respects local data laws, and operates without mandatory internet egress. This is the "PC Magazine" standard of infrastructure: robust, independent, and efficient.</p>
 
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem;margin:2rem 0">
-<div class="glass-card" style="padding:1.25rem">
-<h3 style="font-size:1.1rem;font-weight:600;margin-bottom:.5rem">Classroom Benefits</h3>
-<ul style="padding-left:1.25rem">
-<li style="margin-bottom:.5rem">Immediate visual feedback encourages student engagement</li>
-<li style="margin-bottom:.5rem">Programs can be written and executed in a single environment</li>
-<li style="margin-bottom:.5rem">Students can create meaningful applications quickly</li>
-<li style="margin-bottom:.5rem">Error messages are clear and understandable</li>
-</ul>
-</div>
-<div class="glass-card" style="padding:1.25rem">
-<h3 style="font-size:1.1rem;font-weight:600;margin-bottom:.5rem">From BASIC to AI</h3>
-<ul style="padding-left:1.25rem">
-<li style="margin-bottom:.5rem">BASIC concepts map directly to general programming principles</li>
-<li style="margin-bottom:.5rem">Students can integrate LLMs through simple API calls</li>
-<li style="margin-bottom:.5rem">Knowledge transfers naturally to other programming languages</li>
-<li style="margin-bottom:.5rem">Creates a foundation for understanding complex AI concepts</li>
-</ul>
-</div>
-</div>
+<h3>The BASIC Bridge</h3>
+<p>Democratization requires a low-friction interface. By using BASIC-style logic for bot orchestration, General Bots bridges the gap between local problem-solvers and advanced LLM capabilities. A teacher in a remote village can program a didactic assistant to help students, without needing a degree in computer science. This is how we scale innovation to the next billion users.</p>
 
-<h3 style="font-size:1.25rem;font-weight:600;margin:1.5rem 0 1rem;color:var(--foreground)">The Educational Pathway</h3>
-<div class="glass-card" style="padding:1.5rem;margin-bottom:2rem">
-<div style="margin-bottom:1.5rem;padding-left:2rem;position:relative">
-<div style="position:absolute;left:0;top:0;width:1.5rem;height:1.5rem;border-radius:50%;background:var(--muted);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;color:var(--foreground)">1</div>
-<h4 style="font-weight:700;margin-bottom:.25rem;color:var(--foreground)">BASIC Fundamentals</h4>
-<p style="margin-bottom:.5rem">Students begin with simple BASIC programs that introduce variables, loops, and conditional statements through engaging projects.</p>
-<div style="display:flex;flex-wrap:wrap;gap:.5rem"><span class="badge">Variables</span><span class="badge">Input/Output</span><span class="badge">Conditionals</span><span class="badge">Loops</span></div>
+<h3>Conclusion: The Orchestration of Progress</h3>
+<p>The GLM 5.1 launch is not just a software update; it is a commitment to the SDGs. By providing a sovereign "Architecture of Intelligence," General Bots empowers every community to build its own future. Own your tools. Own your progress.</p>
 </div>
-<div style="margin-bottom:1.5rem;padding-left:2rem;position:relative">
-<div style="position:absolute;left:0;top:0;width:1.5rem;height:1.5rem;border-radius:50%;background:var(--muted);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;color:var(--foreground)">2</div>
-<h4 style="font-weight:700;margin-bottom:.25rem;color:var(--foreground)">Data Structures &amp; Functions</h4>
-<p style="margin-bottom:.5rem">Building on fundamentals, students learn to organize code and data, creating more complex applications with modular designs.</p>
-<div style="display:flex;flex-wrap:wrap;gap:.5rem"><span class="badge">Arrays</span><span class="badge">Functions</span><span class="badge">File Handling</span><span class="badge">Error Handling</span></div>
 </div>
-<div style="margin-bottom:1.5rem;padding-left:2rem;position:relative">
-<div style="position:absolute;left:0;top:0;width:1.5rem;height:1.5rem;border-radius:50%;background:var(--muted);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;color:var(--foreground)">3</div>
-<h4 style="font-weight:700;margin-bottom:.25rem;color:var(--foreground)">API Integration</h4>
-<p style="margin-bottom:.5rem">Students learn to connect their BASIC programs to external services, including LLMs, through simple API calls.</p>
-<div style="display:flex;flex-wrap:wrap;gap:.5rem"><span class="badge">HTTP Requests</span><span class="badge">JSON Parsing</span><span class="badge">Authentication</span><span class="badge">Data Processing</span></div>
-</div>
-<div style="padding-left:2rem;position:relative">
-<div style="position:absolute;left:0;top:0;width:1.5rem;height:1.5rem;border-radius:50%;background:var(--muted);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;color:var(--foreground)">4</div>
-<h4 style="font-weight:700;margin-bottom:.25rem;color:var(--foreground)">AI Application Development</h4>
-<p style="margin-bottom:.5rem">Combining all previous skills, students build complete applications that leverage LLMs to address real-world problems.</p>
-<div style="display:flex;flex-wrap:wrap;gap:.5rem"><span class="badge">LLM Prompting</span><span class="badge">Response Processing</span><span class="badge">User Interfaces</span><span class="badge">Solution Design</span></div>
-</div>
-</div>
-</div>
-
-<div class="reveal">
-<h2 style="font-size:1.5rem;font-weight:700;margin:2rem 0 1rem;color:var(--foreground)">General Bots: An Open-Source LLM Orchestrator</h2>
-<p style="margin-bottom:1.5rem">Our platform serves as a bridge between simple BASIC programming and powerful AI capabilities, making advanced technology accessible to all.</p>
-
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem;margin:2rem 0">
-<div class="glass-card" style="padding:1.5rem;border-left:3px solid var(--primary)">
-<h3 style="font-weight:700;margin-bottom:.75rem;color:var(--foreground)">How It Works</h3>
-<p style="margin-bottom:1rem">General Bots serves as an orchestration layer that connects simple BASIC programs to powerful AI models. This architecture:</p>
-<ul style="padding-left:1.25rem">
-<li style="margin-bottom:.5rem">Handles complex API interactions so developers can focus on solving problems</li>
-<li style="margin-bottom:.5rem">Manages conversational context and memory across multiple interactions</li>
-<li style="margin-bottom:.5rem">Provides built-in security and ethical safeguards for AI applications</li>
-<li style="margin-bottom:.5rem">Enables cross-platform compatibility from legacy systems to modern devices</li>
-<li style="margin-bottom:.5rem">Supports offline operation in areas with limited connectivity</li>
-</ul>
-</div>
-<div class="glass-card" style="padding:1.5rem;border-left:3px solid var(--primary)">
-<h3 style="font-weight:700;margin-bottom:.75rem;color:var(--foreground)">Open Source Advantage</h3>
-<p style="margin-bottom:1rem">As an open-source platform, General Bots offers unique benefits for sustainable development:</p>
-<ul style="padding-left:1.25rem">
-<li style="margin-bottom:.5rem">Transparent operation allows for security auditing and community trust</li>
-<li style="margin-bottom:.5rem">Customizable to address specific local needs and cultural contexts</li>
-<li style="margin-bottom:.5rem">Reduced cost barriers make implementation feasible for NGOs and schools</li>
-<li style="margin-bottom:.5rem">Community-driven development ensures diverse perspectives</li>
-<li style="margin-bottom:.5rem">Knowledge sharing accelerates innovation across different regions</li>
-</ul>
-</div>
-</div>
-</div>
-
-<div class="reveal">
-<h2 style="font-size:1.5rem;font-weight:700;margin:2rem 0 1rem;color:var(--foreground)">Technical Architecture: Standard Implementation</h2>
-<p style="margin-bottom:1.5rem">Ideal for schools, community centers, and small NGOs, this configuration provides a balanced approach to AI accessibility while working with moderate technical resources.</p>
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem;margin:2rem 0">
-<div class="glass-card" style="padding:1.25rem">
-<h4 style="font-weight:600;margin-bottom:.5rem">Components</h4>
-<ul style="padding-left:1.25rem">
-<li style="margin-bottom:.25rem">General Bots Core Server</li>
-<li style="margin-bottom:.25rem">BASIC Interpreter</li>
-<li style="margin-bottom:.25rem">Local LLM (smaller model)</li>
-<li style="margin-bottom:.25rem">Cloud LLM fallback option</li>
-<li style="margin-bottom:.25rem">Simple web interface</li>
-</ul>
-</div>
-<div class="glass-card" style="padding:1.25rem">
-<h4 style="font-weight:600;margin-bottom:.5rem">Requirements</h4>
-<ul style="padding-left:1.25rem">
-<li style="margin-bottom:.25rem">Standard laptop/desktop</li>
-<li style="margin-bottom:.25rem">4GB RAM minimum</li>
-<li style="margin-bottom:.25rem">Intermittent internet acceptable</li>
-<li style="margin-bottom:.25rem">Basic technical support</li>
-</ul>
-</div>
-</div>
-</div>
-
-<div class="reveal">
-<h2 style="font-size:1.5rem;font-weight:700;margin:2rem 0 1rem;color:var(--foreground)">Technical Architecture: Low-Resource Implementation</h2>
-<p style="margin-bottom:1.5rem">Designed for remote areas with limited infrastructure, this lightweight implementation prioritizes accessibility and offline functionality.</p>
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem;margin:2rem 0">
-<div class="glass-card" style="padding:1.25rem">
-<h4 style="font-weight:600;margin-bottom:.5rem">Components</h4>
-<ul style="padding-left:1.25rem">
-<li style="margin-bottom:.25rem">Minimalist General Bots Core</li>
-<li style="margin-bottom:.25rem">BASIC Interpreter</li>
-<li style="margin-bottom:.25rem">Pre-trained specialized models</li>
-<li style="margin-bottom:.25rem">Offline knowledge base</li>
-<li style="margin-bottom:.25rem">Text-based interface option</li>
-</ul>
-</div>
-<div class="glass-card" style="padding:1.25rem">
-<h4 style="font-weight:600;margin-bottom:.5rem">Requirements</h4>
-<ul style="padding-left:1.25rem">
-<li style="margin-bottom:.25rem">Raspberry Pi compatible</li>
-<li style="margin-bottom:.25rem">4GB RAM minimum</li>
-<li style="margin-bottom:.25rem">Works fully offline</li>
-<li style="margin-bottom:.25rem">Solar power compatible</li>
-</ul>
-</div>
-</div>
-</div>
-
-<div class="reveal">
-<h2 style="font-size:1.5rem;font-weight:700;margin:2rem 0 1rem;color:var(--foreground)">Technical Architecture: Enterprise Implementation</h2>
-<p style="margin-bottom:1.5rem">For larger organizations tackling complex sustainable development challenges, this configuration provides advanced capabilities and integration options.</p>
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem;margin:2rem 0">
-<div class="glass-card" style="padding:1.25rem">
-<h4 style="font-weight:600;margin-bottom:.5rem">Components</h4>
-<ul style="padding-left:1.25rem">
-<li style="margin-bottom:.25rem">Full General Bots Server Suite</li>
-<li style="margin-bottom:.25rem">BASIC editor (Code)</li>
-<li style="margin-bottom:.25rem">Multiple integrated LLMs</li>
-<li style="margin-bottom:.25rem">Data processing pipeline</li>
-<li style="margin-bottom:.25rem">Authentication &amp; security layers</li>
-</ul>
-</div>
-<div class="glass-card" style="padding:1.25rem">
-<h4 style="font-weight:600;margin-bottom:.5rem">Requirements</h4>
-<ul style="padding-left:1.25rem">
-<li style="margin-bottom:.25rem">Server infrastructure (without LLM)</li>
-<li style="margin-bottom:.25rem">8GB+ RAM recommended</li>
-<li style="margin-bottom:.25rem">Stable internet connection</li>
-<li style="margin-bottom:.25rem">IT support capability</li>
-</ul>
-</div>
-</div>
-</div>
-
-<div class="reveal">
-<h2 style="font-size:1.5rem;font-weight:700;margin:2rem 0 1rem;color:var(--foreground)">Integration Capabilities</h2>
-<p style="margin-bottom:1.5rem">General Bots is designed to integrate with existing systems and technologies, making it adaptable to various sustainable development contexts:</p>
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem;margin:2rem 0">
-<div class="glass-card" style="padding:1.25rem">
-<h4 style="font-weight:600;margin-bottom:.5rem">Data Sources</h4>
-<ul style="padding-left:1.25rem;font-size:.875rem">
-<li style="margin-bottom:.25rem">Local databases</li>
-<li style="margin-bottom:.25rem">Sensor networks</li>
-<li style="margin-bottom:.25rem">Open data portals</li>
-<li style="margin-bottom:.25rem">Satellite imagery</li>
-<li style="margin-bottom:.25rem">Community reports</li>
-</ul>
-</div>
-<div class="glass-card" style="padding:1.25rem">
-<h4 style="font-weight:600;margin-bottom:.5rem">Communication Channels</h4>
-<ul style="padding-left:1.25rem;font-size:.875rem">
-<li style="margin-bottom:.25rem">SMS/RCS text messaging</li>
-<li style="margin-bottom:.25rem">Web interfaces</li>
-<li style="margin-bottom:.25rem">Messaging platforms</li>
-<li style="margin-bottom:.25rem">Voice systems</li>
-<li style="margin-bottom:.25rem">E-mail integration</li>
-</ul>
-</div>
-<div class="glass-card" style="padding:1.25rem">
-<h4 style="font-weight:600;margin-bottom:.5rem">Extended Capabilities</h4>
-<ul style="padding-left:1.25rem;font-size:.875rem">
-<li style="margin-bottom:.25rem">GIS mapping services</li>
-<li style="margin-bottom:.25rem">Payment processing</li>
-<li style="margin-bottom:.25rem">IOT device networks</li>
-<li style="margin-bottom:.25rem">Analytics frameworks</li>
-<li style="margin-bottom:.25rem">Weather services</li>
-</ul>
-</div>
-</div>
-</div>
-
-<div class="reveal">
-<h2 style="font-size:1.5rem;font-weight:700;margin:2rem 0 1rem;color:var(--foreground)">The 17 Sustainable Development Goals</h2>
-<p style="margin-bottom:1rem;color:var(--muted-foreground)">Explore how General Bots is driving progress across all 17 SDGs through technology democratization and programming education</p>
-
-<div class="glass-card" style="padding:1.25rem;margin-bottom:1.5rem">
-<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:.5rem">
-<span class="badge" style="display:inline-flex">Goal 1</span>
-</div>
-<h3 style="font-size:1.1rem;font-weight:700;margin-bottom:.5rem;color:var(--foreground)">No Poverty</h3>
-<p style="margin-bottom:1rem;font-size:.875rem">End poverty in all its forms everywhere by providing economic opportunities through digital literacy and access to critical information resources.</p>
-<h4 style="font-weight:600;margin-bottom:.25rem;font-size:.875rem">Use Case: Educational Resource Bot</h4>
-<p style="font-size:.875rem">General Bots can create localized micro-learning platforms that teach financial literacy and entrepreneurship skills in underserved communities, helping individuals break out of poverty cycles by creating new economic opportunities through technology access.</p>
-<div class="glass-card" style="padding:.75rem;margin-top:.75rem;border-left:3px solid var(--primary)">
-<p style="font-size:.875rem;font-weight:600;margin-bottom:.25rem">Educational Approach:</p>
-<p style="font-size:.875rem">Students can learn to program this solution using BASIC, making technology education accessible even in resource-constrained environments.</p>
-</div>
-</div>
-<div class="glass-card" style="padding:1.25rem;margin-bottom:1.5rem">
-<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:.5rem">
-<span class="badge" style="display:inline-flex">Goal 2</span>
-</div>
-<h3 style="font-size:1.1rem;font-weight:700;margin-bottom:.5rem;color:var(--foreground)">Zero Hunger</h3>
-<p style="margin-bottom:1rem;font-size:.875rem">End hunger, achieve food security and improved nutrition through smart agriculture solutions and knowledge distribution networks.</p>
-<h4 style="font-weight:600;margin-bottom:.25rem;font-size:.875rem">Use Case: Agricultural Data Analyzer</h4>
-<p style="font-size:.875rem">By implementing agricultural knowledge databases accessible via simple interfaces, General Bots enables farmers in remote areas to access best practices, weather forecasts, and market information, optimizing crop yields and reducing food waste throughout the supply chain.</p>
-<div class="glass-card" style="padding:.75rem;margin-top:.75rem;border-left:3px solid var(--primary)">
-<p style="font-size:.875rem;font-weight:600;margin-bottom:.25rem">Educational Approach:</p>
-<p style="font-size:.875rem">Students can learn to program this solution using BASIC, making technology education accessible even in resource-constrained environments.</p>
-</div>
-</div>
-<div class="glass-card" style="padding:1.25rem;margin-bottom:1.5rem">
-<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:.5rem">
-<span class="badge" style="display:inline-flex">Goal 3</span>
-</div>
-<h3 style="font-size:1.1rem;font-weight:700;margin-bottom:.5rem;color:var(--foreground)">Good Health and Well-being</h3>
-<p style="margin-bottom:1rem;font-size:.875rem">Ensure healthy lives and promote well-being through accessible medical information, telehealth services, and health monitoring solutions.</p>
-<h4 style="font-weight:600;margin-bottom:.25rem;font-size:.875rem">Use Case: Telehealth Assistant</h4>
-<p style="font-size:.875rem">Through conversational interfaces, General Bots can provide healthcare information in local languages, offering symptom assessments, medication reminders, and connecting remote patients with healthcare providers through telemedicine integration.</p>
-<div class="glass-card" style="padding:.75rem;margin-top:.75rem;border-left:3px solid var(--primary)">
-<p style="font-size:.875rem;font-weight:600;margin-bottom:.25rem">Educational Approach:</p>
-<p style="font-size:.875rem">Students can learn to program this solution using BASIC, making technology education accessible even in resource-constrained environments.</p>
-</div>
-</div>
-<div class="glass-card" style="padding:1.25rem;margin-bottom:1.5rem">
-<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:.5rem">
-<span class="badge" style="display:inline-flex">Goal 4</span>
-</div>
-<h3 style="font-size:1.1rem;font-weight:700;margin-bottom:.5rem;color:var(--foreground)">Quality Education</h3>
-<p style="margin-bottom:1rem;font-size:.875rem">Ensure inclusive and equitable quality education through AI-powered learning tools and programming education for all.</p>
-<h4 style="font-weight:600;margin-bottom:.25rem;font-size:.875rem">Use Case: Interactive Learning Platform</h4>
-<p style="font-size:.875rem">General Bots democratizes educational content by creating personalized learning experiences, enabling schools with limited resources to provide quality education through BASIC programming interfaces that adapt to individual learning needs.</p>
-<div class="glass-card" style="padding:.75rem;margin-top:.75rem;border-left:3px solid var(--primary)">
-<p style="font-size:.875rem;font-weight:600;margin-bottom:.25rem">Educational Approach:</p>
-<p style="font-size:.875rem">Students can learn to program this solution using BASIC, making technology education accessible even in resource-constrained environments.</p>
-</div>
-</div>
-<div class="glass-card" style="padding:1.25rem;margin-bottom:1.5rem">
-<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:.5rem">
-<span class="badge" style="display:inline-flex">Goal 5</span>
-</div>
-<h3 style="font-size:1.1rem;font-weight:700;margin-bottom:.5rem;color:var(--foreground)">Gender Equality</h3>
-<p style="margin-bottom:1rem;font-size:.875rem">Achieve gender equality and empower women and girls through equal access to technology education and representation.</p>
-<h4 style="font-weight:600;margin-bottom:.25rem;font-size:.875rem">Use Case: Inclusive Content Creator</h4>
-<p style="font-size:.875rem">By creating unbiased content and identifying gender disparities in educational materials, General Bots helps empower women and girls through equal representation in technology education and career guidance.</p>
-<div class="glass-card" style="padding:.75rem;margin-top:.75rem;border-left:3px solid var(--primary)">
-<p style="font-size:.875rem;font-weight:600;margin-bottom:.25rem">Educational Approach:</p>
-<p style="font-size:.875rem">Students can learn to program this solution using BASIC, making technology education accessible even in resource-constrained environments.</p>
-</div>
-</div>
-<div class="glass-card" style="padding:1.25rem;margin-bottom:1.5rem">
-<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:.5rem">
-<span class="badge" style="display:inline-flex">Goal 6</span>
-</div>
-<h3 style="font-size:1.1rem;font-weight:700;margin-bottom:.5rem;color:var(--foreground)">Clean Water and Sanitation</h3>
-<p style="margin-bottom:1rem;font-size:.875rem">Ensure availability and sustainable management of water through monitoring technologies and community-based reporting systems.</p>
-<h4 style="font-weight:600;margin-bottom:.25rem;font-size:.875rem">Use Case: Water Management Monitor</h4>
-<p style="font-size:.875rem">Implementing monitoring systems that track water quality metrics and usage patterns, General Bots helps communities manage water resources more effectively through early warning systems and conservation education.</p>
-<div class="glass-card" style="padding:.75rem;margin-top:.75rem;border-left:3px solid var(--primary)">
-<p style="font-size:.875rem;font-weight:600;margin-bottom:.25rem">Educational Approach:</p>
-<p style="font-size:.875rem">Students can learn to program this solution using BASIC, making technology education accessible even in resource-constrained environments.</p>
-</div>
-</div>
-<div class="glass-card" style="padding:1.25rem;margin-bottom:1.5rem">
-<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:.5rem">
-<span class="badge" style="display:inline-flex">Goal 7</span>
-</div>
-<h3 style="font-size:1.1rem;font-weight:700;margin-bottom:.5rem;color:var(--foreground)">Affordable and Clean Energy</h3>
-<p style="margin-bottom:1rem;font-size:.875rem">Ensure access to affordable, reliable, sustainable energy through smart grid solutions and renewable energy education.</p>
-<h4 style="font-weight:600;margin-bottom:.25rem;font-size:.875rem">Use Case: Energy Optimization System</h4>
-<p style="font-size:.875rem">Through energy consumption monitoring and optimization algorithms, General Bots helps communities implement renewable energy solutions through educational tools and grid management assistance.</p>
-<div class="glass-card" style="padding:.75rem;margin-top:.75rem;border-left:3px solid var(--primary)">
-<p style="font-size:.875rem;font-weight:600;margin-bottom:.25rem">Educational Approach:</p>
-<p style="font-size:.875rem">Students can learn to program this solution using BASIC, making technology education accessible even in resource-constrained environments.</p>
-</div>
-</div>
-<div class="glass-card" style="padding:1.25rem;margin-bottom:1.5rem">
-<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:.5rem">
-<span class="badge" style="display:inline-flex">Goal 8</span>
-</div>
-<h3 style="font-size:1.1rem;font-weight:700;margin-bottom:.5rem;color:var(--foreground)">Decent Work and Economic Growth</h3>
-<p style="margin-bottom:1rem;font-size:.875rem">Promote sustained economic growth through digital skills training, job matching, and entrepreneurship support.</p>
-<h4 style="font-weight:600;margin-bottom:.25rem;font-size:.875rem">Use Case: Skills Development Coach</h4>
-<p style="font-size:.875rem">By matching job seekers with appropriate opportunities and providing personalized skills development paths, General Bots helps bridge the digital divide by making employment information accessible to all.</p>
-<div class="glass-card" style="padding:.75rem;margin-top:.75rem;border-left:3px solid var(--primary)">
-<p style="font-size:.875rem;font-weight:600;margin-bottom:.25rem">Educational Approach:</p>
-<p style="font-size:.875rem">Students can learn to program this solution using BASIC, making technology education accessible even in resource-constrained environments.</p>
-</div>
-</div>
-<div class="glass-card" style="padding:1.25rem;margin-bottom:1.5rem">
-<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:.5rem">
-<span class="badge" style="display:inline-flex">Goal 9</span>
-</div>
-<h3 style="font-size:1.1rem;font-weight:700;margin-bottom:.5rem;color:var(--foreground)">Industry, Innovation and Infrastructure</h3>
-<p style="margin-bottom:1rem;font-size:.875rem">Build resilient infrastructure and foster innovation through accessible technology transfer and knowledge sharing platforms.</p>
-<h4 style="font-weight:600;margin-bottom:.25rem;font-size:.875rem">Use Case: Innovation Resource Hub</h4>
-<p style="font-size:.875rem">General Bots provides innovation resources and knowledge transfer platforms that help developing regions implement appropriate technologies through step-by-step guidance and local adaptation support.</p>
-<div class="glass-card" style="padding:.75rem;margin-top:.75rem;border-left:3px solid var(--primary)">
-<p style="font-size:.875rem;font-weight:600;margin-bottom:.25rem">Educational Approach:</p>
-<p style="font-size:.875rem">Students can learn to program this solution using BASIC, making technology education accessible even in resource-constrained environments.</p>
-</div>
-</div>
-<div class="glass-card" style="padding:1.25rem;margin-bottom:1.5rem">
-<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:.5rem">
-<span class="badge" style="display:inline-flex">Goal 10</span>
-</div>
-<h3 style="font-size:1.1rem;font-weight:700;margin-bottom:.5rem;color:var(--foreground)">Reduced Inequalities</h3>
-<p style="margin-bottom:1rem;font-size:.875rem">Reduce inequality within and among countries through digital inclusion initiatives and multilingual knowledge access.</p>
-<h4 style="font-weight:600;margin-bottom:.25rem;font-size:.875rem">Use Case: Multilingual Knowledge Base</h4>
-<p style="font-size:.875rem">Through multilingual accessibility and culturally sensitive content creation, General Bots helps reduce information inequality by providing equal access to knowledge regardless of language or location.</p>
-<div class="glass-card" style="padding:.75rem;margin-top:.75rem;border-left:3px solid var(--primary)">
-<p style="font-size:.875rem;font-weight:600;margin-bottom:.25rem">Educational Approach:</p>
-<p style="font-size:.875rem">Students can learn to program this solution using BASIC, making technology education accessible even in resource-constrained environments.</p>
-</div>
-</div>
-<div class="glass-card" style="padding:1.25rem;margin-bottom:1.5rem">
-<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:.5rem">
-<span class="badge" style="display:inline-flex">Goal 11</span>
-</div>
-<h3 style="font-size:1.1rem;font-weight:700;margin-bottom:.5rem;color:var(--foreground)">Sustainable Cities and Communities</h3>
-<p style="margin-bottom:1rem;font-size:.875rem">Make cities inclusive, safe, resilient and sustainable through smart city technologies and civic engagement platforms.</p>
-<h4 style="font-weight:600;margin-bottom:.25rem;font-size:.875rem">Use Case: Smart City Coordinator</h4>
-<p style="font-size:.875rem">By coordinating urban services and creating citizen feedback loops, General Bots enhances city management through data-driven decision support and community engagement tools.</p>
-<div class="glass-card" style="padding:.75rem;margin-top:.75rem;border-left:3px solid var(--primary)">
-<p style="font-size:.875rem;font-weight:600;margin-bottom:.25rem">Educational Approach:</p>
-<p style="font-size:.875rem">Students can learn to program this solution using BASIC, making technology education accessible even in resource-constrained environments.</p>
-</div>
-</div>
-<div class="glass-card" style="padding:1.25rem;margin-bottom:1.5rem">
-<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:.5rem">
-<span class="badge" style="display:inline-flex">Goal 12</span>
-</div>
-<h3 style="font-size:1.1rem;font-weight:700;margin-bottom:.5rem;color:var(--foreground)">Responsible Consumption and Production</h3>
-<p style="margin-bottom:1rem;font-size:.875rem">Ensure sustainable consumption and production patterns through efficiency optimization and waste reduction technologies.</p>
-<h4 style="font-weight:600;margin-bottom:.25rem;font-size:.875rem">Use Case: Sustainable Practices Advisor</h4>
-<p style="font-size:.875rem">General Bots implements supply chain tracking and optimization tools that help organizations reduce waste and improve resource efficiency through AI-powered recommendations and monitoring.</p>
-<div class="glass-card" style="padding:.75rem;margin-top:.75rem;border-left:3px solid var(--primary)">
-<p style="font-size:.875rem;font-weight:600;margin-bottom:.25rem">Educational Approach:</p>
-<p style="font-size:.875rem">Students can learn to program this solution using BASIC, making technology education accessible even in resource-constrained environments.</p>
-</div>
-</div>
-<div class="glass-card" style="padding:1.25rem;margin-bottom:1.5rem">
-<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:.5rem">
-<span class="badge" style="display:inline-flex">Goal 13</span>
-</div>
-<h3 style="font-size:1.1rem;font-weight:700;margin-bottom:.5rem;color:var(--foreground)">Climate Action</h3>
-<p style="margin-bottom:1rem;font-size:.875rem">Take urgent action to combat climate change through education, monitoring tools, and community action coordination.</p>
-<h4 style="font-weight:600;margin-bottom:.25rem;font-size:.875rem">Use Case: Climate Education Platform</h4>
-<p style="font-size:.875rem">Through climate education modules and community action coordination, General Bots helps individuals understand their environmental impact and organize collective response efforts to climate challenges.</p>
-<div class="glass-card" style="padding:.75rem;margin-top:.75rem;border-left:3px solid var(--primary)">
-<p style="font-size:.875rem;font-weight:600;margin-bottom:.25rem">Educational Approach:</p>
-<p style="font-size:.875rem">Students can learn to program this solution using BASIC, making technology education accessible even in resource-constrained environments.</p>
-</div>
-</div>
-<div class="glass-card" style="padding:1.25rem;margin-bottom:1.5rem">
-<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:.5rem">
-<span class="badge" style="display:inline-flex">Goal 14</span>
-</div>
-<h3 style="font-size:1.1rem;font-weight:700;margin-bottom:.5rem;color:var(--foreground)">Life Below Water</h3>
-<p style="margin-bottom:1rem;font-size:.875rem">Conserve and sustainably use the oceans and marine resources through monitoring systems and conservation education.</p>
-<h4 style="font-weight:600;margin-bottom:.25rem;font-size:.875rem">Use Case: Marine Conservation Tracker</h4>
-<p style="font-size:.875rem">By tracking ocean health indicators and fishing practices, General Bots helps marine conservation efforts through educational outreach and data collection from coastal communities.</p>
-<div class="glass-card" style="padding:.75rem;margin-top:.75rem;border-left:3px solid var(--primary)">
-<p style="font-size:.875rem;font-weight:600;margin-bottom:.25rem">Educational Approach:</p>
-<p style="font-size:.875rem">Students can learn to program this solution using BASIC, making technology education accessible even in resource-constrained environments.</p>
-</div>
-</div>
-<div class="glass-card" style="padding:1.25rem;margin-bottom:1.5rem">
-<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:.5rem">
-<span class="badge" style="display:inline-flex">Goal 15</span>
-</div>
-<h3 style="font-size:1.1rem;font-weight:700;margin-bottom:.5rem;color:var(--foreground)">Life on Land</h3>
-<p style="margin-bottom:1rem;font-size:.875rem">Protect, restore and promote sustainable use of terrestrial ecosystems through biodiversity tracking and conservation planning.</p>
-<h4 style="font-weight:600;margin-bottom:.25rem;font-size:.875rem">Use Case: Biodiversity Monitoring System</h4>
-<p style="font-size:.875rem">Through biodiversity monitoring tools and conservation planning assistance, General Bots helps protect endangered species and habitats by coordinating preservation efforts and raising awareness.</p>
-<div class="glass-card" style="padding:.75rem;margin-top:.75rem;border-left:3px solid var(--primary)">
-<p style="font-size:.875rem;font-weight:600;margin-bottom:.25rem">Educational Approach:</p>
-<p style="font-size:.875rem">Students can learn to program this solution using BASIC, making technology education accessible even in resource-constrained environments.</p>
-</div>
-</div>
-<div class="glass-card" style="padding:1.25rem;margin-bottom:1.5rem">
-<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:.5rem">
-<span class="badge" style="display:inline-flex">Goal 16</span>
-</div>
-<h3 style="font-size:1.1rem;font-weight:700;margin-bottom:.5rem;color:var(--foreground)">Peace, Justice and Strong Institutions</h3>
-<p style="margin-bottom:1rem;font-size:.875rem">Promote peaceful and inclusive societies with accessible legal and governmental systems that improve transparency and access.</p>
-<h4 style="font-weight:600;margin-bottom:.25rem;font-size:.875rem">Use Case: Legal Information Access Point</h4>
-<p style="font-size:.875rem">By making legal information accessible in plain language and providing governance transparency tools, General Bots strengthens institutions through improved citizen engagement and accountability.</p>
-<div class="glass-card" style="padding:.75rem;margin-top:.75rem;border-left:3px solid var(--primary)">
-<p style="font-size:.875rem;font-weight:600;margin-bottom:.25rem">Educational Approach:</p>
-<p style="font-size:.875rem">Students can learn to program this solution using BASIC, making technology education accessible even in resource-constrained environments.</p>
-</div>
-</div>
-<div class="glass-card" style="padding:1.25rem;margin-bottom:1.5rem">
-<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:.5rem">
-<span class="badge" style="display:inline-flex">Goal 17</span>
-</div>
-<h3 style="font-size:1.1rem;font-weight:700;margin-bottom:.5rem;color:var(--foreground)">Partnerships for the Goals</h3>
-<p style="margin-bottom:1rem;font-size:.875rem">Strengthen the means of implementation through global technological partnerships and cross-border knowledge exchange.</p>
-<h4 style="font-weight:600;margin-bottom:.25rem;font-size:.875rem">Use Case: Global Collaboration Network</h4>
-<p style="font-size:.875rem">Through cross-border knowledge sharing networks and collaboration platforms, General Bots facilitates global partnerships by connecting organizations working toward common sustainable development goals.</p>
-<div class="glass-card" style="padding:.75rem;margin-top:.75rem;border-left:3px solid var(--primary)">
-<p style="font-size:.875rem;font-weight:600;margin-bottom:.25rem">Educational Approach:</p>
-<p style="font-size:.875rem">Students can learn to program this solution using BASIC, making technology education accessible even in resource-constrained environments.</p>
-</div>
-</div>
-</div>
-
-<div class="reveal">
-<h2 style="font-size:1.5rem;font-weight:700;margin:2rem 0 1rem;color:var(--foreground)">A Global Community of Problem Solvers</h2>
-<p style="margin-bottom:1.5rem">General Bots thrives through collaboration between educators, developers, and sustainable development practitioners worldwide.</p>
-
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem;margin:2rem 0">
-<div class="glass-card" style="padding:1.25rem;border-top:3px solid var(--border)">
-<h3 style="font-size:1.1rem;font-weight:600;margin-bottom:.75rem;color:var(--foreground)">For Developers</h3>
-<ul style="padding-left:1.25rem;font-size:.875rem">
-<li style="margin-bottom:.5rem">Contribute to the open-source codebase</li>
-<li style="margin-bottom:.5rem">Create new integration modules</li>
-<li style="margin-bottom:.5rem">Enhance the BASIC interpreter capabilities</li>
-<li style="margin-bottom:.5rem">Optimize for low-resource environments</li>
-</ul>
-</div>
-<div class="glass-card" style="padding:1.25rem;border-top:3px solid var(--border)">
-<h3 style="font-size:1.1rem;font-weight:600;margin-bottom:.75rem;color:var(--foreground)">For Educators</h3>
-<ul style="padding-left:1.25rem;font-size:.875rem">
-<li style="margin-bottom:.5rem">Access curriculum resources for BASIC</li>
-<li style="margin-bottom:.5rem">Implement classroom projects addressing SDGs</li>
-<li style="margin-bottom:.5rem">Share teaching methodologies and outcomes</li>
-<li style="margin-bottom:.5rem">Connect students with global learning communities</li>
-</ul>
-</div>
-<div class="glass-card" style="padding:1.25rem;border-top:3px solid var(--border)">
-<h3 style="font-size:1.1rem;font-weight:600;margin-bottom:.75rem;color:var(--foreground)">For Organizations</h3>
-<ul style="padding-left:1.25rem;font-size:.875rem">
-<li style="margin-bottom:.5rem">Implement custom sustainable development solutions</li>
-<li style="margin-bottom:.5rem">Partner on pilot projects in target communities</li>
-<li style="margin-bottom:.5rem">Share case studies and impact measurements</li>
-<li style="margin-bottom:.5rem">Participate in cross-sector innovation initiatives</li>
-</ul>
-</div>
-</div>
-</div>
-
-<div class="reveal">
-<h2 style="font-size:1.5rem;font-weight:700;margin:2rem 0 1rem;color:var(--foreground)">Getting Started Resources</h2>
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem;margin:2rem 0">
-<div class="glass-card" style="padding:1.25rem">
-<h4 style="font-weight:600;margin-bottom:.5rem">Documentation &amp; Guides</h4>
-<ul style="padding-left:1.25rem;font-size:.875rem">
-<li style="margin-bottom:.5rem">Complete platform documentation at docs.pragmatismo.com.br</li>
-<li style="margin-bottom:.5rem">Implementation guides for specific SDG applications</li>
-<li style="margin-bottom:.5rem">BASIC programming tutorials with SDG-focused examples</li>
-<li style="margin-bottom:.5rem">Classroom curriculum packages for educators</li>
-</ul>
-</div>
-<div class="glass-card" style="padding:1.25rem">
-<h4 style="font-weight:600;margin-bottom:.5rem">Templates &amp; Tools</h4>
-<ul style="padding-left:1.25rem;font-size:.875rem">
-<li style="margin-bottom:.5rem">Pre-configured templates at github.com/GeneralBots/botserver</li>
-<li style="margin-bottom:.5rem">Low-resource deployment packages for offline environments</li>
-<li style="margin-bottom:.5rem">Integration connectors for common data sources</li>
-<li style="margin-bottom:.5rem">Community-contributed code libraries for specific SDGs</li>
-</ul>
-</div>
-</div>
-</div>
-
-<div class="reveal">
-<h2 style="font-size:1.5rem;font-weight:700;margin:2rem 0 1rem;color:var(--foreground)">Join Us in Building a Sustainable Future Through Accessible Technology</h2>
-<p style="margin-bottom:1.5rem">Whether you're an educator, developer, or organization working toward sustainable development goals, General Bots provides the tools you need to create impactful solutions through simple programming and powerful AI.</p>
-</div>
-
 </article>
-<div class="glass-card-bright text-center reveal" style="padding:3rem 2rem;margin-top:3rem">
-<h3 class="text-2xl font-bold tracking-tight mb-2">Ready to explore open-source AI?</h3>
-<p class="text-muted mb-6" style="max-width:28rem;margin-left:auto;margin-right:auto">Get started with General Bots or reach out with your questions.</p>
-<div class="flex items-center justify-center gap-4 flex-wrap">
-<a href="https://github.com/GeneralBots/BotServer" target="_blank" rel="noopener" class="btn btn-primary btn-lg">Try It Now</a>
-<a href="/contact" class="btn btn-outline btn-lg">Ask Questions</a>
-</div>
-</div>
-</div>
-</section>
 </main>
-<footer class="site-footer"><div class="container">
-<div class="footer-top">
-<div class="footer-brand"><img src="/gb-logo.png" alt="General Bots" class="footer-logo" width="140" height="33"><p>General Bots® — The Open Source AI Bot Platform. Self-host or choose a certified hosting provider.</p><p style="margin-top:.75rem;font-size:.75rem">DPO: Rodrigo Rodriguez (<a href="mailto:security@pragmatismo.com.br" style="color:rgba(255,255,255,.7)">security@pragmatismo.com.br</a>)</p><p style="font-size:.75rem;margin-top:.25rem"><a href="tel:+552140402160" style="color:rgba(255,255,255,.7)">+55 21 4040-2160</a></p></div>
-<div class="footer-col"><h5>General Bots</h5><a href="/general-bots/llm">LLM</a><a href="/general-bots/vector-retrieval">Vector Search</a><a href="/general-bots/open-source">Open Source</a><a href="/features/ai-search">AI Search</a><a href="/features/bot-factory">Bot Factory</a></div>
-<div class="footer-col"><h5>Hosting</h5><a href="https://pragmatismo.com.br" target="_blank" rel="noopener">Pragmatismo</a><a href="https://oerlabs.com.br" target="_blank" rel="noopener">OERLabs</a><a href="https://mapagency.com.br" target="_blank" rel="noopener">Map Agency</a><a href="https://sentient.net.br" target="_blank" rel="noopener">Sentient</a><a href="https://darioexecutivesales.com" target="_blank" rel="noopener">Dario Executive Sales</a></div>
-<div class="footer-col"><h5>Community</h5><a href="https://docs.generalbots.org" target="_blank" rel="noopener">Documentation</a><a href="https://gb.pragmatismo.com.br/pragmatismohelpcenter" target="_blank" rel="noopener">Help Center</a><a href="/resources/community/become-a-partner">Become a Partner</a><a href="/blog">Blog</a><a href="https://github.com/generalbots" target="_blank" rel="noopener">GitHub</a></div>
-</div>
-<div class="footer-middle"><span>Copyright © 2016-2026 Pragmatismo</span><div class="flex items-center gap-4"><a href="/terms">Terms of Service</a><a href="/privacy">Privacy Policy</a></div></div>
-<div class="footer-bottom"><span>General Bots — Open Source AI Orchestration Platform</span><div class="footer-social"><a href="https://www.github.com/GeneralBots" target="_blank" rel="noopener" aria-label="GitHub"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg></a><a href="https://www.instagram.com/general.bots/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg></a><a href="https://web.whatsapp.com/send?phone=+552140402160" target="_blank" rel="noopener" aria-label="WhatsApp"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a></div>
-</div></footer>
-<style>@media(min-width:768px){#header-phone{display:inline-flex !important}}</style>
+<div hx-get="/partials/footer.html" hx-swap="innerHTML" hx-trigger="load"></div>
+<script src="https://unpkg.com/htmx.org@2.0.4"></script>
 <script src="/js/site.js"></script>
 </body>
 </html>

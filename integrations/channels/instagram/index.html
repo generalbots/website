@@ -2,173 +2,44 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Instagram DM Integration | General Bots</title>
-<meta name="description" content="Engage customers on Instagram DM with General Bots. DM automation, story replies, comment management, product catalog integration, and analytics.">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Instagram Integration: Sovereign Social Engagement | General Bots</title>
+<meta name="description" content="Technical guide to Instagram integration with General Bots. Deploy sovereign AI Search and automated DM orchestration for professional visual brand management.">
 <meta name="robots" content="index, follow">
+<link rel="canonical" href="https://generalbots.org/integrations/channels/instagram/">
+<meta property="og:title" content="Instagram Integration: Sovereign Social Engagement | General Bots">
+<meta property="og:description" content="Technical guide to Instagram &amp; AI.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://generalbots.org/integrations/channels/instagram/">
 <link rel="icon" href="/favicon.ico">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="stylesheet" href="/css/site.css">
 </head>
 <body>
-
-<header class="site-header">
-<div class="header-inner">
-<a href="/" class="logo-link"><img src="/gb-logo.png" alt="General Bots" width="140" height="33"></a>
-<a href="tel:+552140402160" class="phone-link">+55 21 4040-2160</a>
-<nav class="nav-desktop">
-<a href="/">Home</a>
-<div class="nav-dropdown"><button class="nav-dropdown-trigger" aria-expanded="false">General Bots<svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 5l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="nav-dropdown-content hidden"><a href="/general-bots/llms">LLMs</a><a href="/general-bots/vector-retrieval">Vector Retrieval</a><a href="/general-bots/open-source">Open Source</a></div></div>
-<div class="nav-dropdown"><button class="nav-dropdown-trigger" aria-expanded="false">Features<svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 5l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="nav-dropdown-content hidden"><a href="/features/ai-search">AI Search</a><a href="/features/content-generation">Content Generation</a><a href="/features/custom-copilot">Custom Copilot</a><a href="/features/data-analysis">Data Analysis</a><a href="/features/help-center">Help Center</a><a href="/features/knowledge-retrieval">Knowledge Retrieval</a><a href="/features/llm-orchestration">LLM Orchestration</a><a href="/features/process-automation">Process Automation</a><a href="/features/web-automation">Web Automation</a></div></div>
-<div class="nav-dropdown"><button class="nav-dropdown-trigger" aria-expanded="false">Integrations<svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 5l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="nav-dropdown-content hidden"><a href="/integrations/channels/email">Email</a><a href="/integrations/channels/facebook-pages">Facebook Pages</a><a href="/integrations/channels/google-chat">Google Chat</a><a href="/integrations/channels/instagram">Instagram</a><a href="/integrations/channels/microsoft-teams">Microsoft Teams</a><a href="/integrations/channels/slack">Slack</a><a href="/integrations/channels/sms">SMS</a><a href="/integrations/channels/web-chat">Web Chat</a><a href="/integrations/channels/whatsapp">WhatsApp</a></div></div>
-<a href="/templates">Templates</a>
-<div class="nav-dropdown"><button class="nav-dropdown-trigger" aria-expanded="false">Resources<svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 5l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="nav-dropdown-content hidden"><a href="/resources/considering">Considering</a><a href="/resources/already-using">Already Using</a><a href="/resources/community">Community</a><a href="/resources/marketplaces">Marketplaces</a></div></div>
-<a href="/pricing">Hosting</a><a href="/contact">Contact</a>
-</nav>
-<div class="gtranslate_wrapper"></div>
-<button id="mobile-menu-toggle" class="nav-mobile-toggle" aria-label="Toggle menu"><svg class="menu-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg><svg class="close-icon hidden" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="6" y1="18" x2="18" y2="6"/></svg></button>
-</div>
-<div id="mobile-menu" class="hidden">
-<a href="/" class="mobile-nav-link">Home</a>
-<button class="mobile-dropdown-trigger" data-target="mob-general-bots">General Bots<svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 5l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div id="mob-general-bots" class="mobile-dropdown-content hidden"><a href="/general-bots/llms">LLMs</a><a href="/general-bots/vector-retrieval">Vector Retrieval</a><a href="/general-bots/open-source">Open Source</a></div>
-<button class="mobile-dropdown-trigger" data-target="mob-features">Features<svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 5l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div id="mob-features" class="mobile-dropdown-content hidden"><a href="/features/ai-search">AI Search</a><a href="/features/content-generation">Content Generation</a><a href="/features/custom-copilot">Custom Copilot</a><a href="/features/data-analysis">Data Analysis</a><a href="/features/help-center">Help Center</a><a href="/features/knowledge-retrieval">Knowledge Retrieval</a><a href="/features/llm-orchestration">LLM Orchestration</a><a href="/features/process-automation">Process Automation</a><a href="/features/web-automation">Web Automation</a></div>
-<button class="mobile-dropdown-trigger" data-target="mob-integrations">Integrations<svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 5l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div id="mob-integrations" class="mobile-dropdown-content hidden"><a href="/integrations/channels/email">Email</a><a href="/integrations/channels/facebook-pages">Facebook Pages</a><a href="/integrations/channels/google-chat">Google Chat</a><a href="/integrations/channels/instagram">Instagram</a><a href="/integrations/channels/microsoft-teams">Microsoft Teams</a><a href="/integrations/channels/slack">Slack</a><a href="/integrations/channels/sms">SMS</a><a href="/integrations/channels/web-chat">Web Chat</a><a href="/integrations/channels/whatsapp">WhatsApp</a></div>
-<a href="/templates" class="mobile-nav-link">Templates</a>
-<button class="mobile-dropdown-trigger" data-target="mob-resources">Resources<svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 5l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div id="mob-resources" class="mobile-dropdown-content hidden"><a href="/resources/considering">Considering</a><a href="/resources/already-using">Already Using</a><a href="/resources/community">Community</a><a href="/resources/marketplaces">Marketplaces</a></div>
-<a href="/pricing" class="mobile-nav-link">Hosting</a><a href="/contact" class="mobile-nav-link">Contact</a><a href="tel:+552140402160" class="mobile-phone">+55 21 4040-2160</a>
-</div>
-</header>
-
-<main style="padding-top:4rem;">
-
-<section class="page-section-lg hero-gradient vitral-bg">
+<div hx-get="/partials/header.html" hx-swap="innerHTML" hx-trigger="load"></div>
+<main style="padding-top:4rem">
+<section class="page-section-lg vitral-bg">
 <div class="container">
+<div class="grid-2 items-center">
 <div class="reveal">
-<a href="/integrations" class="text-sm text-muted" style="display:inline-flex;align-items:center;gap:.375rem;margin-bottom:1.5rem"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>Back to Integrations</a>
-<div class="badge mb-4" style="width:fit-content"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>Instagram</div>
-<h1 class="text-4xl font-bold tracking-tighter mb-4" style="font-size:clamp(2rem,5vw,3rem)">Engage Customers on Instagram DM</h1>
-<p class="text-lg text-muted max-w-3xl leading-relaxed mb-8">Automate Instagram direct messages, story replies, and comment management to build stronger customer relationships at scale.</p>
-<div class="flex flex-wrap gap-4 mb-8">
-<a href="/contact" class="btn btn-primary btn-lg">Get in Touch</a>
-<a href="#features" class="btn btn-outline btn-lg">Learn More</a>
+<div class="badge mb-4">Visual Channels</div>
+<h1 class="text-5xl font-bold tracking-tighter mb-6" style="line-height:1.1">Instagram DM AI.</h1>
+<p class="text-xl text-muted leading-relaxed mb-8">Deploy sovereign AI Search and automated story orchestration across your Instagram presence. Manage high-velocity engagement with GLM 5.1 didactic precision.</p>
+<div class="flex items-center gap-4">
+<a href="/contact/" class="btn btn-primary btn-lg">Sync Account</a>
+<a href="/contact/" class="btn btn-outline btn-lg">Visual Strategy</a>
 </div>
 </div>
-<div class="reveal" style="margin-top:2rem"><div class="glass-card-bright" style="padding:2rem;text-align:center;max-width:32rem"><div style="width:100%;aspect-ratio:16/10;background:var(--muted);border-radius:var(--radius);display:flex;align-items:center;justify-content:center"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" style="opacity:.15"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5"/></svg></div></div></div>
-</div>
-</section>
-
-<section id="features" class="page-section-lg">
-<div class="container">
-<div class="text-center reveal">
-<div class="badge mb-4" style="margin-left:auto;margin-right:auto;width:fit-content"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>Features</div>
-<h2 class="text-3xl font-bold tracking-tighter mb-4">Powerful Instagram Features</h2>
-<p class="text-lg text-muted max-w-2xl mx-auto leading-relaxed mb-12">Everything you need to manage Instagram conversations at scale.</p>
-</div>
-<div class="grid-3">
-<div class="glass-card-bright card-hover reveal" style="padding:2rem">
-<div style="width:100%;aspect-ratio:16/9;background:#f8f8f8;border-radius:.5rem;margin-bottom:1.5rem;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;border:1px solid rgba(0,0,0,0.06)">
-  <svg width="100%" height="100%" viewBox="0 0 400 225" fill="none">
-    <defs><pattern id="gridC4" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(0,0,0,0.03)" stroke-width="1"/></pattern></defs>
-    <rect width="400" height="225" fill="url(#gridC4)"/>
-    <circle cx="160" cy="112" r="20" fill="none" stroke="#111" stroke-width="2"/>
-    <circle cx="240" cy="112" r="20" fill="none" stroke="#111" stroke-width="2"/>
-    <path d="M 180 112 H 220" stroke="#059669" stroke-width="2" stroke-dasharray="4 4"/>
+<div class="reveal">
+<div style="width:100%;aspect-ratio:1/1;background:#f8f8f8;border-radius:2rem;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;border:1px solid rgba(0,0,0,0.06)">
+  <svg width="80%" height="80%" viewBox="0 0 400 400" fill="none">
+    <defs><pattern id="gridIG" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(0,0,0,0.03)" stroke-width="1"/></pattern></defs>
+    <rect width="400" height="400" fill="url(#gridIG)"/>
+    <rect x="50" y="50" width="300" height="300" rx="60" stroke="#111" stroke-width="2" fill="none" />
+    <circle cx="200" cy="200" r="80" stroke="#059669" stroke-width="2" fill="none" />
+    <circle cx="280" cy="120" r="15" fill="#059669" />
   </svg>
 </div>
-<h3 class="text-xl font-semibold mb-2">DM Automation</h3>
-<p class="text-sm text-muted leading-relaxed mb-4">Automate direct message responses and conversations.</p>
-<ul class="feature-list">
-<li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>Auto-reply to DMs</li>
-<li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>Keyword-based triggers</li>
-<li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>Smart routing</li>
-</ul>
-</div>
-<div class="glass-card-bright card-hover reveal" style="padding:2rem">
-<div style="width:100%;aspect-ratio:16/9;background:#f8f8f8;border-radius:.5rem;margin-bottom:1.5rem;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;border:1px solid rgba(0,0,0,0.06)">
-  <svg width="100%" height="100%" viewBox="0 0 400 225" fill="none">
-    <defs><pattern id="gridC1" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(0,0,0,0.03)" stroke-width="1"/></pattern></defs>
-    <rect width="400" height="225" fill="url(#gridC1)"/>
-    <circle cx="200" cy="112" r="30" fill="none" stroke="#111" stroke-width="2"/>
-    <path d="M 170 112 L 230 112 M 200 82 L 200 142" stroke="#059669" stroke-width="2" stroke-linecap="round"/>
-    <circle cx="200" cy="112" r="8" fill="#059669" opacity="0.2"/>
-  </svg>
-</div>
-<h3 class="text-xl font-semibold mb-2">Story Replies</h3>
-<p class="text-sm text-muted leading-relaxed mb-4">Respond to story mentions and interactions automatically.</p>
-<ul class="feature-list">
-<li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>Story mention detection</li>
-<li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>Automated responses</li>
-<li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>Engagement tracking</li>
-</ul>
-</div>
-<div class="glass-card-bright card-hover reveal" style="padding:2rem">
-<div style="width:100%;aspect-ratio:16/9;background:#f8f8f8;border-radius:.5rem;margin-bottom:1.5rem;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;border:1px solid rgba(0,0,0,0.06)">
-  <svg width="100%" height="100%" viewBox="0 0 400 225" fill="none">
-    <defs><pattern id="gridC3" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(0,0,0,0.03)" stroke-width="1"/></pattern></defs>
-    <rect width="400" height="225" fill="url(#gridC3)"/>
-    <path d="M 150 112 L 200 62 L 250 112 L 200 162 Z" fill="none" stroke="#111" stroke-width="2"/>
-    <circle cx="200" cy="112" r="15" fill="#059669" opacity="0.3"/>
-    <circle cx="200" cy="112" r="5" fill="#059669"/>
-  </svg>
-</div>
-<h3 class="text-xl font-semibold mb-2">Comment Management</h3>
-<p class="text-sm text-muted leading-relaxed mb-4">Manage and respond to post comments intelligently.</p>
-<ul class="feature-list">
-<li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>Auto-moderation</li>
-<li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>Smart replies</li>
-<li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>Spam filtering</li>
-</ul>
-</div>
-</div>
-</div>
-</section>
-
-<section class="page-section vitral-bg">
-<div class="container">
-<div class="text-center reveal">
-<div class="badge mb-4" style="margin-left:auto;margin-right:auto;width:fit-content"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>Advanced Capabilities</div>
-<h2 class="text-3xl font-bold tracking-tighter mb-4">Advanced Instagram Capabilities</h2>
-<p class="text-lg text-muted max-w-2xl mx-auto leading-relaxed mb-12">Elevate your Instagram presence with intelligent automation features.</p>
-</div>
-<div class="grid-3">
-<div class="glass-card-bright card-hover reveal" style="padding:2rem">
-<div style="width:100%;aspect-ratio:16/9;background:#f8f8f8;border-radius:.5rem;margin-bottom:1.5rem;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;border:1px solid rgba(0,0,0,0.06)">
-  <svg width="100%" height="100%" viewBox="0 0 400 225" fill="none">
-    <defs><pattern id="gridCGen" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(0,0,0,0.03)" stroke-width="1"/></pattern></defs>
-    <rect width="400" height="225" fill="url(#gridCGen)"/>
-    <path d="M 180 112 L 200 82 L 220 112 L 200 142 Z" fill="none" stroke="#111" stroke-width="2"/>
-    <circle cx="200" cy="112" r="6" fill="#059669"/>
-    <path d="M 140 112 H 160 M 240 112 H 260" stroke="#111" stroke-width="2"/>
-  </svg>
-</div>
-<h3 class="text-xl font-semibold mb-2">Product Catalog Integration</h3>
-<p class="text-sm text-muted leading-relaxed">Connect your product catalog so bots can showcase items, answer product questions, and drive sales.</p>
-</div>
-<div class="glass-card-bright card-hover reveal" style="padding:2rem">
-<div style="width:100%;aspect-ratio:16/9;background:#f8f8f8;border-radius:.5rem;margin-bottom:1.5rem;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;border:1px solid rgba(0,0,0,0.06)">
-  <svg width="100%" height="100%" viewBox="0 0 400 225" fill="none">
-    <defs><pattern id="gridCGen" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(0,0,0,0.03)" stroke-width="1"/></pattern></defs>
-    <rect width="400" height="225" fill="url(#gridCGen)"/>
-    <path d="M 180 112 L 200 82 L 220 112 L 200 142 Z" fill="none" stroke="#111" stroke-width="2"/>
-    <circle cx="200" cy="112" r="6" fill="#059669"/>
-    <path d="M 140 112 H 160 M 240 112 H 260" stroke="#111" stroke-width="2"/>
-  </svg>
-</div>
-<h3 class="text-xl font-semibold mb-2">Auto-Responses</h3>
-<p class="text-sm text-muted leading-relaxed">Set up intelligent auto-response flows for common inquiries, FAQs, and greeting messages.</p>
-</div>
-<div class="glass-card-bright card-hover reveal" style="padding:2rem">
-<div style="width:100%;aspect-ratio:16/9;background:#f8f8f8;border-radius:.5rem;margin-bottom:1.5rem;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;border:1px solid rgba(0,0,0,0.06)">
-  <svg width="100%" height="100%" viewBox="0 0 400 225" fill="none">
-    <defs><pattern id="gridCGen" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(0,0,0,0.03)" stroke-width="1"/></pattern></defs>
-    <rect width="400" height="225" fill="url(#gridCGen)"/>
-    <path d="M 180 112 L 200 82 L 220 112 L 200 142 Z" fill="none" stroke="#111" stroke-width="2"/>
-    <circle cx="200" cy="112" r="6" fill="#059669"/>
-    <path d="M 140 112 H 160 M 240 112 H 260" stroke="#111" stroke-width="2"/>
-  </svg>
-</div>
-<h3 class="text-xl font-semibold mb-2">Analytics</h3>
-<p class="text-sm text-muted leading-relaxed">Track DM volume, response times, engagement rates, and conversion metrics with detailed analytics.</p>
 </div>
 </div>
 </div>
@@ -176,143 +47,46 @@
 
 <section class="page-section-lg">
 <div class="container">
-<div class="text-center reveal">
-<div class="badge mb-4" style="margin-left:auto;margin-right:auto;width:fit-content"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>Use Cases</div>
-<h2 class="text-3xl font-bold tracking-tighter mb-4">How Teams Use Instagram Bots</h2>
-<p class="text-lg text-muted max-w-2xl mx-auto leading-relaxed mb-12">Proven Instagram automation use cases for business growth.</p>
+<div class="text-center mb-16 reveal">
+<h2 class="text-3xl font-bold tracking-tighter mb-4">The Convergence of Visual and Vernacular.</h2>
+<p class="text-lg text-muted max-w-2xl mx-auto">Instagram is the "Front Window" of your brand. General Bots upgrades this channel with automated didactic DMs and sovereign data retrieval.</p>
 </div>
 <div class="grid-3">
-<div class="glass-card-bright card-hover reveal" style="padding:2rem">
-<div style="width:100%;aspect-ratio:16/9;background:#f8f8f8;border-radius:.5rem;margin-bottom:1.5rem;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;border:1px solid rgba(0,0,0,0.06)">
+<div class="glass-card p-8 reveal">
+<div style="width:100%;aspect-ratio:16/9;background:#f8f8f8;border-radius:1rem;margin-bottom:1.5rem;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;border:1px solid rgba(0,0,0,0.06)">
   <svg width="100%" height="100%" viewBox="0 0 400 225" fill="none">
-    <defs><pattern id="gridC4" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(0,0,0,0.03)" stroke-width="1"/></pattern></defs>
-    <rect width="400" height="225" fill="url(#gridC4)"/>
-    <circle cx="160" cy="112" r="20" fill="none" stroke="#111" stroke-width="2"/>
-    <circle cx="240" cy="112" r="20" fill="none" stroke="#111" stroke-width="2"/>
-    <path d="M 180 112 H 220" stroke="#059669" stroke-width="2" stroke-dasharray="4 4"/>
+    <path d="M160 112 H240" stroke="#059669" stroke-width="2" />
+    <circle cx="200" cy="112" r="25" stroke="#111" stroke-width="1" opacity="0.2" />
   </svg>
 </div>
-<h3 class="text-xl font-semibold mb-2">E-commerce Support</h3>
-<p class="text-sm text-muted leading-relaxed">Answer product questions, process orders, and handle returns directly through Instagram DMs.</p>
+<h3 class="text-xl font-bold mb-3">Direct AI Search</h3>
+<p class="text-sm text-muted leading-relaxed">Respond to DMs with high-fidelity knowledge. Our bot searches your sovereign documentation index to provide accurate, document-backed answers instantly.</p>
 </div>
-<div class="glass-card-bright card-hover reveal" style="padding:2rem">
-<div style="width:100%;aspect-ratio:16/9;background:#f8f8f8;border-radius:.5rem;margin-bottom:1.5rem;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;border:1px solid rgba(0,0,0,0.06)">
+<div class="glass-card p-8 reveal" style="transition-delay:0.1s">
+<div style="width:100%;aspect-ratio:16/9;background:#f8f8f8;border-radius:1rem;margin-bottom:1.5rem;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;border:1px solid rgba(0,0,0,0.06)">
   <svg width="100%" height="100%" viewBox="0 0 400 225" fill="none">
-    <defs><pattern id="gridC1" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(0,0,0,0.03)" stroke-width="1"/></pattern></defs>
-    <rect width="400" height="225" fill="url(#gridC1)"/>
-    <circle cx="200" cy="112" r="30" fill="none" stroke="#111" stroke-width="2"/>
-    <path d="M 170 112 L 230 112 M 200 82 L 200 142" stroke="#059669" stroke-width="2" stroke-linecap="round"/>
-    <circle cx="200" cy="112" r="8" fill="#059669" opacity="0.2"/>
+    <rect x="150" y="80" width="100" height="65" rx="8" stroke="#111" stroke-width="2" fill="none" />
+    <path d="M170 112 H230" stroke="#059669" stroke-width="2" />
   </svg>
 </div>
-<h3 class="text-xl font-semibold mb-2">Influencer Management</h3>
-<p class="text-sm text-muted leading-relaxed">Automate initial outreach, coordinate collaborations, and manage influencer communications at scale.</p>
+<h3 class="text-xl font-bold mb-3">Story Orchestration</h3>
+<p class="text-sm text-muted leading-relaxed">Capture intent from story mentions and replies. Automatically qualify leads and provide technical resources without manual intervention.</p>
 </div>
-<div class="glass-card-bright card-hover reveal" style="padding:2rem">
-<div style="width:100%;aspect-ratio:16/9;background:#f8f8f8;border-radius:.5rem;margin-bottom:1.5rem;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;border:1px solid rgba(0,0,0,0.06)">
+<div class="glass-card p-8 reveal" style="transition-delay:0.2s">
+<div style="width:100%;aspect-ratio:16/9;background:#f8f8f8;border-radius:1rem;margin-bottom:1.5rem;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;border:1px solid rgba(0,0,0,0.06)">
   <svg width="100%" height="100%" viewBox="0 0 400 225" fill="none">
-    <defs><pattern id="gridC3" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(0,0,0,0.03)" stroke-width="1"/></pattern></defs>
-    <rect width="400" height="225" fill="url(#gridC3)"/>
-    <path d="M 150 112 L 200 62 L 250 112 L 200 162 Z" fill="none" stroke="#111" stroke-width="2"/>
-    <circle cx="200" cy="112" r="15" fill="#059669" opacity="0.3"/>
-    <circle cx="200" cy="112" r="5" fill="#059669"/>
+    <circle cx="200" cy="112" r="35" stroke="#059669" stroke-width="2" fill="none" />
   </svg>
 </div>
-<h3 class="text-xl font-semibold mb-2">Brand Engagement</h3>
-<p class="text-sm text-muted leading-relaxed">Build community and drive brand loyalty through timely, personalized responses to every interaction.</p>
+<h3 class="text-xl font-bold mb-3">Visual Compliance</h3>
+<p class="text-sm text-muted leading-relaxed">Maintain brand integrity with responses that align with your visual guidelines. Our AI respects your tone and didactic standards across all social interactions.</p>
 </div>
 </div>
 </div>
 </section>
-
-<section class="page-section vitral-bg">
-<div class="container">
-<div class="text-center reveal">
-<div class="badge mb-4" style="margin-left:auto;margin-right:auto;width:fit-content"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>Benefits</div>
-<h2 class="text-3xl font-bold tracking-tighter mb-4">Why Choose Instagram Integration</h2>
-<p class="text-lg text-muted max-w-2xl mx-auto leading-relaxed mb-12">Key advantages that strengthen your Instagram presence.</p>
-</div>
-<div class="grid-3">
-<div class="glass-card-bright card-hover reveal" style="padding:2rem">
-<div style="width:100%;aspect-ratio:16/9;background:#f8f8f8;border-radius:.5rem;margin-bottom:1.5rem;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;border:1px solid rgba(0,0,0,0.06)">
-  <svg width="100%" height="100%" viewBox="0 0 400 225" fill="none">
-    <defs><pattern id="gridC4" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(0,0,0,0.03)" stroke-width="1"/></pattern></defs>
-    <rect width="400" height="225" fill="url(#gridC4)"/>
-    <circle cx="160" cy="112" r="20" fill="none" stroke="#111" stroke-width="2"/>
-    <circle cx="240" cy="112" r="20" fill="none" stroke="#111" stroke-width="2"/>
-    <path d="M 180 112 H 220" stroke="#059669" stroke-width="2" stroke-dasharray="4 4"/>
-  </svg>
-</div>
-<h3 class="text-xl font-semibold mb-2">Higher Response Rate</h3>
-<p class="text-sm text-muted leading-relaxed">Respond to every DM and comment instantly, dramatically improving your response rate metrics.</p>
-</div>
-<div class="glass-card-bright card-hover reveal" style="padding:2rem">
-<div style="width:100%;aspect-ratio:16/9;background:#f8f8f8;border-radius:.5rem;margin-bottom:1.5rem;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;border:1px solid rgba(0,0,0,0.06)">
-  <svg width="100%" height="100%" viewBox="0 0 400 225" fill="none">
-    <defs><pattern id="gridC1" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(0,0,0,0.03)" stroke-width="1"/></pattern></defs>
-    <rect width="400" height="225" fill="url(#gridC1)"/>
-    <circle cx="200" cy="112" r="30" fill="none" stroke="#111" stroke-width="2"/>
-    <path d="M 170 112 L 230 112 M 200 82 L 200 142" stroke="#059669" stroke-width="2" stroke-linecap="round"/>
-    <circle cx="200" cy="112" r="8" fill="#059669" opacity="0.2"/>
-  </svg>
-</div>
-<h3 class="text-xl font-semibold mb-2">Brand Consistency</h3>
-<p class="text-sm text-muted leading-relaxed">Ensure consistent tone, messaging, and response quality across all Instagram interactions.</p>
-</div>
-<div class="glass-card-bright card-hover reveal" style="padding:2rem">
-<div style="width:100%;aspect-ratio:16/9;background:#f8f8f8;border-radius:.5rem;margin-bottom:1.5rem;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;border:1px solid rgba(0,0,0,0.06)">
-  <svg width="100%" height="100%" viewBox="0 0 400 225" fill="none">
-    <defs><pattern id="gridC3" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(0,0,0,0.03)" stroke-width="1"/></pattern></defs>
-    <rect width="400" height="225" fill="url(#gridC3)"/>
-    <path d="M 150 112 L 200 62 L 250 112 L 200 162 Z" fill="none" stroke="#111" stroke-width="2"/>
-    <circle cx="200" cy="112" r="15" fill="#059669" opacity="0.3"/>
-    <circle cx="200" cy="112" r="5" fill="#059669"/>
-  </svg>
-</div>
-<h3 class="text-xl font-semibold mb-2">Scalable Support</h3>
-<p class="text-sm text-muted leading-relaxed">Handle growing Instagram engagement without proportionally increasing your support team size.</p>
-</div>
-</div>
-</div>
-</section>
-
-<section class="page-section-lg bg-gray-900 text-white">
-<div class="container text-center reveal">
-<h2 class="text-3xl font-bold tracking-tighter mb-4" style="color:#fff">Ready to Transform?</h2>
-<p class="text-lg max-w-2xl mx-auto leading-relaxed mb-8" style="color:rgba(255,255,255,.7)">Start engaging your Instagram audience with AI-powered bots today.</p>
-<div class="flex flex-wrap gap-4 justify-center">
-<a href="/contact" class="btn btn-lg" style="background:#fff;color:var(--primary)">Contact Us</a>
-<a href="/contact" class="btn btn-outline btn-lg" style="border-color:rgba(255,255,255,.3);color:#fff">Request Demo</a>
-</div>
-</div>
-</section>
-
 </main>
-
-<footer class="site-footer">
-<div class="container">
-<div class="footer-top">
-<div class="footer-brand">
-<img src="/gb-logo.png" alt="General Bots" width="140" height="33" class="footer-logo">
-<p>General Bots® — The Open Source AI Bot Platform</p>
-<p>DPO: Rodrigo Rodriguez<br><a href="mailto:security@pragmatismo.com.br">security@pragmatismo.com.br</a></p>
-</div>
-<div class="footer-col"><h5>General Bots</h5><a href="/general-bots/llms">LLMs</a><a href="/general-bots/vector-retrieval">Vector Retrieval</a><a href="/general-bots/open-source">Open Source</a><a href="/features">Features</a><a href="/integrations">Integrations</a></div>
-<div class="footer-col"><h5>Hosting</h5><a href="/pricing/azure">Azure</a><a href="/pricing/aws">AWS</a><a href="/pricing/google-cloud">Google Cloud</a><a href="/pricing/digital-ocean">Digital Ocean</a><a href="/pricing/on-premises">On Premises</a></div>
-<div class="footer-col"><h5>Community</h5><a href="https://github.com/GeneralBots" target="_blank" rel="noopener">GitHub</a><a href="/resources/community">Community</a><a href="/resources/community/become-a-partner">Become a Partner</a><a href="/blog">Blog</a></div>
-</div>
-<div class="footer-middle">
-<div class="footer-social">
-<a href="https://github.com/GeneralBots" target="_blank" rel="noopener" aria-label="GitHub"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
-<a href="https://instagram.com/generalbots" target="_blank" rel="noopener" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
-<a href="https://wa.me/552140402160" target="_blank" rel="noopener" aria-label="WhatsApp"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
-</div>
-<div><a href="/terms">Terms</a> &nbsp;·&nbsp; <a href="/privacy">Privacy</a></div>
-</div>
-<div class="footer-bottom"><p>Copyright &copy; 2016-2026 Pragmatismo. All rights reserved.</p></div>
-</div>
-</footer>
-
+<div hx-get="/partials/footer.html" hx-swap="innerHTML" hx-trigger="load"></div>
+<script src="https://unpkg.com/htmx.org@2.0.4"></script>
 <script src="/js/site.js"></script>
 </body>
 </html>

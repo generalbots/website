@@ -3,270 +3,68 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>What is LLM? | General Bots Blog</title>
-<meta name="description" content="An LLM (Large Language Model) is an advanced type of artificial intelligence designed to understand, generate, and work with human language.">
-<link rel="stylesheet" href="/css/site.css">
+<title>What is an LLM? Deconstructing the Model | General Bots Blog</title>
+<meta name="description" content="A didactic technical guide to Large Language Models (LLMs). Understanding parameters, tokens, and the shift toward sovereign AI search orchestration.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://generalbots.org/blog/what-is-llm/">
+<meta property="og:title" content="What is an LLM? Deconstructing the Model | General Bots Blog">
+<meta property="og:description" content="Technical guide to LLMs.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://generalbots.org/blog/what-is-llm/">
 <link rel="icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="stylesheet" href="/css/site.css">
 </head>
 <body>
-<header class="site-header"><div class="header-inner">
-<a href="/" class="logo-link"><img src="/gb-logo.png" alt="General Bots" width="140" height="33"></a>
-<nav class="nav-desktop"><a href="/">Home</a><div class="nav-dropdown"><button class="nav-dropdown-trigger">General Bots <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5l3 3 3-3"/></svg></button><div class="nav-dropdown-content hidden"><a href="/general-bots/llm">LLMs</a><a href="/general-bots/vector-retrieval">Vector Retrieval</a><a href="/general-bots/open-source">Open Source</a></div></div><div class="nav-dropdown"><button class="nav-dropdown-trigger">Features <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5l3 3 3-3"/></svg></button><div class="nav-dropdown-content hidden"><a href="/features/ai-search">AI Search</a><a href="/features/content-generation">Content Generation</a><a href="/features/bot-factory">Bot Factory</a><a href="/features/talk-to-data">Talk to data</a><a href="/features/broadcast">Broadcast</a><a href="/features/trainning">Train</a><a href="/features/web-automation">Web Automation</a><a href="/features/llm-tools">LLM Tools</a><a href="/features/create-apis-in-word">Calling APIs</a></div></div><div class="nav-dropdown"><button class="nav-dropdown-trigger">Integrations <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5l3 3 3-3"/></svg></button><div class="nav-dropdown-content hidden"><a href="/integrations/channels/whatsapp">WhatsApp</a><a href="/integrations/channels/sms">SMS</a><a href="/integrations/channels/web-chat">Web Chat</a><a href="/integrations/channels/instagram">Instagram</a><a href="/integrations/channels/email">E-mail</a><a href="/integrations/channels/microsoft-teams">Microsoft Teams</a><a href="/integrations/channels/google-chat">Google Chat</a><a href="/integrations/channels/facebook-pages">Facebook Pages</a><a href="/integrations/channels/slack">Slack</a></div></div><a href="/templates">Templates</a><div class="nav-dropdown"><button class="nav-dropdown-trigger">Resources <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5l3 3 3-3"/></svg></button><div class="nav-dropdown-content hidden"><a href="/resources/considering/ai-powered-org">Considering</a><a href="/resources/already-using/essential-resources">Already Using</a><a href="/resources/community/become-a-partner">Community</a></div></div><a href="/pricing">Hosting</a><a href="/contact">Contact</a></nav>
-<div class="flex items-center gap-4"><a href="tel:+552140402160" class="phone-link" style="display:none" id="header-phone">+55 21 4040-2160</a><div class="gtranslate_wrapper"></div><button class="nav-mobile-toggle" id="mobile-menu-toggle" aria-label="Toggle menu"><svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg><svg class="close-icon hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M6 18L18 6"/></svg></button></div>
-</div></header>
-<div id="mobile-menu" class="hidden">
-<a href="/" class="mobile-nav-link">Home</a>
-<div><button class="mobile-dropdown-trigger">General Bots <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><path d="M3 5l3 3 3-3"/></svg></button><div class="mobile-dropdown-content hidden"><a href="/general-bots/llm" class="mobile-nav-link">LLMs</a><a href="/general-bots/vector-retrieval" class="mobile-nav-link">Vector Retrieval</a><a href="/general-bots/open-source" class="mobile-nav-link">Open Source</a></div></div>
-<div><button class="mobile-dropdown-trigger">Features <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><path d="M3 5l3 3 3-3"/></svg></button><div class="mobile-dropdown-content hidden"><a href="/features/ai-search" class="mobile-nav-link">AI Search</a><a href="/features/content-generation" class="mobile-nav-link">Content Generation</a><a href="/features/bot-factory" class="mobile-nav-link">Bot Factory</a><a href="/features/talk-to-data" class="mobile-nav-link">Talk to data</a><a href="/features/broadcast" class="mobile-nav-link">Broadcast</a><a href="/features/trainning" class="mobile-nav-link">Train</a><a href="/features/web-automation" class="mobile-nav-link">Web Automation</a><a href="/features/llm-tools" class="mobile-nav-link">LLM Tools</a><a href="/features/create-apis-in-word" class="mobile-nav-link">Calling APIs</a></div></div>
-<div><button class="mobile-dropdown-trigger">Integrations <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><path d="M3 5l3 3 3-3"/></svg></button><div class="mobile-dropdown-content hidden"><a href="/integrations/channels/whatsapp" class="mobile-nav-link">WhatsApp</a><a href="/integrations/channels/sms" class="mobile-nav-link">SMS</a><a href="/integrations/channels/web-chat" class="mobile-nav-link">Web Chat</a><a href="/integrations/channels/instagram" class="mobile-nav-link">Instagram</a><a href="/integrations/channels/email" class="mobile-nav-link">E-mail</a><a href="/integrations/channels/microsoft-teams" class="mobile-nav-link">Microsoft Teams</a><a href="/integrations/channels/google-chat" class="mobile-nav-link">Google Chat</a><a href="/integrations/channels/facebook-pages" class="mobile-nav-link">Facebook Pages</a><a href="/integrations/channels/slack" class="mobile-nav-link">Slack</a></div></div>
-<a href="/templates" class="mobile-nav-link">Templates</a>
-<div><button class="mobile-dropdown-trigger">Resources <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><path d="M3 5l3 3 3-3"/></svg></button><div class="mobile-dropdown-content hidden"><a href="/resources/considering/ai-powered-org" class="mobile-nav-link">Considering</a><a href="/resources/already-using/essential-resources" class="mobile-nav-link">Already Using</a><a href="/resources/community/become-a-partner" class="mobile-nav-link">Community</a></div></div>
-<a href="/pricing" class="mobile-nav-link">Hosting</a>
-<a href="/contact" class="mobile-nav-link">Contact</a>
-<span class="mobile-phone">+55 21 4040-2160</span>
-</div>
-<main style="padding-top:5rem">
-<section class="page-section vitral-bg">
-<div class="max-w-3xl mx-auto" style="padding:0 1rem">
-<a href="/blog" class="text-sm text-muted" style="display:inline-flex;align-items:center;gap:.375rem;margin-bottom:1.5rem"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> Back to Blog</a>
-<div class="reveal">
-<h1 class="text-4xl font-bold tracking-tight mb-4">What is LLM?</h1>
-<p class="text-sm text-muted mb-8">Author: Pragmatismo Team</p>
-</div>
-<article class="reveal" style="font-size:1.0625rem;line-height:1.75;color:var(--foreground)">
+<div hx-get="/partials/header.html" hx-swap="innerHTML" hx-trigger="load"></div>
+<main style="padding-top:4rem">
+<article class="page-section reveal">
+<div class="container-narrow">
+<a href="/blog/" class="text-sm text-muted" style="display:inline-flex;align-items:center;gap:.375rem;margin-bottom:1.5rem">
+<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+Back to Blog
+</a>
+<div class="badge mb-4">Technical Core</div>
+<h1 class="text-4xl font-bold tracking-tighter mb-6" style="line-height:1.1">What is an LLM? Deconstructing the Model.</h1>
+<p class="text-lg text-muted mb-8 leading-relaxed">A didactic technical guide to Large Language Models (LLMs). Understanding parameters, tokens, and the shift toward sovereign AI search orchestration with GLM 5.1.</p>
+<div class="blog-content prose">
+<p>A Large Language Model (LLM) is currently defined as a "Statistical Prediction Node." It is an architecture of neural weights trained on the corpus of human knowledge to predict the next token in a sequence. To reach an investor-ready understanding, we must look past the "Chat" interface and analyze the didactic reality of the weights and biases that power the GLM 5.1 era.</p>
 
-<div class="reveal">
-<p style="margin-bottom:1.5rem">An LLM (Large Language Model) is an advanced type of artificial intelligence (AI) designed to understand, generate, and work with human language. These models are trained on massive amounts of text data (books, articles, code, websites, etc.) and use computer programs to emulate human-like neural behaviour to predict and generate coherent text based on input prompts.</p>
-</div>
-
-<div class="reveal">
-<h2 style="font-size:1.5rem;font-weight:700;margin:2rem 0 1rem;color:var(--foreground)">The Fundamental Shift</h2>
-<p style="margin-bottom:1.5rem">We're witnessing a fundamental shift in how humans interact with knowledge. Large Language Models (LLMs) represent the most significant advancement in information technology since the creation of the internet itself.</p>
-<p style="margin-bottom:1.5rem">These AI systems have absorbed humanity's collective knowledge - from literature to scientific research to technical documentation - and can now retrieve, synthesize, and explain this information in natural language.</p>
-<p style="margin-bottom:1.5rem;font-weight:500">This guide focuses on the four dominant models that are shaping this transformation:</p>
+<div style="width:100%;aspect-ratio:16/9;background:#f8f8f8;border-radius:1rem;margin:2rem 0;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;border:1px solid rgba(0,0,0,0.06)">
+  <svg width="100%" height="100%" viewBox="0 0 800 450" fill="none">
+    <defs><pattern id="gridLLM" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(0,0,0,0.03)" stroke-width="1"/></pattern></defs>
+    <rect width="800" height="450" fill="url(#gridLLM)"/>
+    <circle cx="200" cy="225" r="40" stroke="#111" stroke-width="1" fill="none" opacity="0.2" />
+    <circle cx="300" cy="225" r="40" stroke="#111" stroke-width="1" fill="none" opacity="0.4" />
+    <circle cx="400" cy="225" r="40" stroke="#111" stroke-width="1" fill="none" opacity="0.6" />
+    <circle cx="500" cy="225" r="40" stroke="#059669" stroke-width="2" fill="none" />
+    <path d="M240 225 L260 225" stroke="#111" stroke-width="1" opacity="0.2" />
+    <path d="M340 225 L360 225" stroke="#111" stroke-width="1" opacity="0.4" />
+    <path d="M440 225 L460 225" stroke="#111" stroke-width="1" opacity="0.6" />
+    <text x="400" y="300" text-anchor="middle" fill="#111" style="font-size:10px;font-weight:700">NEURAL ARCHITECTURE</text>
+  </svg>
 </div>
 
-<div class="reveal">
-<h2 style="font-size:1.5rem;font-weight:700;margin:2rem 0 1rem;color:var(--foreground)">What LLMs Really Are</h2>
-<p style="margin-bottom:1.5rem"><strong>Large Language Models (LLMs)</strong> are <u>giant prediction machines</u> that have read more than any human could in 100 lifetimes.</p>
+<h3>Tokens and Parameters: The Units of Intelligence</h3>
+<p>Intelligence in an LLM is measured by **Parameters** (the connections) and **Tokens** (the fragments of text). A model with 70 billion parameters has a higher resolution of understanding than a 7 billion parameter model. However, didactic efficiency is not just about size; it's about how those parameters are orchestrated. The "Architecture of Intelligence" focuses on maximizing the signal-to-noise ratio in every prompt.</p>
 
-<div class="glass-card" style="padding:1.5rem;margin:1.5rem 0">
-<h3 style="font-weight:600;margin-bottom:.75rem">The Shocking Truth:</h3>
-<ul style="margin:0;padding-left:1.25rem">
-<li style="margin-bottom:.5rem">They've digested <strong>millions of books</strong>, <strong>all of Wikipedia</strong>, and <strong>most public websites</strong></li>
-<li style="margin-bottom:.5rem">Their "knowledge" is like having <strong>1000 PhDs</strong> in every subject</li>
-<li style="margin-bottom:.5rem">They don't "think" but can <strong>simulate expert reasoning</strong> scarily well</li>
-<li>Current models have <strong>trillions of parameters</strong> (connections in their artificial brain)</li>
-</ul>
-</div>
+<h3>AI Search: The De Facto standard for LLM Utility</h3>
+<p>An LLM without data is just a creative writer. **AI Search** (or RAG - Retrieval-Augmented Generation) is the de facto standard for making LLMs useful in a corporate environment. By indexing your sovereign data, the model stops "hallucinating" and starts providing high-fidelity answers based on *your* records. This is the difference between a toy and a tool.</p>
 
-<div class="glass-card" style="padding:1.5rem;margin:1.5rem 0">
-<h3 style="font-weight:600;margin-bottom:.75rem">Internet Revolution 2.0</h3>
-<p style="margin-bottom:.75rem">Just like the Internet connected computers, LLMs are connecting <strong>all human knowledge</strong> into a single point you can query naturally. This changes everything about how we:</p>
-<ul style="margin:0;padding-left:1.25rem">
-<li style="margin-bottom:.25rem">Learn new information</li>
-<li style="margin-bottom:.25rem">Solve problems</li>
-<li style="margin-bottom:.25rem">Create content</li>
-<li>Interact with technology</li>
-</ul>
-</div>
-</div>
+<h3>The Sovereign Pivot</h3>
+<p>Most LLMs are currently served via proprietary APIs. This creates a "Rent-Seeking" dependency. General Bots provides the orchestration layer to pivot toward **Sovereign AI**. 
+1. **Open Weights:** Run models like Llama or Mistral on your own hardware.
+2. **Deterministic Logic:** Use BASIC to control exactly how the LLM behaves.
+3. **No Egress Fees:** Keep your data—and your intelligence—in-house.</p>
 
-<div class="reveal">
-<h2 style="font-size:1.5rem;font-weight:700;margin:2rem 0 1rem;color:var(--foreground)">Meet the AI Superbrains</h2>
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem;margin:1.5rem 0">
-
-<div class="glass-card" style="padding:1.5rem">
-<h3 style="font-size:1.125rem;font-weight:600;margin-bottom:.25rem">GPT-4</h3>
-<p style="margin-bottom:.75rem;color:var(--muted-foreground);font-size:.875rem">By OpenAI</p>
-<div style="background:var(--muted);padding:.75rem;border-radius:.375rem;margin-bottom:.5rem">
-<p style="font-weight:500;margin-bottom:.25rem">Crazy Fact:</p>
-<p style="font-size:.875rem;margin-bottom:0">Read 45TB of text (3 million books) before 2021</p>
-</div>
-<div style="background:var(--muted);padding:.75rem;border-radius:.375rem;margin-bottom:.5rem">
-<p style="font-weight:500;margin-bottom:.25rem">Superpower:</p>
-<p style="font-size:.875rem;margin-bottom:0">Can code better than most humans</p>
-</div>
-<div style="background:var(--muted);padding:.75rem;border-radius:.375rem;border-left:3px solid #b91c1c">
-<p style="font-weight:500;margin-bottom:.25rem">Warning:</p>
-<p style="font-size:.875rem;margin-bottom:0">Used to be open.</p>
+<h3>Conclusion: Decoding the Future</h3>
+<p>Understanding "What is an LLM" is the first step toward building an investor-ready AI strategy. It is not magic; it is mathematics orchestrated for utility. With General Bots, you don't just use LLMs; you own the "Architecture of Intelligence" that makes them work for you. Own the model. Own the future.</p>
 </div>
 </div>
-
-<div class="glass-card" style="padding:1.5rem">
-<h3 style="font-size:1.125rem;font-weight:600;margin-bottom:.25rem">Claude</h3>
-<p style="margin-bottom:.75rem;color:var(--muted-foreground);font-size:.875rem">By Anthropic</p>
-<div style="background:var(--muted);padding:.75rem;border-radius:.375rem;margin-bottom:.5rem">
-<p style="font-weight:500;margin-bottom:.25rem">Crazy Fact:</p>
-<p style="font-size:.875rem;margin-bottom:0">Trained on constitutional AI principles</p>
-</div>
-<div style="background:var(--muted);padding:.75rem;border-radius:.375rem;margin-bottom:.5rem">
-<p style="font-weight:500;margin-bottom:.25rem">Superpower:</p>
-<p style="font-size:.875rem;margin-bottom:0">Best at following complex instructions</p>
-</div>
-<div style="background:var(--muted);padding:.75rem;border-radius:.375rem;border-left:3px solid #b91c1c">
-<p style="font-weight:500;margin-bottom:.25rem">Warning:</p>
-<p style="font-size:.875rem;margin-bottom:0">Sometimes too cautious in responses</p>
-</div>
-</div>
-
-<div class="glass-card" style="padding:1.5rem">
-<h3 style="font-size:1.125rem;font-weight:600;margin-bottom:.25rem">Gemini</h3>
-<p style="margin-bottom:.75rem;color:var(--muted-foreground);font-size:.875rem">By Google</p>
-<div style="background:var(--muted);padding:.75rem;border-radius:.375rem;margin-bottom:.5rem">
-<p style="font-weight:500;margin-bottom:.25rem">Crazy Fact:</p>
-<p style="font-size:.875rem;margin-bottom:0">Uses Google's entire search index as reference</p>
-</div>
-<div style="background:var(--muted);padding:.75rem;border-radius:.375rem;margin-bottom:.5rem">
-<p style="font-weight:500;margin-bottom:.25rem">Superpower:</p>
-<p style="font-size:.875rem;margin-bottom:0">Best at finding factual information</p>
-</div>
-<div style="background:var(--muted);padding:.75rem;border-radius:.375rem;border-left:3px solid #b91c1c">
-<p style="font-weight:500;margin-bottom:.25rem">Warning:</p>
-<p style="font-size:.875rem;margin-bottom:0">Tied to Google's business interests</p>
-</div>
-</div>
-
-<div class="glass-card" style="padding:1.5rem">
-<h3 style="font-size:1.125rem;font-weight:600;margin-bottom:.25rem">DeepSeek</h3>
-<p style="margin-bottom:.75rem;color:var(--muted-foreground);font-size:.875rem">By DeepSeek</p>
-<div style="background:var(--muted);padding:.75rem;border-radius:.375rem;margin-bottom:.5rem">
-<p style="font-weight:500;margin-bottom:.25rem">Crazy Fact:</p>
-<p style="font-size:.875rem;margin-bottom:0">Specializes in long-context understanding</p>
-</div>
-<div style="background:var(--muted);padding:.75rem;border-radius:.375rem;margin-bottom:.5rem">
-<p style="font-weight:500;margin-bottom:.25rem">Superpower:</p>
-<p style="font-size:.875rem;margin-bottom:0">Can remember 128K tokens (~300 pages) in one chat</p>
-</div>
-<div style="background:var(--muted);padding:.75rem;border-radius:.375rem;border-left:3px solid #b91c1c">
-<p style="font-weight:500;margin-bottom:.25rem">Warning:</p>
-<p style="font-size:.875rem;margin-bottom:0">Newer and less tested than others</p>
-</div>
-</div>
-</div>
-</div>
-
-<div class="reveal">
-<h2 style="font-size:1.5rem;font-weight:700;margin:2rem 0 1rem;color:var(--foreground)">How They Really Work</h2>
-
-<div style="display:flex;align-items:flex-start;margin-bottom:1.5rem;gap:1rem">
-<div style="flex-shrink:0;width:2rem;height:2rem;border-radius:50%;background:var(--muted);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.875rem">1</div>
-<div>
-<p style="margin-bottom:.25rem"><strong>Internet-Scale Reading:</strong> They digest <u>everything</u> - books, code, research papers, forums (but can't cite sources)</p>
-<p style="margin-bottom:0;font-size:.875rem;color:var(--muted-foreground)">Imagine reading 1000 Wikipedia pages every second for months!</p>
-</div>
-</div>
-
-<div style="display:flex;align-items:flex-start;margin-bottom:1.5rem;gap:1rem">
-<div style="flex-shrink:0;width:2rem;height:2rem;border-radius:50%;background:var(--muted);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.875rem">2</div>
-<div>
-<p style="margin-bottom:.25rem"><strong>Pattern Mapping:</strong> Build connections between concepts (cat &rarr; animal &rarr; mammal &rarr; biology)</p>
-<p style="margin-bottom:0;font-size:.875rem;color:var(--muted-foreground)">Like your brain but with perfect memory of everything read</p>
-</div>
-</div>
-
-<div style="display:flex;align-items:flex-start;margin-bottom:1.5rem;gap:1rem">
-<div style="flex-shrink:0;width:2rem;height:2rem;border-radius:50%;background:var(--muted);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.875rem">3</div>
-<div>
-<p style="margin-bottom:.25rem"><strong>Prediction Engine:</strong> Given a question, finds the most statistically likely response</p>
-<p style="margin-bottom:0;font-size:.875rem;color:var(--muted-foreground)">Not "thinking" but simulating understanding scarily well</p>
-</div>
-</div>
-</div>
-
-<div class="reveal">
-<h2 style="font-size:1.5rem;font-weight:700;margin:2rem 0 1rem;color:var(--foreground)">Important Limitations</h2>
-<div class="glass-card" style="padding:1.5rem;margin:1.5rem 0;border-left:3px solid #b91c1c">
-<ul style="margin:0;padding-left:1.25rem">
-<li style="margin-bottom:.5rem"><strong>They don't actually "know" anything</strong> - just predict text patterns extremely well</li>
-<li style="margin-bottom:.5rem"><strong>Can confidently state false information</strong> ("hallucinations")</li>
-<li style="margin-bottom:.5rem"><strong>Training data cuts off at certain date</strong> (except when connected to web search)</li>
-<li><strong>Reflect biases in their training data</strong> - garbage in, garbage out</li>
-</ul>
-</div>
-</div>
-
-<div class="reveal">
-<h2 style="font-size:1.5rem;font-weight:700;margin:2rem 0 1rem;color:var(--foreground)">This Changes Everything</h2>
-<p style="margin-bottom:1.5rem">LLMs are the most powerful knowledge tools ever created, but must be used <strong>responsibly</strong> and <strong>critically</strong>.</p>
-<p style="margin-bottom:1.5rem">The AI revolution is here - understand it, use it wisely, and <u>always verify important information</u>.</p>
-</div>
-
-<div class="reveal">
-<h2 style="font-size:1.5rem;font-weight:700;margin:2rem 0 1rem;color:var(--foreground)">Key Takeaways</h2>
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem;margin:1.5rem 0">
-
-<div>
-<h3 style="font-size:1.125rem;font-weight:600;margin-bottom:.75rem">The State of LLM Technology</h3>
-<ul style="margin:0;padding-left:1.25rem">
-<li style="margin-bottom:.5rem">Four major models currently dominate the landscape: ChatGPT, Claude, Gemini, and DeepSeek</li>
-<li style="margin-bottom:.5rem">Each specializes in different capabilities - creativity, safety, accuracy, and context length</li>
-<li>All are trained on massive datasets measured in terabytes and trillions of words</li>
-</ul>
-</div>
-
-<div>
-<h3 style="font-size:1.125rem;font-weight:600;margin-bottom:.75rem">What This Means for You</h3>
-<ul style="margin:0;padding-left:1.25rem">
-<li style="margin-bottom:.5rem">Access to synthesized knowledge on virtually any topic</li>
-<li style="margin-bottom:.5rem">Ability to get explanations tailored to your level of understanding</li>
-<li>New possibilities for learning, creating, and problem-solving</li>
-</ul>
-</div>
-</div>
-<p style="margin-bottom:1.5rem;font-weight:500">These models are not just tools - they're gateways to humanity's collective knowledge.</p>
-<p style="margin-bottom:1.5rem;color:var(--muted-foreground)">As this technology continues to evolve, it will fundamentally transform education, research, creativity, and how we access information.</p>
-</div>
-
-<div class="reveal">
-<h2 style="font-size:1.5rem;font-weight:700;margin:2rem 0 1rem;color:var(--foreground)">The Power of Specialized Bots</h2>
-<p style="margin-bottom:1.5rem">With General Bots, you can <strong>slice this vast knowledge</strong> to create specialized assistants for <strong>any human domain</strong>:</p>
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem;margin:1.5rem 0">
-
-<div class="glass-card" style="padding:1.5rem">
-<h3 style="font-size:1.125rem;font-weight:600;margin-bottom:.75rem">Domain Experts</h3>
-<ul style="margin:0;padding-left:1.25rem">
-<li style="margin-bottom:.5rem">Medical diagnosis assistants</li>
-<li style="margin-bottom:.5rem">Legal research bots</li>
-<li>Financial analysis tools</li>
-</ul>
-</div>
-
-<div class="glass-card" style="padding:1.5rem">
-<h3 style="font-size:1.125rem;font-weight:600;margin-bottom:.75rem">Customer Service</h3>
-<ul style="margin:0;padding-left:1.25rem">
-<li style="margin-bottom:.5rem">24/7 support agents</li>
-<li style="margin-bottom:.5rem">Technical troubleshooting</li>
-<li>Personal shopping assistants</li>
-</ul>
-</div>
-</div>
-<p style="margin-bottom:1.5rem;font-weight:500;text-align:center">The possibilities are endless when you combine LLM knowledge with specialized bot frameworks.</p>
-</div>
-
 </article>
-<div class="glass-card-bright text-center reveal" style="padding:3rem 2rem;margin-top:3rem">
-<h3 class="text-2xl font-bold tracking-tight mb-2">Ready to Build Your Specialized Bot?</h3>
-<p class="text-muted mb-6" style="max-width:28rem;margin-left:auto;margin-right:auto">Transform how you work with AI-powered assistants tailored to your exact needs.</p>
-<div class="flex items-center justify-center gap-4 flex-wrap">
-<a href="https://github.com/GeneralBots/BotServer" target="_blank" rel="noopener" class="btn btn-primary btn-lg">Try It Now</a>
-<a href="/contact" class="btn btn-outline btn-lg">Contact Us</a>
-</div>
-</div>
-</div>
-</section>
 </main>
-<footer class="site-footer"><div class="container">
-<div class="footer-top">
-<div class="footer-brand"><img src="/gb-logo.png" alt="General Bots" class="footer-logo" width="140" height="33"><p>General Bots® — The Open Source AI Bot Platform. Self-host or choose a certified hosting provider.</p><p style="margin-top:.75rem;font-size:.75rem">DPO: Rodrigo Rodriguez (<a href="mailto:security@pragmatismo.com.br" style="color:rgba(255,255,255,.7)">security@pragmatismo.com.br</a>)</p><p style="font-size:.75rem;margin-top:.25rem"><a href="tel:+552140402160" style="color:rgba(255,255,255,.7)">+55 21 4040-2160</a></p></div>
-<div class="footer-col"><h5>General Bots</h5><a href="/general-bots/llm">LLM</a><a href="/general-bots/vector-retrieval">Vector Search</a><a href="/general-bots/open-source">Open Source</a><a href="/features/ai-search">AI Search</a><a href="/features/bot-factory">Bot Factory</a></div>
-<div class="footer-col"><h5>Hosting</h5><a href="https://pragmatismo.com.br" target="_blank" rel="noopener">Pragmatismo</a><a href="https://oerlabs.com.br" target="_blank" rel="noopener">OERLabs</a><a href="https://mapagency.com.br" target="_blank" rel="noopener">Map Agency</a><a href="https://sentient.net.br" target="_blank" rel="noopener">Sentient</a><a href="https://darioexecutivesales.com" target="_blank" rel="noopener">Dario Executive Sales</a></div>
-<div class="footer-col"><h5>Community</h5><a href="https://docs.generalbots.org" target="_blank" rel="noopener">Documentation</a><a href="https://gb.pragmatismo.com.br/pragmatismohelpcenter" target="_blank" rel="noopener">Help Center</a><a href="/resources/community/become-a-partner">Become a Partner</a><a href="/blog">Blog</a><a href="https://github.com/generalbots" target="_blank" rel="noopener">GitHub</a></div>
-</div>
-<div class="footer-middle"><span>Copyright &copy; 2016-2026 Pragmatismo</span><div class="flex items-center gap-4"><a href="/terms">Terms of Service</a><a href="/privacy">Privacy Policy</a></div></div>
-<div class="footer-bottom"><span>General Bots — Open Source AI Orchestration Platform</span><div class="footer-social"><a href="https://www.github.com/GeneralBots" target="_blank" rel="noopener" aria-label="GitHub"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg></a><a href="https://www.instagram.com/general.bots/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg></a><a href="https://web.whatsapp.com/send?phone=+552140402160" target="_blank" rel="noopener" aria-label="WhatsApp"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.118-.272-.203-.569-.351z"/></svg></a></div></div>
-</div></footer>
-<style>@media(min-width:768px){#header-phone{display:inline-flex !important}}</style>
+<div hx-get="/partials/footer.html" hx-swap="innerHTML" hx-trigger="load"></div>
+<script src="https://unpkg.com/htmx.org@2.0.4"></script>
 <script src="/js/site.js"></script>
 </body>
 </html>

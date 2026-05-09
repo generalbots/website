@@ -1,321 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Integrations | General Bots</title>
-  <meta name="description" content="Connect General Bots with your audience through multiple communication channels, enterprise systems, team work tools, and virtual assistants.">
-  <link rel="icon" href="/favicon.ico">
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="stylesheet" href="/css/site.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Integrations | General Bots</title>
+<meta name="description" content="Connect General Bots to your existing enterprise ecosystem. Unified integration for WhatsApp, Teams, Slack, and your internal data warehouses.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://generalbots.org/integrations/">
+<meta property="og:title" content="Enterprise Integrations | General Bots">
+<meta property="og:description" content="Connect General Bots to your existing enterprise ecosystem.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://generalbots.org/integrations/">
+<link rel="icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="stylesheet" href="/css/site.css">
 </head>
 <body>
+<div hx-get="/partials/header.html" hx-swap="innerHTML" hx-trigger="load"></div>
+<main style="padding-top:4rem">
+<section class="page-section bg-gray-50 vitral-bg">
+<div class="container text-center">
+<div class="reveal">
+<div class="badge mb-4" style="margin-left:auto;margin-right:auto;width:fit-content">
+<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/></svg>
+Connected Ecosystem
+</div>
+<h1 class="text-4xl font-bold tracking-tighter mb-4" style="font-size:clamp(2rem,5vw,3rem)">Unify Your Stack.</h1>
+<p class="text-lg text-muted max-w-2xl mx-auto leading-relaxed mb-8">General Bots isn't an island. It's the bridge that connects your AI intelligence to the communication channels and enterprise data systems you use every day.</p>
+<div class="flex flex-wrap gap-4 justify-center mb-12">
+<a href="#channels" class="btn btn-primary btn-lg">View Channels</a>
+<a href="#enterprise" class="btn btn-outline btn-lg">View Enterprise</a>
+</div>
+<div style="max-width:50rem;margin:0 auto;background:var(--card);border:1px solid var(--border);border-radius:1.5rem;aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;color:var(--muted-foreground);overflow:hidden;position:relative">
+<svg width="100%" height="100%" viewBox="0 0 800 450" fill="none">
+  <defs>
+    <linearGradient id="intGrad" x1="0" y1="0" x2="800" y2="450" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#f8f8f8"/>
+      <stop offset="100%" stop-color="#eaeaea"/>
+    </linearGradient>
+    <pattern id="grid11" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M 80 0 L 0 0 0 80" fill="none" stroke="rgba(0,0,0,0.02)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="450" fill="url(#intGrad)"/>
+  <rect width="800" height="450" fill="url(#grid11)"/>
+  <g transform="translate(400, 225)">
+    <circle cx="0" cy="0" r="140" stroke="#111" stroke-width="1" stroke-dasharray="10 5" opacity="0.2" />
+    <circle cx="0" cy="0" r="40" fill="#fff" stroke="#059669" stroke-width="2" />
+    <path d="M0 -140 V-40 M0 40 V140 M-140 0 H-40 M40 0 H140" stroke="#111" stroke-width="1" opacity="0.3" />
+    <circle cx="0" cy="-140" r="10" fill="#111" />
+    <circle cx="0" cy="140" r="10" fill="#111" />
+    <circle cx="-140" cy="0" r="10" fill="#111" />
+    <circle cx="140" cy="0" r="10" fill="#111" />
+  </g>
+</svg>
+</div>
+</div>
+</div>
+</section>
 
-  <header class="site-header">
-    <div class="header-inner">
-      <a href="/" class="logo-link">
-        <img src="/gb-logo.png" alt="General Bots" width="140" height="33">
-      </a>
-      <a href="tel:+552140402160" class="phone-link">+55 21 4040-2160</a>
-      <nav class="nav-desktop">
-        <a href="/">Home</a>
-        <div class="nav-dropdown">
-          <button class="nav-dropdown-trigger" aria-expanded="false">
-            General Bots
-            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 5l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </button>
-          <div class="nav-dropdown-content hidden">
-            <a href="/general-bots/llms">LLMs</a>
-            <a href="/general-bots/vector-retrieval">Vector Retrieval</a>
-            <a href="/general-bots/open-source">Open Source</a>
-          </div>
-        </div>
-        <div class="nav-dropdown">
-          <button class="nav-dropdown-trigger" aria-expanded="false">
-            Features
-            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 5l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </button>
-          <div class="nav-dropdown-content hidden">
-            <a href="/features/ai-search">AI Search</a>
-            <a href="/features/content-generation">Content Generation</a>
-            <a href="/features/custom-copilot">Custom Copilot</a>
-            <a href="/features/data-analysis">Data Analysis</a>
-            <a href="/features/help-center">Help Center</a>
-            <a href="/features/knowledge-retrieval">Knowledge Retrieval</a>
-            <a href="/features/llm-orchestration">LLM Orchestration</a>
-            <a href="/features/process-automation">Process Automation</a>
-            <a href="/features/web-automation">Web Automation</a>
-          </div>
-        </div>
-        <div class="nav-dropdown">
-          <button class="nav-dropdown-trigger" aria-expanded="false">
-            Integrations
-            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 5l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </button>
-          <div class="nav-dropdown-content hidden">
-            <a href="/integrations/channels/email">Email</a>
-            <a href="/integrations/channels/facebook-pages">Facebook Pages</a>
-            <a href="/integrations/channels/google-chat">Google Chat</a>
-            <a href="/integrations/channels/instagram">Instagram</a>
-            <a href="/integrations/channels/microsoft-teams">Microsoft Teams</a>
-            <a href="/integrations/channels/slack">Slack</a>
-            <a href="/integrations/channels/sms">SMS</a>
-            <a href="/integrations/channels/web-chat">Web Chat</a>
-            <a href="/integrations/channels/whatsapp">WhatsApp</a>
-          </div>
-        </div>
-        <a href="/templates">Templates</a>
-        <div class="nav-dropdown">
-          <button class="nav-dropdown-trigger" aria-expanded="false">
-            Resources
-            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 5l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </button>
-          <div class="nav-dropdown-content hidden">
-            <a href="/resources/considering">Considering</a>
-            <a href="/resources/already-using">Already Using</a>
-            <a href="/resources/community">Community</a>
-            <a href="/resources/marketplaces">Marketplaces</a>
-          </div>
-        </div>
-        <a href="/pricing">Hosting</a>
-        <a href="/contact">Contact</a>
-      </nav>
-      <div class="gtranslate_wrapper"></div>
-      <button id="mobile-menu-toggle" class="nav-mobile-toggle" aria-label="Toggle menu">
-        <svg class="menu-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
-        <svg class="close-icon hidden" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="6" y1="18" x2="18" y2="6"/></svg>
-      </button>
-    </div>
-    <div id="mobile-menu" class="hidden">
-      <a href="/" class="mobile-nav-link">Home</a>
-      <button class="mobile-dropdown-trigger" data-target="mob-general-bots">
-        General Bots
-        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 5l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </button>
-      <div id="mob-general-bots" class="mobile-dropdown-content hidden">
-        <a href="/general-bots/llms">LLMs</a>
-        <a href="/general-bots/vector-retrieval">Vector Retrieval</a>
-        <a href="/general-bots/open-source">Open Source</a>
-      </div>
-      <button class="mobile-dropdown-trigger" data-target="mob-features">
-        Features
-        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 5l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </button>
-      <div id="mob-features" class="mobile-dropdown-content hidden">
-        <a href="/features/ai-search">AI Search</a>
-        <a href="/features/content-generation">Content Generation</a>
-        <a href="/features/custom-copilot">Custom Copilot</a>
-        <a href="/features/data-analysis">Data Analysis</a>
-        <a href="/features/help-center">Help Center</a>
-        <a href="/features/knowledge-retrieval">Knowledge Retrieval</a>
-        <a href="/features/llm-orchestration">LLM Orchestration</a>
-        <a href="/features/process-automation">Process Automation</a>
-        <a href="/features/web-automation">Web Automation</a>
-      </div>
-      <button class="mobile-dropdown-trigger" data-target="mob-integrations">
-        Integrations
-        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 5l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </button>
-      <div id="mob-integrations" class="mobile-dropdown-content hidden">
-        <a href="/integrations/channels/email">Email</a>
-        <a href="/integrations/channels/facebook-pages">Facebook Pages</a>
-        <a href="/integrations/channels/google-chat">Google Chat</a>
-        <a href="/integrations/channels/instagram">Instagram</a>
-        <a href="/integrations/channels/microsoft-teams">Microsoft Teams</a>
-        <a href="/integrations/channels/slack">Slack</a>
-        <a href="/integrations/channels/sms">SMS</a>
-        <a href="/integrations/channels/web-chat">Web Chat</a>
-        <a href="/integrations/channels/whatsapp">WhatsApp</a>
-      </div>
-      <a href="/templates" class="mobile-nav-link">Templates</a>
-      <button class="mobile-dropdown-trigger" data-target="mob-resources">
-        Resources
-        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 5l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </button>
-      <div id="mob-resources" class="mobile-dropdown-content hidden">
-        <a href="/resources/considering">Considering</a>
-        <a href="/resources/already-using">Already Using</a>
-        <a href="/resources/community">Community</a>
-        <a href="/resources/marketplaces">Marketplaces</a>
-      </div>
-      <a href="/pricing" class="mobile-nav-link">Hosting</a>
-      <a href="/contact" class="mobile-nav-link">Contact</a>
-      <a href="tel:+552140402160" class="mobile-phone">+55 21 4040-2160</a>
-    </div>
-  </header>
+<section id="channels" class="page-section-lg reveal">
+<div class="container">
+<div class="text-center mb-12">
+<h2 class="text-3xl font-bold tracking-tighter mb-4">Omnichannel Communication</h2>
+<p class="text-lg text-muted max-w-2xl mx-auto leading-relaxed">Meet your customers where they already are. Deploy your bot once and sync personality across every channel.</p>
+</div>
+<div class="grid-3">
+<div class="glass-card p-8">
+<h3 class="text-xl font-bold mb-4">Meta Ecosystem</h3>
+<ul class="feature-list">
+<li>WhatsApp Business API</li>
+<li>Instagram Direct Messenger</li>
+<li>Facebook Messenger</li>
+</ul>
+</div>
+<div class="glass-card p-8">
+<h3 class="text-xl font-bold mb-4">Team Collaboration</h3>
+<ul class="feature-list">
+<li>Microsoft Teams</li>
+<li>Slack Enterprise</li>
+<li>Google Chat</li>
+</ul>
+</div>
+<div class="glass-card p-8">
+<h3 class="text-xl font-bold mb-4">Standard Channels</h3>
+<ul class="feature-list">
+<li>Web Chat Widget</li>
+<li>Email Automation</li>
+<li>SMS & Voice</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
 
-  <main style="padding-top:4rem;">
-    <section class="page-section-lg vitral-bg">
-      <div class="container" style="max-width:800px;">
-        <div class="text-center reveal">
-          <h1 class="text-4xl font-bold tracking-tight mb-4">Integrations</h1>
-          <p class="text-lg text-muted leading-relaxed mb-12">Connect General Bots with the tools and platforms your team already uses.</p>
-        </div>
+<section id="enterprise" class="page-section-lg bg-gray-50 reveal">
+<div class="container">
+<div class="text-center mb-12">
+<h2 class="text-3xl font-bold tracking-tighter mb-4">Enterprise Data Systems</h2>
+<p class="text-lg text-muted max-w-2xl mx-auto leading-relaxed">Intelligence is only as good as the data it can access. We connect to your core infrastructure securely.</p>
+</div>
+<div class="grid-2">
+<div class="glass-card p-10">
+<h3 class="text-2xl font-bold mb-4">Document Storage</h3>
+<p class="text-muted mb-6">Seamlessly index and retrieve knowledge from your existing document repositories with full permission inheritance.</p>
+<div class="flex flex-wrap gap-2">
+<span class="badge">SharePoint</span>
+<span class="badge">Google Drive</span>
+<span class="badge">OneDrive</span>
+<span class="badge">MinIO</span>
+</div>
+</div>
+<div class="glass-card p-10">
+<h3 class="text-2xl font-bold mb-4">Virtual Assistants</h3>
+<p class="text-muted mb-6">Extend the reach of your bot by integrating with global assistant ecosystems and proprietary copilot frameworks.</p>
+<div class="flex flex-wrap gap-2">
+<span class="badge">Alexa</span>
+<span class="badge">Microsoft Copilot</span>
+<span class="badge">ChatGPT Plus</span>
+</div>
+</div>
+</div>
+</div>
+</section>
 
-        <div class="grid-2 gap-6">
-          <div class="glass-card-bright card-hover reveal" style="padding:2rem;">
-            <div style="width:100%;aspect-ratio:16/9;background:#f8f8f8;border-radius:.5rem;margin-bottom:1.5rem;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;border:1px solid rgba(0,0,0,0.06)">
-              <svg width="100%" height="100%" viewBox="0 0 400 225" fill="none">
-                <defs><pattern id="gridI1" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(0,0,0,0.03)" stroke-width="1"/></pattern></defs>
-                <rect width="400" height="225" fill="url(#gridI1)"/>
-                <rect x="140" y="70" width="120" height="85" rx="8" fill="none" stroke="#111" stroke-width="2"/>
-                <path d="M 140 90 L 200 130 L 260 90" stroke="#111" stroke-width="2" stroke-linecap="round"/>
-                <circle cx="100" cy="112" r="15" fill="#059669" opacity="0.2"/>
-                <circle cx="300" cy="112" r="15" fill="#059669" opacity="0.2"/>
-                <path d="M 100 112 L 140 112 M 260 112 L 300 112" stroke="#111" stroke-width="2" stroke-dasharray="4 4"/>
-              </svg>
-            </div>
-            <h2 class="text-xl font-semibold mb-2">Channels</h2>
-            <p class="text-sm text-muted leading-relaxed mb-6">Connect with your audience through multiple communication channels</p>
-            <div class="flex flex-wrap gap-2">
-              <a href="/integrations/channels/email" class="integration-btn">Email</a>
-              <a href="/integrations/channels/facebook-pages" class="integration-btn">Facebook Pages</a>
-              <a href="/integrations/channels/google-chat" class="integration-btn">Google Chat</a>
-              <a href="/integrations/channels/instagram" class="integration-btn">Instagram</a>
-              <a href="/integrations/channels/microsoft-teams" class="integration-btn">Microsoft Teams</a>
-              <a href="/integrations/channels/slack" class="integration-btn">Slack</a>
-              <a href="/integrations/channels/sms" class="integration-btn">SMS</a>
-              <a href="/integrations/channels/web-chat" class="integration-btn">Web Chat</a>
-              <a href="/integrations/channels/whatsapp" class="integration-btn">WhatsApp</a>
-            </div>
-          </div>
-
-          <div class="glass-card-bright card-hover reveal" style="padding:2rem;">
-            <div style="width:100%;aspect-ratio:16/9;background:#f8f8f8;border-radius:.5rem;margin-bottom:1.5rem;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;border:1px solid rgba(0,0,0,0.06)">
-              <svg width="100%" height="100%" viewBox="0 0 400 225" fill="none">
-                <defs><pattern id="gridI2" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(0,0,0,0.03)" stroke-width="1"/></pattern></defs>
-                <rect width="400" height="225" fill="url(#gridI2)"/>
-                <rect x="160" y="60" width="80" height="30" rx="4" fill="none" stroke="#111" stroke-width="2"/>
-                <rect x="160" y="100" width="80" height="30" rx="4" fill="none" stroke="#111" stroke-width="2"/>
-                <rect x="160" y="140" width="80" height="30" rx="4" fill="none" stroke="#111" stroke-width="2"/>
-                <circle cx="180" cy="75" r="3" fill="#059669"/>
-                <circle cx="180" cy="115" r="3" fill="#059669"/>
-                <circle cx="180" cy="155" r="3" fill="#059669"/>
-                <path d="M 120 75 L 160 75 M 120 115 L 160 115 M 120 155 L 160 155" stroke="#111" stroke-width="1.5" stroke-dasharray="2 2"/>
-                <path d="M 120 75 L 120 155" stroke="#111" stroke-width="2"/>
-              </svg>
-            </div>
-            <h2 class="text-xl font-semibold mb-2">Enterprise</h2>
-            <p class="text-sm text-muted leading-relaxed mb-6">Enterprise-grade integrations for your business infrastructure</p>
-            <div class="flex flex-wrap gap-2">
-              <a href="/integrations/enterprise/minio" class="integration-btn">MinIO</a>
-              <a href="/integrations/enterprise/project" class="integration-btn">Project</a>
-              <a href="/integrations/enterprise/sharepoint" class="integration-btn">SharePoint</a>
-            </div>
-          </div>
-
-          <div class="glass-card-bright card-hover reveal" style="padding:2rem;">
-            <div style="width:100%;aspect-ratio:16/9;background:#f8f8f8;border-radius:.5rem;margin-bottom:1.5rem;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;border:1px solid rgba(0,0,0,0.06)">
-              <svg width="100%" height="100%" viewBox="0 0 400 225" fill="none">
-                <defs><pattern id="gridI3" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(0,0,0,0.03)" stroke-width="1"/></pattern></defs>
-                <rect width="400" height="225" fill="url(#gridI3)"/>
-                <circle cx="200" cy="112" r="30" fill="none" stroke="#059669" stroke-width="2"/>
-                <circle cx="200" cy="112" r="10" fill="#059669"/>
-                <circle cx="140" cy="70" r="15" fill="#111" opacity="0.1"/>
-                <circle cx="260" cy="70" r="15" fill="#111" opacity="0.1"/>
-                <circle cx="200" cy="170" r="15" fill="#111" opacity="0.1"/>
-                <path d="M 152 80 L 182 100 M 248 80 L 218 100 M 200 155 L 200 135" stroke="#111" stroke-width="2" stroke-linecap="round"/>
-              </svg>
-            </div>
-            <h2 class="text-xl font-semibold mb-2">Team Work</h2>
-            <p class="text-sm text-muted leading-relaxed mb-6">Collaboration tools and team productivity integrations</p>
-            <div class="flex flex-wrap gap-2">
-              <a href="/integrations/team-work/whatsapp-facebook-workplace" class="integration-btn">WhatsApp + Facebook Workplace</a>
-              <a href="/integrations/team-work/whatsapp-google-workspace" class="integration-btn">WhatsApp + Google Workspace</a>
-              <a href="/integrations/team-work/whatsapp-microsoft-teams" class="integration-btn">WhatsApp + Microsoft Teams</a>
-            </div>
-          </div>
-
-          <div class="glass-card-bright card-hover reveal" style="padding:2rem;">
-            <div style="width:100%;aspect-ratio:16/9;background:#f8f8f8;border-radius:.5rem;margin-bottom:1.5rem;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;border:1px solid rgba(0,0,0,0.06)">
-              <svg width="100%" height="100%" viewBox="0 0 400 225" fill="none">
-                <defs><pattern id="gridI4" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(0,0,0,0.03)" stroke-width="1"/></pattern></defs>
-                <rect width="400" height="225" fill="url(#gridI4)"/>
-                <rect x="160" y="80" width="80" height="65" rx="12" fill="none" stroke="#111" stroke-width="2"/>
-                <circle cx="185" cy="105" r="4" fill="#059669"/>
-                <circle cx="215" cy="105" r="4" fill="#059669"/>
-                <path d="M 190 125 L 210 125" stroke="#111" stroke-width="2" stroke-linecap="round"/>
-                <path d="M 140 100 L 160 100 M 240 100 L 260 100" stroke="#111" stroke-width="2" stroke-linecap="round"/>
-                <path d="M 200 80 L 200 60" stroke="#111" stroke-width="2" stroke-linecap="round"/>
-                <circle cx="200" cy="55" r="5" fill="#059669"/>
-              </svg>
-            </div>
-            <h2 class="text-xl font-semibold mb-2">Virtual Assistants</h2>
-            <p class="text-sm text-muted leading-relaxed mb-6">Connect with popular virtual assistant platforms</p>
-            <div class="flex flex-wrap gap-2">
-              <a href="/integrations/virtual-assistants/alexa" class="integration-btn">Alexa</a>
-              <a href="/integrations/virtual-assistants/chat-gpt" class="integration-btn">ChatGPT</a>
-              <a href="/integrations/virtual-assistants/microsoft-copilot" class="integration-btn">Microsoft Copilot</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="text-center mt-12 reveal">
-          <h3 class="text-2xl font-semibold mb-4">Need a Custom Integration?</h3>
-          <div class="flex flex-wrap justify-center gap-4">
-            <a href="/contact" class="btn btn-primary btn-lg">Contact Our Team</a>
-            <a href="https://docs.pragmatismo.com.br" target="_blank" rel="noopener" class="btn btn-outline btn-lg">View Documentation</a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-top">
-        <div class="footer-brand">
-          <img src="/gb-logo.png" alt="General Bots" width="140" height="33" class="footer-logo">
-          <p>General Bots® — The Open Source AI Bot Platform</p>
-          <p>DPO: Rodrigo Rodriguez<br><a href="mailto:security@pragmatismo.com.br">security@pragmatismo.com.br</a></p>
-          <p>Rio de Janeiro – São Paulo – Paraná, Brazil<br><a href="tel:+552140402160">+55 21 4040-2160</a></p>
-        </div>
-        <div class="footer-col">
-          <h5>General Bots</h5>
-          <a href="/general-bots/llms">LLMs</a>
-          <a href="/general-bots/vector-retrieval">Vector Retrieval</a>
-          <a href="/general-bots/open-source">Open Source</a>
-          <a href="/features">Features</a>
-          <a href="/integrations">Integrations</a>
-        </div>
-        <div class="footer-col">
-          <h5>Hosting</h5>
-          <a href="/pricing/azure">Azure</a>
-          <a href="/pricing/aws">AWS</a>
-          <a href="/pricing/google-cloud">Google Cloud</a>
-          <a href="/pricing/digital-ocean">Digital Ocean</a>
-          <a href="/pricing/on-premises">On Premises</a>
-        </div>
-        <div class="footer-col">
-          <h5>Community</h5>
-          <a href="https://github.com/GeneralBots" target="_blank" rel="noopener">GitHub</a>
-          <a href="/resources/community">Community</a>
-          <a href="/resources/community/become-a-partner">Become a Partner</a>
-          <a href="/blog">Blog</a>
-        </div>
-      </div>
-      <div class="footer-middle">
-        <div class="footer-social">
-          <a href="https://github.com/GeneralBots" target="_blank" rel="noopener" aria-label="GitHub">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-          </a>
-          <a href="https://instagram.com/generalbots" target="_blank" rel="noopener" aria-label="Instagram">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-          </a>
-          <a href="https://wa.me/552140402160" target="_blank" rel="noopener" aria-label="WhatsApp">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.881 11.881 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-          </a>
-        </div>
-        <div>
-          <a href="/terms">Terms</a> &nbsp;·&nbsp; <a href="/privacy">Privacy</a>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>Copyright &copy; 2016-2026 Pragmatismo. All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
-
-  <script src="/js/site.js"></script>
+<section class="page-section-lg vitral-bg reveal">
+<div class="container text-center">
+<h2 class="text-3xl font-bold tracking-tighter mb-4">Build Your Connected Bot</h2>
+<p class="text-lg text-muted max-w-2xl mx-auto mb-8 leading-relaxed">One orchestration platform, infinite possibilities. Contact us to discuss your specific integration requirements.</p>
+<div class="flex flex-wrap gap-4 justify-center">
+<a href="/contact/" class="btn btn-outline btn-lg">Contact Us</a>
+<a href="/contact/" class="btn btn-primary btn-lg">Get Started</a>
+</div>
+</div>
+</section>
+</main>
+<div hx-get="/partials/footer.html" hx-swap="innerHTML" hx-trigger="load"></div>
+<script src="https://unpkg.com/htmx.org@2.0.4"></script>
+<script src="/js/site.js"></script>
 </body>
 </html>

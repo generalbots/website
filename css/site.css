@@ -341,3 +341,7 @@ padding:2rem;text-align:center;
 .resource-link:hover{background:var(--secondary);border-color:var(--border)}
 .resource-arrow{flex-shrink:0;opacity:.3;transition:opacity .15s,transform .15s}
 .resource-link:hover .resource-arrow{opacity:1;transform:translateX(2px)}
+
+.gh-badge{display:inline-flex;align-items:center;justify-content:center;color:var(--muted-foreground);transition:color .2s}
+.gh-badge:hover{color:var(--foreground)}
+@media(max-width:768px){.gh-badge{display:none}}

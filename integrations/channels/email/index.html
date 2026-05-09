@@ -2,174 +2,45 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Email Integration | General Bots</title>
-<meta name="description" content="Automate email communications with General Bots. Smart routing, template management, response generation, attachment processing, and priority sorting.">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Email Integration: Sovereign Inbox Orchestration | General Bots</title>
+<meta name="description" content="Technical guide to Email integration with General Bots. Deploy sovereign AI Search and automated response orchestration on the most robust asynchronous channel.">
 <meta name="robots" content="index, follow">
+<link rel="canonical" href="https://generalbots.org/integrations/channels/email/">
+<meta property="og:title" content="Email Integration: Sovereign Inbox Orchestration | General Bots">
+<meta property="og:description" content="Technical guide to Email &amp; AI.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://generalbots.org/integrations/channels/email/">
 <link rel="icon" href="/favicon.ico">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="stylesheet" href="/css/site.css">
 </head>
 <body>
-
-<header class="site-header">
-<div class="header-inner">
-<a href="/" class="logo-link"><img src="/gb-logo.png" alt="General Bots" width="140" height="33"></a>
-<a href="tel:+552140402160" class="phone-link">+55 21 4040-2160</a>
-<nav class="nav-desktop">
-<a href="/">Home</a>
-<div class="nav-dropdown"><button class="nav-dropdown-trigger" aria-expanded="false">General Bots<svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 5l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="nav-dropdown-content hidden"><a href="/general-bots/llms">LLMs</a><a href="/general-bots/vector-retrieval">Vector Retrieval</a><a href="/general-bots/open-source">Open Source</a></div></div>
-<div class="nav-dropdown"><button class="nav-dropdown-trigger" aria-expanded="false">Features<svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 5l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="nav-dropdown-content hidden"><a href="/features/ai-search">AI Search</a><a href="/features/content-generation">Content Generation</a><a href="/features/custom-copilot">Custom Copilot</a><a href="/features/data-analysis">Data Analysis</a><a href="/features/help-center">Help Center</a><a href="/features/knowledge-retrieval">Knowledge Retrieval</a><a href="/features/llm-orchestration">LLM Orchestration</a><a href="/features/process-automation">Process Automation</a><a href="/features/web-automation">Web Automation</a></div></div>
-<div class="nav-dropdown"><button class="nav-dropdown-trigger" aria-expanded="false">Integrations<svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 5l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="nav-dropdown-content hidden"><a href="/integrations/channels/email">Email</a><a href="/integrations/channels/facebook-pages">Facebook Pages</a><a href="/integrations/channels/google-chat">Google Chat</a><a href="/integrations/channels/instagram">Instagram</a><a href="/integrations/channels/microsoft-teams">Microsoft Teams</a><a href="/integrations/channels/slack">Slack</a><a href="/integrations/channels/sms">SMS</a><a href="/integrations/channels/web-chat">Web Chat</a><a href="/integrations/channels/whatsapp">WhatsApp</a></div></div>
-<a href="/templates">Templates</a>
-<div class="nav-dropdown"><button class="nav-dropdown-trigger" aria-expanded="false">Resources<svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 5l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="nav-dropdown-content hidden"><a href="/resources/considering">Considering</a><a href="/resources/already-using">Already Using</a><a href="/resources/community">Community</a><a href="/resources/marketplaces">Marketplaces</a></div></div>
-<a href="/pricing">Hosting</a><a href="/contact">Contact</a>
-</nav>
-<div class="gtranslate_wrapper"></div>
-<button id="mobile-menu-toggle" class="nav-mobile-toggle" aria-label="Toggle menu"><svg class="menu-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg><svg class="close-icon hidden" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="6" y1="18" x2="18" y2="6"/></svg></button>
-</div>
-<div id="mobile-menu" class="hidden">
-<a href="/" class="mobile-nav-link">Home</a>
-<button class="mobile-dropdown-trigger" data-target="mob-general-bots">General Bots<svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 5l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div id="mob-general-bots" class="mobile-dropdown-content hidden"><a href="/general-bots/llms">LLMs</a><a href="/general-bots/vector-retrieval">Vector Retrieval</a><a href="/general-bots/open-source">Open Source</a></div>
-<button class="mobile-dropdown-trigger" data-target="mob-features">Features<svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 5l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div id="mob-features" class="mobile-dropdown-content hidden"><a href="/features/ai-search">AI Search</a><a href="/features/content-generation">Content Generation</a><a href="/features/custom-copilot">Custom Copilot</a><a href="/features/data-analysis">Data Analysis</a><a href="/features/help-center">Help Center</a><a href="/features/knowledge-retrieval">Knowledge Retrieval</a><a href="/features/llm-orchestration">LLM Orchestration</a><a href="/features/process-automation">Process Automation</a><a href="/features/web-automation">Web Automation</a></div>
-<button class="mobile-dropdown-trigger" data-target="mob-integrations">Integrations<svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 5l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div id="mob-integrations" class="mobile-dropdown-content hidden"><a href="/integrations/channels/email">Email</a><a href="/integrations/channels/facebook-pages">Facebook Pages</a><a href="/integrations/channels/google-chat">Google Chat</a><a href="/integrations/channels/instagram">Instagram</a><a href="/integrations/channels/microsoft-teams">Microsoft Teams</a><a href="/integrations/channels/slack">Slack</a><a href="/integrations/channels/sms">SMS</a><a href="/integrations/channels/web-chat">Web Chat</a><a href="/integrations/channels/whatsapp">WhatsApp</a></div>
-<a href="/templates" class="mobile-nav-link">Templates</a>
-<button class="mobile-dropdown-trigger" data-target="mob-resources">Resources<svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 5l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div id="mob-resources" class="mobile-dropdown-content hidden"><a href="/resources/considering">Considering</a><a href="/resources/already-using">Already Using</a><a href="/resources/community">Community</a><a href="/resources/marketplaces">Marketplaces</a></div>
-<a href="/pricing" class="mobile-nav-link">Hosting</a><a href="/contact" class="mobile-nav-link">Contact</a><a href="tel:+552140402160" class="mobile-phone">+55 21 4040-2160</a>
-</div>
-</header>
-
-<main style="padding-top:4rem;">
-
-<section class="page-section-lg hero-gradient vitral-bg">
+<div hx-get="/partials/header.html" hx-swap="innerHTML" hx-trigger="load"></div>
+<main style="padding-top:4rem">
+<section class="page-section-lg vitral-bg">
 <div class="container">
+<div class="grid-2 items-center">
 <div class="reveal">
-<a href="/integrations" class="text-sm text-muted" style="display:inline-flex;align-items:center;gap:.375rem;margin-bottom:1.5rem"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>Back to Integrations</a>
-<div class="badge mb-4" style="width:fit-content"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>Email</div>
-<h1 class="text-4xl font-bold tracking-tighter mb-4" style="font-size:clamp(2rem,5vw,3rem)">Automate Email Communications</h1>
-<p class="text-lg text-muted max-w-3xl leading-relaxed mb-8">Transform your email workflows with AI-powered routing, response generation, and intelligent thread management that saves hours of manual work.</p>
-<div class="flex flex-wrap gap-4 mb-8">
-<a href="/contact" class="btn btn-primary btn-lg">Get in Touch</a>
-<a href="#features" class="btn btn-outline btn-lg">Learn More</a>
+<div class="badge mb-4">Enterprise Channels</div>
+<h1 class="text-5xl font-bold tracking-tighter mb-6" style="line-height:1.1">Email AI Automation.</h1>
+<p class="text-xl text-muted leading-relaxed mb-8">Deploy sovereign AI Search and automated inbox orchestration on the world's most robust asynchronous channel. Manage complexity with GLM 5.1 precision.</p>
+<div class="flex items-center gap-4">
+<a href="/contact/" class="btn btn-primary btn-lg">Deploy Email Bot</a>
+<a href="/contact/" class="btn btn-outline btn-lg">Request Analysis</a>
 </div>
 </div>
-<div class="reveal" style="margin-top:2rem"><div class="glass-card-bright" style="padding:2rem;text-align:center;max-width:32rem"><div style="width:100%;aspect-ratio:16/10;background:var(--muted);border-radius:var(--radius);display:flex;align-items:center;justify-content:center"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" style="opacity:.15"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div></div></div>
-</div>
-</section>
-
-<section id="features" class="page-section-lg">
-<div class="container">
-<div class="text-center reveal">
-<div class="badge mb-4" style="margin-left:auto;margin-right:auto;width:fit-content"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>Features</div>
-<h2 class="text-3xl font-bold tracking-tighter mb-4">Powerful Email Features</h2>
-<p class="text-lg text-muted max-w-2xl mx-auto leading-relaxed mb-12">Everything you need to automate and streamline email communications.</p>
-</div>
-<div class="grid-3">
-<div class="glass-card-bright card-hover reveal" style="padding:2rem">
-<div style="width:100%;aspect-ratio:16/9;background:#f8f8f8;border-radius:.5rem;margin-bottom:1.5rem;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;border:1px solid rgba(0,0,0,0.06)">
-  <svg width="100%" height="100%" viewBox="0 0 400 225" fill="none">
-    <defs><pattern id="gridC2" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(0,0,0,0.03)" stroke-width="1"/></pattern></defs>
-    <rect width="400" height="225" fill="url(#gridC2)"/>
-    <rect x="160" y="80" width="80" height="65" rx="8" fill="none" stroke="#111" stroke-width="2"/>
-    <path d="M 180 112 H 220" stroke="#059669" stroke-width="3" stroke-linecap="round"/>
-    <circle cx="160" cy="112" r="4" fill="#111"/>
-    <circle cx="240" cy="112" r="4" fill="#111"/>
+<div class="reveal">
+<div style="width:100%;aspect-ratio:1/1;background:#f8f8f8;border-radius:2rem;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;border:1px solid rgba(0,0,0,0.06)">
+  <svg width="80%" height="80%" viewBox="0 0 400 400" fill="none">
+    <defs><pattern id="gridEM" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(0,0,0,0.03)" stroke-width="1"/></pattern></defs>
+    <rect width="400" height="400" fill="url(#gridEM)"/>
+    <path d="M50 100 H350" stroke="#111" stroke-width="1" opacity="0.1" />
+    <rect x="100" y="150" width="200" height="120" rx="4" stroke="#059669" stroke-width="2" fill="none" />
+    <path d="M100 150 L200 210 L300 150" stroke="#059669" stroke-width="2" />
+    <circle cx="200" cy="210" r="4" fill="#059669" />
   </svg>
 </div>
-<h3 class="text-xl font-semibold mb-2">Smart Routing</h3>
-<p class="text-sm text-muted leading-relaxed mb-4">Automatically direct emails to the right team or bot based on content and context.</p>
-<ul class="feature-list">
-<li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>Content-based routing</li>
-<li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>Department assignment</li>
-<li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>Escalation rules</li>
-</ul>
-</div>
-<div class="glass-card-bright card-hover reveal" style="padding:2rem">
-<div style="width:100%;aspect-ratio:16/9;background:#f8f8f8;border-radius:.5rem;margin-bottom:1.5rem;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;border:1px solid rgba(0,0,0,0.06)">
-  <svg width="100%" height="100%" viewBox="0 0 400 225" fill="none">
-    <defs><pattern id="gridC1" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(0,0,0,0.03)" stroke-width="1"/></pattern></defs>
-    <rect width="400" height="225" fill="url(#gridC1)"/>
-    <circle cx="200" cy="112" r="30" fill="none" stroke="#111" stroke-width="2"/>
-    <path d="M 170 112 L 230 112 M 200 82 L 200 142" stroke="#059669" stroke-width="2" stroke-linecap="round"/>
-    <circle cx="200" cy="112" r="8" fill="#059669" opacity="0.2"/>
-  </svg>
-</div>
-<h3 class="text-xl font-semibold mb-2">Template Management</h3>
-<p class="text-sm text-muted leading-relaxed mb-4">Create and manage reusable email templates for consistent communication.</p>
-<ul class="feature-list">
-<li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>Dynamic placeholders</li>
-<li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>Brand-consistent designs</li>
-<li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>Version control</li>
-</ul>
-</div>
-<div class="glass-card-bright card-hover reveal" style="padding:2rem">
-<div style="width:100%;aspect-ratio:16/9;background:#f8f8f8;border-radius:.5rem;margin-bottom:1.5rem;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;border:1px solid rgba(0,0,0,0.06)">
-  <svg width="100%" height="100%" viewBox="0 0 400 225" fill="none">
-    <defs><pattern id="gridC3" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(0,0,0,0.03)" stroke-width="1"/></pattern></defs>
-    <rect width="400" height="225" fill="url(#gridC3)"/>
-    <path d="M 150 112 L 200 62 L 250 112 L 200 162 Z" fill="none" stroke="#111" stroke-width="2"/>
-    <circle cx="200" cy="112" r="15" fill="#059669" opacity="0.3"/>
-    <circle cx="200" cy="112" r="5" fill="#059669"/>
-  </svg>
-</div>
-<h3 class="text-xl font-semibold mb-2">Response Generation</h3>
-<p class="text-sm text-muted leading-relaxed mb-4">AI-generated email responses that match your tone and context.</p>
-<ul class="feature-list">
-<li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>Context-aware drafts</li>
-<li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>Tone matching</li>
-<li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>Human review option</li>
-</ul>
-</div>
-</div>
-</div>
-</section>
-
-<section class="page-section vitral-bg">
-<div class="container">
-<div class="text-center reveal">
-<div class="badge mb-4" style="margin-left:auto;margin-right:auto;width:fit-content"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>Advanced Capabilities</div>
-<h2 class="text-3xl font-bold tracking-tighter mb-4">Advanced Email Capabilities</h2>
-<p class="text-lg text-muted max-w-2xl mx-auto leading-relaxed mb-12">Enterprise-grade email automation for complex communication workflows.</p>
-</div>
-<div class="grid-3">
-<div class="glass-card-bright card-hover reveal" style="padding:2rem">
-<div style="width:100%;aspect-ratio:16/9;background:#f8f8f8;border-radius:.5rem;margin-bottom:1.5rem;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;border:1px solid rgba(0,0,0,0.06)">
-  <svg width="100%" height="100%" viewBox="0 0 400 225" fill="none">
-    <defs><pattern id="gridCGen" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(0,0,0,0.03)" stroke-width="1"/></pattern></defs>
-    <rect width="400" height="225" fill="url(#gridCGen)"/>
-    <path d="M 180 112 L 200 82 L 220 112 L 200 142 Z" fill="none" stroke="#111" stroke-width="2"/>
-    <circle cx="200" cy="112" r="6" fill="#059669"/>
-    <path d="M 140 112 H 160 M 240 112 H 260" stroke="#111" stroke-width="2"/>
-  </svg>
-</div>
-<h3 class="text-xl font-semibold mb-2">Attachment Processing</h3>
-<p class="text-sm text-muted leading-relaxed">Automatically parse, analyze, and respond to email attachments including PDFs, images, and documents.</p>
-</div>
-<div class="glass-card-bright card-hover reveal" style="padding:2rem">
-<div style="width:100%;aspect-ratio:16/9;background:#f8f8f8;border-radius:.5rem;margin-bottom:1.5rem;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;border:1px solid rgba(0,0,0,0.06)">
-  <svg width="100%" height="100%" viewBox="0 0 400 225" fill="none">
-    <defs><pattern id="gridCGen" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(0,0,0,0.03)" stroke-width="1"/></pattern></defs>
-    <rect width="400" height="225" fill="url(#gridCGen)"/>
-    <path d="M 180 112 L 200 82 L 220 112 L 200 142 Z" fill="none" stroke="#111" stroke-width="2"/>
-    <circle cx="200" cy="112" r="6" fill="#059669"/>
-    <path d="M 140 112 H 160 M 240 112 H 260" stroke="#111" stroke-width="2"/>
-  </svg>
-</div>
-<h3 class="text-xl font-semibold mb-2">Thread Management</h3>
-<p class="text-sm text-muted leading-relaxed">Maintain full conversation context across email threads for coherent, informed responses.</p>
-</div>
-<div class="glass-card-bright card-hover reveal" style="padding:2rem">
-<div style="width:100%;aspect-ratio:16/9;background:#f8f8f8;border-radius:.5rem;margin-bottom:1.5rem;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;border:1px solid rgba(0,0,0,0.06)">
-  <svg width="100%" height="100%" viewBox="0 0 400 225" fill="none">
-    <defs><pattern id="gridCGen" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(0,0,0,0.03)" stroke-width="1"/></pattern></defs>
-    <rect width="400" height="225" fill="url(#gridCGen)"/>
-    <path d="M 180 112 L 200 82 L 220 112 L 200 142 Z" fill="none" stroke="#111" stroke-width="2"/>
-    <circle cx="200" cy="112" r="6" fill="#059669"/>
-    <path d="M 140 112 H 160 M 240 112 H 260" stroke="#111" stroke-width="2"/>
-  </svg>
-</div>
-<h3 class="text-xl font-semibold mb-2">Priority Sorting</h3>
-<p class="text-sm text-muted leading-relaxed">AI-powered prioritization ensures urgent emails get immediate attention while routine ones are queued appropriately.</p>
 </div>
 </div>
 </div>
@@ -177,145 +48,46 @@
 
 <section class="page-section-lg">
 <div class="container">
-<div class="text-center reveal">
-<div class="badge mb-4" style="margin-left:auto;margin-right:auto;width:fit-content"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>Use Cases</div>
-<h2 class="text-3xl font-bold tracking-tighter mb-4">How Teams Use Email Bots</h2>
-<p class="text-lg text-muted max-w-2xl mx-auto leading-relaxed mb-12">Real-world email automation scenarios that save time and improve quality.</p>
+<div class="text-center mb-16 reveal">
+<h2 class="text-3xl font-bold tracking-tighter mb-4">The Standard of Correspondence.</h2>
+<p class="text-lg text-muted max-w-2xl mx-auto">Email is the "Asynchronous Standard" for professional record-keeping. General Bots transforms your inbox into a didactic knowledge node with sovereign AI Search.</p>
 </div>
 <div class="grid-3">
-<div class="glass-card-bright card-hover reveal" style="padding:2rem">
-<div style="width:100%;aspect-ratio:16/9;background:#f8f8f8;border-radius:.5rem;margin-bottom:1.5rem;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;border:1px solid rgba(0,0,0,0.06)">
+<div class="glass-card p-8 reveal">
+<div style="width:100%;aspect-ratio:16/9;background:#f8f8f8;border-radius:1rem;margin-bottom:1.5rem;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;border:1px solid rgba(0,0,0,0.06)">
   <svg width="100%" height="100%" viewBox="0 0 400 225" fill="none">
-    <defs><pattern id="gridC2" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(0,0,0,0.03)" stroke-width="1"/></pattern></defs>
-    <rect width="400" height="225" fill="url(#gridC2)"/>
-    <rect x="160" y="80" width="80" height="65" rx="8" fill="none" stroke="#111" stroke-width="2"/>
-    <path d="M 180 112 H 220" stroke="#059669" stroke-width="3" stroke-linecap="round"/>
-    <circle cx="160" cy="112" r="4" fill="#111"/>
-    <circle cx="240" cy="112" r="4" fill="#111"/>
+    <path d="M160 112 H240" stroke="#059669" stroke-width="2" />
+    <path d="M180 92 L220 132" stroke="#111" stroke-width="1" opacity="0.2" />
   </svg>
 </div>
-<h3 class="text-xl font-semibold mb-2">Customer Support</h3>
-<p class="text-sm text-muted leading-relaxed">Automate first-line email responses, triage incoming requests, and ensure faster resolution times.</p>
+<h3 class="text-xl font-bold mb-3">AI Response Drafting</h3>
+<p class="text-sm text-muted leading-relaxed">Automatically draft high-fidelity responses based on your sovereign data index. Maintain professional tone and didactic accuracy in every reply.</p>
 </div>
-<div class="glass-card-bright card-hover reveal" style="padding:2rem">
-<div style="width:100%;aspect-ratio:16/9;background:#f8f8f8;border-radius:.5rem;margin-bottom:1.5rem;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;border:1px solid rgba(0,0,0,0.06)">
+<div class="glass-card p-8 reveal" style="transition-delay:0.1s">
+<div style="width:100%;aspect-ratio:16/9;background:#f8f8f8;border-radius:1rem;margin-bottom:1.5rem;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;border:1px solid rgba(0,0,0,0.06)">
   <svg width="100%" height="100%" viewBox="0 0 400 225" fill="none">
-    <defs><pattern id="gridC1" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(0,0,0,0.03)" stroke-width="1"/></pattern></defs>
-    <rect width="400" height="225" fill="url(#gridC1)"/>
-    <circle cx="200" cy="112" r="30" fill="none" stroke="#111" stroke-width="2"/>
-    <path d="M 170 112 L 230 112 M 200 82 L 200 142" stroke="#059669" stroke-width="2" stroke-linecap="round"/>
-    <circle cx="200" cy="112" r="8" fill="#059669" opacity="0.2"/>
+    <circle cx="200" cy="112" r="35" stroke="#059669" stroke-width="2" fill="none" />
+    <path d="M200 80 V144" stroke="#111" stroke-width="1" opacity="0.1" />
   </svg>
 </div>
-<h3 class="text-xl font-semibold mb-2">Internal Communications</h3>
-<p class="text-sm text-muted leading-relaxed">Streamline internal email workflows with automated routing, summaries, and follow-up reminders.</p>
+<h3 class="text-xl font-bold mb-3">Inbox AI Search</h3>
+<p class="text-sm text-muted leading-relaxed">Let users email their queries and receive document-backed answers. The "De Facto" standard for automated customer success and documentation access.</p>
 </div>
-<div class="glass-card-bright card-hover reveal" style="padding:2rem">
-<div style="width:100%;aspect-ratio:16/9;background:#f8f8f8;border-radius:.5rem;margin-bottom:1.5rem;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;border:1px solid rgba(0,0,0,0.06)">
+<div class="glass-card p-8 reveal" style="transition-delay:0.2s">
+<div style="width:100%;aspect-ratio:16/9;background:#f8f8f8;border-radius:1rem;margin-bottom:1.5rem;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;border:1px solid rgba(0,0,0,0.06)">
   <svg width="100%" height="100%" viewBox="0 0 400 225" fill="none">
-    <defs><pattern id="gridC3" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(0,0,0,0.03)" stroke-width="1"/></pattern></defs>
-    <rect width="400" height="225" fill="url(#gridC3)"/>
-    <path d="M 150 112 L 200 62 L 250 112 L 200 162 Z" fill="none" stroke="#111" stroke-width="2"/>
-    <circle cx="200" cy="112" r="15" fill="#059669" opacity="0.3"/>
-    <circle cx="200" cy="112" r="5" fill="#059669"/>
+    <rect x="150" y="80" width="100" height="65" rx="8" stroke="#111" stroke-width="2" fill="none" />
   </svg>
 </div>
-<h3 class="text-xl font-semibold mb-2">Marketing Follow-up</h3>
-<p class="text-sm text-muted leading-relaxed">Automate personalized follow-up sequences based on customer interactions and engagement signals.</p>
+<h3 class="text-xl font-bold mb-3">Attachment Analysis</h3>
+<p class="text-sm text-muted leading-relaxed">Automatically parse and index PDFs, Word docs, and spreadsheets attached to emails for immediate processing in your AI workflows.</p>
 </div>
 </div>
 </div>
 </section>
-
-<section class="page-section vitral-bg">
-<div class="container">
-<div class="text-center reveal">
-<div class="badge mb-4" style="margin-left:auto;margin-right:auto;width:fit-content"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>Benefits</div>
-<h2 class="text-3xl font-bold tracking-tighter mb-4">Why Choose Email Integration</h2>
-<p class="text-lg text-muted max-w-2xl mx-auto leading-relaxed mb-12">Key advantages that transform your email operations.</p>
-</div>
-<div class="grid-3">
-<div class="glass-card-bright card-hover reveal" style="padding:2rem">
-<div style="width:100%;aspect-ratio:16/9;background:#f8f8f8;border-radius:.5rem;margin-bottom:1.5rem;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;border:1px solid rgba(0,0,0,0.06)">
-  <svg width="100%" height="100%" viewBox="0 0 400 225" fill="none">
-    <defs><pattern id="gridC2" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(0,0,0,0.03)" stroke-width="1"/></pattern></defs>
-    <rect width="400" height="225" fill="url(#gridC2)"/>
-    <rect x="160" y="80" width="80" height="65" rx="8" fill="none" stroke="#111" stroke-width="2"/>
-    <path d="M 180 112 H 220" stroke="#059669" stroke-width="3" stroke-linecap="round"/>
-    <circle cx="160" cy="112" r="4" fill="#111"/>
-    <circle cx="240" cy="112" r="4" fill="#111"/>
-  </svg>
-</div>
-<h3 class="text-xl font-semibold mb-2">Faster Response Times</h3>
-<p class="text-sm text-muted leading-relaxed">AI-generated drafts and automated replies cut email response times from hours to minutes.</p>
-</div>
-<div class="glass-card-bright card-hover reveal" style="padding:2rem">
-<div style="width:100%;aspect-ratio:16/9;background:#f8f8f8;border-radius:.5rem;margin-bottom:1.5rem;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;border:1px solid rgba(0,0,0,0.06)">
-  <svg width="100%" height="100%" viewBox="0 0 400 225" fill="none">
-    <defs><pattern id="gridC1" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(0,0,0,0.03)" stroke-width="1"/></pattern></defs>
-    <rect width="400" height="225" fill="url(#gridC1)"/>
-    <circle cx="200" cy="112" r="30" fill="none" stroke="#111" stroke-width="2"/>
-    <path d="M 170 112 L 230 112 M 200 82 L 200 142" stroke="#059669" stroke-width="2" stroke-linecap="round"/>
-    <circle cx="200" cy="112" r="8" fill="#059669" opacity="0.2"/>
-  </svg>
-</div>
-<h3 class="text-xl font-semibold mb-2">Consistent Branding</h3>
-<p class="text-sm text-muted leading-relaxed">Template-managed responses ensure every email reflects your brand voice and professional standards.</p>
-</div>
-<div class="glass-card-bright card-hover reveal" style="padding:2rem">
-<div style="width:100%;aspect-ratio:16/9;background:#f8f8f8;border-radius:.5rem;margin-bottom:1.5rem;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;border:1px solid rgba(0,0,0,0.06)">
-  <svg width="100%" height="100%" viewBox="0 0 400 225" fill="none">
-    <defs><pattern id="gridC3" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(0,0,0,0.03)" stroke-width="1"/></pattern></defs>
-    <rect width="400" height="225" fill="url(#gridC3)"/>
-    <path d="M 150 112 L 200 62 L 250 112 L 200 162 Z" fill="none" stroke="#111" stroke-width="2"/>
-    <circle cx="200" cy="112" r="15" fill="#059669" opacity="0.3"/>
-    <circle cx="200" cy="112" r="5" fill="#059669"/>
-  </svg>
-</div>
-<h3 class="text-xl font-semibold mb-2">Reduced Manual Work</h3>
-<p class="text-sm text-muted leading-relaxed">Automate repetitive email tasks so your team can focus on high-value interactions that require a human touch.</p>
-</div>
-</div>
-</div>
-</section>
-
-<section class="page-section-lg bg-gray-900 text-white">
-<div class="container text-center reveal">
-<h2 class="text-3xl font-bold tracking-tighter mb-4" style="color:#fff">Ready to Transform?</h2>
-<p class="text-lg max-w-2xl mx-auto leading-relaxed mb-8" style="color:rgba(255,255,255,.7)">Start automating your email communications with AI-powered bots today.</p>
-<div class="flex flex-wrap gap-4 justify-center">
-<a href="/contact" class="btn btn-lg" style="background:#fff;color:var(--primary)">Contact Us</a>
-<a href="/contact" class="btn btn-outline btn-lg" style="border-color:rgba(255,255,255,.3);color:#fff">Request Demo</a>
-</div>
-</div>
-</section>
-
 </main>
-
-<footer class="site-footer">
-<div class="container">
-<div class="footer-top">
-<div class="footer-brand">
-<img src="/gb-logo.png" alt="General Bots" width="140" height="33" class="footer-logo">
-<p>General Bots® — The Open Source AI Bot Platform</p>
-<p>DPO: Rodrigo Rodriguez<br><a href="mailto:security@pragmatismo.com.br">security@pragmatismo.com.br</a></p>
-</div>
-<div class="footer-col"><h5>General Bots</h5><a href="/general-bots/llms">LLMs</a><a href="/general-bots/vector-retrieval">Vector Retrieval</a><a href="/general-bots/open-source">Open Source</a><a href="/features">Features</a><a href="/integrations">Integrations</a></div>
-<div class="footer-col"><h5>Hosting</h5><a href="/pricing/azure">Azure</a><a href="/pricing/aws">AWS</a><a href="/pricing/google-cloud">Google Cloud</a><a href="/pricing/digital-ocean">Digital Ocean</a><a href="/pricing/on-premises">On Premises</a></div>
-<div class="footer-col"><h5>Community</h5><a href="https://github.com/GeneralBots" target="_blank" rel="noopener">GitHub</a><a href="/resources/community">Community</a><a href="/resources/community/become-a-partner">Become a Partner</a><a href="/blog">Blog</a></div>
-</div>
-<div class="footer-middle">
-<div class="footer-social">
-<a href="https://github.com/GeneralBots" target="_blank" rel="noopener" aria-label="GitHub"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
-<a href="https://instagram.com/generalbots" target="_blank" rel="noopener" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
-<a href="https://wa.me/552140402160" target="_blank" rel="noopener" aria-label="WhatsApp"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
-</div>
-<div><a href="/terms">Terms</a> &nbsp;·&nbsp; <a href="/privacy">Privacy</a></div>
-</div>
-<div class="footer-bottom"><p>Copyright &copy; 2016-2026 Pragmatismo. All rights reserved.</p></div>
-</div>
-</footer>
-
+<div hx-get="/partials/footer.html" hx-swap="innerHTML" hx-trigger="load"></div>
+<script src="https://unpkg.com/htmx.org@2.0.4"></script>
 <script src="/js/site.js"></script>
 </body>
 </html>

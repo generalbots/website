@@ -3,290 +3,63 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Digital Twins — Your AI-Powered Digital Replica | General Bots Blog</title>
-<meta name="description" content="How digital twins powered by AI are transforming personal productivity and business operations. Program your twin in BASIC — preferences, availability, and automatic responses.">
-<link rel="stylesheet" href="/css/site.css">
+<title>Digital Twins: Your AI-Powered Digital Replica | General Bots Blog</title>
+<meta name="description" content="A didactic analysis of digital twins. Learn how AI replicas transform personal productivity and industrial monitoring through sovereign orchestration.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://generalbots.org/blog/digital-twins/">
+<meta property="og:title" content="Digital Twins: Your AI-Powered Digital Replica | General Bots Blog">
+<meta property="og:description" content="Technical analysis of digital twin orchestration.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://generalbots.org/blog/digital-twins/">
 <link rel="icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="stylesheet" href="/css/site.css">
 </head>
 <body>
-<header class="site-header"><div class="header-inner">
-<a href="/" class="logo-link"><img src="/gb-logo.png" alt="General Bots" width="140" height="33"></a>
-<nav class="nav-desktop"><a href="/">Home</a><div class="nav-dropdown"><button class="nav-dropdown-trigger">General Bots <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5l3 3 3-3"/></svg></button><div class="nav-dropdown-content hidden"><a href="/general-bots/llm">LLMs</a><a href="/general-bots/vector-retrieval">Vector Retrieval</a><a href="/general-bots/open-source">Open Source</a></div></div><div class="nav-dropdown"><button class="nav-dropdown-trigger">Features <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5l3 3 3-3"/></svg></button><div class="nav-dropdown-content hidden"><a href="/features/ai-search">AI Search</a><a href="/features/content-generation">Content Generation</a><a href="/features/bot-factory">Bot Factory</a><a href="/features/talk-to-data">Talk to data</a><a href="/features/broadcast">Broadcast</a><a href="/features/trainning">Train</a><a href="/features/web-automation">Web Automation</a><a href="/features/llm-tools">LLM Tools</a><a href="/features/create-apis-in-word">Calling APIs</a></div></div><div class="nav-dropdown"><button class="nav-dropdown-trigger">Integrations <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5l3 3 3-3"/></svg></button><div class="nav-dropdown-content hidden"><a href="/integrations/channels/whatsapp">WhatsApp</a><a href="/integrations/channels/sms">SMS</a><a href="/integrations/channels/web-chat">Web Chat</a><a href="/integrations/channels/instagram">Instagram</a><a href="/integrations/channels/email">E-mail</a><a href="/integrations/channels/microsoft-teams">Microsoft Teams</a><a href="/integrations/channels/google-chat">Google Chat</a><a href="/integrations/channels/facebook-pages">Facebook Pages</a><a href="/integrations/channels/slack">Slack</a></div></div><a href="/templates">Templates</a><div class="nav-dropdown"><button class="nav-dropdown-trigger">Resources <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5l3 3 3-3"/></svg></button><div class="nav-dropdown-content hidden"><a href="/resources/considering/ai-powered-org">Considering</a><a href="/resources/already-using/essential-resources">Already Using</a><a href="/resources/community/become-a-partner">Community</a><a href="https://appsource.microsoft.com/pt-pt/product/web-apps/pragmatismoio-4835990.generalbot?tab=overview" target="_blank" rel="noopener">Marketplaces</a></div></div><a href="/pricing">Hosting</a><a href="/contact">Contact</a></nav>
-<div class="flex items-center gap-4"><a href="tel:+552140402160" class="phone-link" style="display:none" id="header-phone">+55 21 4040-2160</a><div class="gtranslate_wrapper"></div><button class="nav-mobile-toggle" id="mobile-menu-toggle" aria-label="Toggle menu"><svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg><svg class="close-icon hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M6 18L18 6"/></svg></button></div>
-</div></header>
-<div id="mobile-menu" class="hidden"><a href="/" class="mobile-nav-link">Home</a><div><button class="mobile-dropdown-trigger">General Bots <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><path d="M3 5l3 3 3-3"/></svg></button><div class="mobile-dropdown-content hidden"><a href="/general-bots/llm" class="mobile-nav-link">LLMs</a><a href="/general-bots/vector-retrieval" class="mobile-nav-link">Vector Retrieval</a><a href="/general-bots/open-source" class="mobile-nav-link">Open Source</a></div></div><div><button class="mobile-dropdown-trigger">Features <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><path d="M3 5l3 3 3-3"/></svg></button><div class="mobile-dropdown-content hidden"><a href="/features/ai-search" class="mobile-nav-link">AI Search</a><a href="/features/content-generation" class="mobile-nav-link">Content Generation</a><a href="/features/bot-factory" class="mobile-nav-link">Bot Factory</a><a href="/features/talk-to-data" class="mobile-nav-link">Talk to data</a><a href="/features/broadcast" class="mobile-nav-link">Broadcast</a><a href="/features/trainning" class="mobile-nav-link">Train</a><a href="/features/web-automation" class="mobile-nav-link">Web Automation</a><a href="/features/llm-tools" class="mobile-nav-link">LLM Tools</a><a href="/features/create-apis-in-word" class="mobile-nav-link">Calling APIs</a></div></div><div><button class="mobile-dropdown-trigger">Integrations <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><path d="M3 5l3 3 3-3"/></svg></button><div class="mobile-dropdown-content hidden"><a href="/integrations/channels/whatsapp" class="mobile-nav-link">WhatsApp</a><a href="/integrations/channels/sms" class="mobile-nav-link">SMS</a><a href="/integrations/channels/web-chat" class="mobile-nav-link">Web Chat</a><a href="/integrations/channels/instagram" class="mobile-nav-link">Instagram</a><a href="/integrations/channels/email" class="mobile-nav-link">E-mail</a><a href="/integrations/channels/microsoft-teams" class="mobile-nav-link">Microsoft Teams</a><a href="/integrations/channels/google-chat" class="mobile-nav-link">Google Chat</a><a href="/integrations/channels/facebook-pages" class="mobile-nav-link">Facebook Pages</a><a href="/integrations/channels/slack" class="mobile-nav-link">Slack</a></div></div><a href="/templates" class="mobile-nav-link">Templates</a><div><button class="mobile-dropdown-trigger">Resources <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><path d="M3 5l3 3 3-3"/></svg></button><div class="mobile-dropdown-content hidden"><a href="/resources/considering/ai-powered-org" class="mobile-nav-link">Considering</a><a href="/resources/already-using/essential-resources" class="mobile-nav-link">Already Using</a><a href="/resources/community/become-a-partner" class="mobile-nav-link">Community</a></div></div><a href="/pricing" class="mobile-nav-link">Hosting</a><a href="/contact" class="mobile-nav-link">Contact</a><span class="mobile-phone">+55 21 4040-2160</span></div>
+<div hx-get="/partials/header.html" hx-swap="innerHTML" hx-trigger="load"></div>
+<main style="padding-top:4rem">
+<article class="page-section reveal">
+<div class="container-narrow">
+<a href="/blog/" class="text-sm text-muted" style="display:inline-flex;align-items:center;gap:.375rem;margin-bottom:1.5rem">
+<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+Back to Blog
+</a>
+<div class="badge mb-4">Didactic Analysis</div>
+<h1 class="text-4xl font-bold tracking-tighter mb-6" style="line-height:1.1">Digital Twins: Architectural Replicas of Business Logic.</h1>
+<p class="text-lg text-muted mb-8 leading-relaxed">Technical exploration of how digital twins—powered by sovereign AI orchestration—are transforming personal productivity and industrial system monitoring.</p>
+<div class="blog-content prose">
+<p>A digital twin is more than a simulation; it is a virtual replica of a physical process, system, or entity that mirrors its real-world counterpart in real time. Originally developed for aerospace engineering—where NASA utilized twin models to simulate spacecraft behavior under extraterrestrial conditions—the concept has pivoted toward the enterprise. With the convergence of real-time data ingestion and Large Language Models, digital twins are now an architectural necessity for the AI-first organization.</p>
 
-<main style="padding-top:5rem">
-<section class="page-section vitral-bg">
-<div class="max-w-3xl mx-auto" style="padding:0 1rem">
-
-<a href="/blog" class="text-sm text-muted" style="display:inline-flex;align-items:center;gap:.375rem;margin-bottom:1.5rem"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> Back to Blog</a>
-
-<div class="reveal">
-<span class="badge badge-featured mb-4" style="display:inline-flex">Featured</span>
-<h1 class="text-4xl font-bold tracking-tight mb-4">Digital Twins: Your AI-Powered Digital Replica</h1>
-<p class="text-sm text-muted mb-8">Author: Pragmatismo Team</p>
-</div>
-
-<article class="reveal" style="font-size:1.0625rem;line-height:1.75;color:var(--foreground)">
-
-<div class="reveal">
-<h2 style="font-size:1.5rem;font-weight:700;margin:2rem 0 1rem;color:var(--foreground)">What Is a Digital Twin?</h2>
-<p style="margin-bottom:1.5rem">A digital twin is a virtual replica of a physical process, system, or entity that mirrors its real-world counterpart in real time. Originally developed for aerospace and manufacturing — where NASA used twin models to simulate spacecraft behavior under conditions impossible to reproduce on Earth — the concept has expanded far beyond industrial applications. With the convergence of IoT sensors, real-time data pipelines, and large language models, digital twins are now accessible to businesses and individuals who would never have considered them a decade ago.</p>
-<p style="margin-bottom:1.5rem">LLM Orchestrators are advanced AI systems that can automate practically any digital task, functioning as an intelligent and incredibly versatile personal assistant. Imagine an AI assistant that:</p>
-<ul style="list-style:none;padding:0;margin-bottom:1.5rem">
-<li style="margin-bottom:.5rem;padding-left:1.25rem;position:relative"><span style="position:absolute;left:0;color:var(--muted-foreground)">&bull;</span>Thinks and acts exactly like you</li>
-<li style="margin-bottom:.5rem;padding-left:1.25rem;position:relative"><span style="position:absolute;left:0;color:var(--muted-foreground)">&bull;</span>Works 24h without rest</li>
-<li style="margin-bottom:.5rem;padding-left:1.25rem;position:relative"><span style="position:absolute;left:0;color:var(--muted-foreground)">&bull;</span>Responds to messages on your behalf</li>
-<li style="margin-bottom:.5rem;padding-left:1.25rem;position:relative"><span style="position:absolute;left:0;color:var(--muted-foreground)">&bull;</span>Automates repetitive tasks</li>
-<li style="margin-bottom:.5rem;padding-left:1.25rem;position:relative"><span style="position:absolute;left:0;color:var(--muted-foreground)">&bull;</span>Collects and processes information from multiple sources</li>
-</ul>
+<div style="width:100%;aspect-ratio:16/9;background:#f8f8f8;border-radius:1rem;margin:2rem 0;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;border:1px solid rgba(0,0,0,0.06)">
+  <svg width="100%" height="100%" viewBox="0 0 800 450" fill="none">
+    <defs><pattern id="gridTwins" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(0,0,0,0.03)" stroke-width="1"/></pattern></defs>
+    <rect width="800" height="450" fill="url(#gridTwins)"/>
+    <rect x="150" y="100" width="200" height="250" rx="4" stroke="#111" stroke-width="2" />
+    <rect x="450" y="100" width="200" height="250" rx="4" stroke="#059669" stroke-width="2" stroke-dasharray="8 4" />
+    <path d="M350 225 H450" stroke="#111" stroke-width="1" stroke-dasharray="4 2" />
+  </svg>
 </div>
 
-<div class="reveal">
-<h2 style="font-size:1.5rem;font-weight:700;margin:2rem 0 1rem;color:var(--foreground)">3 Reasons to Lose Your Fear of BASIC</h2>
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.5rem;margin-bottom:1.5rem">
-<div class="glass-card" style="padding:1.5rem;text-align:center">
-<div style="font-size:2.5rem;font-weight:700;margin-bottom:.5rem;color:var(--foreground)">1</div>
-<h3 style="font-weight:600;margin-bottom:.5rem">Plain English</h3>
-<p style="font-size:.9375rem;color:var(--muted-foreground)">BASIC uses everyday words like PRINT, IF, THEN. If you understand basic English, you can already read the code!</p>
-</div>
-<div class="glass-card" style="padding:1.5rem;text-align:center">
-<div style="font-size:2.5rem;font-weight:700;margin-bottom:.5rem;color:var(--foreground)">2</div>
-<h3 style="font-weight:600;margin-bottom:.5rem">No Setup Required</h3>
-<p style="font-size:.9375rem;color:var(--muted-foreground)">Unlike modern languages, you do not need to install anything. Start programming right in the browser!</p>
-</div>
-<div class="glass-card" style="padding:1.5rem;text-align:center">
-<div style="font-size:2.5rem;font-weight:700;margin-bottom:.5rem;color:var(--foreground)">3</div>
-<h3 style="font-weight:600;margin-bottom:.5rem">AI Helps You</h3>
-<p style="font-size:.9375rem;color:var(--muted-foreground)">With AI, you can explain what you want in natural language and it converts to BASIC automatically!</p>
-</div>
-</div>
-</div>
+<h3>The Orchestration Delta</h3>
+<p>In the General Bots ecosystem, a digital twin is defined by its *didactic precision*. Unlike generic chatbots, a twin ingests your specific business logic—programmed in BASIC or defined in Word—and operates as a 24/7 replica of your professional presence. This twin handles initial triage, manages scheduling, and responds to technical queries with the exact tone and authority of the original entity.</p>
 
-<div class="reveal">
-<h2 style="font-size:1.5rem;font-weight:700;margin:2rem 0 1rem;color:var(--foreground)">Personalize Your Digital Twin with BASIC</h2>
-<p style="margin-bottom:1.5rem">Teach your preferences, habits, and automatic responses — in natural language or by programming.</p>
-</div>
+<h3>Three Tiers of Implementation</h3>
+<ol>
+<li><strong>Preference Mapping:</strong> Defining the core delta of the twin's personality and heuristic boundaries.</li>
+<li><strong>Real-time Ingestion:</strong> Connecting the twin to live data streams (email, WhatsApp, IoT sensors) for constant state synchronization.</li>
+<li><strong>Autonomous Orchestration:</strong> Granting the twin the authority to act—executing API calls and updating system states based on defined logic.</li>
+</ol>
 
-<div class="reveal">
-<h3 style="font-size:1.25rem;font-weight:600;margin:1.5rem 0 .75rem;color:var(--foreground)">Preferences (Natural Language)</h3>
-<div class="glass-card" style="padding:1.5rem;margin-bottom:1.5rem">
-<p style="margin-bottom:.75rem">In natural language:</p>
-<div class="glass-card" style="padding:1rem;margin-bottom:1rem">
-<p style="margin-bottom:.5rem;font-size:.9375rem">"I do not like pineapple at all. If anyone asks, say I have an aversion."</p>
-<p style="margin-bottom:0;font-size:.9375rem">"On Saturday nights I am generally free to go out, but not before 8pm."</p>
-</div>
-<p style="margin-bottom:.75rem">On WhatsApp:</p>
-<div class="glass-card" style="padding:1rem;margin-bottom:1rem">
-<p style="margin-bottom:.25rem;font-size:.9375rem"><strong>Friend:</strong> Do you like pineapple?</p>
-<p style="margin-bottom:0;font-size:.9375rem"><strong>Digital Twin:</strong> I do not like pineapple at all!</p>
-</div>
-<p style="margin-bottom:.75rem">On the calendar:</p>
-<div class="glass-card" style="padding:1rem;margin-bottom:0">
-<p style="margin-bottom:0;font-size:.9375rem"><strong>Saturday 20:00:</strong> Available to go out</p>
-</div>
-</div>
-</div>
+<h3>Industrial Application</h3>
+<p>In manufacturing and logistics, digital twins provide a predictive layer. By simulating "what-if" scenarios against real-time telemetry, organizations can identify failure vectors before they manifest physically. General Bots collapses this stack by allowing floor managers to update twin behavior via standard documents, eliminating the need for specialized simulation engineering teams.</p>
 
-<div class="reveal">
-<h3 style="font-size:1.25rem;font-weight:600;margin:1.5rem 0 .75rem;color:var(--foreground)">BASIC Code Configuration</h3>
-<div class="glass-card" style="padding:1.5rem;margin-bottom:1.5rem">
-<pre class="code-block" style="background:#1e1e1e;color:#d4d4d4;padding:1.25rem;border-radius:.5rem;overflow-x:auto;font-size:.875rem;line-height:1.6">REM Configuracao inicial do seu Digital Twin
-REM Voce pode programar ou usar linguagem natural
-
-TALK "Ola! Sou sua assistente digital. Vamos me configurar?"
-
-REM Preferencias pessoais
-DISLIKE "abacaxi" REASON "Nao gosto do sabor"
-DISLIKE "acordar cedo" REASON "Prefiro dormir ate mais tarde"
-
-REM Disponibilidade
-AVAILABILITY "sabado" TIME "20:00-23:00" ACTION "pode sair"
-AVAILABILITY "domingo" TIME "14:00-18:00" ACTION "pode receber visitas"
-
-REM Respostas automaticas
-AUTO_REPLY "vai sair sabado?" ANSWER "Estou livre sim!" WHEN "sabado 20:00-23:00"
-AUTO_REPLY "gosta de abacaxi?" ANSWER "Nao gosto de abacaxi de maneira alguma!"</pre>
+<p>The transition from a passive dashboard to an active digital twin marks the maturity of an organization's AI strategy. It is the move from *observing* the data to *orchestrating* it.</p>
 </div>
 </div>
-
-<div class="reveal">
-<h2 style="font-size:1.5rem;font-weight:700;margin:2rem 0 1rem;color:var(--foreground)">Your Clone Digital</h2>
-<div class="glass-card" style="padding:1.5rem;margin-bottom:1.5rem">
-<p style="margin-bottom:1rem">Your Digital Twin learns from you and can respond to messages automatically on WhatsApp, email, and other platforms, following your personal preferences.</p>
-<div class="glass-card" style="padding:1rem;border-left:3px solid var(--primary);margin-bottom:1rem">
-<p style="font-size:.875rem;margin-bottom:0"><strong>Example:</strong> If you do not like pineapple, your Digital Twin will automatically respond: "I do not like pineapple at all!" when asked about it.</p>
-</div>
-<p style="margin-bottom:.5rem"><strong>What you can teach:</strong></p>
-<ul style="list-style:none;padding:0;margin-bottom:1rem">
-<li style="margin-bottom:.25rem;padding-left:1.25rem;position:relative"><span style="position:absolute;left:0;color:var(--muted-foreground)">&bull;</span>Food preferences and hobbies</li>
-<li style="margin-bottom:.25rem;padding-left:1.25rem;position:relative"><span style="position:absolute;left:0;color:var(--muted-foreground)">&bull;</span>Hours when you are available</li>
-<li style="margin-bottom:.25rem;padding-left:1.25rem;position:relative"><span style="position:absolute;left:0;color:var(--muted-foreground)">&bull;</span>Answers to frequently asked questions</li>
-<li style="margin-bottom:.25rem;padding-left:1.25rem;position:relative"><span style="position:absolute;left:0;color:var(--muted-foreground)">&bull;</span>How to handle invitations and requests</li>
-</ul>
-<p style="margin-bottom:.5rem"><strong>What it avoids:</strong></p>
-<ul style="list-style:none;padding:0;margin-bottom:0">
-<li style="margin-bottom:.25rem;padding-left:1.25rem;position:relative"><span style="position:absolute;left:0;color:var(--muted-foreground)">&bull;</span>Taking on commitments without confirmation</li>
-<li style="margin-bottom:.25rem;padding-left:1.25rem;position:relative"><span style="position:absolute;left:0;color:var(--muted-foreground)">&bull;</span>Responding about sensitive subjects</li>
-<li style="margin-bottom:.25rem;padding-left:1.25rem;position:relative"><span style="position:absolute;left:0;color:var(--muted-foreground)">&bull;</span>Making important decisions alone</li>
-</ul>
-</div>
-</div>
-
-<div class="reveal">
-<h2 style="font-size:1.5rem;font-weight:700;margin:2rem 0 1rem;color:var(--foreground)">Advanced Customization with BASIC</h2>
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem;margin-bottom:1.5rem">
-
-<div class="glass-card" style="padding:1.5rem">
-<h3 style="font-weight:600;margin-bottom:.75rem">Conditional Responses</h3>
-<pre class="code-block" style="background:#1e1e1e;color:#d4d4d4;padding:1rem;border-radius:.5rem;overflow-x:auto;font-size:.75rem;line-height:1.5"><span style="color:#6a9955">REM If asked about going out on Saturday</span>
-<span style="color:#569cd6">IF</span> WEEKDAY = <span style="color:#ce9178">"sabado"</span> <span style="color:#569cd6">AND</span> TIME &gt;= <span style="color:#ce9178">"20:00"</span> <span style="color:#569cd6">THEN</span>
-  TALK <span style="color:#ce9178">"Estou livre para sair!"</span>
-<span style="color:#569cd6">ELSE</span>
-  TALK <span style="color:#ce9178">"Nao estou disponivel nesse horario"</span>
-<span style="color:#569cd6">END IF</span></pre>
-<p style="font-size:.875rem;color:var(--muted-foreground);margin-top:.75rem;margin-bottom:0">Your Digital Twin can make decisions based on multiple factors</p>
-</div>
-
-<div class="glass-card" style="padding:1.5rem">
-<h3 style="font-weight:600;margin-bottom:.75rem">Learning Preferences</h3>
-<pre class="code-block" style="background:#1e1e1e;color:#d4d4d4;padding:1rem;border-radius:.5rem;overflow-x:auto;font-size:.75rem;line-height:1.5"><span style="color:#6a9955">REM Learn from interactions</span>
-<span style="color:#569cd6">ON MESSAGE</span> <span style="color:#ce9178">"gosta de abacaxi?"</span>
-  <span style="color:#569cd6">IF</span> USER_RESPONSE = <span style="color:#ce9178">"nao"</span> <span style="color:#569cd6">THEN</span>
-    DISLIKE <span style="color:#ce9178">"abacaxi"</span>
-  <span style="color:#569cd6">END IF</span></pre>
-<p style="font-size:.875rem;color:var(--muted-foreground);margin-top:.75rem;margin-bottom:0">It can learn automatically from your responses</p>
-</div>
-</div>
-</div>
-
-<div class="reveal">
-<h2 style="font-size:1.5rem;font-weight:700;margin:2rem 0 1rem;color:var(--foreground)">Integration with Your Apps</h2>
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.5rem;margin-bottom:1.5rem">
-
-<div class="glass-card" style="padding:1.5rem">
-<h3 style="font-weight:600;margin-bottom:.75rem">WhatsApp</h3>
-<pre class="code-block" style="background:#1e1e1e;color:#d4d4d4;padding:1rem;border-radius:.5rem;overflow-x:auto;font-size:.75rem;line-height:1.5"><span style="color:#569cd6">ON WHATSAPP MESSAGE</span>
-  <span style="color:#569cd6">IF</span> MESSAGE <span style="color:#569cd6">CONTAINS</span> <span style="color:#ce9178">"sair sabado"</span> <span style="color:#569cd6">THEN</span>
-    REPLY <span style="color:#ce9178">"Estou livre apos 20h!"</span>
-  <span style="color:#569cd6">END IF</span></pre>
-</div>
-
-<div class="glass-card" style="padding:1.5rem">
-<h3 style="font-weight:600;margin-bottom:.75rem">Email</h3>
-<pre class="code-block" style="background:#1e1e1e;color:#d4d4d4;padding:1rem;border-radius:.5rem;overflow-x:auto;font-size:.75rem;line-height:1.5"><span style="color:#569cd6">ON EMAIL RECEIVED</span>
-  <span style="color:#569cd6">IF</span> SUBJECT <span style="color:#569cd6">CONTAINS</span> <span style="color:#ce9178">"convite"</span> <span style="color:#569cd6">THEN</span>
-    FORWARD TO <span style="color:#ce9178">"meu@email.com"</span>
-  <span style="color:#569cd6">END IF</span></pre>
-</div>
-
-<div class="glass-card" style="padding:1.5rem">
-<h3 style="font-weight:600;margin-bottom:.75rem">Calendar</h3>
-<pre class="code-block" style="background:#1e1e1e;color:#d4d4d4;padding:1rem;border-radius:.5rem;overflow-x:auto;font-size:.75rem;line-height:1.5"><span style="color:#569cd6">ON CALENDAR EVENT</span>
-  <span style="color:#569cd6">IF</span> EVENT IS <span style="color:#ce9178">"aniversario"</span> <span style="color:#569cd6">THEN</span>
-    SEND WHATSAPP <span style="color:#ce9178">"Feliz aniversario!"</span>
-  <span style="color:#569cd6">END IF</span></pre>
-</div>
-</div>
-</div>
-
-<div class="reveal">
-<h2 style="font-size:1.5rem;font-weight:700;margin:2rem 0 1rem;color:var(--foreground)">First Steps with BASIC</h2>
-<div class="glass-card" style="padding:1.5rem;margin-bottom:1.5rem">
-<h3 style="font-weight:600;margin-bottom:.75rem">Essential Commands:</h3>
-<ul style="list-style:none;padding:0;margin-bottom:1.5rem">
-<li style="margin-bottom:.5rem;padding:.5rem .75rem;background:var(--secondary);border-radius:.375rem;margin-left:0"><code style="font-weight:700">TALK "message"</code> — Displays a message to the user</li>
-<li style="margin-bottom:.5rem;padding:.5rem .75rem;background:var(--secondary);border-radius:.375rem"><code style="font-weight:700">HEAR variable</code> — Captures the user's response</li>
-<li style="margin-bottom:.5rem;padding:.5rem .75rem;background:var(--secondary);border-radius:.375rem"><code style="font-weight:700">IF condition THEN ... ELSE ... END IF</code> — Makes decisions</li>
-<li style="margin-bottom:.5rem;padding:.5rem .75rem;background:var(--secondary);border-radius:.375rem"><code style="font-weight:700">name = "value"</code> — Stores information in variables</li>
-</ul>
-<h3 style="font-weight:600;margin-bottom:.75rem">Complete Example:</h3>
-<pre class="code-block" style="background:#1e1e1e;color:#d4d4d4;padding:1.25rem;border-radius:.5rem;overflow-x:auto;font-size:.875rem;line-height:1.6"><span style="color:#6a9955">REM Welcome program in BASIC</span>
-<span style="color:#6a9955">REM This is a comment - the computer ignores it</span>
-
-<span style="color:#569cd6">TALK</span> <span style="color:#ce9178">"Bem-vindo ao mundo do BASIC!"</span>
-<span style="color:#569cd6">TALK</span> <span style="color:#ce9178">"Qual e o seu nome?"</span>
-<span style="color:#569cd6">HEAR</span> nome
-
-<span style="color:#569cd6">TALK</span> <span style="color:#ce9178">"Quantos anos voce tem?"</span>
-<span style="color:#569cd6">HEAR</span> idade
-
-<span style="color:#569cd6">IF</span> idade &lt; <span style="color:#b5cea8">18</span> <span style="color:#569cd6">THEN</span>
-  <span style="color:#569cd6">TALK</span> <span style="color:#ce9178">"Que legal comecar cedo, "</span> + nome + <span style="color:#ce9178">"!"</span>
-<span style="color:#569cd6">ELSE</span>
-  <span style="color:#569cd6">TALK</span> <span style="color:#ce9178">"Nunca e tarde para aprender, "</span> + nome + <span style="color:#ce9178">"!"</span>
-<span style="color:#569cd6">END IF</span></pre>
-</div>
-</div>
-
-<div class="reveal">
-<h2 style="font-size:1.5rem;font-weight:700;margin:2rem 0 1rem;color:var(--foreground)">Real Transformation Cases</h2>
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.5rem;margin-bottom:1.5rem">
-<div class="glass-card" style="padding:1.5rem;text-align:center">
-<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-bottom:.75rem"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-<h3 style="font-weight:600;margin-bottom:.5rem">Freelance Professional</h3>
-<p style="font-size:.9375rem;color:var(--muted-foreground)">Your digital twin schedules appointments, responds to quotes, and manages clients while you focus on your work.</p>
-</div>
-<div class="glass-card" style="padding:1.5rem;text-align:center">
-<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-bottom:.75rem"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-<h3 style="font-weight:600;margin-bottom:.5rem">Small Business</h3>
-<p style="font-size:.9375rem;color:var(--muted-foreground)">24h customer service, inventory management, order processing, and completely automated customer support.</p>
-</div>
-<div class="glass-card" style="padding:1.5rem;text-align:center">
-<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-bottom:.75rem"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-<h3 style="font-weight:600;margin-bottom:.5rem">Customer Service</h3>
-<p style="font-size:.9375rem;color:var(--muted-foreground)">Answers questions, schedules appointments, and resolves problems instantly, even when you are sleeping or in a meeting.</p>
-</div>
-</div>
-</div>
-
-<div class="reveal">
-<h2 style="font-size:1.5rem;font-weight:700;margin:2rem 0 1rem;color:var(--foreground)">How Your Digital Twin Works</h2>
-<div class="glass-card" style="padding:1.5rem;margin-bottom:1.5rem">
-<div class="glass-card" style="padding:1rem;margin-bottom:1rem">
-<h3 style="font-weight:600;margin-bottom:.5rem">Constant Learning</h3>
-<p style="font-size:.9375rem;color:var(--muted-foreground)">Learns from your actions, responses, and preferences to become increasingly like you.</p>
-</div>
-<div class="glass-card" style="padding:1rem;margin-bottom:1rem">
-<h3 style="font-weight:600;margin-bottom:.5rem">Total Integration</h3>
-<p style="font-size:.9375rem;color:var(--muted-foreground)">Connects with your social networks, email, calendar, and work tools.</p>
-</div>
-<div class="glass-card" style="padding:1rem;margin-bottom:0">
-<h3 style="font-weight:600;margin-bottom:.5rem">Transformative Benefits</h3>
-<p style="font-size:.9375rem;color:var(--muted-foreground)">70% reduction in time spent on repetitive tasks, 24/7 availability at no additional cost, and total scalability for your business.</p>
-</div>
-</div>
-</div>
-
-<div class="reveal">
-<h2 style="font-size:1.5rem;font-weight:700;margin:2rem 0 1rem;color:var(--foreground)">In Business</h2>
-<p style="margin-bottom:1.5rem">In business, digital twins transform how organizations monitor and optimize operations. A manufacturing plant can run a twin that ingests sensor data from every machine, detects anomalies before they become failures, and recommends maintenance schedules that minimize downtime. A logistics company can simulate route changes against real-time traffic and weather data, comparing predicted outcomes before committing resources. The predictive capability is what separates a digital twin from a dashboard: a twin does not just show you what is happening — it models what will happen next, and it can act on those predictions autonomously when configured to do so.</p>
-<p style="margin-bottom:1.5rem">The practical barrier to digital twins has always been integration complexity. Connecting sensors, normalizing data formats, building inference pipelines, and exposing outputs through usable interfaces required dedicated engineering teams. General Bots collapses this stack. Its BASIC programming model lets domain experts — not just developers — define twin behaviors. Its multi-channel deployment means a twin can surface insights on WhatsApp for a floor manager, in Microsoft Teams for an executive, and via email for a partner — all from the same bot logic. The result is a digital twin that does not live in a silo but operates wherever decisions are made.</p>
-</div>
-
-<div class="reveal">
-<h2 style="font-size:1.5rem;font-weight:700;margin:2rem 0 1rem;color:var(--foreground)">Conclusion</h2>
-<p style="margin-bottom:1.5rem">Digital twins are not just tools — they are true digital partners that transform how you work and manage your time. Whether using natural language or BASIC, you are in total control of your personal assistant. Every programmer was once a beginner. The important thing is to start — and with BASIC, you are already on the easiest path!</p>
-</div>
-
 </article>
-
-<div class="glass-card-bright text-center reveal" style="padding:3rem 2rem;margin-top:3rem">
-<h3 class="text-2xl font-bold tracking-tight mb-2">Start Building Your Digital Twin Today</h3>
-<p class="text-muted mb-6" style="max-width:28rem;margin-left:auto;margin-right:auto">Be it natural language or BASIC, you are in total control of your personal assistant.</p>
-<div class="flex items-center justify-center gap-4 flex-wrap">
-<a href="https://github.com/GeneralBots/BotServer" target="_blank" rel="noopener" class="btn btn-primary btn-lg">Create My Digital Twin</a>
-<a href="https://docs.generalbots.org" target="_blank" rel="noopener" class="btn btn-outline btn-lg">See Full Documentation</a>
-</div>
-</div>
-
-</div>
-</section>
 </main>
-
-<footer class="site-footer"><div class="container"><div class="footer-top"><div class="footer-brand"><img src="/gb-logo.png" alt="General Bots" class="footer-logo" width="140" height="33"><p>General Bots® — The Open Source AI Bot Platform. Self-host or choose a certified hosting provider.</p><p style="margin-top:.75rem;font-size:.75rem">DPO: Rodrigo Rodriguez (<a href="mailto:security@pragmatismo.com.br" style="color:rgba(255,255,255,.7)">security@pragmatismo.com.br</a>)</p><p style="font-size:.75rem;margin-top:.25rem"><a href="tel:+552140402160" style="color:rgba(255,255,255,.7)">+55 21 4040-2160</a></p></div><div class="footer-col"><h5>General Bots</h5><a href="/general-bots/llm">LLM</a><a href="/general-bots/vector-retrieval">Vector Search</a><a href="/general-bots/open-source">Open Source</a><a href="/features/ai-search">AI Search</a><a href="/features/bot-factory">Bot Factory</a></div><div class="footer-col"><h5>Hosting</h5><a href="https://pragmatismo.com.br" target="_blank" rel="noopener">Pragmatismo</a><a href="https://oerlabs.com.br" target="_blank" rel="noopener">OERLabs</a><a href="https://mapagency.com.br" target="_blank" rel="noopener">Map Agency</a><a href="https://sentient.net.br" target="_blank" rel="noopener">Sentient</a><a href="https://darioexecutivesales.com" target="_blank" rel="noopener">Dario Executive Sales</a></div><div class="footer-col"><h5>Community</h5><a href="https://docs.generalbots.org" target="_blank" rel="noopener">Documentation</a><a href="https://gb.pragmatismo.com.br/pragmatismohelpcenter" target="_blank" rel="noopener">Help Center</a><a href="/resources/community/become-a-partner">Become a Partner</a><a href="/blog">Blog</a><a href="https://github.com/generalbots" target="_blank" rel="noopener">GitHub</a></div></div><div class="footer-middle"><span>Copyright &amp;copy; 2016-2026 Pragmatismo</span><div class="flex items-center gap-4"><a href="/terms">Terms of Service</a><a href="/privacy">Privacy Policy</a></div></div><div class="footer-bottom"><span>General Bots — Open Source AI Orchestration Platform</span><div class="footer-social"><a href="https://www.github.com/GeneralBots" target="_blank" rel="noopener" aria-label="GitHub"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg></a><a href="https://www.instagram.com/general.bots/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg></a><a href="https://web.whatsapp.com/send?phone=+552140402160" target="_blank" rel="noopener" aria-label="WhatsApp"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a></div></div></div></footer>
-<style>@media(min-width:768px){#header-phone{display:inline-flex !important}}</style>
+<div hx-get="/partials/footer.html" hx-swap="innerHTML" hx-trigger="load"></div>
+<script src="https://unpkg.com/htmx.org@2.0.4"></script>
 <script src="/js/site.js"></script>
 </body>
 </html>

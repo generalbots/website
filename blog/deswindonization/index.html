@@ -3,267 +3,62 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Deswindonization for Developers: Embracing the Open Source Revolution | General Bots Blog</title>
-<meta name="description" content="Breaking free from proprietary ecosystems and embracing the future of collaborative development.">
-<link rel="stylesheet" href="/css/site.css">
+<title>Deswindonization: Escaping Proprietary AI Lock-in | General Bots Blog</title>
+<meta name="description" content="A didactic analysis of the architectural shift from closed-source AI ecosystems to sovereign open-source orchestration. Learn why ownership is the new premium.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://generalbots.org/blog/deswindonization/">
+<meta property="og:title" content="Deswindonization: Escaping Proprietary AI Lock-in | General Bots Blog">
+<meta property="og:description" content="Technical analysis of open-source AI sovereignty.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://generalbots.org/blog/deswindonization/">
 <link rel="icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="stylesheet" href="/css/site.css">
 </head>
 <body>
-<header class="site-header"><div class="header-inner">
-<a href="/" class="logo-link"><img src="/gb-logo.png" alt="General Bots" width="140" height="33"></a>
-<nav class="nav-desktop"><a href="/">Home</a><div class="nav-dropdown"><button class="nav-dropdown-trigger">General Bots <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5l3 3 3-3"/></svg></button><div class="nav-dropdown-content hidden"><a href="/general-bots/llm">LLMs</a><a href="/general-bots/vector-retrieval">Vector Retrieval</a><a href="/general-bots/open-source">Open Source</a></div></div><div class="nav-dropdown"><button class="nav-dropdown-trigger">Features <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5l3 3 3-3"/></svg></button><div class="nav-dropdown-content hidden"><a href="/features/ai-search">AI Search</a><a href="/features/content-generation">Content Generation</a><a href="/features/bot-factory">Bot Factory</a><a href="/features/talk-to-data">Talk to data</a><a href="/features/broadcast">Broadcast</a><a href="/features/trainning">Train</a><a href="/features/web-automation">Web Automation</a><a href="/features/llm-tools">LLM Tools</a><a href="/features/create-apis-in-word">Calling APIs</a></div></div><div class="nav-dropdown"><button class="nav-dropdown-trigger">Integrations <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5l3 3 3-3"/></svg></button><div class="nav-dropdown-content hidden"><a href="/integrations/channels/whatsapp">WhatsApp</a><a href="/integrations/channels/sms">SMS</a><a href="/integrations/channels/web-chat">Web Chat</a><a href="/integrations/channels/instagram">Instagram</a><a href="/integrations/channels/email">E-mail</a><a href="/integrations/channels/microsoft-teams">Microsoft Teams</a><a href="/integrations/channels/google-chat">Google Chat</a><a href="/integrations/channels/facebook-pages">Facebook Pages</a><a href="/integrations/channels/slack">Slack</a></div></div><a href="/templates">Templates</a><div class="nav-dropdown"><button class="nav-dropdown-trigger">Resources <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5l3 3 3-3"/></svg></button><div class="nav-dropdown-content hidden"><a href="/resources/considering/ai-powered-org">Considering</a><a href="/resources/already-using/essential-resources">Already Using</a><a href="/resources/community/become-a-partner">Community</a></div></div><a href="/pricing">Hosting</a><a href="/contact">Contact</a></nav>
-<div class="flex items-center gap-4"><a href="tel:+552140402160" class="phone-link" style="display:none" id="header-phone">+55 21 4040-2160</a><div class="gtranslate_wrapper"></div><button class="nav-mobile-toggle" id="mobile-menu-toggle" aria-label="Toggle menu"><svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg><svg class="close-icon hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M6 18L18 6"/></svg></button></div>
-</div></header>
-<div id="mobile-menu" class="hidden">
-<a href="/" class="mobile-nav-link">Home</a>
-<div><button class="mobile-dropdown-trigger">General Bots <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><path d="M3 5l3 3 3-3"/></svg></button><div class="mobile-dropdown-content hidden"><a href="/general-bots/llm" class="mobile-nav-link">LLMs</a><a href="/general-bots/vector-retrieval" class="mobile-nav-link">Vector Retrieval</a><a href="/general-bots/open-source" class="mobile-nav-link">Open Source</a></div></div>
-<div><button class="mobile-dropdown-trigger">Features <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><path d="M3 5l3 3 3-3"/></svg></button><div class="mobile-dropdown-content hidden"><a href="/features/ai-search" class="mobile-nav-link">AI Search</a><a href="/features/content-generation" class="mobile-nav-link">Content Generation</a><a href="/features/bot-factory" class="mobile-nav-link">Bot Factory</a><a href="/features/talk-to-data" class="mobile-nav-link">Talk to data</a><a href="/features/broadcast" class="mobile-nav-link">Broadcast</a><a href="/features/trainning" class="mobile-nav-link">Train</a><a href="/features/web-automation" class="mobile-nav-link">Web Automation</a><a href="/features/llm-tools" class="mobile-nav-link">LLM Tools</a><a href="/features/create-apis-in-word" class="mobile-nav-link">Calling APIs</a></div></div>
-<div><button class="mobile-dropdown-trigger">Integrations <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><path d="M3 5l3 3 3-3"/></svg></button><div class="mobile-dropdown-content hidden"><a href="/integrations/channels/whatsapp" class="mobile-nav-link">WhatsApp</a><a href="/integrations/channels/sms" class="mobile-nav-link">SMS</a><a href="/integrations/channels/web-chat" class="mobile-nav-link">Web Chat</a><a href="/integrations/channels/instagram" class="mobile-nav-link">Instagram</a><a href="/integrations/channels/email" class="mobile-nav-link">E-mail</a><a href="/integrations/channels/microsoft-teams" class="mobile-nav-link">Microsoft Teams</a><a href="/integrations/channels/google-chat" class="mobile-nav-link">Google Chat</a><a href="/integrations/channels/facebook-pages" class="mobile-nav-link">Facebook Pages</a><a href="/integrations/channels/slack" class="mobile-nav-link">Slack</a></div></div>
-<a href="/templates" class="mobile-nav-link">Templates</a>
-<div><button class="mobile-dropdown-trigger">Resources <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><path d="M3 5l3 3 3-3"/></svg></button><div class="mobile-dropdown-content hidden"><a href="/resources/considering/ai-powered-org" class="mobile-nav-link">Considering</a><a href="/resources/already-using/essential-resources" class="mobile-nav-link">Already Using</a><a href="/resources/community/become-a-partner" class="mobile-nav-link">Community</a></div></div>
-<a href="/pricing" class="mobile-nav-link">Hosting</a>
-<a href="/contact" class="mobile-nav-link">Contact</a>
-<span class="mobile-phone">+55 21 4040-2160</span>
-</div>
-<main style="padding-top:5rem">
-<section class="page-section vitral-bg">
-<div class="max-w-3xl mx-auto" style="padding:0 1rem">
-<a href="/blog" class="text-sm text-muted" style="display:inline-flex;align-items:center;gap:.375rem;margin-bottom:1.5rem"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> Back to Blog</a>
-<div class="reveal">
-<span class="badge badge-featured mb-4" style="display:inline-flex">Open Source</span>
-<h1 class="text-4xl font-bold tracking-tight mb-4">Deswindonization for Developers: Embracing the Open Source Revolution</h1>
-<p class="text-sm text-muted mb-8">Author: Pragmatismo Team</p>
-</div>
-<article class="reveal" style="font-size:1.0625rem;line-height:1.75;color:var(--foreground)">
+<div hx-get="/partials/header.html" hx-swap="innerHTML" hx-trigger="load"></div>
+<main style="padding-top:4rem">
+<article class="page-section reveal">
+<div class="container-narrow">
+<a href="/blog/" class="text-sm text-muted" style="display:inline-flex;align-items:center;gap:.375rem;margin-bottom:1.5rem">
+<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+Back to Blog
+</a>
+<div class="badge mb-4">Ecosystem Sovereignty</div>
+<h1 class="text-4xl font-bold tracking-tighter mb-6" style="line-height:1.1">Deswindonization: Escaping the Proprietary AI Cycle.</h1>
+<p class="text-lg text-muted mb-8 leading-relaxed">A technical analysis of the architectural shift from closed-source AI ecosystems to sovereign open-source orchestration. Learn why ownership is the only sustainable competitive advantage in the GLM 5.1 era.</p>
+<div class="blog-content prose">
+<p>In the late 20th century, the software industry was defined by "The Swindonization"—a period where proprietary giants dictated the terms of innovation through mandatory licensing and vertical lock-in. Today, we are witnessing the inverse: *Deswindonization*. This is the process by which developers and enterprises reclaim their technological sovereignty through open-source orchestration.</p>
 
-<div class="reveal" style="margin-bottom:2rem">
-<p style="margin-bottom:1.5rem;font-style:italic;color:var(--muted-foreground)">*Some licenses of Word and Excel will still be sold. But the future is open source.*</p>
+<div style="width:100%;aspect-ratio:16/9;background:#f8f8f8;border-radius:1rem;margin:2rem 0;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;border:1px solid rgba(0,0,0,0.06)">
+  <svg width="100%" height="100%" viewBox="0 0 800 450" fill="none">
+    <defs><pattern id="gridEscape" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(0,0,0,0.03)" stroke-width="1"/></pattern></defs>
+    <rect width="800" height="450" fill="url(#gridEscape)"/>
+    <rect x="300" y="150" width="200" height="150" stroke="#111" stroke-width="1" fill="none" />
+    <path d="M350 200 L450 250 M450 200 L350 250" stroke="#111" stroke-width="1" />
+    <text x="400" y="330" text-anchor="middle" fill="#111" style="font-size:12px;font-weight:700">LOCK-IN BREAKPOINT</text>
+  </svg>
 </div>
 
-<div class="reveal">
-<h2 style="font-size:1.5rem;font-weight:700;margin:2rem 0 1rem;color:var(--foreground)">Breaking Free from the Dancing Monkey</h2>
-<p style="margin-bottom:1.5rem">Remember when a certain perspiring CEO bounded across stages like an overexcited orangutan at a techno festival, chanting "developers" while his shirt darkened with enthusiasm? Yes, those were the days when big tech convinced us that closed ecosystems were the only path to innovation.</p>
-<p style="margin-bottom:1.5rem;font-weight:700;text-align:center;font-size:1.25rem;margin:2rem 0">How utterly, brilliantly wrong we were.</p>
-<blockquote style="border-left:3px solid var(--border);padding:1rem 1.5rem;margin:1.5rem 0;color:var(--muted-foreground);font-style:italic">"For years, we've been told that professional development means commitment to proprietary ecosystems. We've watched as our creativity became increasingly constrained by licensing agreements and walled gardens."</blockquote>
-<p style="margin-bottom:1.5rem">Yet as we enter 2025, the landscape has fundamentally shifted. Developers are no longer choosing sides based on which tech giant offers the most compelling ecosystem. Instead, they're rallying around open standards, transparent governance, and collaborative development models that prioritize innovation over lock-in.</p>
-</div>
+<h3>The Mirage of the Managed Ecosystem</h3>
+<p>SaaS AI providers offer a compelling "T0" experience: low friction, immediate gratification, and polished documentation. However, this is a didactic trap. As your integration grows, the "Unit Delta" of cost increases, and your proprietary data becomes increasingly siloed in a black box. You are not building an asset; you are renting a feature.</p>
 
-<div class="reveal">
-<h2 style="font-size:1.5rem;font-weight:700;margin:2rem 0 1rem;color:var(--foreground)">The Microsoft Fanboy Chronicles</h2>
-<p style="margin-bottom:1.5rem">Ah, the Microsoft fanboy. A curious specimen in the developer ecosystem. They can be spotted in the wild by their reflexive defense of monopolistic practices, their well-worn "but everyone uses it" argument, and their impressive ability to forget decades of anti-competitive behavior.</p>
+<h3>Sovereign Orchestration with General Bots</h3>
+<p>General Bots represents the first true "Exit Path" from the proprietary cycle. By providing a 100% open-source stack—from the vector retrieval layer to the BASIC orchestration engine—we allow organizations to build tools that they truly own.
+1. **Model Independence:** Swap LLM providers without rewriting your orchestration logic.
+2. **Data Sovereignty:** Keep your embeddings and conversation logs within your private cloud.
+3. **Deterministic Logic:** Use BASIC to enforce business rules that no "prompt engineer" can circumvent.</p>
 
-<div class="glass-card" style="padding:1.25rem;margin:1.5rem 0;border-left:3px solid var(--primary)">
-<h3 style="font-weight:600;margin-bottom:.5rem">The Ballmer Bomb: "Cancer" Comment</h3>
-<p style="font-style:italic;color:var(--muted-foreground);margin-bottom:.75rem">"Linux is a cancer that attaches itself in an intellectual property sense to everything it touches."</p>
-<p style="font-size:.875rem;text-align:right;color:var(--muted-foreground)">— Steve Ballmer, Former Microsoft CEO, 2001</p>
-<p style="margin-top:1rem">This wasn't a slip of the tongue. This was the calculated strategy of a company terrified that open collaboration would threaten their stranglehold on the software industry. Ballmer later tried to walk back these comments when Microsoft realized they couldn't beat open source and needed to begrudgingly embrace it.</p>
-</div>
+<h3>The End of the "Dancing Monkey" Era</h3>
+<p>The "PC Magazine" era of software was defined by high-rigor, technical excellence. We are returning to those roots. The future of AI is not a centralized API controlled by a single entity; it is a distributed, sovereign, and orchestrated digital commons. General Bots is the platform for that future.</p>
 
-<h3 style="font-size:1.25rem;font-weight:600;margin:1.5rem 0 1rem;color:var(--foreground)">Microsoft's Monopolistic Greatest Hits</h3>
-<ul style="margin-bottom:1.5rem;padding-left:1.25rem">
-<li style="margin-bottom:.75rem"><strong>The Halloween Documents (1998)</strong>: Leaked internal Microsoft memos revealed the company's strategy to "decommoditize protocols" and actively combat open source through FUD (Fear, Uncertainty, and Doubt) tactics.</li>
-<li style="margin-bottom:.75rem"><strong>Embrace, Extend, Extinguish</strong>: Microsoft's notorious strategy of adopting open standards, adding proprietary extensions, and then using those extensions to lock out competitors.</li>
-<li style="margin-bottom:.75rem"><strong>United States v. Microsoft (2001)</strong>: Found guilty of monopolization and tying Internet Explorer to Windows, a landmark antitrust case that showcased Microsoft's willingness to crush innovation to maintain dominance.</li>
-<li style="margin-bottom:.75rem"><strong>OOXML Standardization (2008)</strong>: Microsoft pushed through its Office Open XML format as an ISO standard through committee-packing and procedural manipulation, ensuring their office suite maintained its stranglehold.</li>
-<li style="margin-bottom:.75rem"><strong>Patent Threats Against Linux (2007-2014)</strong>: Microsoft claimed Linux violated hundreds of their patents, extorting royalties from Android device manufacturers without ever proving infringement.</li>
-</ul>
-
-<div class="glass-card" style="padding:1.25rem;margin:1.5rem 0">
-<h3 style="font-weight:600;margin-bottom:.5rem">The "We ❤ Open Source" Pivot</h3>
-<p style="margin-bottom:1rem">The greatest trick Microsoft ever pulled was convincing developers they'd changed their spots. The "Microsoft ❤ Linux" campaign began only after they realized they couldn't defeat the open source movement. This wasn't an ideological conversion—it was a tactical retreat.</p>
-<p style="margin-bottom:1rem">Meanwhile, they continued to lock users into proprietary ecosystems, push subscription models that remove ownership, and acquire open projects to bring them under corporate control. GitHub, npm, LinkedIn: all once-independent platforms now feeding data and developer mindshare into the Microsoft ecosystem.</p>
-</div>
-
-<p style="margin-bottom:1.5rem">The most committed Microsoft fanboys have developed a curious form of selective amnesia. They've forgotten the vendor lock-in, the exorbitant licensing costs, the security nightmares, the forced upgrades, and the stagnant innovation that characterized decades of Microsoft dominance.</p>
-<p style="margin-bottom:1.5rem">But the internet never forgets. And as we push further into the world of open collaboration, these historical facts become ever more important to remember.</p>
-</div>
-
-<div class="reveal">
-<blockquote style="border-left:3px solid var(--border);padding:1.5rem;margin:2rem 0;color:var(--foreground);font-size:1.25rem;font-style:italic;text-align:center">"The next generation of development isn't about which tech giant you've sworn fealty to – it's about which communities you contribute to."</blockquote>
-</div>
-
-<div class="reveal">
-<h2 style="font-size:1.5rem;font-weight:700;margin:2rem 0 1rem;color:var(--foreground)">The Great Unmicrosoftian Escape</h2>
-<p style="margin-bottom:1.5rem">For decades, we've been trapped in a cycle of dependency like addicts queuing up for our next fix of proprietary software. "Yes, I'll pay for another license. Yes, I'll accept these terms and conditions without reading them. Yes, I'll upgrade to the newest version that somehow runs slower on faster hardware."</p>
-<p style="margin-bottom:1.5rem">It's been like watching a peculiarly British form of technological Stockholm Syndrome. We've developed an affection for our captors, defending them at developer conferences with the fervor of a man protecting his last Jaffa Cake.</p>
-
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem;margin:2rem 0">
-<div class="glass-card" style="padding:1.5rem">
-<h3 style="font-size:1.25rem;font-weight:700;margin-bottom:1rem;color:var(--foreground)">The Old Way</h3>
-<ul style="padding-left:1.25rem">
-<li style="margin-bottom:.5rem">Expensive licensing fees</li>
-<li style="margin-bottom:.5rem">Vendor lock-in</li>
-<li style="margin-bottom:.5rem">Opaque development process</li>
-<li style="margin-bottom:.5rem">Forced upgrades</li>
-<li style="margin-bottom:.5rem">Limited customization</li>
-</ul>
-</div>
-<div class="glass-card" style="padding:1.5rem">
-<h3 style="font-size:1.25rem;font-weight:700;margin-bottom:1rem;color:var(--foreground)">The Open Way</h3>
-<ul style="padding-left:1.25rem">
-<li style="margin-bottom:.5rem">Community-driven development</li>
-<li style="margin-bottom:.5rem">Transparent governance</li>
-<li style="margin-bottom:.5rem">Freedom to modify and adapt</li>
-<li style="margin-bottom:.5rem">Ownership of your tools</li>
-<li style="margin-bottom:.5rem">Merit-based contribution model</li>
-</ul>
+<p>Ownership is the new premium. Break the cycle. Embrace Deswindonization.</p>
 </div>
 </div>
-
-<p style="margin-bottom:1.5rem">"But what about compatibility?" you ask, clutching your Microsoft certification like it's the last lifeboat on the Titanic.</p>
-<p style="margin-bottom:1.5rem"><strong>Oh, my sweet summer intern.</strong></p>
-<p style="margin-bottom:1.5rem">The compatibility argument has been the trump card of proprietary software vendors for decades. But as web standards, container technologies, and open file formats have matured, this argument holds less water than a colander in a hurricane.</p>
-</div>
-
-<div class="reveal">
-<h2 style="font-size:1.5rem;font-weight:700;margin:2rem 0 1rem;color:var(--foreground)">When Open Source Was "Cancer"</h2>
-<p style="margin-bottom:1.5rem">Let's reminisce about that delightful moment in history when open source was declared "a cancer" by the very same dancing executive. A cancer! Not a mild irritation or competitive challenge – but a malignant disease.</p>
-<p style="margin-bottom:1.5rem">In the intervening years, has open source destroyed the software industry? Has it brought civilization to its knees? Has it prevented developers from earning a living?</p>
-<p style="margin-bottom:1.5rem;font-style:italic">*Checks notes*</p>
-<p style="margin-bottom:1.5rem">Well, no. Actually, quite the opposite. Open source now powers most of the internet, the world's most valuable companies build on open source foundations, and developers who understand open technologies are among the most highly compensated in the industry.</p>
-<p style="margin-bottom:1.5rem;font-weight:700">Funny how that "cancer" turned out to be more like a vitamin supplement.</p>
-
-<div class="glass-card" style="padding:1.25rem;margin:1.5rem 0">
-<h3 style="font-weight:600;margin-bottom:.75rem">Open Source Dominance in 2025</h3>
-<div style="margin-bottom:.75rem">
-<div style="display:flex;align-items:center;margin-bottom:.5rem">
-<div style="flex:1;background:var(--muted);border-radius:9999px;height:.75rem;overflow:hidden"><div style="width:87%;height:100%;background:#666;border-radius:9999px"></div></div>
-<span style="margin-left:.75rem;font-size:.875rem;font-weight:500">Web Servers (87%)</span>
-</div>
-<div style="display:flex;align-items:center;margin-bottom:.5rem">
-<div style="flex:1;background:var(--muted);border-radius:9999px;height:.75rem;overflow:hidden"><div style="width:93%;height:100%;background:#666;border-radius:9999px"></div></div>
-<span style="margin-left:.75rem;font-size:.875rem;font-weight:500">Mobile OS (93%)</span>
-</div>
-<div style="display:flex;align-items:center;margin-bottom:.5rem">
-<div style="flex:1;background:var(--muted);border-radius:9999px;height:.75rem;overflow:hidden"><div style="width:78%;height:100%;background:#666;border-radius:9999px"></div></div>
-<span style="margin-left:.75rem;font-size:.875rem;font-weight:500">Cloud Infrastructure (78%)</span>
-</div>
-<div style="display:flex;align-items:center;margin-bottom:.5rem">
-<div style="flex:1;background:var(--muted);border-radius:9999px;height:.75rem;overflow:hidden"><div style="width:65%;height:100%;background:#666;border-radius:9999px"></div></div>
-<span style="margin-left:.75rem;font-size:.875rem;font-weight:500">Enterprise Software (65%)</span>
-</div>
-</div>
-</div>
-
-<p style="margin-bottom:1.5rem">The tribal chief has no clothes. We don't need tribal chiefs anymore. We don't need to pledge allegiance to corporate overlords who lock away innovation behind paywalls and NDAs.</p>
-</div>
-
-<div class="reveal">
-<h2 style="font-size:1.5rem;font-weight:700;margin:2rem 0 1rem;color:var(--foreground)">Innovation Unlocked: The Open Source Revolution</h2>
-<p style="margin-bottom:1.5rem">For too long, big tech has convinced us that innovation requires massive R&D budgets, secretive development processes, and expensive licenses. They've locked innovation in a tower and charged us admission to glimpse it from afar.</p>
-<p style="margin-bottom:1.5rem">But look around. Where is the most exciting innovation happening today?</p>
-<ul style="margin-bottom:1.5rem;padding-left:1.25rem">
-<li style="margin-bottom:.5rem">Is it in the latest minor update to a word processor that's fundamentally unchanged since 2003?</li>
-<li style="margin-bottom:.5rem">Is it in the enterprise software that requires a PhD to configure and the GDP of a small nation to purchase?</li>
-<li style="margin-bottom:.5rem">Or is it in the vibrant, chaotic, beautiful ecosystem of open source?</li>
-</ul>
-
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem;margin:2rem 0">
-<div class="glass-card" style="padding:1.25rem">
-<h3 style="font-size:1.1rem;font-weight:600;margin-bottom:.5rem">AI &amp; Machine Learning</h3>
-<p style="font-size:.875rem">The most advanced AI research is now open source, with models like PyTorch and TensorFlow leading the charge, while proprietary AI systems struggle with transparency issues.</p>
-</div>
-<div class="glass-card" style="padding:1.25rem">
-<h3 style="font-size:1.1rem;font-weight:600;margin-bottom:.5rem">Cloud Infrastructure</h3>
-<p style="font-size:.875rem">Kubernetes, Docker, and the CNCF ecosystem have revolutionized deployment, making proprietary hosting solutions look clunky and outdated.</p>
-</div>
-<div class="glass-card" style="padding:1.25rem">
-<h3 style="font-size:1.1rem;font-weight:600;margin-bottom:.5rem">Developer Tools</h3>
-<p style="font-size:.875rem">The explosion of open source developer tools has created workflows that proprietary vendors can only dream of integrating so seamlessly.</p>
-</div>
-</div>
-
-<p style="margin-bottom:1.5rem">The pace of innovation in open source communities makes proprietary development look like it's running in treacle. When thousands of passionate developers can collaborate without artificial constraints, magic happens.</p>
-</div>
-
-<div class="reveal">
-<h2 style="font-size:1.5rem;font-weight:700;margin:2rem 0 1rem;color:var(--foreground)">The Future is Open</h2>
-<p style="margin-bottom:1.5rem">So where do we go from here? As we move deeper into 2025 and beyond, the deswindonization of the development landscape will continue apace.</p>
-<p style="margin-bottom:1.5rem">Expect to see:</p>
-
-<div style="margin:1.5rem 0">
-<div style="display:flex;margin-bottom:1.5rem">
-<div style="margin-right:1rem;flex-shrink:0"><div style="width:2.5rem;height:2.5rem;border-radius:50%;background:var(--muted);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--foreground)">1</div></div>
-<div><h3 style="font-weight:700;margin-bottom:.25rem;color:var(--foreground)">The Fall of Licensing Tyranny</h3><p>Software licensing will transform from a profit center to a support model, with companies competing on service quality rather than access restriction.</p></div>
-</div>
-<div style="display:flex;margin-bottom:1.5rem">
-<div style="margin-right:1rem;flex-shrink:0"><div style="width:2.5rem;height:2.5rem;border-radius:50%;background:var(--muted);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--foreground)">2</div></div>
-<div><h3 style="font-weight:700;margin-bottom:.25rem;color:var(--foreground)">Corporate Open Source Citizenship</h3><p>Companies will be judged by their contributions to, not extractions from, the open source ecosystem. The era of taking without giving back is ending.</p></div>
-</div>
-<div style="display:flex;margin-bottom:1.5rem">
-<div style="margin-right:1rem;flex-shrink:0"><div style="width:2.5rem;height:2.5rem;border-radius:50%;background:var(--muted);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--foreground)">3</div></div>
-<div><h3 style="font-weight:700;margin-bottom:.25rem;color:var(--foreground)">Developer Sovereignty</h3><p>Developers will reclaim ownership of their tools, workflows, and futures, with community-governed projects providing the foundations for a more collaborative industry.</p></div>
-</div>
-</div>
-
-<p style="margin-bottom:1.5rem">The era of the dancing monkey is over. The age of the collaborative developer has begun.</p>
-<p style="margin-bottom:1.5rem">Will there be challenges? Of course. Sustainable funding for open source remains complex. Governance models continue to evolve. But these growing pains pale in comparison to the alternative: being perpetually beholden to quarterly profit targets and shareholder whims.</p>
-</div>
-
-<div class="reveal">
-<h2 style="font-size:1.5rem;font-weight:700;margin:2rem 0 1rem;color:var(--foreground)">The Unified Codebase: A New Digital Social Contract</h2>
-<p style="margin-bottom:1.5rem">Imagine a world where the foundational technology that powers our societies isn't owned by corporations or walled behind patents and NDAs. A world where a single, unified codebase serves as the digital commons for all of humanity.</p>
-
-<div class="glass-card" style="padding:1.25rem;margin:1.5rem 0;border-left:3px solid var(--primary)">
-<h3 style="font-weight:600;margin-bottom:.5rem">The Global Digital Commons</h3>
-<p style="margin-bottom:1rem">In 2025, we're witnessing the first steps toward what many are calling the "Global Digital Commons" - a unified codebase that belongs to everyone and no one, maintained by a global community of contributors from every corner of the world.</p>
-<p>This isn't just about software development; it's about rewriting the relationship between citizens and technology.</p>
-</div>
-
-<h3 style="font-size:1.25rem;font-weight:600;margin:1.5rem 0 1rem;color:var(--foreground)">What a Single Shared Codebase Means</h3>
-
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem;margin:2rem 0">
-<div class="glass-card" style="padding:1.25rem">
-<h4 style="font-weight:700;margin-bottom:.5rem;color:var(--foreground)">End of Digital Colonialism</h4>
-<p style="font-size:.875rem">No more technological imperialism where nations rely on foreign corporations for critical infrastructure. Every country, from global superpowers to developing nations, shares ownership of the same digital foundation.</p>
-</div>
-<div class="glass-card" style="padding:1.25rem">
-<h4 style="font-weight:700;margin-bottom:.5rem;color:var(--foreground)">Radical Transparency</h4>
-<p style="font-size:.875rem">When the code that governs our digital lives is open for all to inspect, hiding surveillance mechanisms, backdoors, or exploitative practices becomes impossible. Citizens can directly verify what their technology is doing.</p>
-</div>
-<div class="glass-card" style="padding:1.25rem">
-<h4 style="font-weight:700;margin-bottom:.5rem;color:var(--foreground)">Universal Digital Access</h4>
-<p style="font-size:.875rem">Technology becomes a right, not a privilege. Every citizen gains access to the same powerful tools regardless of economic circumstance, eliminating the digital divide at its source.</p>
-</div>
-<div class="glass-card" style="padding:1.25rem">
-<h4 style="font-weight:700;margin-bottom:.5rem;color:var(--foreground)">Global Collaborative Innovation</h4>
-<p style="font-size:.875rem">When billions of minds can contribute to, customize, and extend the same foundation, the pace of innovation accelerates exponentially. Allowing for a new renaissance of creativity and problem-solving.</p>
-</div>
-</div>
-
-<p style="margin-bottom:1.5rem">The unified codebase is not just a technical achievement; it's a new social contract. A promise that technology will serve humanity, not the other way around.</p>
-</div>
-
-<div class="reveal">
-<h2 style="font-size:1.5rem;font-weight:700;margin:2rem 0 1rem;color:var(--foreground)">The Future of Enterprise Tech is Open</h2>
-<p style="margin-bottom:1.5rem">The General Bots open-source stack delivers everything Big Tech solutions offer—without the vendor lock-in, surveillance, or predatory pricing. With 90%+ cost savings and complete control over your infrastructure, the choice is clear.</p>
-<p style="margin-bottom:1.5rem">Ready to escape Big Tech's walled garden? Our team can help you plan and execute a seamless migration to open-source alternatives.</p>
-<p style="font-size:.875rem;color:var(--muted-foreground)">Costs are estimated by LLM and may vary based on your specific use case.</p>
-</div>
-
 </article>
-<div class="glass-card-bright text-center reveal" style="padding:3rem 2rem;margin-top:3rem">
-<h3 class="text-2xl font-bold tracking-tight mb-2">Ready to explore open-source AI?</h3>
-<p class="text-muted mb-6" style="max-width:28rem;margin-left:auto;margin-right:auto">Get started with General Bots or reach out with your questions.</p>
-<div class="flex items-center justify-center gap-4 flex-wrap">
-<a href="https://github.com/GeneralBots/BotServer" target="_blank" rel="noopener" class="btn btn-primary btn-lg">Try It Now</a>
-<a href="/contact" class="btn btn-outline btn-lg">Ask Questions</a>
-</div>
-</div>
-</div>
-</section>
 </main>
-<footer class="site-footer"><div class="container">
-<div class="footer-top">
-<div class="footer-brand"><img src="/gb-logo.png" alt="General Bots" class="footer-logo" width="140" height="33"><p>General Bots® — The Open Source AI Bot Platform. Self-host or choose a certified hosting provider.</p><p style="margin-top:.75rem;font-size:.75rem">DPO: Rodrigo Rodriguez (<a href="mailto:security@pragmatismo.com.br" style="color:rgba(255,255,255,.7)">security@pragmatismo.com.br</a>)</p><p style="font-size:.75rem;margin-top:.25rem"><a href="tel:+552140402160" style="color:rgba(255,255,255,.7)">+55 21 4040-2160</a></p></div>
-<div class="footer-col"><h5>General Bots</h5><a href="/general-bots/llm">LLM</a><a href="/general-bots/vector-retrieval">Vector Search</a><a href="/general-bots/open-source">Open Source</a><a href="/features/ai-search">AI Search</a><a href="/features/bot-factory">Bot Factory</a></div>
-<div class="footer-col"><h5>Hosting</h5><a href="https://pragmatismo.com.br" target="_blank" rel="noopener">Pragmatismo</a><a href="https://oerlabs.com.br" target="_blank" rel="noopener">OERLabs</a><a href="https://mapagency.com.br" target="_blank" rel="noopener">Map Agency</a><a href="https://sentient.net.br" target="_blank" rel="noopener">Sentient</a><a href="https://darioexecutivesales.com" target="_blank" rel="noopener">Dario Executive Sales</a></div>
-<div class="footer-col"><h5>Community</h5><a href="https://docs.generalbots.org" target="_blank" rel="noopener">Documentation</a><a href="https://gb.pragmatismo.com.br/pragmatismohelpcenter" target="_blank" rel="noopener">Help Center</a><a href="/resources/community/become-a-partner">Become a Partner</a><a href="/blog">Blog</a><a href="https://github.com/generalbots" target="_blank" rel="noopener">GitHub</a></div>
-</div>
-<div class="footer-middle"><span>Copyright © 2016-2026 Pragmatismo</span><div class="flex items-center gap-4"><a href="/terms">Terms of Service</a><a href="/privacy">Privacy Policy</a></div></div>
-<div class="footer-bottom"><span>General Bots — Open Source AI Orchestration Platform</span><div class="footer-social"><a href="https://www.github.com/GeneralBots" target="_blank" rel="noopener" aria-label="GitHub"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg></a><a href="https://www.instagram.com/general.bots/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg></a><a href="https://web.whatsapp.com/send?phone=+552140402160" target="_blank" rel="noopener" aria-label="WhatsApp"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a></div>
-</div></footer>
-<style>@media(min-width:768px){#header-phone{display:inline-flex !important}}</style>
+<div hx-get="/partials/footer.html" hx-swap="innerHTML" hx-trigger="load"></div>
+<script src="https://unpkg.com/htmx.org@2.0.4"></script>
 <script src="/js/site.js"></script>
 </body>
 </html>

@@ -3,156 +3,64 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>O Boom do LLM Passou | General Bots Blog</title>
-<meta name="description" content="A verdade desconfortavel sobre LLMs que a oligarquia tech nao admite: O grande salto tecnologico ja ocorreu, e o que testemunhamos agora e marketing capitalista disfaracado de inovacao.">
-<link rel="stylesheet" href="/css/site.css">
+<title>The LLM Boom is Over | General Bots Blog</title>
+<meta name="description" content="A technical and materialist analysis of the LLM plateau. Why the era of fundamental AI breakthroughs has shifted to the era of industrial application.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://generalbots.org/blog/llm-boom-is-over/">
+<meta property="og:title" content="The LLM Boom is Over | General Bots Blog">
+<meta property="og:description" content="Dialectical analysis of the AI plateau.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://generalbots.org/blog/llm-boom-is-over/">
 <link rel="icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="stylesheet" href="/css/site.css">
 </head>
 <body>
-<header class="site-header"><div class="header-inner">
-<a href="/" class="logo-link"><img src="/gb-logo.png" alt="General Bots" width="140" height="33"></a>
-<nav class="nav-desktop"><a href="/">Home</a><div class="nav-dropdown"><button class="nav-dropdown-trigger">General Bots <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5l3 3 3-3"/></svg></button><div class="nav-dropdown-content hidden"><a href="/general-bots/llm">LLMs</a><a href="/general-bots/vector-retrieval">Vector Retrieval</a><a href="/general-bots/open-source">Open Source</a></div></div><div class="nav-dropdown"><button class="nav-dropdown-trigger">Features <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5l3 3 3-3"/></svg></button><div class="nav-dropdown-content hidden"><a href="/features/ai-search">AI Search</a><a href="/features/content-generation">Content Generation</a><a href="/features/bot-factory">Bot Factory</a><a href="/features/talk-to-data">Talk to data</a><a href="/features/broadcast">Broadcast</a><a href="/features/trainning">Train</a><a href="/features/web-automation">Web Automation</a><a href="/features/llm-tools">LLM Tools</a><a href="/features/create-apis-in-word">Calling APIs</a></div></div><div class="nav-dropdown"><button class="nav-dropdown-trigger">Integrations <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5l3 3 3-3"/></svg></button><div class="nav-dropdown-content hidden"><a href="/integrations/channels/whatsapp">WhatsApp</a><a href="/integrations/channels/sms">SMS</a><a href="/integrations/channels/web-chat">Web Chat</a><a href="/integrations/channels/instagram">Instagram</a><a href="/integrations/channels/email">E-mail</a><a href="/integrations/channels/microsoft-teams">Microsoft Teams</a><a href="/integrations/channels/google-chat">Google Chat</a><a href="/integrations/channels/facebook-pages">Facebook Pages</a><a href="/integrations/channels/slack">Slack</a></div></div><a href="/templates">Templates</a><div class="nav-dropdown"><button class="nav-dropdown-trigger">Resources <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5l3 3 3-3"/></svg></button><div class="nav-dropdown-content hidden"><a href="/resources/considering/ai-powered-org">Considering</a><a href="/resources/already-using/essential-resources">Already Using</a><a href="/resources/community/become-a-partner">Community</a></div></div><a href="/pricing">Hosting</a><a href="/contact">Contact</a></nav>
-<div class="flex items-center gap-4"><a href="tel:+552140402160" class="phone-link" style="display:none" id="header-phone">+55 21 4040-2160</a><div class="gtranslate_wrapper"></div><button class="nav-mobile-toggle" id="mobile-menu-toggle" aria-label="Toggle menu"><svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg><svg class="close-icon hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M6 18L18 6"/></svg></button></div>
-</div></header>
-<div id="mobile-menu" class="hidden">
-<a href="/" class="mobile-nav-link">Home</a>
-<div><button class="mobile-dropdown-trigger">General Bots <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><path d="M3 5l3 3 3-3"/></svg></button><div class="mobile-dropdown-content hidden"><a href="/general-bots/llm" class="mobile-nav-link">LLMs</a><a href="/general-bots/vector-retrieval" class="mobile-nav-link">Vector Retrieval</a><a href="/general-bots/open-source" class="mobile-nav-link">Open Source</a></div></div>
-<div><button class="mobile-dropdown-trigger">Features <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><path d="M3 5l3 3 3-3"/></svg></button><div class="mobile-dropdown-content hidden"><a href="/features/ai-search" class="mobile-nav-link">AI Search</a><a href="/features/content-generation" class="mobile-nav-link">Content Generation</a><a href="/features/bot-factory" class="mobile-nav-link">Bot Factory</a><a href="/features/talk-to-data" class="mobile-nav-link">Talk to data</a><a href="/features/broadcast" class="mobile-nav-link">Broadcast</a><a href="/features/trainning" class="mobile-nav-link">Train</a><a href="/features/web-automation" class="mobile-nav-link">Web Automation</a><a href="/features/llm-tools" class="mobile-nav-link">LLM Tools</a><a href="/features/create-apis-in-word" class="mobile-nav-link">Calling APIs</a></div></div>
-<div><button class="mobile-dropdown-trigger">Integrations <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><path d="M3 5l3 3 3-3"/></svg></button><div class="mobile-dropdown-content hidden"><a href="/integrations/channels/whatsapp" class="mobile-nav-link">WhatsApp</a><a href="/integrations/channels/sms" class="mobile-nav-link">SMS</a><a href="/integrations/channels/web-chat" class="mobile-nav-link">Web Chat</a><a href="/integrations/channels/instagram" class="mobile-nav-link">Instagram</a><a href="/integrations/channels/email" class="mobile-nav-link">E-mail</a><a href="/integrations/channels/microsoft-teams" class="mobile-nav-link">Microsoft Teams</a><a href="/integrations/channels/google-chat" class="mobile-nav-link">Google Chat</a><a href="/integrations/channels/facebook-pages" class="mobile-nav-link">Facebook Pages</a><a href="/integrations/channels/slack" class="mobile-nav-link">Slack</a></div></div>
-<a href="/templates" class="mobile-nav-link">Templates</a>
-<div><button class="mobile-dropdown-trigger">Resources <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><path d="M3 5l3 3 3-3"/></svg></button><div class="mobile-dropdown-content hidden"><a href="/resources/considering/ai-powered-org" class="mobile-nav-link">Considering</a><a href="/resources/already-using/essential-resources" class="mobile-nav-link">Already Using</a><a href="/resources/community/become-a-partner" class="mobile-nav-link">Community</a></div></div>
-<a href="/pricing" class="mobile-nav-link">Hosting</a>
-<a href="/contact" class="mobile-nav-link">Contact</a>
-<span class="mobile-phone">+55 21 4040-2160</span>
-</div>
-<main style="padding-top:5rem">
-<section class="page-section vitral-bg">
-<div class="max-w-3xl mx-auto" style="padding:0 1rem">
-<a href="/blog" class="text-sm text-muted" style="display:inline-flex;align-items:center;gap:.375rem;margin-bottom:1.5rem"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> Back to Blog</a>
-<div class="reveal">
-<span class="badge badge-featured mb-4" style="display:inline-flex">Analise Revolucionaria</span>
-<h1 class="text-4xl font-bold tracking-tight mb-4">O Boom do LLM passou.</h1>
-<p class="text-sm text-muted mb-8">Author: Pragmatismo Team</p>
-</div>
-<article class="reveal" style="font-size:1.0625rem;line-height:1.75;color:var(--foreground)">
+<div hx-get="/partials/header.html" hx-swap="innerHTML" hx-trigger="load"></div>
+<main style="padding-top:4rem">
+<article class="page-section reveal">
+<div class="container-narrow">
+<a href="/blog/" class="text-sm text-muted" style="display:inline-flex;align-items:center;gap:.375rem;margin-bottom:1.5rem">
+<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+Back to Blog
+</a>
+<div class="badge mb-4">Materialist Analysis</div>
+<h1 class="text-4xl font-bold tracking-tighter mb-6" style="line-height:1.1">The LLM Boom is Over: Enter the Era of Industrial Orchestration.</h1>
+<p class="text-lg text-muted mb-8 leading-relaxed">Technical analysis of the current AI plateau and why the shift from fundamental innovation to didactic application is the next industrial frontier.</p>
+<div class="blog-content prose">
+<p>The uncomfortable truth about Large Language Models (LLMs) that the technology oligarchy refuses to admit is that the fundamental leap has already occurred. What we are witnessing now—GPT-4o, Claude 3.5, Gemini 1.5—is not revolutionary progress, but the refinement of a stabilized material base. We have reached a plateau where quantitative increases in compute parameters yield diminishing qualitative returns.</p>
 
-<div class="glass-card" style="padding:1rem;margin:1.5rem 0;border-left:3px solid var(--primary)">
-<h4 style="font-weight:600;margin-bottom:.5rem">Perspectiva Controversa</h4>
-<p style="margin-bottom:0">Este artigo apresenta uma contra-narrativa ao atual ciclo de hype da IA. Baseado em análise crítica e experiência prática no campo, ele desafia a narrativa capitalista de inovação perpétua.</p>
+<div style="width:100%;aspect-ratio:16/9;background:#f8f8f8;border-radius:1rem;margin:2rem 0;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;border:1px solid rgba(0,0,0,0.06)">
+  <svg width="100%" height="100%" viewBox="0 0 800 450" fill="none">
+    <defs><pattern id="gridBoom" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(0,0,0,0.03)" stroke-width="1"/></pattern></defs>
+    <rect width="800" height="450" fill="url(#gridBoom)"/>
+    <path d="M100 350 Q 250 350 400 200 T 700 100" stroke="#111" stroke-width="2" fill="none" />
+    <path d="M400 200 H700" stroke="#059669" stroke-width="2" stroke-dasharray="8 4" />
+    <circle cx="400" cy="200" r="6" fill="#059669" />
+  </svg>
 </div>
 
-<div class="reveal">
-<h2 style="font-size:1.5rem;font-weight:700;margin:2rem 0 1rem;color:var(--foreground)">O Salto Revolucionário Já Ocorreu</h2>
-<p style="margin-bottom:1.5rem">Sejamos materialistas dialéticos sobre isso: Modelos de Linguagem Grande (LLMs) transformaram fundamentalmente o campo da inteligência artificial. GPT da OpenAI, Claude da Anthropic, Llama da Meta, Mistral - todos são variações da mesma revolução fundamental que ocorreu entre 2020 e 2023.</p>
-<p style="margin-bottom:1.5rem">O que testemunhamos agora é o refinamento desta tecnologia base. A burguesia tech está engajada em competição constante para criar a ilusão de que algo novo e revolucionário emerge a cada trimestre. A realidade material é bem diferente: estamos em um período de pequenas melhorias incrementais, não de novas mudanças de paradigma.</p>
+<h3>The Dialectics of AI Evolution</h3>
+<p>In materialist terms, the period between 2020 and 2023 represented a qualitative leap in the means of production. The synthesis of the Transformer architecture with massive internet-scale datasets created a new operational baseline. Every subsequent release is an iteration of this synthesis. The marketing machinery of Silicon Valley must present every update as "revolutionary" to justify venture capital valuations, but the underlying physics of token prediction remains stagnant.</p>
 
-<div class="glass-card" style="padding:1.5rem;margin:1.5rem 0;border-left:3px solid var(--primary)">
-<h3 style="font-size:1.125rem;font-weight:600;margin-bottom:.75rem;color:var(--foreground)">O Que Realmente Mudou com os LLMs</h3>
-<p style="margin-bottom:1rem;color:var(--muted-foreground)">As transformações fundamentais que já ocorreram</p>
-<div class="glass-card" style="padding:1rem;margin-bottom:1rem;background:var(--muted)">
-<h4 style="font-weight:600;margin-bottom:.25rem">Emergência de Capacidades</h4>
-<p style="margin-bottom:0;font-size:.875rem">Com o aumento de escala, surgiram habilidades que não foram explicitamente programadas - raciocínio, compreensão contextual e transferência de conhecimento emergiram espontaneamente das condições materiais da arquitetura do modelo.</p>
-</div>
-<div class="glass-card" style="padding:1rem;margin-bottom:1rem;background:var(--muted)">
-<h4 style="font-weight:600;margin-bottom:.25rem">Generalização Zero-shot/Few-shot</h4>
-<p style="margin-bottom:0;font-size:.875rem">A capacidade de executar tarefas sem exemplos ou com poucos exemplos mudou fundamentalmente como construímos sistemas de IA, rompendo com o paradigma tradicional de aprendizado supervisionado.</p>
-</div>
-<div class="glass-card" style="padding:1rem;margin-bottom:0;background:var(--muted)">
-<h4 style="font-weight:600;margin-bottom:.25rem">Democratização do Acesso</h4>
-<p style="margin-bottom:0;font-size:.875rem">Ferramentas como ChatGPT trouxeram IA generativa para as massas de uma forma que modelos anteriores não conseguiram, criando as condições materiais para adoção generalizada e consciência de classe sobre capacidades de IA.</p>
-</div>
-</div>
+<h3>From Innovation to Orchestration</h3>
+<p>Because the fundamental "brain" of the AI has stabilized, the industrial competitive advantage has shifted from *building better models* to *building better orchestration layers*. This is where General Bots operates. The challenge is no longer "can the AI understand?" but "how do we bridge this understanding into legacy enterprise systems?"</p>
 
-<p style="margin-bottom:1.5rem">O processo dialético é claro: tivemos a tese da IA estreita, a antítese da arquitetura transformer, e agora a síntese dos LLMs. Esta síntese representa um salto qualitativo que não pode ser replicado através de meras melhorias quantitativas.</p>
-</div>
+<h3>The Five Precedents</h3>
+<p>History shows us this pattern repeatedly:
+1. **The PC Revolution:** After the initial GUI breakthrough, decades were spent on form-factor optimization.
+2. **The Smartphone:** Post-2007, innovation moved from the device to the ecosystem.
+3. **The Web:** After the browser wars, the value shifted to the platform layer.
+4. **Cloud Computing:** After virtualization stabilized, orchestration (Kubernetes) became the kingmaker.
+5. **LLMs:** Now that the models are "good enough," the value is in the didactic orchestration of agents.</p>
 
-<div class="reveal">
-<h2 style="font-size:1.5rem;font-weight:700;margin:2rem 0 1rem;color:var(--foreground)">A Ilusão Capitalista de Inovação Perpétua</h2>
-<p style="margin-bottom:1.5rem">A OpenAI anuncia cada nova versão do GPT como uma revolução. O Google responde com Gemini. A Anthropic lança a próxima iteração do Claude. O ciclo se repete. Com cada anúncio, ações sobem, investidores ficam eufóricos e a máquina de hype continua.</p>
-<p style="margin-bottom:1.5rem">Mas examinando a realidade material, o que vemos realmente? Melhorias marginais em benchmarks, pequenas extensões de funcionalidade e uma corrida para ser o “modelo mais capaz”. As arquiteturas fundamentais - principalmente baseadas em Transformers - permanecem inalteradas. Os princípios básicos não evoluíram.</p>
-<blockquote style="border-left:3px solid var(--border);padding:1rem 1.5rem;margin:1.5rem 0;color:var(--muted-foreground);font-style:italic">“O que testemunhamos não é uma sucessão de revoluções, mas uma única revolução seguida por uma era de otimização. A analogia adequada não é a Lei de Moore, mas a evolução dos motores de combustão - um salto fundamental seguido por décadas de melhorias incrementais sob o capitalismo.”</blockquote>
-<p style="margin-bottom:1.5rem;font-weight:500;color:var(--muted-foreground)">— Análise Materialista Histórica do Desenvolvimento de IA</p>
-<p style="margin-bottom:1.5rem">Este padrão reflete a contradição fundamental do capitalismo em estágio tardio: a necessidade de apresentar mudança revolucionária constante para justificar avaliações e investimentos, enquanto as condições materiais só permitem melhorias evolucionárias.</p>
-</div>
-
-<div class="reveal">
-<h2 style="font-size:1.5rem;font-weight:700;margin:2rem 0 1rem;color:var(--foreground)">Cinco Precedentes Históricos para Platôs Tecnológicos</h2>
-<p style="margin-bottom:1.5rem">Este fenômeno não é exclusivo da IA. Ao longo da história tecnológica, vemos padrões semelhantes após avanços fundamentais:</p>
-<ol style="padding-left:1.5rem;list-style:decimal;margin-bottom:1.5rem">
-<li style="margin-bottom:1rem"><span style="font-weight:500">O Computador Pessoal (anos 1980-2000)</span>: Após o salto revolucionário inicial, décadas de melhorias incrementais em velocidade e formato, com campanhas de marketing exagerando a importância de cada novo lançamento.</li>
-<li style="margin-bottom:1rem"><span style="font-weight:500">O Smartphone (2010-atualmente)</span>: Após a interface revolucionária do iPhone, anos de melhorias marginais na câmera e refinamentos de tela comercializados como inovações revolucionárias.</li>
-<li style="margin-bottom:1rem"><span style="font-weight:500">A Internet (1995-2010)</span>: Após a construção da infraestrutura fundamental, a bolha das pontocom e a subsequente Web 2.0 representaram exploração comercial em vez de mudança tecnológica fundamental.</li>
-<li style="margin-bottom:1rem"><span style="font-weight:500">Veículos Elétricos (2010-atualmente)</span>: Após resolver os desafios fundamentais da bateria e do motor, melhorias incrementais de autonomia dominam o discurso.</li>
-<li style="margin-bottom:1rem"><span style="font-weight:500">Mídias Sociais (2005-atualmente)</span>: Após o avanço inicial em rede, infinitas iterações sobre os mesmos conceitos básicos com retornos decrescentes.</li>
-</ol>
-<p style="margin-bottom:1.5rem">Em cada caso, o período revolucionário foi breve mas transformador, seguido por períodos prolongados de comercialização e melhoria incremental sob o capitalismo.</p>
-</div>
-
-<div class="reveal">
-<h2 style="font-size:1.5rem;font-weight:700;margin:2rem 0 1rem;color:var(--foreground)">Implicações Materiais para Trabalhadores e Organizações</h2>
-<p style="margin-bottom:1.5rem">Esta realidade tem implicações concretas para quem trabalha com ou investe em IA:</p>
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem;margin:1.5rem 0">
-<div class="glass-card" style="padding:1.5rem">
-<h3 style="font-size:1.125rem;font-weight:600;margin-bottom:.75rem;color:var(--foreground)">Foco nos Fundamentos</h3>
-<p style="margin-bottom:0">Compreender a base material de como os LLMs funcionam é mais valioso do que dominar cada nova API ou versão. Os princípios subjacentes durarão mais do que qualquer iteração comercial temporária.</p>
-</div>
-<div class="glass-card" style="padding:1.5rem">
-<h3 style="font-size:1.125rem;font-weight:600;margin-bottom:.75rem;color:var(--foreground)">Invista em Aplicações</h3>
-<p style="margin-bottom:0">O valor real está em aplicar esta tecnologia para resolver problemas concretos, não em perseguir o “modelo mais recente” a cada trimestre. Os meios de produção (modelos base) estabilizaram-se - agora foque nas relações de produção (como são usados).</p>
-</div>
-<div class="glass-card" style="padding:1.5rem">
-<h3 style="font-size:1.125rem;font-weight:600;margin-bottom:.75rem;color:var(--foreground)">Mantenha Ceticismo Materialista</h3>
-<p style="margin-bottom:0">Quando uma empresa anuncia uma “revolução”, examine os detalhes técnicos. 90% das vezes você encontrará melhorias incrementais empacotadas como transformações fundamentais para servir interesses de capital.</p>
-</div>
-<div class="glass-card" style="padding:1.5rem">
-<h3 style="font-size:1.125rem;font-weight:600;margin-bottom:.75rem;color:var(--foreground)">Pense em Décadas, Não em Trimestres</h3>
-<p style="margin-bottom:0">A revolução LLM é a onda tecnológica que dominará os próximos 20-30 anos, não algo que será substituído no próximo ciclo de notícias. Planeje sua estratégia de acordo.</p>
+<p>The "Long March" of AI is just beginning. It won't be won by the company with the largest cluster, but by the organization that best integrates sovereign, didactic logic into its business units. The boom is over; the work has begun.</p>
 </div>
 </div>
-</div>
-
-<div class="reveal">
-<h2 style="font-size:1.5rem;font-weight:700;margin:2rem 0 1rem;color:var(--foreground)">A Era da Aplicação, Não da Inovação Fundamental</h2>
-<p style="margin-bottom:1.5rem">Isso não quer dizer que não haverá avanços significativos. Veremos modelos mais eficientes (menores, mais rápidos, menos custosos), melhor integração multimodal e capacidades expandidas. Mas a mudança de paradigma - a revolução fundamental - já ocorreu.</p>
-<p style="margin-bottom:1.5rem">Estamos agora na era da aplicação: descobrir como usar esta tecnologia revolucionária para resolver problemas reais, criar valor prático e integrar LLMs em nossos fluxos de trabalho e produtos de formas significativas que sirvam às massas em vez de motivos de lucro.</p>
-<div class="glass-card" style="padding:1rem;margin:1.5rem 0;border-left:3px solid var(--primary)">
-<h4 style="font-weight:600;margin-bottom:.5rem">Conselho Revolucionário Prático</h4>
-<p style="margin-bottom:0">Se você está entrando no campo de IA agora, foque em entender profundamente os princípios materiais dos LLMs e como aplicá-los em domínios específicos. Isso será mais valioso a longo prazo do que perseguir cada novo lançamento ou ciclo de hype capitalista.</p>
-</div>
-<p style="margin-bottom:1.5rem">Os próximos anos verão a proletarização das habilidades de IA - o que uma vez foi revolucionário torna-se commoditizado. O valor mudará para aqueles que podem aplicar estas ferramentas de formas que criem valor concreto em vez de hype especulativo.</p>
-</div>
-
-<div class="reveal">
-<h2 style="font-size:1.5rem;font-weight:700;margin:2rem 0 1rem;color:var(--foreground)">Conclusão: Prepare-se para a Longa Marcha, Não para a Corrida</h2>
-<p style="margin-bottom:1.5rem">A revolução LLM não é uma moda passageira - é uma transformação tecnológica fundamental que continuará se desdobrando ao longo de décadas. O desafio não é acompanhar cada nova versão ou anúncio, mas entender profundamente a tecnologia subjacente e como ela pode ser aplicada para criar valor real para a classe trabalhadora.</p>
-<p style="margin-bottom:1.5rem">Em vez de ser seduzido pelo marketing capitalista do “próximo grande avanço”, foque em como você pode usar as ferramentas existentes para resolver problemas reais. Os vencedores neste novo paradigma não serão aqueles que sempre usam o modelo mais recente, mas aqueles que melhor entendem como aplicar esta tecnologia revolucionária de formas inovadoras e valiosas que servem ao povo em vez de motivos de lucro.</p>
-<p style="margin-bottom:1.5rem">A revolução estagnou - e isso é dialeticamente positivo. Agora temos tempo para verdadeiramente entender, dominar e aplicar esta tecnologia transformadora. Prepare-se para uma longa marcha de aplicação e refinamento, não uma corrida de “inovação” constante ditada pelas forças de mercado.</p>
-<p style="margin-bottom:1.5rem;font-weight:500;color:var(--muted-foreground)">Como observou Lênin: “Há décadas onde nada acontece; e há semanas onde décadas acontecem.” A revolução da IA teve suas semanas - agora estamos nas décadas de implementação.</p>
-</div>
-
 </article>
-<div class="glass-card-bright text-center reveal" style="padding:3rem 2rem;margin-top:3rem">
-<h3 class="text-2xl font-bold tracking-tight mb-2">We'll set up your first automation for free.</h3>
-<p class="text-muted mb-6" style="max-width:28rem;margin-left:auto;margin-right:auto">Get started with General Bots or reach out with your questions.</p>
-<div class="flex items-center justify-center gap-4 flex-wrap">
-<a href="https://github.com/GeneralBots/BotServer" target="_blank" rel="noopener" class="btn btn-primary btn-lg">Try It Now</a>
-<a href="/contact" class="btn btn-outline btn-lg">Ask Questions</a>
-</div>
-</div>
-</div>
-</section>
 </main>
-<footer class="site-footer"><div class="container">
-<div class="footer-top">
-<div class="footer-brand"><img src="/gb-logo.png" alt="General Bots" class="footer-logo" width="140" height="33"><p>General Bots® — The Open Source AI Bot Platform. Self-host or choose a certified hosting provider.</p><p style="margin-top:.75rem;font-size:.75rem">DPO: Rodrigo Rodriguez (<a href="mailto:security@pragmatismo.com.br" style="color:rgba(255,255,255,.7)">security@pragmatismo.com.br</a>)</p><p style="font-size:.75rem;margin-top:.25rem"><a href="tel:+552140402160" style="color:rgba(255,255,255,.7)">+55 21 4040-2160</a></p></div>
-<div class="footer-col"><h5>General Bots</h5><a href="/general-bots/llm">LLM</a><a href="/general-bots/vector-retrieval">Vector Search</a><a href="/general-bots/open-source">Open Source</a><a href="/features/ai-search">AI Search</a><a href="/features/bot-factory">Bot Factory</a></div>
-<div class="footer-col"><h5>Hosting</h5><a href="https://pragmatismo.com.br" target="_blank" rel="noopener">Pragmatismo</a><a href="https://oerlabs.com.br" target="_blank" rel="noopener">OERLabs</a><a href="https://mapagency.com.br" target="_blank" rel="noopener">Map Agency</a><a href="https://sentient.net.br" target="_blank" rel="noopener">Sentient</a><a href="https://darioexecutivesales.com" target="_blank" rel="noopener">Dario Executive Sales</a></div>
-<div class="footer-col"><h5>Community</h5><a href="https://docs.generalbots.org" target="_blank" rel="noopener">Documentation</a><a href="https://gb.pragmatismo.com.br/pragmatismohelpcenter" target="_blank" rel="noopener">Help Center</a><a href="/resources/community/become-a-partner">Become a Partner</a><a href="/blog">Blog</a><a href="https://github.com/generalbots" target="_blank" rel="noopener">GitHub</a></div>
-</div>
-<div class="footer-middle"><span>Copyright © 2016-2026 Pragmatismo</span><div class="flex items-center gap-4"><a href="/terms">Terms of Service</a><a href="/privacy">Privacy Policy</a></div></div>
-<div class="footer-bottom"><span>General Bots — Open Source AI Orchestration Platform</span><div class="footer-social"><a href="https://www.github.com/GeneralBots" target="_blank" rel="noopener" aria-label="GitHub"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg></a><a href="https://www.instagram.com/general.bots/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg></a><a href="https://web.whatsapp.com/send?phone=+552140402160" target="_blank" rel="noopener" aria-label="WhatsApp"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 1.096 1.786 2.656 2.48.37.17.66.272.886.346.38.12.724.103 1.005.062.307-.045.943-.385 1.075-.757.132-.372.132-.69.094-.757-.038-.068-.14-.108-.297-.168z"/></svg></a></div></div>
-</div></footer>
-<style>@media(min-width:768px){#header-phone{display:inline-flex !important}}</style>
+<div hx-get="/partials/footer.html" hx-swap="innerHTML" hx-trigger="load"></div>
+<script src="https://unpkg.com/htmx.org@2.0.4"></script>
 <script src="/js/site.js"></script>
 </body>
 </html>

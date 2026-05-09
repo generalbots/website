@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Bot Factory | General Bots</title>
-<meta name="description" content="Create and deploy bots with ease using General Bots Bot Factory. Template-based creation, multi-tenant support, and centralized bot management.">
+<meta name="description" content="Industrial-scale bot orchestration. Create, deploy, and manage thousands of bot instances from a single template with the General Bots Bot Factory.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://generalbots.org/features/bot-factory/">
 <meta property="og:title" content="Bot Factory | General Bots">
@@ -16,103 +16,8 @@
 <link rel="stylesheet" href="/css/site.css">
 </head>
 <body>
-
-<header class="site-header">
-<div class="header-inner">
-<a href="/" class="logo-link"><img src="/gb-logo.png" alt="General Bots" width="140" height="33"></a>
-<nav class="nav-desktop">
-<a href="/">Home</a>
-<div class="nav-dropdown">
-<button class="nav-dropdown-trigger">General Bots <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5l3 3 3-3"/></svg></button>
-<div class="nav-dropdown-content hidden">
-<a href="/general-bots/llm">LLMs</a>
-<a href="/general-bots/vector-retrieval">Vector Retrieval</a>
-<a href="/general-bots/open-source">Open Source</a>
-</div>
-</div>
-<div class="nav-dropdown">
-<button class="nav-dropdown-trigger">Features <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5l3 3 3-3"/></svg></button>
-<div class="nav-dropdown-content hidden">
-<a href="/features/" style="font-weight:600">All Features</a>
-<a href="/features/ai-search/">AI Search</a>
-<a href="/features/bot-factory/">Bot Factory</a>
-<a href="/features/broadcast/">Broadcast</a>
-<a href="/features/content-generation/">Content Generation</a>
-<a href="/features/create-apis-in-word/">Create APIs in BASIC</a>
-<a href="/features/llm-tools/">LLM Tools</a>
-<a href="/features/talk-to-data/">Talk to Data</a>
-<a href="/features/trainning/">Training</a>
-<a href="/features/web-automation/">Web Automation</a>
-</div>
-</div>
-<div class="nav-dropdown">
-<button class="nav-dropdown-trigger">Integrations <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5l3 3 3-3"/></svg></button>
-<div class="nav-dropdown-content hidden">
-<a href="/integrations/">Overview</a>
-</div>
-</div>
-<a href="/templates/">Templates</a>
-<div class="nav-dropdown">
-<button class="nav-dropdown-trigger">Resources <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5l3 3 3-3"/></svg></button>
-<div class="nav-dropdown-content hidden">
-<a href="/blog/">Blog</a>
-<a href="/resources/">Documentation</a>
-</div>
-</div>
-<a href="/pricing/">Hosting</a>
-<a href="/contact/">Contact</a>
-<a href="tel:+552140402160" class="phone-link">
-<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-+55 21 4040-2160
-</a>
-<div class="gtranslate_wrapper"></div>
-</nav>
-<div class="flex items-center gap-4">
-<button class="nav-mobile-toggle" id="mobile-menu-toggle" aria-label="Toggle menu">
-<svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
-<svg class="close-icon hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M6 18L18 6"/></svg>
-</button>
-</div>
-</div>
-<div id="mobile-menu" class="hidden">
-<a href="/" class="mobile-nav-link">Home</a>
-<button class="mobile-dropdown-trigger">General Bots <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
-<div class="mobile-dropdown-content hidden">
-<a href="/general-bots/llm">LLMs</a>
-<a href="/general-bots/vector-retrieval">Vector Retrieval</a>
-<a href="/general-bots/open-source">Open Source</a>
-</div>
-<button class="mobile-dropdown-trigger">Features <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
-<div class="mobile-dropdown-content hidden">
-<a href="/features/" style="font-weight:600">All Features</a>
-<a href="/features/ai-search/">AI Search</a>
-<a href="/features/bot-factory/">Bot Factory</a>
-<a href="/features/broadcast/">Broadcast</a>
-<a href="/features/content-generation/">Content Generation</a>
-<a href="/features/create-apis-in-word/">Create APIs in BASIC</a>
-<a href="/features/llm-tools/">LLM Tools</a>
-<a href="/features/talk-to-data/">Talk to Data</a>
-<a href="/features/trainning/">Training</a>
-<a href="/features/web-automation/">Web Automation</a>
-</div>
-<button class="mobile-dropdown-trigger">Integrations <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
-<div class="mobile-dropdown-content hidden">
-<a href="/integrations/">Overview</a>
-</div>
-<a href="/templates/" class="mobile-nav-link">Templates</a>
-<button class="mobile-dropdown-trigger">Resources <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
-<div class="mobile-dropdown-content hidden">
-<a href="/blog/">Blog</a>
-<a href="/resources/">Documentation</a>
-</div>
-<a href="/pricing/" class="mobile-nav-link">Hosting</a>
-<a href="/contact/" class="mobile-nav-link">Contact</a>
-<a href="tel:+552140402160" class="mobile-phone">+55 21 4040-2160</a>
-</div>
-</header>
-
+<div hx-get="/partials/header.html" hx-swap="innerHTML" hx-trigger="load"></div>
 <main style="padding-top:4rem">
-
 <section class="page-section bg-gray-50 vitral-bg">
 <div class="container text-center">
 <div class="reveal">
@@ -124,291 +29,50 @@ Back to Features
 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="9" cy="16" r="1"/><circle cx="15" cy="16" r="1"/><path d="M6 11V7a6 6 0 0112 0v4"/></svg>
 Bot Factory
 </div>
-<h1 class="text-4xl font-bold tracking-tighter mb-4" style="font-size:clamp(2rem,5vw,3rem)">Create and Deploy Bots with Ease</h1>
-<p class="text-lg text-muted max-w-2xl mx-auto leading-relaxed mb-8">Mass-produce bots from templates, manage multi-tenant deployments, and scale your bot operations from a central dashboard.</p>
-<div class="flex flex-wrap gap-4 justify-center mb-8">
-<a href="/features/bot-factory/#template-creation" class="btn btn-outline btn-lg">Learn More</a>
-<a href="/contact/" class="btn btn-primary btn-lg">Get Started</a>
-</div>
-<div style="max-width:40rem;margin:0 auto;background:var(--card);border:1px solid var(--border);border-radius:1rem;aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;color:var(--muted-foreground);overflow:hidden;position:relative">
-<svg width="100%" height="100%" viewBox="0 0 800 450" fill="none">
-  <defs>
-    <linearGradient id="factoryGrad" x1="0" y1="0" x2="800" y2="450" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#f8f8f8"/>
-      <stop offset="100%" stop-color="#eaeaea"/>
-    </linearGradient>
-    <pattern id="grid6" width="40" height="40" patternUnits="userSpaceOnUse">
-      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(0,0,0,0.03)" stroke-width="1"/>
-    </pattern>
-  </defs>
-  <rect width="800" height="450" fill="url(#factoryGrad)"/>
-  <rect width="800" height="450" fill="url(#grid6)"/>
-  <!-- Factory / Assembly Line -->
-  <g transform="translate(150, 250)" stroke="currentColor" stroke-width="2" fill="#fff">
-    <!-- Conveyor belt -->
-    <rect x="0" y="50" width="500" height="20" rx="10" />
-    <circle cx="20" cy="60" r="4" fill="currentColor"/>
-    <circle cx="80" cy="60" r="4" fill="currentColor"/>
-    <circle cx="140" cy="60" r="4" fill="currentColor"/>
-    <circle cx="200" cy="60" r="4" fill="currentColor"/>
-    <circle cx="260" cy="60" r="4" fill="currentColor"/>
-    <circle cx="320" cy="60" r="4" fill="currentColor"/>
-    <circle cx="380" cy="60" r="4" fill="currentColor"/>
-    <circle cx="440" cy="60" r="4" fill="currentColor"/>
-    <circle cx="480" cy="60" r="4" fill="currentColor"/>
-    <!-- Bots on belt -->
-    <!-- Template -->
-    <rect x="40" y="-20" width="60" height="60" rx="4" stroke-dasharray="4 4" fill="none"/>
-    <path d="M70 0 L70 20 M60 10 L80 10" stroke-linecap="round"/>
-    <!-- Bot 1 -->
-    <g transform="translate(160, -20)">
-      <rect x="0" y="0" width="60" height="60" rx="4" />
-      <circle cx="20" cy="20" r="4" fill="currentColor" stroke="none"/>
-      <circle cx="40" cy="20" r="4" fill="currentColor" stroke="none"/>
-      <path d="M20 40 Q30 50 40 40" stroke-linecap="round" fill="none"/>
-    </g>
-    <!-- Bot 2 -->
-    <g transform="translate(280, -20)">
-      <rect x="0" y="0" width="60" height="60" rx="4" />
-      <circle cx="20" cy="20" r="4" fill="currentColor" stroke="none"/>
-      <circle cx="40" cy="20" r="4" fill="currentColor" stroke="none"/>
-      <path d="M20 40 Q30 50 40 40" stroke-linecap="round" fill="none"/>
-    </g>
-    <!-- Bot 3 -->
-    <g transform="translate(400, -20)">
-      <rect x="0" y="0" width="60" height="60" rx="4" />
-      <circle cx="20" cy="20" r="4" fill="currentColor" stroke="none"/>
-      <circle cx="40" cy="20" r="4" fill="currentColor" stroke="none"/>
-      <path d="M20 40 Q30 50 40 40" stroke-linecap="round" fill="none"/>
-    </g>
-    <!-- Robotic Arm -->
-    <path d="M100 -120 L100 -80 L190 -40" stroke-width="6" stroke-linecap="round" fill="none"/>
-    <circle cx="100" cy="-120" r="10" />
-    <circle cx="100" cy="-80" r="8" fill="currentColor"/>
-  </g>
-</svg>
-</div>
-</div>
-</div>
-</section>
-
-<section id="template-creation" class="page-section-lg reveal">
-<div class="container">
-<div class="text-center mb-12">
-<div class="badge mb-4" style="margin-left:auto;margin-right:auto;width:fit-content">Template-Based Creation</div>
-<h2 class="text-3xl font-bold tracking-tighter mb-4">Build Bots from Templates</h2>
-<p class="text-lg text-muted max-w-2xl mx-auto leading-relaxed">Start with pre-built templates and customize them to your needs. Deploy new bots in minutes, not months.</p>
-</div>
-<div class="grid-2">
-<div>
-<ul class="feature-list">
-<li>
-<svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>
-<div><strong>Pre-built templates</strong><p class="text-sm text-muted mt-1">Choose from a library of ready-made bot templates for customer support, sales, onboarding, and more.</p></div>
-</li>
-<li>
-<svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>
-<div><strong>Rapid deployment</strong><p class="text-sm text-muted mt-1">Go from template to live bot in minutes with streamlined configuration and one-click deployment.</p></div>
-</li>
-<li>
-<svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>
-<div><strong>Custom branding</strong><p class="text-sm text-muted mt-1">Apply your brand identity, tone of voice, and visual style to any template with simple configuration.</p></div>
-</li>
-<li>
-<svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>
-<div><strong>Continuous Synchronization</strong><p class="text-sm text-muted mt-1">Link bots to their parent template. When the template updates, all child bots inherit the changes automatically without manual redeployment.</p></div>
-</li>
-</ul>
-</div>
-<div style="background:var(--card);border:1px solid var(--border);border-radius:1rem;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;color:var(--muted-foreground);overflow:hidden">
-<svg width="100%" height="100%" viewBox="0 0 400 300" fill="none">
-  <rect width="400" height="300" fill="#fafafa"/>
-  <g transform="translate(80, 80)" fill="#fff" stroke="currentColor" stroke-width="2">
-    <!-- Center template -->
-    <rect x="90" y="40" width="60" height="60" rx="8" />
-    <path d="M120 60 L120 80 M110 70 L130 70" stroke-linecap="round"/>
-    <!-- Copies -->
-    <rect x="0" y="40" width="40" height="40" rx="4" stroke-dasharray="4 4" />
-    <rect x="200" y="40" width="40" height="40" rx="4" stroke-dasharray="4 4" />
-    <rect x="90" y="140" width="40" height="40" rx="4" stroke-dasharray="4 4" />
-    <!-- Arrows -->
-    <path d="M80 70 L50 60" stroke-linecap="round" />
-    <path d="M160 70 L190 60" stroke-linecap="round" />
-    <path d="M120 110 L110 130" stroke-linecap="round" />
-  </g>
-</svg>
-</div>
-</div>
-</div>
-</section>
-
-<section class="page-section-lg bg-gray-50 reveal">
-<div class="container">
-<div class="text-center mb-12">
-<div class="badge mb-4" style="margin-left:auto;margin-right:auto;width:fit-content">Multi-Tenant Support</div>
-<h2 class="text-3xl font-bold tracking-tighter mb-4">Isolated Environments for Every Client</h2>
-<p class="text-lg text-muted max-w-2xl mx-auto leading-relaxed">Run multiple bot instances with complete isolation, each with its own configuration, data, and branding.</p>
-</div>
-<div class="grid-2">
-<div style="background:var(--card);border:1px solid var(--border);border-radius:1rem;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;color:var(--muted-foreground);overflow:hidden">
-<svg width="100%" height="100%" viewBox="0 0 400 300" fill="none">
-  <rect width="400" height="300" fill="#fafafa"/>
-  <g transform="translate(100, 60)" fill="#fff" stroke="currentColor" stroke-width="2">
-    <!-- Server blocks isolated -->
-    <rect x="0" y="0" width="80" height="80" rx="4" />
-    <circle cx="40" cy="40" r="15" fill="currentColor" opacity="0.1" stroke="none"/>
-    <path d="M20 20 L60 60 M60 20 L20 60" stroke-width="1" opacity="0.3"/>
-    
-    <rect x="120" y="0" width="80" height="80" rx="4" />
-    <circle cx="160" cy="40" r="15" fill="currentColor" opacity="0.1" stroke="none"/>
-    <path d="M140 20 L180 60 M180 20 L140 60" stroke-width="1" opacity="0.3"/>
-    
-    <rect x="60" y="100" width="80" height="80" rx="4" />
-    <circle cx="100" cy="140" r="15" fill="currentColor" opacity="0.1" stroke="none"/>
-    <path d="M80 120 L120 160 M120 120 L80 160" stroke-width="1" opacity="0.3"/>
-  </g>
-</svg>
-</div>
-<div>
-<ul class="feature-list">
-<li>
-<svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>
-<div><strong>Isolated environments</strong><p class="text-sm text-muted mt-1">Each tenant operates in a fully isolated environment with separate data stores, configurations, and access controls.</p></div>
-</li>
-<li>
-<svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>
-<div><strong>Independent configurations</strong><p class="text-sm text-muted mt-1">Customize LLM providers, channel connections, and bot behavior independently for each tenant.</p></div>
-</li>
-<li>
-<svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>
-<div><strong>Scalable architecture</strong><p class="text-sm text-muted mt-1">Add new tenants without affecting existing deployments. Scale horizontally as your client base grows.</p></div>
-</li>
-<li>
-<svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>
-<div><strong>Role-Based Access Control (RBAC)</strong><p class="text-sm text-muted mt-1">Assign granular permissions to tenant administrators so they can manage their own prompts and analytics without accessing global system settings.</p></div>
-</li>
-</ul>
-</div>
+<h1 class="text-4xl font-bold tracking-tighter mb-4" style="font-size:clamp(2rem,5vw,3rem)">Industrial Scale Bot Deployment.</h1>
+<p class="text-lg text-muted max-w-2xl mx-auto leading-relaxed mb-8">Mass-produce bots from central templates, manage multi-tenant deployments, and scale your digital workforce from a unified dashboard.</p>
 </div>
 </div>
 </section>
 
 <section class="page-section-lg reveal">
 <div class="container">
-<div class="text-center mb-12">
-<div class="badge mb-4" style="margin-left:auto;margin-right:auto;width:fit-content">Bot Management</div>
-<h2 class="text-3xl font-bold tracking-tighter mb-4">Centralized Bot Administration</h2>
-<p class="text-lg text-muted max-w-2xl mx-auto leading-relaxed">Monitor, update, and manage all your bots from a single dashboard with full visibility into performance and usage.</p>
-</div>
 <div class="grid-2">
 <div>
+<h2 class="text-3xl font-bold tracking-tighter mb-6">Built for Complexity</h2>
+<p class="text-lg text-muted mb-8 leading-relaxed">The Bot Factory uses a unique "Parent-Child" architecture. Define a single PROMPT.md template and spawn thousands of isolated instances instantly.</p>
 <ul class="feature-list">
 <li>
 <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>
-<div><strong>Central dashboard</strong><p class="text-sm text-muted mt-1">View all your bots, their status, and key metrics from a unified management interface.</p></div>
+<div><strong>Atomic Template System</strong><p class="text-sm text-muted mt-1">Update the master template and all child bots receive the update instantly. No manual redeployment required.</p></div>
 </li>
 <li>
 <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>
-<div><strong>Usage analytics</strong><p class="text-sm text-muted mt-1">Track conversations, user engagement, LLM token usage, and channel-specific performance across all bots.</p></div>
+<div><strong>True Multi-Tenancy</strong><p class="text-sm text-muted mt-1">Complete data isolation. Tenant A's customer data is cryptographically separated from Tenant B on the same core.</p></div>
 </li>
 <li>
 <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>
-<div><strong>Update management</strong><p class="text-sm text-muted mt-1">Roll out updates, new features, and configuration changes across selected bots with version control.</p></div>
-</li>
-<li>
-<svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>
-<div><strong>Zero-Downtime Rollbacks</strong><p class="text-sm text-muted mt-1">Instantly revert any bot to a previous configuration version if an update causes unexpected behavior in production.</p></div>
+<div><strong>Scale Without Limits</strong><p class="text-sm text-muted mt-1">Orchestrate hundreds of specialized bots (HR, IT, Sales) under a single management plane.</p></div>
 </li>
 </ul>
 </div>
-<div style="background:var(--card);border:1px solid var(--border);border-radius:1rem;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;color:var(--muted-foreground);overflow:hidden">
+<div style="width:100%;aspect-ratio:4/3;background:#f8f8f8;border-radius:1rem;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;border:1px solid rgba(0,0,0,0.06)">
 <svg width="100%" height="100%" viewBox="0 0 400 300" fill="none">
-  <rect width="400" height="300" fill="#fafafa"/>
-  <g transform="translate(100, 70)" fill="#fff" stroke="currentColor" stroke-width="2">
-    <!-- Dashboard -->
-    <rect x="0" y="0" width="200" height="140" rx="8" />
-    <line x1="0" y1="30" x2="200" y2="30" />
-    <!-- Metrics -->
-    <rect x="20" y="50" width="40" height="40" rx="4" />
-    <rect x="80" y="50" width="40" height="40" rx="4" />
-    <rect x="140" y="50" width="40" height="40" rx="4" />
-    <!-- Graph -->
-    <rect x="20" y="110" width="160" height="10" rx="2" />
-    <path d="M30 65 L40 70 L50 60" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-    <path d="M90 70 L100 65 L110 60" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-  </g>
+  <defs><pattern id="gridFact" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(0,0,0,0.03)" stroke-width="1"/></pattern></defs>
+  <rect width="400" height="300" fill="url(#gridFact)"/>
+  <rect x="150" y="100" width="100" height="100" rx="8" stroke="#111" stroke-width="2" />
+  <path d="M150 150 L50 150 M250 150 L350 150" stroke="#111" stroke-width="2" stroke-dasharray="8 4" />
+  <circle cx="50" cy="150" r="20" stroke="#059669" stroke-width="2" />
+  <circle cx="350" cy="150" r="20" stroke="#059669" stroke-width="2" />
 </svg>
 </div>
 </div>
 </div>
 </section>
 
-<section class="page-section-lg vitral-bg reveal">
-<div class="container text-center">
-<h2 class="text-3xl font-bold tracking-tighter mb-4">Transform Your Bot Operations</h2>
-<p class="text-lg text-muted max-w-2xl mx-auto mb-8 leading-relaxed">Scale from one bot to hundreds with template-driven creation, multi-tenant isolation, and centralized management.</p>
-<div class="flex flex-wrap gap-4 justify-center">
-<a href="/contact/" class="btn btn-outline btn-lg">Contact Us</a>
-<a href="/contact/" class="btn btn-primary btn-lg">Get Started</a>
-</div>
-</div>
-</section>
-
 </main>
-
-<footer class="site-footer">
-<div class="container">
-<div class="footer-top">
-<div class="footer-brand">
-<img src="/gb-logo.png" alt="General Bots" class="footer-logo" width="140" height="33">
-<p>General Bots® — The Open Source AI Bot Platform. Self-host or choose a certified hosting provider.</p>
-<p style="margin-top:.75rem;font-size:.75rem">DPO: Rodrigo Rodriguez (<a href="mailto:security@pragmatismo.com.br" style="color:rgba(255,255,255,.7)">security@pragmatismo.com.br</a>)</p>
-<p style="font-size:.75rem;margin-top:.25rem">Rio de Janeiro – São Paulo – Paraná, Brazil</p>
-<p style="font-size:.75rem;margin-top:.25rem"><a href="tel:+552140402160" style="color:rgba(255,255,255,.7)">+55 21 4040-2160</a></p>
-</div>
-<div class="footer-col">
-<h5>General Bots</h5>
-<a href="/general-bots/llm">LLM</a>
-<a href="/general-bots/vector-retrieval">Vector Search</a>
-<a href="/general-bots/open-source">Open Source</a>
-<a href="/features/ai-search/">AI Search</a>
-<a href="/features/bot-factory/">Bot Factory</a>
-</div>
-<div class="footer-col">
-<h5>Hosting</h5>
-<a href="https://pragmatismo.com.br" target="_blank" rel="noopener">Pragmatismo</a>
-<a href="https://oerlabs.com.br" target="_blank" rel="noopener">OERLabs</a>
-<a href="https://mapagency.com.br" target="_blank" rel="noopener">Map Agency</a>
-<a href="https://sentient.net.br" target="_blank" rel="noopener">Sentient</a>
-<a href="https://darioexecutivesales.com" target="_blank" rel="noopener">Dario Executive Sales</a>
-</div>
-<div class="footer-col">
-<h5>Community</h5>
-<a href="https://docs.generalbots.org" target="_blank" rel="noopener">Documentation</a>
-<a href="https://gb.pragmatismo.com.br/pragmatismohelpcenter" target="_blank" rel="noopener">Help Center</a>
-<a href="/resources/community/become-a-partner">Become a Partner</a>
-<a href="/blog/">Blog</a>
-<a href="https://github.com/generalbots" target="_blank" rel="noopener">GitHub</a>
-</div>
-</div>
-<div class="footer-middle">
-<span>Copyright &copy; 2016-2026 Pragmatismo</span>
-<div class="flex items-center gap-4">
-<a href="/terms/">Terms of Service</a>
-<a href="/privacy/">Privacy Policy</a>
-</div>
-</div>
-<div class="footer-bottom">
-<span>General Bots — Open Source AI Orchestration Platform</span>
-<div class="footer-social">
-<a href="https://github.com/GeneralBots" target="_blank" rel="noopener" aria-label="GitHub"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg></a>
-<a href="https://instagram.com/generalbots" target="_blank" rel="noopener" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg></a>
-<a href="https://wa.me/552140402160" target="_blank" rel="noopener" aria-label="WhatsApp"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
-</div>
-</div>
-</div>
-</footer>
-
+<div hx-get="/partials/footer.html" hx-swap="innerHTML" hx-trigger="load"></div>
+<script src="https://unpkg.com/htmx.org@2.0.4"></script>
 <script src="/js/site.js"></script>
 </body>
 </html>

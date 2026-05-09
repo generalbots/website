@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Create APIs in BASIC | General Bots</title>
-<meta name="description" content="Create powerful APIs using BASIC directly in Word documents. General Bots lets you define, deploy, and manage APIs without complex development environments.">
+<meta name="description" content="Build powerful REST APIs using BASIC syntax directly inside Word documents. General Bots democratizes backend engineering for the enterprise.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://generalbots.org/features/create-apis-in-word/">
 <meta property="og:title" content="Create APIs in BASIC | General Bots">
@@ -16,99 +16,7 @@
 <link rel="stylesheet" href="/css/site.css">
 </head>
 <body>
-<header class="site-header">
-<div class="header-inner">
-<a href="/" class="logo-link"><img src="/gb-logo.png" alt="General Bots" width="140" height="33"></a>
-<nav class="nav-desktop">
-<a href="/">Home</a>
-<div class="nav-dropdown">
-<button class="nav-dropdown-trigger">General Bots <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5l3 3 3-3"/></svg></button>
-<div class="nav-dropdown-content hidden">
-<a href="/general-bots/llm">LLMs</a>
-<a href="/general-bots/vector-retrieval">Vector Retrieval</a>
-<a href="/general-bots/open-source">Open Source</a>
-</div>
-</div>
-<div class="nav-dropdown">
-<button class="nav-dropdown-trigger">Features <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5l3 3 3-3"/></svg></button>
-<div class="nav-dropdown-content hidden">
-<a href="/features/" style="font-weight:600">All Features</a>
-<a href="/features/ai-search/">AI Search</a>
-<a href="/features/bot-factory/">Bot Factory</a>
-<a href="/features/broadcast/">Broadcast</a>
-<a href="/features/content-generation/">Content Generation</a>
-<a href="/features/create-apis-in-word/">Create APIs in BASIC</a>
-<a href="/features/llm-tools/">LLM Tools</a>
-<a href="/features/talk-to-data/">Talk to Data</a>
-<a href="/features/trainning/">Training</a>
-<a href="/features/web-automation/">Web Automation</a>
-</div>
-</div>
-<div class="nav-dropdown">
-<button class="nav-dropdown-trigger">Integrations <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5l3 3 3-3"/></svg></button>
-<div class="nav-dropdown-content hidden">
-<a href="/integrations/">Overview</a>
-</div>
-</div>
-<a href="/templates/">Templates</a>
-<div class="nav-dropdown">
-<button class="nav-dropdown-trigger">Resources <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5l3 3 3-3"/></svg></button>
-<div class="nav-dropdown-content hidden">
-<a href="/blog/">Blog</a>
-<a href="/resources/">Documentation</a>
-</div>
-</div>
-<a href="/pricing/">Hosting</a>
-<a href="/contact/">Contact</a>
-<a href="tel:+552140402160" class="phone-link">
-<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-+55 21 4040-2160
-</a>
-<div class="gtranslate_wrapper"></div>
-</nav>
-<div class="flex items-center gap-4">
-<button class="nav-mobile-toggle" id="mobile-menu-toggle" aria-label="Toggle menu">
-<svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
-<svg class="close-icon hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M6 18L18 6"/></svg>
-</button>
-</div>
-</div>
-<div id="mobile-menu" class="hidden">
-<a href="/" class="mobile-nav-link">Home</a>
-<button class="mobile-dropdown-trigger">General Bots <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
-<div class="mobile-dropdown-content hidden">
-<a href="/general-bots/llm">LLMs</a>
-<a href="/general-bots/vector-retrieval">Vector Retrieval</a>
-<a href="/general-bots/open-source">Open Source</a>
-</div>
-<button class="mobile-dropdown-trigger">Features <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
-<div class="mobile-dropdown-content hidden">
-<a href="/features/" style="font-weight:600">All Features</a>
-<a href="/features/ai-search/">AI Search</a>
-<a href="/features/bot-factory/">Bot Factory</a>
-<a href="/features/broadcast/">Broadcast</a>
-<a href="/features/content-generation/">Content Generation</a>
-<a href="/features/create-apis-in-word/">Create APIs in BASIC</a>
-<a href="/features/llm-tools/">LLM Tools</a>
-<a href="/features/talk-to-data/">Talk to Data</a>
-<a href="/features/trainning/">Training</a>
-<a href="/features/web-automation/">Web Automation</a>
-</div>
-<button class="mobile-dropdown-trigger">Integrations <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
-<div class="mobile-dropdown-content hidden">
-<a href="/integrations/">Overview</a>
-</div>
-<a href="/templates/" class="mobile-nav-link">Templates</a>
-<button class="mobile-dropdown-trigger">Resources <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
-<div class="mobile-dropdown-content hidden">
-<a href="/blog/">Blog</a>
-<a href="/resources/">Documentation</a>
-</div>
-<a href="/pricing/" class="mobile-nav-link">Hosting</a>
-<a href="/contact/" class="mobile-nav-link">Contact</a>
-<a href="tel:+552140402160" class="mobile-phone">+55 21 4040-2160</a>
-</div>
-</header>
+<div hx-get="/partials/header.html" hx-swap="innerHTML" hx-trigger="load"></div>
 <main style="padding-top:4rem">
 <section class="page-section bg-gray-50 vitral-bg">
 <div class="container text-center">
@@ -119,259 +27,53 @@ Back to Features
 </a>
 <div class="badge mb-4" style="margin-left:auto;margin-right:auto;width:fit-content">
 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>
-APIs from Word Documents
+Create APIs in BASIC
 </div>
-<h1 class="text-4xl font-bold tracking-tighter mb-4" style="font-size:clamp(2rem,5vw,3rem)">Create APIs in BASIC!</h1>
-<p class="text-lg text-muted max-w-2xl mx-auto leading-relaxed mb-8">Write API logic using BASIC syntax directly inside Word documents. No IDE, no build tools — just open a .docx and start building.</p>
-<div class="flex flex-wrap gap-4 justify-center mb-8">
-<a href="/features/create-apis-in-word/#word-based" class="btn btn-outline btn-lg">Learn More</a>
-<a href="/contact/" class="btn btn-primary btn-lg">Get Started</a>
-</div>
-<div style="max-width:40rem;margin:0 auto;background:var(--card);border:1px solid var(--border);border-radius:1rem;aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;color:var(--muted-foreground);overflow:hidden;position:relative">
-<svg width="100%" height="100%" viewBox="0 0 800 450" fill="none">
-  <defs>
-    <linearGradient id="apiGrad" x1="0" y1="0" x2="800" y2="450" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#f8f8f8"/>
-      <stop offset="100%" stop-color="#eaeaea"/>
-    </linearGradient>
-    <pattern id="grid5" width="40" height="40" patternUnits="userSpaceOnUse">
-      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(0,0,0,0.03)" stroke-width="1"/>
-    </pattern>
-  </defs>
-  <rect width="800" height="450" fill="url(#apiGrad)"/>
-  <rect width="800" height="450" fill="url(#grid5)"/>
-  <!-- Document -->
-  <g transform="translate(180, 150)" fill="#fff" stroke="currentColor" stroke-width="2">
-    <rect x="0" y="0" width="100" height="130" rx="4" />
-    <path d="M20 30 L80 30 M20 50 L80 50 M20 70 L50 70" stroke-linecap="round"/>
-    <rect x="15" y="90" width="70" height="20" rx="2" fill="currentColor" opacity="0.1" stroke="none"/>
-    <text x="50" y="104" font-family="monospace" font-size="10" text-anchor="middle" fill="currentColor" stroke="none">BASIC</text>
-  </g>
-  <!-- Arrow -->
-  <path d="M320 215 L450 215 M430 195 L450 215 L430 235" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
-  <circle cx="385" cy="215" r="15" fill="#fafafa" stroke="currentColor" stroke-width="2"/>
-  <path d="M380 205 L390 225 L380 225 Z" fill="currentColor" stroke="none" transform="translate(1, -2) rotate(45 385 215)"/>
-  <!-- API Server / JSON -->
-  <g transform="translate(490, 140)" fill="#fff" stroke="currentColor" stroke-width="2">
-    <rect x="0" y="0" width="120" height="150" rx="8" />
-    <circle cx="60" cy="30" r="10" />
-    <circle cx="60" cy="30" r="4" fill="currentColor" stroke="none"/>
-    <path d="M20 70 L30 60 L20 50 M40 70 L50 70" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-    <rect x="20" y="90" width="80" height="10" rx="2" />
-    <rect x="20" y="110" width="50" height="10" rx="2" />
-    <rect x="20" y="130" width="70" height="10" rx="2" />
-  </g>
-</svg>
-</div>
+<h1 class="text-4xl font-bold tracking-tighter mb-4" style="font-size:clamp(2rem,5vw,3rem)">Universal API Development.</h1>
+<p class="text-lg text-muted max-w-2xl mx-auto leading-relaxed mb-8">Write API logic using BASIC syntax directly inside Word documents. No IDE, no complex toolchains &#8212; just your logic, deployed instantly.</p>
 </div>
 </div>
 </section>
-<section id="word-based" class="page-section-lg reveal">
-<div class="container">
-<div class="text-center mb-12">
-<div class="badge mb-4" style="margin-left:auto;margin-right:auto;width:fit-content">Word-Based Development</div>
-<h2 class="text-3xl font-bold tracking-tighter mb-4">BASIC in Word Documents</h2>
-<p class="text-lg text-muted max-w-2xl mx-auto leading-relaxed">Embed BASIC code blocks inside Word documents to define your bot's API endpoints, business logic, and data flows.</p>
-</div>
-<div class="grid-2">
-<div>
-<ul class="feature-list">
-<li>
-<svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>
-<div><strong>No IDE Required</strong><p class="text-sm text-muted mt-1">Write and edit API code directly in Microsoft Word or any .docx-compatible editor. No development environment setup needed — anyone who can open a Word document can build an API.</p></div>
-</li>
-<li>
-<svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>
-<div><strong>Business-Readable Logic</strong><p class="text-sm text-muted mt-1">BASIC syntax reads like plain English, so business analysts and domain experts can review, audit, and even write API logic themselves — no translation layer between requirements and implementation.</p></div>
-</li>
-<li>
-<svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>
-<div><strong>LLM-Assisted Code Generation</strong><p class="text-sm text-muted mt-1">Describe what your API should do in plain English and the LLM generates the BASIC code for you. Review, edit in Word, and deploy — no programming skills required.</p></div>
-</li>
-<li>
-<svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>
-<div><strong>Version Control via Documents</strong><p class="text-sm text-muted mt-1">Track changes using Word's built-in revision history. Share .docx files with colleagues for review. Your API source code lives where your team already works.</p></div>
-</li>
-</ul>
-</div>
-<div style="background:var(--card);border:1px solid var(--border);border-radius:1rem;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;color:var(--muted-foreground);overflow:hidden">
-<svg width="100%" height="100%" viewBox="0 0 400 300" fill="none">
-  <rect width="400" height="300" fill="#fafafa"/>
-  <g transform="translate(100, 50)" fill="#fff" stroke="currentColor" stroke-width="2">
-    <!-- Word Document with Code inside -->
-    <rect x="20" y="20" width="160" height="200" rx="4" />
-    <path d="M140 20 L180 60 L180 220 C180 222 178 220 180 220" fill="none" opacity="0"/>
-    <path d="M140 20 L140 60 L180 60" />
-    <!-- Headers -->
-    <rect x="40" y="40" width="80" height="10" rx="2" fill="currentColor" opacity="0.1" stroke="none"/>
-    <rect x="40" y="60" width="50" height="6" rx="2" fill="currentColor" opacity="0.1" stroke="none"/>
-    <!-- Code block -->
-    <rect x="40" y="90" width="120" height="100" rx="4" stroke="#111"/>
-    <path d="M50 110 L60 120 L50 130 M70 130 L90 130" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-    <rect x="50" y="150" width="60" height="4" rx="2" fill="currentColor" opacity="0.3" stroke="none"/>
-    <rect x="50" y="170" width="90" height="4" rx="2" fill="currentColor" opacity="0.3" stroke="none"/>
-  </g>
-</svg>
-</div>
-</div>
-</div>
-</section>
-<section class="page-section-lg bg-gray-50 reveal">
-<div class="container">
-<div class="text-center mb-12">
-<div class="badge mb-4" style="margin-left:auto;margin-right:auto;width:fit-content">Rapid Deployment</div>
-<h2 class="text-3xl font-bold tracking-tighter mb-4">From Document to API in Seconds</h2>
-<p class="text-lg text-muted max-w-2xl mx-auto leading-relaxed">Upload your Word document and General Bots automatically parses, compiles, and deploys your API endpoints.</p>
-</div>
-<div class="grid-2">
-<div style="background:var(--card);border:1px solid var(--border);border-radius:1rem;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;color:var(--muted-foreground);overflow:hidden">
-<svg width="100%" height="100%" viewBox="0 0 400 300" fill="none">
-  <rect width="400" height="300" fill="#fafafa"/>
-  <g transform="translate(80, 100)" stroke="currentColor" stroke-width="2" fill="#fff">
-    <!-- Cloud -->
-    <path d="M60 60 C60 40 80 30 100 30 C130 30 140 50 140 60 C160 60 170 80 160 100 C150 120 130 120 110 120 L50 120 C30 120 20 100 30 80 C40 60 60 60 60 60 Z" />
-    <!-- API Endpoint -->
-    <rect x="180" y="55" width="80" height="30" rx="15" />
-    <circle cx="195" cy="70" r="4" fill="currentColor"/>
-    <!-- Connection -->
-    <path d="M140 80 L180 80" stroke-width="3" stroke-dasharray="6 6" opacity="0.4"/>
-    <!-- Speed lines -->
-    <path d="M40 30 L60 30 M20 60 L40 60 M40 90 L60 90" stroke-width="2" stroke-linecap="round" opacity="0.3"/>
-  </g>
-</svg>
-</div>
-<div>
-<ul class="feature-list">
-<li>
-<svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>
-<div><strong>Instant Compilation</strong><p class="text-sm text-muted mt-1">Upload a .docx and your BASIC code is compiled into executable API endpoints instantly — no build pipeline, no CI/CD, no Docker containers. Save the file and the API is live.</p></div>
-</li>
-<li>
-<svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>
-<div><strong>Hot Reloading</strong><p class="text-sm text-muted mt-1">Re-upload updated documents and changes take effect immediately. Edit a single line in Word, save, and the API behavior changes in seconds — enabling rapid iteration.</p></div>
-</li>
-<li>
-<svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>
-<div><strong>S3-Compatible Storage</strong><p class="text-sm text-muted mt-1">Documents are stored in S3-compatible object storage with automatic processing. Upload via the API, via the web UI, or sync from your existing drive — files are indexed and available immediately.</p></div>
-</li>
-<li>
-<svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>
-<div><strong>Built-in Authentication</strong><p class="text-sm text-muted mt-1">APIs created in BASIC automatically inherit the platform's enterprise security: JWT tokens, Argon2 password hashing, and TLS encryption — no security code to write.</p></div>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</section>
+
 <section class="page-section-lg reveal">
 <div class="container">
-<div class="text-center mb-12">
-<div class="badge mb-4" style="margin-left:auto;margin-right:auto;width:fit-content">Full API Power</div>
-<h2 class="text-3xl font-bold tracking-tighter mb-4">Complete API Capabilities</h2>
-<p class="text-lg text-muted max-w-2xl mx-auto leading-relaxed">Access databases, call external services, handle authentication, and return structured data — all from BASIC in a Word file.</p>
-</div>
 <div class="grid-2">
 <div>
+<h2 class="text-3xl font-bold tracking-tighter mb-6">Document-Driven Logic</h2>
+<p class="text-lg text-muted mb-8 leading-relaxed">General Bots re-imagines the BASIC language for the modern era, allowing anyone to build deterministic backend endpoints using familiar tools.</p>
 <ul class="feature-list">
 <li>
 <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>
-<div><strong>Database Connectivity</strong><p class="text-sm text-muted mt-1">Query SQL and NoSQL databases directly from BASIC code with built-in connection management and parameterized queries.</p></div>
+<div><strong>Deterministic Execution</strong><p class="text-sm text-muted mt-1">Unlike LLM generation, BASIC provides strict, predictable logic for mission-critical business rules.</p></div>
 </li>
 <li>
 <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>
-<div><strong>HTTP Integration</strong><p class="text-sm text-muted mt-1">Call external REST APIs, webhooks, and third-party services with simple BASIC HTTP functions.</p></div>
+<div><strong>Word Integration</strong><p class="text-sm text-muted mt-1">Our proprietary compiler transforms .docx structures into high-performance executable endpoints.</p></div>
 </li>
 <li>
 <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>
-<div><strong>Structured Responses</strong><p class="text-sm text-muted mt-1">Return JSON, XML, or custom formats with full control over headers, status codes, and response bodies.</p></div>
+<div><strong>Legacy Bridging</strong><p class="text-sm text-muted mt-1">Modernize SQL Server or Oracle databases by exposing them as REST JSON APIs via simple BASIC scripts.</p></div>
 </li>
 </ul>
 </div>
-<div style="background:var(--card);border:1px solid var(--border);border-radius:1rem;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;color:var(--muted-foreground);overflow:hidden">
+<div style="width:100%;aspect-ratio:4/3;background:#f8f8f8;border-radius:1rem;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;border:1px solid rgba(0,0,0,0.06)">
 <svg width="100%" height="100%" viewBox="0 0 400 300" fill="none">
-  <rect width="400" height="300" fill="#fafafa"/>
-  <g transform="translate(100, 70)" stroke="currentColor" stroke-width="2" fill="#fff">
-    <!-- Server Rack -->
-    <rect x="60" y="20" width="80" height="120" rx="4" />
-    <line x1="60" y1="60" x2="140" y2="60" />
-    <line x1="60" y1="100" x2="140" y2="100" />
-    <circle cx="80" cy="40" r="4" fill="currentColor" stroke="none"/>
-    <circle cx="80" cy="80" r="4" fill="currentColor" stroke="none"/>
-    <circle cx="80" cy="120" r="4" fill="currentColor" stroke="none"/>
-    
-    <!-- Code tags floating around -->
-    <path d="M30 30 L20 40 L30 50" stroke-linecap="round" stroke-linejoin="round" />
-    <path d="M170 110 L180 120 L170 130" stroke-linecap="round" stroke-linejoin="round" />
-    <path d="M170 30 L180 40 L170 50" stroke-linecap="round" stroke-linejoin="round" opacity="0.3"/>
-  </g>
+  <defs><pattern id="gridAPI" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(0,0,0,0.03)" stroke-width="1"/></pattern></defs>
+  <rect width="400" height="300" fill="url(#gridAPI)"/>
+  <rect x="100" y="50" width="80" height="110" rx="4" stroke="#111" stroke-width="2" />
+  <text x="140" y="150" text-anchor="middle" font-family="monospace" font-size="10" fill="#111">.DOCX</text>
+  <path d="M200 100 H250" stroke="#059669" stroke-width="2" />
+  <rect x="260" y="70" width="80" height="60" rx="4" stroke="#111" stroke-width="2" />
+  <text x="300" y="105" text-anchor="middle" font-family="monospace" font-size="10" fill="#111">API</text>
 </svg>
 </div>
 </div>
 </div>
 </section>
-<section class="page-section-lg vitral-bg reveal">
-<div class="container text-center">
-<h2 class="text-3xl font-bold tracking-tighter mb-4">Transform Your API Development</h2>
-<p class="text-lg text-muted max-w-2xl mx-auto mb-8 leading-relaxed">Stop wrestling with IDEs and build pipelines. Create APIs in Word documents with BASIC and deploy instantly with General Bots.</p>
-<div class="flex flex-wrap gap-4 justify-center">
-<a href="/contact/" class="btn btn-outline btn-lg">Contact Us</a>
-<a href="/contact/" class="btn btn-primary btn-lg">Get Started</a>
-</div>
-</div>
-</section>
+
 </main>
-<footer class="site-footer">
-<div class="container">
-<div class="footer-top">
-<div class="footer-brand">
-<img src="/gb-logo.png" alt="General Bots" class="footer-logo" width="140" height="33">
-<p>General Bots&#174; &#8212; The Open Source AI Bot Platform. Self-host or choose a certified hosting provider.</p>
-<p style="margin-top:.75rem;font-size:.75rem">DPO: Rodrigo Rodriguez (<a href="mailto:security@pragmatismo.com.br" style="color:rgba(255,255,255,.7)">security@pragmatismo.com.br</a>)</p>
-<p style="font-size:.75rem;margin-top:.25rem">Rio de Janeiro &#8211; S&#227;o Paulo &#8211; Paran&#225;, Brazil</p>
-<p style="font-size:.75rem;margin-top:.25rem"><a href="tel:+552140402160" style="color:rgba(255,255,255,.7)">+55 21 4040-2160</a></p>
-</div>
-<div class="footer-col">
-<h5>General Bots</h5>
-<a href="/general-bots/llm">LLM</a>
-<a href="/general-bots/vector-retrieval">Vector Search</a>
-<a href="/general-bots/open-source">Open Source</a>
-<a href="/features/ai-search/">AI Search</a>
-<a href="/features/bot-factory/">Bot Factory</a>
-</div>
-<div class="footer-col">
-<h5>Hosting</h5>
-<a href="https://pragmatismo.com.br" target="_blank" rel="noopener">Pragmatismo</a>
-<a href="https://oerlabs.com.br" target="_blank" rel="noopener">OERLabs</a>
-<a href="https://mapagency.com.br" target="_blank" rel="noopener">Map Agency</a>
-<a href="https://sentient.net.br" target="_blank" rel="noopener">Sentient</a>
-<a href="https://darioexecutivesales.com" target="_blank" rel="noopener">Dario Executive Sales</a>
-</div>
-<div class="footer-col">
-<h5>Community</h5>
-<a href="https://docs.generalbots.org" target="_blank" rel="noopener">Documentation</a>
-<a href="https://gb.pragmatismo.com.br/pragmatismohelpcenter" target="_blank" rel="noopener">Help Center</a>
-<a href="/resources/community/become-a-partner">Become a Partner</a>
-<a href="/blog/">Blog</a>
-<a href="https://github.com/generalbots" target="_blank" rel="noopener">GitHub</a>
-</div>
-</div>
-<div class="footer-middle">
-<span>Copyright &#169; 2016-2026 Pragmatismo</span>
-<div class="flex items-center gap-4">
-<a href="/terms/">Terms of Service</a>
-<a href="/privacy/">Privacy Policy</a>
-</div>
-</div>
-<div class="footer-bottom">
-<span>General Bots &#8212; Open Source AI Orchestration Platform</span>
-<div class="footer-social">
-<a href="https://github.com/GeneralBots" target="_blank" rel="noopener" aria-label="GitHub"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg></a>
-<a href="https://instagram.com/generalbots" target="_blank" rel="noopener" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg></a>
-<a href="https://wa.me/552140402160" target="_blank" rel="noopener" aria-label="WhatsApp"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
-</div>
-</div>
-</div>
-</footer>
+<div hx-get="/partials/footer.html" hx-swap="innerHTML" hx-trigger="load"></div>
+<script src="https://unpkg.com/htmx.org@2.0.4"></script>
 <script src="/js/site.js"></script>
 </body>
 </html>

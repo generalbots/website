@@ -3,177 +3,61 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>LLM Myths 2025 - Busted | General Bots Blog</title>
-<meta name="description" content="For years, tech giants have built walls around artificial intelligence, spreading myths about capability, accessibility, and safety. This is their playbook for control.">
-<link rel="stylesheet" href="/css/site.css">
+<title>LLM Myths 2025: A Didactic Deconstruction | General Bots Blog</title>
+<meta name="description" content="Analyzing and debunking prevalent misconceptions in the enterprise AI landscape. A technical framework for sovereign intelligence.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://generalbots.org/blog/llm-myths-2025/">
+<meta property="og:title" content="LLM Myths 2025: A Didactic Deconstruction | General Bots Blog">
+<meta property="og:description" content="Technical analysis of enterprise AI myths.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://generalbots.org/blog/llm-myths-2025/">
 <link rel="icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="stylesheet" href="/css/site.css">
 </head>
 <body>
-<header class="site-header"><div class="header-inner">
-<a href="/" class="logo-link"><img src="/gb-logo.png" alt="General Bots" width="140" height="33"></a>
-<nav class="nav-desktop"><a href="/">Home</a><div class="nav-dropdown"><button class="nav-dropdown-trigger">General Bots <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5l3 3 3-3"/></svg></button><div class="nav-dropdown-content hidden"><a href="/general-bots/llm">LLMs</a><a href="/general-bots/vector-retrieval">Vector Retrieval</a><a href="/general-bots/open-source">Open Source</a></div></div><div class="nav-dropdown"><button class="nav-dropdown-trigger">Features <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5l3 3 3-3"/></svg></button><div class="nav-dropdown-content hidden"><a href="/features/ai-search">AI Search</a><a href="/features/content-generation">Content Generation</a><a href="/features/bot-factory">Bot Factory</a><a href="/features/talk-to-data">Talk to data</a><a href="/features/broadcast">Broadcast</a><a href="/features/trainning">Train</a><a href="/features/web-automation">Web Automation</a><a href="/features/llm-tools">LLM Tools</a><a href="/features/create-apis-in-word">Calling APIs</a></div></div><div class="nav-dropdown"><button class="nav-dropdown-trigger">Integrations <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5l3 3 3-3"/></svg></button><div class="nav-dropdown-content hidden"><a href="/integrations/channels/whatsapp">WhatsApp</a><a href="/integrations/channels/sms">SMS</a><a href="/integrations/channels/web-chat">Web Chat</a><a href="/integrations/channels/instagram">Instagram</a><a href="/integrations/channels/email">E-mail</a><a href="/integrations/channels/microsoft-teams">Microsoft Teams</a><a href="/integrations/channels/google-chat">Google Chat</a><a href="/integrations/channels/facebook-pages">Facebook Pages</a><a href="/integrations/channels/slack">Slack</a></div></div><a href="/templates">Templates</a><div class="nav-dropdown"><button class="nav-dropdown-trigger">Resources <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5l3 3 3-3"/></svg></button><div class="nav-dropdown-content hidden"><a href="/resources/considering/ai-powered-org">Considering</a><a href="/resources/already-using/essential-resources">Already Using</a><a href="/resources/community/become-a-partner">Community</a></div></div><a href="/pricing">Hosting</a><a href="/contact">Contact</a></nav>
-<div class="flex items-center gap-4"><a href="tel:+552140402160" class="phone-link" style="display:none" id="header-phone">+55 21 4040-2160</a><div class="gtranslate_wrapper"></div><button class="nav-mobile-toggle" id="mobile-menu-toggle" aria-label="Toggle menu"><svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg><svg class="close-icon hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M6 18L18 6"/></svg></button></div>
-</div></header>
-<div id="mobile-menu" class="hidden">
-<a href="/" class="mobile-nav-link">Home</a>
-<div><button class="mobile-dropdown-trigger">General Bots <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><path d="M3 5l3 3 3-3"/></svg></button><div class="mobile-dropdown-content hidden"><a href="/general-bots/llm" class="mobile-nav-link">LLMs</a><a href="/general-bots/vector-retrieval" class="mobile-nav-link">Vector Retrieval</a><a href="/general-bots/open-source" class="mobile-nav-link">Open Source</a></div></div>
-<div><button class="mobile-dropdown-trigger">Features <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><path d="M3 5l3 3 3-3"/></svg></button><div class="mobile-dropdown-content hidden"><a href="/features/ai-search" class="mobile-nav-link">AI Search</a><a href="/features/content-generation" class="mobile-nav-link">Content Generation</a><a href="/features/bot-factory" class="mobile-nav-link">Bot Factory</a><a href="/features/talk-to-data" class="mobile-nav-link">Talk to data</a><a href="/features/broadcast" class="mobile-nav-link">Broadcast</a><a href="/features/trainning" class="mobile-nav-link">Train</a><a href="/features/web-automation" class="mobile-nav-link">Web Automation</a><a href="/features/llm-tools" class="mobile-nav-link">LLM Tools</a><a href="/features/create-apis-in-word" class="mobile-nav-link">Calling APIs</a></div></div>
-<div><button class="mobile-dropdown-trigger">Integrations <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><path d="M3 5l3 3 3-3"/></svg></button><div class="mobile-dropdown-content hidden"><a href="/integrations/channels/whatsapp" class="mobile-nav-link">WhatsApp</a><a href="/integrations/channels/sms" class="mobile-nav-link">SMS</a><a href="/integrations/channels/web-chat" class="mobile-nav-link">Web Chat</a><a href="/integrations/channels/instagram" class="mobile-nav-link">Instagram</a><a href="/integrations/channels/email" class="mobile-nav-link">E-mail</a><a href="/integrations/channels/microsoft-teams" class="mobile-nav-link">Microsoft Teams</a><a href="/integrations/channels/google-chat" class="mobile-nav-link">Google Chat</a><a href="/integrations/channels/facebook-pages" class="mobile-nav-link">Facebook Pages</a><a href="/integrations/channels/slack" class="mobile-nav-link">Slack</a></div></div>
-<a href="/templates" class="mobile-nav-link">Templates</a>
-<div><button class="mobile-dropdown-trigger">Resources <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><path d="M3 5l3 3 3-3"/></svg></button><div class="mobile-dropdown-content hidden"><a href="/resources/considering/ai-powered-org" class="mobile-nav-link">Considering</a><a href="/resources/already-using/essential-resources" class="mobile-nav-link">Already Using</a><a href="/resources/community/become-a-partner" class="mobile-nav-link">Community</a></div></div>
-<a href="/pricing" class="mobile-nav-link">Hosting</a>
-<a href="/contact" class="mobile-nav-link">Contact</a>
-<span class="mobile-phone">+55 21 4040-2160</span>
-</div>
-<main style="padding-top:5rem">
-<section class="page-section vitral-bg">
-<div class="max-w-3xl mx-auto" style="padding:0 1rem">
-<a href="/blog" class="text-sm text-muted" style="display:inline-flex;align-items:center;gap:.375rem;margin-bottom:1.5rem"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> Back to Blog</a>
-<div class="reveal">
-<span class="badge badge-featured mb-4" style="display:inline-flex">AI Freedom</span>
-<h1 class="text-4xl font-bold tracking-tight mb-4">LLM Myths 2025 — Busted</h1>
-<p class="text-sm text-muted mb-8">Author: Pragmatismo Team</p>
-</div>
-<article class="reveal" style="font-size:1.0625rem;line-height:1.75;color:var(--foreground)">
+<div hx-get="/partials/header.html" hx-swap="innerHTML" hx-trigger="load"></div>
+<main style="padding-top:4rem">
+<article class="page-section reveal">
+<div class="container-narrow">
+<a href="/blog/" class="text-sm text-muted" style="display:inline-flex;align-items:center;gap:.375rem;margin-bottom:1.5rem">
+<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+Back to Blog
+</a>
+<div class="badge mb-4">Strategic Audit</div>
+<h1 class="text-4xl font-bold tracking-tighter mb-6" style="line-height:1.1">LLM Myths 2025: A Didactic Deconstruction.</h1>
+<p class="text-lg text-muted mb-8 leading-relaxed">Analyzing and debunking prevalent misconceptions in the enterprise AI landscape. A technical framework for navigating the delta between corporate marketing and sovereign reality.</p>
+<div class="blog-content prose">
+<p>As we enter the GLM 5.1 era, the "PC Magazine" standard of technical literacy is more important than ever. The enterprise AI space is currently saturated with high-fidelity marketing that often obscures the underlying technical realities. To build a sovereign infrastructure, one must first dismantle the myths of the proprietary stack.</p>
 
-<p style="margin-bottom:1.5rem">For years, tech giants have built walls around artificial intelligence, spreading myths about capability, accessibility, and safety. This is their playbook for control—and the open source community’s response that proves them wrong.</p>
-
-<div class="reveal">
-<h2 style="font-size:1.5rem;font-weight:700;margin:2rem 0 1rem;color:var(--foreground)">The Great AI Obfuscation: How Corporations Cloud The Truth</h2>
-<p style="margin-bottom:1.5rem">Microsoft, Google, IBM, Amazon and others have spent billions convincing you that <strong>real AI</strong> requires:</p>
-<ul style="margin-bottom:1.5rem;padding-left:1.5rem;list-style:disc">
-<li>Their cloud infrastructure</li>
-<li>Their proprietary models</li>
-<li>Their monthly subscriptions</li>
-<li>Their approved use cases</li>
-</ul>
-<p style="margin-bottom:1.5rem">The truth? Most LLM capabilities can run on a cheap laptop, trained by small teams, customized without corporate approval.</p>
+<div style="width:100%;aspect-ratio:16/9;background:#f8f8f8;border-radius:1rem;margin:2rem 0;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;border:1px solid rgba(0,0,0,0.06)">
+  <svg width="100%" height="100%" viewBox="0 0 800 450" fill="none">
+    <defs><pattern id="gridMyths" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(0,0,0,0.03)" stroke-width="1"/></pattern></defs>
+    <rect width="800" height="450" fill="url(#gridMyths)"/>
+    <path d="M200 150 L600 300" stroke="#111" stroke-width="1" stroke-dasharray="4 4" />
+    <path d="M200 300 L600 150" stroke="#111" stroke-width="1" stroke-dasharray="4 4" />
+    <circle cx="400" cy="225" r="50" stroke="#059669" stroke-width="2" fill="none" />
+    <text x="400" y="230" text-anchor="middle" fill="#059669" style="font-size:12px;font-weight:700">TRUTH</text>
+  </svg>
 </div>
 
-<div class="reveal">
-<h2 style="font-size:1.5rem;font-weight:700;margin:2rem 0 1rem;color:var(--foreground)">LLM Myths — 2025</h2>
-<div style="overflow-x:auto"><table style="width:100%;border-collapse:collapse"><thead><tr><th style="padding:.75rem;text-align:left;font-weight:600;background:var(--muted);border-bottom:2px solid var(--border)">Myth</th><th style="padding:.75rem;text-align:left;font-weight:600;background:var(--muted);border-bottom:2px solid var(--border)">Reality</th><th style="padding:.75rem;text-align:left;font-weight:600;background:var(--muted);border-bottom:2px solid var(--border)">Why It Matters</th></tr></thead><tbody><tr><td style="padding:.75rem;border-bottom:1px solid var(--border);font-weight:500">“LLMs must be cloud-based.”</td><td style="padding:.75rem;border-bottom:1px solid var(--border)">FALSE! Many LLMs (like Mistral, LLaMA, Phi) run locally on a consumer GPU (even a modest one).</td><td style="padding:.75rem;border-bottom:1px solid var(--border)">No more vendor lock-in or privacy risks.</td></tr><tr><td style="padding:.75rem;border-bottom:1px solid var(--border);font-weight:500">“Only Big Tech can train good AI.”</td><td style="padding:.75rem;border-bottom:1px solid var(--border)">FALSE! Open-source models (e.g., Falcon, OLMo) prove small teams &amp; communities can compete.</td><td style="padding:.75rem;border-bottom:1px solid var(--border)">Decentralizes power away from monopolies.</td></tr><tr><td style="padding:.75rem;border-bottom:1px solid var(--border);font-weight:500">“You need a subscription (Copilot, ChatGPT, Gemini+) for good AI.”</td><td style="padding:.75rem;border-bottom:1px solid var(--border)">FALSE! Free models (Alpaca, Gemma) rival paid ones.</td><td style="padding:.75rem;border-bottom:1px solid var(--border)">AI should be a public good, not a rent-seeking tool.</td></tr><tr><td style="padding:.75rem;border-bottom:1px solid var(--border);font-weight:500">“Open-source AI is unsafe.”</td><td style="padding:.75rem;border-bottom:1px solid var(--border)">FALSE! Closed AI (like Copilot) is less auditable—open models let users verify &amp; improve.</td><td style="padding:.75rem;border-bottom:1px solid var(--border)">Transparency &gt; corporate secrecy.</td></tr><tr><td style="padding:.75rem;border-bottom:1px solid var(--border);font-weight:500">“AI needs constant internet.”</td><td style="padding:.75rem;border-bottom:1px solid var(--border)">FALSE! Local LLMs work offline—ideal for privacy-sensitive tasks.</td><td style="padding:.75rem;border-bottom:1px solid var(--border)">No more spying by BigTechs/Google.</td></tr><tr><td style="padding:.75rem;border-bottom:1px solid var(--border);font-weight:500">“Fine-tuning is only for experts.”</td><td style="padding:.75rem;border-bottom:1px solid var(--border)">FALSE! Tools like LoRA let users customize models without a PhD.</td><td style="padding:.75rem;border-bottom:1px solid var(--border)">Democratizes AI personalization.</td></tr><tr><td style="padding:.75rem;border-bottom:1px solid var(--border);font-weight:500">“Big Tech’s AI is ‘more accurate.’”</td><td style="padding:.75rem;border-bottom:1px solid var(--border)">FALSE! Many open models beat GPT-3.5, and bias is often worse in corporate AI.</td><td style="padding:.75rem;border-bottom:1px solid var(--border)">Accuracy ≠ corporate control.</td></tr><tr><td style="padding:.75rem;border-bottom:1px solid var(--border);font-weight:500">“Running LLMs is expensive.”</td><td style="padding:.75rem;border-bottom:1px solid var(--border)">FALSE! Quantized models (e.g., 4-bit LLaMA) run on low-end laptops.</td><td style="padding:.75rem;border-bottom:1px solid var(--border)">No need for high prices subscriptions.</td></tr><tr><td style="padding:.75rem;border-bottom:1px solid var(--border);font-weight:500">“You need a supercomputer to train models.”</td><td style="padding:.75rem;border-bottom:1px solid var(--border)">FALSE! Small-scale training (e.g., TinyLlama) is possible on consumer hardware.</td><td style="padding:.75rem;border-bottom:1px solid var(--border)">Community-driven AI is viable.</td></tr><tr><td style="padding:.75rem;border-bottom:1px solid var(--border);font-weight:500">“Proprietary AI is more ‘ethical.’”</td><td style="padding:.75rem;border-bottom:1px solid var(--border)">FALSE! Closed AI hides biases; open models allow public scrutiny.</td><td style="padding:.75rem;border-bottom:1px solid var(--border)">Ethics without transparency = marketing.</td></tr><tr><td style="padding:.75rem;border-bottom:1px solid var(--border);font-weight:500">“Regulation requires closed AI.”</td><td style="padding:.75rem;border-bottom:1px solid var(--border)">FALSE! Open models can comply with laws better (no hidden training data).</td><td style="padding:.75rem;border-bottom:1px solid var(--border)">Regulation ≠ corporate monopoly.</td></tr><tr><td style="padding:.75rem;border-bottom:1px solid var(--border);font-weight:500">“Free AI is ‘inferior.’”</td><td style="padding:.75rem;border-bottom:1px solid var(--border)">FALSE! Many open models (e.g., Mixtral) outperform Copilot/GPT-3.5.</td><td style="padding:.75rem;border-bottom:1px solid var(--border)">Corporate AI is not inherently better.</td></tr></tbody></table></div>
-</div>
+<h3>Myth 1: "Scale is the Only Moat"</h3>
+<p>The didactic reality is that while parameter count matters for general knowledge, *Orchestration Depth* is the true competitive advantage for enterprises. A smaller, sovereign model (like DeepSeek or Llama 3) running within the General Bots "Bot Factory" often outperforms a massive proprietary model that lacks context-specific deterministic logic. Precision beats scale.</p>
 
-<div class="reveal">
-<h2 style="font-size:1.5rem;font-weight:700;margin:2rem 0 1rem;color:var(--foreground)">OWN YOUR PROMPTS = OWN YOUR AI</h2>
-<p style="margin-bottom:1.5rem">Every AI application you use is just someone else’s prompt running on a general LLM. <strong>Why rent prompts when you can own them?</strong> Specialized AI products are traps — they sell you limited access to capabilities that already exist in the base model. The real power comes from <strong>controlling the prompts yourself</strong>.</p>
-<p style="margin-bottom:1.5rem">With <span style="font-weight:500">General Bots</span> (or any raw LLM access), you get: <strong>Unlimited specialized agents</strong> through prompt engineering, <strong>zero artificial restrictions</strong>, and <strong>complete transparency</strong>. No more paying fees for what’s essentially a pre-written prompt wrapper. <strong>The future belongs to prompt owners</strong>, not prompt renters.</p>
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem;margin:1.5rem 0">
-<div class="glass-card" style="padding:1.5rem">
-<h3 style="font-size:1.125rem;font-weight:600;margin-bottom:.75rem;color:var(--foreground)">1. Build Your Own Agents</h3>
-<p style="margin-bottom:0">Your prompts = your personalized AI assistants. No subscriptions needed.</p>
-</div>
-<div class="glass-card" style="padding:1.5rem">
-<h3 style="font-size:1.125rem;font-weight:600;margin-bottom:.75rem;color:var(--foreground)">2. Full Model Access</h3>
-<p style="margin-bottom:0">Bypass artificial limitations corporations put on “specialized” products</p>
-</div>
-<div class="glass-card" style="padding:1.5rem">
-<h3 style="font-size:1.125rem;font-weight:600;margin-bottom:.75rem;color:var(--foreground)">3. Continuous Control</h3>
-<p style="margin-bottom:0">Update/improve your prompts anytime — no waiting for vendor updates</p>
-</div>
-</div>
-</div>
+<h3>Myth 2: "SaaS is More Secure"</h3>
+<p>This is perhaps the most dangerous misconception. In a SaaS model, your data—the "Architecture of Intelligence" for your business—is processed on third-party hardware. True security is found only in sovereignty. General Bots allows for on-premises deployment, ensuring that your data and your models never leave your firewall. This is the investor-ready standard of data privacy.</p>
 
-<div class="reveal">
-<h2 style="font-size:1.5rem;font-weight:700;margin:2rem 0 1rem;color:var(--foreground)">The Open Source Revolution: Better, Cheaper, More Ethical</h2>
-<p style="margin-bottom:1.5rem">While Big Tech pushes closed systems, the open source community has built superior alternatives:</p>
-<div style="overflow-x:auto"><table style="width:100%;border-collapse:collapse"><thead><tr><th style="padding:.75rem;text-align:left;font-weight:600;background:var(--muted);border-bottom:2px solid var(--border)">Solution Type</th><th style="padding:.75rem;text-align:left;font-weight:600;background:var(--muted);border-bottom:2px solid var(--border)">Tools</th><th style="padding:.75rem;text-align:left;font-weight:600;background:var(--muted);border-bottom:2px solid var(--border)">Key Advantages</th></tr></thead><tbody><tr><td style="padding:.75rem;border-bottom:1px solid var(--border);font-weight:500">Local LLMs</td><td style="padding:.75rem;border-bottom:1px solid var(--border)">General Bots, LM Studio, Ollama, GPT4All</td><td style="padding:.75rem;border-bottom:1px solid var(--border)">Complete privacy, no censorship, offline access</td></tr><tr><td style="padding:.75rem;border-bottom:1px solid var(--border);font-weight:500">Open alternatives</td><td style="padding:.75rem;border-bottom:1px solid var(--border)">HuggingFace, Mozilla’s LLaMA.cpp</td><td style="padding:.75rem;border-bottom:1px solid var(--border)">Community-driven, transparent, customizable</td></tr><tr><td style="padding:.75rem;border-bottom:1px solid var(--border);font-weight:500">Self-hosted options</td><td style="padding:.75rem;border-bottom:1px solid var(--border)">General Bots Stack, Text-generation-webui, LocalAI</td><td style="padding:.75rem;border-bottom:1px solid var(--border)">Full control, no data leaks, enterprise-ready</td></tr></tbody></table></div>
-</div>
+<h3>Myth 3: "AI is a Commodity"</h3>
+<p>If AI were a commodity, everyone would have the same results. The delta in performance comes from the *Connectors*. How you link your models to your SQL databases, your Word documents, and your legacy APIs (via BASIC scripts) is where the value is created. General Bots is not a tool; it is a system for creating non-commoditized intelligence assets.</p>
 
-<div class="reveal">
-<h2 style="font-size:1.5rem;font-weight:700;margin:2rem 0 1rem;color:var(--foreground)">Case Study: Local AI vs. Cloud — The Numbers Don’t Lie</h2>
-<div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin:1.5rem 0">
-<div class="glass-card" style="padding:1.5rem">
-<h3 style="font-size:1.125rem;font-weight:600;margin-bottom:.75rem;color:var(--foreground)">Corporate Cloud AI</h3>
-<ul style="padding-left:1.5rem;list-style:disc">
-<li style="margin-bottom:.5rem">High subscription costs</li>
-<li style="margin-bottom:.5rem">100% of your data leaves your device</li>
-<li style="margin-bottom:.5rem">Usage limits and throttling</li>
-<li style="margin-bottom:.5rem">Censored outputs (political/creative)</li>
-<li style="margin-bottom:.5rem">No model customization</li>
-<li style="margin-bottom:.5rem">Requires constant internet</li>
-</ul>
-</div>
-<div class="glass-card" style="padding:1.5rem">
-<h3 style="font-size:1.125rem;font-weight:600;margin-bottom:.75rem;color:var(--foreground)">Local Open Source AI</h3>
-<ul style="padding-left:1.5rem;list-style:disc">
-<li style="margin-bottom:.5rem">$0 ongoing costs (just your own hardware or cloud)</li>
-<li style="margin-bottom:.5rem">100% private — no data leaves your machine</li>
-<li style="margin-bottom:.5rem">Unlimited usage, own your data and conversations</li>
-<li style="margin-bottom:.5rem">Uncensored, customizable outputs</li>
-<li style="margin-bottom:.5rem">Full fine-tuning capabilities</li>
-<li style="margin-bottom:.5rem">Works completely offline</li>
-</ul>
+<h3>Conclusion: The Path to Sovereignty</h3>
+<p>Debunking these myths is the first step toward a strategic exit from Big Tech dependency. By building on an open, didactic foundation, organizations can ensure they are ready for the GLM 5.1 launch and beyond. Own your stack. Own your intelligence.</p>
 </div>
 </div>
-</div>
-
-<div class="reveal">
-<h2 style="font-size:1.5rem;font-weight:700;margin:2rem 0 1rem;color:var(--foreground)">Breaking Free: Your Migration Path From Corporate AI</h2>
-<div style="margin:1.5rem 0">
-<div style="display:flex;gap:1.5rem;margin-bottom:1.5rem;flex-wrap:wrap">
-<div style="flex:0 0 200px">
-<h3 style="font-weight:600;margin-bottom:.5rem">1. Replacing Copilot</h3>
-</div>
-<div style="flex:1;min-width:250px">
-<p style="margin-bottom:1.5rem"><strong>Options:</strong> General Bots with CodeLlama (70B), DeepSeek Coder (33B), StarCoder2 (15B)<br><strong>Tools:</strong> Own your stack<br><strong>Benefit:</strong> Same code completion without data exfiltration</p>
-</div>
-</div>
-<div style="display:flex;gap:1.5rem;margin-bottom:1.5rem;flex-wrap:wrap">
-<div style="flex:0 0 200px">
-<h3 style="font-weight:600;margin-bottom:.5rem">2. Ditch ChatGPT+</h3>
-</div>
-<div style="flex:1;min-width:250px">
-<p style="margin-bottom:1.5rem"><strong>Options:</strong> DeepSeek, Mistral (7B), LLaMA 3 (8B), Phi-3 (3.8B)<br><strong>Tools:</strong> General Bots with GPT4All (Cross-platform)<br><strong>Benefit:</strong> Comparable quality without high fees</p>
-</div>
-</div>
-<div style="display:flex;gap:1.5rem;margin-bottom:1.5rem;flex-wrap:wrap">
-<div style="flex:0 0 200px">
-<h3 style="font-weight:600;margin-bottom:.5rem">3. Escape Cloud APIs</h3>
-</div>
-<div style="flex:1;min-width:250px">
-<p style="margin-bottom:0"><strong>Options:</strong> Open-source LLM orchestrator, Text-generation-webui, LocalAI<br><strong>Tools:</strong> Self-host on consumer hardware or cloud<br><strong>Benefit:</strong> No per-token costs or rate limits</p>
-</div>
-</div>
-</div>
-</div>
-
-<div class="reveal">
-<h2 style="font-size:1.5rem;font-weight:700;margin:2rem 0 1rem;color:var(--foreground)">The Inevitable Future: Why Open Source Will Win</h2>
-<p style="margin-bottom:1.5rem">History shows us the pattern: first corporations control emerging tech (see: early web, cloud computing), then open alternatives democratize it. AI is following the same path. The <strong>myths are crumbling</strong> as:</p>
-<ul style="margin-bottom:1.5rem;padding-left:1.5rem;list-style:disc">
-<li>Quantization makes 4GB RAM laptops AI-capable</li>
-<li>Community datasets outperform corporate training</li>
-<li>LoRA adapters enable customization without massive compute</li>
-</ul>
-<p style="margin-bottom:1.5rem">The choice is clear: accept artificial limitations from Big Tech, or join the <strong>open source AI revolution</strong> where software respects users, adapts to needs, and remains accountable through transparency.</p>
-</div>
-
 </article>
-<div class="glass-card-bright text-center reveal" style="padding:3rem 2rem;margin-top:3rem">
-<h3 class="text-2xl font-bold tracking-tight mb-2">Ready to Build Your Own AI LLM Stack?</h3>
-<p class="text-muted mb-6" style="max-width:28rem;margin-left:auto;margin-right:auto">Transform how you work with AI-powered assistants tailored to your exact needs.</p>
-<div class="flex items-center justify-center gap-4 flex-wrap">
-<a href="https://github.com/GeneralBots/BotServer" target="_blank" rel="noopener" class="btn btn-primary btn-lg">Try It Now</a>
-<a href="/contact" class="btn btn-outline btn-lg">Ask Questions</a>
-</div>
-<p class="text-muted mt-4" style="font-size:.875rem">Our experts will help you own the perfect specialized bot for your requirements.</p>
-</div>
-</div>
-</section>
 </main>
-<footer class="site-footer"><div class="container">
-<div class="footer-top">
-<div class="footer-brand"><img src="/gb-logo.png" alt="General Bots" class="footer-logo" width="140" height="33"><p>General Bots® — The Open Source AI Bot Platform. Self-host or choose a certified hosting provider.</p><p style="margin-top:.75rem;font-size:.75rem">DPO: Rodrigo Rodriguez (<a href="mailto:security@pragmatismo.com.br" style="color:rgba(255,255,255,.7)">security@pragmatismo.com.br</a>)</p><p style="font-size:.75rem;margin-top:.25rem"><a href="tel:+552140402160" style="color:rgba(255,255,255,.7)">+55 21 4040-2160</a></p></div>
-<div class="footer-col"><h5>General Bots</h5><a href="/general-bots/llm">LLM</a><a href="/general-bots/vector-retrieval">Vector Search</a><a href="/general-bots/open-source">Open Source</a><a href="/features/ai-search">AI Search</a><a href="/features/bot-factory">Bot Factory</a></div>
-<div class="footer-col"><h5>Hosting</h5><a href="https://pragmatismo.com.br" target="_blank" rel="noopener">Pragmatismo</a><a href="https://oerlabs.com.br" target="_blank" rel="noopener">OERLabs</a><a href="https://mapagency.com.br" target="_blank" rel="noopener">Map Agency</a><a href="https://sentient.net.br" target="_blank" rel="noopener">Sentient</a><a href="https://darioexecutivesales.com" target="_blank" rel="noopener">Dario Executive Sales</a></div>
-<div class="footer-col"><h5>Community</h5><a href="https://docs.generalbots.org" target="_blank" rel="noopener">Documentation</a><a href="https://gb.pragmatismo.com.br/pragmatismohelpcenter" target="_blank" rel="noopener">Help Center</a><a href="/resources/community/become-a-partner">Become a Partner</a><a href="/blog">Blog</a><a href="https://github.com/generalbots" target="_blank" rel="noopener">GitHub</a></div>
-</div>
-<div class="footer-middle"><span>Copyright © 2016-2026 Pragmatismo</span><div class="flex items-center gap-4"><a href="/terms">Terms of Service</a><a href="/privacy">Privacy Policy</a></div></div>
-<div class="footer-bottom"><span>General Bots — Open Source AI Orchestration Platform</span><div class="footer-social"><a href="https://www.github.com/GeneralBots" target="_blank" rel="noopener" aria-label="GitHub"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg></a><a href="https://www.instagram.com/general.bots/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg></a><a href="https://web.whatsapp.com/send?phone=+552140402160" target="_blank" rel="noopener" aria-label="WhatsApp"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 1.096 1.786 2.656 2.48.37.17.66.272.886.346.38.12.724.103 1.005.062.307-.045.943-.385 1.075-.757.132-.372.132-.69.094-.757-.038-.068-.14-.108-.297-.168z"/></svg></a></div></div>
-</div></footer>
-<style>@media(min-width:768px){#header-phone{display:inline-flex !important}}</style>
+<div hx-get="/partials/footer.html" hx-swap="innerHTML" hx-trigger="load"></div>
+<script src="https://unpkg.com/htmx.org@2.0.4"></script>
 <script src="/js/site.js"></script>
 </body>
 </html>

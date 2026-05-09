@@ -3,95 +3,65 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>The Economic Impact of US Tariffs on AI | General Bots Blog</title>
-<meta name="description" content="How US trade policies are accelerating global adoption of open-source AI infrastructure.">
-<link rel="stylesheet" href="/css/site.css">
+<title>AI Tariffs &amp; The Sovereign Pivot | General Bots Blog</title>
+<meta name="description" content="Analyzing the economic impact of US tariffs on proprietary AI and the resulting global acceleration toward sovereign, open-source orchestration with GLM 5.1.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://generalbots.org/blog/the-economic-impact-of-us-tariffs-on-ai/">
+<meta property="og:title" content="AI Tariffs &amp; The Sovereign Pivot | General Bots Blog">
+<meta property="og:description" content="Technical analysis of AI tariffs.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://generalbots.org/blog/the-economic-impact-of-us-tariffs-on-ai/">
 <link rel="icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="stylesheet" href="/css/site.css">
 </head>
 <body>
-<header class="site-header"><div class="header-inner">
-<a href="/" class="logo-link"><img src="/gb-logo.png" alt="General Bots" width="140" height="33"></a>
-<nav class="nav-desktop"><a href="/">Home</a><div class="nav-dropdown"><button class="nav-dropdown-trigger">General Bots <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5l3 3 3-3"/></svg></button><div class="nav-dropdown-content hidden"><a href="/general-bots/llm">LLMs</a><a href="/general-bots/vector-retrieval">Vector Retrieval</a><a href="/general-bots/open-source">Open Source</a></div></div><div class="nav-dropdown"><button class="nav-dropdown-trigger">Features <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5l3 3 3-3"/></svg></button><div class="nav-dropdown-content hidden"><a href="/features/ai-search">AI Search</a><a href="/features/content-generation">Content Generation</a><a href="/features/bot-factory">Bot Factory</a><a href="/features/talk-to-data">Talk to data</a><a href="/features/broadcast">Broadcast</a><a href="/features/trainning">Train</a><a href="/features/web-automation">Web Automation</a><a href="/features/llm-tools">LLM Tools</a><a href="/features/create-apis-in-word">Calling APIs</a></div></div><div class="nav-dropdown"><button class="nav-dropdown-trigger">Integrations <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5l3 3 3-3"/></svg></button><div class="nav-dropdown-content hidden"><a href="/integrations/channels/whatsapp">WhatsApp</a><a href="/integrations/channels/sms">SMS</a><a href="/integrations/channels/web-chat">Web Chat</a><a href="/integrations/channels/instagram">Instagram</a><a href="/integrations/channels/email">E-mail</a><a href="/integrations/channels/microsoft-teams">Microsoft Teams</a><a href="/integrations/channels/google-chat">Google Chat</a><a href="/integrations/channels/facebook-pages">Facebook Pages</a><a href="/integrations/channels/slack">Slack</a></div></div><a href="/templates">Templates</a><div class="nav-dropdown"><button class="nav-dropdown-trigger">Resources <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5l3 3 3-3"/></svg></button><div class="nav-dropdown-content hidden"><a href="/resources/considering/ai-powered-org">Considering</a><a href="/resources/already-using/essential-resources">Already Using</a><a href="/resources/community/become-a-partner">Community</a></div></div><a href="/pricing">Hosting</a><a href="/contact">Contact</a></nav>
-<div class="flex items-center gap-4"><a href="tel:+552140402160" class="phone-link" style="display:none" id="header-phone">+55 21 4040-2160</a><div class="gtranslate_wrapper"></div><button class="nav-mobile-toggle" id="mobile-menu-toggle" aria-label="Toggle menu"><svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg><svg class="close-icon hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M6 18L18 6"/></svg></button></div>
-</div></header>
-<div id="mobile-menu" class="hidden">
-<a href="/" class="mobile-nav-link">Home</a>
-<div><button class="mobile-dropdown-trigger">General Bots <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><path d="M3 5l3 3 3-3"/></svg></button><div class="mobile-dropdown-content hidden"><a href="/general-bots/llm" class="mobile-nav-link">LLMs</a><a href="/general-bots/vector-retrieval" class="mobile-nav-link">Vector Retrieval</a><a href="/general-bots/open-source" class="mobile-nav-link">Open Source</a></div></div>
-<div><button class="mobile-dropdown-trigger">Features <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><path d="M3 5l3 3 3-3"/></svg></button><div class="mobile-dropdown-content hidden"><a href="/features/ai-search" class="mobile-nav-link">AI Search</a><a href="/features/content-generation" class="mobile-nav-link">Content Generation</a><a href="/features/bot-factory" class="mobile-nav-link">Bot Factory</a><a href="/features/talk-to-data" class="mobile-nav-link">Talk to data</a><a href="/features/broadcast" class="mobile-nav-link">Broadcast</a><a href="/features/trainning" class="mobile-nav-link">Train</a><a href="/features/web-automation" class="mobile-nav-link">Web Automation</a><a href="/features/llm-tools" class="mobile-nav-link">LLM Tools</a><a href="/features/create-apis-in-word" class="mobile-nav-link">Calling APIs</a></div></div>
-<div><button class="mobile-dropdown-trigger">Integrations <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><path d="M3 5l3 3 3-3"/></svg></button><div class="mobile-dropdown-content hidden"><a href="/integrations/channels/whatsapp" class="mobile-nav-link">WhatsApp</a><a href="/integrations/channels/sms" class="mobile-nav-link">SMS</a><a href="/integrations/channels/web-chat" class="mobile-nav-link">Web Chat</a><a href="/integrations/channels/instagram" class="mobile-nav-link">Instagram</a><a href="/integrations/channels/email" class="mobile-nav-link">E-mail</a><a href="/integrations/channels/microsoft-teams" class="mobile-nav-link">Microsoft Teams</a><a href="/integrations/channels/google-chat" class="mobile-nav-link">Google Chat</a><a href="/integrations/channels/facebook-pages" class="mobile-nav-link">Facebook Pages</a><a href="/integrations/channels/slack" class="mobile-nav-link">Slack</a></div></div>
-<a href="/templates" class="mobile-nav-link">Templates</a>
-<div><button class="mobile-dropdown-trigger">Resources <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><path d="M3 5l3 3 3-3"/></svg></button><div class="mobile-dropdown-content hidden"><a href="/resources/considering/ai-powered-org" class="mobile-nav-link">Considering</a><a href="/resources/already-using/essential-resources" class="mobile-nav-link">Already Using</a><a href="/resources/community/become-a-partner" class="mobile-nav-link">Community</a></div></div>
-<a href="/pricing" class="mobile-nav-link">Hosting</a>
-<a href="/contact" class="mobile-nav-link">Contact</a>
-<span class="mobile-phone">+55 21 4040-2160</span>
-</div>
-<main style="padding-top:5rem">
-<section class="page-section vitral-bg">
-<div class="max-w-3xl mx-auto" style="padding:0 1rem">
-<a href="/blog" class="text-sm text-muted" style="display:inline-flex;align-items:center;gap:.375rem;margin-bottom:1.5rem"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> Back to Blog</a>
-<div class="reveal">
-<span class="badge badge-featured mb-4" style="display:inline-flex">Economics</span>
-<h1 class="text-4xl font-bold tracking-tight mb-4">The Economic Impact of US Tariffs on AI</h1>
-<p class="text-sm text-muted mb-8">Author: Pragmatismo Team</p>
-</div>
-<article class="reveal" style="font-size:1.0625rem;line-height:1.75;color:var(--foreground)">
+<div hx-get="/partials/header.html" hx-swap="innerHTML" hx-trigger="load"></div>
+<main style="padding-top:4rem">
+<article class="page-section reveal">
+<div class="container-narrow">
+<a href="/blog/" class="text-sm text-muted" style="display:inline-flex;align-items:center;gap:.375rem;margin-bottom:1.5rem">
+<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+Back to Blog
+</a>
+<div class="badge mb-4">Macroeconomics</div>
+<h1 class="text-4xl font-bold tracking-tighter mb-6" style="line-height:1.1">AI Tariffs &amp; The Sovereign Pivot.</h1>
+<p class="text-lg text-muted mb-8 leading-relaxed">Analyzing the economic impact of US tariffs on proprietary AI and the resulting global acceleration toward sovereign, open-source orchestration with GLM 5.1.</p>
+<div class="blog-content prose">
+<p>The global technology market is currently defined by a "Geopolitical Friction." US tariffs on AI hardware and proprietary software exports have created an artificial barrier that is inadvertently accelerating the "Open Source Renaissance." For international enterprises, the didactic choice is clear: continue paying the "Tariff Tax" on proprietary silos or pivot to a sovereign "Architecture of Intelligence."</p>
 
-<div class="reveal">
-<blockquote style="border-left:3px solid var(--border);padding:1.5rem;margin:0 0 2rem;font-style:italic;color:var(--muted-foreground)">"The recent wave of technology tariffs has become the unexpected catalyst for what analysts are now calling the 'open-source renaissance'. As companies worldwide seek alternatives to expensive proprietary solutions, a fundamental shift in the global technology ecosystem is emerging."</blockquote>
+<div style="width:100%;aspect-ratio:16/9;background:#f8f8f8;border-radius:1rem;margin:2rem 0;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;border:1px solid rgba(0,0,0,0.06)">
+  <svg width="100%" height="100%" viewBox="0 0 800 450" fill="none">
+    <defs><pattern id="gridTariff" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(0,0,0,0.03)" stroke-width="1"/></pattern></defs>
+    <rect width="800" height="450" fill="url(#gridTariff)"/>
+    <path d="M100 225 L700 225" stroke="#111" stroke-width="1" opacity="0.1" />
+    <rect x="350" y="50" width="100" height="350" fill="#b91c1c" opacity="0.05" />
+    <text x="400" y="100" text-anchor="middle" fill="#b91c1c" style="font-size:10px;font-weight:700">TARIFF BARRIER</text>
+    <path d="M100 200 Q400 150 700 200" stroke="#059669" stroke-width="2" />
+    <text x="400" y="140" text-anchor="middle" fill="#059669" style="font-size:10px;font-weight:700">SOVEREIGN FLOW</text>
+  </svg>
 </div>
 
-<div class="reveal">
-<p style="margin-bottom:1.5rem">When the United States implemented its controversial technology tariff policy in late 2024, few could predict the cascading effects it would have on global markets. Initially designed to protect domestic technology interests, these tariffs ultimately accelerated a global shift toward open-source alternatives.</p>
-<p style="margin-bottom:1.5rem">"We're witnessing a fundamental restructuring of the technology landscape," explains an industry analyst. "These tariffs were implemented with traditional manufacturing economics in mind, but digital services operate under completely different principles."</p>
-<p style="margin-bottom:1.5rem">The data tells a compelling story. As tariffs increased in early 2025, open-source adoption grew in affected industries. This pattern has been consistent across different regions and market segments.</p>
-</div>
+<h3>The Proprietary Premium</h3>
+<p>Tariffs are not just about hardware; they apply to the didactic value of the software stack. When an organization relies on US-hosted proprietary LLMs, they are vulnerable to sudden price hikes and export restrictions. This is the "PC Magazine" standard of risk management: never rely on a single vendor whose availability is subject to national trade policy.</p>
 
-<div class="reveal">
-<h2 style="font-size:1.5rem;font-weight:700;margin:2rem 0 1rem;color:var(--foreground)">The Financial Reality: A New Economic Equation</h2>
-<p style="margin-bottom:1.5rem">For multinational corporations and developing economies, the financial implications of these tariffs forced a recalculation of technology investment strategies. Before 2024, many organizations accepted the premium costs of proprietary cloud services as an inevitable expense.</p>
-<p style="margin-bottom:1.5rem">This calculation was dramatically altered by the combination of increasing tariffs and the maturation of the open-source ecosystem. The average company now pays approximately $2.1 million annually for comprehensive AWS services or $1.7 million for equivalent Google Cloud infrastructure. With tariffs applied, these costs increased for many international clients.</p>
-<p style="margin-bottom:1.5rem">In contrast, comparable open-source stacks built on technologies like MinIO for storage cost only the expense of keeping the machine and disks running, including implementation and maintenance costs, while other open infrastructure solutions cost only hardware and electricity. This significant difference is leading technology leaders to reconsider their infrastructure strategies.</p>
-<blockquote style="border-left:3px solid var(--border);padding:1rem 1.5rem;margin:1.5rem 0;color:var(--muted-foreground);font-style:italic">"The economic argument has become too compelling to ignore. We initially saw open-source alternatives as a hedge against rising costs, but we've since discovered operational benefits we hadn't anticipated."</blockquote>
-</div>
+<h3>AI Search as a Geopolitical Hedge</h3>
+<p>In the GLM 5.1 era, AI Search is the de facto standard for information sovereignty. By deploying General Bots on local nodes, enterprises can bypass the "Proprietary Gatekeepers." Our high-fidelity search engine works with any model—open or closed—ensuring that your organization's knowledge remains accessible regardless of international trade disputes.</p>
 
-<div class="reveal">
-<h2 style="font-size:1.5rem;font-weight:700;margin:2rem 0 1rem;color:var(--foreground)">Technical Implications: Beyond Economics</h2>
-<p style="margin-bottom:1.5rem">While economic incentives have been the primary driver of this shift, technical leaders report unexpected benefits beyond simple cost reduction. Organizations that have completed or substantially advanced their migration to open infrastructure report improvements in system flexibility, reduced vendor lock-in, and greater ability to customize solutions for specific business requirements.</p>
-<blockquote style="border-left:3px solid var(--border);padding:1rem 1.5rem;margin:1.5rem 0;color:var(--muted-foreground);font-style:italic">"There was a psychological barrier that needed to be overcome. Many organizations assumed open-source alternatives would require significant technical compromises. What we're discovering is that these solutions have matured tremendously in recent years."</blockquote>
-<p style="margin-bottom:1.5rem">This maturation of open-source infrastructure has fortuitously coincided with the economic pressures created by the tariff regime. Technologies that might have been considered too immature for enterprise adoption three years ago are now being deployed in mission-critical environments.</p>
-</div>
+<h3>The Rise of Regional AI Hubs</h3>
+<p>We are seeing the emergence of "Sovereign AI Hubs" in Brazil, Europe, and Asia. These hubs use General Bots as the orchestration layer for localized LLMs. 
+1. **Model Agnosticism:** Swap models instantly if trade policies change.
+2. **Local Hosting:** Certified providers ensure data stays within national borders.
+3. **Open Standards:** Built on the "Architecture of Intelligence," not vendor-specific APIs.</p>
 
-<div class="reveal">
-<h2 style="font-size:1.5rem;font-weight:700;margin:2rem 0 1rem;color:var(--foreground)">The Path Forward: Unintended Consequences</h2>
-<p style="margin-bottom:1.5rem">The irony of the current situation is hard to ignore. Policies implemented to protect American technology interests appear to be accelerating a global transition away from the proprietary solutions of those same companies. While US tech giants continue to lead in innovation, their business models are increasingly challenged by this shift in the global landscape.</p>
-<blockquote style="border-left:3px solid var(--border);padding:1rem 1.5rem;margin:1.5rem 0;color:var(--muted-foreground);font-style:italic">"We're seeing a classic example of the law of unintended consequences. These tariffs were designed with traditional goods and services in mind, but collided with the uniquely borderless nature of digital technology. The result is a fundamental restructuring that may ultimately prove difficult to reverse."</blockquote>
-<p style="margin-bottom:1.5rem">As we move through 2025, the question is no longer whether organizations will adopt open-source alternatives, but rather how quickly and comprehensively they will do so. The economic imperative has become increasingly significant for many organizations, particularly those operating across international borders.</p>
-<p style="margin-bottom:1.5rem">For technology decision-makers worldwide, the message is clear: the open-source renaissance is gaining momentum, driven not by ideological preference or technical superiority alone, but by the mathematics of national trade policies colliding with the borderless reality of digital infrastructure.</p>
+<h3>Conclusion: Sovereignty is Non-Negotiable</h3>
+<p>The economic impact of tariffs has proven that technology sovereignty is no longer optional. It is a strategic requirement. General Bots provides the roadmap for this transition, offering an investor-ready platform that thrives outside of proprietary silos. Own your intelligence. Bypass the friction.</p>
 </div>
-
+</div>
 </article>
-<div class="glass-card-bright text-center reveal" style="padding:3rem 2rem;margin-top:3rem">
-<h3 class="text-2xl font-bold tracking-tight mb-2">Ready to explore open-source AI?</h3>
-<p class="text-muted mb-6" style="max-width:28rem;margin-left:auto;margin-right:auto">Get started with General Bots or reach out with your questions.</p>
-<div class="flex items-center justify-center gap-4 flex-wrap">
-<a href="https://github.com/GeneralBots/BotServer" target="_blank" rel="noopener" class="btn btn-primary btn-lg">Try It Now</a>
-<a href="/contact" class="btn btn-outline btn-lg">Ask Questions</a>
-</div>
-</div>
-</div>
-</section>
 </main>
-<footer class="site-footer"><div class="container">
-<div class="footer-top">
-<div class="footer-brand"><img src="/gb-logo.png" alt="General Bots" class="footer-logo" width="140" height="33"><p>General Bots® — The Open Source AI Bot Platform. Self-host or choose a certified hosting provider.</p><p style="margin-top:.75rem;font-size:.75rem">DPO: Rodrigo Rodriguez (<a href="mailto:security@pragmatismo.com.br" style="color:rgba(255,255,255,.7)">security@pragmatismo.com.br</a>)</p><p style="font-size:.75rem;margin-top:.25rem"><a href="tel:+552140402160" style="color:rgba(255,255,255,.7)">+55 21 4040-2160</a></p></div>
-<div class="footer-col"><h5>General Bots</h5><a href="/general-bots/llm">LLM</a><a href="/general-bots/vector-retrieval">Vector Search</a><a href="/general-bots/open-source">Open Source</a><a href="/features/ai-search">AI Search</a><a href="/features/bot-factory">Bot Factory</a></div>
-<div class="footer-col"><h5>Hosting</h5><a href="https://pragmatismo.com.br" target="_blank" rel="noopener">Pragmatismo</a><a href="https://oerlabs.com.br" target="_blank" rel="noopener">OERLabs</a><a href="https://mapagency.com.br" target="_blank" rel="noopener">Map Agency</a><a href="https://sentient.net.br" target="_blank" rel="noopener">Sentient</a><a href="https://darioexecutivesales.com" target="_blank" rel="noopener">Dario Executive Sales</a></div>
-<div class="footer-col"><h5>Community</h5><a href="https://docs.generalbots.org" target="_blank" rel="noopener">Documentation</a><a href="https://gb.pragmatismo.com.br/pragmatismohelpcenter" target="_blank" rel="noopener">Help Center</a><a href="/resources/community/become-a-partner">Become a Partner</a><a href="/blog">Blog</a><a href="https://github.com/generalbots" target="_blank" rel="noopener">GitHub</a></div>
-</div>
-<div class="footer-middle"><span>Copyright © 2016-2026 Pragmatismo</span><div class="flex items-center gap-4"><a href="/terms">Terms of Service</a><a href="/privacy">Privacy Policy</a></div></div>
-<div class="footer-bottom"><span>General Bots — Open Source AI Orchestration Platform</span><div class="footer-social"><a href="https://www.github.com/GeneralBots" target="_blank" rel="noopener" aria-label="GitHub"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg></a><a href="https://www.instagram.com/general.bots/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg></a><a href="https://web.whatsapp.com/send?phone=+552140402160" target="_blank" rel="noopener" aria-label="WhatsApp"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a></div>
-</div></footer>
-<style>@media(min-width:768px){#header-phone{display:inline-flex !important}}</style>
+<div hx-get="/partials/footer.html" hx-swap="innerHTML" hx-trigger="load"></div>
+<script src="https://unpkg.com/htmx.org@2.0.4"></script>
 <script src="/js/site.js"></script>
 </body>
 </html>
