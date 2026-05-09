@@ -146,7 +146,7 @@
     .footer-bottom-links{display:flex;gap:1.5rem}
     .footer-bottom-links a{font-size:.75rem;color:rgba(255,255,255,.5);transition:color .15s}
     .footer-bottom-links a:hover{color:#fff}
-    .footer-logo{height:33px;width:140px;filter:brightness(10)}
+    .footer-logo{height:33px;width:140px;filter:invert(1) brightness(2)}
   </style>
 </head>
 <body>
@@ -695,7 +695,13 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <img src="/gb-logo.png" alt="General Bots" class="footer-logo" width="140" height="33">
+          <div style="display:flex;align-items:center;gap:.625rem">
+            <svg width="28" height="28" viewBox="0 0 100 100" fill="none">
+              <path d="M50 10 L53 20 L60 15 L58 25 L67 23 L62 32 L70 33 L63 40 L70 45 L62 48 L67 55 L58 53 L60 62 L53 57 L50 65 L47 57 L40 62 L42 53 L33 55 L38 48 L30 45 L37 40 L30 33 L38 32 L33 23 L42 25 L40 15 L47 20Z" stroke="rgba(255,255,255,.8)" stroke-width="1.5" fill="none"/>
+              <circle cx="50" cy="37.5" r="10" stroke="rgba(255,255,255,.8)" stroke-width="1.5" fill="none"/>
+            </svg>
+            <span style="font-size:1.125rem;font-weight:700;color:#fff;font-family:var(--font-display)">General Bots</span>
+          </div>
           <p>General Bots® — The Open Source AI Bot Platform. Self-host or choose a certified hosting provider.</p>
           <div class="footer-dpo">
             <strong>DPO:</strong> Rodrigo Rodriguez<br>
