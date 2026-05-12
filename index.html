@@ -27,76 +27,83 @@
 </head>
 <body>
 <div hx-get="/partials/header.html" hx-swap="innerHTML" hx-trigger="load"></div>
-<main style="padding-top:4rem">
-<section class="hero-section vitral-bg" style="padding:8rem 0 6rem">
-<div class="container text-center">
+<main>
+<section class="hero">
+<div class="container">
+<div class="hero-content">
 <div class="reveal">
-<div class="badge mb-4" style="margin-left:auto;margin-right:auto;width:fit-content">GLM 5.1 &mdash; May 2026</div>
-<h1 class="text-5xl font-bold tracking-tighter mb-6" style="font-size:clamp(2.5rem,8vw,4.5rem);line-height:0.95">Industrial AI Orchestration.</h1>
-<p class="text-xl text-muted max-w-2xl mx-auto leading-relaxed mb-10">The enterprise-grade open source platform for AI agents and human attendance. Build in BASIC, deploy everywhere.</p>
-<div class="flex flex-wrap gap-4 justify-center">
+<div class="hero-badge">GLM 5.1 &mdash; May 2026</div>
+<h1>Industrial AI Orchestration.</h1>
+<p class="hero-sub">The enterprise-grade open source platform for AI agents and human attendance. Build in BASIC, deploy everywhere.</p>
+<div class="hero-actions">
 <a href="/contact/" class="btn btn-primary btn-lg">Get Started</a>
 <a href="/features/" class="btn btn-outline btn-lg">Explore Features</a>
 </div>
 </div>
 </div>
+</div>
 </section>
 
-<section class="page-section reveal">
+<section class="section reveal">
 <div class="container">
-<div class="text-center mb-16">
-<h2 class="text-3xl font-bold tracking-tighter">Engineered for Scale</h2>
-<p class="text-lg text-muted">General Bots bridges the gap between raw LLM power and industrial application.</p>
+<div class="section-header">
+<h2>Engineered for Scale</h2>
+<p>General Bots bridges the gap between raw LLM power and industrial application.</p>
 </div>
 <div class="grid-3">
-<div class="glass-card p-8">
-<div class="badge mb-4">Architecture</div>
-<h3 class="text-xl font-bold mb-2">Hybrid Workflows</h3>
-<p class="text-sm text-muted">Seamless transition between AI agents and human specialists with full context preservation.</p>
+<div class="card">
+<div class="card-tag">Architecture</div>
+<h3>Hybrid Workflows</h3>
+<p>Seamless transition between AI agents and human specialists with full context preservation.</p>
 </div>
-<div class="glass-card p-8">
-<div class="badge mb-4">Developer Experience</div>
-<h3 class="text-xl font-bold mb-2">BASIC Integration</h3>
-<p class="text-sm text-muted">Define complex business logic using familiar BASIC syntax directly within Word documents.</p>
+<div class="card">
+<div class="card-tag">Developer Experience</div>
+<h3>BASIC Integration</h3>
+<p>Define complex business logic using familiar BASIC syntax directly within Word documents.</p>
 </div>
-<div class="glass-card p-8">
-<div class="badge mb-4">Deployment</div>
-<h3 class="text-xl font-bold mb-2">True Omnichannel</h3>
-<p class="text-sm text-muted">Deploy a single logic core to WhatsApp, Teams, Slack, Telegram, and Web Chat simultaneously.</p>
+<div class="card">
+<div class="card-tag">Deployment</div>
+<h3>True Omnichannel</h3>
+<p>Deploy a single logic core to WhatsApp, Teams, Slack, Telegram, and Web Chat simultaneously.</p>
 </div>
 </div>
 </div>
 </section>
 
-<section class="page-section-lg bg-gray-50 reveal">
+<section class="section section-alt reveal">
 <div class="container">
-<div class="grid-2">
+<div class="feature-split">
 <div>
-<h2 class="text-3xl font-bold tracking-tighter mb-6">Abstract Enterprise Design</h2>
-<p class="text-lg text-muted mb-8 leading-relaxed">Our platform follows the Abstract Enterprise design system, ensuring a technically rigorous, monochrome, and professional interface for your AI operations.</p>
+<div class="section-header">
+<span class="overline">Abstract Enterprise Design</span>
+<h2>Technical Rigor, Monochrome Aesthetics</h2>
+<p>A clean, focused visual language that prioritizes functional clarity over marketing hype. A platform architecture synchronized with the GLM 5.1 launch standards.</p>
+</div>
 <ul class="feature-list">
 <li>
 <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>
-<div><strong>Technical Rigor</strong><p class="text-sm text-muted mt-1">Authoritative, didactic content designed for investors and engineering teams.</p></div>
+<div><strong>Technical Rigor</strong><p>Authoritative, didactic content designed for investors and engineering teams.</p></div>
 </li>
 <li>
 <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>
-<div><strong>Monochrome Aesthetics</strong><p class="text-sm text-muted mt-1">A clean, focused visual language that prioritizes functional clarity over marketing hype.</p></div>
+<div><strong>Monochrome Aesthetics</strong><p>A clean, focused visual language that prioritizes functional clarity over marketing hype.</p></div>
 </li>
 <li>
 <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>
-<div><strong>Investor Ready</strong><p class="text-sm text-muted mt-1">A platform architecture synchronized with the GLM 5.1 launch standards.</p></div>
+<div><strong>Investor Ready</strong><p>A platform architecture synchronized with the GLM 5.1 launch standards.</p></div>
 </li>
 </ul>
 </div>
-<div style="width:100%;aspect-ratio:16/9;background:#f8f8f8;border-radius:1rem;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;border:1px solid rgba(0,0,0,0.06)">
+<div class="feature-visual">
+<div style="width:100%;aspect-ratio:16/9;background:var(--bg-tertiary);border:1px solid var(--border-subtle);border-radius:.25rem;display:flex;align-items:center;justify-content:center">
 <svg width="100%" height="100%" viewBox="0 0 800 450" fill="none">
-  <defs><pattern id="gridHome" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(0,0,0,0.03)" stroke-width="1"/></pattern></defs>
+  <defs><pattern id="gridHome" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="1"></path></pattern></defs>
   <rect width="800" height="450" fill="url(#gridHome)"/>
-  <rect x="200" y="100" width="400" height="250" rx="8" stroke="#111" stroke-width="2" />
-  <path d="M250 150 H550 M250 180 H550 M250 210 H450" stroke="#111" stroke-width="2" opacity="0.3" />
-  <circle cx="400" cy="225" r="50" stroke="#059669" stroke-width="2" stroke-dasharray="8 4" />
+  <rect x="200" y="100" width="400" height="250" rx="8" stroke="#fff" stroke-width="1.5" opacity="0.3" />
+  <path d="M250 150 H550 M250 180 H550 M250 210 H450" stroke="#fff" stroke-width="1.5" opacity="0.2" />
+  <circle cx="400" cy="225" r="50" stroke="#fff" stroke-width="1.5" stroke-dasharray="8 4" opacity="0.4" />
 </svg>
+</div>
 </div>
 </div>
 </div>
