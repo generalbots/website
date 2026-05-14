@@ -24,11 +24,11 @@
 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
 Back to Blog
 </a>
-<div class="badge mb-4">Implementation Architecture</div>
-<h1 class="text-4xl font-bold tracking-tighter mb-6" style="line-height:1.1">Building LLM-Powered Enrollment Tools with BASIC.</h1>
-<p class="text-lg text-muted mb-8 leading-relaxed">Technical exploration of how to bridge the gap between Large Language Models and actionable business systems through sovereign BASIC orchestration.</p>
+<div class="badge mb-4" data-i18n="blog.basic-llm-tools.implementation_architecture">Implementation Architecture</div>
+<h1 class="text-4xl font-bold tracking-tighter mb-6" style="line-height:1.1" data-i18n="blog.basic-llm-tools.building_llm_powered_enrollment_tools_with_basic">Building LLM-Powered Enrollment Tools with BASIC.</h1>
+<p class="text-lg text-muted mb-8 leading-relaxed" data-i18n="blog.basic-llm-tools.technical_exploration_of_how_to_bridge_the_gap_between_large">Technical exploration of how to bridge the gap between Large Language Models and actionable business systems through sovereign BASIC orchestration.</p>
 <div class="blog-content prose">
-<p>While traditional LLMs excel at generating text, they lack the intrinsic authority to execute actions within a secure business environment. To transition from a "chatbot" to an "agent," an LLM requires a didactic bridge—a tool definition that it can understand and execute. General Bots implements this bridge using a modernized BASIC engine, allowing developers to build complex enrollment systems with surgical precision.</p>
+<p data-i18n="blog.basic-llm-tools.while_traditional_llms_excel_at_generating_text_they_lack_t">While traditional LLMs excel at generating text, they lack the intrinsic authority to execute actions within a secure business environment. To transition from a "chatbot" to an "agent," an LLM requires a didactic bridge—a tool definition that it can understand and execute. General Bots implements this bridge using a modernized BASIC engine, allowing developers to build complex enrollment systems with surgical precision.</p>
 
 <div style="width:100%;aspect-ratio:16/9;background:#f8f8f8;border-radius:1rem;margin:2rem 0;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;border:1px solid rgba(0,0,0,0.06)">
   <svg width="100%" height="100%" viewBox="0 0 800 450" fill="none">
@@ -40,19 +40,19 @@ Back to Blog
   </svg>
 </div>
 
-<h3>The Structural Requirements of an Agentic Tool</h3>
-<p>An enrollment tool is not just a form; it is a state machine. It must handle identity verification, parameter validation, and persistent storage. In the General Bots ecosystem, these requirements are defined using the `PARAM` and `VALIDATE` keywords. This structure provides the LLM with a rigid schema that eliminates the variability of natural language extraction.</p>
+<h3 data-i18n="blog.basic-llm-tools.the_structural_requirements_of_an_agentic_tool">The Structural Requirements of an Agentic Tool</h3>
+<p data-i18n="blog.basic-llm-tools.an_enrollment_tool_is_not_just_a_form_it_is_a_state_machine">An enrollment tool is not just a form; it is a state machine. It must handle identity verification, parameter validation, and persistent storage. In the General Bots ecosystem, these requirements are defined using the `PARAM` and `VALIDATE` keywords. This structure provides the LLM with a rigid schema that eliminates the variability of natural language extraction.</p>
 
-<h3>Orchestration of the Enrollment Delta</h3>
-<p>When an LLM detects an intent—such as a student's desire to register for a course—it invokes the corresponding BASIC script. The script then takes control of the dialog loop, ensuring that every required piece of information (Full Name, ID, Course Code) is collected and validated against the organization's rules before any data is written to the persistent layer.</p>
+<h3 data-i18n="blog.basic-llm-tools.orchestration_of_the_enrollment_delta">Orchestration of the Enrollment Delta</h3>
+<p data-i18n="blog.basic-llm-tools.when_an_llm_detects_an_intent_such_as_a_student_s_desire_to">When an LLM detects an intent—such as a student's desire to register for a course—it invokes the corresponding BASIC script. The script then takes control of the dialog loop, ensuring that every required piece of information (Full Name, ID, Course Code) is collected and validated against the organization's rules before any data is written to the persistent layer.</p>
 
-<h3>Tiered Data Persistence</h3>
-<p>General Bots supports a "Didactic First" approach to data.
+<h3 data-i18n="blog.basic-llm-tools.tiered_data_persistence">Tiered Data Persistence</h3>
+<p data-i18n="blog.basic-llm-tools.general_bots_supports_a_didactic_first_approach_to_data_1">General Bots supports a "Didactic First" approach to data.
 1. **CSV Flat Files:** For rapid iteration and auditability.
 2. **SQL Integration:** For enterprise-scale relational storage.
 3. **API Egress:** For triggering downstream workflows in ERP or LMS systems.</p>
 
-<p>The transition from passive observation to active orchestration is the core value proposition of General Bots. By using BASIC as the orchestration language, we ensure that your AI tools remain as readable as they are powerful.</p>
+<p data-i18n="blog.basic-llm-tools.the_transition_from_passive_observation_to_active_orchestrat">The transition from passive observation to active orchestration is the core value proposition of General Bots. By using BASIC as the orchestration language, we ensure that your AI tools remain as readable as they are powerful.</p>
 </div>
 </div>
 </article>

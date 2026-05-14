@@ -24,11 +24,11 @@
 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
 Back to Blog
 </a>
-<div class="badge mb-4">Security Architecture</div>
-<h1 class="text-4xl font-bold tracking-tighter mb-6" style="line-height:1.1">Sovereign Authentication: Beyond the SS7 Protocol Vulnerability.</h1>
-<p class="text-lg text-muted mb-8 leading-relaxed">Technical analysis of why enterprise organizations must pivot away from third-party authenticators toward sovereign, self-hosted security layers.</p>
+<div class="badge mb-4" data-i18n="blog.own-your-authenticator.security_architecture">Security Architecture</div>
+<h1 class="text-4xl font-bold tracking-tighter mb-6" style="line-height:1.1" data-i18n="blog.own-your-authenticator.sovereign_authentication_beyond_the_ss7_protocol_vulnerabil">Sovereign Authentication: Beyond the SS7 Protocol Vulnerability.</h1>
+<p class="text-lg text-muted mb-8 leading-relaxed" data-i18n="blog.own-your-authenticator.technical_analysis_of_why_enterprise_organizations_must_pivo">Technical analysis of why enterprise organizations must pivot away from third-party authenticators toward sovereign, self-hosted security layers.</p>
 <div class="blog-content prose">
-<p>The recent exploitation of the Signaling System No. 7 (SS7) protocol has shifted the security landscape from theoretical risk to industrial emergency. For decades, the SS7 layer—the architectural foundation of global telecommunications—has operated with trust-based protocols that are trivial to intercept via tools like FirstMile. This makes SMS-based 2FA not just obsolete, but a liability for any organization handling sensitive data.</p>
+<p data-i18n="blog.own-your-authenticator.the_recent_exploitation_of_the_signaling_system_no_7_ss7">The recent exploitation of the Signaling System No. 7 (SS7) protocol has shifted the security landscape from theoretical risk to industrial emergency. For decades, the SS7 layer—the architectural foundation of global telecommunications—has operated with trust-based protocols that are trivial to intercept via tools like FirstMile. This makes SMS-based 2FA not just obsolete, but a liability for any organization handling sensitive data.</p>
 
 <div style="width:100%;aspect-ratio:16/9;background:#f8f8f8;border-radius:1rem;margin:2rem 0;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;border:1px solid rgba(0,0,0,0.06)">
   <svg width="100%" height="100%" viewBox="0 0 800 450" fill="none">
@@ -40,24 +40,24 @@ Back to Blog
   </svg>
 </div>
 
-<h3>The SS7 Exploitation Vector</h3>
-<p>Unlike modern IP-based protocols, SS7 lacks mutual authentication. An adversary with access to a global roaming exchange can masquerade as a legitimate telecommunications provider, requesting location data or intercepting SMS traffic meant for a specific subscriber. The result is a seamless "SIM Swap" without physical access to the device or cooperation from the carrier.</p>
+<h3 data-i18n="blog.own-your-authenticator.the_ss7_exploitation_vector">The SS7 Exploitation Vector</h3>
+<p data-i18n="blog.own-your-authenticator.unlike_modern_ip_based_protocols_ss7_lacks_mutual_authentic">Unlike modern IP-based protocols, SS7 lacks mutual authentication. An adversary with access to a global roaming exchange can masquerade as a legitimate telecommunications provider, requesting location data or intercepting SMS traffic meant for a specific subscriber. The result is a seamless "SIM Swap" without physical access to the device or cooperation from the carrier.</p>
 
-<h3>The Case for Sovereign Authentication</h3>
-<p>Relying on generic authenticator apps (Google, Microsoft) introduces a secondary layer of vendor lock-in and centralized risk. A sovereign authenticator, built on the General Bots orchestration core, provides several critical advantages:</p>
+<h3 data-i18n="blog.own-your-authenticator.the_case_for_sovereign_authentication">The Case for Sovereign Authentication</h3>
+<p data-i18n="blog.own-your-authenticator.relying_on_generic_authenticator_apps_google_microsoft_in">Relying on generic authenticator apps (Google, Microsoft) introduces a secondary layer of vendor lock-in and centralized risk. A sovereign authenticator, built on the General Bots orchestration core, provides several critical advantages:</p>
 <ul>
-<li><strong>End-to-End Cryptographic Sovereignty:</strong> Your organization holds the master keys, not a third-party cloud provider.</li>
-<li><strong>Custom Logic Injection:</strong> Authenticate based on didactic parameters, such as device proximity, biometric delta, or IP reputation scores.</li>
-<li><strong>Branding and UX Control:</strong> A white-labeled security app maintains the professional authority of your enterprise identity.</li>
+<li><strong data-i18n="blog.own-your-authenticator.end_to_end_cryptographic_sovereignty">End-to-End Cryptographic Sovereignty:</strong> Your organization holds the master keys, not a third-party cloud provider.</li>
+<li><strong data-i18n="blog.own-your-authenticator.custom_logic_injection">Custom Logic Injection:</strong> Authenticate based on didactic parameters, such as device proximity, biometric delta, or IP reputation scores.</li>
+<li><strong data-i18n="blog.own-your-authenticator.branding_and_ux_control">Branding and UX Control:</strong> A white-labeled security app maintains the professional authority of your enterprise identity.</li>
 </ul>
 
-<h3>Implementation Roadmap</h3>
-<p>Deploying a custom authenticator via General Bots involves three architectural phases:
+<h3 data-i18n="blog.own-your-authenticator.implementation_roadmap">Implementation Roadmap</h3>
+<p data-i18n="blog.own-your-authenticator.deploying_a_custom_authenticator_via_general_bots_involves_t">Deploying a custom authenticator via General Bots involves three architectural phases:
 1. **Secret Generation:** Utilizing our secure vault for generating TOTP seeds.
 2. **Channel Orchestration:** Pushing didactic challenges via our universal channel bridging layer.
 3. **Verification Logic:** Using BASIC to define high-fidelity validation rules within your orchestration documents.</p>
 
-<p>The era of trusting third-party telecommunications infrastructure for security is over. The architectural requirement for 2026 is clear: Own your authenticator, or expect your credentials to be brokered on the open market.</p>
+<p data-i18n="blog.own-your-authenticator.the_era_of_trusting_third_party_telecommunications_infrastru">The era of trusting third-party telecommunications infrastructure for security is over. The architectural requirement for 2026 is clear: Own your authenticator, or expect your credentials to be brokered on the open market.</p>
 </div>
 </div>
 </article>
