@@ -69,6 +69,7 @@ function switchLang(lang) {
   loadLang(lang, function() {
     var container = document.getElementById('lang-flags');
     if (container) injectFlags();
+    gtranslateSwitch(lang);
   });
 }
 
@@ -107,9 +108,27 @@ window.__applyTranslations = applyTranslations;
 window.__injectFlags = injectFlags;
 window.__currentLang = function() { return currentLang; };
 
+/* Tell GTranslate to switch language */
+function gtranslateSwitch(lang) {
+  if (lang === 'en') return;
+  var gtMap = {'pt':'pt','es':'es','fr':'fr','ja':'ja','zh-cn':'zh-CN'};
+  var gtLang = gtMap[lang];
+  if (!gtLang) return;
+  if (typeof doGTranslate === 'function') {
+    doGTranslate('en|' + gtLang);
+  } else {
+    /* GTranslate not loaded yet, retry */
+    setTimeout(function() { gtranslateSwitch(lang); }, 500);
+  }
+}
+
 /* Init i18n on DOM ready */
 var detectedLang = detectLang();
 loadLang(detectedLang);
+/* Sync GTranslate with cookie on page load */
+if (detectedLang !== 'en') {
+  setTimeout(function() { gtranslateSwitch(detectedLang); }, 1000);
+}
 /* injectFlags when #lang-flags appears (header loaded via HTMX) */
 var _flagsInjected = false;
 (function retryInject() {
