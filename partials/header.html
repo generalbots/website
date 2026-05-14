@@ -1,38 +1,39 @@
-<header class="site-header header-shrunk" style="background:rgba(0,0,0,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.06)">
-<div class="header-inner" style="display:flex;align-items:center;justify-content:space-between;height:4rem;max-width:1100px;margin:0 auto;padding:0 1.5rem">
-  <a href="/" class="logo-link" style="display:flex;align-items:center;gap:.75rem;flex-shrink:0">
-    <img src="/gb-logo.png" alt="General Bots" width="32" height="32" style="object-fit:contain;filter:brightness(0) invert(1)">
-    <span style="font-weight:800;font-size:1.25rem;letter-spacing:-.03em;color:#fff">General Bots</span>
+<header class="site-header header-shrunk">
+<div class="header-inner">
+  <a href="/" class="logo-link" aria-label="General Bots home">
+    <span class="logo-mark"><img src="/logo-square.svg" alt="" width="64" height="64"></span>
+    <span class="logo-type">General Bots</span>
   </a>
-  <nav class="nav-desktop" style="display:flex;align-items:center;gap:0;flex:1;justify-content:center">
-    <a href="/features/" style="padding:.375rem .625rem;font-size:.8125rem;font-weight:500;color:#999;transition:color .15s">Features</a>
-    <a href="/integrations/" style="padding:.375rem .625rem;font-size:.8125rem;font-weight:500;color:#999;transition:color .15s">Integrations</a>
-    <a href="/general-bots/" style="padding:.375rem .625rem;font-size:.8125rem;font-weight:500;color:#999;transition:color .15s">Platform</a>
-    <a href="/resources/" style="padding:.375rem .625rem;font-size:.8125rem;font-weight:500;color:#999;transition:color .15s">Resources</a>
-    <a href="/blog/" style="padding:.375rem .625rem;font-size:.8125rem;font-weight:500;color:#999;transition:color .15s">Blog</a>
-    <a href="/pricing/" style="padding:.375rem .625rem;font-size:.8125rem;font-weight:500;color:#999;transition:color .15s">Pricing</a>
+  <nav class="nav-desktop" aria-label="Primary navigation">
+    <a href="/features/" data-i18n="nav.features">Features</a>
+    <a href="/integrations/" data-i18n="nav.integrations">Integrations</a>
+    <a href="/general-bots/" data-i18n="nav.platform">Platform</a>
+    <a href="/resources/" data-i18n="nav.resources">Resources</a>
+    <a href="/blog/" data-i18n="nav.blog">Blog</a>
+    <a href="/pricing/" data-i18n="nav.pricing">Pricing</a>
   </nav>
-  <div style="display:flex;align-items:center;gap:.5rem;flex-shrink:0">
-    <span id="lang-flags" style="display:flex;gap:.125rem;margin-right:.375rem"></span>
-    <a href="https://docs.generalbots.org" style="padding:.375rem .75rem;font-size:.75rem;font-weight:700;color:#000;background:#fff;border-radius:.25rem;text-transform:uppercase;letter-spacing:.04em">Docs</a>
-    <a href="https://github.com/generalbots/generalbots" target="_blank" rel="noopener" aria-label="GitHub" style="display:inline-flex;align-items:center;color:#555;transition:color .15s">
+  <div class="nav-actions">
+    <span id="lang-flags" class="lang-flags"></span>
+    <a href="https://docs.generalbots.org" class="docs-pill" data-i18n="nav.docs">Docs</a>
+    <a href="https://github.com/generalbots/generalbots" class="gh-badge" target="_blank" rel="noopener" aria-label="GitHub">
       <svg viewBox="0 0 16 16" fill="currentColor" width="20" height="20"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>
     </a>
-    <button class="nav-mobile-toggle" id="mobile-menu-toggle" aria-label="Toggle menu" onclick="var m=document.getElementById('mobile-menu');m.classList.toggle('hidden')" style="display:none;align-items:center;justify-content:center;width:2.5rem;height:2.5rem;border:none;background:transparent;cursor:pointer;color:#fff">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M4 6h16M4 12h16M4 18h16"></path></svg>
+    <button class="nav-mobile-toggle" id="mobile-menu-toggle" aria-label="Toggle menu">
+      <svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"></path></svg>
+      <svg class="close-icon hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M6 18L18 6"></path></svg>
     </button>
   </div>
 </div>
-<div id="mobile-menu" class="hidden" style="position:fixed;top:4rem;left:0;right:0;bottom:0;z-index:90;background:rgba(0,0,0,.98);overflow-y:auto;padding:1.5rem">
-<a href="/" class="mobile-nav-link" style="display:block;padding:.75rem 1rem;font-size:1rem;font-weight:500;color:#999">Home</a>
-<a href="/features/" class="mobile-nav-link" style="display:block;padding:.75rem 1rem;font-size:1rem;font-weight:500;color:#999">Features</a>
-<a href="/integrations/" class="mobile-nav-link" style="display:block;padding:.75rem 1rem;font-size:1rem;font-weight:500;color:#999">Integrations</a>
-<a href="/general-bots/" class="mobile-nav-link" style="display:block;padding:.75rem 1rem;font-size:1rem;font-weight:500;color:#999">Platform</a>
-<a href="/resources/" class="mobile-nav-link" style="display:block;padding:.75rem 1rem;font-size:1rem;font-weight:500;color:#999">Resources</a>
-<a href="/blog/" class="mobile-nav-link" style="display:block;padding:.75rem 1rem;font-size:1rem;font-weight:500;color:#999">Blog</a>
-<a href="/pricing/" class="mobile-nav-link" style="display:block;padding:.75rem 1rem;font-size:1rem;font-weight:500;color:#999">Pricing</a>
-<a href="https://docs.generalbots.org" class="mobile-nav-link" style="display:block;padding:.75rem 1rem;font-size:1rem;font-weight:700;color:#fff;border:1px solid rgba(255,255,255,.1);border-radius:.375rem;margin:.5rem 0">Docs</a>
-<a href="/contact/" class="mobile-nav-link" style="display:block;padding:.75rem 1rem;font-size:1rem;font-weight:500;color:#999">Get Started</a>
-<a href="https://github.com/generalbots/generalbots" class="mobile-nav-link" style="display:block;padding:.75rem 1rem;font-size:1rem;font-weight:500;color:#999" target="_blank" rel="noopener">GitHub</a>
+<div id="mobile-menu" class="hidden">
+<a href="/" class="mobile-nav-link" data-i18n="nav.home">Home</a>
+<a href="/features/" class="mobile-nav-link" data-i18n="nav.features">Features</a>
+<a href="/integrations/" class="mobile-nav-link" data-i18n="nav.integrations">Integrations</a>
+<a href="/general-bots/" class="mobile-nav-link" data-i18n="nav.platform">Platform</a>
+<a href="/resources/" class="mobile-nav-link" data-i18n="nav.resources">Resources</a>
+<a href="/blog/" class="mobile-nav-link" data-i18n="nav.blog">Blog</a>
+<a href="/pricing/" class="mobile-nav-link" data-i18n="nav.pricing">Pricing</a>
+<a href="https://docs.generalbots.org" class="mobile-nav-link mobile-nav-link-strong" data-i18n="nav.docs">Docs</a>
+<a href="/contact/" class="mobile-nav-link" data-i18n="nav.getstarted">Get Started</a>
+<a href="https://github.com/generalbots/generalbots" class="mobile-nav-link" target="_blank" rel="noopener" data-i18n="nav.github">GitHub</a>
 </div>
 </header>
