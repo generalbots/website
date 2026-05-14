@@ -106,6 +106,7 @@ function injectFlags() {
 
 window.__switchLang = switchLang;
 window.__applyTranslations = applyTranslations;
+window.__injectFlags = injectFlags;
 window.__currentLang = function() { return currentLang; };
 
 /* Init i18n on DOM ready */
@@ -201,7 +202,7 @@ document.body.addEventListener('htmx:afterSwap', function (e) {
     var container = document.getElementById('lang-flags');
     if (container) {
       container.innerHTML = '';
-      injectFlags();
+      if (window.__injectFlags) window.__injectFlags();
     }
     if (window.__applyTranslations) window.__applyTranslations();
   }
