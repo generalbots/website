@@ -7,16 +7,47 @@ var translations = {};
 var supportedLangs = ['en','pt','es','fr','de','ja','zh-cn'];
 
 function detectLang() {
-  var path = window.location.pathname.toLowerCase();
-  var parts = path.split('/');
-  if (parts.length > 1 && supportedLangs.indexOf(parts[1]) !== -1) {
-    return parts[1];
-  }
-  var cookie = document.cookie.match(/gb_lang=([^;]+)/);
-  if (cookie) return cookie[1];
-  var browser = (navigator.language || navigator.userLanguage || 'en').substring(0,2);
-  if (supportedLangs.indexOf(browser) !== -1) return browser;
-  return 'en';
+var path = window.location.pathname.toLowerCase();
+var parts = path.split('/');
+if (parts.length > 1 && supportedLangs.indexOf(parts[1]) !== -1) {
+return parts[1];
+}
+var cookie = document.cookie.match(/gb_lang=([^;]+)/);
+if (cookie) return cookie[1];
+var browser = (navigator.language || navigator.userLanguage || 'en').substring(0,2);
+if (supportedLangs.indexOf(browser) !== -1) return browser;
+return 'en';
+}
+
+function getLangPrefix() {
+var path = window.location.pathname.toLowerCase();
+var parts = path.split('/');
+if (parts.length > 1 && supportedLangs.indexOf(parts[1]) !== -1) {
+return '/' + parts[1];
+}
+return '';
+}
+
+function localizeLinks() {
+var prefix = getLangPrefix();
+if (!prefix || prefix === '/en') return;
+
+// Localize all links
+var links = document.querySelectorAll('a[href]');
+for (var i = 0; i < links.length; i++) {
+var link = links[i];
+var href = link.getAttribute('href');
+// Skip external links, anchors, and already-localized links
+if (href.match(/^https?:\/\//) || href.startsWith('#') || href.match(/^\/(pt|es|fr|de|ja|zh-cn)\//)) {
+continue;
+}
+// Add language prefix to internal links
+if (href.startsWith('/')) {
+link.setAttribute('href', prefix + href);
+} else if (!href.includes(':')) {
+link.setAttribute('href', prefix + '/' + href);
+}
+}
 }
 
 function loadLang(lang, callback) {
@@ -65,11 +96,21 @@ function applyTranslations() {
 }
 
 function switchLang(lang) {
-  if (lang === currentLang) return;
-  loadLang(lang, function() {
-    var container = document.getElementById('lang-flags');
-    if (container) injectFlags();
-  });
+if (lang === currentLang) return;
+// Redirect to the same page with new language prefix
+var path = window.location.pathname;
+var search = window.location.search || '';
+var hash = window.location.hash || '';
+var parts = path.split('/');
+if (parts.length > 1 && supportedLangs.indexOf(parts[1]) !== -1) {
+// Already has lang prefix, replace it
+path = '/' + lang + path.substring(parts[1].length + 2);
+} else {
+// No lang prefix, add it
+path = '/' + lang + path;
+}
+// Full redirect with language prefix - use replace for cleaner history
+window.location.href = path + search + hash;
 }
 
 var flagEmojis = {
@@ -109,17 +150,21 @@ window.__currentLang = function() { return currentLang; };
 
 /* Init i18n on DOM ready */
 var detectedLang = detectLang();
-loadLang(detectedLang);
+loadLang(detectedLang, function() {
+// Localize all links after language is loaded
+setTimeout(localizeLinks, 100);
+});
 /* injectFlags when #lang-flags appears (header loaded via HTMX) */
 var _flagsInjected = false;
 (function retryInject() {
-  if (_flagsInjected) return;
-  if (document.getElementById('lang-flags')) {
-    _flagsInjected = true;
-    injectFlags();
-  } else {
-    setTimeout(retryInject, 200);
-  }
+if (_flagsInjected) return;
+if (document.getElementById('lang-flags')) {
+_flagsInjected = true;
+injectFlags();
+localizeLinks();
+} else {
+setTimeout(retryInject, 200);
+}
 })();
 
 })();
@@ -197,14 +242,15 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 document.body.addEventListener('htmx:afterSwap', function (e) {
-  if (e.detail && e.detail.pathInfo && e.detail.pathInfo.requestPath &&
-    e.detail.pathInfo.requestPath.indexOf('/partials/') !== -1) {
-    initHeader();
-    var container = document.getElementById('lang-flags');
-    if (container) {
-      container.innerHTML = '';
-      if (window.__injectFlags) window.__injectFlags();
-    }
-    if (window.__applyTranslations) window.__applyTranslations();
-  }
+if (e.detail && e.detail.pathInfo && e.detail.pathInfo.requestPath &&
+e.detail.pathInfo.requestPath.indexOf('/partials/') !== -1) {
+initHeader();
+var container = document.getElementById('lang-flags');
+if (container) {
+container.innerHTML = '';
+if (window.__injectFlags) window.__injectFlags();
+}
+if (window.__applyTranslations) window.__applyTranslations();
+localizeLinks();
+}
 });
