@@ -29,6 +29,8 @@ function loadLang(lang, callback) {
         currentLang = lang;
         document.cookie = 'gb_lang=' + lang + ';path=/;max-age=31536000';
         applyTranslations();
+        var _c = document.getElementById('lang-flags');
+        if (_c) injectFlags();
         if (callback) callback();
       } catch(e) {
         console.warn('i18n: parse fail ' + lang, e);
@@ -74,6 +76,8 @@ function switchLang(lang) {
     }
     var newPath = parts.join('/') || '/' + lang + '/';
     window.history.replaceState({}, '', newPath);
+    var container = document.getElementById('lang-flags');
+    if (container) injectFlags();
   });
 }
 
@@ -90,14 +94,17 @@ var flagEmojis = {
 function injectFlags() {
   var container = document.getElementById('lang-flags');
   if (!container) return;
+  container.innerHTML = '';
   for (var i = 0; i < supportedLangs.length; i++) {
     var lang = supportedLangs[i];
     var a = document.createElement('a');
     a.href = '#';
     a.title = lang;
-    a.style.cssText = 'font-size:1rem;cursor:pointer;opacity:.5;transition:opacity .15s;text-decoration:none;margin:0 .0625rem';
+    var isActive = lang === currentLang;
+    a.style.cssText = 'font-size:1rem;cursor:pointer;transition:opacity .15s;text-decoration:none;margin:0 .0625rem;opacity:' + (isActive ? '1' : '.5');
     a.onmouseover = function(){this.style.opacity=1};
-    a.onmouseout = function(){this.style.opacity=.5};
+    a.onmouseout = function(){if(this.getAttribute('data-lang')!==currentLang)this.style.opacity=.5};
+    a.setAttribute('data-lang', lang);
     a.onclick = (function(l){return function(e){e.preventDefault();switchLang(l);}})(lang);
     a.textContent = flagEmojis[lang] || lang;
     container.appendChild(a);
@@ -113,8 +120,11 @@ window.__currentLang = function() { return currentLang; };
 var detectedLang = detectLang();
 loadLang(detectedLang);
 /* injectFlags when #lang-flags appears (header loaded via HTMX) */
+var _flagsInjected = false;
 (function retryInject() {
+  if (_flagsInjected) return;
   if (document.getElementById('lang-flags')) {
+    _flagsInjected = true;
     injectFlags();
   } else {
     setTimeout(retryInject, 200);
