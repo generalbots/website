@@ -172,20 +172,11 @@ function initReveal() {
 
 /* ===================== 3rd Party ===================== */
 function initThirdParty() {
-  var gtranslateSettings = document.createElement('script');
-  gtranslateSettings.textContent = 'window.gtranslateSettings={default_language:"en",languages:["en","fr","it","es","pt","zh-CN","ru","ar","ja"],wrapper_selector:".gtranslate_wrapper",switcher_horizontal_position:"right",alt_flags:{"en":"usa","pt":"brazil"}};';
-  document.head.appendChild(gtranslateSettings);
-
   var gc = document.createElement('script');
   gc.async = true;
   gc.src = '//gc.zgo.at/count.js';
   gc.setAttribute('data-goatcounter', 'https://generalbots-pragmatismo.goatcounter.com/count');
   document.body.appendChild(gc);
-
-  var gt = document.createElement('script');
-  gt.src = 'https://cdn.gtranslate.net/widgets/latest/float.js';
-  gt.defer = true;
-  document.body.appendChild(gt);
 }
 
 /* ===================== Init ===================== */
