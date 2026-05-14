@@ -105,12 +105,20 @@ function injectFlags() {
 }
 
 window.__switchLang = switchLang;
+window.__applyTranslations = applyTranslations;
 window.__currentLang = function() { return currentLang; };
 
 /* Init i18n on DOM ready */
 var detectedLang = detectLang();
 loadLang(detectedLang);
-injectFlags();
+/* injectFlags when #lang-flags appears (header loaded via HTMX) */
+(function retryInject() {
+  if (document.getElementById('lang-flags')) {
+    injectFlags();
+  } else {
+    setTimeout(retryInject, 200);
+  }
+})();
 
 })();
 
@@ -190,24 +198,11 @@ document.body.addEventListener('htmx:afterSwap', function (e) {
   if (e.detail && e.detail.pathInfo && e.detail.pathInfo.requestPath &&
     e.detail.pathInfo.requestPath.indexOf('/partials/') !== -1) {
     initHeader();
-    /* Re-init flags after header swap */
     var container = document.getElementById('lang-flags');
     if (container) {
       container.innerHTML = '';
-      var langs = ['en','pt','es','fr','de','ja','zh-cn'];
-      var flags = {'en':'\ud83c\uddfa\ud83c\uddf8','pt':'\ud83c\udde7\ud83c\uddf7','es':'\ud83c\uddea\ud83c\uddf8','fr':'\ud83c\uddeb\ud83c\uddf7','de':'\ud83c\udde9\ud83c\uddea','ja':'\ud83c\uddaf\ud83c\uddf5','zh-cn':'\ud83c\udde8\ud83c\uddf3'};
-      for (var i = 0; i < langs.length; i++) {
-        var l = langs[i];
-        var a = document.createElement('a');
-        a.href = '#';
-        a.title = l;
-        a.style.cssText = 'font-size:1rem;cursor:pointer;opacity:.5;transition:opacity .15s;text-decoration:none;margin:0 .0625rem';
-        a.onmouseover = function(){this.style.opacity=1};
-        a.onmouseout = function(){this.style.opacity=.5};
-        a.onclick = (function(lang){return function(e){e.preventDefault();if(window.__switchLang)window.__switchLang(lang);}})(l);
-        a.textContent = flags[l] || l;
-        container.appendChild(a);
-      }
+      injectFlags();
     }
+    if (window.__applyTranslations) window.__applyTranslations();
   }
 });
