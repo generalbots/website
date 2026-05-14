@@ -18,7 +18,12 @@
 <body>
 <div hx-get="/partials/header.html" hx-swap="innerHTML" hx-trigger="load"></div>
 <main style="padding-top:4rem">
-<section class="page-section bg-gray-50 vitral-bg">
+<section class="page-section bg-gray-50 vitral-bg" style="position:relative;overflow:hidden">
+<div style="position:absolute;right:5%;top:50%;transform:translateY(-50%);width:400px;height:300px;opacity:.08;pointer-events:none">
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none">
+<rect x="140" y="90" width="120" height="80" rx="4" stroke="currentColor" stroke-width="1.5" opacity=".2"/><rect x="140" y="90" width="120" height="18" rx="4" stroke="currentColor" stroke-width="1" opacity=".12"/><rect x="155" y="125" width="90" height="6" rx="2" fill="currentColor" opacity=".2"/><rect x="155" y="140" width="70" height="6" rx="2" fill="currentColor" opacity=".15"/><rect x="155" y="155" width="80" height="6" rx="2" fill="currentColor" opacity=".1"/>
+</svg>
+</div>
 <div class="container text-center">
 <div class="reveal">
 <a href="/features/" class="text-sm text-muted" style="display:inline-flex;align-items:center;gap:.375rem;margin-bottom:1.5rem">
@@ -29,7 +34,7 @@ Back to Features
 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
 Content Generation
 </div>
-<h1 class="text-4xl font-bold tracking-tighter mb-4" style="font-size:clamp(2rem,5vw,3rem)">AI Content Architecture.</h1>
+<h1 class="text-4xl font-bold tracking-tighter mb-4" style="font-size:clamp(2rem,5vw,3rem)" data-i18n="features.content-generation.hero">AI Content Architecture.</h1>
 <p class="text-lg text-muted max-w-2xl mx-auto leading-relaxed mb-8">Generate on-brand, SEO-optimized content at scale. From technical documentation to marketing campaigns, ensure a unified voice across every channel.</p>
 </div>
 </div>
@@ -69,7 +74,69 @@ Content Generation
 </div>
 </section>
 
-</main>
+<section class="page-section-lg reveal">
+<div class="container">
+<div class="max-w-3xl mx-auto">
+<p class="text-lg leading-relaxed" style="color:var(--fg-secondary);font-size:1.0625rem;line-height:1.7">Content creation is the bottleneck for most marketing teams. You know what needs to be said, but writing it all — in the right tone, for the right audience, at the right length — takes time that most teams don't have. General Bots Content Generation speeds this up without sacrificing quality or brand consistency.</p>
+</div>
+</div>
+</section>
+<section class="page-section-lg reveal">
+<div class="container">
+<div class="grid-3" style="gap:2rem">
+
+<div class="glass-card p-6 card-hover reveal">
+<h3 class="text-xl font-bold mb-3">Atomic Templates</h3>
+<p class="text-sm text-muted leading-relaxed">Define structure and constraints once in a template, then generate infinite variations that respect your brand guidelines. Templates enforce tone, vocabulary, and compliance rules across all output.</p>
+</div>
+<div class="glass-card p-6 card-hover reveal">
+<h3 class="text-xl font-bold mb-3">Brand Voice Guardrails</h3>
+<p class="text-sm text-muted leading-relaxed">Strict enforcement of tone, vocabulary, and compliance rules. Every piece of generated content is checked against your brand standards before delivery.</p>
+</div>
+<div class="glass-card p-6 card-hover reveal">
+<h3 class="text-xl font-bold mb-3">SEO-First Logic</h3>
+<p class="text-sm text-muted leading-relaxed">Built-in semantic analysis ensures content matches user intent and search engine requirements. Keyword optimization, readability scoring, and meta description generation.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="page-section-lg section-alt reveal">
+<div class="container">
+<div class="max-w-4xl mx-auto">
+<h2 class="text-2xl font-bold tracking-tighter mb-6">How It Works</h2>
+<p class="text-lg leading-relaxed" style="color:var(--fg-secondary);font-size:1.0625rem;line-height:1.7">The secret is structured templates combined with AI. You define the guardrails — tone of voice, vocabulary, structural requirements, compliance rules — and the AI generates within those boundaries. A human reviews and approves before anything goes live. For a blog post, you specify the topic, target keywords, and length. For a product description, you provide the features and the AI writes the benefits. The system learns from your edits and gets better over time.</p>
+</div>
+</div>
+</section>
+
+<section class="page-section-lg reveal">
+<div class="container">
+<div class="glass-card" style="padding:2rem;text-align:center;border-color:var(--border);background:var(--bg-card)">
+<h3 class="text-xl font-bold mb-3">Related Features</h3>
+<p class="text-sm" style="color:var(--fg-secondary);line-height:1.7">Generated content can be deployed directly via <a href='/features/broadcast/' style='color:#fff;text-decoration:underline'>Broadcast</a> for email campaigns or used in <a href='/features/web-automation/' style='color:#fff;text-decoration:underline'>Web Automation</a> workflows. For data-driven content, combine with <a href='/features/talk-to-data/' style='color:#fff;text-decoration:underline'>Talk to Data</a> to include live metrics in your reports.</p>
+</div>
+</div>
+</section><section class="page-section-lg bg-gray-50 reveal">
+<div class="container text-center">
+<h2 class="text-3xl font-bold tracking-tighter mb-4">Why Use Content Generation</h2>
+<p class="text-lg text-muted max-w-2xl mx-auto mb-12">AI-powered content creation with brand voice guardrails, atomic templates, and SEO optimization. Generate on-brand content at scale.</p>
+<div class="flex items-center justify-center gap-4 flex-wrap">
+<a href="/contact/" class="btn btn-primary btn-lg">Get Started</a>
+<a href="/pricing/" class="btn btn-outline btn-lg">View Pricing</a>
+</div>
+</div>
+</section>
+<section class="page-section-lg vitral-bg reveal">
+<div class="container text-center">
+<div class="flex items-center justify-center gap-6 flex-wrap">
+<div class="glass-card-bright p-6">
+<div class="text-lg font-bold mb-1" style="color:var(--fg)">Key Metrics</div>
+<p class="text-sm text-muted max-w-lg" style="line-height:1.6">Generate 50+ content variants per hour. Brand voice enforced across every piece. Human review loop built in.</p>
+</div>
+</div>
+</div>
+</section></main>
 <div hx-get="/partials/footer.html" hx-swap="innerHTML" hx-trigger="load"></div>
 <script src="https://unpkg.com/htmx.org@2.0.4"></script>
 <script src="/js/site.js"></script>

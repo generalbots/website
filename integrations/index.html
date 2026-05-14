@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Integrations | General Bots</title>
-<meta name="description" content="Connect General Bots to your existing enterprise ecosystem. Unified integration for WhatsApp, Teams, Slack, and your internal data warehouses.">
+<title>Integrations | General Bots — 75+ Real Rust Modules</title>
+<meta name="description" content="75+ real Rust modules: Chat, CRM, Mail, Drive, Calendar, Video, Designer. One platform for personal productivity, business operations, and enterprise orchestration.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://generalbots.org/integrations/">
-<meta property="og:title" content="Enterprise Integrations | General Bots">
-<meta property="og:description" content="Connect General Bots to your existing enterprise ecosystem.">
+<meta property="og:title" content="75+ Real Integrations | General Bots">
+<meta property="og:description" content="Real apps: Chat, CRM, Mail, Drive, Calendar, Meet, Designer. Built in Rust.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://generalbots.org/integrations/">
 <link rel="icon" href="/favicon.ico">
@@ -17,123 +17,371 @@
 </head>
 <body>
 <div hx-get="/partials/header.html" hx-swap="innerHTML" hx-trigger="load"></div>
-<main style="padding-top:4rem">
-<section class="page-section bg-gray-50 vitral-bg">
-<div class="container text-center">
+<main>
+
+<!-- Hero -->
+<section class="page-section" style="padding-top:6rem;position:relative;overflow:hidden;background:linear-gradient(180deg,var(--bg) 0%,var(--bg-secondary) 100%)">
+<div style="position:absolute;inset:0;opacity:.03;pointer-events:none">
+<svg width="100%" height="100%" viewBox="0 0 1200 600" fill="none">
+  <g opacity=".4">
+    <circle cx="200" cy="200" r="80" stroke="#fff" stroke-width="1" />
+    <circle cx="350" cy="150" r="50" stroke="#fff" stroke-width="1" />
+    <circle cx="450" cy="250" r="60" stroke="#fff" stroke-width="1" />
+    <circle cx="150" cy="350" r="40" stroke="#fff" stroke-width="1" />
+    <line x1="200" y1="200" x2="350" y2="150" stroke="#fff" stroke-width=".5" />
+    <line x1="350" y1="150" x2="450" y2="250" stroke="#fff" stroke-width=".5" />
+    <line x1="200" y1="200" x2="150" y2="350" stroke="#fff" stroke-width=".5" />
+    <line x1="450" y1="250" x2="200" y2="200" stroke="#fff" stroke-width=".5" />
+    <rect x="700" y="100" width="80" height="60" rx="4" fill="#fff" />
+    <rect x="800" y="80" width="80" height="80" rx="4" fill="#fff" />
+    <rect x="900" y="120" width="80" height="40" rx="4" fill="#fff" />
+    <rect x="750" y="200" width="180" height="120" rx="8" fill="#fff" />
+    <rect x="770" y="220" width="80" height="6" rx="2" fill="#fff" opacity=".3"/>
+    <rect x="770" y="235" width="140" height="6" rx="2" fill="#fff" opacity=".2"/>
+    <rect x="770" y="250" width="100" height="6" rx="2" fill="#fff" opacity=".2"/>
+  </g>
+</svg>
+</div>
+<div class="container text-center" style="position:relative;z-index:1">
 <div class="reveal">
 <div class="badge mb-4" style="margin-left:auto;margin-right:auto;width:fit-content">
 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/></svg>
-Connected Ecosystem
+75+ Apps — Every Channel
 </div>
-<h1 class="text-4xl font-bold tracking-tighter mb-4" style="font-size:clamp(2rem,5vw,3rem)">Unify Your Stack.</h1>
-<p class="text-lg text-muted max-w-2xl mx-auto leading-relaxed mb-8">General Bots isn't an island. It's the bridge that connects your AI intelligence to the communication channels and enterprise data systems you use every day.</p>
-<div class="flex flex-wrap gap-4 justify-center mb-12">
-<a href="#channels" class="btn btn-primary btn-lg">View Channels</a>
-<a href="#enterprise" class="btn btn-outline btn-lg">View Enterprise</a>
+<h1 class="display-large" style="font-size:clamp(2.5rem,6vw,4.5rem);font-weight:900;letter-spacing:-.04em;line-height:.95;text-transform:uppercase;margin-bottom:1.25rem">Connected<br>Ecosystem</h1>
+<p class="text-lg text-muted max-w-2xl mx-auto leading-relaxed mb-10" style="font-size:1.125rem" data-i18n="integrations.hero.sub">Every channel, every tool, every data source — connected through one intelligent platform. WhatsApp, Teams, Email, CRM, Drive, Calendar, and AI.</p>
+<div class="flex flex-wrap gap-4 justify-center">
+<a href="#apps" class="btn btn-primary btn-lg" data-i18n="integrations.hero.channels">Explore Channels</a>
+<a href="https://github.com/pragmatismo-io" class="btn btn-outline btn-lg">View on GitHub</a>
 </div>
-<div style="max-width:50rem;margin:0 auto;background:var(--card);border:1px solid var(--border);border-radius:1.5rem;aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;color:var(--muted-foreground);overflow:hidden;position:relative">
-<svg width="100%" height="100%" viewBox="0 0 800 450" fill="none">
-  <defs>
-    <linearGradient id="intGrad" x1="0" y1="0" x2="800" y2="450" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#f8f8f8"/>
-      <stop offset="100%" stop-color="#eaeaea"/>
-    </linearGradient>
-    <pattern id="grid11" width="80" height="80" patternUnits="userSpaceOnUse">
-      <path d="M 80 0 L 0 0 0 80" fill="none" stroke="rgba(0,0,0,0.02)" stroke-width="1"/>
-    </pattern>
-  </defs>
-  <rect width="800" height="450" fill="url(#intGrad)"/>
-  <rect width="800" height="450" fill="url(#grid11)"/>
-  <g transform="translate(400, 225)">
-    <circle cx="0" cy="0" r="140" stroke="#111" stroke-width="1" stroke-dasharray="10 5" opacity="0.2" />
-    <circle cx="0" cy="0" r="40" fill="#fff" stroke="#059669" stroke-width="2" />
-    <path d="M0 -140 V-40 M0 40 V140 M-140 0 H-40 M40 0 H140" stroke="#111" stroke-width="1" opacity="0.3" />
-    <circle cx="0" cy="-140" r="10" fill="#111" />
-    <circle cx="0" cy="140" r="10" fill="#111" />
-    <circle cx="-140" cy="0" r="10" fill="#111" />
-    <circle cx="140" cy="0" r="10" fill="#111" />
-  </g>
+</div>
+</div>
+</section>
+
+<!-- App Showcase -->
+<section id="apps" class="page-section-lg">
+<div class="container">
+<div class="text-center mb-12 reveal">
+<h2 class="text-3xl font-bold tracking-tighter mb-4">Built-In Apps</h2>
+<p class="text-lg text-muted max-w-2xl mx-auto leading-relaxed">Real applications that ship with the platform. No plugins. No extras. Just real Rust code.</p>
+</div>
+
+<!-- Chat & AI -->
+<div class="feature-split reveal mb-16">
+<div class="feature-content">
+<span class="overline">Conversational AI</span>
+<h3>Chat — Your AI Co-Pilot</h3>
+<p>Real-time WebSocket messaging with LLM integration. WebSocket streaming, multi-channel switching, suggestion chips, and mention support. Agents respond with access to your calendar, files, and contacts.</p>
+<ul class="feature-list">
+<li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg><div><strong>Multi-Channel</strong><p>Switch between agents, bots, and human attendants in one thread.</p></div></li>
+<li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg><div><strong>LLM Streaming</strong><p>Real-time token streaming from OpenAI, Anthropic, Groq, or local llama.cpp.</p></div></li>
+<li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg><div><strong>@Mentions</strong><p>Mention files, people, or calendar events directly in chat. The AI pulls the context automatically.</p></div></li>
+</ul>
+<div class="flex flex-wrap gap-2 mt-4">
+<span class="badge">Personal</span><span class="badge">Business</span><span class="badge">Enterprise</span>
+</div>
+</div>
+<div class="feature-visual">
+<svg width="100%" height="320" viewBox="0 0 600 320" fill="none" style="border:1px solid rgba(255,255,255,.06);border-radius:.25rem;background:rgba(255,255,255,.01)">
+  <!-- Window chrome -->
+  <rect x="40" y="20" width="520" height="280" rx="6" fill="none" stroke="rgba(255,255,255,.1)" stroke-width="1"/>
+  <rect x="40" y="20" width="520" height="28" rx="6" fill="none" stroke="rgba(255,255,255,.06)"/>
+  <circle cx="60" cy="34" r="3" fill="rgba(255,255,255,.2)"/><circle cx="72" cy="34" r="3" fill="rgba(255,255,255,.2)"/><circle cx="84" cy="34" r="3" fill="rgba(255,255,255,.2)"/>
+  <!-- Sidebar -->
+  <rect x="40" y="48" width="70" height="252" fill="none" stroke="rgba(255,255,255,.04)" stroke-width="1"/>
+  <rect x="52" y="70" width="46" height="10" rx="3" fill="none" stroke="rgba(255,255,255,.1)"/>
+  <rect x="52" y="100" width="36" height="8" rx="2" fill="none" stroke="rgba(255,255,255,.08)"/>
+  <rect x="52" y="120" width="46" height="8" rx="2" fill="none" stroke="rgba(255,255,255,.06)"/>
+  <!-- Chat area -->
+  <rect x="130" y="68" width="420" height="40" rx="8" fill="none" stroke="rgba(255,255,255,.06)"/>
+  <text x="150" y="93" fill="rgba(255,255,255,.4)" font-size="11" font-family="var(--font)">How do I sync my calendar?</text>
+  <rect x="130" y="120" width="340" height="60" rx="8" fill="none" stroke="rgba(255,255,255,.08)"/>
+  <text x="150" y="148" fill="rgba(255,255,255,.3)" font-size="10" font-family="var(--font)">I'll check your connected calendars...</text>
+  <text x="150" y="162" fill="rgba(255,255,255,.3)" font-size="10" font-family="var(--font)">Found 2 accounts. Syncing now.</text>
+  <!-- Input -->
+  <rect x="130" y="280" width="420" height="32" rx="16" fill="none" stroke="rgba(255,255,255,.1)"/>
+  <text x="150" y="300" fill="rgba(255,255,255,.3)" font-size="10" font-family="var(--font)">Type a message...</text>
+  <!-- Typing indicator -->
+  <circle cx="470" cy="294" r="2" fill="rgba(255,255,255,.3)"/><circle cx="478" cy="294" r="2" fill="rgba(255,255,255,.2)"/><circle cx="486" cy="294" r="2" fill="rgba(255,255,255,.1)"/>
+</svg>
+</div>
+</div>
+
+<!-- CRM -->
+<div class="feature-split reveal mb-16" style="flex-direction:row-reverse">
+<div class="feature-content order-2">
+<span class="overline">Customer Relationships</span>
+<h3>CRM — Pipeline & Deals</h3>
+<p>Full CRM with Kanban pipeline, deals, accounts, contacts, and campaign management. Drag-and-drop stage transitions, deal scoring, and automated follow-up reminders.</p>
+<ul class="feature-list">
+<li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg><div><strong>Kanban Pipeline</strong><p>Lead → Qualified → Proposal → Negotiation → Won. Drag deals between stages.</p></div></li>
+<li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg><div><strong>Deal Scoring</strong><p>AI-powered deal probability based on engagement and historical data.</p></div></li>
+<li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg><div><strong>Campaigns</strong><p>Email and WhatsApp outreach campaigns with open/click tracking and A/B testing.</p></div></li>
+</ul>
+<div class="flex flex-wrap gap-2 mt-4">
+<span class="badge">Business</span><span class="badge">Enterprise</span>
+</div>
+</div>
+<div class="feature-visual">
+<svg width="100%" height="320" viewBox="0 0 600 320" fill="none" style="border:1px solid rgba(255,255,255,.06);border-radius:.25rem;background:rgba(255,255,255,.01)">
+  <!-- Window chrome -->
+  <rect x="40" y="20" width="520" height="280" rx="6" fill="none" stroke="rgba(255,255,255,.1)" stroke-width="1"/>
+  <rect x="40" y="20" width="520" height="28" rx="6" fill="none" stroke="rgba(255,255,255,.06)"/>
+  <circle cx="60" cy="34" r="3" fill="rgba(255,255,255,.2)"/><circle cx="72" cy="34" r="3" fill="rgba(255,255,255,.2)"/><circle cx="84" cy="34" r="3" fill="rgba(255,255,255,.2)"/>
+  <text x="250" y="38" fill="rgba(255,255,255,.4)" font-size="11" font-family="var(--font)" text-anchor="middle">CRM Pipeline</text>
+  <!-- Kanban columns -->
+  <rect x="60" y="70" width="110" height="200" rx="4" fill="none" stroke="rgba(255,255,255,.06)" stroke-width="1"/>
+  <text x="70" y="90" fill="rgba(255,255,255,.5)" font-size="10" font-weight="700" font-family="var(--font)">LEAD</text>
+  <rect x="70" y="100" width="90" height="50" rx="4" fill="none" stroke="rgba(255,255,255,.08)"/>
+  <rect x="80" y="112" width="50" height="6" rx="2" fill="none" stroke="rgba(255,255,255,.1)"/><rect x="80" y="122" width="30" height="4" rx="2" fill="none" stroke="rgba(255,255,255,.06)"/>
+  <rect x="70" y="158" width="90" height="50" rx="4" fill="none" stroke="rgba(255,255,255,.08)"/>
+  <rect x="80" y="170" width="50" height="6" rx="2" fill="none" stroke="rgba(255,255,255,.1)"/><rect x="80" y="180" width="30" height="4" rx="2" fill="none" stroke="rgba(255,255,255,.06)"/>
+
+  <rect x="180" y="70" width="110" height="200" rx="4" fill="none" stroke="rgba(255,255,255,.06)" stroke-width="1"/>
+  <text x="190" y="90" fill="rgba(255,255,255,.5)" font-size="10" font-weight="700" font-family="var(--font)">QUALIFIED</text>
+  <rect x="190" y="100" width="90" height="50" rx="4" fill="none" stroke="rgba(255,255,255,.08)"/>
+  <rect x="200" y="112" width="50" height="6" rx="2" fill="none" stroke="rgba(255,255,255,.1)"/><rect x="200" y="122" width="30" height="4" rx="2" fill="none" stroke="rgba(255,255,255,.06)"/>
+
+  <rect x="300" y="70" width="110" height="200" rx="4" fill="none" stroke="rgba(255,255,255,.06)" stroke-width="1"/>
+  <text x="310" y="90" fill="rgba(255,255,255,.5)" font-size="10" font-weight="700" font-family="var(--font)">PROPOSAL</text>
+  <rect x="310" y="100" width="90" height="50" rx="4" fill="none" stroke="rgba(255,255,255,.08)"/>
+
+  <rect x="420" y="70" width="110" height="200" rx="4" fill="none" stroke="rgba(255,255,255,.06)" stroke-width="1"/>
+  <text x="430" y="90" fill="rgba(255,255,255,.5)" font-size="10" font-weight="700" font-family="var(--font)">WON</text>
+  <!-- Search -->
+  <rect x="420" y="32" width="120" height="20" rx="10" fill="none" stroke="rgba(255,255,255,.1)"/>
+</svg>
+</div>
+</div>
+
+<!-- Mail -->
+<div class="feature-split reveal mb-16">
+<div class="feature-content">
+<span class="overline">Email</span>
+<h3>Mail — Full Email Suite</h3>
+<p>IMAP/SMTP email client with compose, send, receive, folders, and search. Starred, scheduled, and sent folders. HTML and plain text rendering.</p>
+<ul class="feature-list">
+<li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg><div><strong>Multi-Account</strong><p>Connect multiple IMAP accounts. Unified inbox with account switching.</p></div></li>
+<li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg><div><strong>Smart Search</strong><p>Full-text search across all folders with filters for date, sender, and subject.</p></div></li>
+<li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg><div><strong>Scheduled Send</strong><p>Compose now, send later. Schedule emails for optimal delivery times.</p></div></li>
+</ul>
+<div class="flex flex-wrap gap-2 mt-4">
+<span class="badge">Personal</span><span class="badge">Business</span><span class="badge">Enterprise</span>
+</div>
+</div>
+<div class="feature-visual">
+<svg width="100%" height="320" viewBox="0 0 600 320" fill="none" style="border:1px solid rgba(255,255,255,.06);border-radius:.25rem;background:rgba(255,255,255,.01)">
+  <rect x="40" y="20" width="520" height="280" rx="6" fill="none" stroke="rgba(255,255,255,.1)" stroke-width="1"/>
+  <rect x="40" y="20" width="520" height="28" rx="6" fill="none" stroke="rgba(255,255,255,.06)"/>
+  <circle cx="60" cy="34" r="3" fill="rgba(255,255,255,.2)"/><circle cx="72" cy="34" r="3" fill="rgba(255,255,255,.2)"/><circle cx="84" cy="34" r="3" fill="rgba(255,255,255,.2)"/>
+  <!-- Sidebar -->
+  <rect x="40" y="48" width="120" height="252" fill="none" stroke="rgba(255,255,255,.04)" stroke-width="1"/>
+  <rect x="55" y="70" width="90" height="24" rx="4" fill="rgba(255,255,255,.05)" stroke="rgba(255,255,255,.08)"/><text x="65" y="85" fill="rgba(255,255,255,.5)" font-size="10" font-family="var(--font)">Inbox</text>
+  <rect x="55" y="110" width="90" height="12" rx="2" fill="none" stroke="rgba(255,255,255,.06)"/><text x="65" y="119" fill="rgba(255,255,255,.3)" font-size="10" font-family="var(--font)">Starred</text>
+  <rect x="55" y="140" width="90" height="12" rx="2" fill="none" stroke="rgba(255,255,255,.06)"/><text x="65" y="149" fill="rgba(255,255,255,.3)" font-size="10" font-family="var(--font)">Sent</text>
+  <rect x="55" y="170" width="90" height="12" rx="2" fill="none" stroke="rgba(255,255,255,.06)"/><text x="65" y="179" fill="rgba(255,255,255,.3)" font-size="10" font-family="var(--font)">Scheduled</text>
+  <!-- Email list -->
+  <rect x="180" y="75" width="360" height="45" rx="4" fill="none" stroke="rgba(255,255,255,.06)"/>
+  <rect x="195" y="85" width="100" height="8" rx="2" fill="none" stroke="rgba(255,255,255,.1)"/><rect x="195" y="100" width="200" height="6" rx="2" fill="none" stroke="rgba(255,255,255,.06)"/>
+  <rect x="180" y="130" width="360" height="45" rx="4" fill="none" stroke="rgba(255,255,255,.06)"/>
+  <rect x="195" y="140" width="100" height="8" rx="2" fill="none" stroke="rgba(255,255,255,.1)"/><rect x="195" y="155" width="200" height="6" rx="2" fill="none" stroke="rgba(255,255,255,.06)"/>
+  <rect x="180" y="185" width="360" height="45" rx="4" fill="none" stroke="rgba(255,255,255,.06)"/>
+  <rect x="195" y="195" width="100" height="8" rx="2" fill="none" stroke="rgba(255,255,255,.1)"/><rect x="195" y="210" width="200" height="6" rx="2" fill="none" stroke="rgba(255,255,255,.06)"/>
+  <!-- Compose button -->
+  <rect x="55" y="248" width="90" height="28" rx="4" fill="none" stroke="rgba(255,255,255,.1)"/><text x="75" y="265" fill="rgba(255,255,255,.4)" font-size="10" font-family="var(--font)">Compose</text>
+</svg>
+</div>
+</div>
+
+<!-- Drive -->
+<div class="feature-split reveal mb-16" style="flex-direction:row-reverse">
+<div class="feature-content order-2">
+<span class="overline">Cloud Storage</span>
+<h3>Drive — S3-Compatible Storage</h3>
+<p>MinIO-based object storage with folder navigation, file upload, sharing, and versioning. Drag-and-drop upload, folder creation, and permission controls.</p>
+<ul class="feature-list">
+<li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg><div><strong>MinIO Backend</strong><p>S3-compatible API. Works with AWS S3, Wasabi, MinIO, and other S3 providers.</p></div></li>
+<li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg><div><strong>Folder & File Tree</strong><p>Recursive folder navigation with breadcrumb trails and quick search.</p></div></li>
+<li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg><div><strong>Share Links</strong><p>Generate time-limited share links with password protection and download limits.</p></div></li>
+</ul>
+<div class="flex flex-wrap gap-2 mt-4">
+<span class="badge">Personal</span><span class="badge">Business</span><span class="badge">Enterprise</span>
+</div>
+</div>
+<div class="feature-visual">
+<svg width="100%" height="320" viewBox="0 0 600 320" fill="none" style="border:1px solid rgba(255,255,255,.06);border-radius:.25rem;background:rgba(255,255,255,.01)">
+  <rect x="40" y="20" width="520" height="280" rx="6" fill="none" stroke="rgba(255,255,255,.1)" stroke-width="1"/>
+  <rect x="40" y="20" width="520" height="28" rx="6" fill="none" stroke="rgba(255,255,255,.06)"/>
+  <circle cx="60" cy="34" r="3" fill="rgba(255,255,255,.2)"/><circle cx="72" cy="34" r="3" fill="rgba(255,255,255,.2)"/><circle cx="84" cy="34" r="3" fill="rgba(255,255,255,.2)"/>
+  <!-- Sidebar -->
+  <rect x="40" y="48" width="120" height="252" fill="none" stroke="rgba(255,255,255,.04)" stroke-width="1"/>
+  <rect x="55" y="75" width="90" height="28" rx="4" fill="rgba(255,255,255,.05)" stroke="rgba(255,255,255,.08)"/><text x="72" y="92" fill="rgba(255,255,255,.5)" font-size="10" font-family="var(--font)">Upload</text>
+  <rect x="55" y="120" width="90" height="12" rx="2" fill="none" stroke="rgba(255,255,255,.06)"/><text x="65" y="129" fill="rgba(255,255,255,.3)" font-size="10" font-family="var(--font)">My Drive</text>
+  <rect x="55" y="148" width="90" height="12" rx="2" fill="none" stroke="rgba(255,255,255,.06)"/><text x="65" y="157" fill="rgba(255,255,255,.3)" font-size="10" font-family="var(--font)">Shared</text>
+  <rect x="55" y="176" width="90" height="12" rx="2" fill="none" stroke="rgba(255,255,255,.06)"/><text x="65" y="185" fill="rgba(255,255,255,.3)" font-size="10" font-family="var(--font)">Recent</text>
+  <!-- File grid -->
+  <rect x="180" y="75" width="100" height="100" rx="4" fill="none" stroke="rgba(255,255,255,.06)"/>
+  <rect x="190" y="140" width="80" height="6" rx="2" fill="none" stroke="rgba(255,255,255,.1)"/>
+  <rect x="210" y="152" width="40" height="4" rx="2" fill="none" stroke="rgba(255,255,255,.06)"/>
+  <rect x="295" y="75" width="100" height="100" rx="4" fill="none" stroke="rgba(255,255,255,.06)"/>
+  <rect x="410" y="75" width="100" height="100" rx="4" fill="none" stroke="rgba(255,255,255,.06)"/>
+  <rect x="180" y="190" width="100" height="100" rx="4" fill="none" stroke="rgba(255,255,255,.06)"/>
+</svg>
+</div>
+</div>
+
+<!-- Calendar -->
+<div class="feature-split reveal mb-16">
+<div class="feature-content">
+<span class="overline">Scheduling</span>
+<h3>Calendar — Events & Meetings</h3>
+<p>CalDAV-compatible calendar with day, week, and month views. Create events, invite attendees, and sync with external calendars.</p>
+<ul class="feature-list">
+<li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg><div><strong>CalDAV Sync</strong><p>Two-way sync with Google Calendar, Outlook, and Apple Calendar via CalDAV.</p></div></li>
+<li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg><div><strong>Recurring Events</strong><p>Daily, weekly, monthly, and custom recurrence patterns with exception handling.</p></div></li>
+<li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg><div><strong>Availability Finder</strong><p>Auto-detect free slots across all calendars and suggest optimal meeting times.</p></div></li>
+</ul>
+<div class="flex flex-wrap gap-2 mt-4">
+<span class="badge">Personal</span><span class="badge">Business</span><span class="badge">Enterprise</span>
+</div>
+</div>
+<div class="feature-visual">
+<svg width="100%" height="320" viewBox="0 0 600 320" fill="none" style="border:1px solid rgba(255,255,255,.06);border-radius:.25rem;background:rgba(255,255,255,.01)">
+  <rect x="40" y="20" width="520" height="280" rx="6" fill="none" stroke="rgba(255,255,255,.1)" stroke-width="1"/>
+  <rect x="40" y="20" width="520" height="28" rx="6" fill="none" stroke="rgba(255,255,255,.06)"/>
+  <circle cx="60" cy="34" r="3" fill="rgba(255,255,255,.2)"/><circle cx="72" cy="34" r="3" fill="rgba(255,255,255,.2)"/><circle cx="84" cy="34" r="3" fill="rgba(255,255,255,.2)"/>
+  <text x="280" y="38" fill="rgba(255,255,255,.4)" font-size="11" font-family="var(--font)" text-anchor="middle">March 2025</text>
+  <!-- Calendar grid -->
+  <rect x="60" y="65" width="70" height="50" fill="none" stroke="rgba(255,255,255,.04)"/>
+  <rect x="130" y="65" width="70" height="50" fill="none" stroke="rgba(255,255,255,.04)"/>
+  <rect x="200" y="65" width="70" height="50" fill="none" stroke="rgba(255,255,255,.04)"/>
+  <rect x="270" y="65" width="70" height="50" fill="rgba(255,255,255,.03)" stroke="rgba(255,255,255,.06)"/>
+  <rect x="340" y="65" width="70" height="50" fill="none" stroke="rgba(255,255,255,.04)"/>
+  <rect x="410" y="65" width="70" height="50" fill="none" stroke="rgba(255,255,255,.04)"/>
+  <rect x="480" y="65" width="70" height="50" fill="none" stroke="rgba(255,255,255,.04)"/>
+  <!-- Event bar -->
+  <rect x="275" y="78" width="60" height="18" rx="2" fill="none" stroke="rgba(255,255,255,.15)"/><text x="290" y="90" fill="rgba(255,255,255,.4)" font-size="9" font-family="var(--font)">Team Sync</text>
+  <rect x="415" y="100" width="60" height="18" rx="2" fill="none" stroke="rgba(255,255,255,.15)"/><text x="425" y="112" fill="rgba(255,255,255,.4)" font-size="9" font-family="var(--font)">Demo</text>
+</svg>
+</div>
+</div>
+
+<!-- Meet -->
+<div class="feature-split reveal mb-16" style="flex-direction:row-reverse">
+<div class="feature-content order-2">
+<span class="overline">Video</span>
+<h3>Meet — Video Conferencing</h3>
+<p>LiveKit-powered video meetings with screen sharing, recording, and transcription. HD video, spatial audio, and breakout rooms.</p>
+<ul class="feature-list">
+<li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg><div><strong>LiveKit Backend</strong><p>WebRTC-based video with SFU architecture. Low latency, high quality, up to thousands of participants.</p></div></li>
+<li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg><div><strong>Recording & Transcription</strong><p>Auto-record sessions with AI transcription and searchable meeting notes.</p></div></li>
+<li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg><div><strong>Screen Share</strong><p>Full-screen and application-specific sharing with annotation tools.</p></div></li>
+</ul>
+<div class="flex flex-wrap gap-2 mt-4">
+<span class="badge">Personal</span><span class="badge">Business</span><span class="badge">Enterprise</span>
+</div>
+</div>
+<div class="feature-visual">
+<svg width="100%" height="320" viewBox="0 0 600 320" fill="none" style="border:1px solid rgba(255,255,255,.06);border-radius:.25rem;background:rgba(255,255,255,.01)">
+  <rect x="40" y="20" width="520" height="280" rx="6" fill="none" stroke="rgba(255,255,255,.1)" stroke-width="1"/>
+  <rect x="40" y="20" width="520" height="28" rx="6" fill="none" stroke="rgba(255,255,255,.06)"/>
+  <circle cx="60" cy="34" r="3" fill="rgba(255,255,255,.2)"/><circle cx="72" cy="34" r="3" fill="rgba(255,255,255,.2)"/><circle cx="84" cy="34" r="3" fill="rgba(255,255,255,.2)"/>
+  <!-- Video grid -->
+  <rect x="60" y="65" width="220" height="150" rx="4" fill="none" stroke="rgba(255,255,255,.08)"/>
+  <rect x="95" y="125" width="30" height="30" rx="15" fill="none" stroke="rgba(255,255,255,.1)"/>
+  <rect x="300" y="65" width="220" height="150" rx="4" fill="none" stroke="rgba(255,255,255,.08)"/>
+  <rect x="335" y="125" width="30" height="30" rx="15" fill="none" stroke="rgba(255,255,255,.1)"/>
+  <!-- Controls -->
+  <rect x="210" y="230" width="180" height="30" rx="15" fill="none" stroke="rgba(255,255,255,.08)"/>
+  <text x="285" y="248" fill="rgba(255,255,255,.3)" font-size="10" font-family="var(--font)" text-anchor="middle">Leave</text>
+</svg>
+</div>
+</div>
+
+<!-- Designer -->
+<div class="feature-split reveal mb-16">
+<div class="feature-content">
+<span class="overline">Visual Builder</span>
+<h3>Designer — Drag & Drop</h3>
+<p>Visual application builder with drag-and-drop components, live preview, and code export. Design web pages, dashboards, and forms without writing code.</p>
+<ul class="feature-list">
+<li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg><div><strong>Component Library</strong><p>Pre-built components: buttons, forms, tables, charts, and layout blocks.</p></div></li>
+<li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg><div><strong>Live Preview</strong><p>Real-time preview of your design as you build. Export to HTML, React, or deploy directly.</p></div></li>
+<li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg><div><strong>HTMX Integration</strong><p>Generated apps use HTMX for dynamic behavior — zero JavaScript knowledge required.</p></div></li>
+</ul>
+<div class="flex flex-wrap gap-2 mt-4">
+<span class="badge">Business</span><span class="badge">Enterprise</span>
+</div>
+</div>
+<div class="feature-visual">
+<svg width="100%" height="320" viewBox="0 0 600 320" fill="none" style="border:1px solid rgba(255,255,255,.06);border-radius:.25rem;background:rgba(255,255,255,.01)">
+  <rect x="40" y="20" width="520" height="280" rx="6" fill="none" stroke="rgba(255,255,255,.1)" stroke-width="1"/>
+  <rect x="40" y="20" width="520" height="28" rx="6" fill="none" stroke="rgba(255,255,255,.06)"/>
+  <circle cx="60" cy="34" r="3" fill="rgba(255,255,255,.2)"/><circle cx="72" cy="34" r="3" fill="rgba(255,255,255,.2)"/><circle cx="84" cy="34" r="3" fill="rgba(255,255,255,.2)"/>
+  <!-- Sidebar panels -->
+  <rect x="40" y="48" width="120" height="252" fill="none" stroke="rgba(255,255,255,.04)" stroke-width="1"/>
+  <rect x="55" y="70" width="90" height="20" rx="4" fill="none" stroke="rgba(255,255,255,.06)"/><text x="65" y="83" fill="rgba(255,255,255,.3)" font-size="10" font-family="var(--font)">Button</text>
+  <rect x="55" y="100" width="90" height="20" rx="4" fill="none" stroke="rgba(255,255,255,.06)"/><text x="65" y="113" fill="rgba(255,255,255,.3)" font-size="10" font-family="var(--font)">Input</text>
+  <rect x="55" y="130" width="90" height="20" rx="4" fill="none" stroke="rgba(255,255,255,.06)"/><text x="65" y="143" fill="rgba(255,255,255,.3)" font-size="10" font-family="var(--font)">Card</text>
+  <!-- Canvas -->
+  <rect x="175" y="70" width="360" height="210" rx="4" fill="none" stroke="rgba(255,255,255,.06)" fill-opacity="0.01"/>
+  <rect x="200" y="95" width="120" height="40" rx="4" fill="none" stroke="rgba(255,255,255,.08)"/>
+  <rect x="200" y="150" width="310" height="80" rx="4" fill="none" stroke="rgba(255,255,255,.06)"/>
 </svg>
 </div>
 </div>
 </div>
 </section>
 
-<section id="channels" class="page-section-lg reveal">
+<!-- Module Catalog -->
+<section id="modules" class="page-section-lg bg-gray-50">
 <div class="container">
-<div class="text-center mb-12">
-<h2 class="text-3xl font-bold tracking-tighter mb-4">Omnichannel Communication</h2>
-<p class="text-lg text-muted max-w-2xl mx-auto leading-relaxed">Meet your customers where they already are. Deploy your bot once and sync personality across every channel.</p>
+<div class="text-center mb-12 reveal">
+<h2 class="text-3xl font-bold tracking-tighter mb-4">75+ Rust Modules</h2>
+<p class="text-lg text-muted max-w-2xl mx-auto leading-relaxed">Every module below ships in production. This is not a roadmap — it is a cargo workspace you can build today.</p>
 </div>
-<div class="grid-3">
-<div class="glass-card p-8">
-<h3 class="text-xl font-bold mb-4">Meta Ecosystem</h3>
-<ul class="feature-list">
-<li>WhatsApp Business API</li>
-<li>Instagram Direct Messenger</li>
-<li>Facebook Messenger</li>
-</ul>
-</div>
-<div class="glass-card p-8">
-<h3 class="text-xl font-bold mb-4">Team Collaboration</h3>
-<ul class="feature-list">
-<li>Microsoft Teams</li>
-<li>Slack Enterprise</li>
-<li>Google Chat</li>
-</ul>
-</div>
-<div class="glass-card p-8">
-<h3 class="text-xl font-bold mb-4">Standard Channels</h3>
-<ul class="feature-list">
-<li>Web Chat Widget</li>
-<li>Email Automation</li>
-<li>SMS & Voice</li>
-</ul>
-</div>
+<div class="grid-4">
+<div class="mod-card reveal"><div class="mod-title">botserver</div><div class="mod-desc">Axum web server, API gateway, WebSocket router</div></div>
+<div class="mod-card reveal"><div class="mod-title">botlib / shared</div><div class="mod-desc">Core types, errors, database models</div></div>
+<div class="mod-card reveal"><div class="mod-title">botllm</div><div class="mod-desc">LLM provider orchestration (OpenAI, Anthropic, Groq, local)</div></div>
+<div class="mod-card reveal"><div class="mod-title">botqdrant</div><div class="mod-desc">Vector database (Qdrant) integration</div></div>
+<div class="mod-card reveal"><div class="mod-title">botdrive</div><div class="mod-desc">S3-compatible object storage (MinIO)</div></div>
+<div class="mod-card reveal"><div class="mod-title">botui</div><div class="mod-desc">Web UI server (HTMX, CSS, JS)</div></div>
+<div class="mod-card reveal"><div class="mod-title">botapp</div><div class="mod-desc">Tauri desktop app wrapper</div></div>
+<div class="mod-card reveal"><div class="mod-title">botwhatsapp</div><div class="mod-desc">WhatsApp Business API integration</div></div>
+<div class="mod-card reveal"><div class="mod-title">botmsteams</div><div class="mod-desc">Microsoft Teams bot framework</div></div>
+<div class="mod-card reveal"><div class="mod-title">bottelegram</div><div class="mod-desc">Telegram Bot API</div></div>
+<div class="mod-card reveal"><div class="mod-title">botinstagram</div><div class="mod-desc">Instagram Graph API</div></div>
+<div class="mod-card reveal"><div class="mod-title">botemail</div><div class="mod-desc">IMAP/SMTP email client</div></div>
+<div class="mod-card reveal"><div class="mod-title">botcalendar</div><div class="mod-desc">CalDAV scheduling and events</div></div>
+<div class="mod-card reveal"><div class="mod-title">botmeet</div><div class="mod-desc">LiveKit video conferencing</div></div>
+<div class="mod-card reveal"><div class="mod-title">botpeople</div><div class="mod-desc">Contact and CRM management</div></div>
+<div class="mod-card reveal"><div class="mod-title">bottasks</div><div class="mod-desc">Task scheduling with cron</div></div>
+<div class="mod-card reveal"><div class="mod-title">bottickets</div><div class="mod-desc">Support ticket system</div></div>
+<div class="mod-card reveal"><div class="mod-title">botanalytics</div><div class="mod-desc">Event tracking and metrics</div></div>
+<div class="mod-card reveal"><div class="mod-title">botmonitoring</div><div class="mod-desc">System health and alerts</div></div>
+<div class="mod-card reveal"><div class="mod-title">botsecurity</div><div class="mod-desc">Encryption, audit, compliance</div></div>
+<div class="mod-card reveal"><div class="mod-title">botsearch</div><div class="mod-desc">Full-text and semantic search</div></div>
+<div class="mod-card reveal"><div class="mod-title">botbrowser</div><div class="mod-desc">Playwright web automation</div></div>
+<div class="mod-card reveal"><div class="mod-title">botcompliance</div><div class="mod-desc">GDPR and SOC 2 tooling</div></div>
+<div class="mod-card reveal"><div class="mod-title">botdesigner</div><div class="mod-desc">Visual drag-and-drop app builder</div></div>
+<div class="mod-card reveal"><div class="mod-title">botworkspaces</div><div class="mod-desc">Multi-tenant workspace isolation</div></div>
 </div>
 </div>
 </section>
 
-<section id="enterprise" class="page-section-lg bg-gray-50 reveal">
+<!-- CTA -->
+<section class="cta-section">
 <div class="container">
-<div class="text-center mb-12">
-<h2 class="text-3xl font-bold tracking-tighter mb-4">Enterprise Data Systems</h2>
-<p class="text-lg text-muted max-w-2xl mx-auto leading-relaxed">Intelligence is only as good as the data it can access. We connect to your core infrastructure securely.</p>
-</div>
-<div class="grid-2">
-<div class="glass-card p-10">
-<h3 class="text-2xl font-bold mb-4">Document Storage</h3>
-<p class="text-muted mb-6">Seamlessly index and retrieve knowledge from your existing document repositories with full permission inheritance.</p>
-<div class="flex flex-wrap gap-2">
-<span class="badge">SharePoint</span>
-<span class="badge">Google Drive</span>
-<span class="badge">OneDrive</span>
-<span class="badge">MinIO</span>
-</div>
-</div>
-<div class="glass-card p-10">
-<h3 class="text-2xl font-bold mb-4">Virtual Assistants</h3>
-<p class="text-muted mb-6">Extend the reach of your bot by integrating with global assistant ecosystems and proprietary copilot frameworks.</p>
-<div class="flex flex-wrap gap-2">
-<span class="badge">Alexa</span>
-<span class="badge">Microsoft Copilot</span>
-<span class="badge">ChatGPT Plus</span>
-</div>
-</div>
-</div>
-</div>
-</section>
-
-<section class="page-section-lg vitral-bg reveal">
-<div class="container text-center">
-<h2 class="text-3xl font-bold tracking-tighter mb-4">Build Your Connected Bot</h2>
-<p class="text-lg text-muted max-w-2xl mx-auto mb-8 leading-relaxed">One orchestration platform, infinite possibilities. Contact us to discuss your specific integration requirements.</p>
+<h2 class="text-3xl font-bold tracking-tighter mb-4">Ready to Build?</h2>
+<p class="text-lg text-muted max-w-2xl mx-auto mb-8 leading-relaxed">Start with one app. Add more as you grow. All 75+ modules share the same Rust binary.</p>
 <div class="flex flex-wrap gap-4 justify-center">
-<a href="/contact/" class="btn btn-outline btn-lg">Contact Us</a>
-<a href="/contact/" class="btn btn-primary btn-lg">Get Started</a>
+<a href="/contact/" class="btn btn-primary btn-lg">Get Started Free</a>
+<a href="https://github.com/pragmatismo-io" class="btn btn-outline btn-lg">View GitHub</a>
 </div>
 </div>
 </section>
+
 </main>
 <div hx-get="/partials/footer.html" hx-swap="innerHTML" hx-trigger="load"></div>
 <script src="https://unpkg.com/htmx.org@2.0.4"></script>

@@ -18,7 +18,12 @@
 <body>
 <div hx-get="/partials/header.html" hx-swap="innerHTML" hx-trigger="load"></div>
 <main style="padding-top:4rem">
-<section class="page-section bg-gray-50 vitral-bg">
+<section class="page-section bg-gray-50 vitral-bg" style="position:relative;overflow:hidden">
+<div style="position:absolute;right:5%;top:50%;transform:translateY(-50%);width:400px;height:300px;opacity:.06;pointer-events:none">
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none">
+<rect x="130" y="80" width="140" height="100" rx="4" stroke="currentColor" stroke-width="2" opacity=".3"/><rect x="130" y="80" width="140" height="20" rx="4" stroke="currentColor" stroke-width="1" opacity=".2"/><circle cx="145" cy="90" r="3" fill="currentColor" opacity=".5"/><circle cx="155" cy="90" r="3" fill="currentColor" opacity=".5"/><circle cx="165" cy="90" r="3" fill="currentColor" opacity=".5"/><path d="M150 120 L250 120 M150 135 L220 135 M150 150 L200 150" stroke="currentColor" stroke-width="1.5" opacity=".2"/>
+</svg>
+</div>
 <div class="container text-center">
 <div class="reveal">
 <a href="/features/" class="text-sm text-muted" style="display:inline-flex;align-items:center;gap:.375rem;margin-bottom:1.5rem">
@@ -29,8 +34,8 @@ Back to Features
 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="opacity:.15"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
 Web Automation
 </div>
-<h1 class="text-4xl font-bold tracking-tighter mb-4" style="font-size:clamp(2rem,5vw,3rem)">Industrial Web Orchestration.</h1>
-<p class="text-lg text-muted max-w-2xl mx-auto leading-relaxed mb-8">Automate complex web interactions, scrape structured data, and bridge legacy web assets with modern conversational interfaces.</p>
+<h1 class="text-4xl font-bold tracking-tighter mb-4" style="font-size:clamp(2rem,5vw,3rem)" data-i18n="features.web-automation.hero">Industrial Web Orchestration.</h1>
+<p class="text-lg text-muted max-w-2xl mx-auto leading-relaxed mb-8" data-i18n="features.web-automation.hero_sub">Automate complex web interactions, scrape structured data, and bridge legacy web assets with modern conversational interfaces.</p>
 </div>
 </div>
 </section>
@@ -72,7 +77,69 @@ Web Automation
 </div>
 </section>
 
-</main>
+<section class="page-section-lg reveal">
+<div class="container">
+<div class="max-w-3xl mx-auto">
+<p class="text-lg leading-relaxed" style="color:var(--fg-secondary);font-size:1.0625rem;line-height:1.7">Not every business has an API. Many critical systems are still web-only — legacy ERPs, government portals, supplier dashboards — with no programmatic access. Web Automation bridges this gap by letting you control browsers programmatically, turning any website into an API.</p>
+</div>
+</div>
+</section>
+<section class="page-section-lg reveal">
+<div class="container">
+<div class="grid-3" style="gap:2rem">
+
+<div class="glass-card p-6 card-hover reveal">
+<h3 class="text-xl font-bold mb-3">Headless Browser Orchestration</h3>
+<p class="text-sm text-muted leading-relaxed">Execute multi-step web workflows invisibly using high-performance headless browser instances. Login, navigate, extract, and submit — all automated.</p>
+</div>
+<div class="glass-card p-6 card-hover reveal">
+<h3 class="text-xl font-bold mb-3">Semantic Data Extraction</h3>
+<p class="text-sm text-muted leading-relaxed">Transform messy HTML structures into clean, structured data for immediate consumption by bots and APIs. CSS selectors, XPath, and AI-assisted extraction.</p>
+</div>
+<div class="glass-card p-6 card-hover reveal">
+<h3 class="text-xl font-bold mb-3">Automated Form Interaction</h3>
+<p class="text-sm text-muted leading-relaxed">Programmatically fill and submit web forms, including complex multi-page applications and login gates. Handle CAPTCHA, 2FA, and session management.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="page-section-lg section-alt reveal">
+<div class="container">
+<div class="max-w-4xl mx-auto">
+<h2 class="text-2xl font-bold tracking-tighter mb-6">How It Works</h2>
+<p class="text-lg leading-relaxed" style="color:var(--fg-secondary);font-size:1.0625rem;line-height:1.7">Think of it as a robot that can use a web browser. You define the steps: navigate to this URL, log in with these credentials, click this button, extract that data, fill in this form, submit. The automation runs headlessly (no visible browser window) and can handle complex scenarios like multi-page workflows, file downloads, session management, and CAPTCHA handling. Each automation is defined as a BASIC script, making it easy to write, test, and modify. This is how companies automate supplier onboarding, extract competitor pricing, submit regulatory filings, and sync data between systems that don't talk to each other.</p>
+</div>
+</div>
+</section>
+
+<section class="page-section-lg reveal">
+<div class="container">
+<div class="glass-card" style="padding:2rem;text-align:center;border-color:var(--border);background:var(--bg-card)">
+<h3 class="text-xl font-bold mb-3">Related Features</h3>
+<p class="text-sm" style="color:var(--fg-secondary);line-height:1.7">Web Automation can feed data into <a href='/features/talk-to-data/' style='color:#fff;text-decoration:underline'>Talk to Data</a> for analysis, trigger <a href='/features/broadcast/' style='color:#fff;text-decoration:underline'>Broadcast</a> campaigns based on scraped data, or call <a href='/features/create-apis-in-word/' style='color:#fff;text-decoration:underline'>APIs in BASIC</a> for backend processing.</p>
+</div>
+</div>
+</section><section class="page-section-lg bg-gray-50 reveal">
+<div class="container text-center">
+<h2 class="text-3xl font-bold tracking-tighter mb-4">Why Use Web Automation</h2>
+<p class="text-lg text-muted max-w-2xl mx-auto mb-12">Automate complex web interactions, scrape structured data, and bridge legacy web assets with modern conversational interfaces.</p>
+<div class="flex items-center justify-center gap-4 flex-wrap">
+<a href="/contact/" class="btn btn-primary btn-lg">Get Started</a>
+<a href="/pricing/" class="btn btn-outline btn-lg">View Pricing</a>
+</div>
+</div>
+</section>
+<section class="page-section-lg vitral-bg reveal">
+<div class="container text-center">
+<div class="flex items-center justify-center gap-6 flex-wrap">
+<div class="glass-card-bright p-6">
+<div class="text-lg font-bold mb-1" style="color:var(--fg)">Key Metrics</div>
+<p class="text-sm text-muted max-w-lg" style="line-height:1.6">Headless Chromium-based. Supports JavaScript, AJAX, and Single Page Applications. Run hundreds of automations concurrently.</p>
+</div>
+</div>
+</div>
+</section></main>
 <div hx-get="/partials/footer.html" hx-swap="innerHTML" hx-trigger="load"></div>
 <script src="https://unpkg.com/htmx.org@2.0.4"></script>
 <script src="/js/site.js"></script>

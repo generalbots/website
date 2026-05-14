@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Feature Ecosystem | General Bots</title>
-<meta name="description" content="Explore the modular feature set of General Bots. From RAG pipelines to autonomous web agents, our platform provides the tools to build industrial-grade AI.">
+<title>Features | General Bots — 75+ Applications</title>
+<meta name="description" content="Explore 75+ applications powering AI agents, automation, and business workflows. From personal productivity to enterprise AI orchestration.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://generalbots.org/features/">
-<meta property="og:title" content="Feature Ecosystem | General Bots">
-<meta property="og:description" content="Explore the modular feature set of General Bots.">
+<meta property="og:title" content="75+ Features | General Bots Platform">
+<meta property="og:description" content="75+ applications: LLM, Calendar, Drive, Mail, WhatsApp, Teams, and more. Personal, Business & Enterprise.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://generalbots.org/features/">
 <link rel="icon" href="/favicon.ico">
@@ -17,177 +17,399 @@
 </head>
 <body>
 <div hx-get="/partials/header.html" hx-swap="innerHTML" hx-trigger="load"></div>
-<main style="padding-top:4rem">
-<section class="page-section bg-gray-50 vitral-bg">
-<div class="container text-center">
+<main>
+
+<section class="page-section" style="padding-top:6rem;position:relative;overflow:hidden;background:linear-gradient(180deg,var(--bg) 0%,var(--bg-secondary) 100%)">
+<div class="bloom bloom-1"></div>
+<div class="bloom bloom-2"></div>
+<div class="mesh-pattern"></div>
+<div style="position:absolute;inset:0;opacity:.03;pointer-events:none">
+<svg width="100%" height="100%" viewBox="0 0 1200 600" fill="none">
+  <g opacity=".5">
+    <rect x="50" y="100" width="60" height="40" rx="4" fill="#fff" />
+    <rect x="130" y="80" width="60" height="60" rx="4" fill="#fff" />
+    <rect x="210" y="120" width="60" height="20" rx="4" fill="#fff" />
+    <line x1="80" y1="140" x2="80" y2="400" stroke="#fff" stroke-width=".5" />
+    <line x1="160" y1="140" x2="160" y2="400" stroke="#fff" stroke-width=".5" />
+    <line x1="240" y1="140" x2="240" y2="400" stroke="#fff" stroke-width=".5" />
+    <circle cx="80" cy="380" r="20" fill="#fff" />
+    <circle cx="160" cy="350" r="20" fill="#fff" />
+    <circle cx="240" cy="390" r="20" fill="#fff" />
+    <rect x="800" y="150" width="300" height="180" rx="8" fill="#fff" />
+    <rect x="820" y="170" width="120" height="8" rx="2" fill="#fff" opacity=".3"/>
+    <rect x="820" y="190" width="200" height="6" rx="2" fill="#fff" opacity=".2"/>
+    <rect x="820" y="210" width="160" height="6" rx="2" fill="#fff" opacity=".2"/>
+    <rect x="820" y="240" width="80" height="24" rx="4" fill="#fff" opacity=".15"/>
+    <rect x="910" y="240" width="80" height="24" rx="4" fill="#fff" opacity=".15"/>
+    <rect x="820" y="280" width="260" height="30" rx="15" fill="#fff" opacity=".1"/>
+  </g>
+</svg>
+</div>
+<div class="container text-center" style="position:relative;z-index:1">
 <div class="reveal">
 <div class="badge mb-4" style="margin-left:auto;margin-right:auto;width:fit-content">
-<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
-Industrial-Grade AI
+<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/></svg>
+75+ Applications
 </div>
-<h1 class="text-4xl font-bold tracking-tighter mb-4" style="font-size:clamp(2rem,5vw,3rem)">Modular Feature Ecosystem.</h1>
-<p class="text-lg text-muted max-w-2xl mx-auto leading-relaxed mb-8">General Bots provides a comprehensive suite of modular components designed to handle the complexities of enterprise AI orchestration. From RAG pipelines to autonomous agents, we have you covered.</p>
+<h1 class="display-large" style="font-size:clamp(2.5rem,6vw,4.5rem);font-weight:900;letter-spacing:-.04em;line-height:.95;text-transform:uppercase;margin-bottom:1.25rem">The Complete<br>AI Platform</h1>
+<p class="text-lg text-muted max-w-2xl mx-auto leading-relaxed mb-10" style="font-size:1.125rem" data-i18n="features.hero.sub">Chat, CRM, Mail, Drive, Calendar, AI Search — every application you need, integrated into one open platform. From personal productivity to enterprise-scale AI.</p>
+<div class="flex flex-wrap gap-4 justify-center">
+<a href="#core" class="btn btn-primary btn-lg">Core Platform</a>
+<a href="#business" class="btn btn-outline btn-lg">Business Tools</a>
+<a href="#enterprise" class="btn btn-outline btn-lg" data-i18n="features.tab.enterprise">Enterprise</a>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Quick Access -->
+<section class="page-section" style="border-bottom:1px solid var(--border-subtle)">
+<div class="container">
+<div class="flex flex-wrap gap-2 justify-center" style="margin:-.5rem 0">
+<a href="/features/ai-search/" style="padding:.5rem 1rem;font-size:.75rem;font-weight:600;color:var(--fg-muted);border:1px solid var(--border-subtle);border-radius:.25rem;transition:var(--transition)">AI Search</a>
+<a href="/features/bot-factory/" style="padding:.5rem 1rem;font-size:.75rem;font-weight:600;color:var(--fg-muted);border:1px solid var(--border-subtle);border-radius:.25rem;transition:var(--transition)">Bot Factory</a>
+<a href="/features/broadcast/" style="padding:.5rem 1rem;font-size:.75rem;font-weight:600;color:var(--fg-muted);border:1px solid var(--border-subtle);border-radius:.25rem;transition:var(--transition)">Broadcast</a>
+<a href="/features/content-generation/" style="padding:.5rem 1rem;font-size:.75rem;font-weight:600;color:var(--fg-muted);border:1px solid var(--border-subtle);border-radius:.25rem;transition:var(--transition)">Content Gen</a>
+<a href="/features/create-apis-in-word/" style="padding:.5rem 1rem;font-size:.75rem;font-weight:600;color:var(--fg-muted);border:1px solid var(--border-subtle);border-radius:.25rem;transition:var(--transition)">APIs in BASIC</a>
+<a href="/features/llm-tools/" style="padding:.5rem 1rem;font-size:.75rem;font-weight:600;color:var(--fg-muted);border:1px solid var(--border-subtle);border-radius:.25rem;transition:var(--transition)">LLM Tools</a>
+<a href="/features/talk-to-data/" style="padding:.5rem 1rem;font-size:.75rem;font-weight:600;color:var(--fg-muted);border:1px solid var(--border-subtle);border-radius:.25rem;transition:var(--transition)">Talk to Data</a>
+<a href="/features/trainning/" style="padding:.5rem 1rem;font-size:.75rem;font-weight:600;color:var(--fg-muted);border:1px solid var(--border-subtle);border-radius:.25rem;transition:var(--transition)">Training</a>
+<a href="/features/web-automation/" style="padding:.5rem 1rem;font-size:.75rem;font-weight:600;color:var(--fg-muted);border:1px solid var(--border-subtle);border-radius:.25rem;transition:var(--transition)">Web Automation</a>
 </div>
 </div>
 </section>
 
 <section class="page-section-lg reveal">
 <div class="container">
+<div class="section-header">
+<span class="overline">Core Features</span>
+<h2 data-i18n="features.matrix.title">Feature Matrix</h2>
+<p data-i18n="features.matrix.sub">Nine integrated capabilities — each with its own dedicated deep-dive page.</p>
+</div>
 <div class="grid-3">
-
 <div class="glass-card p-6 card-hover">
-<div style="width:100%;aspect-ratio:16/9;background:#f8f8f8;border-radius:.5rem;margin-bottom:1.5rem;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;border:1px solid rgba(0,0,0,0.06)">
+<div style="width:100%;aspect-ratio:16/9;background:var(--bg-tertiary);border-radius:.5rem;margin-bottom:1.5rem;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;border:1px solid var(--border-subtle)">
 <svg width="100%" height="100%" viewBox="0 0 400 225" fill="none">
-  <defs><pattern id="gridF1" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(0,0,0,0.03)" stroke-width="1"/></pattern></defs>
-  <rect width="400" height="225" fill="url(#gridF1)"/>
-  <circle cx="200" cy="112" r="30" stroke="#111" stroke-width="2" />
-  <path d="M 220 132 L 250 162" stroke="#111" stroke-width="3" stroke-linecap="round" />
-  <path d="M 180 112 H 220" stroke="#059669" stroke-width="2" opacity="0.6" />
+  <rect width="400" height="225" fill="none"/>
+  <circle cx="200" cy="112" r="30" stroke="rgba(255,255,255,.3)" stroke-width="2" />
+  <path d="M 220 132 L 250 162" stroke="rgba(255,255,255,.5)" stroke-width="3" stroke-linecap="round" />
+  <path d="M 180 112 H 220" stroke="#fff" stroke-width="2" opacity="0.6" />
 </svg>
 </div>
-<h3 class="text-xl font-bold mb-2">AI Search (RAG)</h3>
+<h3 class="text-xl font-bold mb-2">AI Search</h3>
 <p class="text-sm text-muted leading-relaxed mb-6">High-performance Retrieval Augmented Generation. Index PDFs, Word, and Excel files with sub-second semantic retrieval.</p>
-<a href="/features/ai-search/" class="text-xs font-bold uppercase tracking-widest hover:text-green-600 transition-colors">Specifications &rarr;</a>
+<a href="/features/ai-search/" class="text-xs font-bold uppercase tracking-widest" style="color:var(--fg-muted)">Learn More &rarr;</a>
 </div>
-
 <div class="glass-card p-6 card-hover">
-<div style="width:100%;aspect-ratio:16/9;background:#f8f8f8;border-radius:.5rem;margin-bottom:1.5rem;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;border:1px solid rgba(0,0,0,0.06)">
+<div style="width:100%;aspect-ratio:16/9;background:var(--bg-tertiary);border-radius:.5rem;margin-bottom:1.5rem;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;border:1px solid var(--border-subtle)">
 <svg width="100%" height="100%" viewBox="0 0 400 225" fill="none">
-  <defs><pattern id="gridF2" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(0,0,0,0.03)" stroke-width="1"/></pattern></defs>
-  <rect width="400" height="225" fill="url(#gridF2)"/>
-  <rect x="160" y="80" width="80" height="65" rx="8" stroke="#111" stroke-width="2" />
-  <path d="M 175 100 H 225 M 175 120 H 225" stroke="#059669" stroke-width="2" opacity="0.4" />
+  <rect width="400" height="225" fill="none"/>
+  <rect x="160" y="80" width="80" height="65" rx="8" stroke="rgba(255,255,255,.3)" stroke-width="2" />
+  <path d="M 175 100 H 225 M 175 120 H 225" stroke="#fff" stroke-width="2" opacity="0.4" />
 </svg>
 </div>
 <h3 class="text-xl font-bold mb-2">Bot Factory</h3>
 <p class="text-sm text-muted leading-relaxed mb-6">Rapid prototyping and deployment engine. Orchestrate multiple bots with distinct personalities from a single dashboard.</p>
-<a href="/features/bot-factory/" class="text-xs font-bold uppercase tracking-widest hover:text-green-600 transition-colors">Specifications &rarr;</a>
+<a href="/features/bot-factory/" class="text-xs font-bold uppercase tracking-widest" style="color:var(--fg-muted)">Learn More &rarr;</a>
 </div>
-
 <div class="glass-card p-6 card-hover">
-<div style="width:100%;aspect-ratio:16/9;background:#f8f8f8;border-radius:.5rem;margin-bottom:1.5rem;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;border:1px solid rgba(0,0,0,0.06)">
+<div style="width:100%;aspect-ratio:16/9;background:var(--bg-tertiary);border-radius:.5rem;margin-bottom:1.5rem;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;border:1px solid var(--border-subtle)">
 <svg width="100%" height="100%" viewBox="0 0 400 225" fill="none">
-  <defs><pattern id="gridF3" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(0,0,0,0.03)" stroke-width="1"/></pattern></defs>
-  <rect width="400" height="225" fill="url(#gridF3)"/>
-  <path d="M 140 112 H 260 M 200 72 V 152" stroke="#111" stroke-width="1.5" opacity="0.2" />
-  <circle cx="200" cy="112" r="40" stroke="#059669" stroke-width="2" />
-  <path d="M 180 112 L 220 112" stroke="#059669" stroke-width="2" />
+  <rect width="400" height="225" fill="none"/>
+  <path d="M 140 112 H 260 M 200 72 V 152" stroke="rgba(255,255,255,.2)" stroke-width="1.5" opacity="0.2" />
+  <circle cx="200" cy="112" r="40" stroke="#fff" stroke-width="2" opacity="0.6" />
+  <path d="M 180 112 L 220 112" stroke="#fff" stroke-width="2" />
 </svg>
 </div>
-<h3 class="text-xl font-bold mb-2">Broadcast Engine</h3>
+<h3 class="text-xl font-bold mb-2">Broadcast</h3>
 <p class="text-sm text-muted leading-relaxed mb-6">Omnichannel outbound messaging with AI-driven personalization. Reach thousands on WhatsApp, Telegram, and SMS.</p>
-<a href="/features/broadcast/" class="text-xs font-bold uppercase tracking-widest hover:text-green-600 transition-colors">Specifications &rarr;</a>
+<a href="/features/broadcast/" class="text-xs font-bold uppercase tracking-widest" style="color:var(--fg-muted)">Learn More &rarr;</a>
 </div>
-
 <div class="glass-card p-6 card-hover">
-<div style="width:100%;aspect-ratio:16/9;background:#f8f8f8;border-radius:.5rem;margin-bottom:1.5rem;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;border:1px solid rgba(0,0,0,0.06)">
+<div style="width:100%;aspect-ratio:16/9;background:var(--bg-tertiary);border-radius:.5rem;margin-bottom:1.5rem;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;border:1px solid var(--border-subtle)">
 <svg width="100%" height="100%" viewBox="0 0 400 225" fill="none">
-  <defs><pattern id="gridF4" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(0,0,0,0.03)" stroke-width="1"/></pattern></defs>
-  <rect width="400" height="225" fill="url(#gridF4)"/>
-  <rect x="150" y="80" width="100" height="65" rx="4" stroke="#111" stroke-width="2" />
-  <path d="M 170 100 H 230 M 170 115 H 230 M 170 130 H 200" stroke="#059669" stroke-width="2" opacity="0.5" />
+  <rect width="400" height="225" fill="none"/>
+  <rect x="150" y="80" width="100" height="65" rx="4" stroke="rgba(255,255,255,.3)" stroke-width="2" />
+  <path d="M 170 100 H 230 M 170 115 H 230 M 170 130 H 200" stroke="#fff" stroke-width="2" opacity="0.5" />
 </svg>
 </div>
 <h3 class="text-xl font-bold mb-2">Content Generation</h3>
-<p class="text-sm text-muted leading-relaxed mb-6">Enterprise-grade LLM writer. Generate SEO-optimized blog posts, product descriptions, and technical docs in your brand voice.</p>
-<a href="/features/content-generation/" class="text-xs font-bold uppercase tracking-widest hover:text-green-600 transition-colors">Specifications &rarr;</a>
+<p class="text-sm text-muted leading-relaxed mb-6">Enterprise-grade AI writer. Generate SEO-optimized content in your brand voice.</p>
+<a href="/features/content-generation/" class="text-xs font-bold uppercase tracking-widest" style="color:var(--fg-muted)">Learn More &rarr;</a>
 </div>
-
 <div class="glass-card p-6 card-hover">
-<div style="width:100%;aspect-ratio:16/9;background:#f8f8f8;border-radius:.5rem;margin-bottom:1.5rem;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;border:1px solid rgba(0,0,0,0.06)">
+<div style="width:100%;aspect-ratio:16/9;background:var(--bg-tertiary);border-radius:.5rem;margin-bottom:1.5rem;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;border:1px solid var(--border-subtle)">
 <svg width="100%" height="100%" viewBox="0 0 400 225" fill="none">
-  <defs><pattern id="gridF5" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(0,0,0,0.03)" stroke-width="1"/></pattern></defs>
-  <rect width="400" height="225" fill="url(#gridF1)"/>
-  <rect x="140" y="80" width="120" height="65" rx="2" fill="#111" opacity="0.05" />
-  <text x="200" y="118" font-family="monospace" font-size="14" text-anchor="middle" fill="#059669" font-weight="bold">10 PRINT "AI"</text>
+  <rect width="400" height="225" fill="none"/>
+  <rect x="140" y="80" width="120" height="65" rx="2" fill="none" stroke="rgba(255,255,255,.3)" stroke-width="2" />
+  <text x="200" y="118" text-anchor="middle" fill="#fff" font-size="16" font-weight="bold" opacity="0.5">10 PRINT "AI"</text>
 </svg>
 </div>
-<h3 class="text-xl font-bold mb-2">BASIC API Bridge</h3>
-<p class="text-sm text-muted leading-relaxed mb-6">Build complex APIs using a simplified BASIC-like syntax. Perfect for legacy system integration and rapid endpoint development.</p>
-<a href="/features/create-apis-in-word/" class="text-xs font-bold uppercase tracking-widest hover:text-green-600 transition-colors">Specifications &rarr;</a>
+<h3 class="text-xl font-bold mb-2">Create APIs in BASIC</h3>
+<p class="text-sm text-muted leading-relaxed mb-6">Build APIs using a simplified BASIC-like syntax. Legacy system integration and rapid endpoint development.</p>
+<a href="/features/create-apis-in-word/" class="text-xs font-bold uppercase tracking-widest" style="color:var(--fg-muted)">Learn More &rarr;</a>
 </div>
-
 <div class="glass-card p-6 card-hover">
-<div style="width:100%;aspect-ratio:16/9;background:#f8f8f8;border-radius:.5rem;margin-bottom:1.5rem;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;border:1px solid rgba(0,0,0,0.06)">
+<div style="width:100%;aspect-ratio:16/9;background:var(--bg-tertiary);border-radius:.5rem;margin-bottom:1.5rem;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;border:1px solid var(--border-subtle)">
 <svg width="100%" height="100%" viewBox="0 0 400 225" fill="none">
-  <defs><pattern id="gridF6" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(0,0,0,0.03)" stroke-width="1"/></pattern></defs>
-  <rect width="400" height="225" fill="url(#gridF6)"/>
-  <rect x="170" y="80" width="60" height="40" rx="4" stroke="#111" stroke-width="2" />
-  <path d="M 185 100 L 215 100" stroke="#059669" stroke-width="3" stroke-linecap="round" />
-  <path d="M 200 120 V 145" stroke="#111" stroke-width="2" />
+  <rect width="400" height="225" fill="none"/>
+  <rect x="170" y="80" width="60" height="40" rx="4" stroke="rgba(255,255,255,.3)" stroke-width="2" />
+  <path d="M 185 100 L 215 100" stroke="#fff" stroke-width="3" stroke-linecap="round" />
+  <path d="M 200 120 V 145" stroke="rgba(255,255,255,.3)" stroke-width="2" />
 </svg>
 </div>
-<h3 class="text-xl font-bold mb-2">LLM Toolsets</h3>
-<p class="text-sm text-muted leading-relaxed mb-6">Equip your LLMs with real-world capabilities. Build tools for web search, calculator, and custom internal API calls.</p>
-<a href="/features/llm-tools/" class="text-xs font-bold uppercase tracking-widest hover:text-green-600 transition-colors">Specifications &rarr;</a>
+<h3 class="text-xl font-bold mb-2">LLM Tools</h3>
+<p class="text-sm text-muted leading-relaxed mb-6">Equip your AI with real-world capabilities. Tools for web search, calculator, and custom API calls.</p>
+<a href="/features/llm-tools/" class="text-xs font-bold uppercase tracking-widest" style="color:var(--fg-muted)">Learn More &rarr;</a>
 </div>
-
 <div class="glass-card p-6 card-hover">
-<div style="width:100%;aspect-ratio:16/9;background:#f8f8f8;border-radius:.5rem;margin-bottom:1.5rem;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;border:1px solid rgba(0,0,0,0.06)">
+<div style="width:100%;aspect-ratio:16/9;background:var(--bg-tertiary);border-radius:.5rem;margin-bottom:1.5rem;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;border:1px solid var(--border-subtle)">
 <svg width="100%" height="100%" viewBox="0 0 400 225" fill="none">
-  <defs><pattern id="gridF7" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(0,0,0,0.03)" stroke-width="1"/></pattern></defs>
-  <rect width="400" height="225" fill="url(#gridF7)"/>
-  <path d="M 150 160 L 180 100 L 210 130 L 250 60" stroke="#059669" stroke-width="3" stroke-linecap="round" />
+  <rect width="400" height="225" fill="none"/>
+  <path d="M 150 160 L 180 100 L 210 130 L 250 60" stroke="#fff" stroke-width="3" stroke-linecap="round" />
 </svg>
 </div>
 <h3 class="text-xl font-bold mb-2">Talk to Data</h3>
-<p class="text-sm text-muted leading-relaxed mb-6">Natural language interface for your databases. Query SQL, Excel, and CSV data using plain English and get instant charts.</p>
-<a href="/features/talk-to-data/" class="text-xs font-bold uppercase tracking-widest hover:text-green-600 transition-colors">Specifications &rarr;</a>
+<p class="text-sm text-muted leading-relaxed mb-6">Natural language interface for databases. Query SQL, Excel, and CSV using plain English.</p>
+<a href="/features/talk-to-data/" class="text-xs font-bold uppercase tracking-widest" style="color:var(--fg-muted)">Learn More &rarr;</a>
 </div>
-
 <div class="glass-card p-6 card-hover">
-<div style="width:100%;aspect-ratio:16/9;background:#f8f8f8;border-radius:.5rem;margin-bottom:1.5rem;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;border:1px solid rgba(0,0,0,0.06)">
+<div style="width:100%;aspect-ratio:16/9;background:var(--bg-tertiary);border-radius:.5rem;margin-bottom:1.5rem;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;border:1px solid var(--border-subtle)">
 <svg width="100%" height="100%" viewBox="0 0 400 225" fill="none">
-  <defs><pattern id="gridF8" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(0,0,0,0.03)" stroke-width="1"/></pattern></defs>
-  <rect width="400" height="225" fill="url(#gridF8)"/>
-  <rect x="160" y="85" width="80" height="60" rx="4" stroke="#111" stroke-width="2" />
-  <circle cx="200" cy="115" r="15" fill="#059669" opacity="0.2" />
+  <rect width="400" height="225" fill="none"/>
+  <rect x="160" y="85" width="80" height="60" rx="4" stroke="rgba(255,255,255,.3)" stroke-width="2" />
+  <circle cx="200" cy="115" r="15" fill="#fff" opacity="0.2" />
 </svg>
 </div>
-<h3 class="text-xl font-bold mb-2">Knowledge Training</h3>
-<p class="text-sm text-muted leading-relaxed mb-6">Direct ingestion of institutional knowledge. Train your bot using Word, Excel, and PDF documents with zero coding required.</p>
-<a href="/features/trainning/" class="text-xs font-bold uppercase tracking-widest hover:text-green-600 transition-colors">Specifications &rarr;</a>
+<h3 class="text-xl font-bold mb-2">Training</h3>
+<p class="text-sm text-muted leading-relaxed mb-6">Ingest institutional knowledge. Train your bot using Word, Excel, and PDF documents with zero coding.</p>
+<a href="/features/trainning/" class="text-xs font-bold uppercase tracking-widest" style="color:var(--fg-muted)">Learn More &rarr;</a>
 </div>
-
 <div class="glass-card p-6 card-hover">
-<div style="width:100%;aspect-ratio:16/9;background:#f8f8f8;border-radius:.5rem;margin-bottom:1.5rem;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;border:1px solid rgba(0,0,0,0.06)">
+<div style="width:100%;aspect-ratio:16/9;background:var(--bg-tertiary);border-radius:.5rem;margin-bottom:1.5rem;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;border:1px solid var(--border-subtle)">
 <svg width="100%" height="100%" viewBox="0 0 400 225" fill="none">
-  <defs><pattern id="gridF9" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(0,0,0,0.03)" stroke-width="1"/></pattern></defs>
-  <rect width="400" height="225" fill="url(#gridF9)"/>
-  <circle cx="200" cy="112" r="30" stroke="#111" stroke-width="1.5" />
-  <path d="M 200 82 V 142 M 170 112 H 230" stroke="#059669" stroke-width="2" />
+  <rect width="400" height="225" fill="none"/>
+  <circle cx="200" cy="112" r="30" stroke="rgba(255,255,255,.3)" stroke-width="1.5" />
+  <path d="M 200 82 V 142 M 170 112 H 230" stroke="#fff" stroke-width="2" />
 </svg>
 </div>
 <h3 class="text-xl font-bold mb-2">Web Automation</h3>
-<p class="text-sm text-muted leading-relaxed mb-6">Autonomous browser agents. Automate data scraping, form filling, and complex web workflows with LLM-controlled browsers.</p>
-<a href="/features/web-automation/" class="text-xs font-bold uppercase tracking-widest hover:text-green-600 transition-colors">Specifications &rarr;</a>
+<p class="text-sm text-muted leading-relaxed mb-6">Autonomous browser agents. Automate data scraping, form filling, and complex web workflows.</p>
+<a href="/features/web-automation/" class="text-xs font-bold uppercase tracking-widest" style="color:var(--fg-muted)">Learn More &rarr;</a>
 </div>
-
+</div>
+</div>
+</section>
+<section class="page-section">
+<div class="container text-center">
+<p class="text-sm text-muted mb-4 uppercase tracking-widest font-bold">Choose Your Perspective</p>
+<div class="audience-tabs">
+<button class="audience-tab active" data-tab="personal" onclick="switchTab(this,'personal')" data-i18n="features.tab.personal">Personal</button>
+<button class="audience-tab" data-tab="business" onclick="switchTab(this,'business')" data-i18n="features.tab.business">Business</button>
+<button class="audience-tab" data-tab="enterprise" onclick="switchTab(this,'enterprise')" data-i18n="features.tab.enterprise">Enterprise</button>
+</div>
+<div id="tab-personal" class="audience-content active">
+<div class="usecase-card" style="max-width:700px;margin:0 auto">
+<div class="uc-for"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> For Developers & Creators</div>
+<h3 class="uc-title">Your Own AI, Your Own Data</h3>
+<p class="uc-desc">Run your own AI locally or connect to cloud providers. Connect WhatsApp to your personal knowledge base. Schedule reminders. Generate documents. All on your own hardware, with your own data, open source and free.</p>
+<div class="uc-tags"><span class="badge">Open Source</span><span class="badge">Self-Hosted</span><span class="badge">Local AI</span></div>
+</div>
+</div>
+<div id="tab-business" class="audience-content">
+<div class="usecase-card" style="max-width:700px;margin:0 auto">
+<div class="uc-for"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/></svg> For Teams & Startups</div>
+<h3 class="uc-title">Replace Five Tools with One</h3>
+<p class="uc-desc">WhatsApp for customers. Teams for internal chat. Calendar for meetings. Drive for files. Mail for communication. All in one platform that runs on a single server — with AI built in.</p>
+<div class="uc-tags"><span class="badge">All-in-One</span><span class="badge">WhatsApp</span><span class="badge">Teams</span><span class="badge">CRM</span></div>
+</div>
+</div>
+<div id="tab-enterprise" class="audience-content">
+<div class="usecase-card" style="max-width:700px;margin:0 auto">
+<div class="uc-for"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18"/><path d="M5 21V7l8-4 8 4v14"/></svg> For Organizations</div>
+<h3 class="uc-title">Scale Without Compromise</h3>
+<p class="uc-desc">75+ applications orchestrated as a single platform. Each deploys independently or together. Full RBAC, multi-tenancy, and compliance (LGPD, GDPR, HIPAA). Run on-premise or in the cloud. Your data, your rules.</p>
+<div class="uc-tags"><span class="badge">RBAC</span><span class="badge">Multi-Tenant</span><span class="badge">Compliance</span><span class="badge">On-Premise</span></div>
+</div>
 </div>
 </div>
 </section>
 
-<section class="page-section-lg bg-gray-50 reveal">
-<div class="container text-center">
-<h2 class="text-3xl font-bold tracking-tighter mb-4">Enterprise Customization</h2>
-<p class="text-lg text-muted max-w-2xl mx-auto mb-12 leading-relaxed">Don't see a feature you need? Our platform is designed for extensibility. Build your own modules or partner with us for custom development.</p>
-<a href="/contact/" class="btn btn-primary btn-lg">Partner with Us</a>
+<!-- Core Platform -->
+<section id="core" class="page-section-lg bg-gray-50">
+<div class="container">
+<div class="text-center mb-12 reveal">
+<h2 class="text-3xl font-bold tracking-tighter mb-4">Core Platform</h2>
+<p class="text-lg text-muted max-w-2xl mx-auto leading-relaxed">The foundation that powers everything. Authentication, storage, AI, and orchestration.</p>
+</div>
+<div class="grid-3">
+<div class="glass-card p-6 card-hover reveal">
+<div class="icon-box mb-4"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
+<h3 class="text-xl font-bold mb-2">Server</h3>
+<p class="text-sm text-muted mb-4">The heart of the platform. Web server, WebSocket messaging, REST API, and request routing. Serves both the API and the web interface.</p>
+</div>
+<div class="glass-card p-6 card-hover reveal">
+<div class="icon-box mb-4"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 15v3m-6 2a6 6 0 0 1 12 0H6z"/><path d="M12 2a10 10 0 0 1 0 20"/></svg></div>
+<h3 class="text-xl font-bold mb-2">Auth / Identity</h3>
+<p class="text-sm text-muted mb-4">OAuth 2.0, OpenID Connect, JWT validation, and session management. Role-based access control (RBAC) for every endpoint. SSO-ready.</p>
+</div>
+<div class="glass-card p-6 card-hover reveal">
+<div class="icon-box mb-4"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div>
+<h3 class="text-xl font-bold mb-2">Shared / Database</h3>
+<p class="text-sm text-muted mb-4">Database models, common types, and shared utilities across all applications. PostgreSQL with managed schema definitions across all modules.</p>
+</div>
+<div class="glass-card p-6 card-hover reveal">
+<div class="icon-box mb-4"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></div>
+<h3 class="text-xl font-bold mb-2">AI Engine</h3>
+<p class="text-sm text-muted mb-4">LLM provider orchestration. OpenAI, Anthropic, Groq, Azure, and local models. Automatic failover, token counting, streaming, and cost tracking across providers.</p>
+</div>
+<div class="glass-card p-6 card-hover reveal">
+<div class="icon-box mb-4"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></div>
+<h3 class="text-xl font-bold mb-2">Drive / Storage</h3>
+<p class="text-sm text-muted mb-4">S3-compatible object storage. File upload, download, versioning, and automatic indexing for search and RAG. Works with MinIO, AWS S3, Wasabi.</p>
+</div>
+<div class="glass-card p-6 card-hover reveal">
+<div class="icon-box mb-4"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 11.5v7"/><path d="M6 20V11"/><path d="M18 20V11"/><line x1="2" y1="14" x2="22" y2="14"/></svg></div>
+<h3 class="text-xl font-bold mb-2">Dashboards / Analytics</h3>
+<p class="text-sm text-muted mb-4">Real-time monitoring dashboards with system health metrics, business KPIs, and custom visualizations. Exportable and embeddable.</p>
+</div>
+</div>
 </div>
 </section>
 
-<section class="page-section-lg vitral-bg reveal">
-<div class="container text-center">
-<h2 class="text-3xl font-bold tracking-tighter mb-4">Start Building</h2>
-<p class="text-lg text-muted max-w-2xl mx-auto mb-8 leading-relaxed">Explore our full technical documentation and GitHub repository to see these features in action.</p>
+<!-- Business Tools -->
+<section id="business" class="page-section-lg">
+<div class="container">
+<div class="text-center mb-12 reveal">
+<h2 class="text-3xl font-bold tracking-tighter mb-4">Business & Productivity</h2>
+<p class="text-lg text-muted max-w-2xl mx-auto leading-relaxed">The tools that power modern work — calendar, mail, meetings, documents, and customer communication.</p>
+</div>
+<div class="grid-3">
+<div class="glass-card p-6 card-hover reveal">
+<div class="icon-box mb-4"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+<h3 class="text-xl font-bold mb-2">Calendar</h3>
+<p class="text-sm text-muted mb-4">CalDAV integration with event creation, conflict detection, and automated reminder workflows. Sync with Google, Outlook, and Apple Calendar.</p>
+</div>
+<div class="glass-card p-6 card-hover reveal">
+<div class="icon-box mb-4"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+<h3 class="text-xl font-bold mb-2">Email</h3>
+<p class="text-sm text-muted mb-4">IMAP/SMTP integration with automatic templating, attachment handling, and trigger-based workflows. Inbox, starred, sent, and scheduled folders.</p>
+</div>
+<div class="glass-card p-6 card-hover reveal">
+<div class="icon-box mb-4"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg></div>
+<h3 class="text-xl font-bold mb-2">Meet / Video</h3>
+<p class="text-sm text-muted mb-4">Video conferencing with screen sharing, recording, transcription, and meeting notes auto-generation.</p>
+</div>
+<div class="glass-card p-6 card-hover reveal">
+<div class="icon-box mb-4"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+<h3 class="text-xl font-bold mb-2">Documents, Sheets & Slides</h3>
+<p class="text-sm text-muted mb-4">Full Office-compatible document processing. Read and generate Word, Excel, and PowerPoint files. Template-based automation.</p>
+</div>
+<div class="glass-card p-6 card-hover reveal">
+<div class="icon-box mb-4"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></div>
+<h3 class="text-xl font-bold mb-2">WhatsApp & Teams</h3>
+<p class="text-sm text-muted mb-4">WhatsApp Business API and Microsoft Teams bot framework. Template messages, proactive notifications, and rich media support.</p>
+</div>
+<div class="glass-card p-6 card-hover reveal">
+<div class="icon-box mb-4"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+<h3 class="text-xl font-bold mb-2">People / CRM</h3>
+<p class="text-sm text-muted mb-4">Contact and people management with CRM-style relationship tracking, tagging, deal pipelines, and automated follow-up reminders.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- AI & Intelligence -->
+<section class="page-section-lg bg-gray-50">
+<div class="container">
+<div class="text-center mb-12 reveal">
+<h2 class="text-3xl font-bold tracking-tighter mb-4">AI & Intelligence</h2>
+<p class="text-lg text-muted max-w-2xl mx-auto leading-relaxed">Knowledge bases, vector search, web automation, and autonomous AI.</p>
+</div>
+<div class="grid-3">
+<div class="glass-card p-6 card-hover reveal">
+<div class="icon-box mb-4"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2z"/><path d="M12 8v4l3 3"/></svg></div>
+<h3 class="text-xl font-bold mb-2">Knowledge Base</h3>
+<p class="text-sm text-muted mb-4">Automatic document ingestion with chunking, embedding, and semantic search. PDFs, Word, web pages — all become queryable knowledge.</p>
+</div>
+<div class="glass-card p-6 card-hover reveal">
+<div class="icon-box mb-4"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"/></svg></div>
+<h3 class="text-xl font-bold mb-2">Web Automation</h3>
+<p class="text-sm text-muted mb-4">Headless browser automation. Scrape websites, fill forms, take screenshots, and trigger workflows based on page changes.</p>
+</div>
+<div class="glass-card p-6 card-hover reveal">
+<div class="icon-box mb-4"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
+<h3 class="text-xl font-bold mb-2">Search</h3>
+<p class="text-sm text-muted mb-4">Full-text and semantic search across all indexed content. Hybrid search with keyword and vector matching, with faceted filtering.</p>
+</div>
+<div class="glass-card p-6 card-hover reveal">
+<div class="icon-box mb-4"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 15v3m-6 2a6 6 0 0 1 12 0H6z"/></svg></div>
+<h3 class="text-xl font-bold mb-2">Security</h3>
+<p class="text-sm text-muted mb-4">Encryption, threat detection, audit logging, and compliance reporting. Built for LGPD, GDPR, HIPAA, and enterprise security standards.</p>
+</div>
+<div class="glass-card p-6 card-hover reveal">
+<div class="icon-box mb-4"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4m0 16v4M4.93 4.93l2.83 2.83m8.48 8.48l2.83 2.83M2 12h4m16 0h4M4.93 19.07l2.83-2.83m8.48-8.48l2.83-2.83"/></svg></div>
+<h3 class="text-xl font-bold mb-2">Monitoring</h3>
+<p class="text-sm text-muted mb-4">System health monitoring with CPU, memory, disk, and network metrics. Alert thresholds, incident escalation, and uptime tracking.</p>
+</div>
+<div class="glass-card p-6 card-hover reveal">
+<div class="icon-box mb-4"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+<h3 class="text-xl font-bold mb-2">Analytics</h3>
+<p class="text-sm text-muted mb-4">Event tracking, funnel analysis, and conversion metrics. Understand user behavior across all channels and optimize engagement.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Enterprise -->
+<section id="enterprise" class="page-section-lg">
+<div class="container">
+<div class="text-center mb-12 reveal">
+<h2 class="text-3xl font-bold tracking-tighter mb-4">Enterprise-Ready</h2>
+<p class="text-lg text-muted max-w-2xl mx-auto leading-relaxed">Built for organizations that require security, compliance, and scale.</p>
+</div>
+<div class="grid-3">
+<div class="glass-card p-6 card-hover reveal">
+<div class="icon-box mb-4"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+<h3 class="text-xl font-bold mb-2">RBAC & Multi-Tenancy</h3>
+<p class="text-sm text-muted mb-4">Role-based access control with fine-grained permissions. Multi-tenant workspaces with complete data isolation between organizations.</p>
+</div>
+<div class="glass-card p-6 card-hover reveal">
+<div class="icon-box mb-4"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg></div>
+<h3 class="text-xl font-bold mb-2">On-Premise Deployment</h3>
+<p class="text-sm text-muted mb-4">Run entirely within your infrastructure. No cloud dependency. No data leaves your network. Air-gapped deployments supported.</p>
+</div>
+<div class="glass-card p-6 card-hover reveal">
+<div class="icon-box mb-4"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2z"/><path d="M12 6v6l4 2"/></svg></div>
+<h3 class="text-xl font-bold mb-2">Compliance (LGPD, GDPR)</h3>
+<p class="text-sm text-muted mb-4">Built-in compliance tooling for data subject requests, right to erasure, and audit trails. Data retention policies and anonymization.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="cta-section">
+<div class="container">
+<h2 class="text-3xl font-bold tracking-tighter mb-4">See It All on GitHub</h2>
+<p class="text-lg text-muted max-w-2xl mx-auto mb-8 leading-relaxed">Every application is open source. Read the code, contribute, or deploy today.</p>
 <div class="flex flex-wrap gap-4 justify-center">
-<a href="https://github.com/generalbots" class="btn btn-primary btn-lg">GitHub Catalog</a>
-<a href="/contact/" class="btn btn-outline btn-lg">Get Started</a>
+<a href="https://github.com/pragmatismo-io" class="btn btn-primary btn-lg">Browse GitHub</a>
+<a href="/contact/" class="btn btn-outline btn-lg">Talk to Sales</a>
 </div>
 </div>
 </section>
+
 </main>
 <div hx-get="/partials/footer.html" hx-swap="innerHTML" hx-trigger="load"></div>
 <script src="https://unpkg.com/htmx.org@2.0.4"></script>
 <script src="/js/site.js"></script>
+<script>
+function switchTab(btn, tabId) {
+  document.querySelectorAll('.audience-tab').forEach(t => t.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.audience-content').forEach(c => c.classList.remove('active'));
+  document.getElementById('tab-' + tabId).classList.add('active');
+}
+</script>
 </body>
 </html>

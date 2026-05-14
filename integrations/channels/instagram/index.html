@@ -18,7 +18,12 @@
 <body>
 <div hx-get="/partials/header.html" hx-swap="innerHTML" hx-trigger="load"></div>
 <main style="padding-top:4rem">
-<section class="page-section-lg vitral-bg">
+<section class="page-section-lg vitral-bg" style="position:relative;overflow:hidden">
+<div style="position:absolute;right:8%;top:50%;transform:translateY(-50%);width:350px;height:280px;opacity:.08;pointer-events:none">
+<svg width="350" height="280" viewBox="0 0 350 280" fill="none">
+<rect x="160" y="80" width="80" height="80" rx="16" stroke="currentColor" stroke-width="1.5" opacity=".25"/><circle cx="200" cy="120" r="18" stroke="currentColor" stroke-width="1.5" opacity=".2"/><circle cx="225" cy="95" r="4" fill="currentColor" opacity=".3"/><rect x="175" y="180" width="50" height="6" rx="3" fill="currentColor" opacity=".15"/><rect x="175" y="192" width="35" height="6" rx="3" fill="currentColor" opacity=".1"/>
+</svg>
+</div>
 <div class="container">
 <div class="grid-2 items-center">
 <div class="reveal">
@@ -84,7 +89,37 @@
 </div>
 </div>
 </section>
-</main>
+
+<section class="page-section-lg reveal">
+<div class="container">
+<h2 class="text-3xl font-bold tracking-tighter text-center mb-12">Instagram — Social DM & Comments</h2>
+<div class="grid-3" style="gap:2rem">
+
+<div class="glass-card p-6 card-hover reveal">
+<h3 class="text-xl font-bold mb-3">Instagram Messaging API</h3>
+<p class="text-sm text-muted leading-relaxed">Full Instagram Messaging API integration for direct message automation. Send and receive messages, share media, and manage conversations at scale.</p>
+</div>
+<div class="glass-card p-6 card-hover reveal">
+<h3 class="text-xl font-bold mb-3">Comment Moderation</h3>
+<p class="text-sm text-muted leading-relaxed">Automatically monitor and respond to Instagram post and reel comments. Filter spam, answer FAQs, and engage with your audience automatically.</p>
+</div>
+<div class="glass-card p-6 card-hover reveal">
+<h3 class="text-xl font-bold mb-3">Story & DM Engagement</h3>
+<p class="text-sm text-muted leading-relaxed">Trigger automated conversations from story replies and DM opens. Build audience segments based on engagement patterns.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="page-section-lg vitral-bg reveal">
+<div class="container text-center">
+<h2 class="text-3xl font-bold tracking-tighter mb-4">Ready to Deploy?</h2>
+<p class="text-lg text-muted max-w-2xl mx-auto mb-8">Integrate Instagram with General Bots today.</p>
+<div class="flex items-center justify-center gap-4 flex-wrap">
+<a href="/contact/" class="btn btn-primary btn-lg">Contact Us</a>
+<a href="/pricing/" class="btn btn-outline btn-lg">View Pricing</a>
+</div>
+</div>
+</section></main>
 <div hx-get="/partials/footer.html" hx-swap="innerHTML" hx-trigger="load"></div>
 <script src="https://unpkg.com/htmx.org@2.0.4"></script>
 <script src="/js/site.js"></script>

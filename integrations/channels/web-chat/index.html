@@ -18,7 +18,12 @@
 <body>
 <div hx-get="/partials/header.html" hx-swap="innerHTML" hx-trigger="load"></div>
 <main style="padding-top:4rem">
-<section class="page-section-lg vitral-bg">
+<section class="page-section-lg vitral-bg" style="position:relative;overflow:hidden">
+<div style="position:absolute;right:8%;top:50%;transform:translateY(-50%);width:350px;height:280px;opacity:.08;pointer-events:none">
+<svg width="350" height="280" viewBox="0 0 350 280" fill="none">
+<rect x="160" y="80" width="80" height="100" rx="10" stroke="currentColor" stroke-width="1.5" opacity=".2"/><rect x="160" y="80" width="80" height="14" rx="10" stroke="currentColor" stroke-width="1" opacity=".12"/><rect x="172" y="108" width="40" height="6" rx="2" fill="currentColor" opacity=".15"/><rect x="172" y="120" width="55" height="6" rx="2" fill="currentColor" opacity=".12"/><rect x="172" y="148" width="55" height="16" rx="4" fill="currentColor" opacity=".08"/>
+</svg>
+</div>
 <div class="container">
 <div class="grid-2 items-center">
 <div class="reveal">
@@ -83,7 +88,37 @@
 </div>
 </div>
 </section>
-</main>
+
+<section class="page-section-lg reveal">
+<div class="container">
+<h2 class="text-3xl font-bold tracking-tighter text-center mb-12">Web Chat — Embeddable Chat Widget</h2>
+<div class="grid-3" style="gap:2rem">
+
+<div class="glass-card p-6 card-hover reveal">
+<h3 class="text-xl font-bold mb-3">Customizable Chat Widget</h3>
+<p class="text-sm text-muted leading-relaxed">Embed a full-featured chat widget on any website with a single script tag. Customizable colors, position, and behavior to match your brand.</p>
+</div>
+<div class="glass-card p-6 card-hover reveal">
+<h3 class="text-xl font-bold mb-3">WebSocket Real-Time</h3>
+<p class="text-sm text-muted leading-relaxed">Real-time messaging with WebSocket for instant message delivery. No polling, no delays. Support for typing indicators, read receipts, and file sharing.</p>
+</div>
+<div class="glass-card p-6 card-hover reveal">
+<h3 class="text-xl font-bold mb-3">Cross-Browser Compatible</h3>
+<p class="text-sm text-muted leading-relaxed">Works on every modern browser — Chrome, Firefox, Safari, Edge. Responsive design for mobile and desktop. No dependencies on third-party chat platforms.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="page-section-lg vitral-bg reveal">
+<div class="container text-center">
+<h2 class="text-3xl font-bold tracking-tighter mb-4">Ready to Deploy?</h2>
+<p class="text-lg text-muted max-w-2xl mx-auto mb-8">Integrate Web Chat with General Bots today.</p>
+<div class="flex items-center justify-center gap-4 flex-wrap">
+<a href="/contact/" class="btn btn-primary btn-lg">Contact Us</a>
+<a href="/pricing/" class="btn btn-outline btn-lg">View Pricing</a>
+</div>
+</div>
+</section></main>
 <div hx-get="/partials/footer.html" hx-swap="innerHTML" hx-trigger="load"></div>
 <script src="https://unpkg.com/htmx.org@2.0.4"></script>
 <script src="/js/site.js"></script>

@@ -18,7 +18,12 @@
 <body>
 <div hx-get="/partials/header.html" hx-swap="innerHTML" hx-trigger="load"></div>
 <main style="padding-top:4rem">
-<section class="page-section bg-gray-50 vitral-bg">
+<section class="page-section bg-gray-50 vitral-bg" style="position:relative;overflow:hidden">
+<div style="position:absolute;right:5%;top:50%;transform:translateY(-50%);width:400px;height:300px;opacity:.08;pointer-events:none">
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none">
+<rect x="130" y="80" width="140" height="100" rx="4" stroke="currentColor" stroke-width="1.5" opacity=".2"/><rect x="130" y="80" width="140" height="18" rx="4" stroke="currentColor" stroke-width="1" opacity=".12"/><path d="M150 120 L250 120" stroke="currentColor" stroke-width="1.5" opacity=".15"/><path d="M150 138 L220 138" stroke="currentColor" stroke-width="1.5" opacity=".15"/><path d="M150 156 L200 156" stroke="currentColor" stroke-width="1.5" opacity=".15"/><path d="M300 120 L340 120 L340 160 L300 160 Z" stroke="currentColor" stroke-width="1.5" opacity=".3"/><path d="M320 120 L320 160" stroke="currentColor" stroke-width="1" opacity=".15"/><path d="M300 140 L340 140" stroke="currentColor" stroke-width="1" opacity=".15"/>
+</svg>
+</div>
 <div class="container text-center">
 <div class="reveal">
 <a href="/features/" class="text-sm text-muted" style="display:inline-flex;align-items:center;gap:.375rem;margin-bottom:1.5rem">
@@ -29,7 +34,7 @@ Back to Features
 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>
 Create APIs in BASIC
 </div>
-<h1 class="text-4xl font-bold tracking-tighter mb-4" style="font-size:clamp(2rem,5vw,3rem)">Universal API Development.</h1>
+<h1 class="text-4xl font-bold tracking-tighter mb-4" style="font-size:clamp(2rem,5vw,3rem)" data-i18n="features.create-apis-in-word.hero">Universal API Development.</h1>
 <p class="text-lg text-muted max-w-2xl mx-auto leading-relaxed mb-8">Write API logic using BASIC syntax directly inside Word documents. No IDE, no complex toolchains &#8212; just your logic, deployed instantly.</p>
 </div>
 </div>
@@ -71,7 +76,69 @@ Create APIs in BASIC
 </div>
 </section>
 
-</main>
+<section class="page-section-lg reveal">
+<div class="container">
+<div class="max-w-3xl mx-auto">
+<p class="text-lg leading-relaxed" style="color:var(--fg-secondary);font-size:1.0625rem;line-height:1.7">Most business logic lives in documents. Policies, procedures, rules — they're written in Word files, PDFs, and emails. But they're not executable. General Bots changes this by letting you write API logic using BASIC syntax directly inside documents, turning your business rules into working endpoints.</p>
+</div>
+</div>
+</section>
+<section class="page-section-lg reveal">
+<div class="container">
+<div class="grid-3" style="gap:2rem">
+
+<div class="glass-card p-6 card-hover reveal">
+<h3 class="text-xl font-bold mb-3">Deterministic Execution</h3>
+<p class="text-sm text-muted leading-relaxed">Unlike LLM generation, BASIC provides strict, predictable logic for mission-critical business rules. Every API endpoint behaves exactly as written, every time.</p>
+</div>
+<div class="glass-card p-6 card-hover reveal">
+<h3 class="text-xl font-bold mb-3">Word Document Integration</h3>
+<p class="text-sm text-muted leading-relaxed">Our compiler transforms .docx structures into high-performance executable endpoints. Business analysts can define API logic using tools they already know.</p>
+</div>
+<div class="glass-card p-6 card-hover reveal">
+<h3 class="text-xl font-bold mb-3">Legacy System Bridging</h3>
+<p class="text-sm text-muted leading-relaxed">Modernize SQL Server, Oracle, or legacy databases by exposing them as REST JSON APIs via simple BASIC scripts. No middleware, no complex ETL pipelines.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="page-section-lg section-alt reveal">
+<div class="container">
+<div class="max-w-4xl mx-auto">
+<h2 class="text-2xl font-bold tracking-tighter mb-6">How It Works</h2>
+<p class="text-lg leading-relaxed" style="color:var(--fg-secondary);font-size:1.0625rem;line-height:1.7">Here's how it works: you write a BASIC script in a Word document, defining the logic step by step. SAVE a customer record. GET data from a database. CALL an external API. The compiler transforms your document into a compiled AST file that runs as a REST endpoint. No IDE, no deployment pipeline, no waiting for the engineering team. If you can write a numbered list of instructions, you can create an API. This is especially powerful for legacy system integration — expose mainframe or SQL Server data as modern JSON APIs without touching the original system.</p>
+</div>
+</div>
+</section>
+
+<section class="page-section-lg reveal">
+<div class="container">
+<div class="glass-card" style="padding:2rem;text-align:center;border-color:var(--border);background:var(--bg-card)">
+<h3 class="text-xl font-bold mb-3">Related Features</h3>
+<p class="text-sm" style="color:var(--fg-secondary);line-height:1.7">APIs created with BASIC can be called by <a href='/features/llm-tools/' style='color:#fff;text-decoration:underline'>LLM Tools</a> as function calls, used in <a href='/features/web-automation/' style='color:#fff;text-decoration:underline'>Web Automation</a> workflows, or triggered by <a href='/features/broadcast/' style='color:#fff;text-decoration:underline'>Broadcast</a> campaigns.</p>
+</div>
+</div>
+</section><section class="page-section-lg bg-gray-50 reveal">
+<div class="container text-center">
+<h2 class="text-3xl font-bold tracking-tighter mb-4">Why Use Create APIs in BASIC</h2>
+<p class="text-lg text-muted max-w-2xl mx-auto mb-12">Build REST APIs using BASIC syntax directly inside Word documents. No IDE, no complex toolchains — just logic, deployed instantly.</p>
+<div class="flex items-center justify-center gap-4 flex-wrap">
+<a href="/contact/" class="btn btn-primary btn-lg">Get Started</a>
+<a href="/pricing/" class="btn btn-outline btn-lg">View Pricing</a>
+</div>
+</div>
+</section>
+<section class="page-section-lg vitral-bg reveal">
+<div class="container text-center">
+<div class="flex items-center justify-center gap-6 flex-wrap">
+<div class="glass-card-bright p-6">
+<div class="text-lg font-bold mb-1" style="color:var(--fg)">Key Metrics</div>
+<p class="text-sm text-muted max-w-lg" style="line-height:1.6">Compile to executable AST in under 1 second. Full REST API with JSON responses. No server-side dependencies.</p>
+</div>
+</div>
+</div>
+</section></main>
 <div hx-get="/partials/footer.html" hx-swap="innerHTML" hx-trigger="load"></div>
 <script src="https://unpkg.com/htmx.org@2.0.4"></script>
 <script src="/js/site.js"></script>

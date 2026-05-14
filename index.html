@@ -3,42 +3,443 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>General Bots | GLM 5.1 Open Source AI Platform</title>
-<meta name="description" content="Introducing GLM 5.1 — Agentic workflows, instant RAG, and universal channel bridging. Build AI bots in BASIC, deploy on WhatsApp, Teams, and Slack.">
+<title>General Bots — Chat, CRM, Mail, Drive, Calendar, AI. One Open Platform.</title>
+<meta name="description" content="75+ applications: AI Chat, CRM, Email, Calendar, Drive, Video Meet, Documents, Spreadsheets, Tasks, Projects, Marketing, Billing, Tickets, AI Search, Bot Factory, Broadcast, Web Automation, Content Generation, LLM Tools, Knowledge Base. Personal, business, enterprise.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://generalbots.org/">
-<meta property="og:title" content="General Bots | GLM 5.1 Open Source AI Platform">
-<meta property="og:description" content="The enterprise-grade open source bot platform. Hybrid AI+Human workflows, RAG orchestration, and universal channel support.">
+<meta property="og:title" content="General Bots | The Open-Source AI Platform">
+<meta property="og:description" content="75+ applications: Chat, CRM, Mail, Drive, Calendar, Video, AI Search, Bot Factory, Web Automation, LLM Orchestration. Open source.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://generalbots.org/">
 <link rel="icon" href="/favicon.ico">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="stylesheet" href="/css/site.css">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "General Bots",
-  "url": "https://generalbots.org",
-  "logo": "https://generalbots.org/gb-logo.png",
-  "description": "Open Source AI Orchestration Platform"
-}
-</script>
+<style>
+.user-tabs{display:flex;gap:0;border-bottom:1px solid var(--border-subtle);margin-bottom:3rem;overflow-x:auto}
+.user-tab{padding:.75rem 1.5rem;font-size:.8125rem;font-weight:600;color:var(--fg-muted);cursor:pointer;border-bottom:2px solid transparent;transition:var(--transition);text-transform:uppercase;letter-spacing:.05em;white-space:nowrap}
+.user-tab:hover{color:#fff}
+.user-tab.active{color:#fff;border-bottom-color:#fff}
+.user-panel{display:none}
+.user-panel.active{display:block}
+.feature-matrix{display:grid;grid-template-columns:1fr;gap:.75rem}
+@media(min-width:640px){.feature-matrix{grid-template-columns:1fr 1fr}}
+@media(min-width:1024px){.feature-matrix{grid-template-columns:1fr 1fr}}
+.feature-cell{background:var(--bg-card);border:1px solid var(--border-subtle);border-radius:.25rem;padding:1.5rem;transition:var(--transition)}
+.feature-cell:hover{border-color:var(--border)}
+.feature-cell h4{font-size:.875rem;font-weight:700;text-transform:uppercase;letter-spacing:.02em;margin-bottom:.375rem}
+.feature-cell p{font-size:.8125rem;color:var(--fg-secondary);line-height:1.6;margin-bottom:.75rem}
+.feature-cell .fc-link{font-size:.6875rem;font-weight:600;color:var(--fg-muted);text-transform:uppercase;letter-spacing:.08em}
+.feature-cell .fc-link:hover{color:#fff}
+.tier-header{font-size:.9375rem;font-weight:800;text-transform:uppercase;letter-spacing:.03em;color:var(--fg-muted);margin-bottom:.75rem;padding-bottom:.5rem;border-bottom:1px solid var(--border-subtle)}
+.feature-card-row{display:grid;grid-template-columns:1fr;gap:.75rem;margin-bottom:1.5rem}
+@media(min-width:640px){.feature-card-row{grid-template-columns:1fr 1fr}}
+@media(min-width:1024px){.feature-card-row{grid-template-columns:1fr 1fr 1fr 1fr 1fr}}
+.feat-card{background:var(--bg-card);border:1px solid var(--border-subtle);border-radius:.25rem;padding:1.25rem;text-align:center}
+.feat-card:hover{border-color:var(--border)}
+.feat-card .fc-icon{font-size:1.5rem;margin-bottom:.5rem;opacity:.4}
+.feat-card h4{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.02em;margin-bottom:.25rem}
+.feat-card p{font-size:.6875rem;color:var(--fg-secondary);line-height:1.4;margin-bottom:.5rem}
+.feat-card a{font-size:.625rem;font-weight:600;color:var(--fg-muted);text-transform:uppercase;letter-spacing:.08em}
+.feat-card a:hover{color:#fff}
+</style>
 </head>
 <body>
+
 <div hx-get="/partials/header.html" hx-swap="innerHTML" hx-trigger="load"></div>
+
 <main>
-<section class="hero">
-<div class="container">
+
+<!-- Hero -->
+<section class="hero" style="position:relative;overflow:hidden">
+<div class="mesh-pattern"></div>
+<div class="bloom bloom-1"></div>
+<div class="bloom bloom-2"></div>
+<div class="container" style="position:relative;z-index:1">
 <div class="hero-content">
-<div class="reveal">
-<div class="hero-badge">GLM 5.1 &mdash; May 2026</div>
-<h1>Industrial AI Orchestration.</h1>
-<p class="hero-sub">The enterprise-grade open source platform for AI agents and human attendance. Build in BASIC, deploy everywhere.</p>
+<div class="hero-badge" data-i18n="hero.badge">Open Source — 75+ Applications</div>
+<h1><span data-i18n="hero.title.line1">Your Desktop</span><br><span data-i18n="hero.title.line2">Rebuilt.</span></h1>
+<p class="hero-sub" data-i18n="hero.sub">Chat, CRM, Mail, Drive, Calendar, Video, AI Search, LLM Orchestration, Web Automation, Content Generation, Knowledge Base, Documents, Spreadsheets, Projects — all in one open platform. Self-hosted, private, and built to scale from personal productivity to enterprise-wide AI deployment.</p>
 <div class="hero-actions">
-<a href="/contact/" class="btn btn-primary btn-lg">Get Started</a>
-<a href="/features/" class="btn btn-outline btn-lg">Explore Features</a>
+<a href="#features" class="btn btn-primary btn-lg">Explore All Apps</a>
+<a href="https://github.com/pragmatismo-io" class="btn btn-outline btn-lg">View on GitHub</a>
 </div>
+</div>
+</div>
+</section>
+
+<section class="section section-alt reveal">
+<div class="container">
+<div class="stats-row">
+<div class="stat-item"><span class="stat-number">75+</span><span class="stat-label" data-i18n="stats.apps">Integrated Applications</span></div>
+<div class="stat-item"><span class="stat-number">9+</span><span class="stat-label" data-i18n="stats.years">Years in Production</span></div>
+<div class="stat-item"><span class="stat-number">1</span><span class="stat-label" data-i18n="stats.platform">Platform, All Apps</span></div>
+<div class="stat-item"><span class="stat-number">Open</span><span class="stat-label">Source</span></div>
+</div>
+</div>
+</section>
+
+<section class="section reveal">
+<div class="container">
+<div class="section-header">
+<span class="overline">Our Philosophy</span>
+<h2>No Forms. Just Conversations.</h2>
+<p>Since 2017 we have championed a simple idea: people should converse, not fill forms. Traditional software forces rigid forms with dropdowns and checkboxes. General Bots replaces them with natural conversation — guided by AI, backed by your data, connected to every channel.</p>
+</div>
+</div>
+</section>
+
+<!-- 10 Feature Macro Cards -->
+<section class="section section-alt reveal">
+<div class="container">
+<div class="section-header">
+<span class="overline">10 Core Features</span>
+<h2>Applications with Dedicated Pages</h2>
+<p>Each of these capabilities has its own deep-dive page. Click to learn more.</p>
+</div>
+
+<div class="feature-card-row">
+<div class="feat-card">
+<div class="fc-icon">&#128269;</div>
+<h4>AI Search</h4>
+<p>Semantic search across millions of documents. RAG-powered with cited sources.</p>
+<a href="/features/ai-search/">Learn More →</a>
+</div>
+<div class="feat-card">
+<div class="fc-icon">&#128187;</div>
+<h4>Bot Factory</h4>
+<p>Mass-produce bots from templates. Multi-tenant. Centralized management.</p>
+<a href="/features/bot-factory/">Learn More →</a>
+</div>
+<div class="feat-card">
+<div class="fc-icon">&#128226;</div>
+<h4>Broadcast</h4>
+<p>Precision mass communication. Rate limiting, segmentation, reply loops.</p>
+<a href="/features/broadcast/">Learn More →</a>
+</div>
+<div class="feat-card">
+<div class="fc-icon">&#128196;</div>
+<h4>Content Generation</h4>
+<p>AI content with brand voice. SEO-optimized. Atomic templates.</p>
+<a href="/features/content-generation/">Learn More →</a>
+</div>
+<div class="feat-card">
+<div class="fc-icon">&#128279;</div>
+<h4>Create APIs in BASIC</h4>
+<p>Build REST APIs from Word documents. Deploy instantly.</p>
+<a href="/features/create-apis-in-word/">Learn More →</a>
+</div>
+</div>
+
+<div class="feature-card-row">
+<div class="feat-card">
+<div class="fc-icon">&#129302;</div>
+<h4>LLM Tools</h4>
+<p>Multi-model orchestration. Summarization, translation, sentiment analysis.</p>
+<a href="/features/llm-tools/">Learn More →</a>
+</div>
+<div class="feat-card">
+<div class="fc-icon">&#128202;</div>
+<h4>Talk to Data</h4>
+<p>Query databases and spreadsheets in natural language. Instant insights.</p>
+<a href="/features/talk-to-data/">Learn More →</a>
+</div>
+<div class="feat-card">
+<div class="fc-icon">&#128218;</div>
+<h4>Training</h4>
+<p>Continuous bot training. Automated chunking. Knowledge hot-swapping.</p>
+<a href="/features/trainning/">Learn More →</a>
+</div>
+<div class="feat-card">
+<div class="fc-icon">&#127760;</div>
+<h4>Web Automation</h4>
+<p>Headless browser orchestration. Scrape, fill forms, extract data.</p>
+<a href="/features/web-automation/">Learn More →</a>
+</div>
+<div class="feat-card">
+<div class="fc-icon">&#128640;</div>
+<h4>All Features</h4>
+<p>Browse the complete platform map with 75+ applications.</p>
+<a href="/features/">View All →</a>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- Three Tabs -->
+<section id="features" class="section reveal">
+<div class="container">
+
+<div class="section-header">
+<span class="overline">Complete Platform</span>
+<h2>75+ Applications. Three Editions.</h2>
+<p>One platform, scaled to your needs. From self-hosted personal assistant to full enterprise AI with compliance and custom deployment.</p>
+</div>
+
+<div class="user-tabs">
+<div class="user-tab active" onclick="switchTab(event,'personal')">Personal</div>
+<div class="user-tab" onclick="switchTab(event,'business')">Business</div>
+<div class="user-tab" onclick="switchTab(event,'enterprise')">Enterprise</div>
+</div>
+
+<!-- PERSONAL -->
+<div id="panel-personal" class="user-panel active">
+
+<div class="tier-header">Communication</div>
+<div class="feature-matrix">
+<div class="feature-cell">
+<h4>AI Chat</h4>
+<p>Real-time messaging with AI streaming from any provider. Multi-channel, @mentions, suggestion chips, tool execution, human handoff.</p>
+</div>
+<div class="feature-cell">
+<h4>Email</h4>
+<p>Complete IMAP/SMTP client. Inbox, Starred, Sent, Scheduled folders. Multi-account. Smart search.</p>
+</div>
+<div class="feature-cell">
+<h4>Calendar</h4>
+<p>Day/week/month views. Event creation, invite attendees, recurring patterns. CalDAV sync.</p>
+</div>
+<div class="feature-cell">
+<h4>Contacts</h4>
+<p>Personal CRM with groups, tags, smart search. Integrated with chat for quick lookups.</p>
+</div>
+</div>
+
+<div class="tier-header">Storage & Documents</div>
+<div class="feature-matrix">
+<div class="feature-cell">
+<h4>Drive</h4>
+<p>S3-compatible storage. Folder navigation, drag-drop upload, share links. MinIO, AWS S3, Wasabi.</p>
+</div>
+<div class="feature-cell">
+<h4>Documents</h4>
+<p>Create and edit Word documents. Template-based generation. DOCX support.</p>
+</div>
+<div class="feature-cell">
+<h4>Spreadsheets</h4>
+<p>Read and write Excel, CSV, ODS. Formulas, charts, pivot tables.</p>
+</div>
+<div class="feature-cell">
+<h4>Slides</h4>
+<p>Create and edit presentations. Template-based slide generation.</p>
+</div>
+</div>
+
+<div class="tier-header">AI & Knowledge</div>
+<div class="feature-matrix">
+<div class="feature-cell">
+<h4>Knowledge Base</h4>
+<p>Drop PDFs, documents, or text files. Vector-indexed for semantic search. Instant answers.</p>
+</div>
+<div class="feature-cell">
+<h4>AI Search</h4>
+<p>Semantic search that understands meaning. RAG-powered with cited sources across millions of documents.</p>
+</div>
+<div class="feature-cell">
+<h4>LLM Tools</h4>
+<p>Summarization, translation, sentiment analysis, semantic caching. Connect any LLM.</p>
+</div>
+<div class="feature-cell">
+<h4>Web Automation</h4>
+<p>Scrape websites, fill forms, extract data. Headless browser orchestration.</p>
+</div>
+</div>
+
+<div class="tier-header">Productivity</div>
+<div class="feature-matrix">
+<div class="feature-cell">
+<h4>Tasks</h4>
+<p>Todo management with due dates, priorities, recurring schedules. Cron-based automation.</p>
+</div>
+<div class="feature-cell">
+<h4>Video Meet</h4>
+<p>HD video calls with screen sharing. LiveKit integration for conferencing.</p>
+</div>
+</div>
+</div>
+
+<!-- BUSINESS -->
+<div id="panel-business" class="user-panel">
+
+<div class="tier-header">Multi-Channel Communication</div>
+<div class="feature-matrix">
+<div class="feature-cell">
+<h4>WhatsApp Business</h4>
+<p>Full WhatsApp Business API. Send/receive messages, templates, media. Webhook-based.</p>
+</div>
+<div class="feature-cell">
+<h4>Microsoft Teams</h4>
+<p>Native Teams integration. Adaptive cards, channel messaging, threaded conversations.</p>
+</div>
+<div class="feature-cell">
+<h4>Telegram</h4>
+<p>Full Telegram Bot API. Commands, inline keyboards, file sharing.</p>
+</div>
+<div class="feature-cell">
+<h4>Instagram</h4>
+<p>Direct messaging and comment automation across Instagram.</p>
+</div>
+</div>
+
+<div class="tier-header">CRM & Sales</div>
+<div class="feature-matrix">
+<div class="feature-cell">
+<h4>CRM Kanban</h4>
+<p>Full pipeline from Lead to Won. Deal scoring, contact tracking, campaign management.</p>
+</div>
+<div class="feature-cell">
+<h4>Billing</h4>
+<p>Invoice generation, payment tracking, subscription management.</p>
+</div>
+<div class="feature-cell">
+<h4>Products</h4>
+<p>Product catalog with categories, variants, pricing, inventory.</p>
+</div>
+<div class="feature-cell">
+<h4>Tickets</h4>
+<p>Support ticketing with SLA, priority, status workflow. Customer portal.</p>
+</div>
+</div>
+
+<div class="tier-header">Marketing & Engagement</div>
+<div class="feature-matrix">
+<div class="feature-cell">
+<h4>Marketing Campaigns</h4>
+<p>Email campaigns, social scheduling, broadcast messaging. Audience segmentation.</p>
+</div>
+<div class="feature-cell">
+<h4>Broadcast</h4>
+<p>Mass communication with rate limiting, segmentation, automated reply loops.</p>
+</div>
+<div class="feature-cell">
+<h4>Social Media</h4>
+<p>Schedule and post to Twitter, LinkedIn. Monitor feeds and engagement.</p>
+</div>
+<div class="feature-cell">
+<h4>Analytics</h4>
+<p>Real-time metrics, custom dashboards, usage patterns. Export reports.</p>
+</div>
+</div>
+
+<div class="tier-header">AI & Automation</div>
+<div class="feature-matrix">
+<div class="feature-cell">
+<h4>AI Attendant</h4>
+<p>AI copilot for human agents. Real-time tips, smart replies, sentiment analysis.</p>
+</div>
+<div class="feature-cell">
+<h4>Bot Factory</h4>
+<p>Mass-produce bots from templates. Multi-tenant, centrally managed.</p>
+</div>
+<div class="feature-cell">
+<h4>Talk to Data</h4>
+<p>Query databases and spreadsheets in natural language. Instant insights.</p>
+</div>
+<div class="feature-cell">
+<h4>Content Generation</h4>
+<p>AI content creation with brand voice. Atomic templates, SEO-optimized.</p>
+</div>
+</div>
+</div>
+
+<!-- ENTERPRISE -->
+<div id="panel-enterprise" class="user-panel">
+
+<div class="tier-header">Security & Compliance</div>
+<div class="feature-matrix">
+<div class="feature-cell">
+<h4>Security Hardening</h4>
+<p>Firewall management, intrusion prevention, TLS everywhere. Automated scanning and reporting.</p>
+</div>
+<div class="feature-cell">
+<h4>Compliance</h4>
+<p>LGPD, GDPR, HIPAA built-in. Privacy Rights Center. Full audit trails.</p>
+</div>
+<div class="feature-cell">
+<h4>RBAC</h4>
+<p>Organization-based role access control. Fine-grained permissions. Multi-tenant isolation.</p>
+</div>
+<div class="feature-cell">
+<h4>Secrets Management</h4>
+<p>Vault integration for all credentials. Encrypted storage for API keys and certificates.</p>
+</div>
+</div>
+
+<div class="tier-header">Infrastructure</div>
+<div class="feature-matrix">
+<div class="feature-cell">
+<h4>Monitoring</h4>
+<p>CPU, memory, disk, network. Alert thresholds, health checks, 24/7 visibility.</p>
+</div>
+<div class="feature-cell">
+<h4>On-Premise Deployment</h4>
+<p>Run on your own infrastructure. Complete data sovereignty. No cloud dependency.</p>
+</div>
+<div class="feature-cell">
+<h4>GPU Acceleration</h4>
+<p>CUDA-accelerated local AI inference. Multi-GPU. Run on your own hardware.</p>
+</div>
+<div class="feature-cell">
+<h4>Automated Operations</h4>
+<p>Auto backups, log rotation, certificate renewal, database maintenance.</p>
+</div>
+</div>
+
+<div class="tier-header">Advanced AI</div>
+<div class="feature-matrix">
+<div class="feature-cell">
+<h4>LLM Orchestration</h4>
+<p>Dynamic model routing, failover, semantic token management. Any provider, one API.</p>
+</div>
+<div class="feature-cell">
+<h4>Vector Retrieval</h4>
+<p>High-fidelity embeddings, context-aware chunking, re-ranking. Memory for your AI across millions of documents.</p>
+</div>
+<div class="feature-cell">
+<h4>Multimodal AI</h4>
+<p>Process images, audio, video. OCR, speech-to-text, image understanding.</p>
+</div>
+</div>
+
+<div class="tier-header">Identity & Integration</div>
+<div class="feature-matrix">
+<div class="feature-cell">
+<h4>Directory / SSO</h4>
+<p>Built-in identity provider. OAuth2, OIDC, SSO, MFA. Replace LDAP/AD.</p>
+</div>
+<div class="feature-cell">
+<h4>Open Source Core</h4>
+<p>AGPL-3.0. No vendor lock-in. Self-host. Community-driven since 2017.</p>
+</div>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- Architecture -->
+<section class="section section-alt reveal">
+<div class="container">
+<div class="section-header">
+<span class="overline">Architecture</span>
+<h2>Three Pillars of Orchestration</h2>
+<p>AI orchestration + Vector retrieval + Open core — working in harmony.</p>
+</div>
+<div class="grid-3">
+<div class="card">
+<div class="card-tag">Pillar 01</div>
+<h3>AI Orchestration</h3>
+<p>Connect to any model provider — OpenAI, Anthropic, Google, Groq — or host your own. Dynamic model routing routes simple queries to cheaper models and complex tasks to high-tier models. Intelligent failover ensures zero downtime.</p>
+</div>
+<div class="card">
+<div class="card-tag">Pillar 02</div>
+<h3>Vector Retrieval</h3>
+<p>High-performance semantic memory. High-fidelity embeddings, context-aware chunking that respects document structure, and cross-encoder re-ranking for precision. Sub-second latency across millions of documents.</p>
+</div>
+<div class="card">
+<div class="card-tag">Pillar 03</div>
+<h3>Open Source Core</h3>
+<p>AGPL-3.0 licensed. No vendor lock-in. Full transparency. Self-host on your own infrastructure. Community-driven with 20+ contributors worldwide. Built since 2017.</p>
 </div>
 </div>
 </div>
@@ -47,70 +448,145 @@
 <section class="section reveal">
 <div class="container">
 <div class="section-header">
-<h2>Engineered for Scale</h2>
-<p>General Bots bridges the gap between raw LLM power and industrial application.</p>
+<span class="overline">Integrations</span>
+<h2>Every Channel, One Platform</h2>
+<p>Connect with your customers wherever they are.</p>
 </div>
-<div class="grid-3">
+<div class="grid-3" style="text-align:left">
 <div class="card">
-<div class="card-tag">Architecture</div>
-<h3>Hybrid Workflows</h3>
-<p>Seamless transition between AI agents and human specialists with full context preservation.</p>
-</div>
-<div class="card">
-<div class="card-tag">Developer Experience</div>
-<h3>BASIC Integration</h3>
-<p>Define complex business logic using familiar BASIC syntax directly within Word documents.</p>
+<div class="card-tag">Messaging</div>
+<h3>Chat Channels</h3>
+<p>WhatsApp, Microsoft Teams, Telegram, Instagram, Slack, Google Chat, Facebook Pages, SMS, Web Chat, Email — all from one platform. One personality across every channel.</p>
 </div>
 <div class="card">
-<div class="card-tag">Deployment</div>
-<h3>True Omnichannel</h3>
-<p>Deploy a single logic core to WhatsApp, Teams, Slack, Telegram, and Web Chat simultaneously.</p>
+<div class="card-tag">Productivity</div>
+<h3>Enterprise Integration</h3>
+<p>Microsoft 365, Google Workspace, SharePoint, MinIO. Connect your existing infrastructure. Import and sync data seamlessly.</p>
+</div>
+<div class="card">
+<div class="card-tag">AI Models</div>
+<h3>LLM Providers</h3>
+<p>OpenAI GPT-4o, Anthropic Claude, Groq, DeepSeek, Meta Llama, Google Gemini, local models via Ollama or llama.cpp. Any OpenAI-compatible API.</p>
 </div>
 </div>
 </div>
 </section>
 
-<section class="section section-alt reveal">
+<section class="section reveal">
 <div class="container">
-<div class="feature-split">
-<div>
 <div class="section-header">
-<span class="overline">Abstract Enterprise Design</span>
-<h2>Technical Rigor, Monochrome Aesthetics</h2>
-<p>A clean, focused visual language that prioritizes functional clarity over marketing hype. A platform architecture synchronized with the GLM 5.1 launch standards.</p>
+<span class="overline">Site Map</span>
+<h2>All Feature & Integration Pages</h2>
+<p>Every dedicated page on the platform — explore each capability in depth.</p>
 </div>
-<ul class="feature-list">
-<li>
-<svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>
-<div><strong>Technical Rigor</strong><p>Authoritative, didactic content designed for investors and engineering teams.</p></div>
-</li>
-<li>
-<svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>
-<div><strong>Monochrome Aesthetics</strong><p>A clean, focused visual language that prioritizes functional clarity over marketing hype.</p></div>
-</li>
-<li>
-<svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>
-<div><strong>Investor Ready</strong><p>A platform architecture synchronized with the GLM 5.1 launch standards.</p></div>
-</li>
-</ul>
+
+<div class="grid-3" style="text-align:left;margin-bottom:2rem">
+<div class="card">
+<div class="card-tag">Features</div>
+<h3>10 Core Capabilities</h3>
+<p style="margin-top:.75rem">
+<a href="/features/ai-search/" style="color:#fff;text-decoration:underline;display:block;margin-bottom:.25rem">AI Search →</a>
+<a href="/features/bot-factory/" style="color:#fff;text-decoration:underline;display:block;margin-bottom:.25rem">Bot Factory →</a>
+<a href="/features/broadcast/" style="color:#fff;text-decoration:underline;display:block;margin-bottom:.25rem">Broadcast →</a>
+<a href="/features/content-generation/" style="color:#fff;text-decoration:underline;display:block;margin-bottom:.25rem">Content Generation →</a>
+<a href="/features/create-apis-in-word/" style="color:#fff;text-decoration:underline;display:block;margin-bottom:.25rem">Create APIs in BASIC →</a>
+<a href="/features/llm-tools/" style="color:#fff;text-decoration:underline;display:block;margin-bottom:.25rem">LLM Tools →</a>
+<a href="/features/talk-to-data/" style="color:#fff;text-decoration:underline;display:block;margin-bottom:.25rem">Talk to Data →</a>
+<a href="/features/trainning/" style="color:#fff;text-decoration:underline;display:block;margin-bottom:.25rem">Training (Knowledge) →</a>
+<a href="/features/web-automation/" style="color:#fff;text-decoration:underline;display:block;margin-bottom:.25rem">Web Automation →</a>
+<a href="/features/" style="color:#fff;text-decoration:underline;display:block">All Features →</a>
+</p>
 </div>
-<div class="feature-visual">
-<div style="width:100%;aspect-ratio:16/9;background:var(--bg-tertiary);border:1px solid var(--border-subtle);border-radius:.25rem;display:flex;align-items:center;justify-content:center">
-<svg width="100%" height="100%" viewBox="0 0 800 450" fill="none">
-  <defs><pattern id="gridHome" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="1"></path></pattern></defs>
-  <rect width="800" height="450" fill="url(#gridHome)"/>
-  <rect x="200" y="100" width="400" height="250" rx="8" stroke="#fff" stroke-width="1.5" opacity="0.3" />
-  <path d="M250 150 H550 M250 180 H550 M250 210 H450" stroke="#fff" stroke-width="1.5" opacity="0.2" />
-  <circle cx="400" cy="225" r="50" stroke="#fff" stroke-width="1.5" stroke-dasharray="8 4" opacity="0.4" />
-</svg>
+<div class="card">
+<div class="card-tag">Platform</div>
+<h3>General Bots Sub-Pages</h3>
+<p style="margin-top:.75rem">
+<a href="/general-bots/" style="color:#fff;text-decoration:underline;display:block;margin-bottom:.25rem">Platform Overview →</a>
+<a href="/general-bots/llm/" style="color:#fff;text-decoration:underline;display:block;margin-bottom:.25rem">LLM Orchestration →</a>
+<a href="/general-bots/vector-retrieval/" style="color:#fff;text-decoration:underline;display:block;margin-bottom:.25rem">Vector Retrieval →</a>
+<a href="/general-bots/open-source/" style="color:#fff;text-decoration:underline;display:block">Open Source →</a>
+</p>
+</div>
+<div class="card">
+<div class="card-tag">Channels</div>
+<h3>Communication Integrations</h3>
+<p style="margin-top:.75rem">
+<a href="/integrations/channels/whatsapp/" style="color:#fff;text-decoration:underline;display:block;margin-bottom:.25rem">WhatsApp →</a>
+<a href="/integrations/channels/microsoft-teams/" style="color:#fff;text-decoration:underline;display:block;margin-bottom:.25rem">Microsoft Teams →</a>
+
+<a href="/integrations/channels/slack/" style="color:#fff;text-decoration:underline;display:block;margin-bottom:.25rem">Slack →</a>
+<a href="/integrations/channels/google-chat/" style="color:#fff;text-decoration:underline;display:block;margin-bottom:.25rem">Google Chat →</a>
+<a href="/integrations/channels/instagram/" style="color:#fff;text-decoration:underline;display:block;margin-bottom:.25rem">Instagram →</a>
+<a href="/integrations/channels/facebook-pages/" style="color:#fff;text-decoration:underline;display:block;margin-bottom:.25rem">Facebook Pages →</a>
+<a href="/integrations/channels/sms/" style="color:#fff;text-decoration:underline;display:block;margin-bottom:.25rem">SMS →</a>
+<a href="/integrations/channels/email/" style="color:#fff;text-decoration:underline;display:block;margin-bottom:.25rem">Email Channel →</a>
+<a href="/integrations/channels/web-chat/" style="color:#fff;text-decoration:underline;display:block">Web Chat →</a>
+</p>
 </div>
 </div>
+
+<div class="grid-3" style="text-align:left">
+<div class="card">
+<div class="card-tag">Enterprise</div>
+<h3>Enterprise Integrations</h3>
+<p style="margin-top:.75rem">
+<a href="/integrations/enterprise/minio/" style="color:#fff;text-decoration:underline;display:block;margin-bottom:.25rem">MinIO Storage →</a>
+<a href="/integrations/enterprise/project/" style="color:#fff;text-decoration:underline;display:block;margin-bottom:.25rem">Microsoft Project →</a>
+<a href="/integrations/enterprise/sharepoint/" style="color:#fff;text-decoration:underline;display:block">SharePoint →</a>
+</p>
+</div>
+<div class="card">
+<div class="card-tag">Productivity</div>
+<h3>Team Work Integrations</h3>
+<p style="margin-top:.75rem">
+<a href="/integrations/team-work/whatsapp-microsoft-teams/" style="color:#fff;text-decoration:underline;display:block;margin-bottom:.25rem">WhatsApp + Teams →</a>
+<a href="/integrations/team-work/whatsapp-google-workspace/" style="color:#fff;text-decoration:underline;display:block;margin-bottom:.25rem">WhatsApp + Google →</a>
+<a href="/integrations/team-work/whatsapp-facebook-workplace/" style="color:#fff;text-decoration:underline;display:block">WhatsApp + Workplace →</a>
+</p>
+</div>
+<div class="card">
+<div class="card-tag">AI Assistants</div>
+<h3>Virtual Assistant Integrations</h3>
+<p style="margin-top:.75rem">
+<a href="/integrations/virtual-assistants/chat-gpt/" style="color:#fff;text-decoration:underline;display:block;margin-bottom:.25rem">ChatGPT →</a>
+<a href="/integrations/virtual-assistants/microsoft-copilot/" style="color:#fff;text-decoration:underline;display:block;margin-bottom:.25rem">Microsoft Copilot →</a>
+<a href="/integrations/virtual-assistants/alexa/" style="color:#fff;text-decoration:underline;display:block">Alexa →</a>
+</p>
+</div>
+</div>
+
+<div class="flex flex-wrap gap-2 justify-center" style="margin-top:1.5rem">
+<a href="/integrations/finance/" class="btn btn-outline" style="font-size:.75rem">Finance Integration →</a>
+<a href="/integrations/" class="btn btn-outline" style="font-size:.75rem">All Integrations →</a>
+<a href="/pricing/" class="btn btn-outline" style="font-size:.75rem">Pricing →</a>
+<a href="/resources/" class="btn btn-outline" style="font-size:.75rem">Resources →</a>
+<a href="/blog/" class="btn btn-outline" style="font-size:.75rem">Blog →</a>
+</div>
+</div>
+</section>
+
+<section class="cta-section">
+<div class="container">
+<h2 class="text-3xl font-bold tracking-tighter mb-4">Start Building Today</h2>
+<p class="text-lg text-muted max-w-2xl mx-auto mb-8 leading-relaxed">75+ applications. One platform. Open source. Self-hosted or managed — same software, your choice. Personal, business, or enterprise scale.</p>
+<div class="flex flex-wrap gap-4 justify-center">
+<a href="/features/" class="btn btn-primary btn-lg">Explore All Apps</a>
+<a href="https://github.com/pragmatismo-io" class="btn btn-outline btn-lg">View on GitHub</a>
 </div>
 </div>
 </section>
 
 </main>
+
 <div hx-get="/partials/footer.html" hx-swap="innerHTML" hx-trigger="load"></div>
+<script>
+function switchTab(e,panel){
+document.querySelectorAll('.user-tab').forEach(t=>t.classList.remove('active'));
+document.querySelectorAll('.user-panel').forEach(p=>p.classList.remove('active'));
+e.target.classList.add('active');
+document.getElementById('panel-'+panel).classList.add('active');
+}
+</script>
 <script src="https://unpkg.com/htmx.org@2.0.4"></script>
 <script src="/js/site.js"></script>
 </body>

@@ -3,14 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>LLM Orchestration | General Bots</title>
-<meta name="description" content="Unified LLM orchestration for enterprise AI. Connect to OpenAI, Anthropic, Groq, and local models with intelligent routing, cost control, and failover.">
+<title>LLM Orchestration — High-Performance, Multi-Provider AI | General Bots</title>
+<meta name="description" content="High-performance Rust-written LLM orchestrator. GLM, Qwen, DeepSeek, Kimi, MiniMax — alternatives to costly Claude and OpenAI. Democratized AI, open source, self-hosted.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://generalbots.org/general-bots/llm/">
-<meta property="og:title" content="LLM Orchestration | General Bots">
-<meta property="og:description" content="Connect to OpenAI, Anthropic, Groq, and local models with intelligent routing.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://generalbots.org/general-bots/llm/">
 <link rel="icon" href="/favicon.ico">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="stylesheet" href="/css/site.css">
@@ -18,79 +14,103 @@
 <body>
 <div hx-get="/partials/header.html" hx-swap="innerHTML" hx-trigger="load"></div>
 <main style="padding-top:4rem">
-<section class="page-section bg-gray-50 vitral-bg">
-<div class="container text-center">
+
+<section class="page-section-lg vitral-bg" style="position:relative;overflow:hidden">
+<div class="mesh-pattern"></div>
+<div class="bloom bloom-1"></div>
+<div class="container text-center" style="position:relative;z-index:1">
 <div class="reveal">
-<div class="badge mb-4" style="margin-left:auto;margin-right:auto;width:fit-content">
-<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/></svg>
-Orchestration Layer
+<div class="badge mb-4" style="margin-left:auto;margin-right:auto;width:fit-content">High-Performance LLM Orchestrator</div>
+<h1 class="text-4xl font-bold tracking-tighter mb-4" style="font-size:clamp(2rem,5vw,3.5rem)">The LLM Orchestrator.<br>Built for Speed,<br>Built for Choice.</h1>
+<p class="text-lg text-muted max-w-2xl mx-auto leading-relaxed mb-8">A high-performance, Rust-written LLM orchestration engine that connects to any model provider — from frontier models like Claude and GPT to cost-effective alternatives like GLM, Qwen, DeepSeek, Kimi, and MiniMax. Dynamic routing, semantic caching, zero vendor lock-in.</p>
+<div class="flex flex-wrap gap-4 justify-center">
+<a href="/contact/" class="btn btn-primary btn-lg">Get Started</a>
+<a href="https://github.com/pragmatismo-io" class="btn btn-outline btn-lg">View on GitHub</a>
 </div>
-<h1 class="text-4xl font-bold tracking-tighter mb-4" style="font-size:clamp(2rem,5vw,3rem)">One API. Every Model.</h1>
-<p class="text-lg text-muted max-w-2xl mx-auto leading-relaxed mb-8">General Bots provides a unified orchestration layer that allows you to switch between model providers, optimize costs, and ensure zero-downtime failover for your enterprise AI fleet.</p>
 </div>
 </div>
 </section>
 
 <section class="page-section-lg reveal">
 <div class="container">
-<div class="grid-2">
-<div>
-<h2 class="text-3xl font-bold tracking-tighter mb-6">A Technical Deep Dive</h2>
-<p class="text-lg text-muted mb-8 leading-relaxed">The AI landscape is moving too fast for rigid integrations. Our orchestration layer ensures that your bots remain state-of-the-art, regardless of which model is leading the pack today.</p>
-<ul class="feature-list">
-<li>
-<svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>
-<div><strong>Dynamic Model Routing</strong><p class="text-sm text-muted mt-1">Route simple queries to cheaper, faster models (like Groq) and complex reasoning tasks to high-tier models (like GPT-4o or Claude 3.5) automatically.</p></div>
-</li>
-<li>
-<svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>
-<div><strong>Intelligent Failover</strong><p class="text-sm text-muted mt-1">If your primary provider experiences an outage, General Bots instantly switches to a pre-defined backup, ensuring zero service interruption.</p></div>
-</li>
-<li>
-<svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>
-<div><strong>Semantic Token Management</strong><p class="text-sm text-muted mt-1">Optimize context window usage by dynamically pruning irrelevant data, reducing inference costs by up to 40%.</p></div>
-</li>
-</ul>
+<div class="max-w-3xl mx-auto text-center mb-12">
+<h2 class="text-3xl font-bold tracking-tighter mb-4">Why Pay for Big Tech When You Can Have Choice?</h2>
+<p class="text-lg text-muted leading-relaxed">The AI market is dominated by a few expensive players — Claude from Anthropic, GPT from OpenAI. They charge premium prices, lock you into their ecosystem, and train on your data. General Bots gives you real alternatives: models that perform just as well for most tasks, at a fraction of the cost. Self-hosted. Private. Open source.</p>
 </div>
-<div style="width:100%;aspect-ratio:4/3;background:#f8f8f8;border-radius:1rem;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;border:1px solid rgba(0,0,0,0.06)">
-<svg width="100%" height="100%" viewBox="0 0 400 300" fill="none">
-  <defs><pattern id="gridLLM" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(0,0,0,0.03)" stroke-width="1"/></pattern></defs>
-  <rect width="400" height="300" fill="url(#gridLLM)"/>
-  <circle cx="200" cy="150" r="50" stroke="#111" stroke-width="1" stroke-dasharray="8 4" opacity="0.3" />
-  <g transform="translate(200, 150)">
-    <circle cx="0" cy="0" r="20" fill="#fff" stroke="#059669" stroke-width="2" />
-    <path d="M-100 -50 L-30 -10 M-100 50 L-30 10 M100 -50 L30 -10 M100 50 L30 10" stroke="#111" stroke-width="1.5" opacity="0.2" />
-    <rect x="80" y="-60" width="40" height="25" rx="4" fill="#fff" stroke="#111" stroke-width="1.5" />
-    <rect x="80" y="35" width="40" height="25" rx="4" fill="#fff" stroke="#111" stroke-width="1.5" />
-    <rect x="-120" y="-60" width="40" height="25" rx="4" fill="#fff" stroke="#111" stroke-width="1.5" />
-    <rect x="-120" y="35" width="40" height="25" rx="4" fill="#fff" stroke="#111" stroke-width="1.5" />
-  </g>
-</svg>
+<div class="grid-3" style="gap:1.5rem">
+<div class="glass-card p-6 card-hover">
+<div class="icon-box mb-4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
+<h3 class="text-xl font-bold mb-2">GLM-4 — Zhipu AI</h3>
+<p class="text-sm text-muted">Open-source bilingual model (Chinese/English) with strong reasoning capabilities. GLM-4-9B rivals GPT-3.5 on many benchmarks. Free to self-host, no per-token costs. Ideal for organizations that need Chinese language support or want a capable open-weight model without recurring fees.</p>
+</div>
+<div class="glass-card p-6 card-hover">
+<div class="icon-box mb-4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
+<h3 class="text-xl font-bold mb-2">Qwen 2.5 — Alibaba Cloud</h3>
+<p class="text-sm text-muted">One of the strongest open-weight model families available. Qwen 2.5 72B competes with GPT-4 on multiple benchmarks. Available in sizes from 0.5B to 110B. The 32B and 72B variants run efficiently on consumer-grade GPUs. No API costs, no usage limits.</p>
+</div>
+<div class="glass-card p-6 card-hover">
+<div class="icon-box mb-4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
+<h3 class="text-xl font-bold mb-2">DeepSeek V3 / R1</h3>
+<p class="text-sm text-muted">The breakout model of 2025. DeepSeek V3 matches GPT-4 on reasoning and coding at roughly 5% of the API cost. DeepSeek R1 introduces chain-of-thought reasoning that rivals o1. Fully open weights — run on your own hardware, no per-token fees, complete data privacy.</p>
+</div>
+<div class="glass-card p-6 card-hover">
+<div class="icon-box mb-4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
+<h3 class="text-xl font-bold mb-2">Kimi — Moonshot AI</h3>
+<p class="text-sm text-muted">Kimi excels at long-context processing with a 2M+ token window — read entire codebases, book-length documents, or months of conversation history in a single pass. Strong Chinese and English support. Available via API at competitive pricing.</p>
+</div>
+<div class="glass-card p-6 card-hover">
+<div class="icon-box mb-4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
+<h3 class="text-xl font-bold mb-2">MiniMax — Hailuo AI</h3>
+<p class="text-sm text-muted">MiniMax offers competitive performance on par with GPT-3.5 at significantly lower cost. Their Hailuo model family excels at text generation, code completion, and structured output. Strong option for cost-sensitive deployments that don't need frontier-model capabilities.</p>
+</div>
+<div class="glass-card p-6 card-hover" style="border-color:rgba(255,255,255,.15)">
+<div class="icon-box mb-4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+<h3 class="text-xl font-bold mb-2">Plus: OpenAI, Claude, Llama, Groq</h3>
+<p class="text-sm text-muted">We don't exclude the big players — we give you the choice to use them when you need them. Run GPT-4 or Claude for complex reasoning, route simple queries to DeepSeek or Qwen. Dynamic model routing lets you mix and match based on cost, latency, and capability requirements. One API, every model, your rules.</p>
 </div>
 </div>
 </div>
 </section>
 
 <section class="page-section-lg bg-gray-50 reveal">
-<div class="container text-center">
-<h2 class="text-3xl font-bold tracking-tighter mb-4">Multi-Provider Support</h2>
-<p class="text-lg text-muted max-w-2xl mx-auto mb-12">General Bots supports all major LLM providers and local models out of the box.</p>
-<div class="grid-4">
-<div class="glass-card p-6">
-<h4 class="font-bold mb-2">OpenAI</h4>
-<p class="text-xs text-muted">GPT-4o, GPT-4 Turbo, GPT-3.5</p>
+<div class="container">
+<div class="max-w-3xl mx-auto text-center mb-12">
+<h2 class="text-3xl font-bold tracking-tighter mb-4">Cost Comparison</h2>
+<p class="text-lg text-muted">Why pay $20/user/month for ChatGPT or $200/user/month for Claude Pro when open-source alternatives deliver comparable performance at near-zero marginal cost?</p>
 </div>
-<div class="glass-card p-6">
-<h4 class="font-bold mb-2">Anthropic</h4>
-<p class="text-xs text-muted">Claude 3.5 Sonnet, Opus, Haiku</p>
+<div class="max-w-4xl mx-auto">
+<table class="comparison-table">
+<tr><th>Model</th><th>Cost per 1M tokens (input)</th><th>Self-Hostable</th><th>Data Privacy</th></tr>
+<tr><td>GPT-4o (OpenAI)</td><td>$5.00</td><td>No</td><td>No</td></tr>
+<tr><td>Claude 3.5 Sonnet (Anthropic)</td><td>$3.00</td><td>No</td><td>No</td></tr>
+<tr><td>DeepSeek V3</td><td>$0.27</td><td>Yes</td><td>Yes</td></tr>
+<tr><td>Qwen 2.5 72B</td><td>$0.90</td><td>Yes</td><td>Yes</td></tr>
+<tr><td>GLM-4-9B</td><td>Free self-host</td><td>Yes</td><td>Yes</td></tr>
+<tr><td>Kimi API</td><td>$0.50</td><td>No (API)</td><td>Yes (API)</td></tr>
+<tr><td>MiniMax API</td><td>$0.30</td><td>No (API)</td><td>Yes (API)</td></tr>
+</table>
 </div>
-<div class="glass-card p-6">
-<h4 class="font-bold mb-2">Groq</h4>
-<p class="text-xs text-muted">Ultra-fast Llama-3, Mixtral</p>
 </div>
-<div class="glass-card p-6">
-<h4 class="font-bold mb-2">Local Models</h4>
-<p class="text-xs text-muted">Llama-cpp, Ollama, vLLM</p>
+</section>
+
+<section class="page-section-lg reveal">
+<div class="container">
+<div class="grid-2 gap-8 items-center">
+<div>
+<div class="badge mb-4">Rust-Powered Performance</div>
+<h2 class="text-3xl font-bold tracking-tighter mb-6">High-Performance Orchestration</h2>
+<p class="text-muted leading-relaxed mb-6">General Bots' LLM orchestrator is built in Rust, not Python. This means zero-copy token handling, lock-free concurrent request processing, and memory-safe execution. The orchestrator handles thousands of simultaneous streaming requests across multiple model providers with sub-millisecond routing overhead.</p>
+<ul class="feature-list">
+<li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><strong>Dynamic Model Routing</strong> — Route simple queries to cheap models, complex ones to frontier models</li>
+<li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><strong>Intelligent Failover</strong> — If your primary provider goes down, switch to a backup in milliseconds</li>
+<li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><strong>Semantic Caching</strong> — Cache semantically similar queries, reducing costs by up to 90%</li>
+</ul>
+</div>
+<div style="text-align:center">
+<svg width="200" height="200" viewBox="0 0 100 100" fill="none" style="opacity:.15">
+  <path d="M50 10 L53 20 L60 15 L58 25 L67 23 L62 32 L70 33 L63 40 L70 45 L62 48 L67 55 L58 53 L60 62 L53 57 L50 65 L47 57 L40 62 L42 53 L33 55 L38 48 L30 45 L37 40 L30 33 L38 32 L33 23 L42 25 L40 15 L47 20Z" stroke="currentColor" stroke-width="1" fill="none"/>
+  <circle cx="50" cy="37.5" r="10" stroke="currentColor" stroke-width="1" fill="none"/>
+</svg>
 </div>
 </div>
 </div>
@@ -98,14 +118,15 @@ Orchestration Layer
 
 <section class="page-section-lg vitral-bg reveal">
 <div class="container text-center">
-<h2 class="text-3xl font-bold tracking-tighter mb-4">Unified Intelligence</h2>
-<p class="text-lg text-muted max-w-2xl mx-auto mb-8 leading-relaxed">Stop building rigid integrations. Start building a flexible, intelligent foundation for your enterprise AI.</p>
+<h2 class="text-3xl font-bold tracking-tighter mb-4">One API. Every Model. Your Choice.</h2>
+<p class="text-lg text-muted max-w-2xl mx-auto mb-8">Connect to any LLM provider — or run your own. No vendor lock-in. No per-seat fees. No training on your data.</p>
 <div class="flex flex-wrap gap-4 justify-center">
-<a href="/contact/" class="btn btn-outline btn-lg">Contact Us</a>
-<a href="/contact/" class="btn btn-primary btn-lg">Get Started</a>
+<a href="/contact/" class="btn btn-primary btn-lg">Talk to Us</a>
+<a href="https://github.com/pragmatismo-io" class="btn btn-outline btn-lg">View on GitHub</a>
 </div>
 </div>
 </section>
+
 </main>
 <div hx-get="/partials/footer.html" hx-swap="innerHTML" hx-trigger="load"></div>
 <script src="https://unpkg.com/htmx.org@2.0.4"></script>

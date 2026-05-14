@@ -18,7 +18,12 @@
 <body>
 <div hx-get="/partials/header.html" hx-swap="innerHTML" hx-trigger="load"></div>
 <main style="padding-top:4rem">
-<section class="page-section bg-gray-50 vitral-bg">
+<section class="page-section bg-gray-50 vitral-bg" style="position:relative;overflow:hidden">
+<div style="position:absolute;right:5%;top:50%;transform:translateY(-50%);width:400px;height:300px;opacity:.06;pointer-events:none">
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none">
+<circle cx="200" cy="150" r="20" fill="currentColor" opacity=".8"/><path d="M140 150 Q170 100 230 100 Q290 100 260 150" stroke="currentColor" stroke-width="2" fill="none" opacity=".4"/><path d="M110 150 Q155 60 245 60 Q335 60 290 150" stroke="currentColor" stroke-width="2" fill="none" opacity=".2"/>
+</svg>
+</div>
 <div class="container text-center">
 <div class="reveal">
 <a href="/features/" class="text-sm text-muted" style="display:inline-flex;align-items:center;gap:.375rem;margin-bottom:1.5rem">
@@ -29,8 +34,8 @@ Back to Features
 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/></svg>
 Broadcast
 </div>
-<h1 class="text-4xl font-bold tracking-tighter mb-4" style="font-size:clamp(2rem,5vw,3rem)">Precision Mass Communication.</h1>
-<p class="text-lg text-muted max-w-2xl mx-auto leading-relaxed mb-8">Run targeted campaigns, schedule messages across time zones, and track engagement with real-time analytics across all your channels.</p>
+<h1 class="text-4xl font-bold tracking-tighter mb-4" style="font-size:clamp(2rem,5vw,3rem)" data-i18n="features.broadcast.hero">Precision Mass Communication.</h1>
+<p class="text-lg text-muted max-w-2xl mx-auto leading-relaxed mb-8" data-i18n="features.broadcast.hero_sub">Run targeted campaigns, schedule messages across time zones, and track engagement with real-time analytics across all your channels.</p>
 </div>
 </div>
 </section>
@@ -69,7 +74,69 @@ Broadcast
 </div>
 </section>
 
-</main>
+<section class="page-section-lg reveal">
+<div class="container">
+<div class="max-w-3xl mx-auto">
+<p class="text-lg leading-relaxed" style="color:var(--fg-secondary);font-size:1.0625rem;line-height:1.7">Sending a message to one person is easy. Sending a personalized message to ten thousand people — each with the right tone, timing, and channel — without getting flagged as spam? That requires a proper broadcast engine. General Bots Broadcast handles the complexity so you can focus on the message.</p>
+</div>
+</div>
+</section>
+<section class="page-section-lg reveal">
+<div class="container">
+<div class="grid-3" style="gap:2rem">
+
+<div class="glass-card p-6 card-hover reveal">
+<h3 class="text-xl font-bold mb-3">Intelligent Rate Limiting</h3>
+<p class="text-sm text-muted leading-relaxed">Automatically pace message delivery to comply with provider limits and protect your account health. WhatsApp, SMS, and email channels each have provider-specific rate profiles that Broadcast manages automatically.</p>
+</div>
+<div class="glass-card p-6 card-hover reveal">
+<h3 class="text-xl font-bold mb-3">Dynamic Audience Segmentation</h3>
+<p class="text-sm text-muted leading-relaxed">Target users based on conversation history, behavior patterns, demographic attributes, or custom tags. Create precise segments that update in real time as user data changes.</p>
+</div>
+<div class="glass-card p-6 card-hover reveal">
+<h3 class="text-xl font-bold mb-3">Automated Reply Loops</h3>
+<p class="text-sm text-muted leading-relaxed">When a recipient replies to a broadcast, the system automatically transitions them into a bot conversation flow or human handoff workflow. Turn one-way announcements into two-way engagements.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="page-section-lg section-alt reveal">
+<div class="container">
+<div class="max-w-4xl mx-auto">
+<h2 class="text-2xl font-bold tracking-tighter mb-6">How It Works</h2>
+<p class="text-lg leading-relaxed" style="color:var(--fg-secondary);font-size:1.0625rem;line-height:1.7">The biggest mistake companies make with mass messaging is treating everyone the same. Broadcast lets you segment your audience by behavior, conversation history, demographics, or custom tags — then send each segment a message that feels personal. The system automatically paces delivery to stay within provider rate limits (WhatsApp, SMS, email each have their own), and when someone replies, they're routed into a conversation flow automatically. It turns one-way announcements into two-way relationships.</p>
+</div>
+</div>
+</section>
+
+<section class="page-section-lg reveal">
+<div class="container">
+<div class="glass-card" style="padding:2rem;text-align:center;border-color:var(--border);background:var(--bg-card)">
+<h3 class="text-xl font-bold mb-3">Related Features</h3>
+<p class="text-sm" style="color:var(--fg-secondary);line-height:1.7">Broadcast integrates directly with <a href='/integrations/channels/whatsapp/' style='color:#fff;text-decoration:underline'>WhatsApp</a>, <a href='/integrations/channels/sms/' style='color:#fff;text-decoration:underline'>SMS</a>, and <a href='/integrations/channels/email/' style='color:#fff;text-decoration:underline'>Email</a> channels. Use <a href='/features/content-generation/' style='color:#fff;text-decoration:underline'>Content Generation</a> to create your message templates, and connect with <a href='/features/talk-to-data/' style='color:#fff;text-decoration:underline'>Talk to Data</a> to segment audiences based on database queries.</p>
+</div>
+</div>
+</section><section class="page-section-lg bg-gray-50 reveal">
+<div class="container text-center">
+<h2 class="text-3xl font-bold tracking-tighter mb-4">Why Use Broadcast</h2>
+<p class="text-lg text-muted max-w-2xl mx-auto mb-12">Targeted multi-channel campaigns with intelligent rate limiting, dynamic segmentation, and automated reply loops.</p>
+<div class="flex items-center justify-center gap-4 flex-wrap">
+<a href="/contact/" class="btn btn-primary btn-lg">Get Started</a>
+<a href="/pricing/" class="btn btn-outline btn-lg">View Pricing</a>
+</div>
+</div>
+</section>
+<section class="page-section-lg vitral-bg reveal">
+<div class="container text-center">
+<div class="flex items-center justify-center gap-6 flex-wrap">
+<div class="glass-card-bright p-6">
+<div class="text-lg font-bold mb-1" style="color:var(--fg)">Key Metrics</div>
+<p class="text-sm text-muted max-w-lg" style="line-height:1.6">Send 100K+ messages per hour. Automatic rate limiting per channel. Real-time engagement tracking.</p>
+</div>
+</div>
+</div>
+</section></main>
 <div hx-get="/partials/footer.html" hx-swap="innerHTML" hx-trigger="load"></div>
 <script src="https://unpkg.com/htmx.org@2.0.4"></script>
 <script src="/js/site.js"></script>

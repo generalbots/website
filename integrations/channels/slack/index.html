@@ -18,7 +18,12 @@
 <body>
 <div hx-get="/partials/header.html" hx-swap="innerHTML" hx-trigger="load"></div>
 <main style="padding-top:4rem">
-<section class="page-section-lg vitral-bg">
+<section class="page-section-lg vitral-bg" style="position:relative;overflow:hidden">
+<div style="position:absolute;right:8%;top:50%;transform:translateY(-50%);width:400px;height:300px;opacity:.06;pointer-events:none">
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none">
+<rect x="140" y="80" width="120" height="30" rx="4" fill="currentColor" opacity=".1"/><rect x="140" y="120" width="120" height="30" rx="4" fill="currentColor" opacity=".1"/><rect x="140" y="160" width="120" height="30" rx="4" fill="currentColor" opacity=".1"/><rect x="140" y="200" width="120" height="30" rx="4" fill="currentColor" opacity=".1"/><circle cx="190" cy="95" r="6" fill="currentColor" opacity=".2"/><circle cx="190" cy="135" r="6" fill="currentColor" opacity=".2"/>
+</svg>
+</div>
 <div class="container">
 <div class="grid-2 items-center">
 <div class="reveal">
@@ -83,7 +88,37 @@
 </div>
 </div>
 </section>
-</main>
+
+<section class="page-section-lg reveal">
+<div class="container">
+<h2 class="text-3xl font-bold tracking-tighter text-center mb-12">Slack — Team Communication Hub</h2>
+<div class="grid-3" style="gap:2rem">
+
+<div class="glass-card p-6 card-hover reveal">
+<h3 class="text-xl font-bold mb-3">Slack Bot API</h3>
+<p class="text-sm text-muted leading-relaxed">Full Slack Bot API integration with slash commands, interactive messages, modals, and shortcuts. Deploy bots as Slack apps with granular OAuth scopes.</p>
+</div>
+<div class="glass-card p-6 card-hover reveal">
+<h3 class="text-xl font-bold mb-3">Channel & DM Conversations</h3>
+<p class="text-sm text-muted leading-relaxed">Bots participate in public channels, private channels, and direct messages. Support for thread replies, message actions, and workflow step integration.</p>
+</div>
+<div class="glass-card p-6 card-hover reveal">
+<h3 class="text-xl font-bold mb-3">Enterprise Grid Support</h3>
+<p class="text-sm text-muted leading-relaxed">Deploy across Slack Enterprise Grid with org-wide installation. Consistent bot experience across all workspaces in your organization.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="page-section-lg vitral-bg reveal">
+<div class="container text-center">
+<h2 class="text-3xl font-bold tracking-tighter mb-4">Ready to Deploy?</h2>
+<p class="text-lg text-muted max-w-2xl mx-auto mb-8">Integrate Slack with General Bots today.</p>
+<div class="flex items-center justify-center gap-4 flex-wrap">
+<a href="/contact/" class="btn btn-primary btn-lg">Contact Us</a>
+<a href="/pricing/" class="btn btn-outline btn-lg">View Pricing</a>
+</div>
+</div>
+</section></main>
 <div hx-get="/partials/footer.html" hx-swap="innerHTML" hx-trigger="load"></div>
 <script src="https://unpkg.com/htmx.org@2.0.4"></script>
 <script src="/js/site.js"></script>

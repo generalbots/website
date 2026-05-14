@@ -18,12 +18,17 @@
 <body>
 <div hx-get="/partials/header.html" hx-swap="innerHTML" hx-trigger="load"></div>
 <main style="padding-top:4rem">
-<section class="page-section-lg vitral-bg">
+<section class="page-section-lg vitral-bg" style="position:relative;overflow:hidden">
+<div style="position:absolute;right:8%;top:50%;transform:translateY(-50%);width:400px;height:300px;opacity:.06;pointer-events:none">
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none">
+<rect x="140" y="100" width="120" height="160" rx="16" stroke="currentColor" stroke-width="2" opacity=".3"/><rect x="140" y="100" width="120" height="20" rx="16" stroke="currentColor" stroke-width="1" opacity=".15"/><circle cx="200" cy="118" r="3" fill="currentColor" opacity=".5"/><rect x="160" y="150" width="80" height="6" rx="3" fill="currentColor" opacity=".2"/><rect x="160" y="165" width="60" height="6" rx="3" fill="currentColor" opacity=".2"/><rect x="160" y="200" width="80" height="6" rx="3" fill="currentColor" opacity=".2"/><rect x="160" y="215" width="60" height="6" rx="3" fill="currentColor" opacity=".2"/>
+</svg>
+</div>
 <div class="container">
 <div class="grid-2 items-center">
 <div class="reveal">
 <div class="badge mb-4">Sovereign Channels</div>
-<h1 class="text-5xl font-bold tracking-tighter mb-6" style="line-height:1.1">WhatsApp Orchestration.</h1>
+<h1 class="text-5xl font-bold tracking-tighter mb-6" style="line-height:1.1" data-i18n="integrations.channels.whatsapp.hero">WhatsApp Orchestration.</h1>
 <p class="text-xl text-muted leading-relaxed mb-8">Deploy high-fidelity AI Search and deterministic bot orchestration on the world's most popular messaging channel. Reach billions with GLM 5.1 sovereignty.</p>
 <div class="flex items-center gap-4">
 <a href="/contact/" class="btn btn-primary btn-lg">Deploy Channel</a>
@@ -88,7 +93,32 @@
 </div>
 </section>
 
-<section class="page-section-lg vitral-bg">
+<section class="page-section-lg reveal">
+<div class="container">
+<h2 class="text-3xl font-bold tracking-tighter text-center mb-12">WhatsApp — 2B+ User Channel</h2>
+<div class="grid-3" style="gap:2rem">
+
+<div class="glass-card p-6 card-hover reveal">
+<h3 class="text-xl font-bold mb-3">WhatsApp Business API</h3>
+<p class="text-sm text-muted leading-relaxed">Full WhatsApp Business API integration with message templates, interactive messages, media sharing, and webhook-based event handling. Send proactive notifications, process incoming inquiries, and manage conversations at scale.</p>
+</div>
+<div class="glass-card p-6 card-hover reveal">
+<h3 class="text-xl font-bold mb-3">Rich Media & Templates</h3>
+<p class="text-sm text-muted leading-relaxed">Send images, documents, audio, and video. Use pre-approved message templates for notifications, alerts, and marketing. Interactive list and button messages for guided conversations.</p>
+</div>
+<div class="glass-card p-6 card-hover reveal">
+<h3 class="text-xl font-bold mb-3">Multi-Agent Support</h3>
+<p class="text-sm text-muted leading-relaxed">Route conversations to the right bot or human agent based on intent, department, or customer tier. Seamless handoff with full conversation context preserved.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="page-section-lg vitral-bg" style="position:relative;overflow:hidden">
+<div style="position:absolute;right:8%;top:50%;transform:translateY(-50%);width:400px;height:300px;opacity:.06;pointer-events:none">
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none">
+<rect x="140" y="100" width="120" height="160" rx="16" stroke="currentColor" stroke-width="2" opacity=".3"/><rect x="140" y="100" width="120" height="20" rx="16" stroke="currentColor" stroke-width="1" opacity=".15"/><circle cx="200" cy="118" r="3" fill="currentColor" opacity=".5"/><rect x="160" y="150" width="80" height="6" rx="3" fill="currentColor" opacity=".2"/><rect x="160" y="165" width="60" height="6" rx="3" fill="currentColor" opacity=".2"/><rect x="160" y="200" width="80" height="6" rx="3" fill="currentColor" opacity=".2"/><rect x="160" y="215" width="60" height="6" rx="3" fill="currentColor" opacity=".2"/>
+</svg>
+</div>
 <div class="container text-center reveal">
 <h2 class="text-3xl font-bold tracking-tighter mb-8">Investor-Ready Messaging.</h2>
 <div class="flex items-center justify-center gap-6 flex-wrap">
@@ -107,7 +137,17 @@
 </div>
 </div>
 </section>
-</main>
+
+<section class="page-section-lg vitral-bg reveal">
+<div class="container text-center">
+<h2 class="text-3xl font-bold tracking-tighter mb-4">Ready to Deploy?</h2>
+<p class="text-lg text-muted max-w-2xl mx-auto mb-8">Integrate Whatsapp with General Bots today.</p>
+<div class="flex items-center justify-center gap-4 flex-wrap">
+<a href="/contact/" class="btn btn-primary btn-lg">Contact Us</a>
+<a href="/pricing/" class="btn btn-outline btn-lg">View Pricing</a>
+</div>
+</div>
+</section></main>
 <div hx-get="/partials/footer.html" hx-swap="innerHTML" hx-trigger="load"></div>
 <script src="https://unpkg.com/htmx.org@2.0.4"></script>
 <script src="/js/site.js"></script>
