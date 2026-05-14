@@ -69,7 +69,6 @@ function switchLang(lang) {
   loadLang(lang, function() {
     var container = document.getElementById('lang-flags');
     if (container) injectFlags();
-    gtranslateSwitch(lang);
   });
 }
 
@@ -108,27 +107,9 @@ window.__applyTranslations = applyTranslations;
 window.__injectFlags = injectFlags;
 window.__currentLang = function() { return currentLang; };
 
-/* Tell GTranslate to switch language */
-function gtranslateSwitch(lang) {
-  if (lang === 'en') return;
-  var gtMap = {'pt':'pt','es':'es','fr':'fr','ja':'ja','zh-cn':'zh-CN'};
-  var gtLang = gtMap[lang];
-  if (!gtLang) return;
-  if (typeof doGTranslate === 'function') {
-    doGTranslate('en|' + gtLang);
-  } else {
-    /* GTranslate not loaded yet, retry */
-    setTimeout(function() { gtranslateSwitch(lang); }, 500);
-  }
-}
-
 /* Init i18n on DOM ready */
 var detectedLang = detectLang();
 loadLang(detectedLang);
-/* Sync GTranslate with cookie on page load */
-if (detectedLang !== 'en') {
-  setTimeout(function() { gtranslateSwitch(detectedLang); }, 1000);
-}
 /* injectFlags when #lang-flags appears (header loaded via HTMX) */
 var _flagsInjected = false;
 (function retryInject() {
@@ -201,25 +182,11 @@ function initReveal() {
 
 /* ===================== 3rd Party ===================== */
 function initThirdParty() {
-  /* Add notranslate to data-i18n elements so GTranslate skips them */
-  document.querySelectorAll('[data-i18n]').forEach(function(el) {
-    el.classList.add('notranslate');
-  });
-
-  var gtranslateSettings = document.createElement('script');
-  gtranslateSettings.textContent = 'window.gtranslateSettings={default_language:"en",languages:["en","fr","it","es","pt","zh-CN","ru","ar","ja"],wrapper_selector:".gtranslate_wrapper",switcher_horizontal_position:"right",alt_flags:{"en":"usa","pt":"brazil"}};';
-  document.head.appendChild(gtranslateSettings);
-
   var gc = document.createElement('script');
   gc.async = true;
   gc.src = '//gc.zgo.at/count.js';
   gc.setAttribute('data-goatcounter', 'https://generalbots-pragmatismo.goatcounter.com/count');
   document.body.appendChild(gc);
-
-  var gt = document.createElement('script');
-  gt.src = 'https://cdn.gtranslate.net/widgets/latest/float.js';
-  gt.defer = true;
-  document.body.appendChild(gt);
 }
 
 /* ===================== Init ===================== */
@@ -233,10 +200,6 @@ document.body.addEventListener('htmx:afterSwap', function (e) {
   if (e.detail && e.detail.pathInfo && e.detail.pathInfo.requestPath &&
     e.detail.pathInfo.requestPath.indexOf('/partials/') !== -1) {
     initHeader();
-    /* Re-protect data-i18n elements from GTranslate after HTMX swap */
-    document.querySelectorAll('[data-i18n]').forEach(function(el) {
-      el.classList.add('notranslate');
-    });
     var container = document.getElementById('lang-flags');
     if (container) {
       container.innerHTML = '';
