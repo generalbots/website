@@ -1,0 +1,8 @@
+node_modules/
+package.json
+package-lock.json
+test-i18n.mjs
+*.py
+tasks.md
+.env
+AGENTS.md
