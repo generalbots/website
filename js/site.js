@@ -37,8 +37,8 @@ var links = document.querySelectorAll('a[href]');
 for (var i = 0; i < links.length; i++) {
 var link = links[i];
 var href = link.getAttribute('href');
-// Skip external links, anchors, and already-localized links
-if (href.match(/^https?:\/\//) || href.startsWith('#') || href.match(/^\/(pt|es|fr|de|ja|zh-cn)\//)) {
+// Skip external links, anchors, language-prefixed links, and static resources
+if (href.match(/^https?:\/\//) || href.startsWith('#') || href.match(/^\/(pt|es|fr|de|ja|zh-cn)\//) || href.match(/^\/(css|js|lang|img|icons|assets)\//)) {
 continue;
 }
 // Add language prefix to internal links
@@ -78,21 +78,24 @@ function loadLang(lang, callback) {
 }
 
 function applyTranslations() {
-  var els = document.querySelectorAll('[data-i18n]');
-  for (var i = 0; i < els.length; i++) {
-    var key = els[i].getAttribute('data-i18n');
-    var text = translations[key];
-    if (text) {
-      if (els[i].tagName === 'INPUT' || els[i].tagName === 'TEXTAREA') {
-        els[i].setAttribute('placeholder', text);
-      } else if (els[i].tagName === 'IMG') {
-        els[i].setAttribute('alt', text);
-      } else {
-        els[i].textContent = text;
-      }
-    }
-  }
-  document.documentElement.lang = currentLang;
+if (!translations || Object.keys(translations).length === 0) return;
+var els = document.querySelectorAll('[data-i18n]');
+var count = 0;
+for (var i = 0; i < els.length; i++) {
+var key = els[i].getAttribute('data-i18n');
+var text = translations[key];
+if (text) {
+count++;
+if (els[i].tagName === 'INPUT' || els[i].tagName === 'TEXTAREA') {
+els[i].setAttribute('placeholder', text);
+} else if (els[i].tagName === 'IMG') {
+els[i].setAttribute('alt', text);
+} else {
+els[i].textContent = text;
+}
+}
+}
+document.documentElement.lang = currentLang;
 }
 
 function switchLang(lang) {
@@ -250,7 +253,12 @@ if (container) {
 container.innerHTML = '';
 if (window.__injectFlags) window.__injectFlags();
 }
+// Re-apply translations to newly swapped content
 if (window.__applyTranslations) window.__applyTranslations();
 localizeLinks();
 }
+// Also handle any other HTMX swaps that might add translatable content
+setTimeout(function() {
+if (window.__applyTranslations) window.__applyTranslations();
+}, 50);
 });
