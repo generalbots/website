@@ -67,15 +67,6 @@ function applyTranslations() {
 function switchLang(lang) {
   if (lang === currentLang) return;
   loadLang(lang, function() {
-    var path = window.location.pathname;
-    var parts = path.split('/');
-    if (supportedLangs.indexOf(parts[1]) !== -1) {
-      parts[1] = lang;
-    } else {
-      parts.splice(1, 0, lang);
-    }
-    var newPath = parts.join('/') || '/' + lang + '/';
-    window.history.replaceState({}, '', newPath);
     var container = document.getElementById('lang-flags');
     if (container) injectFlags();
   });
@@ -191,11 +182,25 @@ function initReveal() {
 
 /* ===================== 3rd Party ===================== */
 function initThirdParty() {
+  /* Add notranslate to data-i18n elements so GTranslate skips them */
+  document.querySelectorAll('[data-i18n]').forEach(function(el) {
+    el.classList.add('notranslate');
+  });
+
+  var gtranslateSettings = document.createElement('script');
+  gtranslateSettings.textContent = 'window.gtranslateSettings={default_language:"en",languages:["en","fr","it","es","pt","zh-CN","ru","ar","ja"],wrapper_selector:".gtranslate_wrapper",switcher_horizontal_position:"right",alt_flags:{"en":"usa","pt":"brazil"}};';
+  document.head.appendChild(gtranslateSettings);
+
   var gc = document.createElement('script');
   gc.async = true;
   gc.src = '//gc.zgo.at/count.js';
   gc.setAttribute('data-goatcounter', 'https://generalbots-pragmatismo.goatcounter.com/count');
   document.body.appendChild(gc);
+
+  var gt = document.createElement('script');
+  gt.src = 'https://cdn.gtranslate.net/widgets/latest/float.js';
+  gt.defer = true;
+  document.body.appendChild(gt);
 }
 
 /* ===================== Init ===================== */
@@ -209,6 +214,10 @@ document.body.addEventListener('htmx:afterSwap', function (e) {
   if (e.detail && e.detail.pathInfo && e.detail.pathInfo.requestPath &&
     e.detail.pathInfo.requestPath.indexOf('/partials/') !== -1) {
     initHeader();
+    /* Re-protect data-i18n elements from GTranslate after HTMX swap */
+    document.querySelectorAll('[data-i18n]').forEach(function(el) {
+      el.classList.add('notranslate');
+    });
     var container = document.getElementById('lang-flags');
     if (container) {
       container.innerHTML = '';
