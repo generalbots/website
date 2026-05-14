@@ -299,8 +299,4 @@ tr:hover td{background:rgba(255,255,255,.02)}
 .blog-card .card-author{font-size:.6875rem;color:var(--fg-muted);margin-bottom:.25rem}
 .card-header{padding:1.25rem}.card-body{padding:0 1.25rem 1.25rem}.card-footer{padding:1.25rem;border-top:1px solid var(--border-subtle)}
 
-/* Default margins for legacy pages */
-p{margin-bottom:.75rem}
-h1,h2,h3,h4,h5,h6{margin-bottom:.5rem}
-ul,ol{margin-bottom:.75rem}
-li{margin-bottom:.25rem}
+
