@@ -8,401 +8,438 @@
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://generalbots.org/features/">
 <meta property="og:title" content="75+ Features | General Bots Platform">
-<meta property="og:description" content="75+ applications: LLM, Calendar, Drive, Mail, WhatsApp, Teams, and more. Personal, Business & Enterprise.">
+<meta property="og:description" content="75+ applications: LLM, Calendar, Drive, Mail, WhatsApp, Teams, and more. Personal, Business &amp; Enterprise.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://generalbots.org/features/">
+<meta property="og:image" content="https://generalbots.org/logo-square.svg">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/favicon.ico">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="stylesheet" href="/css/site.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Features — General Bots Platform",
+  "description": "Explore 75+ applications powering AI agents, automation, and business workflows.",
+  "url": "https://generalbots.org/features/",
+  "isPartOf": {"@type": "WebSite", "name": "General Bots", "url": "https://generalbots.org"}
+}
+</script>
+<style>
+/* Page-specific styles */
+.features-hero{min-height:70vh;display:flex;align-items:center;padding:8rem 0 5rem;position:relative;overflow:hidden}
+.quick-link{
+  display:inline-flex;align-items:center;padding:.4375rem 1rem;font-size:.75rem;font-weight:600;
+  color:var(--fg-secondary);background:var(--bg-card);border:1px solid var(--border);
+  border-radius:var(--radius-2xl);transition:var(--transition);backdrop-filter:var(--glass-blur);
+}
+.quick-link:hover{border-color:var(--accent);color:var(--accent-light);background:var(--accent-soft)}
+
+/* Feature matrix card with illustration area */
+.feature-showcase{position:relative}
+.feature-showcase .showcase-visual{
+  width:100%;aspect-ratio:16/9;background:var(--bg-tertiary);border-radius:var(--radius);
+  margin-bottom:1.25rem;overflow:hidden;display:flex;align-items:center;justify-content:center;
+  border:1px solid var(--border-subtle);
+}
+
+/* Audience tab panel transition */
+.audience-content{opacity:0;transform:translateY(8px);transition:opacity .3s ease,transform .3s ease}
+.audience-content.active{opacity:1;transform:translateY(0)}
+</style>
 </head>
 <body>
+
 <div hx-get="/partials/header.html" hx-swap="innerHTML" hx-trigger="load"></div>
+
 <main>
 
-<section class="page-section" style="padding-top:6rem;position:relative;overflow:hidden;background:linear-gradient(180deg,var(--bg) 0%,var(--bg-secondary) 100%)">
+<!-- ═══════════════ HERO ═══════════════ -->
+<section class="features-hero" style="position:relative;overflow:hidden">
+<div class="mesh-pattern"></div>
 <div class="bloom bloom-1"></div>
 <div class="bloom bloom-2"></div>
-<div class="mesh-pattern"></div>
-<div style="position:absolute;inset:0;opacity:.03;pointer-events:none">
-<svg width="100%" height="100%" viewBox="0 0 1200 600" fill="none">
-  <g opacity=".5">
-    <rect x="50" y="100" width="60" height="40" rx="4" fill="#fff" />
-    <rect x="130" y="80" width="60" height="60" rx="4" fill="#fff" />
-    <rect x="210" y="120" width="60" height="20" rx="4" fill="#fff" />
-    <line x1="80" y1="140" x2="80" y2="400" stroke="#fff" stroke-width=".5" />
-    <line x1="160" y1="140" x2="160" y2="400" stroke="#fff" stroke-width=".5" />
-    <line x1="240" y1="140" x2="240" y2="400" stroke="#fff" stroke-width=".5" />
-    <circle cx="80" cy="380" r="20" fill="#fff" />
-    <circle cx="160" cy="350" r="20" fill="#fff" />
-    <circle cx="240" cy="390" r="20" fill="#fff" />
-    <rect x="800" y="150" width="300" height="180" rx="8" fill="#fff" />
-    <rect x="820" y="170" width="120" height="8" rx="2" fill="#fff" opacity=".3"/>
-    <rect x="820" y="190" width="200" height="6" rx="2" fill="#fff" opacity=".2"/>
-    <rect x="820" y="210" width="160" height="6" rx="2" fill="#fff" opacity=".2"/>
-    <rect x="820" y="240" width="80" height="24" rx="4" fill="#fff" opacity=".15"/>
-    <rect x="910" y="240" width="80" height="24" rx="4" fill="#fff" opacity=".15"/>
-    <rect x="820" y="280" width="260" height="30" rx="15" fill="#fff" opacity=".1"/>
-  </g>
-</svg>
-</div>
-<div class="container text-center" style="position:relative;z-index:1">
-<div class="reveal">
-<div class="badge mb-4" style="margin-left:auto;margin-right:auto;width:fit-content">
-<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/></svg>
-75+ Applications
-</div>
-<h1 class="display-large" style="font-size:clamp(2.5rem,6vw,4.5rem);font-weight:900;letter-spacing:-.04em;line-height:.95;text-transform:uppercase;margin-bottom:1.25rem">The Complete<br>AI Platform</h1>
-<p class="text-lg text-muted max-w-2xl mx-auto leading-relaxed mb-10" style="font-size:1.125rem" data-i18n="features.hero.sub">Chat, CRM, Mail, Drive, Calendar, AI Search — every application you need, integrated into one open platform. From personal productivity to enterprise-scale AI.</p>
-<div class="flex flex-wrap gap-4 justify-center">
-<a href="#core" class="btn btn-primary btn-lg" data-i18n="features.core_platform">Core Platform</a>
-<a href="#business" class="btn btn-outline btn-lg" data-i18n="features.business_tools">Business Tools</a>
-<a href="#enterprise" class="btn btn-outline btn-lg" data-i18n="features.tab.enterprise">Enterprise</a>
-</div>
+<div class="hero-orb hero-orb-1"></div>
+<div class="hero-orb hero-orb-2"></div>
+<div class="container" style="position:relative;z-index:2">
+<div class="reveal" style="text-align:center">
+  <div class="hero-badge" style="margin:0 auto 2rem">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/></svg>
+    75+ Applications
+  </div>
+  <h1 style="font-size:clamp(2.5rem,6vw,4.5rem);font-weight:900;letter-spacing:-.05em;line-height:.92;margin-bottom:1.5rem">The Complete<br><span class="gradient-word">AI Platform</span></h1>
+  <p class="text-lg max-w-2xl mx-auto leading-relaxed mb-8" style="color:var(--fg-secondary);font-size:1.125rem" data-i18n="features.hero.sub">Chat, CRM, Mail, Drive, Calendar, AI Search — every application you need, integrated into one open platform. From personal productivity to enterprise-scale AI.</p>
+  <div class="flex flex-wrap gap-4 justify-center">
+    <a href="#core" class="btn btn-primary btn-lg" data-i18n="features.core_platform">Core Platform</a>
+    <a href="#business" class="btn btn-outline btn-lg" data-i18n="features.business_tools">Business Tools</a>
+    <a href="#enterprise" class="btn btn-outline btn-lg" data-i18n="features.tab.enterprise">Enterprise</a>
+  </div>
 </div>
 </div>
 </section>
 
-<!-- Quick Access -->
-<section class="page-section" style="border-bottom:1px solid var(--border-subtle)">
+<!-- ═══════════════ QUICK ACCESS ═══════════════ -->
+<section class="section" style="padding:2rem 0;border-bottom:1px solid var(--border-subtle)">
 <div class="container">
-<div class="flex flex-wrap gap-2 justify-center" style="margin:-.5rem 0">
-<a href="/features/ai-search/" style="padding:.5rem 1rem;font-size:.75rem;font-weight:600;color:var(--fg-muted);border:1px solid var(--border-subtle);border-radius:.25rem;transition:var(--transition)" data-i18n="features.ai_search">AI Search</a>
-<a href="/features/bot-factory/" style="padding:.5rem 1rem;font-size:.75rem;font-weight:600;color:var(--fg-muted);border:1px solid var(--border-subtle);border-radius:.25rem;transition:var(--transition)" data-i18n="features.bot_factory">Bot Factory</a>
-<a href="/features/broadcast/" style="padding:.5rem 1rem;font-size:.75rem;font-weight:600;color:var(--fg-muted);border:1px solid var(--border-subtle);border-radius:.25rem;transition:var(--transition)" data-i18n="features.broadcast">Broadcast</a>
-<a href="/features/content-generation/" style="padding:.5rem 1rem;font-size:.75rem;font-weight:600;color:var(--fg-muted);border:1px solid var(--border-subtle);border-radius:.25rem;transition:var(--transition)" data-i18n="features.content_gen">Content Gen</a>
-<a href="/features/create-apis-in-word/" style="padding:.5rem 1rem;font-size:.75rem;font-weight:600;color:var(--fg-muted);border:1px solid var(--border-subtle);border-radius:.25rem;transition:var(--transition)" data-i18n="features.apis_in_basic">APIs in BASIC</a>
-<a href="/features/llm-tools/" style="padding:.5rem 1rem;font-size:.75rem;font-weight:600;color:var(--fg-muted);border:1px solid var(--border-subtle);border-radius:.25rem;transition:var(--transition)" data-i18n="features.llm_tools">LLM Tools</a>
-<a href="/features/talk-to-data/" style="padding:.5rem 1rem;font-size:.75rem;font-weight:600;color:var(--fg-muted);border:1px solid var(--border-subtle);border-radius:.25rem;transition:var(--transition)" data-i18n="features.talk_to_data">Talk to Data</a>
-<a href="/features/trainning/" style="padding:.5rem 1rem;font-size:.75rem;font-weight:600;color:var(--fg-muted);border:1px solid var(--border-subtle);border-radius:.25rem;transition:var(--transition)" data-i18n="features.training">Training</a>
-<a href="/features/web-automation/" style="padding:.5rem 1rem;font-size:.75rem;font-weight:600;color:var(--fg-muted);border:1px solid var(--border-subtle);border-radius:.25rem;transition:var(--transition)" data-i18n="features.web_automation">Web Automation</a>
+<div class="flex flex-wrap gap-2 justify-center">
+  <a href="/features/ai-search/" class="quick-link" data-i18n="features.ai_search">AI Search</a>
+  <a href="/features/bot-factory/" class="quick-link" data-i18n="features.bot_factory">Bot Factory</a>
+  <a href="/features/broadcast/" class="quick-link" data-i18n="features.broadcast">Broadcast</a>
+  <a href="/features/content-generation/" class="quick-link" data-i18n="features.content_gen">Content Gen</a>
+  <a href="/features/create-apis-in-word/" class="quick-link" data-i18n="features.apis_in_basic">APIs in BASIC</a>
+  <a href="/features/llm-tools/" class="quick-link" data-i18n="features.llm_tools">LLM Tools</a>
+  <a href="/features/talk-to-data/" class="quick-link" data-i18n="features.talk_to_data">Talk to Data</a>
+  <a href="/features/trainning/" class="quick-link" data-i18n="features.training">Training</a>
+  <a href="/features/web-automation/" class="quick-link" data-i18n="features.web_automation">Web Automation</a>
 </div>
 </div>
 </section>
 
-<section class="page-section-lg reveal">
+<!-- ═══════════════ FEATURE MATRIX ═══════════════ -->
+<section class="section reveal">
 <div class="container">
-<div class="section-header">
-<span class="overline" data-i18n="features.core_features">Core Features</span>
-<h2 data-i18n="features.matrix.title">Feature Matrix</h2>
-<p data-i18n="features.matrix.sub">Nine integrated capabilities — each with its own dedicated deep-dive page.</p>
+<div class="section-header centered">
+  <span class="overline" data-i18n="features.core_features">Core Features</span>
+  <h2 data-i18n="features.matrix.title">Feature Matrix</h2>
+  <p data-i18n="features.matrix.sub">Nine integrated capabilities — each with its own dedicated deep-dive page.</p>
 </div>
 <div class="grid-3">
-<div class="glass-card p-6 card-hover">
-<div style="width:100%;aspect-ratio:16/9;background:var(--bg-tertiary);border-radius:.5rem;margin-bottom:1.5rem;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;border:1px solid var(--border-subtle)">
-<svg width="100%" height="100%" viewBox="0 0 400 225" fill="none">
-  <rect width="400" height="225" fill="none"/>
-  <circle cx="200" cy="112" r="30" stroke="rgba(255,255,255,.3)" stroke-width="2" />
-  <path d="M 220 132 L 250 162" stroke="rgba(255,255,255,.5)" stroke-width="3" stroke-linecap="round" />
-  <path d="M 180 112 H 220" stroke="#fff" stroke-width="2" opacity="0.6" />
-</svg>
-</div>
-<h3 class="text-xl font-bold mb-2" data-i18n="features.ai_search_">AI Search</h3>
-<p class="text-sm text-muted leading-relaxed mb-6" data-i18n="features.high_performance_retrieval_augmented_generation_index_pdfs">High-performance Retrieval Augmented Generation. Index PDFs, Word, and Excel files with sub-second semantic retrieval.</p>
-<a href="/features/ai-search/" class="text-xs font-bold uppercase tracking-widest" style="color:var(--fg-muted)">Learn More &rarr;</a>
-</div>
-<div class="glass-card p-6 card-hover">
-<div style="width:100%;aspect-ratio:16/9;background:var(--bg-tertiary);border-radius:.5rem;margin-bottom:1.5rem;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;border:1px solid var(--border-subtle)">
-<svg width="100%" height="100%" viewBox="0 0 400 225" fill="none">
-  <rect width="400" height="225" fill="none"/>
-  <rect x="160" y="80" width="80" height="65" rx="8" stroke="rgba(255,255,255,.3)" stroke-width="2" />
-  <path d="M 175 100 H 225 M 175 120 H 225" stroke="#fff" stroke-width="2" opacity="0.4" />
-</svg>
-</div>
-<h3 class="text-xl font-bold mb-2" data-i18n="features.bot_factory_">Bot Factory</h3>
-<p class="text-sm text-muted leading-relaxed mb-6" data-i18n="features.rapid_prototyping_and_deployment_engine_orchestrate_multipl">Rapid prototyping and deployment engine. Orchestrate multiple bots with distinct personalities from a single dashboard.</p>
-<a href="/features/bot-factory/" class="text-xs font-bold uppercase tracking-widest" style="color:var(--fg-muted)">Learn More &rarr;</a>
-</div>
-<div class="glass-card p-6 card-hover">
-<div style="width:100%;aspect-ratio:16/9;background:var(--bg-tertiary);border-radius:.5rem;margin-bottom:1.5rem;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;border:1px solid var(--border-subtle)">
-<svg width="100%" height="100%" viewBox="0 0 400 225" fill="none">
-  <rect width="400" height="225" fill="none"/>
-  <path d="M 140 112 H 260 M 200 72 V 152" stroke="rgba(255,255,255,.2)" stroke-width="1.5" opacity="0.2" />
-  <circle cx="200" cy="112" r="40" stroke="#fff" stroke-width="2" opacity="0.6" />
-  <path d="M 180 112 L 220 112" stroke="#fff" stroke-width="2" />
-</svg>
-</div>
-<h3 class="text-xl font-bold mb-2" data-i18n="features.broadcast_">Broadcast</h3>
-<p class="text-sm text-muted leading-relaxed mb-6" data-i18n="features.omnichannel_outbound_messaging_with_ai_driven_personalizatio">Omnichannel outbound messaging with AI-driven personalization. Reach thousands on WhatsApp, Telegram, and SMS.</p>
-<a href="/features/broadcast/" class="text-xs font-bold uppercase tracking-widest" style="color:var(--fg-muted)">Learn More &rarr;</a>
-</div>
-<div class="glass-card p-6 card-hover">
-<div style="width:100%;aspect-ratio:16/9;background:var(--bg-tertiary);border-radius:.5rem;margin-bottom:1.5rem;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;border:1px solid var(--border-subtle)">
-<svg width="100%" height="100%" viewBox="0 0 400 225" fill="none">
-  <rect width="400" height="225" fill="none"/>
-  <rect x="150" y="80" width="100" height="65" rx="4" stroke="rgba(255,255,255,.3)" stroke-width="2" />
-  <path d="M 170 100 H 230 M 170 115 H 230 M 170 130 H 200" stroke="#fff" stroke-width="2" opacity="0.5" />
-</svg>
-</div>
-<h3 class="text-xl font-bold mb-2" data-i18n="features.content_generation">Content Generation</h3>
-<p class="text-sm text-muted leading-relaxed mb-6" data-i18n="features.enterprise_grade_ai_writer_generate_seo_optimized_content_i">Enterprise-grade AI writer. Generate SEO-optimized content in your brand voice.</p>
-<a href="/features/content-generation/" class="text-xs font-bold uppercase tracking-widest" style="color:var(--fg-muted)">Learn More &rarr;</a>
-</div>
-<div class="glass-card p-6 card-hover">
-<div style="width:100%;aspect-ratio:16/9;background:var(--bg-tertiary);border-radius:.5rem;margin-bottom:1.5rem;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;border:1px solid var(--border-subtle)">
-<svg width="100%" height="100%" viewBox="0 0 400 225" fill="none">
-  <rect width="400" height="225" fill="none"/>
-  <rect x="140" y="80" width="120" height="65" rx="2" fill="none" stroke="rgba(255,255,255,.3)" stroke-width="2" />
-  <text x="200" y="118" text-anchor="middle" fill="#fff" font-size="16" font-weight="bold" opacity="0.5">10 PRINT "AI"</text>
-</svg>
-</div>
-<h3 class="text-xl font-bold mb-2" data-i18n="features.create_apis_in_basic">Create APIs in BASIC</h3>
-<p class="text-sm text-muted leading-relaxed mb-6" data-i18n="features.build_apis_using_a_simplified_basic_like_syntax_legacy_syst">Build APIs using a simplified BASIC-like syntax. Legacy system integration and rapid endpoint development.</p>
-<a href="/features/create-apis-in-word/" class="text-xs font-bold uppercase tracking-widest" style="color:var(--fg-muted)">Learn More &rarr;</a>
-</div>
-<div class="glass-card p-6 card-hover">
-<div style="width:100%;aspect-ratio:16/9;background:var(--bg-tertiary);border-radius:.5rem;margin-bottom:1.5rem;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;border:1px solid var(--border-subtle)">
-<svg width="100%" height="100%" viewBox="0 0 400 225" fill="none">
-  <rect width="400" height="225" fill="none"/>
-  <rect x="170" y="80" width="60" height="40" rx="4" stroke="rgba(255,255,255,.3)" stroke-width="2" />
-  <path d="M 185 100 L 215 100" stroke="#fff" stroke-width="3" stroke-linecap="round" />
-  <path d="M 200 120 V 145" stroke="rgba(255,255,255,.3)" stroke-width="2" />
-</svg>
-</div>
-<h3 class="text-xl font-bold mb-2" data-i18n="features.llm_tools_">LLM Tools</h3>
-<p class="text-sm text-muted leading-relaxed mb-6" data-i18n="features.equip_your_ai_with_real_world_capabilities_tools_for_web_se">Equip your AI with real-world capabilities. Tools for web search, calculator, and custom API calls.</p>
-<a href="/features/llm-tools/" class="text-xs font-bold uppercase tracking-widest" style="color:var(--fg-muted)">Learn More &rarr;</a>
-</div>
-<div class="glass-card p-6 card-hover">
-<div style="width:100%;aspect-ratio:16/9;background:var(--bg-tertiary);border-radius:.5rem;margin-bottom:1.5rem;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;border:1px solid var(--border-subtle)">
-<svg width="100%" height="100%" viewBox="0 0 400 225" fill="none">
-  <rect width="400" height="225" fill="none"/>
-  <path d="M 150 160 L 180 100 L 210 130 L 250 60" stroke="#fff" stroke-width="3" stroke-linecap="round" />
-</svg>
-</div>
-<h3 class="text-xl font-bold mb-2" data-i18n="features.talk_to_data_">Talk to Data</h3>
-<p class="text-sm text-muted leading-relaxed mb-6" data-i18n="features.natural_language_interface_for_databases_query_sql_excel">Natural language interface for databases. Query SQL, Excel, and CSV using plain English.</p>
-<a href="/features/talk-to-data/" class="text-xs font-bold uppercase tracking-widest" style="color:var(--fg-muted)">Learn More &rarr;</a>
-</div>
-<div class="glass-card p-6 card-hover">
-<div style="width:100%;aspect-ratio:16/9;background:var(--bg-tertiary);border-radius:.5rem;margin-bottom:1.5rem;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;border:1px solid var(--border-subtle)">
-<svg width="100%" height="100%" viewBox="0 0 400 225" fill="none">
-  <rect width="400" height="225" fill="none"/>
-  <rect x="160" y="85" width="80" height="60" rx="4" stroke="rgba(255,255,255,.3)" stroke-width="2" />
-  <circle cx="200" cy="115" r="15" fill="#fff" opacity="0.2" />
-</svg>
-</div>
-<h3 class="text-xl font-bold mb-2" data-i18n="features.training_">Training</h3>
-<p class="text-sm text-muted leading-relaxed mb-6" data-i18n="features.ingest_institutional_knowledge_train_your_bot_using_word_e">Ingest institutional knowledge. Train your bot using Word, Excel, and PDF documents with zero coding.</p>
-<a href="/features/trainning/" class="text-xs font-bold uppercase tracking-widest" style="color:var(--fg-muted)">Learn More &rarr;</a>
-</div>
-<div class="glass-card p-6 card-hover">
-<div style="width:100%;aspect-ratio:16/9;background:var(--bg-tertiary);border-radius:.5rem;margin-bottom:1.5rem;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;border:1px solid var(--border-subtle)">
-<svg width="100%" height="100%" viewBox="0 0 400 225" fill="none">
-  <rect width="400" height="225" fill="none"/>
-  <circle cx="200" cy="112" r="30" stroke="rgba(255,255,255,.3)" stroke-width="1.5" />
-  <path d="M 200 82 V 142 M 170 112 H 230" stroke="#fff" stroke-width="2" />
-</svg>
-</div>
-<h3 class="text-xl font-bold mb-2" data-i18n="features.web_automation__" data-i18n="features.web_automation_">Web Automation</h3>
-<p class="text-sm text-muted leading-relaxed mb-6" data-i18n="features.autonomous_browser_agents_automate_data_scraping_form_fill">Autonomous browser agents. Automate data scraping, form filling, and complex web workflows.</p>
-<a href="/features/web-automation/" class="text-xs font-bold uppercase tracking-widest" style="color:var(--fg-muted)">Learn More &rarr;</a>
-</div>
+
+  <div class="bento-item feature-showcase reveal reveal-delay-1">
+    <div class="showcase-visual">
+      <svg width="100%" height="100%" viewBox="0 0 400 225" fill="none">
+        <rect width="400" height="225" fill="none"/>
+        <circle cx="200" cy="112" r="30" stroke="var(--fg-muted)" stroke-width="2" opacity=".3"/>
+        <path d="M 220 132 L 250 162" stroke="var(--fg-secondary)" stroke-width="3" stroke-linecap="round" opacity=".5"/>
+        <path d="M 180 112 H 220" stroke="var(--fg-secondary)" stroke-width="2" opacity="0.4" />
+      </svg>
+    </div>
+    <h3 data-i18n="features.ai_search_">AI Search</h3>
+    <p data-i18n="features.high_performance_retrieval_augmented_generation_index_pdfs">High-performance Retrieval Augmented Generation. Index PDFs, Word, and Excel files with sub-second semantic retrieval.</p>
+    <a href="/features/ai-search/" class="text-xs font-bold uppercase tracking-widest" style="color:var(--accent-light);display:inline-block;margin-top:.75rem">Learn More &rarr;</a>
+  </div>
+
+  <div class="bento-item feature-showcase reveal reveal-delay-2">
+    <div class="showcase-visual">
+      <svg width="100%" height="100%" viewBox="0 0 400 225" fill="none">
+        <rect width="400" height="225" fill="none"/>
+        <rect x="160" y="80" width="80" height="65" rx="8" stroke="var(--fg-muted)" stroke-width="2" opacity=".3"/>
+        <path d="M 175 100 H 225 M 175 120 H 225" stroke="var(--fg-secondary)" stroke-width="2" opacity="0.4" />
+      </svg>
+    </div>
+    <h3 data-i18n="features.bot_factory_">Bot Factory</h3>
+    <p data-i18n="features.rapid_prototyping_and_deployment_engine_orchestrate_multipl">Rapid prototyping and deployment engine. Orchestrate multiple bots with distinct personalities from a single dashboard.</p>
+    <a href="/features/bot-factory/" class="text-xs font-bold uppercase tracking-widest" style="color:var(--accent-light);display:inline-block;margin-top:.75rem">Learn More &rarr;</a>
+  </div>
+
+  <div class="bento-item feature-showcase reveal reveal-delay-3">
+    <div class="showcase-visual">
+      <svg width="100%" height="100%" viewBox="0 0 400 225" fill="none">
+        <rect width="400" height="225" fill="none"/>
+        <path d="M 140 112 H 260 M 200 72 V 152" stroke="var(--fg-muted)" stroke-width="1.5" opacity="0.2" />
+        <circle cx="200" cy="112" r="40" stroke="var(--fg-secondary)" stroke-width="2" opacity="0.4" />
+        <path d="M 180 112 L 220 112" stroke="var(--fg-secondary)" stroke-width="2" opacity=".5"/>
+      </svg>
+    </div>
+    <h3 data-i18n="features.broadcast_">Broadcast</h3>
+    <p data-i18n="features.omnichannel_outbound_messaging_with_ai_driven_personalizatio">Omnichannel outbound messaging with AI-driven personalization. Reach thousands on WhatsApp, Telegram, and SMS.</p>
+    <a href="/features/broadcast/" class="text-xs font-bold uppercase tracking-widest" style="color:var(--accent-light);display:inline-block;margin-top:.75rem">Learn More &rarr;</a>
+  </div>
+
+  <div class="bento-item feature-showcase reveal reveal-delay-1">
+    <div class="showcase-visual">
+      <svg width="100%" height="100%" viewBox="0 0 400 225" fill="none">
+        <rect width="400" height="225" fill="none"/>
+        <rect x="150" y="80" width="100" height="65" rx="4" stroke="var(--fg-muted)" stroke-width="2" opacity=".3"/>
+        <path d="M 170 100 H 230 M 170 115 H 230 M 170 130 H 200" stroke="var(--fg-secondary)" stroke-width="2" opacity="0.4" />
+      </svg>
+    </div>
+    <h3 data-i18n="features.content_generation">Content Generation</h3>
+    <p data-i18n="features.enterprise_grade_ai_writer_generate_seo_optimized_content_i">Enterprise-grade AI writer. Generate SEO-optimized content in your brand voice.</p>
+    <a href="/features/content-generation/" class="text-xs font-bold uppercase tracking-widest" style="color:var(--accent-light);display:inline-block;margin-top:.75rem">Learn More &rarr;</a>
+  </div>
+
+  <div class="bento-item feature-showcase reveal reveal-delay-2">
+    <div class="showcase-visual">
+      <svg width="100%" height="100%" viewBox="0 0 400 225" fill="none">
+        <rect width="400" height="225" fill="none"/>
+        <rect x="140" y="80" width="120" height="65" rx="2" fill="none" stroke="var(--fg-muted)" stroke-width="2" opacity=".3"/>
+        <text x="200" y="118" text-anchor="middle" fill="var(--fg-secondary)" font-size="16" font-weight="bold" opacity="0.4">10 PRINT "AI"</text>
+      </svg>
+    </div>
+    <h3 data-i18n="features.create_apis_in_basic">Create APIs in BASIC</h3>
+    <p data-i18n="features.build_apis_using_a_simplified_basic_like_syntax_legacy_syst">Build APIs using a simplified BASIC-like syntax. Legacy system integration and rapid endpoint development.</p>
+    <a href="/features/create-apis-in-word/" class="text-xs font-bold uppercase tracking-widest" style="color:var(--accent-light);display:inline-block;margin-top:.75rem">Learn More &rarr;</a>
+  </div>
+
+  <div class="bento-item feature-showcase reveal reveal-delay-3">
+    <div class="showcase-visual">
+      <svg width="100%" height="100%" viewBox="0 0 400 225" fill="none">
+        <rect width="400" height="225" fill="none"/>
+        <rect x="170" y="80" width="60" height="40" rx="4" stroke="var(--fg-muted)" stroke-width="2" opacity=".3"/>
+        <path d="M 185 100 L 215 100" stroke="var(--fg-secondary)" stroke-width="3" stroke-linecap="round" opacity=".4"/>
+        <path d="M 200 120 V 145" stroke="var(--fg-muted)" stroke-width="2" opacity=".3"/>
+      </svg>
+    </div>
+    <h3 data-i18n="features.llm_tools_">LLM Tools</h3>
+    <p data-i18n="features.equip_your_ai_with_real_world_capabilities_tools_for_web_se">Equip your AI with real-world capabilities. Tools for web search, calculator, and custom API calls.</p>
+    <a href="/features/llm-tools/" class="text-xs font-bold uppercase tracking-widest" style="color:var(--accent-light);display:inline-block;margin-top:.75rem">Learn More &rarr;</a>
+  </div>
+
+  <div class="bento-item feature-showcase reveal reveal-delay-1">
+    <div class="showcase-visual">
+      <svg width="100%" height="100%" viewBox="0 0 400 225" fill="none">
+        <rect width="400" height="225" fill="none"/>
+        <path d="M 150 160 L 180 100 L 210 130 L 250 60" stroke="var(--fg-secondary)" stroke-width="3" stroke-linecap="round" opacity=".4"/>
+      </svg>
+    </div>
+    <h3 data-i18n="features.talk_to_data_">Talk to Data</h3>
+    <p data-i18n="features.natural_language_interface_for_databases_query_sql_excel">Natural language interface for databases. Query SQL, Excel, and CSV using plain English.</p>
+    <a href="/features/talk-to-data/" class="text-xs font-bold uppercase tracking-widest" style="color:var(--accent-light);display:inline-block;margin-top:.75rem">Learn More &rarr;</a>
+  </div>
+
+  <div class="bento-item feature-showcase reveal reveal-delay-2">
+    <div class="showcase-visual">
+      <svg width="100%" height="100%" viewBox="0 0 400 225" fill="none">
+        <rect width="400" height="225" fill="none"/>
+        <rect x="160" y="85" width="80" height="60" rx="4" stroke="var(--fg-muted)" stroke-width="2" opacity=".3"/>
+        <circle cx="200" cy="115" r="15" fill="var(--fg-muted)" opacity="0.15" />
+      </svg>
+    </div>
+    <h3 data-i18n="features.training_">Training</h3>
+    <p data-i18n="features.ingest_institutional_knowledge_train_your_bot_using_word_e">Ingest institutional knowledge. Train your bot using Word, Excel, and PDF documents with zero coding.</p>
+    <a href="/features/trainning/" class="text-xs font-bold uppercase tracking-widest" style="color:var(--accent-light);display:inline-block;margin-top:.75rem">Learn More &rarr;</a>
+  </div>
+
+  <div class="bento-item feature-showcase reveal reveal-delay-3">
+    <div class="showcase-visual">
+      <svg width="100%" height="100%" viewBox="0 0 400 225" fill="none">
+        <rect width="400" height="225" fill="none"/>
+        <circle cx="200" cy="112" r="30" stroke="var(--fg-muted)" stroke-width="1.5" opacity=".3"/>
+        <path d="M 200 82 V 142 M 170 112 H 230" stroke="var(--fg-secondary)" stroke-width="2" opacity=".4"/>
+      </svg>
+    </div>
+    <h3 data-i18n="features.web_automation_">Web Automation</h3>
+    <p data-i18n="features.autonomous_browser_agents_automate_data_scraping_form_fill">Autonomous browser agents. Automate data scraping, form filling, and complex web workflows.</p>
+    <a href="/features/web-automation/" class="text-xs font-bold uppercase tracking-widest" style="color:var(--accent-light);display:inline-block;margin-top:.75rem">Learn More &rarr;</a>
+  </div>
+
 </div>
 </div>
 </section>
-<section class="page-section">
+
+<!-- ═══════════════ AUDIENCE TABS ═══════════════ -->
+<section class="section section-alt reveal">
 <div class="container text-center">
-<p class="text-sm text-muted mb-4 uppercase tracking-widest font-bold" data-i18n="features.choose_your_perspective">Choose Your Perspective</p>
+<div class="section-header centered">
+  <span class="overline" data-i18n="features.choose_your_perspective">Choose Your Perspective</span>
+  <h2>One Platform, Every Scale</h2>
+</div>
 <div class="audience-tabs">
-<button class="audience-tab active" data-tab="personal" onclick="switchTab(this,'personal')" data-i18n="features.tab.personal">Personal</button>
-<button class="audience-tab" data-tab="business" onclick="switchTab(this,'business')" data-i18n="features.tab.business">Business</button>
-<button class="audience-tab" data-tab="enterprise" onclick="switchTab(this,'enterprise')" data-i18n="features.tab.enterprise">Enterprise</button>
+  <button class="audience-tab active" data-tab="personal" onclick="switchTab(this,'personal')" data-i18n="features.tab.personal">Personal</button>
+  <button class="audience-tab" data-tab="business" onclick="switchTab(this,'business')" data-i18n="features.tab.business">Business</button>
+  <button class="audience-tab" data-tab="enterprise" onclick="switchTab(this,'enterprise')" data-i18n="features.tab.enterprise">Enterprise</button>
 </div>
 <div id="tab-personal" class="audience-content active">
-<div class="usecase-card" style="max-width:700px;margin:0 auto">
-<div class="uc-for"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> For Developers & Creators</div>
-<h3 class="uc-title" data-i18n="features.your_own_ai_your_own_data">Your Own AI, Your Own Data</h3>
-<p class="uc-desc" data-i18n="features.run_your_own_ai_locally_or_connect_to_cloud_providers_conne">Run your own AI locally or connect to cloud providers. Connect WhatsApp to your personal knowledge base. Schedule reminders. Generate documents. All on your own hardware, with your own data, open source and free.</p>
-<div class="uc-tags"><span class="badge" data-i18n="features.open_source">Open Source</span><span class="badge" data-i18n="features.self_hosted">Self-Hosted</span><span class="badge" data-i18n="features.whatsapp" data-i18n="features.local_ai">Local AI</span></div>
-</div>
+  <div class="usecase-card" style="max-width:700px;margin:0 auto;text-align:left">
+    <div class="uc-for"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> For Developers &amp; Creators</div>
+    <h3 class="uc-title" data-i18n="features.your_own_ai_your_own_data">Your Own AI, Your Own Data</h3>
+    <p class="uc-desc" data-i18n="features.run_your_own_ai_locally_or_connect_to_cloud_providers_conne">Run your own AI locally or connect to cloud providers. Connect WhatsApp to your personal knowledge base. Schedule reminders. Generate documents. All on your own hardware, with your own data, open source and free.</p>
+    <div class="uc-tags"><span class="badge" data-i18n="features.open_source">Open Source</span><span class="badge" data-i18n="features.self_hosted">Self-Hosted</span><span class="badge" data-i18n="features.local_ai">Local AI</span></div>
+  </div>
 </div>
 <div id="tab-business" class="audience-content">
-<div class="usecase-card" style="max-width:700px;margin:0 auto">
-<div class="uc-for"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/></svg> For Teams & Startups</div>
-<h3 class="uc-title" data-i18n="features.replace_five_tools_with_one">Replace Five Tools with One</h3>
-<p class="uc-desc" data-i18n="features.whatsapp_for_customers_teams_for_internal_chat_calendar_fo">WhatsApp for customers. Teams for internal chat. Calendar for meetings. Drive for files. Mail for communication. All in one platform that runs on a single server — with AI built in.</p>
-<div class="uc-tags"><span class="badge" data-i18n="features.all_in_one">All-in-One</span><span class="badge">WhatsApp</span><span class="badge" data-i18n="features.teams">Teams</span><span class="badge" data-i18n="features.01d3fccafd">CRM</span></div>
-</div>
+  <div class="usecase-card" style="max-width:700px;margin:0 auto;text-align:left">
+    <div class="uc-for"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/></svg> For Teams &amp; Startups</div>
+    <h3 class="uc-title" data-i18n="features.replace_five_tools_with_one">Replace Five Tools with One</h3>
+    <p class="uc-desc" data-i18n="features.whatsapp_for_customers_teams_for_internal_chat_calendar_fo">WhatsApp for customers. Teams for internal chat. Calendar for meetings. Drive for files. Mail for communication. All in one platform that runs on a single server — with AI built in.</p>
+    <div class="uc-tags"><span class="badge" data-i18n="features.all_in_one">All-in-One</span><span class="badge">WhatsApp</span><span class="badge" data-i18n="features.teams">Teams</span><span class="badge" data-i18n="features.01d3fccafd">CRM</span></div>
+  </div>
 </div>
 <div id="tab-enterprise" class="audience-content">
-<div class="usecase-card" style="max-width:700px;margin:0 auto">
-<div class="uc-for"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18"/><path d="M5 21V7l8-4 8 4v14"/></svg> For Organizations</div>
-<h3 class="uc-title" data-i18n="features.scale_without_compromise">Scale Without Compromise</h3>
-<p class="uc-desc" data-i18n="features.75_applications_orchestrated_as_a_single_platform_each_dep">75+ applications orchestrated as a single platform. Each deploys independently or together. Full RBAC, multi-tenancy, and compliance (LGPD, GDPR, HIPAA). Run on-premise or in the cloud. Your data, your rules.</p>
-<div class="uc-tags"><span class="badge" data-i18n="features.rbac">RBAC</span><span class="badge" data-i18n="features.multi_tenant">Multi-Tenant</span><span class="badge" data-i18n="features.compliance">Compliance</span><span class="badge" data-i18n="features.on_premise">On-Premise</span></div>
-</div>
+  <div class="usecase-card" style="max-width:700px;margin:0 auto;text-align:left">
+    <div class="uc-for"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18"/><path d="M5 21V7l8-4 8 4v14"/></svg> For Organizations</div>
+    <h3 class="uc-title" data-i18n="features.scale_without_compromise">Scale Without Compromise</h3>
+    <p class="uc-desc" data-i18n="features.75_applications_orchestrated_as_a_single_platform_each_dep">75+ applications orchestrated as a single platform. Each deploys independently or together. Full RBAC, multi-tenancy, and compliance (LGPD, GDPR, HIPAA). Run on-premise or in the cloud. Your data, your rules.</p>
+    <div class="uc-tags"><span class="badge" data-i18n="features.rbac">RBAC</span><span class="badge" data-i18n="features.multi_tenant">Multi-Tenant</span><span class="badge" data-i18n="features.compliance">Compliance</span><span class="badge" data-i18n="features.on_premise">On-Premise</span></div>
+  </div>
 </div>
 </div>
 </section>
 
-<!-- Core Platform -->
-<section id="core" class="page-section-lg bg-gray-50">
+<!-- ═══════════════ CORE PLATFORM ═══════════════ -->
+<section id="core" class="section reveal">
 <div class="container">
-<div class="text-center mb-12 reveal">
-<h2 class="text-3xl font-bold tracking-tighter mb-4" data-i18n="features.core_platform_">Core Platform</h2>
-<p class="text-lg text-muted max-w-2xl mx-auto leading-relaxed" data-i18n="features.the_foundation_that_powers_everything_authentication_stora">The foundation that powers everything. Authentication, storage, AI, and orchestration.</p>
+<div class="section-header centered">
+  <span class="overline" data-i18n="features.core_platform_">Core Platform</span>
+  <h2 data-i18n="features.core_platform_">Core Platform</h2>
+  <p data-i18n="features.the_foundation_that_powers_everything_authentication_stora">The foundation that powers everything. Authentication, storage, AI, and orchestration.</p>
 </div>
 <div class="grid-3">
-<div class="glass-card p-6 card-hover reveal">
-<div class="icon-box mb-4"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
-<h3 class="text-xl font-bold mb-2" data-i18n="features.server">Server</h3>
-<p class="text-sm text-muted mb-4" data-i18n="features.the_heart_of_the_platform_web_server_websocket_messaging">The heart of the platform. Web server, WebSocket messaging, REST API, and request routing. Serves both the API and the web interface.</p>
-</div>
-<div class="glass-card p-6 card-hover reveal">
-<div class="icon-box mb-4"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 15v3m-6 2a6 6 0 0 1 12 0H6z"/><path d="M12 2a10 10 0 0 1 0 20"/></svg></div>
-<h3 class="text-xl font-bold mb-2" data-i18n="features.auth_identity">Auth / Identity</h3>
-<p class="text-sm text-muted mb-4" data-i18n="features.oauth_2_0_openid_connect_jwt_validation_and_session_manag">OAuth 2.0, OpenID Connect, JWT validation, and session management. Role-based access control (RBAC) for every endpoint. SSO-ready.</p>
-</div>
-<div class="glass-card p-6 card-hover reveal">
-<div class="icon-box mb-4"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div>
-<h3 class="text-xl font-bold mb-2" data-i18n="features.shared_database">Shared / Database</h3>
-<p class="text-sm text-muted mb-4" data-i18n="features.database_models_common_types_and_shared_utilities_across_a">Database models, common types, and shared utilities across all applications. PostgreSQL with managed schema definitions across all modules.</p>
-</div>
-<div class="glass-card p-6 card-hover reveal">
-<div class="icon-box mb-4"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></div>
-<h3 class="text-xl font-bold mb-2" data-i18n="features.ai_engine">AI Engine</h3>
-<p class="text-sm text-muted mb-4" data-i18n="features.llm_provider_orchestration_openai_anthropic_groq_azure">LLM provider orchestration. OpenAI, Anthropic, Groq, Azure, and local models. Automatic failover, token counting, streaming, and cost tracking across providers.</p>
-</div>
-<div class="glass-card p-6 card-hover reveal">
-<div class="icon-box mb-4"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></div>
-<h3 class="text-xl font-bold mb-2" data-i18n="features.drive_storage">Drive / Storage</h3>
-<p class="text-sm text-muted mb-4" data-i18n="features.s3_compatible_object_storage_file_upload_download_version">S3-compatible object storage. File upload, download, versioning, and automatic indexing for search and RAG. Works with MinIO, AWS S3, Wasabi.</p>
-</div>
-<div class="glass-card p-6 card-hover reveal">
-<div class="icon-box mb-4"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 11.5v7"/><path d="M6 20V11"/><path d="M18 20V11"/><line x1="2" y1="14" x2="22" y2="14"/></svg></div>
-<h3 class="text-xl font-bold mb-2" data-i18n="features.dashboards_analytics">Dashboards / Analytics</h3>
-<p class="text-sm text-muted mb-4" data-i18n="features.real_time_monitoring_dashboards_with_system_health_metrics">Real-time monitoring dashboards with system health metrics, business KPIs, and custom visualizations. Exportable and embeddable.</p>
-</div>
+  <div class="card reveal reveal-delay-1">
+    <div class="bento-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
+    <h3 data-i18n="features.server">Server</h3>
+    <p data-i18n="features.the_heart_of_the_platform_web_server_websocket_messaging">The heart of the platform. Web server, WebSocket messaging, REST API, and request routing. Serves both the API and the web interface.</p>
+  </div>
+  <div class="card reveal reveal-delay-2">
+    <div class="bento-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 15v3m-6 2a6 6 0 0 1 12 0H6z"/><path d="M12 2a10 10 0 0 1 0 20"/></svg></div>
+    <h3 data-i18n="features.auth_identity">Auth / Identity</h3>
+    <p data-i18n="features.oauth_2_0_openid_connect_jwt_validation_and_session_manag">OAuth 2.0, OpenID Connect, JWT validation, and session management. Role-based access control (RBAC) for every endpoint. SSO-ready.</p>
+  </div>
+  <div class="card reveal reveal-delay-3">
+    <div class="bento-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div>
+    <h3 data-i18n="features.shared_database">Shared / Database</h3>
+    <p data-i18n="features.database_models_common_types_and_shared_utilities_across_a">Database models, common types, and shared utilities across all applications. PostgreSQL with managed schema definitions across all modules.</p>
+  </div>
+  <div class="card reveal reveal-delay-1">
+    <div class="bento-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></div>
+    <h3 data-i18n="features.ai_engine">AI Engine</h3>
+    <p data-i18n="features.llm_provider_orchestration_openai_anthropic_groq_azure">LLM provider orchestration. OpenAI, Anthropic, Groq, Azure, and local models. Automatic failover, token counting, streaming, and cost tracking across providers.</p>
+  </div>
+  <div class="card reveal reveal-delay-2">
+    <div class="bento-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></div>
+    <h3 data-i18n="features.drive_storage">Drive / Storage</h3>
+    <p data-i18n="features.s3_compatible_object_storage_file_upload_download_version">S3-compatible object storage. File upload, download, versioning, and automatic indexing for search and RAG. Works with MinIO, AWS S3, Wasabi.</p>
+  </div>
+  <div class="card reveal reveal-delay-3">
+    <div class="bento-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 11.5v7"/><path d="M6 20V11"/><path d="M18 20V11"/><line x1="2" y1="14" x2="22" y2="14"/></svg></div>
+    <h3 data-i18n="features.dashboards_analytics">Dashboards / Analytics</h3>
+    <p data-i18n="features.real_time_monitoring_dashboards_with_system_health_metrics">Real-time monitoring dashboards with system health metrics, business KPIs, and custom visualizations. Exportable and embeddable.</p>
+  </div>
 </div>
 </div>
 </section>
 
-<!-- Business Tools -->
-<section id="business" class="page-section-lg">
+<!-- ═══════════════ BUSINESS & PRODUCTIVITY ═══════════════ -->
+<section id="business" class="section section-alt reveal">
 <div class="container">
-<div class="text-center mb-12 reveal">
-<h2 class="text-3xl font-bold tracking-tighter mb-4" data-i18n="features.business_productivity">Business & Productivity</h2>
-<p class="text-lg text-muted max-w-2xl mx-auto leading-relaxed" data-i18n="features.the_tools_that_power_modern_work_calendar_mail_meetings">The tools that power modern work — calendar, mail, meetings, documents, and customer communication.</p>
+<div class="section-header centered">
+  <span class="overline" data-i18n="features.business_productivity">Business &amp; Productivity</span>
+  <h2 data-i18n="features.business_productivity">Business &amp; Productivity</h2>
+  <p data-i18n="features.the_tools_that_power_modern_work_calendar_mail_meetings">The tools that power modern work — calendar, mail, meetings, documents, and customer communication.</p>
 </div>
 <div class="grid-3">
-<div class="glass-card p-6 card-hover reveal">
-<div class="icon-box mb-4"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
-<h3 class="text-xl font-bold mb-2" data-i18n="features.calendar">Calendar</h3>
-<p class="text-sm text-muted mb-4" data-i18n="features.caldav_integration_with_event_creation_conflict_detection">CalDAV integration with event creation, conflict detection, and automated reminder workflows. Sync with Google, Outlook, and Apple Calendar.</p>
-</div>
-<div class="glass-card p-6 card-hover reveal">
-<div class="icon-box mb-4"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
-<h3 class="text-xl font-bold mb-2" data-i18n="features.email">Email</h3>
-<p class="text-sm text-muted mb-4" data-i18n="features.imap_smtp_integration_with_automatic_templating_attachment">IMAP/SMTP integration with automatic templating, attachment handling, and trigger-based workflows. Inbox, starred, sent, and scheduled folders.</p>
-</div>
-<div class="glass-card p-6 card-hover reveal">
-<div class="icon-box mb-4"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg></div>
-<h3 class="text-xl font-bold mb-2" data-i18n="features.meet_video">Meet / Video</h3>
-<p class="text-sm text-muted mb-4" data-i18n="features.video_conferencing_with_screen_sharing_recording_transcrip">Video conferencing with screen sharing, recording, transcription, and meeting notes auto-generation.</p>
-</div>
-<div class="glass-card p-6 card-hover reveal">
-<div class="icon-box mb-4"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/></svg></div>
-<h3 class="text-xl font-bold mb-2" data-i18n="features.documents_sheets_slides">Documents, Sheets & Slides</h3>
-<p class="text-sm text-muted mb-4" data-i18n="features.full_office_compatible_document_processing_read_and_generat">Full Office-compatible document processing. Read and generate Word, Excel, and PowerPoint files. Template-based automation.</p>
-</div>
-<div class="glass-card p-6 card-hover reveal">
-<div class="icon-box mb-4"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></div>
-<h3 class="text-xl font-bold mb-2" data-i18n="features.whatsapp_teams">WhatsApp & Teams</h3>
-<p class="text-sm text-muted mb-4" data-i18n="features.whatsapp_business_api_and_microsoft_teams_bot_framework_tem">WhatsApp Business API and Microsoft Teams bot framework. Template messages, proactive notifications, and rich media support.</p>
-</div>
-<div class="glass-card p-6 card-hover reveal">
-<div class="icon-box mb-4"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
-<h3 class="text-xl font-bold mb-2" data-i18n="features.people_crm">People / CRM</h3>
-<p class="text-sm text-muted mb-4" data-i18n="features.contact_and_people_management_with_crm_style_relationship_tr">Contact and people management with CRM-style relationship tracking, tagging, deal pipelines, and automated follow-up reminders.</p>
-</div>
+  <div class="card reveal reveal-delay-1">
+    <div class="bento-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+    <h3 data-i18n="features.calendar">Calendar</h3>
+    <p data-i18n="features.caldav_integration_with_event_creation_conflict_detection">CalDAV integration with event creation, conflict detection, and automated reminder workflows. Sync with Google, Outlook, and Apple Calendar.</p>
+  </div>
+  <div class="card reveal reveal-delay-2">
+    <div class="bento-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+    <h3 data-i18n="features.email">Email</h3>
+    <p data-i18n="features.imap_smtp_integration_with_automatic_templating_attachment">IMAP/SMTP integration with automatic templating, attachment handling, and trigger-based workflows. Inbox, starred, sent, and scheduled folders.</p>
+  </div>
+  <div class="card reveal reveal-delay-3">
+    <div class="bento-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg></div>
+    <h3 data-i18n="features.meet_video">Meet / Video</h3>
+    <p data-i18n="features.video_conferencing_with_screen_sharing_recording_transcrip">Video conferencing with screen sharing, recording, transcription, and meeting notes auto-generation.</p>
+  </div>
+  <div class="card reveal reveal-delay-1">
+    <div class="bento-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+    <h3 data-i18n="features.documents_sheets_slides">Documents, Sheets &amp; Slides</h3>
+    <p data-i18n="features.full_office_compatible_document_processing_read_and_generat">Full Office-compatible document processing. Read and generate Word, Excel, and PowerPoint files. Template-based automation.</p>
+  </div>
+  <div class="card reveal reveal-delay-2">
+    <div class="bento-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></div>
+    <h3 data-i18n="features.whatsapp_teams">WhatsApp &amp; Teams</h3>
+    <p data-i18n="features.whatsapp_business_api_and_microsoft_teams_bot_framework_tem">WhatsApp Business API and Microsoft Teams bot framework. Template messages, proactive notifications, and rich media support.</p>
+  </div>
+  <div class="card reveal reveal-delay-3">
+    <div class="bento-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+    <h3 data-i18n="features.people_crm">People / CRM</h3>
+    <p data-i18n="features.contact_and_people_management_with_crm_style_relationship_tr">Contact and people management with CRM-style relationship tracking, tagging, deal pipelines, and automated follow-up reminders.</p>
+  </div>
 </div>
 </div>
 </section>
 
-<!-- AI & Intelligence -->
-<section class="page-section-lg bg-gray-50">
+<!-- ═══════════════ AI & INTELLIGENCE ═══════════════ -->
+<section class="section reveal">
 <div class="container">
-<div class="text-center mb-12 reveal">
-<h2 class="text-3xl font-bold tracking-tighter mb-4" data-i18n="features.ai_intelligence">AI & Intelligence</h2>
-<p class="text-lg text-muted max-w-2xl mx-auto leading-relaxed" data-i18n="features.knowledge_bases_vector_search_web_automation_and_autonomo">Knowledge bases, vector search, web automation, and autonomous AI.</p>
+<div class="section-header centered">
+  <span class="overline" data-i18n="features.ai_intelligence">AI &amp; Intelligence</span>
+  <h2 data-i18n="features.ai_intelligence">AI &amp; Intelligence</h2>
+  <p data-i18n="features.knowledge_bases_vector_search_web_automation_and_autonomo">Knowledge bases, vector search, web automation, and autonomous AI.</p>
 </div>
 <div class="grid-3">
-<div class="glass-card p-6 card-hover reveal">
-<div class="icon-box mb-4"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2z"/><path d="M12 8v4l3 3"/></svg></div>
-<h3 class="text-xl font-bold mb-2" data-i18n="features.knowledge_base">Knowledge Base</h3>
-<p class="text-sm text-muted mb-4" data-i18n="features.automatic_document_ingestion_with_chunking_embedding_and_s">Automatic document ingestion with chunking, embedding, and semantic search. PDFs, Word, web pages — all become queryable knowledge.</p>
-</div>
-<div class="glass-card p-6 card-hover reveal">
-<div class="icon-box mb-4"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"/></svg></div>
-<h3 class="text-xl font-bold mb-2">Web Automation</h3>
-<p class="text-sm text-muted mb-4" data-i18n="features.headless_browser_automation_scrape_websites_fill_forms_ta">Headless browser automation. Scrape websites, fill forms, take screenshots, and trigger workflows based on page changes.</p>
-</div>
-<div class="glass-card p-6 card-hover reveal">
-<div class="icon-box mb-4"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
-<h3 class="text-xl font-bold mb-2" data-i18n="features.search">Search</h3>
-<p class="text-sm text-muted mb-4" data-i18n="features.full_text_and_semantic_search_across_all_indexed_content_hy">Full-text and semantic search across all indexed content. Hybrid search with keyword and vector matching, with faceted filtering.</p>
-</div>
-<div class="glass-card p-6 card-hover reveal">
-<div class="icon-box mb-4"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 15v3m-6 2a6 6 0 0 1 12 0H6z"/></svg></div>
-<h3 class="text-xl font-bold mb-2" data-i18n="features.security">Security</h3>
-<p class="text-sm text-muted mb-4" data-i18n="features.encryption_threat_detection_audit_logging_and_compliance">Encryption, threat detection, audit logging, and compliance reporting. Built for LGPD, GDPR, HIPAA, and enterprise security standards.</p>
-</div>
-<div class="glass-card p-6 card-hover reveal">
-<div class="icon-box mb-4"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4m0 16v4M4.93 4.93l2.83 2.83m8.48 8.48l2.83 2.83M2 12h4m16 0h4M4.93 19.07l2.83-2.83m8.48-8.48l2.83-2.83"/></svg></div>
-<h3 class="text-xl font-bold mb-2" data-i18n="features.monitoring">Monitoring</h3>
-<p class="text-sm text-muted mb-4" data-i18n="features.system_health_monitoring_with_cpu_memory_disk_and_network">System health monitoring with CPU, memory, disk, and network metrics. Alert thresholds, incident escalation, and uptime tracking.</p>
-</div>
-<div class="glass-card p-6 card-hover reveal">
-<div class="icon-box mb-4"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
-<h3 class="text-xl font-bold mb-2" data-i18n="features.analytics">Analytics</h3>
-<p class="text-sm text-muted mb-4" data-i18n="features.event_tracking_funnel_analysis_and_conversion_metrics_und">Event tracking, funnel analysis, and conversion metrics. Understand user behavior across all channels and optimize engagement.</p>
-</div>
+  <div class="card reveal reveal-delay-1">
+    <div class="bento-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2z"/><path d="M12 8v4l3 3"/></svg></div>
+    <h3 data-i18n="features.knowledge_base">Knowledge Base</h3>
+    <p data-i18n="features.automatic_document_ingestion_with_chunking_embedding_and_s">Automatic document ingestion with chunking, embedding, and semantic search. PDFs, Word, web pages — all become queryable knowledge.</p>
+  </div>
+  <div class="card reveal reveal-delay-2">
+    <div class="bento-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"/></svg></div>
+    <h3>Web Automation</h3>
+    <p data-i18n="features.headless_browser_automation_scrape_websites_fill_forms_ta">Headless browser automation. Scrape websites, fill forms, take screenshots, and trigger workflows based on page changes.</p>
+  </div>
+  <div class="card reveal reveal-delay-3">
+    <div class="bento-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
+    <h3 data-i18n="features.search">Search</h3>
+    <p data-i18n="features.full_text_and_semantic_search_across_all_indexed_content_hy">Full-text and semantic search across all indexed content. Hybrid search with keyword and vector matching, with faceted filtering.</p>
+  </div>
+  <div class="card reveal reveal-delay-1">
+    <div class="bento-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 15v3m-6 2a6 6 0 0 1 12 0H6z"/></svg></div>
+    <h3 data-i18n="features.security">Security</h3>
+    <p data-i18n="features.encryption_threat_detection_audit_logging_and_compliance">Encryption, threat detection, audit logging, and compliance reporting. Built for LGPD, GDPR, HIPAA, and enterprise security standards.</p>
+  </div>
+  <div class="card reveal reveal-delay-2">
+    <div class="bento-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4m0 16v4M4.93 4.93l2.83 2.83m8.48 8.48l2.83 2.83M2 12h4m16 0h4M4.93 19.07l2.83-2.83m8.48-8.48l2.83-2.83"/></svg></div>
+    <h3 data-i18n="features.monitoring">Monitoring</h3>
+    <p data-i18n="features.system_health_monitoring_with_cpu_memory_disk_and_network">System health monitoring with CPU, memory, disk, and network metrics. Alert thresholds, incident escalation, and uptime tracking.</p>
+  </div>
+  <div class="card reveal reveal-delay-3">
+    <div class="bento-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+    <h3 data-i18n="features.analytics">Analytics</h3>
+    <p data-i18n="features.event_tracking_funnel_analysis_and_conversion_metrics_und">Event tracking, funnel analysis, and conversion metrics. Understand user behavior across all channels and optimize engagement.</p>
+  </div>
 </div>
 </div>
 </section>
 
-<!-- Enterprise -->
-<section id="enterprise" class="page-section-lg">
+<!-- ═══════════════ ENTERPRISE ═══════════════ -->
+<section id="enterprise" class="section section-alt reveal">
 <div class="container">
-<div class="text-center mb-12 reveal">
-<h2 class="text-3xl font-bold tracking-tighter mb-4" data-i18n="features.enterprise_ready">Enterprise-Ready</h2>
-<p class="text-lg text-muted max-w-2xl mx-auto leading-relaxed" data-i18n="features.built_for_organizations_that_require_security_compliance_a">Built for organizations that require security, compliance, and scale.</p>
+<div class="section-header centered">
+  <span class="overline" data-i18n="features.enterprise_ready">Enterprise-Ready</span>
+  <h2 data-i18n="features.enterprise_ready">Enterprise-Ready</h2>
+  <p data-i18n="features.built_for_organizations_that_require_security_compliance_a">Built for organizations that require security, compliance, and scale.</p>
 </div>
 <div class="grid-3">
-<div class="glass-card p-6 card-hover reveal">
-<div class="icon-box mb-4"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-<h3 class="text-xl font-bold mb-2" data-i18n="features.rbac_multi_tenancy">RBAC & Multi-Tenancy</h3>
-<p class="text-sm text-muted mb-4" data-i18n="features.role_based_access_control_with_fine_grained_permissions_mul">Role-based access control with fine-grained permissions. Multi-tenant workspaces with complete data isolation between organizations.</p>
-</div>
-<div class="glass-card p-6 card-hover reveal">
-<div class="icon-box mb-4"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg></div>
-<h3 class="text-xl font-bold mb-2" data-i18n="features.on_premise_deployment">On-Premise Deployment</h3>
-<p class="text-sm text-muted mb-4" data-i18n="features.run_entirely_within_your_infrastructure_no_cloud_dependency">Run entirely within your infrastructure. No cloud dependency. No data leaves your network. Air-gapped deployments supported.</p>
-</div>
-<div class="glass-card p-6 card-hover reveal">
-<div class="icon-box mb-4"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2z"/><path d="M12 6v6l4 2"/></svg></div>
-<h3 class="text-xl font-bold mb-2" data-i18n="features.compliance_lgpd_gdpr">Compliance (LGPD, GDPR)</h3>
-<p class="text-sm text-muted mb-4" data-i18n="features.built_in_compliance_tooling_for_data_subject_requests_right">Built-in compliance tooling for data subject requests, right to erasure, and audit trails. Data retention policies and anonymization.</p>
-</div>
+  <div class="card reveal reveal-delay-1">
+    <div class="bento-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+    <h3 data-i18n="features.rbac_multi_tenancy">RBAC &amp; Multi-Tenancy</h3>
+    <p data-i18n="features.role_based_access_control_with_fine_grained_permissions_mul">Role-based access control with fine-grained permissions. Multi-tenant workspaces with complete data isolation between organizations.</p>
+  </div>
+  <div class="card reveal reveal-delay-2">
+    <div class="bento-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg></div>
+    <h3 data-i18n="features.on_premise_deployment">On-Premise Deployment</h3>
+    <p data-i18n="features.run_entirely_within_your_infrastructure_no_cloud_dependency">Run entirely within your infrastructure. No cloud dependency. No data leaves your network. Air-gapped deployments supported.</p>
+  </div>
+  <div class="card reveal reveal-delay-3">
+    <div class="bento-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2z"/><path d="M12 6v6l4 2"/></svg></div>
+    <h3 data-i18n="features.compliance_lgpd_gdpr">Compliance (LGPD, GDPR)</h3>
+    <p data-i18n="features.built_in_compliance_tooling_for_data_subject_requests_right">Built-in compliance tooling for data subject requests, right to erasure, and audit trails. Data retention policies and anonymization.</p>
+  </div>
 </div>
 </div>
 </section>
 
+<!-- ═══════════════ CTA ═══════════════ -->
 <section class="cta-section">
-<div class="container">
-<h2 class="text-3xl font-bold tracking-tighter mb-4" data-i18n="features.see_it_all_on_github">See It All on GitHub</h2>
-<p class="text-lg text-muted max-w-2xl mx-auto mb-8 leading-relaxed" data-i18n="features.every_application_is_open_source_read_the_code_contribute">Every application is open source. Read the code, contribute, or deploy today.</p>
+<div class="container" style="position:relative;z-index:1">
+<h2 data-i18n="features.see_it_all_on_github">See It All on GitHub</h2>
+<p data-i18n="features.every_application_is_open_source_read_the_code_contribute">Every application is open source. Read the code, contribute, or deploy today.</p>
 <div class="flex flex-wrap gap-4 justify-center">
-<a href="https://github.com/pragmatismo-io" class="btn btn-primary btn-lg" data-i18n="features.browse_github">Browse GitHub</a>
-<a href="/contact/" class="btn btn-outline btn-lg" data-i18n="features.talk_to_sales">Talk to Sales</a>
+  <a href="https://github.com/pragmatismo-io" class="btn btn-primary btn-lg" data-i18n="features.browse_github">Browse GitHub</a>
+  <a href="/contact/" class="btn btn-outline btn-lg" data-i18n="features.talk_to_sales">Talk to Sales</a>
 </div>
 </div>
 </section>
 
 </main>
+
 <div hx-get="/partials/footer.html" hx-swap="innerHTML" hx-trigger="load"></div>
-<script src="https://unpkg.com/htmx.org@2.0.4"></script>
-<script src="/js/site.js"></script>
 <script>
 function switchTab(btn, tabId) {
   document.querySelectorAll('.audience-tab').forEach(t => t.classList.remove('active'));
@@ -411,5 +448,7 @@ function switchTab(btn, tabId) {
   document.getElementById('tab-' + tabId).classList.add('active');
 }
 </script>
+<script src="https://unpkg.com/htmx.org@2.0.4"></script>
+<script src="/js/site.js"></script>
 </body>
 </html>

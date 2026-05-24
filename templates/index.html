@@ -3,101 +3,276 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Templates | General Bots</title>
-<meta name="description" content="Accelerate your AI deployment with pre-configured templates for Document Intelligence, Business Intelligence, and Custom LLM Tools.">
+<title>Templates | General Bots — AI Orchestration Blueprint Catalog</title>
+<meta name="description" content="Accelerate your sovereign AI deployment with pre-configured templates for Document Intelligence, Web Automation, Talk to Data, and Custom LLM Tools.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://generalbots.org/templates/">
-<meta property="og:title" content="AI-Powered Templates | General Bots">
-<meta property="og:description" content="Pre-configured solutions to deploy intelligent bots faster.">
+<meta property="og:title" content="AI-Powered Templates | General Bots Platform">
+<meta property="og:description" content="Pre-configured enterprise solutions to deploy intelligent bots and sovereign AI agents faster.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://generalbots.org/templates/">
+<meta property="og:image" content="https://generalbots.org/logo-square.svg">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/favicon.ico">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="stylesheet" href="/css/site.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Templates — General Bots Platform",
+  "description": "Accelerate your AI deployment with pre-configured templates.",
+  "url": "https://generalbots.org/templates/",
+  "isPartOf": {"@type": "WebSite", "name": "General Bots", "url": "https://generalbots.org"}
+}
+</script>
+<style>
+/* Page-specific overrides and adjustments */
+.templates-hero {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  padding: 8rem 0 5rem;
+  position: relative;
+  overflow: hidden;
+}
+.template-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+@media(min-width: 768px) {
+  .template-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media(min-width: 1024px) {
+  .template-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.t-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.t-card-footer {
+  margin-top: auto;
+  padding-top: 1.5rem;
+}
+.t-link {
+  display: inline-flex;
+  align-items: center;
+  gap: .375rem;
+  font-size: .75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--accent-light);
+  transition: var(--transition);
+}
+.t-link:hover {
+  color: var(--accent);
+  transform: translateX(2px);
+}
+</style>
 </head>
 <body>
+
 <div hx-get="/partials/header.html" hx-swap="innerHTML" hx-trigger="load"></div>
-<main style="padding-top:4rem">
-<section class="page-section bg-gray-50 vitral-bg">
-<div class="container text-center">
-<div class="reveal">
-<div class="badge mb-4" style="margin-left:auto;margin-right:auto;width:fit-content">
-<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/></svg>
-Launch Accelerators
-</div>
-<h1 class="text-4xl font-bold tracking-tighter mb-4" style="font-size:clamp(2rem,5vw,3rem)" data-i18n="templates.deploy_in_minutes">Deploy in Minutes.</h1>
-<p class="text-lg text-muted max-w-2xl mx-auto leading-relaxed mb-8" data-i18n="templates.our_templates_are_pre_configured_orchestration_blueprints_de">Our templates are pre-configured orchestration blueprints designed for high-impact business use cases. Choose a template, customize your PROMPT.md, and launch your bot instantly.</p>
-<div class="flex flex-wrap gap-4 justify-center mb-8">
-<a href="https://github.com/generalbots" class="btn btn-primary btn-lg" data-i18n="templates.github_catalog">GitHub Catalog</a>
-<a href="/contact/" class="btn btn-outline btn-lg" data-i18n="templates.request_custom">Request Custom</a>
-</div>
-</div>
+
+<main>
+
+<!-- ═══════════════ HERO ═══════════════ -->
+<section class="templates-hero">
+<div class="mesh-pattern"></div>
+<div class="bloom bloom-1"></div>
+<div class="bloom bloom-2"></div>
+<div class="hero-orb hero-orb-1"></div>
+<div class="hero-orb hero-orb-2"></div>
+<div class="container" style="position:relative;z-index:2">
+  <div class="reveal text-center">
+    <div class="hero-badge" style="margin:0 auto 2rem">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/></svg>
+      Deployable Accelerators
+    </div>
+    <h1 style="font-size:clamp(2.5rem,6vw,4.5rem);font-weight:900;letter-spacing:-.05em;line-height:.92;margin-bottom:1.5rem">
+      Deploy in<br><span class="gradient-word" data-i18n="templates.deploy_in_minutes">Minutes.</span>
+    </h1>
+    <p class="text-lg max-w-2xl mx-auto leading-relaxed mb-8" style="color:var(--fg-secondary);font-size:1.125rem" data-i18n="templates.our_templates_are_pre_configured_orchestration_blueprints_de">
+      Our templates are pre-configured orchestration blueprints designed for high-impact business use cases. Choose a template, customize your PROMPT.md, and launch your bot instantly.
+    </p>
+    <div class="flex flex-wrap gap-4 justify-center">
+      <a href="https://github.com/pragmatismo-io" class="btn btn-primary btn-lg" data-i18n="templates.github_catalog">GitHub Catalog</a>
+      <a href="/contact/" class="btn btn-outline btn-lg" data-i18n="templates.request_custom">Request Custom</a>
+    </div>
+  </div>
 </div>
 </section>
 
-<section class="page-section-lg reveal">
+<!-- ═══════════════ ACCELERATOR CATALOG ═══════════════ -->
+<section class="section reveal">
 <div class="container">
-<div class="grid-3">
-<div class="glass-card p-8">
-<div class="badge mb-4" style="background:#E8F0FE;color:#1a73e8" data-i18n="templates.document_ai">Document AI</div>
-<h3 class="text-xl font-bold mb-4" data-i18n="templates.ai_search_template">AI Search Template</h3>
-<p class="text-sm text-muted leading-relaxed mb-6" data-i18n="templates.complete_document_intelligence_pipeline_supports_pdf_word">Complete document intelligence pipeline. Supports PDF, Word, and Excel indexing with citation-based answers and source highlighting.</p>
-<a href="/features/ai-search/" class="text-xs font-bold uppercase tracking-widest hover:text-green-600 transition-colors">Specifications &rarr;</a>
-</div>
-<div class="glass-card p-8">
-<div class="badge mb-4" style="background:#E6F4EA;color:#1e8e3e" data-i18n="templates.automation">Automation</div>
-<h3 class="text-xl font-bold mb-4" data-i18n="templates.crawler_template">Crawler Template</h3>
-<p class="text-sm text-muted leading-relaxed mb-6" data-i18n="templates.train_your_llm_with_real_time_website_data_automatically_cr">Train your LLM with real-time website data. Automatically crawls, extracts clean text, and updates your vector knowledge base on a schedule.</p>
-<a href="/features/web-automation/" class="text-xs font-bold uppercase tracking-widest hover:text-green-600 transition-colors">Specifications &rarr;</a>
-</div>
-<div class="glass-card p-8">
-<div class="badge mb-4" style="background:#F3E8FD;color:#9334e6">BI</div>
-<h3 class="text-xl font-bold mb-4" data-i18n="templates.talk_to_data_template">Talk to Data Template</h3>
-<p class="text-sm text-muted leading-relaxed mb-6" data-i18n="templates.natural_language_interface_for_sql_databases_generates_real">Natural language interface for SQL databases. Generates real-time charts, summaries, and executive reports directly from your data warehouse.</p>
-<a href="/features/talk-to-data/" class="text-xs font-bold uppercase tracking-widest hover:text-green-600 transition-colors">Specifications &rarr;</a>
-</div>
-<div class="glass-card p-8">
-<div class="badge mb-4" style="background:#FFF7E0;color:#b45309" data-i18n="templates.legal">Legal</div>
-<h3 class="text-xl font-bold mb-4" data-i18n="templates.legaltech_template">LegalTech Template</h3>
-<p class="text-sm text-muted leading-relaxed mb-6" data-i18n="templates.optimized_for_case_law_analysis_summarizes_legal_documents">Optimized for case law analysis. Summarizes legal documents, identifies key precedents, and assists in high-volume legal research.</p>
-<a href="/contact/" class="text-xs font-bold uppercase tracking-widest hover:text-green-600 transition-colors">Request Access &rarr;</a>
-</div>
-<div class="glass-card p-8">
-<div class="badge mb-4" style="background:#FEE2E2;color:#b91c1c" data-i18n="templates.db97423871">API</div>
-<h3 class="text-xl font-bold mb-4" data-i18n="templates.llm_server_template">LLM Server Template</h3>
-<p class="text-sm text-muted leading-relaxed mb-6" data-i18n="templates.expose_your_llm_functions_as_enterprise_grade_rest_apis_inc">Expose your LLM functions as enterprise-grade REST APIs. Includes built-in authentication, rate limiting, and cost-routing logic.</p>
-<a href="/features/create-apis-in-word/" class="text-xs font-bold uppercase tracking-widest hover:text-green-600 transition-colors">Specifications &rarr;</a>
-</div>
-<div class="glass-card p-8">
-<div class="badge mb-4" style="background:#E0E7FF;color:#4338ca" data-i18n="templates.education">Education</div>
-<h3 class="text-xl font-bold mb-4" data-i18n="templates.edtech_template">EdTech Template</h3>
-<p class="text-sm text-muted leading-relaxed mb-6" data-i18n="templates.automate_student_enrollment_faq_management_and_administrat">Automate student enrollment, FAQ management, and administrative workflows. Integrated with common Learning Management Systems (LMS).</p>
-<a href="/contact/" class="text-xs font-bold uppercase tracking-widest hover:text-green-600 transition-colors">Request Access &rarr;</a>
-</div>
-</div>
+  <div class="section-header centered">
+    <span class="overline" data-i18n="templates.catalog_overline">Pre-Built Catalogs</span>
+    <h2 data-i18n="templates.catalog_title">Accelerators for Any Workflow</h2>
+    <p data-i18n="templates.catalog_desc">Production-grade starting blocks powered by Rust orchestrators and native integration modules. Fully open source, customizable, and ready for sovereign hosting.</p>
+  </div>
+
+  <div class="template-grid">
+    <!-- Template 1: AI Search -->
+    <div class="card t-card reveal reveal-delay-1">
+      <div class="flex items-center justify-between mb-4">
+        <div class="icon-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </div>
+        <span class="badge" data-i18n="templates.document_ai">Document AI</span>
+      </div>
+      <h3 class="text-xl font-bold mb-3" data-i18n="templates.ai_search_template">AI Search Template</h3>
+      <p class="text-sm text-muted leading-relaxed" data-i18n="templates.complete_document_intelligence_pipeline_supports_pdf_word">
+        Complete document intelligence pipeline. Supports PDF, Word, and Excel indexing with citation-based answers and source highlighting.
+      </p>
+      <div class="t-card-footer">
+        <a href="/features/ai-search/" class="t-link">
+          <span>Specifications</span>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Template 2: Crawler -->
+    <div class="card t-card reveal reveal-delay-2">
+      <div class="flex items-center justify-between mb-4">
+        <div class="icon-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+        </div>
+        <span class="badge" data-i18n="templates.automation">Automation</span>
+      </div>
+      <h3 class="text-xl font-bold mb-3" data-i18n="templates.crawler_template">Crawler Template</h3>
+      <p class="text-sm text-muted leading-relaxed" data-i18n="templates.train_your_llm_with_real_time_website_data_automatically_cr">
+        Train your LLM with real-time website data. Automatically crawls, extracts clean text, and updates your vector knowledge base on a schedule.
+      </p>
+      <div class="t-card-footer">
+        <a href="/features/web-automation/" class="t-link">
+          <span>Specifications</span>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Template 3: BI Talk to Data -->
+    <div class="card t-card reveal reveal-delay-3">
+      <div class="flex items-center justify-between mb-4">
+        <div class="icon-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+        </div>
+        <span class="badge">BI</span>
+      </div>
+      <h3 class="text-xl font-bold mb-3" data-i18n="templates.talk_to_data_template">Talk to Data Template</h3>
+      <p class="text-sm text-muted leading-relaxed" data-i18n="templates.natural_language_interface_for_sql_databases_generates_real">
+        Natural language interface for SQL databases. Generates real-time charts, summaries, and executive reports directly from your data warehouse.
+      </p>
+      <div class="t-card-footer">
+        <a href="/features/talk-to-data/" class="t-link">
+          <span>Specifications</span>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Template 4: LegalTech -->
+    <div class="card t-card reveal reveal-delay-1">
+      <div class="flex items-center justify-between mb-4">
+        <div class="icon-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <span class="badge" data-i18n="templates.legal">Legal</span>
+      </div>
+      <h3 class="text-xl font-bold mb-3" data-i18n="templates.legaltech_template">LegalTech Template</h3>
+      <p class="text-sm text-muted leading-relaxed" data-i18n="templates.optimized_for_case_law_analysis_summarizes_legal_documents">
+        Optimized for case law analysis. Summarizes legal documents, identifies key precedents, and assists in high-volume legal research.
+      </p>
+      <div class="t-card-footer">
+        <a href="/contact/" class="t-link">
+          <span>Request Access</span>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Template 5: LLM Server -->
+    <div class="card t-card reveal reveal-delay-2">
+      <div class="flex items-center justify-between mb-4">
+        <div class="icon-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+        </div>
+        <span class="badge" data-i18n="templates.db97423871">API</span>
+      </div>
+      <h3 class="text-xl font-bold mb-3" data-i18n="templates.llm_server_template">LLM Server Template</h3>
+      <p class="text-sm text-muted leading-relaxed" data-i18n="templates.expose_your_llm_functions_as_enterprise_grade_rest_apis_inc">
+        Expose your LLM functions as enterprise-grade REST APIs. Includes built-in authentication, rate limiting, and cost-routing logic.
+      </p>
+      <div class="t-card-footer">
+        <a href="/features/create-apis-in-word/" class="t-link">
+          <span>Specifications</span>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Template 6: EdTech -->
+    <div class="card t-card reveal reveal-delay-3">
+      <div class="flex items-center justify-between mb-4">
+        <div class="icon-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"/></svg>
+        </div>
+        <span class="badge" data-i18n="templates.education">Education</span>
+      </div>
+      <h3 class="text-xl font-bold mb-3" data-i18n="templates.edtech_template">EdTech Template</h3>
+      <p class="text-sm text-muted leading-relaxed" data-i18n="templates.automate_student_enrollment_faq_management_and_administrat">
+        Automate student enrollment, FAQ management, and administrative workflows. Integrated with common Learning Management Systems (LMS).
+      </p>
+      <div class="t-card-footer">
+        <a href="/contact/" class="t-link">
+          <span>Request Access</span>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
 </div>
 </section>
 
-<section class="page-section-lg bg-gray-50 reveal">
+<!-- ═══════════════ CUSTOM SERVICES ═══════════════ -->
+<section class="section section-alt reveal">
 <div class="container text-center">
-<h2 class="text-3xl font-bold tracking-tighter mb-4" data-i18n="templates.custom_development">Custom Development</h2>
-<p class="text-lg text-muted max-w-2xl mx-auto mb-8 leading-relaxed" data-i18n="templates.need_a_specialized_template_for_your_industry_our_team_and">Need a specialized template for your industry? Our team and partners can build custom accelerators tailored to your specific architecture.</p>
-<a href="/contact/" class="btn btn-primary btn-lg" data-i18n="templates.partner_with_us">Partner with Us</a>
+  <h2 class="text-3xl font-bold tracking-tighter mb-4" data-i18n="templates.custom_development">Custom Development</h2>
+  <p class="text-lg text-muted max-w-2xl mx-auto mb-8 leading-relaxed" data-i18n="templates.need_a_specialized_template_for_your_industry_our_team_and">
+    Need a specialized template for your industry? Our team and partners can build custom accelerators tailored to your specific architecture.
+  </p>
+  <a href="/contact/" class="btn btn-primary btn-lg" data-i18n="templates.partner_with_us">Partner with Us</a>
 </div>
 </section>
 
-<section class="page-section-lg vitral-bg reveal">
-<div class="container text-center">
-<h2 class="text-3xl font-bold tracking-tighter mb-4" data-i18n="templates.start_your_ai_journey_today">Start Your AI Journey Today</h2>
-<p class="text-lg text-muted max-w-2xl mx-auto mb-8 leading-relaxed" data-i18n="templates.browse_our_github_repository_for_full_source_code_and_deploy">Browse our GitHub repository for full source code and deployment guides for every template.</p>
-<div class="flex flex-wrap gap-4 justify-center">
-<a href="https://github.com/generalbots" class="btn btn-primary btn-lg" data-i18n="templates.star_on_github">Star on GitHub</a>
-<a href="/contact/" class="btn btn-outline btn-lg" data-i18n="templates.get_started">Get Started</a>
-</div>
+<!-- ═══════════════ FINAL CALLOUT ═══════════════ -->
+<section class="section reveal" style="position:relative">
+<div class="mesh-pattern"></div>
+<div class="container text-center" style="position:relative;z-index:2">
+  <h2 class="text-3xl font-bold tracking-tighter mb-4" data-i18n="templates.start_your_ai_journey_today">Start Your AI Journey Today</h2>
+  <p class="text-lg text-muted max-w-2xl mx-auto mb-8 leading-relaxed" data-i18n="templates.browse_our_github_repository_for_full_source_code_and_deploy">
+    Browse our GitHub repository for full source code and deployment guides for every template.
+  </p>
+  <div class="flex flex-wrap gap-4 justify-center">
+    <a href="https://github.com/pragmatismo-io" class="btn btn-primary btn-lg" data-i18n="templates.star_on_github">View on GitHub</a>
+    <a href="/contact/" class="btn btn-outline btn-lg" data-i18n="templates.get_started">Get Started</a>
+  </div>
 </div>
 </section>
+
 </main>
+
 <div hx-get="/partials/footer.html" hx-swap="innerHTML" hx-trigger="load"></div>
+
 <script src="https://unpkg.com/htmx.org@2.0.4"></script>
 <script src="/js/site.js"></script>
 </body>

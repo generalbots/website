@@ -3,44 +3,93 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>General Bots — Chat, CRM, Mail, Drive, Calendar, AI. One Open Platform.</title>
-<meta name="description" content="75+ applications: AI Chat, CRM, Email, Calendar, Drive, Video Meet, Documents, Spreadsheets, Tasks, Projects, Marketing, Billing, Tickets, AI Search, Bot Factory, Broadcast, Web Automation, Content Generation, LLM Tools, Knowledge Base. Personal, business, enterprise.">
+<title>General Bots — Intelligence, Orchestrated. Open-Source AI Platform.</title>
+<meta name="description" content="75+ applications unified in one sovereign AI platform. AI Chat, CRM, Email, Calendar, Drive, LLM Orchestration, Vector Search, Web Automation — self-hosted, open source, enterprise-grade.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://generalbots.org/">
-<meta property="og:title" content="General Bots | The Open-Source AI Platform">
-<meta property="og:description" content="75+ applications: Chat, CRM, Mail, Drive, Calendar, Video, AI Search, Bot Factory, Web Automation, LLM Orchestration. Open source.">
+<meta property="og:title" content="General Bots — Intelligence, Orchestrated.">
+<meta property="og:description" content="75+ enterprise applications unified in one sovereign AI platform. Open source. Self-hosted. Enterprise-grade.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://generalbots.org/">
+<meta property="og:image" content="https://generalbots.org/logo-square.svg">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/favicon.ico">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="stylesheet" href="/css/site.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "General Bots",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Linux, Windows, macOS, Docker, Kubernetes",
+  "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
+  "description": "Open-source AI orchestration platform with 75+ enterprise applications. Self-hosted with full data sovereignty.",
+  "url": "https://generalbots.org",
+  "author": {"@type": "Organization", "name": "Pragmatismo", "url": "https://pragmatismo.com.br"}
+}
+</script>
 <style>
-.user-tabs{display:flex;gap:0;border-bottom:1px solid var(--border-subtle);margin-bottom:3rem;overflow-x:auto}
-.user-tab{padding:.75rem 1.5rem;font-size:.8125rem;font-weight:600;color:var(--fg-muted);cursor:pointer;border-bottom:2px solid transparent;transition:var(--transition);text-transform:uppercase;letter-spacing:.05em;white-space:nowrap}
-.user-tab:hover{color:#fff}
-.user-tab.active{color:#fff;border-bottom-color:#fff}
-.user-panel{display:none}
-.user-panel.active{display:block}
-.feature-matrix{display:grid;grid-template-columns:1fr;gap:.75rem}
-@media(min-width:640px){.feature-matrix{grid-template-columns:1fr 1fr}}
-@media(min-width:1024px){.feature-matrix{grid-template-columns:1fr 1fr}}
-.feature-cell{background:var(--bg-card);border:1px solid var(--border-subtle);border-radius:.25rem;padding:1.5rem;transition:var(--transition)}
-.feature-cell:hover{border-color:var(--border)}
-.feature-cell h4{font-size:.875rem;font-weight:700;text-transform:uppercase;letter-spacing:.02em;margin-bottom:.375rem}
-.feature-cell p{font-size:.8125rem;color:var(--fg-secondary);line-height:1.6;margin-bottom:.75rem}
-.feature-cell .fc-link{font-size:.6875rem;font-weight:600;color:var(--fg-muted);text-transform:uppercase;letter-spacing:.08em}
-.feature-cell .fc-link:hover{color:#fff}
-.tier-header{font-size:.9375rem;font-weight:800;text-transform:uppercase;letter-spacing:.03em;color:var(--fg-muted);margin-bottom:.75rem;padding-bottom:.5rem;border-bottom:1px solid var(--border-subtle)}
-.feature-card-row{display:grid;grid-template-columns:1fr;gap:.75rem;margin-bottom:1.5rem}
-@media(min-width:640px){.feature-card-row{grid-template-columns:1fr 1fr}}
-@media(min-width:1024px){.feature-card-row{grid-template-columns:1fr 1fr 1fr 1fr 1fr}}
-.feat-card{background:var(--bg-card);border:1px solid var(--border-subtle);border-radius:.25rem;padding:1.25rem;text-align:center}
-.feat-card:hover{border-color:var(--border)}
-.feat-card .fc-icon{font-size:1.5rem;margin-bottom:.5rem;opacity:.4}
-.feat-card h4{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.02em;margin-bottom:.25rem}
-.feat-card p{font-size:.6875rem;color:var(--fg-secondary);line-height:1.4;margin-bottom:.5rem}
-.feat-card a{font-size:.625rem;font-weight:600;color:var(--fg-muted);text-transform:uppercase;letter-spacing:.08em}
-.feat-card a:hover{color:#fff}
+/* Hero-only styles */
+.hero-grid{display:grid;grid-template-columns:1fr;gap:3rem;align-items:center}
+@media(min-width:1024px){.hero-grid{grid-template-columns:1fr 1fr}}
+.hero-visual{position:relative;display:none}
+@media(min-width:1024px){.hero-visual{display:block}}
+.hero-visual-card{
+  background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-xl);
+  padding:1.25rem;backdrop-filter:var(--glass-blur);position:absolute;
+  animation:cardFloat 6s ease-in-out infinite;box-shadow:var(--shadow);
+}
+.hero-visual-card:nth-child(1){top:0;right:0;width:16rem;animation-delay:0s}
+.hero-visual-card:nth-child(2){top:7rem;right:8rem;width:14rem;animation-delay:-2s}
+.hero-visual-card:nth-child(3){top:14rem;right:1rem;width:15rem;animation-delay:-4s}
+@keyframes cardFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+
+.hero-visual-card .hvc-label{font-size:.625rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--accent-light);margin-bottom:.5rem;display:flex;align-items:center;gap:.375rem}
+.hero-visual-card .hvc-label::before{content:'';width:.5rem;height:.5rem;background:var(--accent);border-radius:50%;display:inline-block}
+.hero-visual-card .hvc-title{font-size:.875rem;font-weight:700;margin-bottom:.25rem}
+.hero-visual-card .hvc-text{font-size:.75rem;color:var(--fg-muted);line-height:1.5}
+
+/* Value proposition cards */
+.value-grid{display:grid;grid-template-columns:1fr;gap:1rem}
+@media(min-width:768px){.value-grid{grid-template-columns:1fr 1fr 1fr}}
+.value-card{
+  background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-xl);
+  padding:2rem;position:relative;overflow:hidden;transition:var(--transition);
+  backdrop-filter:var(--glass-blur);
+}
+.value-card::after{
+  content:'';position:absolute;top:0;left:0;right:0;height:2px;
+  background:var(--accent-gradient);opacity:0;transition:opacity .3s;
+}
+.value-card:hover{border-color:var(--border-hover);box-shadow:var(--shadow-lg);transform:translateY(-4px)}
+.value-card:hover::after{opacity:1}
+.value-card .vc-icon{
+  width:3rem;height:3rem;display:flex;align-items:center;justify-content:center;
+  border-radius:var(--radius-lg);background:var(--accent-soft);color:var(--accent-light);
+  margin-bottom:1.25rem;
+}
+.value-card .vc-icon svg{width:1.375rem;height:1.375rem}
+.value-card h3{font-size:1.125rem;font-weight:800;margin-bottom:.625rem}
+.value-card p{font-size:.875rem;color:var(--fg-secondary);line-height:1.7}
+
+/* Channel logos row */
+.channel-row{display:flex;flex-wrap:wrap;gap:.75rem;justify-content:center}
+.channel-pill{
+  display:inline-flex;align-items:center;gap:.5rem;padding:.5rem 1rem;
+  background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-2xl);
+  font-size:.75rem;font-weight:600;color:var(--fg-secondary);transition:var(--transition);
+  backdrop-filter:var(--glass-blur);
+}
+.channel-pill:hover{border-color:var(--accent);color:var(--accent-light);background:var(--accent-soft)}
+.channel-pill svg{width:1rem;height:1rem;opacity:.6}
+
+/* Architecture numbering */
+.arch-card .arch-num{
+  font-family:var(--font-display);font-size:3rem;font-weight:900;line-height:1;
+  background:var(--accent-gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  background-clip:text;opacity:.3;margin-bottom:.75rem;display:block;
+}
 </style>
 </head>
 <body>
@@ -49,50 +98,112 @@
 
 <main>
 
-<!-- Hero -->
+<!-- ═══════════════ HERO ═══════════════ -->
 <section class="hero" style="position:relative;overflow:hidden">
 <div class="mesh-pattern"></div>
-<div class="bloom bloom-1"></div>
-<div class="bloom bloom-2"></div>
-<div class="container" style="position:relative;z-index:1">
-<div class="hero-content">
-<div class="hero-badge" data-i18n="hero.badge">Open Source — 75+ Applications</div>
-<h1><span data-i18n="hero.title.line1">Your Desktop</span><br><span data-i18n="hero.title.line2">Rebuilt.</span></h1>
-<p class="hero-sub" data-i18n="hero.sub">Chat, CRM, Mail, Drive, Calendar, Video, AI Search, LLM Orchestration, Web Automation, Content Generation, Knowledge Base, Documents, Spreadsheets, Projects — all in one open platform. Self-hosted, private, and built to scale from personal productivity to enterprise-wide AI deployment.</p>
-<div class="hero-actions">
-<a href="#features" class="btn btn-primary btn-lg" data-i18n="hero.explore">Explore All Apps</a>
-<a href="https://github.com/pragmatismo-io" class="btn btn-outline btn-lg" data-i18n="hero.github">View on GitHub</a>
-</div>
+<div class="hero-orb hero-orb-1"></div>
+<div class="hero-orb hero-orb-2"></div>
+<div class="hero-orb hero-orb-3"></div>
+<div class="container" style="position:relative;z-index:2">
+<div class="hero-grid">
+  <div class="hero-content">
+    <div class="hero-badge" data-i18n="hero.badge">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+      Open Source · Enterprise-Grade AI
+    </div>
+    <h1>
+      <span data-i18n="hero.title.line1">Intelligence,</span><br>
+      <span class="gradient-word" data-i18n="hero.title.line2">Orchestrated.</span>
+    </h1>
+    <p class="hero-sub" data-i18n="hero.sub">75+ applications unified in one sovereign AI platform. Deploy anywhere — your cloud, your data, your rules. From personal productivity to enterprise-wide AI deployment.</p>
+    <div class="hero-actions">
+      <a href="/features/" class="btn btn-primary btn-lg" data-i18n="hero.explore">Explore Platform</a>
+      <a href="https://github.com/pragmatismo-io" class="btn btn-outline btn-lg" data-i18n="hero.github">
+        <svg viewBox="0 0 16 16" fill="currentColor" width="16" height="16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>
+        View on GitHub
+      </a>
+    </div>
+  </div>
+  <div class="hero-visual" aria-hidden="true">
+    <div class="hero-visual-card">
+      <div class="hvc-label">AI Chat</div>
+      <div class="hvc-title">Multi-model streaming</div>
+      <div class="hvc-text">OpenAI, Anthropic, Groq, local models — one conversation layer</div>
+    </div>
+    <div class="hero-visual-card">
+      <div class="hvc-label">Knowledge Base</div>
+      <div class="hvc-title">Vector retrieval</div>
+      <div class="hvc-text">RAG-powered semantic search across millions of documents</div>
+    </div>
+    <div class="hero-visual-card">
+      <div class="hvc-label">Deploy Anywhere</div>
+      <div class="hvc-title">Full sovereignty</div>
+      <div class="hvc-text">Self-host, air-gapped, multi-cloud — your infrastructure, your rules</div>
+    </div>
+  </div>
 </div>
 </div>
 </section>
 
-<section class="section section-alt reveal">
+<!-- ═══════════════ TRUST TICKER ═══════════════ -->
+<div class="ticker-wrap">
+<div class="ticker">
+  <span>Open Source</span><span>AGPL-3.0</span><span>Since 2017</span><span>75+ Applications</span><span>Self-Hosted</span><span>Multi-Cloud</span><span>Multi-Model AI</span><span>Privacy-First</span><span>Enterprise-Grade</span><span>Built in Rust</span>
+  <span>Open Source</span><span>AGPL-3.0</span><span>Since 2017</span><span>75+ Applications</span><span>Self-Hosted</span><span>Multi-Cloud</span><span>Multi-Model AI</span><span>Privacy-First</span><span>Enterprise-Grade</span><span>Built in Rust</span>
+</div>
+</div>
+
+<!-- ═══════════════ STATS ═══════════════ -->
+<section class="section reveal">
 <div class="container">
 <div class="stats-row">
-<div class="stat-item"><span class="stat-number" data-i18n="home.b19ad0f0c1">75+</span><span class="stat-label" data-i18n="stats.apps">Integrated Applications</span></div>
-<div class="stat-item"><span class="stat-number">9+</span><span class="stat-label" data-i18n="stats.years">Years in Production</span></div>
-<div class="stat-item"><span class="stat-number">1</span><span class="stat-label" data-i18n="stats.platform">Platform, All Apps</span></div>
-<div class="stat-item"><span class="stat-number" data-i18n="home.open">Open</span><span class="stat-label" data-i18n="stats.license">Source</span></div>
+  <div class="stat-item"><span class="stat-number" data-count="75" data-suffix="+" data-i18n="home.b19ad0f0c1">75+</span><span class="stat-label" data-i18n="stats.apps">Integrated Applications</span></div>
+  <div class="stat-item"><span class="stat-number" data-count="9" data-suffix="+" >9+</span><span class="stat-label" data-i18n="stats.years">Years in Production</span></div>
+  <div class="stat-item"><span class="stat-number" data-count="10" data-suffix="+">10+</span><span class="stat-label" data-i18n="stats.channels">Communication Channels</span></div>
+  <div class="stat-item"><span class="stat-number" data-count="100" data-suffix="%">100%</span><span class="stat-label" data-i18n="stats.license">Open Source</span></div>
 </div>
 </div>
 </section>
 
+<!-- ═══════════════ VALUE PROPOSITION ═══════════════ -->
+<section class="section section-alt reveal">
+<div class="container">
+<div class="section-header centered">
+  <span class="overline" data-i18n="philosophy.overline">Why General Bots</span>
+  <h2 data-i18n="philosophy.title">Conversations, Not Forms. Intelligence, Not Complexity.</h2>
+  <p data-i18n="philosophy.text">Since 2017, we've championed a simple idea: enterprise software should feel like a conversation, not an interrogation. General Bots replaces rigid interfaces with natural language — guided by AI, backed by your data, connected to every channel.</p>
+</div>
+<div class="value-grid">
+  <div class="value-card reveal reveal-delay-1">
+    <div class="vc-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+    </div>
+    <h3 data-i18n="value.conversations.title">Natural Language First</h3>
+    <p data-i18n="value.conversations.text">Replace forms, dropdowns, and rigid UIs with natural conversation across WhatsApp, Teams, Telegram, Slack, and 10+ channels. One personality, everywhere.</p>
+  </div>
+  <div class="value-card reveal reveal-delay-2">
+    <div class="vc-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+    </div>
+    <h3 data-i18n="value.routing.title">AI That Routes Intelligently</h3>
+    <p data-i18n="value.routing.text">Connect any model — OpenAI, Anthropic, Google, Groq, or self-hosted. Dynamic routing sends simple queries to fast models and complex reasoning to the best. Automatic failover. Zero downtime.</p>
+  </div>
+  <div class="value-card reveal reveal-delay-3">
+    <div class="vc-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+    </div>
+    <h3 data-i18n="value.sovereignty.title">Sovereignty by Default</h3>
+    <p data-i18n="value.sovereignty.text">Your data never leaves your infrastructure. Self-host on-premise, deploy to air-gapped environments, or choose a certified partner. Full audit trails, LGPD/GDPR/HIPAA compliance built in.</p>
+  </div>
+</div>
+</div>
+</section>
+
+<!-- ═══════════════ 10 CORE FEATURES ═══════════════ -->
 <section class="section reveal">
 <div class="container">
 <div class="section-header">
-  <span class="overline" data-i18n="philosophy.overline">Our Philosophy</span>
-  <h2 data-i18n="philosophy.title">No Forms. Just Conversations.</h2>
-  <p data-i18n="philosophy.text">Since 2017 we have championed a simple idea: people should converse, not fill forms. Traditional software forces rigid forms with dropdowns and checkboxes. General Bots replaces them with natural conversation — guided by AI, backed by your data, connected to every channel.</p>
-</div>
-</div>
-</section>
-
-<!-- 10 Feature Macro Cards -->
-<section class="section section-alt reveal">
-<div class="container">
-<div class="section-header">
-  <span class="overline" data-i18n="features10.overline">10 Core Features</span>
+  <span class="overline" data-i18n="features10.overline">Core Capabilities</span>
   <h2 data-i18n="features10.title">Applications with Dedicated Pages</h2>
   <p data-i18n="features10.sub">Each of these capabilities has its own deep-dive page. Click to learn more.</p>
 </div>
@@ -102,7 +213,7 @@
 <div class="fc-icon">&#128269;</div>
 <h4 data-i18n="feature.ai-search">AI Search</h4>
 <p data-i18n="feature.ai-search.desc">Semantic search across millions of documents. RAG-powered with cited sources.</p>
-<a href="/features/ai-search/" data-i18n="home.learn_more________" data-i18n="home.learn_more_______" data-i18n="home.learn_more______" data-i18n="home.learn_more_____" data-i18n="home.learn_more____" data-i18n="home.learn_more___" data-i18n="home.learn_more__" data-i18n="home.learn_more_" data-i18n="home.learn_more">Learn More →</a>
+<a href="/features/ai-search/" data-i18n="home.learn_more">Learn More →</a>
 </div>
 <div class="feat-card">
 <div class="fc-icon">&#128187;</div>
@@ -166,11 +277,11 @@
 </div>
 </section>
 
-<!-- Three Tabs -->
-<section id="features" class="section reveal">
+<!-- ═══════════════ THREE EDITIONS ═══════════════ -->
+<section id="features" class="section section-alt reveal">
 <div class="container">
 
-<div class="section-header">
+<div class="section-header centered">
 <span class="overline" data-i18n="home.complete_platform">Complete Platform</span>
 <h2 data-i18n="home.75_applications_three_editions">75+ Applications. Three Editions.</h2>
 <p data-i18n="home.one_platform_scaled_to_your_needs_from_self_hosted_persona">One platform, scaled to your needs. From self-hosted personal assistant to full enterprise AI with compliance and custom deployment.</p>
@@ -205,7 +316,7 @@
 </div>
 </div>
 
-<div class="tier-header" data-i18n="home.storage_documents">Storage & Documents</div>
+<div class="tier-header" data-i18n="home.storage_documents">Storage &amp; Documents</div>
 <div class="feature-matrix">
 <div class="feature-cell">
 <h4 data-i18n="home.drive">Drive</h4>
@@ -225,7 +336,7 @@
 </div>
 </div>
 
-<div class="tier-header" data-i18n="home.ai_knowledge">AI & Knowledge</div>
+<div class="tier-header" data-i18n="home.ai_knowledge">AI &amp; Knowledge</div>
 <div class="feature-matrix">
 <div class="feature-cell">
 <h4 data-i18n="home.knowledge_base">Knowledge Base</h4>
@@ -245,7 +356,7 @@
 </div>
 </div>
 
-<div class="tier-header" data-i18n="home.productivity__" data-i18n="home.productivity_" data-i18n="home.productivity">Productivity</div>
+<div class="tier-header" data-i18n="home.productivity">Productivity</div>
 <div class="feature-matrix">
 <div class="feature-cell">
 <h4 data-i18n="home.tasks">Tasks</h4>
@@ -281,7 +392,7 @@
 </div>
 </div>
 
-<div class="tier-header" data-i18n="home.crm_sales">CRM & Sales</div>
+<div class="tier-header" data-i18n="home.crm_sales">CRM &amp; Sales</div>
 <div class="feature-matrix">
 <div class="feature-cell">
 <h4 data-i18n="home.crm_kanban">CRM Kanban</h4>
@@ -301,7 +412,7 @@
 </div>
 </div>
 
-<div class="tier-header" data-i18n="home.marketing_engagement">Marketing & Engagement</div>
+<div class="tier-header" data-i18n="home.marketing_engagement">Marketing &amp; Engagement</div>
 <div class="feature-matrix">
 <div class="feature-cell">
 <h4 data-i18n="home.marketing_campaigns">Marketing Campaigns</h4>
@@ -321,7 +432,7 @@
 </div>
 </div>
 
-<div class="tier-header" data-i18n="home.ai_automation">AI & Automation</div>
+<div class="tier-header" data-i18n="home.ai_automation">AI &amp; Automation</div>
 <div class="feature-matrix">
 <div class="feature-cell">
 <h4 data-i18n="home.ai_attendant">AI Attendant</h4>
@@ -345,7 +456,7 @@
 <!-- ENTERPRISE -->
 <div id="panel-enterprise" class="user-panel">
 
-<div class="tier-header" data-i18n="home.security_compliance">Security & Compliance</div>
+<div class="tier-header" data-i18n="home.security_compliance">Security &amp; Compliance</div>
 <div class="feature-matrix">
 <div class="feature-cell">
 <h4 data-i18n="home.security_hardening">Security Hardening</h4>
@@ -401,7 +512,7 @@
 </div>
 </div>
 
-<div class="tier-header" data-i18n="home.identity_integration">Identity & Integration</div>
+<div class="tier-header" data-i18n="home.identity_integration">Identity &amp; Integration</div>
 <div class="feature-matrix">
 <div class="feature-cell">
 <h4 data-i18n="home.directory_sso">Directory / SSO</h4>
@@ -417,26 +528,29 @@
 </div>
 </section>
 
-<!-- Architecture -->
-<section class="section section-alt reveal">
+<!-- ═══════════════ ARCHITECTURE ═══════════════ -->
+<section class="section reveal">
 <div class="container">
-<div class="section-header">
+<div class="section-header centered">
 <span class="overline" data-i18n="home.architecture">Architecture</span>
 <h2 data-i18n="home.three_pillars_of_orchestration">Three Pillars of Orchestration</h2>
 <p data-i18n="home.ai_orchestration_vector_retrieval_open_core_working_in">AI orchestration + Vector retrieval + Open core — working in harmony.</p>
 </div>
 <div class="grid-3">
-<div class="card">
+<div class="card arch-card">
+<span class="arch-num">01</span>
 <div class="card-tag" data-i18n="home.pillar_01">Pillar 01</div>
 <h3 data-i18n="home.ai_orchestration">AI Orchestration</h3>
 <p data-i18n="home.connect_to_any_model_provider_openai_anthropic_google_g">Connect to any model provider — OpenAI, Anthropic, Google, Groq — or host your own. Dynamic model routing routes simple queries to cheaper models and complex tasks to high-tier models. Intelligent failover ensures zero downtime.</p>
 </div>
-<div class="card">
+<div class="card arch-card">
+<span class="arch-num">02</span>
 <div class="card-tag" data-i18n="home.pillar_02">Pillar 02</div>
 <h3 data-i18n="home.vector_retrieval_">Vector Retrieval</h3>
 <p data-i18n="home.high_performance_semantic_memory_high_fidelity_embeddings">High-performance semantic memory. High-fidelity embeddings, context-aware chunking that respects document structure, and cross-encoder re-ranking for precision. Sub-second latency across millions of documents.</p>
 </div>
-<div class="card">
+<div class="card arch-card">
+<span class="arch-num">03</span>
 <div class="card-tag" data-i18n="home.pillar_03">Pillar 03</div>
 <h3 data-i18n="home.open_source_core_">Open Source Core</h3>
 <p data-i18n="home.agpl_3_0_licensed_no_vendor_lock_in_full_transparency_sel">AGPL-3.0 licensed. No vendor lock-in. Full transparency. Self-host on your own infrastructure. Community-driven with 20+ contributors worldwide. Built since 2017.</p>
@@ -445,9 +559,10 @@
 </div>
 </section>
 
-<section class="section reveal">
+<!-- ═══════════════ INTEGRATIONS ═══════════════ -->
+<section class="section section-alt reveal">
 <div class="container">
-<div class="section-header">
+<div class="section-header centered">
 <span class="overline" data-i18n="home.integrations">Integrations</span>
 <h2 data-i18n="home.every_channel_one_platform">Every Channel, One Platform</h2>
 <p data-i18n="home.connect_with_your_customers_wherever_they_are">Connect with your customers wherever they are.</p>
@@ -469,109 +584,61 @@
 <p data-i18n="home.openai_gpt_4o_anthropic_claude_groq_deepseek_meta_llama">OpenAI GPT-4o, Anthropic Claude, Groq, DeepSeek, Meta Llama, Google Gemini, local models via Ollama or llama.cpp. Any OpenAI-compatible API.</p>
 </div>
 </div>
-</div>
-</section>
 
-<section class="section reveal">
-<div class="container">
-<div class="section-header">
-<span class="overline" data-i18n="home.site_map">Site Map</span>
-<h2 data-i18n="home.all_feature_integration_pages">All Feature & Integration Pages</h2>
-<p data-i18n="home.every_dedicated_page_on_the_platform_explore_each_capabili">Every dedicated page on the platform — explore each capability in depth.</p>
-</div>
-
-<div class="grid-3" style="text-align:left;margin-bottom:2rem">
-<div class="card">
-<div class="card-tag" data-i18n="home.features">Features</div>
-<h3 data-i18n="home.10_core_capabilities">10 Core Capabilities</h3>
-<p style="margin-top:.75rem">
-<a href="/features/ai-search/" style="color:#fff;text-decoration:underline;display:block;margin-bottom:.25rem" data-i18n="home.ai_search_">AI Search →</a>
-<a href="/features/bot-factory/" style="color:#fff;text-decoration:underline;display:block;margin-bottom:.25rem" data-i18n="home.bot_factory_">Bot Factory →</a>
-<a href="/features/broadcast/" style="color:#fff;text-decoration:underline;display:block;margin-bottom:.25rem" data-i18n="home.broadcast_">Broadcast →</a>
-<a href="/features/content-generation/" style="color:#fff;text-decoration:underline;display:block;margin-bottom:.25rem" data-i18n="home.content_generation_">Content Generation →</a>
-<a href="/features/create-apis-in-word/" style="color:#fff;text-decoration:underline;display:block;margin-bottom:.25rem" data-i18n="home.create_apis_in_basic">Create APIs in BASIC →</a>
-<a href="/features/llm-tools/" style="color:#fff;text-decoration:underline;display:block;margin-bottom:.25rem" data-i18n="home.llm_tools_">LLM Tools →</a>
-<a href="/features/talk-to-data/" style="color:#fff;text-decoration:underline;display:block;margin-bottom:.25rem" data-i18n="home.talk_to_data_">Talk to Data →</a>
-<a href="/features/trainning/" style="color:#fff;text-decoration:underline;display:block;margin-bottom:.25rem" data-i18n="home.training_knowledge">Training (Knowledge) →</a>
-<a href="/features/web-automation/" style="color:#fff;text-decoration:underline;display:block;margin-bottom:.25rem" data-i18n="home.web_automation_">Web Automation →</a>
-<a href="/features/" style="color:#fff;text-decoration:underline;display:block" data-i18n="home.all_features">All Features →</a>
-</p>
-</div>
-<div class="card">
-<div class="card-tag" data-i18n="home.platform">Platform</div>
-<h3 data-i18n="home.general_bots_sub_pages">General Bots Sub-Pages</h3>
-<p style="margin-top:.75rem">
-<a href="/general-bots/" style="color:#fff;text-decoration:underline;display:block;margin-bottom:.25rem" data-i18n="home.platform_overview">Platform Overview →</a>
-<a href="/general-bots/llm/" style="color:#fff;text-decoration:underline;display:block;margin-bottom:.25rem" data-i18n="home.llm_orchestration_">LLM Orchestration →</a>
-<a href="/general-bots/vector-retrieval/" style="color:#fff;text-decoration:underline;display:block;margin-bottom:.25rem" data-i18n="home.vector_retrieval__">Vector Retrieval →</a>
-<a href="/general-bots/open-source/" style="color:#fff;text-decoration:underline;display:block" data-i18n="home.open_source">Open Source →</a>
-</p>
-</div>
-<div class="card">
-<div class="card-tag" data-i18n="home.channels">Channels</div>
-<h3 data-i18n="home.communication_integrations">Communication Integrations</h3>
-<p style="margin-top:.75rem">
-<a href="/integrations/channels/whatsapp/" style="color:#fff;text-decoration:underline;display:block;margin-bottom:.25rem" data-i18n="home.whatsapp">WhatsApp →</a>
-<a href="/integrations/channels/microsoft-teams/" style="color:#fff;text-decoration:underline;display:block;margin-bottom:.25rem" data-i18n="home.microsoft_teams_">Microsoft Teams →</a>
-
-<a href="/integrations/channels/slack/" style="color:#fff;text-decoration:underline;display:block;margin-bottom:.25rem" data-i18n="home.slack">Slack →</a>
-<a href="/integrations/channels/google-chat/" style="color:#fff;text-decoration:underline;display:block;margin-bottom:.25rem" data-i18n="home.google_chat">Google Chat →</a>
-<a href="/integrations/channels/instagram/" style="color:#fff;text-decoration:underline;display:block;margin-bottom:.25rem" data-i18n="home.instagram_">Instagram →</a>
-<a href="/integrations/channels/facebook-pages/" style="color:#fff;text-decoration:underline;display:block;margin-bottom:.25rem" data-i18n="home.facebook_pages">Facebook Pages →</a>
-<a href="/integrations/channels/sms/" style="color:#fff;text-decoration:underline;display:block;margin-bottom:.25rem" data-i18n="home.f6a57fca1d">SMS →</a>
-<a href="/integrations/channels/email/" style="color:#fff;text-decoration:underline;display:block;margin-bottom:.25rem" data-i18n="home.email_channel">Email Channel →</a>
-<a href="/integrations/channels/web-chat/" style="color:#fff;text-decoration:underline;display:block" data-i18n="home.web_chat">Web Chat →</a>
-</p>
-</div>
-</div>
-
-<div class="grid-3" style="text-align:left">
-<div class="card">
-<div class="card-tag">Enterprise</div>
-<h3 data-i18n="home.enterprise_integrations">Enterprise Integrations</h3>
-<p style="margin-top:.75rem">
-<a href="/integrations/enterprise/minio/" style="color:#fff;text-decoration:underline;display:block;margin-bottom:.25rem" data-i18n="home.minio_storage">MinIO Storage →</a>
-<a href="/integrations/enterprise/project/" style="color:#fff;text-decoration:underline;display:block;margin-bottom:.25rem" data-i18n="home.microsoft_project">Microsoft Project →</a>
-<a href="/integrations/enterprise/sharepoint/" style="color:#fff;text-decoration:underline;display:block" data-i18n="home.sharepoint">SharePoint →</a>
-</p>
-</div>
-<div class="card">
-<div class="card-tag">Productivity</div>
-<h3 data-i18n="home.team_work_integrations">Team Work Integrations</h3>
-<p style="margin-top:.75rem">
-<a href="/integrations/team-work/whatsapp-microsoft-teams/" style="color:#fff;text-decoration:underline;display:block;margin-bottom:.25rem" data-i18n="home.whatsapp_teams">WhatsApp + Teams →</a>
-<a href="/integrations/team-work/whatsapp-google-workspace/" style="color:#fff;text-decoration:underline;display:block;margin-bottom:.25rem" data-i18n="home.whatsapp_google">WhatsApp + Google →</a>
-<a href="/integrations/team-work/whatsapp-facebook-workplace/" style="color:#fff;text-decoration:underline;display:block" data-i18n="home.whatsapp_workplace">WhatsApp + Workplace →</a>
-</p>
-</div>
-<div class="card">
-<div class="card-tag" data-i18n="home.ai_assistants">AI Assistants</div>
-<h3 data-i18n="home.virtual_assistant_integrations">Virtual Assistant Integrations</h3>
-<p style="margin-top:.75rem">
-<a href="/integrations/virtual-assistants/chat-gpt/" style="color:#fff;text-decoration:underline;display:block;margin-bottom:.25rem" data-i18n="home.chatgpt">ChatGPT →</a>
-<a href="/integrations/virtual-assistants/microsoft-copilot/" style="color:#fff;text-decoration:underline;display:block;margin-bottom:.25rem" data-i18n="home.microsoft_copilot">Microsoft Copilot →</a>
-<a href="/integrations/virtual-assistants/alexa/" style="color:#fff;text-decoration:underline;display:block" data-i18n="home.alexa">Alexa →</a>
-</p>
-</div>
-</div>
-
-<div class="flex flex-wrap gap-2 justify-center" style="margin-top:1.5rem">
-<a href="/integrations/finance/" class="btn btn-outline" style="font-size:.75rem" data-i18n="home.finance_integration">Finance Integration →</a>
-<a href="/integrations/" class="btn btn-outline" style="font-size:.75rem" data-i18n="home.all_integrations">All Integrations →</a>
-<a href="/pricing/" class="btn btn-outline" style="font-size:.75rem" data-i18n="home.pricing">Pricing →</a>
-<a href="/resources/" class="btn btn-outline" style="font-size:.75rem" data-i18n="home.resources">Resources →</a>
-<a href="/blog/" class="btn btn-outline" style="font-size:.75rem" data-i18n="home.blog">Blog →</a>
+<!-- Channel pills -->
+<div class="channel-row" style="margin-top:2rem">
+  <a href="/integrations/channels/whatsapp/" class="channel-pill" data-i18n="home.whatsapp">
+    <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    WhatsApp
+  </a>
+  <a href="/integrations/channels/microsoft-teams/" class="channel-pill">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+    Teams
+  </a>
+  <a href="/integrations/channels/slack/" class="channel-pill">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18M15 3v18M3 9h18M3 15h18"/></svg>
+    Slack
+  </a>
+  <a href="/integrations/channels/telegram/" class="channel-pill">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+    Telegram
+  </a>
+  <a href="/integrations/channels/instagram/" class="channel-pill">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/></svg>
+    Instagram
+  </a>
+  <a href="/integrations/channels/google-chat/" class="channel-pill">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+    Google Chat
+  </a>
+  <a href="/integrations/channels/email/" class="channel-pill">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+    Email
+  </a>
+  <a href="/integrations/channels/sms/" class="channel-pill">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><path d="M12 18h.01"/></svg>
+    SMS
+  </a>
+  <a href="/integrations/" class="channel-pill" style="border-color:var(--accent);color:var(--accent-light)">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><circle cx="12" cy="12" r="10"/><path d="M8 12h8M12 8v8"/></svg>
+    All Integrations →
+  </a>
 </div>
 </div>
 </section>
 
+<!-- ═══════════════ CTA ═══════════════ -->
 <section class="cta-section">
-<div class="container">
-<h2 class="text-3xl font-bold tracking-tighter mb-4" data-i18n="cta.title">Start Building Today</h2>
-<p class="text-lg text-muted max-w-2xl mx-auto mb-8 leading-relaxed" data-i18n="cta.sub">75+ applications. One platform. Open source. Self-hosted or managed — same software, your choice. Personal, business, or enterprise scale.</p>
+<div class="container" style="position:relative;z-index:1">
+<h2 data-i18n="cta.title">Start Building Today</h2>
+<p data-i18n="cta.sub">75+ applications. One platform. Open source. Self-hosted or managed — same software, your choice. Personal, business, or enterprise scale.</p>
 <div class="flex flex-wrap gap-4 justify-center">
-<a href="/features/" class="btn btn-primary btn-lg" data-i18n="hero.explore">Explore All Apps</a>
-<a href="https://github.com/pragmatismo-io" class="btn btn-outline btn-lg" data-i18n="hero.github">View on GitHub</a>
+<a href="/features/" class="btn btn-primary btn-lg" data-i18n="hero.explore">Explore Platform</a>
+<a href="/pricing/" class="btn btn-outline btn-lg" data-i18n="home.pricing">Pricing</a>
+<a href="https://github.com/pragmatismo-io" class="btn btn-outline btn-lg" data-i18n="hero.github">
+  <svg viewBox="0 0 16 16" fill="currentColor" width="16" height="16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>
+  View on GitHub
+</a>
 </div>
 </div>
 </section>
@@ -581,8 +648,8 @@
 <div hx-get="/partials/footer.html" hx-swap="innerHTML" hx-trigger="load"></div>
 <script>
 function switchTab(e,panel){
-document.querySelectorAll('.user-tab').forEach(t=>t.classList.remove('active'));
-document.querySelectorAll('.user-panel').forEach(p=>p.classList.remove('active'));
+document.querySelectorAll('.user-tab').forEach(function(t){t.classList.remove('active')});
+document.querySelectorAll('.user-panel').forEach(function(p){p.classList.remove('active')});
 e.target.classList.add('active');
 document.getElementById('panel-'+panel).classList.add('active');
 }

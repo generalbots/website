@@ -11,125 +11,229 @@
 <meta property="og:description" content="The enterprise-grade AI orchestration platform that turns your Word documents into intelligent bots and APIs.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://generalbots.org/general-bots/">
+<meta property="og:image" content="https://generalbots.org/logo-square.svg">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/favicon.ico">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="stylesheet" href="/css/site.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "General Bots Platform",
+  "description": "Learn about the architecture and core technology pillars of the General Bots platform.",
+  "url": "https://generalbots.org/general-bots/",
+  "isPartOf": {"@type": "WebSite", "name": "General Bots", "url": "https://generalbots.org"}
+}
+</script>
+<style>
+/* Page-specific overrides */
+.gb-hero {
+  min-height: 65vh;
+  display: flex;
+  align-items: center;
+  padding: 8rem 0 5rem;
+  position: relative;
+  overflow: hidden;
+}
+.visual-container {
+  max-width: 50rem;
+  margin: 0 auto;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-2xl);
+  aspect-ratio: 16/9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  box-shadow: var(--shadow-lg);
+}
+.svg-diagram {
+  width: 100%;
+  height: 100%;
+}
+.svg-bg-fill { fill: var(--bg); }
+.svg-stroke-main { stroke: var(--fg); opacity: 0.15; }
+.svg-stroke-dashed { stroke: var(--fg-muted); opacity: 0.25; }
+.svg-accent-glow { stroke: var(--accent); }
+.svg-accent-fill { fill: var(--accent); }
+.svg-text-primary { fill: var(--fg); }
+.svg-text-muted { fill: var(--fg-muted); }
+</style>
 </head>
 <body>
+
 <div hx-get="/partials/header.html" hx-swap="innerHTML" hx-trigger="load"></div>
-<main style="padding-top:4rem">
-<section class="page-section bg-gray-50 vitral-bg">
-<div class="container text-center">
-<div class="reveal">
-<div class="badge mb-4" style="margin-left:auto;margin-right:auto;width:fit-content">
-<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-<span data-i18n="general-bots.hero.badge">The General Bots Ecosystem</span>
-</div>
-<h1 class="text-4xl font-bold tracking-tighter mb-4" style="font-size:clamp(2.5rem,6vw,4rem)" data-i18n="general-bots.hero.title">The Architecture of Intelligence</h1>
-<p class="text-xl text-muted max-w-3xl mx-auto leading-relaxed mb-8" data-i18n="general-bots.hero.sub">General Bots isn't just a chatbot builder. It's a complete AI orchestration platform that bridges the gap between sophisticated LLMs and your existing business infrastructure.</p>
-<div class="flex flex-wrap gap-4 justify-center mb-12">
-<a href="/general-bots/llm/" class="btn btn-primary btn-lg" data-i18n="general-bots.hero.explore_llm">Explore LLMs</a>
-<a href="/general-bots/vector-retrieval/" class="btn btn-outline btn-lg" data-i18n="general-bots.hero.vector_retrieval">Vector Retrieval</a>
-</div>
-<div style="max-width:50rem;margin:0 auto;background:var(--card);border:1px solid var(--border);border-radius:1.5rem;aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;color:var(--muted-foreground);overflow:hidden;position:relative">
-<svg width="100%" height="100%" viewBox="0 0 800 450" fill="none">
-  <defs>
-    <linearGradient id="mainGrad" x1="0" y1="0" x2="800" y2="450" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#f8f8f8"/>
-      <stop offset="100%" stop-color="#eaeaea"/>
-    </linearGradient>
-    <pattern id="gridLarge" width="80" height="80" patternUnits="userSpaceOnUse">
-      <path d="M 80 0 L 0 0 0 80" fill="none" stroke="rgba(0,0,0,0.02)" stroke-width="1"/>
-    </pattern>
-  </defs>
-  <rect width="800" height="450" fill="url(#mainGrad)"/>
-  <rect width="800" height="450" fill="url(#gridLarge)"/>
-  <g transform="translate(400, 225)">
-    <circle cx="0" cy="0" r="120" stroke="#111" stroke-width="1" stroke-dasharray="10 5" opacity="0.2" />
-    <circle cx="0" cy="0" r="80" stroke="#111" stroke-width="1" stroke-dasharray="5 5" opacity="0.3" />
-    <circle cx="0" cy="0" r="40" stroke="#059669" stroke-width="2" />
-    <path d="M-150 0 H150 M0 -150 V150" stroke="#111" stroke-width="1" opacity="0.1" />
-    <circle cx="0" cy="0" r="10" fill="#059669" />
-  </g>
-</svg>
-</div>
-</div>
+
+<main>
+
+<!-- ═══════════════ HERO ═══════════════ -->
+<section class="gb-hero">
+<div class="mesh-pattern"></div>
+<div class="bloom bloom-1"></div>
+<div class="bloom bloom-2"></div>
+<div class="hero-orb hero-orb-1"></div>
+<div class="hero-orb hero-orb-2"></div>
+<div class="container" style="position:relative;z-index:2">
+  <div class="reveal text-center">
+    <div class="hero-badge" style="margin:0 auto 2rem">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      <span data-i18n="general-bots.hero.badge">The General Bots Ecosystem</span>
+    </div>
+    <h1 style="font-size:clamp(2.5rem,6vw,4.5rem);font-weight:900;letter-spacing:-.05em;line-height:.92;margin-bottom:1.5rem">
+      The Architecture of<br><span class="gradient-word" data-i18n="general-bots.hero.title">Intelligence.</span>
+    </h1>
+    <p class="text-lg max-w-3xl mx-auto leading-relaxed mb-8" style="color:var(--fg-secondary);font-size:1.125rem" data-i18n="general-bots.hero.sub">
+      General Bots isn't just a chatbot builder. It's a complete AI orchestration platform that bridges the gap between sophisticated LLMs and your existing business infrastructure.
+    </p>
+    <div class="flex flex-wrap gap-4 justify-center mb-12">
+      <a href="/general-bots/llm/" class="btn btn-primary btn-lg" data-i18n="general-bots.hero.explore_llm">Explore LLMs</a>
+      <a href="/general-bots/vector-retrieval/" class="btn btn-outline btn-lg" data-i18n="general-bots.hero.vector_retrieval">Vector Retrieval</a>
+    </div>
+
+    <!-- Core architecture illustration -->
+    <div class="visual-container reveal reveal-delay-2">
+      <svg class="svg-diagram" viewBox="0 0 800 450" fill="none">
+        <pattern id="gridLarge" width="80" height="80" patternUnits="userSpaceOnUse">
+          <path d="M 80 0 L 0 0 0 80" fill="none" stroke="var(--border)" stroke-width="0.5"/>
+        </pattern>
+        <rect width="800" height="450" fill="url(#gridLarge)"/>
+        
+        <!-- Animated visual structure -->
+        <g transform="translate(400, 225)">
+          <circle cx="0" cy="0" r="140" class="svg-stroke-dashed" stroke-width="1.5" stroke-dasharray="8 6" />
+          <circle cx="0" cy="0" r="90" class="svg-stroke-dashed" stroke-width="1.5" stroke-dasharray="4 4" />
+          <circle cx="0" cy="0" r="45" class="svg-accent-glow" stroke-width="2" />
+          <path d="M-180 0 H180 M0 -180 V180" class="svg-stroke-main" stroke-width="1" />
+          <circle cx="0" cy="0" r="12" class="svg-accent-fill" />
+          
+          <!-- Outer orbital modules -->
+          <circle cx="-140" cy="0" r="16" class="svg-accent-fill" opacity="0.8" />
+          <circle cx="140" cy="0" r="16" class="svg-accent-fill" opacity="0.8" />
+          <circle cx="0" cy="-140" r="16" class="svg-accent-fill" opacity="0.8" />
+          <circle cx="0" cy="140" r="16" class="svg-accent-fill" opacity="0.8" />
+        </g>
+      </svg>
+    </div>
+  </div>
 </div>
 </section>
 
-<section class="page-section-lg reveal">
+<!-- ═══════════════ PILLARS OF ORCHESTRATION ═══════════════ -->
+<section class="section reveal">
 <div class="container">
-<div class="text-center mb-16">
-<h2 class="text-3xl font-bold tracking-tighter mb-4" data-i18n="general-bots.pillars.title">Three Pillars of Orchestration</h2>
-<p class="text-lg text-muted max-w-2xl mx-auto leading-relaxed" data-i18n="general-bots.pillars.sub">Our platform is built on three core technologies that work in harmony to deliver enterprise AI results.</p>
-</div>
-<div class="grid-3">
-<div class="glass-card p-10">
-<div class="badge mb-6" data-i18n="general-bots.pillars.01.badge">Pillar 01</div>
-<h3 class="text-2xl font-bold mb-4" data-i18n="general-bots.pillars.01.title">LLM Orchestration</h3>
-<p class="text-muted leading-relaxed mb-6" data-i18n="general-bots.pillars.01.desc">Connect to any model provider (OpenAI, Anthropic, Google, Groq) or host your own. Our layer manages prompt versioning, failover, and cost-routing automatically.</p>
-<a href="/general-bots/llm/" class="text-sm font-bold uppercase tracking-widest hover:text-green-600 transition-colors" data-i18n="general.learn_more">Learn More →</a>
-</div>
-<div class="glass-card p-10">
-<div class="badge mb-6" data-i18n="general-bots.pillars.02.badge">Pillar 02</div>
-<h3 class="text-2xl font-bold mb-4" data-i18n="general-bots.pillars.02.title">Vector Retrieval</h3>
-<p class="text-muted leading-relaxed mb-6" data-i18n="general-bots.pillars.02.desc">The "memory" of your AI. We use high-performance vector databases to give your bots instant access to your private knowledge base with semantic accuracy.</p>
-<a href="/general-bots/vector-retrieval/" class="text-sm font-bold uppercase tracking-widest hover:text-green-600 transition-colors" data-i18n="general.learn_more">Learn More →</a>
-</div>
-<div class="glass-card p-10">
-<div class="badge mb-6" data-i18n="general-bots.pillars.03.badge">Pillar 03</div>
-<h3 class="text-2xl font-bold mb-4" data-i18n="general-bots.pillars.03.title">Open Source Core</h3>
-<p class="text-muted leading-relaxed mb-6" data-i18n="general-bots.pillars.03.desc">No vendor lock-in. General Bots is built on a transparent, community-driven codebase that you can inspect, modify, and self-host on your own infrastructure.</p>
-<a href="/general-bots/open-source/" class="text-sm font-bold uppercase tracking-widest hover:text-green-600 transition-colors" data-i18n="general.learn_more">Learn More →</a>
-</div>
-</div>
+  <div class="section-header centered">
+    <span class="overline" data-i18n="general-bots.pillars.overline">Core Philosophy</span>
+    <h2 data-i18n="general-bots.pillars.title">Three Pillars of Orchestration</h2>
+    <p data-i18n="general-bots.pillars.sub">Our platform is built on three core technologies that work in harmony to deliver enterprise AI results.</p>
+  </div>
+  
+  <div class="grid-3">
+    <div class="card reveal reveal-delay-1">
+      <div class="flex items-center justify-between mb-4">
+        <div class="icon-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+        </div>
+        <span class="badge" data-i18n="general-bots.pillars.01.badge">Pillar 01</span>
+      </div>
+      <h3 class="text-xl font-bold mb-3" data-i18n="general-bots.pillars.01.title">LLM Orchestration</h3>
+      <p class="text-sm text-muted leading-relaxed mb-6" data-i18n="general-bots.pillars.01.desc">Connect to any model provider (OpenAI, Anthropic, Google, Groq) or host your own. Our layer manages prompt versioning, failover, and cost-routing automatically.</p>
+      <a href="/general-bots/llm/" class="text-xs font-bold uppercase tracking-widest hover:text-green-600 transition-colors" data-i18n="general.learn_more">Learn More &rarr;</a>
+    </div>
+
+    <div class="card reveal reveal-delay-2">
+      <div class="flex items-center justify-between mb-4">
+        <div class="icon-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/><path d="M2 12h20"/></svg>
+        </div>
+        <span class="badge" data-i18n="general-bots.pillars.02.badge">Pillar 02</span>
+      </div>
+      <h3 class="text-xl font-bold mb-3" data-i18n="general-bots.pillars.02.title">Vector Retrieval</h3>
+      <p class="text-sm text-muted leading-relaxed mb-6" data-i18n="general-bots.pillars.02.desc">The "memory" of your AI. We use high-performance vector databases to give your bots instant access to your private knowledge base with semantic accuracy.</p>
+      <a href="/general-bots/vector-retrieval/" class="text-xs font-bold uppercase tracking-widest hover:text-green-600 transition-colors" data-i18n="general.learn_more">Learn More &rarr;</a>
+    </div>
+
+    <div class="card reveal reveal-delay-3">
+      <div class="flex items-center justify-between mb-4">
+        <div class="icon-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        </div>
+        <span class="badge" data-i18n="general-bots.pillars.03.badge">Pillar 03</span>
+      </div>
+      <h3 class="text-xl font-bold mb-3" data-i18n="general-bots.pillars.03.title">Open Source Core</h3>
+      <p class="text-sm text-muted leading-relaxed mb-6" data-i18n="general-bots.pillars.03.desc">No vendor lock-in. General Bots is built on a transparent, community-driven codebase that you can inspect, modify, and self-host on your own infrastructure.</p>
+      <a href="/general-bots/open-source/" class="text-xs font-bold uppercase tracking-widest hover:text-green-600 transition-colors" data-i18n="general.learn_more">Learn More &rarr;</a>
+    </div>
+  </div>
 </div>
 </section>
 
-<section class="page-section-lg bg-gray-50 reveal">
+<!-- ═══════════════ THE OFFICE PARADIGM ═══════════════ -->
+<section class="section section-alt reveal">
 <div class="container">
-<div class="grid-2 items-center">
-<div>
-<h2 class="text-3xl font-bold tracking-tighter mb-6" data-i18n="general-bots.office.title">The "Office" Paradigm</h2>
-<p class="text-lg text-muted leading-relaxed mb-8" data-i18n="general-bots.office.sub">We believe AI development shouldn't require a computer science degree. By leveraging the tools your team already uses — like Microsoft Word and Excel — General Bots allows business domain experts to define bot behavior directly.</p>
-<ul class="feature-list">
-<li>
-<svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>
-<div><strong data-i18n="general-bots.office.feature1_title">PROMPT.md in Word</strong><p class="text-sm text-muted mt-1" data-i18n="general-bots.office.feature1_desc">Define your bot's personality and rules in a standard document. Save, and the bot updates instantly.</p></div>
-</li>
-<li>
-<svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>
-<div><strong data-i18n="general-bots.office.feature2_title">Spreadsheet Knowledge Bases</strong><p class="text-sm text-muted mt-1" data-i18n="general-bots.office.feature2_desc">Use Excel or Google Sheets to manage FAQs and lookup data. The bot reads them like a database.</p></div>
-</li>
-</ul>
-</div>
-<div style="background:var(--card);border:1px solid var(--border);border-radius:1rem;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;color:var(--muted-foreground);overflow:hidden">
-<svg width="100%" height="100%" viewBox="0 0 400 300" fill="none">
-  <rect width="400" height="300" fill="#fafafa"/>
-  <g transform="translate(100, 50)" fill="#fff" stroke="currentColor" stroke-width="2">
-    <rect x="0" y="20" width="160" height="200" rx="4" />
-    <path d="M20 60 H140 M20 80 H120 M20 100 H140" stroke="#111" opacity="0.2" />
-    <rect x="40" y="130" width="120" height="60" rx="4" stroke="#059669" />
-    <text x="100" y="165" font-family="monospace" font-size="12" text-anchor="middle" fill="#059669" stroke="none">BASIC</text>
-  </g>
-</svg>
-</div>
-</div>
+  <div class="grid-2 items-center">
+    <div>
+      <span class="overline" style="font-size:.6875rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-light);margin-bottom:.75rem;display:inline-flex;align-items:center;gap:.5rem">Productivity</span>
+      <h2 class="text-3xl font-bold tracking-tighter mb-6" data-i18n="general-bots.office.title">The "Office" Paradigm</h2>
+      <p class="text-lg text-muted leading-relaxed mb-8" data-i18n="general-bots.office.sub">We believe AI development shouldn't require a computer science degree. By leveraging the tools your team already uses — like Microsoft Word and Excel — General Bots allows business domain experts to define bot behavior directly.</p>
+      
+      <ul class="feature-list">
+        <li style="margin-bottom:1.5rem">
+          <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>
+          <div>
+            <strong data-i18n="general-bots.office.feature1_title">PROMPT.md in Word</strong>
+            <p class="text-sm text-muted mt-1" data-i18n="general-bots.office.feature1_desc">Define your bot's personality and rules in a standard document. Save, and the bot updates instantly.</p>
+          </div>
+        </li>
+        <li>
+          <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>
+          <div>
+            <strong data-i18n="general-bots.office.feature2_title">Spreadsheet Knowledge Bases</strong>
+            <p class="text-sm text-muted mt-1" data-i18n="general-bots.office.feature2_desc">Use Excel or Google Sheets to manage FAQs and lookup data. The bot reads them like a database.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+    
+    <!-- Code compilation illustration -->
+    <div class="card flex items-center justify-center p-8" style="aspect-ratio:4/3;background:var(--bg-card)">
+      <svg width="100%" height="100%" viewBox="0 0 400 300" fill="none">
+        <g transform="translate(100, 30)">
+          <!-- Document body -->
+          <rect x="0" y="20" width="180" height="220" rx="6" fill="var(--bg-secondary)" stroke="var(--border)" stroke-width="1.5" />
+          <path d="M25 60 H155 M25 85 H135 M25 110 H155" stroke="var(--fg-secondary)" stroke-width="2" opacity="0.3" />
+          <path d="M25 135 H115" stroke="var(--fg-secondary)" stroke-width="2" opacity="0.2" />
+          <!-- Code nested frame -->
+          <rect x="35" y="160" width="135" height="60" rx="4" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.5" />
+          <text x="102" y="195" font-family="monospace" font-size="14" font-weight="700" text-anchor="middle" fill="var(--accent-light)" stroke="none">BASIC</text>
+        </g>
+      </svg>
+    </div>
+  </div>
 </div>
 </section>
 
-<section class="page-section-lg vitral-bg reveal">
-<div class="container text-center">
-<h2 class="text-3xl font-bold tracking-tighter mb-4" data-i18n="general-bots.cta.title">Ready to Build the Future?</h2>
-<p class="text-lg text-muted max-w-2xl mx-auto mb-8 leading-relaxed" data-i18n="general-bots.cta.sub">Join the hundreds of organizations using General Bots to scale their operations with intelligent automation.</p>
-<div class="flex flex-wrap gap-4 justify-center">
-<a href="/contact/" class="btn btn-outline btn-lg" data-i18n="cta.contact">Contact Us</a>
-<a href="/contact/" class="btn btn-primary btn-lg" data-i18n="cta.get-started">Get Started</a>
-</div>
+<!-- ═══════════════ FINAL CALLOUT ═══════════════ -->
+<section class="section reveal" style="position:relative">
+<div class="mesh-pattern"></div>
+<div class="container text-center" style="position:relative;z-index:2">
+  <h2 class="text-3xl font-bold tracking-tighter mb-4" data-i18n="general-bots.cta.title">Ready to Build the Future?</h2>
+  <p class="text-lg text-muted max-w-2xl mx-auto mb-8 leading-relaxed" data-i18n="general-bots.cta.sub">Join the hundreds of organizations using General Bots to scale their operations with intelligent automation.</p>
+  <div class="flex flex-wrap gap-4 justify-center">
+    <a href="/contact/" class="btn btn-outline btn-lg" data-i18n="cta.contact">Contact Us</a>
+    <a href="/contact/" class="btn btn-primary btn-lg" data-i18n="cta.get-started">Get Started</a>
+  </div>
 </div>
 </section>
+
 </main>
+
 <div hx-get="/partials/footer.html" hx-swap="innerHTML" hx-trigger="load"></div>
+
 <script src="https://unpkg.com/htmx.org@2.0.4"></script>
 <script src="/js/site.js"></script>
 </body>
