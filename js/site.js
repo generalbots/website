@@ -46,6 +46,23 @@
   var translations = {};
   var supportedLangs = ['en','pt','es','fr','de','ja','zh-cn'];
 
+  function loadCached(lang){
+    try{
+      var cached = localStorage.getItem('gb_translations_' + lang);
+      if(cached){
+        translations = JSON.parse(cached);
+        currentLang = lang;
+        applyTranslations();
+        return true;
+      }
+    }catch(e){}
+    return false;
+  }
+
+  function saveCache(lang, data){
+    try{ localStorage.setItem('gb_translations_' + lang, JSON.stringify(data)); }catch(e){}
+  }
+
   function detectLang(){
     var path = window.location.pathname.toLowerCase();
     var parts = path.split('/');
@@ -71,7 +88,7 @@
     for(var i = 0; i < links.length; i++){
       var link = links[i];
       var href = link.getAttribute('href');
-      if(href.match(/^https?:\/\//) || href.startsWith('#') || href.match(/^\/(pt|es|fr|de|ja|zh-cn)\//) || href.match(/^\/(css|js|lang|img|icons|assets)\//)) continue;
+      if(!href || href.match(/^https?:\/\//) || href.startsWith('#') || href.startsWith(prefix) || href.match(/^\/(css|js|lang|img|icons|assets)\//)) continue;
       if(href.startsWith('/')) link.setAttribute('href', prefix + href);
       else if(!href.includes(':')) link.setAttribute('href', prefix + '/' + href);
     }
@@ -85,6 +102,7 @@
         try{
           translations = JSON.parse(xhr.responseText);
           currentLang = lang;
+          saveCache(lang, translations);
           document.cookie = 'gb_lang=' + lang + ';path=/;max-age=31536000';
           applyTranslations();
           if(document.getElementById('lang-flags')) injectFlags();
@@ -114,6 +132,7 @@
       }
     }
     document.documentElement.lang = currentLang;
+    document.documentElement.classList.add('i18n-ready');
   }
 
   function switchLang(lang){
@@ -123,16 +142,16 @@
     var hash = window.location.hash || '';
     var parts = path.split('/');
     if(parts.length > 1 && supportedLangs.indexOf(parts[1]) !== -1){
-      path = '/' + lang + path.substring(parts[1].length + 2);
+      path = '/' + lang + path.substring(parts[1].length + 1);
     }else{
       path = '/' + lang + path;
     }
     window.location.href = path + search + hash;
   }
 
-  var flagEmojis = {
-    'en':'\ud83c\uddfa\ud83c\uddf8','pt':'\ud83c\udde7\ud83c\uddf7','es':'\ud83c\uddea\ud83c\uddf8',
-    'fr':'\ud83c\uddeb\ud83c\uddf7','de':'\ud83c\udde9\ud83c\uddea','ja':'\ud83c\uddaf\ud83c\uddf5','zh-cn':'\ud83c\udde8\ud83c\uddf3'
+  var flagLabels = {
+    'en':'EN','pt':'PT','es':'ES',
+    'fr':'FR','de':'DE','ja':'JA','zh-cn':'ZH'
   };
 
   function injectFlags(){
@@ -145,12 +164,12 @@
       a.href = '#';
       a.title = lang;
       var isActive = lang === currentLang;
-      a.style.cssText = 'font-size:1rem;cursor:pointer;transition:opacity .15s;text-decoration:none;margin:0 .0625rem;opacity:' + (isActive ? '1' : '.45');
+      a.style.cssText = 'font-size:.6875rem;font-weight:700;cursor:pointer;transition:opacity .15s;text-decoration:none;margin:0 .0625rem;padding:.125rem .25rem;border-radius:.25rem;opacity:' + (isActive ? '1' : '.45');
       a.onmouseover = function(){this.style.opacity=1};
       a.onmouseout = function(){if(this.getAttribute('data-lang')!==currentLang)this.style.opacity=.45};
       a.setAttribute('data-lang', lang);
       a.onclick = (function(l){return function(e){e.preventDefault();switchLang(l);}})(lang);
-      a.textContent = flagEmojis[lang] || lang;
+      a.textContent = flagLabels[lang] || lang.toUpperCase();
       container.appendChild(a);
     }
   }
@@ -162,7 +181,8 @@
   window.__currentLang = function(){ return currentLang; };
 
   var detectedLang = detectLang();
-  loadLang(detectedLang, function(){ setTimeout(localizeLinks, 100); });
+  if(!loadCached(detectedLang)) loadLang(detectedLang, function(){ setTimeout(localizeLinks, 100); });
+  else { localizeLinks(); loadLang(detectedLang); }
 
   var _flagsInjected = false;
   (function retryInject(){

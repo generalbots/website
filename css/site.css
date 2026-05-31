@@ -3,7 +3,7 @@
    Dark/Light · Glassmorphic · Enterprise-Grade
    ================================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;0,9..40,900;1,9..40,400&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap');
+/* System fonts only — no external font imports */
 
 /* ---- Reset ---- */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -37,9 +37,9 @@
   --radius-lg:.75rem;
   --radius-xl:1rem;
   --radius-2xl:1.25rem;
-  --font:'Inter',system-ui,-apple-system,sans-serif;
-  --font-display:'DM Sans','Inter',system-ui,sans-serif;
-  --mono:'JetBrains Mono',monospace;
+  --font:system-ui,-apple-system,'Noto Sans','Liberation Sans','DejaVu Sans',sans-serif;
+  --font-display:system-ui,-apple-system,'Noto Sans','Liberation Sans','DejaVu Sans',sans-serif;
+  --mono:'Noto Sans Mono','Liberation Mono','DejaVu Sans Mono',monospace;
   --transition:all .2s cubic-bezier(.4,0,.2,1);
   --transition-slow:all .4s cubic-bezier(.4,0,.2,1);
   --shadow-sm:0 1px 2px rgba(0,0,0,.3);
@@ -123,14 +123,10 @@ body::after{
 .logo-link{display:flex;align-items:center;gap:.75rem;flex:0 0 auto;min-width:max-content}
 .logo-mark{
   display:inline-flex;align-items:center;justify-content:center;
-  width:128px;height:2.75rem;
-  border:1px solid var(--border);border-radius:var(--radius-lg);
-  background:var(--bg-card);
-  backdrop-filter:var(--glass-blur);
+  width:auto;height:auto;
   transition:var(--transition);
 }
-.logo-mark:hover{border-color:var(--accent);box-shadow:var(--shadow-glow)}
-.logo-mark img{width:100%;height:100%;object-fit:contain;padding:5px;filter:invert(1)}
+.logo-mark img{width:96px;height:96px;filter:invert(1)}
 [data-theme="light"] .logo-mark img{filter:none}
 .logo-type{font-family:var(--font-display);font-size:1.25rem;font-weight:900;line-height:1;letter-spacing:-.04em;color:var(--fg);white-space:nowrap}
 
@@ -193,7 +189,7 @@ body::after{
 @media(max-width:1140px) and (min-width:1024px){.nav-desktop{order:3;flex:1 0 100%;justify-content:flex-start;padding-left:3.5rem}.nav-actions{margin-left:0}.header-inner{align-items:flex-start}}
 @media(max-width:1023px){
   .header-inner{min-height:4rem}
-  .logo-mark{width:96px;height:2.25rem;border-radius:var(--radius)}.logo-mark img{width:100%;height:100%;padding:4px}
+  .logo-mark{width:auto;height:auto}.logo-mark img{width:80px;height:80px}
   .logo-type{font-size:1.125rem}
   .nav-desktop{display:none}.nav-mobile-toggle{display:flex}
   #mobile-menu{top:4rem}
@@ -728,6 +724,10 @@ tr:hover td{background:var(--accent-soft)}
    FOCUS STYLES (Accessibility)
    ================================================================ */
 :focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:2px}
+
+/* Hide untranslated content until i18n ready — prevents flash of wrong language */
+[data-i18n]{visibility:hidden}
+html.i18n-ready [data-i18n]{visibility:visible}
 
 /* ================================================================
    PRINT
