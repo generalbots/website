@@ -6,3 +6,5 @@ test-i18n.mjs
 tasks.md
 .env
 AGENTS.md
+.antigravitycli/
+.playwright-mcp/
