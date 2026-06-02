@@ -468,6 +468,7 @@ body>div[hx-get="/partials/header.html"]+main[style*="padding-top:4rem"]{padding
    FOOTER
    ================================================================ */
 .site-footer{background:var(--bg-secondary);color:var(--fg-secondary);padding:3.5rem 0 1.5rem;border-top:1px solid var(--border-subtle)}
+.site-footer .container{max-width:960px}
 .footer-top{display:grid;grid-template-columns:1fr;gap:2rem;padding-bottom:2.5rem;border-bottom:1px solid var(--border-subtle)}
 @media(min-width:768px){.footer-top{grid-template-columns:2fr 1fr 1fr 1fr}}
 .footer-brand p{margin-top:.75rem;font-size:.8125rem;line-height:1.6;max-width:300px;color:var(--fg-muted)}
@@ -736,4 +737,53 @@ html.i18n-ready [data-i18n]{visibility:visible}
   .site-header,.site-footer,.hero-orb,.mesh-pattern,.bloom,.ticker-wrap,body::after{display:none!important}
   body{background:#fff;color:#000}
   .card,.glass-card,.bento-item{border:1px solid #ddd;background:#fff;box-shadow:none}
+}
+
+/* ================================================================
+   BLOG — ARTICLE READING STYLE (NYTimes-inspired narrow)
+   ================================================================ */
+.container-narrow {
+  max-width: 42rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.blog-content.prose {
+  font-size: 1.0625rem;
+  line-height: 1.75;
+  color: var(--fg);
+}
+.blog-content.prose p,
+.blog-content.prose ul,
+.blog-content.prose ol {
+  margin-bottom: 1.25rem;
+}
+.blog-content.prose p:last-child { margin-bottom: 0; }
+.blog-content.prose h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: .75rem;
+  letter-spacing: -.02em;
+}
+.blog-content.prose ul, .blog-content.prose ol {
+  padding-left: 1.5rem;
+}
+.blog-content.prose li {
+  margin-bottom: .375rem;
+  line-height: 1.65;
+}
+.blog-content.prose strong { font-weight: 700; }
+.blog-content.prose code {
+  font-size: .875em;
+  background: var(--bg-tertiary);
+  padding: .125rem .375rem;
+  border-radius: .25rem;
+  font-family: var(--mono);
+}
+.blog-content.prose a { color: var(--accent-light); text-decoration: underline; text-underline-offset: 2px; }
+.blog-content.prose a:hover { color: var(--accent); }
+@media (max-width: 768px) {
+  .container-narrow { padding: 0 1.25rem; }
+  .blog-content.prose { font-size: 1rem; }
 }
