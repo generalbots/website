@@ -3,66 +3,158 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>What is an LLM? Deconstructing the Model | General Bots Blog</title>
-<meta name="description" content="A didactic technical guide to Large Language Models (LLMs). Understanding parameters, tokens, and the shift toward sovereign AI search orchestration.">
+<title>What Is an LLM? A Practical Guide | General Bots Blog</title>
+<meta name="description" content="Tokens, parameters, RAG, and the sovereign AI pivot&mdash;everything you need to understand Large Language Models">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://generalbots.org/blog/what-is-llm/">
-<meta property="og:title" content="What is an LLM? Deconstructing the Model | General Bots Blog">
-<meta property="og:description" content="Technical guide to LLMs.">
+<meta property="og:title" content="What Is an LLM? A Practical Guide | General Bots Blog">
+<meta property="og:description" content="Tokens, parameters, RAG, and the sovereign AI pivot&mdash;everything you need to understand Large Language Models">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://generalbots.org/blog/what-is-llm/">
+<meta property="og:image" content="https://generalbots.org/logo-square.svg">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/favicon.ico">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="stylesheet" href="/css/site.css">
+<link rel="stylesheet" href="/css/blog.css">
 </head>
 <body>
 <div hx-get="/partials/header.html" hx-swap="innerHTML" hx-trigger="load"></div>
-<main style="padding-top:4rem">
-<article class="page-section reveal">
-<div class="container-narrow">
-<a href="/blog/" class="text-sm text-muted" style="display:inline-flex;align-items:center;gap:.375rem;margin-bottom:1.5rem">
-<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
-Back to Blog
-</a>
-<div class="badge mb-4" data-i18n="blog.what-is-llm.technical_core">Technical Core</div>
-<h1 class="text-4xl font-bold tracking-tighter mb-6" style="line-height:1.1" data-i18n="blog.what-is-llm.what_is_an_llm_deconstructing_the_model">What is an LLM? Deconstructing the Model.</h1>
-<p class="text-lg text-muted mb-8 leading-relaxed" data-i18n="blog.what-is-llm.a_didactic_technical_guide_to_large_language_models_llms">A didactic technical guide to Large Language Models (LLMs). Understanding parameters, tokens, and the shift toward sovereign AI search orchestration with GLM 5.1.</p>
-<p class="text-sm text-muted mb-6">April 2, 2025</p>
-<div class="blog-content prose">
-<p data-i18n="blog.what-is-llm.a_large_language_model_llm_is_currently_defined_as_a_stat">A Large Language Model (LLM) is currently defined as a "Statistical Prediction Node." It is an architecture of neural weights trained on the corpus of human knowledge to predict the next token in a sequence. To reach an investor-ready understanding, we must look past the "Chat" interface and analyze the didactic reality of the weights and biases that power the GLM 5.1 era.</p>
-
-<div style="width:100%;aspect-ratio:16/9;background:#f8f8f8;border-radius:1rem;margin:2rem 0;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;border:1px solid rgba(0,0,0,0.06)">
-  <svg width="100%" height="100%" viewBox="0 0 800 450" fill="none">
-    <defs><pattern id="gridLLM" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(0,0,0,0.03)" stroke-width="1"/></pattern></defs>
-    <rect width="800" height="450" fill="url(#gridLLM)"/>
-    <circle cx="200" cy="225" r="40" stroke="#111" stroke-width="1" fill="none" opacity="0.2" />
-    <circle cx="300" cy="225" r="40" stroke="#111" stroke-width="1" fill="none" opacity="0.4" />
-    <circle cx="400" cy="225" r="40" stroke="#111" stroke-width="1" fill="none" opacity="0.6" />
-    <circle cx="500" cy="225" r="40" stroke="#059669" stroke-width="2" fill="none" />
-    <path d="M240 225 L260 225" stroke="#111" stroke-width="1" opacity="0.2" />
-    <path d="M340 225 L360 225" stroke="#111" stroke-width="1" opacity="0.4" />
-    <path d="M440 225 L460 225" stroke="#111" stroke-width="1" opacity="0.6" />
-    <text x="400" y="300" text-anchor="middle" fill="#111" style="font-size:10px;font-weight:700">NEURAL ARCHITECTURE</text>
-  </svg>
+<main>
+<section class="page-hero">
+<div class="container">
+<a href="/blog" class="back-link">&larr; Back to Blog</a>
+<span class="badge badge-purple">Fundamentals</span>
+<h1>What Is an LLM? A Practical Guide</h1>
+<p>Tokens, parameters, RAG, and the sovereign AI pivot&mdash;everything you need to understand Large Language Models</p>
+<p class="text-xs text-muted">April 2, 2025</p>
+</div>
+</section>
+<div class="callout callout-gray" style="margin-bottom:1.5rem;font-size:0.875rem">
+  <p style="margin:0"><strong>Originally published on <a href="https://pragmatismo.com.br/blog/what-is-llm/" target="_blank" rel="noopener">pragmatismo.com.br</a></strong></p>
 </div>
 
-<h3 data-i18n="blog.what-is-llm.tokens_and_parameters_the_units_of_intelligence">Tokens and Parameters: The Units of Intelligence</h3>
-<p data-i18n="blog.what-is-llm.intelligence_in_an_llm_is_measured_by_parameters_the_co">Intelligence in an LLM is measured by **Parameters** (the connections) and **Tokens** (the fragments of text). A model with 70 billion parameters has a higher resolution of understanding than a 7 billion parameter model. However, didactic efficiency is not just about size; it's about how those parameters are orchestrated. The "Architecture of Intelligence" focuses on maximizing the signal-to-noise ratio in every prompt.</p>
+<section class="section">
+<div class="container prose max-width">
+<p>A Large Language Model (LLM) is, at its core, a <strong>statistical prediction node</strong>. It is an architecture of neural weights trained on a vast corpus of human knowledge to predict the next token in a sequence. To understand LLMs, we must look past the chat interface and analyze the mathematical reality of the weights and biases that power them.</p>
 
-<h3 data-i18n="blog.what-is-llm.ai_search_the_de_facto_standard_for_llm_utility">AI Search: The De Facto standard for LLM Utility</h3>
-<p data-i18n="blog.what-is-llm.an_llm_without_data_is_just_a_creative_writer_ai_search">An LLM without data is just a creative writer. **AI Search** (or RAG - Retrieval-Augmented Generation) is the de facto standard for making LLMs useful in a corporate environment. By indexing your sovereign data, the model stops "hallucinating" and starts providing high-fidelity answers based on *your* records. This is the difference between a toy and a tool.</p>
+<h2>Tokens and Parameters: The Units of Intelligence</h2>
 
-<h3 data-i18n="blog.what-is-llm.the_sovereign_pivot">The Sovereign Pivot</h3>
-<p data-i18n="blog.what-is-llm.most_llms_are_currently_served_via_proprietary_apis_this_cr">Most LLMs are currently served via proprietary APIs. This creates a "Rent-Seeking" dependency. General Bots provides the orchestration layer to pivot toward **Sovereign AI**. 
-1. **Open Weights:** Run models like Llama or Mistral on your own hardware.
-2. **Deterministic Logic:** Use BASIC to control exactly how the LLM behaves.
-3. **No Egress Fees:** Keep your data—and your intelligence—in-house.</p>
-
-<h3 data-i18n="blog.what-is-llm.conclusion_decoding_the_future">Conclusion: Decoding the Future</h3>
-<p data-i18n="blog.what-is-llm.understanding_what_is_an_llm_is_the_first_step_toward_buil">Understanding "What is an LLM" is the first step toward building an investor-ready AI strategy. It is not magic; it is mathematics orchestrated for utility. With General Bots, you don't just use LLMs; you own the "Architecture of Intelligence" that makes them work for you. Own the model. Own the future.</p>
+<div class="card-grid card-grid-2">
+<div class="card">
+<h3>Tokens</h3>
+<p>Tokens are the atomic units of text input and output. A token is not a word&mdash;it is a fragment, typically 3-4 characters in English. The word "unbelievable" might be two tokens: "un" and "believable." A model's <strong>context window</strong> defines how many tokens it can consider simultaneously. Modern models support 128K to 1M tokens.</p>
+</div>
+<div class="card">
+<h3>Parameters</h3>
+<p>Parameters are the connections between neurons&mdash;the learned weights that encode linguistic patterns, factual knowledge, and reasoning capabilities. A 70-billion-parameter model has a higher resolution of understanding than a 7-billion-parameter model, but efficiency is not just about size. Architecture matters: attention mechanisms, layer design, and training methodology determine how well those parameters are utilized.</p>
 </div>
 </div>
-</article>
+
+<div class="callout callout-purple-tint">
+<h2>How <span class="text-purple">Tokenization</span> Works</h2>
+<p>When you type "What is the capital of France?", the LLM tokenizer splits it into tokens: <code>["What", " is", " the", " capital", " of", " France", "?"]</code>. Each token maps to an integer ID. The model processes these IDs through its neural network, computing probability distributions for the next token. The highest-probability continuation&mdash;"Paris"&mdash;is selected and appended to the sequence. This repeats token by token until the complete response is generated.</p>
+<p class="text-sm text-muted">This is why LLMs are called "autoregressive": each token depends on all previous tokens.</p>
+</div>
+
+<h2>From Statistics to Utility: The Chat Interface</h2>
+<p>The chat interface that users interact with is a thin layer on top of this statistical engine. System prompts, user messages, and conversation history are concatenated into a single token sequence. The model generates responses that are statistically likely to follow from that sequence. The "magic" is that at 70B+ parameters, the statistical predictions align remarkably well with human expectations of coherent, knowledgeable responses.</p>
+
+<h2>AI Search (RAG): The De Facto Standard for Enterprise Utility</h2>
+<p>An LLM without access to your data is a creative writer&mdash;useful for brainstorming, drafting, and summarization, but unreliable for factual queries about your business. <strong>Retrieval-Augmented Generation (RAG)</strong>&mdash;which we call AI Search&mdash;solves this by injecting relevant documents into the LLM's context window before generating a response.</p>
+
+<div class="card-grid card-grid-3">
+<div class="card">
+<h3>Ingestion</h3>
+<p>Documents, emails, database records, and knowledge base articles are chunked, embedded into vectors, and stored in a vector database.</p>
+</div>
+<div class="card">
+<h3>Retrieval</h3>
+<p>When a user asks a question, the system searches the vector database for chunks semantically similar to the query.</p>
+</div>
+<div class="card">
+<h3>Generation</h3>
+<p>The retrieved chunks are inserted into the LLM's context window alongside the question. The model generates an answer grounded in your data.</p>
+</div>
+</div>
+
+<blockquote>
+"This is the difference between a toy and a tool. A vanilla LLM guesses. An LLM with RAG cites."
+</blockquote>
+
+<h2>The Sovereign Pivot</h2>
+<p>Most enterprises currently access LLMs through proprietary APIs: OpenAI, Anthropic, Google. This creates a rent-seeking dependency with three specific risks:</p>
+
+<div class="table-responsive">
+<table class="comparison-table">
+<thead>
+<tr><th>Risk</th><th>Proprietary API</th><th>Sovereign Alternative</th></tr>
+</thead>
+<tbody>
+<tr><td>Vendor Lock-in</td><td>Model-specific API, prompt format, and pricing</td><td>Open-weight models (Llama, Mistral, DeepSeek) via any inference server</td></tr>
+<tr><td>Data Egress</td><td>All queries processed on vendor infrastructure</td><td>Self-hosted inference with zero data leaving your network</td></tr>
+<tr><td>Egress Fees</td><td>Charged per token for both input and output</td><td>Fixed infrastructure cost, no per-token billing</td></tr>
+<tr><td>Model Deprecation</td><td>Vendor can deprecate or change models at any time</td><td>You control which model version runs and when to upgrade</td></tr>
+</tbody>
+</table>
+</div>
+
+<p>General Bots provides the orchestration layer to enable the sovereign pivot:</p>
+
+<div class="card-grid card-grid-3">
+<div class="card">
+<div class="step-number">1</div>
+<h3>Open Weights</h3>
+<p>Run models like Llama 3, Mistral, or DeepSeek on your own hardware. No API keys, no usage limits, no data leaving your perimeter.</p>
+</div>
+<div class="card">
+<div class="step-number">2</div>
+<h3>Deterministic Logic</h3>
+<p>Use BASIC to control exactly how the LLM behaves: structured outputs, validation rules, fallback behavior, and safety constraints.</p>
+</div>
+<div class="card">
+<div class="step-number">3</div>
+<h3>No Egress Fees</h3>
+<p>Keep your data&mdash;and your intelligence&mdash;in-house. Fixed infrastructure cost regardless of query volume.</p>
+</div>
+</div>
+
+<h2>Understanding the Landscape</h2>
+<p>Not all LLMs are created equal. Here is a practical categorization:</p>
+
+<div class="table-responsive">
+<table class="comparison-table">
+<thead>
+<tr><th>Category</th><th>Examples</th><th>Parameters</th><th>Best For</th></tr>
+</thead>
+<tbody>
+<tr><td>Frontier</td><td>GPT-4o, Claude 3.5, Gemini 2.0</td><td>Unknown (estimated 1T+)</td><td>Complex reasoning, creative tasks, code generation</td></tr>
+<tr><td>Open-Weight Large</td><td>Llama 3 70B, DeepSeek-V3</td><td>70B+</td><td>Enterprise RAG, document analysis, summarization</td></tr>
+<tr><td>Open-Weight Small</td><td>Mistral 7B, Llama 3 8B</td><td>7B-8B</td><td>Classification, extraction, real-time chatbots</td></tr>
+<tr><td>Specialized</td><td>CodeLlama, Med-PaLM</td><td>7B-70B</td><td>Domain-specific tasks with fine-tuning</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="callout callout-emerald-tint">
+<h2>The <span class="text-green">Right-Sizing</span> Principle</h2>
+<p>Most enterprise workloads do not require a frontier model. A 7B-parameter model running on a single GPU can handle 80% of business use cases&mdash;classification, extraction, summarization, simple Q&A&mdash;at a fraction of the cost. Reserve the 70B+ models for complex reasoning and high-stakes decisions. General Bots makes it trivial to route workloads to the appropriate model based on task complexity.</p>
+</div>
+
+<h2>Conclusion: Decoding the Future</h2>
+<p>Understanding what an LLM is&mdash;statistical prediction, not magic&mdash;is the first step toward building a rational AI strategy. The models are tools, not oracles. They require data, context, and deterministic guardrails to be useful in an enterprise setting.</p>
+<p>With General Bots, you don't just consume LLMs through a chat interface. You own the architecture of intelligence that makes them work for your organization. Own the model. Own the future.</p>
+</div>
+</section>
+
+<section class="section section-cta">
+<div class="container text-center">
+<h2>Deploy Your First LLM</h2>
+<p>Stop renting intelligence from proprietary APIs. Deploy open-weight models on your own infrastructure and take control of your AI strategy.</p>
+<a href="/contact" class="btn btn-primary">Contact</a>
+<p class="text-sm text-muted" style="margin-top:.75rem;">Our team will help you select, deploy, and optimize the right model for your use case.</p>
+</div>
+</section>
 </main>
 <div hx-get="/partials/footer.html" hx-swap="innerHTML" hx-trigger="load"></div>
 <script src="https://unpkg.com/htmx.org@2.0.4"></script>
