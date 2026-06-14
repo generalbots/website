@@ -106,6 +106,7 @@
           document.cookie = 'gb_lang=' + lang + ';path=/;max-age=31536000';
           applyTranslations();
           if(document.getElementById('lang-flags')) injectFlags();
+          injectLangSelect();
           if(callback) callback();
         }catch(e){
           console.warn('i18n: parse fail ' + lang, e);
@@ -155,29 +156,48 @@
   };
 
   function injectFlags(){
-    var container = document.getElementById('lang-flags');
-    if(!container) return;
-    container.innerHTML = '';
+    var containers = document.querySelectorAll('.lang-flags');
+    if(!containers.length) return;
+    for(var ci = 0; ci < containers.length; ci++){
+      var container = containers[ci];
+      container.innerHTML = '';
+      for(var i = 0; i < supportedLangs.length; i++){
+        var lang = supportedLangs[i];
+        var a = document.createElement('a');
+        a.href = '#';
+        a.title = lang;
+        var isActive = lang === currentLang;
+        a.className = 'lang-flag-btn';
+        a.style.opacity = isActive ? '1' : '.45';
+        a.onmouseover = function(){this.style.opacity=1};
+        a.onmouseout = function(){if(this.getAttribute('data-lang')!==currentLang)this.style.opacity=.45};
+        a.setAttribute('data-lang', lang);
+        a.onclick = (function(l){return function(e){e.preventDefault();switchLang(l);}})(lang);
+        a.textContent = flagLabels[lang] || lang.toUpperCase();
+        container.appendChild(a);
+      }
+    }
+  }
+
+  function injectLangSelect(){
+    var sel = document.getElementById('lang-select');
+    if(!sel) return;
+    sel.innerHTML = '';
     for(var i = 0; i < supportedLangs.length; i++){
       var lang = supportedLangs[i];
-      var a = document.createElement('a');
-      a.href = '#';
-      a.title = lang;
-      var isActive = lang === currentLang;
-      a.className = 'lang-flag-btn';
-      a.style.opacity = isActive ? '1' : '.45';
-      a.onmouseover = function(){this.style.opacity=1};
-      a.onmouseout = function(){if(this.getAttribute('data-lang')!==currentLang)this.style.opacity=.45};
-      a.setAttribute('data-lang', lang);
-      a.onclick = (function(l){return function(e){e.preventDefault();switchLang(l);}})(lang);
-      a.textContent = flagLabels[lang] || lang.toUpperCase();
-      container.appendChild(a);
+      var opt = document.createElement('option');
+      opt.value = lang;
+      opt.textContent = flagLabels[lang] || lang.toUpperCase();
+      if(lang === currentLang) opt.selected = true;
+      sel.appendChild(opt);
     }
+    sel.onchange = function(){ switchLang(this.value); };
   }
 
   window.__switchLang = switchLang;
   window.__applyTranslations = applyTranslations;
   window.__injectFlags = injectFlags;
+  window.__injectLangSelect = injectLangSelect;
   window.__localizeLinks = localizeLinks;
   window.__currentLang = function(){ return currentLang; };
 
@@ -188,9 +208,12 @@
   var _flagsInjected = false;
   (function retryInject(){
     if(_flagsInjected) return;
-    if(document.getElementById('lang-flags')){
+    var hasFlags = document.querySelector('.lang-flags');
+    var hasSelect = document.getElementById('lang-select');
+    if(hasFlags || hasSelect){
       _flagsInjected = true;
-      injectFlags();
+      if(hasFlags) injectFlags();
+      injectLangSelect();
       localizeLinks();
     }else{
       setTimeout(retryInject, 200);
@@ -224,7 +247,7 @@ function initHeader(){
     };
   }
 
-  document.querySelectorAll('.mobile-nav-link').forEach(function(link){
+  document.querySelectorAll('.mobile-nav-link, .mm-link').forEach(function(link){
     link.addEventListener('click', function(){
       if(mobileMenu) {
         mobileMenu.classList.remove('open');
@@ -411,9 +434,11 @@ document.body.addEventListener('htmx:afterSwap', function(e){
      e.detail.pathInfo.requestPath.indexOf('/partials/') !== -1){
     initHeader();
     initDropdowns();
-    var container = document.getElementById('lang-flags');
-    if(container){
-      container.innerHTML = '';
+    var containers = document.querySelectorAll('.lang-flags');
+    if(containers.length){
+      for(var ci = 0; ci < containers.length; ci++){
+        containers[ci].innerHTML = '';
+      }
       if(window.__injectFlags) window.__injectFlags();
     }
     if(window.__applyTranslations) window.__applyTranslations();

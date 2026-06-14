@@ -1,1 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 40" fill="none"><rect width="120" height="40" rx="8" fill="#D97706"/><text x="60" y="25" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="600" fill="white">Claude</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="40" viewBox="0 0 120 40">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ff0080"/>
+      <stop offset="100%" stop-color="#a855f7"/>
+    </linearGradient>
+  </defs>
+  <rect width="120" height="40" rx="20" fill="url(#bg)"/>
+  <path d="M18 12h16l-8 14h-8l8-14z" fill="none" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/>
+  <circle cx="26" cy="20" r="3" fill="none" stroke="#fff" stroke-width="1.5"/>
+  <text x="46" y="25" fill="#fff" font-family="system-ui,sans-serif" font-size="12" font-weight="700">Claude</text>
+</svg>

@@ -4,10 +4,12 @@
    ================================================================ */
 
 /* Page Hero */
-.page-hero{position:relative;padding:8rem 0 5rem;overflow:hidden}
+.page-hero{position:relative;padding:5rem 0 2.5rem;overflow:hidden}
 .page-hero .container{position:relative;z-index:1;max-width:42rem}
+.page-hero + .callout{max-width:42rem;margin:1rem auto}
 
 /* Section Variants */
+.section{padding:3rem 0}
 .section-alt{background:var(--bg-secondary)}
 .section-dark{background:var(--primary);color:rgba(255,255,255,.9)}
 .section-dark h2,.section-dark h3,.section-dark h4{color:#fff}
@@ -120,10 +122,11 @@
 .prose .lead{font-size:1.125rem;line-height:1.7;color:var(--fg-muted)}
 
 /* CTA Section */
-.cta-section{text-align:center;padding:5rem 0}
+.cta-section{text-align:center;padding:3rem 0}
 .cta-section h2{margin-bottom:1.5rem}
 .cta-section p{max-width:42rem;margin:0 auto 2.5rem;font-size:1.125rem}
 .cta-section.section-dark p,.cta-section.section-gradient p{color:rgba(255,255,255,.7)}
+.page-hero ~ .section-cta .container{max-width:42rem;margin:0 auto}
 
 /* Back Link */
 .back-link{display:inline-flex;align-items:center;gap:.5rem;font-size:.875rem;color:var(--fg-muted);margin-bottom:1.5rem;transition:color .2s}
