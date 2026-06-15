@@ -2594,14 +2594,14 @@
   "investors.cta.btn1": "hablemos",
   "investors.cta.btn2": "Lea los documentos",
   "investors.cta.btn3": "Estrella en GitHub",
-  "investors.esg.title": "Automatización tranquila, no presión de ventas",
+  "investors.esg.title": "Eficiencia inigualable. ",
   "investors.esg.badge": "ESG · Empoderamiento Social",
-  "investors.esg.footer": "ESG – Empoderamiento social: lo construimos para empoderar a las empresas, no para extraer algo de ellas. ",
-  "investors.esg.sub": "Esta no es una asociación impulsada por el dinero. ",
-  "investors.esg.optional.label": "Asociación opcional",
-  "investors.esg.optional.desc": "No hay niveles de asociación obligatorios, ni objetivos de ventas, ni cuotas mensuales. ",
-  "investors.esg.donation.label": "Modelo basado en donaciones",
-  "investors.esg.donation.desc": "Las contribuciones son voluntarias: usted decide cuánto vale la plataforma para su negocio. ",
-  "investors.esg.peace.label": "Automatización tranquila",
-  "investors.esg.peace.desc": "Vendemos tranquilidad: saber que sus datos nunca salen de sus servidores, que su pila siempre es suya y que nunca está limitado a una hoja de ruta de proveedor. "
+  "investors.esg.footer": "ESG – Empoderamiento social: No necesitamos extraer porque eliminamos la estructura de costos que obliga a la extracción. ",
+  "investors.esg.sub": "Eliminamos la estructura de costos que obliga a la extracción. ",
+  "investors.esg.friction.label": "Adopción sin fricción",
+  "investors.esg.friction.desc": "Nuestro producto se difunde porque domina, no porque lo fuercemos. ",
+  "investors.esg.cost.label": "El costo de venta más bajo en la empresa",
+  "investors.esg.cost.desc": "Cero gastos generales de ventas. ",
+  "investors.esg.sovereignty.label": "La soberanía es el último movimiento de poder",
+  "investors.esg.sovereignty.desc": "Vendemos ser dueños de su pila: la máxima ventaja contra las grandes tecnologías. "
 }

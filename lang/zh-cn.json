@@ -2513,14 +2513,14 @@
   "nav.investors": "Investors",
   "investors.title": "Investors — General Bots | Peace of Mind, Competitive Advantage",
   "investors.meta_desc": "General Bots offers sovereign AI infrastructure that frees you from Big Tech lock-in.",
-  "investors.esg.title": "自动化让您安心，无销售压力",
+  "investors.esg.title": "无与伦比的效率。",
   "investors.esg.badge": "ESG·社会赋权",
-  "investors.esg.footer": "ESG——社会赋权：我们建立它是为了赋予公司权力，而不是从他们身上榨取利益。",
-  "investors.esg.sub": "这不是金钱驱动的伙伴关系。",
-  "investors.esg.optional.label": "可选的合作伙伴关系",
-  "investors.esg.optional.desc": "没有强制性的合作伙伴级别、没有销售目标、没有每月配额。",
-  "investors.esg.donation.label": "捐赠模式",
-  "investors.esg.donation.desc": "贡献是自愿的——您可以决定该平台对您的业务的价值。",
-  "investors.esg.peace.label": "高枕无忧的自动化",
-  "investors.esg.peace.desc": "我们让您安心——知道您的数据永远不会离开您的服务器，您的堆栈始终属于您，并且您永远不会被供应商路线图所束缚。"
+  "investors.esg.footer": "ESG——社会赋权：我们不需要提取，因为我们消除了强制提取的成本结构。",
+  "investors.esg.sub": "我们消除了强制提取的成本结构。",
+  "investors.esg.friction.label": "零摩擦采用",
+  "investors.esg.friction.desc": "我们的产品之所以能够传播，是因为它占主导地位，而不是因为我们强迫它。",
+  "investors.esg.cost.label": "企业最低销售成本",
+  "investors.esg.cost.desc": "零销售费用。",
+  "investors.esg.sovereignty.label": "主权是最终的权力举动",
+  "investors.esg.sovereignty.desc": "我们出售拥有您的堆栈——这是对抗大型科技公司的终极杠杆。"
 }

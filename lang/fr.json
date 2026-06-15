@@ -2594,14 +2594,14 @@
   "investors.cta.btn1": "Parlons",
   "investors.cta.btn2": "Lire les documents",
   "investors.cta.btn3": "Étoile sur GitHub",
-  "investors.esg.title": "Automatisation de la tranquillité d'esprit, pas de pression commerciale",
+  "investors.esg.title": "Une efficacité inégalée. ",
   "investors.esg.badge": "ESG · Autonomisation sociale",
-  "investors.esg.footer": "ESG — Social Empowerment : Nous avons construit cela pour responsabiliser les entreprises, et non pour en tirer profit. ",
-  "investors.esg.sub": "Il ne s’agit pas d’un partenariat axé sur l’argent. ",
-  "investors.esg.optional.label": "Partenariat facultatif",
-  "investors.esg.optional.desc": "Il n'y a pas de niveaux de partenariat obligatoires, pas d'objectifs de vente, pas de quotas mensuels. ",
-  "investors.esg.donation.label": "Modèle basé sur le don",
-  "investors.esg.donation.desc": "Les contributions sont volontaires : vous décidez de la valeur de la plateforme pour votre entreprise. ",
-  "investors.esg.peace.label": "Automatisation de la tranquillité d'esprit",
-  "investors.esg.peace.desc": "Nous vendons la tranquillité d'esprit : sachant que vos données ne quittent jamais vos serveurs, que votre pile vous appartient toujours et que vous n'êtes jamais enfermé dans une feuille de route d'un fournisseur. "
+  "investors.esg.footer": "ESG — Social Empowerment : Nous n’avons pas besoin d’extraire car nous avons éliminé la structure de coûts qui force l’extraction. ",
+  "investors.esg.sub": "Nous avons éliminé la structure de coûts qui force l’extraction. ",
+  "investors.esg.friction.label": "Adoption sans friction",
+  "investors.esg.friction.desc": "Notre produit se propage parce qu’il domine – et non parce que nous le forçons. ",
+  "investors.esg.cost.label": "Coût de vente le plus bas en entreprise",
+  "investors.esg.cost.desc": "Zéro frais généraux de vente. ",
+  "investors.esg.sovereignty.label": "La souveraineté est le mouvement de pouvoir ultime",
+  "investors.esg.sovereignty.desc": "Nous vendons la possession de votre stack – le levier ultime contre les Big Tech. "
 }

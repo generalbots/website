@@ -2514,13 +2514,13 @@
   "investors.title": "Investors — General Bots | Peace of Mind, Competitive Advantage",
   "investors.meta_desc": "General Bots offers sovereign AI infrastructure that frees you from Big Tech lock-in.",
   "investors.esg.badge": "ESG・社会的エンパワーメント",
-  "investors.esg.title": "営業プレッシャーではなく、安心の自動化",
-  "investors.esg.sub": "これは金銭主導のパートナーシップではありません。",
-  "investors.esg.footer": "ESG — 社会的エンパワーメント: 私たちはこれを、企業から搾取するためではなく、企業に力を与えるために構築しました。",
-  "investors.esg.optional.label": "オプションのパートナーシップ",
-  "investors.esg.optional.desc": "必須のパートナーシップ階層、売上目標、毎月のノルマはありません。",
-  "investors.esg.donation.label": "寄付ベースのモデル",
-  "investors.esg.donation.desc": "貢献は任意です。プラットフォームがあなたのビジネスにとってどれだけの価値があるかを決めるのはあなたです。",
-  "investors.esg.peace.label": "安心の自動化",
-  "investors.esg.peace.desc": "当社は安心感を売りにしています。データがサーバーから離れることはなく、スタックは常にあなたのものであり、ベンダーのロードマップに縛られることはありません。"
+  "investors.esg.title": "比類のない効率性。",
+  "investors.esg.sub": "抽出を強いるコスト構造を排除しました。",
+  "investors.esg.footer": "ESG — 社会的エンパワーメント: 抽出を強いるコスト構造を排除したため、抽出する必要はありません。",
+  "investors.esg.friction.label": "ゼロフリクション採用",
+  "investors.esg.friction.desc": "私たちの製品が普及するのは、私たちが強制するからではなく、それが支配するからです。",
+  "investors.esg.cost.label": "エンタープライズでの最低の販売コスト",
+  "investors.esg.cost.desc": "販売経費ゼロ。",
+  "investors.esg.sovereignty.label": "主権は究極の権力の動きである",
+  "investors.esg.sovereignty.desc": "私たちはあなたのスタックを所有することを売りにしています - ビッグテックに対する究極のレバレッジです。"
 }
