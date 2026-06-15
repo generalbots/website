@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title data-i18n="investors.title">Investors — General Bots | Peace of Mind, Competitive Advantage</title>
-<meta name="description" content="General Bots offers sovereign AI infrastructure that frees you from Big Tech lock-in. Peace of mind through open source, self-hosted AI." data-i18n="investors.meta_desc">
+<title data-i18n="investors.title">Investors — General Bots | Innovation Platform</title>
+<meta name="description" content="One VPS. CRM, Email, Chat, Docs, Meet, ERP — all integrated. Vibe code campaign sites and bots. LLM automates everything." data-i18n="investors.meta_desc">
 <link rel="canonical" href="https://generalbots.org/investors/">
 <meta property="og:title" content="Investors — General Bots">
-<meta property="og:description" content="Peace of mind through sovereign AI. No vendor lock-in, no data leaving your control, no per-seat fees.">
+<meta property="og:description" content="Every app amplifies every other app. Vibe code anything on top. One VPS, your company, everything.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://generalbots.org/investors/">
 <meta property="og:image" content="https://generalbots.org/logo-square.svg">
@@ -16,145 +16,392 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="stylesheet" href="/css/site.css">
 <style>
-.inv-hero{position:relative;padding:8rem 0 4rem;overflow:hidden;background:linear-gradient(135deg,#f8f8f8,#fff,#f8f8f8);text-align:center}
+.inv-hero{position:relative;padding:8rem 0 5rem;overflow:hidden;background:linear-gradient(135deg,#fafafa,#fff,#fafafa);text-align:center}
 [data-theme="dark"] .inv-hero{background:linear-gradient(135deg,#1a1a1e,#141416,#1a1a1e)}
-.inv-hero h1{font-size:clamp(2.5rem,5vw,4rem);font-weight:900;letter-spacing:-.05em;line-height:.92;margin-bottom:1.5rem}
-.inv-hero .sub{font-size:1.1rem;color:var(--fg-secondary);max-width:36rem;margin:0 auto 2rem;line-height:1.6}
-.peace-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:2rem;transition:var(--transition)}
-.peace-card:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(0,0,0,.08)}
-.peace-card h3{font-size:1.1rem;font-weight:700;margin-bottom:.75rem}
-.peace-card p{color:var(--fg-secondary);font-size:.9rem;line-height:1.6}
-.stats-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1px;background:var(--border);border-radius:var(--radius);overflow:hidden;max-width:48rem;margin:2rem auto}
-.stat-box{padding:2rem;background:var(--bg-card);text-align:center}
-.stat-num{font-size:2.5rem;font-weight:900;color:var(--foreground);line-height:1}
-.stat-label{font-size:.8rem;color:var(--fg-secondary);margin-top:.5rem;text-transform:uppercase;letter-spacing:.05em}
-.contrast-table{width:100%;border-collapse:separate;border-spacing:0;border-radius:var(--radius);overflow:hidden;border:1px solid var(--border);font-size:.85rem}
-.contrast-table th{background:var(--bg-secondary);padding:.75rem 1rem;text-align:left;font-weight:700}
-.contrast-table td{padding:.65rem 1rem;border-top:1px solid var(--border)}
+.inv-hero .hero-gear{position:absolute;width:500px;height:500px;top:50%;left:50%;transform:translate(-50%,-50%);opacity:.04;pointer-events:none}
+[data-theme="dark"] .inv-hero .hero-gear{opacity:.06}
+.inv-hero .hero-gear svg{width:100%;height:100%;animation:gear-spin 60s linear infinite}
+.inv-hero h1{font-size:clamp(2.5rem,5vw,4rem);font-weight:900;letter-spacing:-.05em;line-height:.92;margin-bottom:1.25rem;position:relative;z-index:1}
+.inv-hero .sub{font-size:1.05rem;color:var(--fg-secondary);max-width:36rem;margin:0 auto 2rem;line-height:1.7;position:relative;z-index:1}
+.stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border-radius:var(--radius);overflow:hidden;max-width:40rem;margin:2rem auto;position:relative;z-index:1}
+.stat-box{padding:1.75rem;background:var(--bg-card);text-align:center}
+.stat-num{font-size:2.25rem;font-weight:900;color:var(--foreground);line-height:1}
+.stat-label{font-size:.75rem;color:var(--fg-secondary);margin-top:.5rem;text-transform:uppercase;letter-spacing:.06em}
+.section{padding:5rem 0}
+.section-dark{padding:5rem 0;background:var(--bg-secondary)}
+.section-title{font-size:1.75rem;font-weight:800;letter-spacing:-.03em;margin-bottom:.75rem;text-align:center}
+.section-sub{color:var(--fg-secondary);text-align:center;max-width:36rem;margin:0 auto 3rem;font-size:.95rem;line-height:1.7}
+.peace-card{display:flex;gap:1.5rem;padding:2rem;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);transition:var(--transition)}
+.peace-card:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(0,0,0,.06)}
+.peace-card .icon-box{flex-shrink:0;width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;color:#fff}
+.peace-card .icon-box svg{width:24px;height:24px;stroke:currentColor;fill:none;stroke-width:2}
+.peace-card .icon-box.pink{background:linear-gradient(135deg,#ff0080,#e00070)}
+.peace-card .icon-box.blue{background:linear-gradient(135deg,#3b82f6,#1d4ed8)}
+.peace-card .icon-box.green{background:linear-gradient(135deg,#10b981,#059669)}
+.peace-card .icon-box.amber{background:linear-gradient(135deg,#f59e0b,#d97706)}
+.peace-card .icon-box.purple{background:linear-gradient(135deg,#8b5cf6,#7c3aed)}
+.peace-card .card-body h3{font-size:1rem;font-weight:700;margin-bottom:.5rem}
+.peace-card .card-body p{color:var(--fg-secondary);font-size:.875rem;line-height:1.65;margin:0}
+.contrast-table{width:100%;border-collapse:separate;border-spacing:0;border-radius:var(--radius);overflow:hidden;border:1px solid var(--border);font-size:.8rem}
+.contrast-table th{background:var(--bg-secondary);padding:.65rem 1rem;text-align:left;font-weight:700}
+.contrast-table td{padding:.55rem 1rem;border-top:1px solid var(--border)}
 .contrast-table .good{color:var(--success,#00c853);font-weight:700}
 .contrast-table .bad{color:var(--danger,#ff1744);font-weight:700}
 .contrast-table tr:hover td{background:var(--accent-soft)}
-.section-dark{background:var(--bg-secondary);padding:4rem 0}
-.value-prop{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem;max-width:56rem;margin:0 auto}
-.section-title{font-size:2rem;font-weight:800;letter-spacing:-.03em;margin-bottom:.75rem;text-align:center}
-.section-sub{color:var(--fg-secondary);text-align:center;max-width:36rem;margin:0 auto 3rem;font-size:1rem;line-height:1.6}
-.cta-box{padding:3rem;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);text-align:center;max-width:40rem;margin:0 auto}
+.value-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.25rem;max-width:56rem;margin:0 auto}
+.val-card{display:flex;gap:1.25rem;padding:1.5rem;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);transition:var(--transition)}
+.val-card:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(0,0,0,.06)}
+.val-card .icon-box{flex-shrink:0;width:44px;height:44px;border-radius:10px;display:flex;align-items:center;justify-content:center;color:#fff}
+.val-card .icon-box svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:2}
+.val-card .icon-box.cyan{background:linear-gradient(135deg,#06b6d4,#0891b2)}
+.val-card .icon-box.emerald{background:linear-gradient(135deg,#10b981,#059669)}
+.val-card .icon-box.violet{background:linear-gradient(135deg,#8b5cf6,#7c3aed)}
+.val-card .icon-box.rose{background:linear-gradient(135deg,#f43f5e,#e11d48)}
+.val-card .card-body h3{font-size:.95rem;font-weight:700;margin-bottom:.35rem}
+.val-card .card-body p{color:var(--fg-secondary);font-size:.825rem;line-height:1.6;margin:0}
+.cta-box{padding:3rem 2rem;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);text-align:center;max-width:40rem;margin:0 auto}
 .cta-box h2{font-size:1.5rem;font-weight:800;margin-bottom:.75rem}
-.cta-box p{color:var(--fg-secondary);margin-bottom:1.5rem;line-height:1.6}
-@media(max-width:767px){.inv-hero{padding:6rem 0 3rem}.inv-hero h1{font-size:2rem}.stats-row{grid-template-columns:1fr 1fr}.stat-box{padding:1.25rem}.stat-num{font-size:1.75rem}}
+.cta-box p{color:var(--fg-secondary);font-size:.9rem;margin-bottom:1.5rem;line-height:1.6}
+.quote-card{text-align:center;max-width:34rem;margin:2rem auto 0;padding:1.5rem 2rem;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius)}
+.quote-card p{font-size:.875rem;color:var(--fg-secondary);line-height:1.6;font-style:italic}
+.check-list{max-width:40rem;margin:0 auto;display:grid;gap:.65rem}
+.check-list .item{display:flex;align-items:flex-start;gap:.75rem;padding:.35rem 0}
+.check-list .item svg{flex-shrink:0;margin-top:.15rem;width:18px;height:18px}
+.check-list .item span{font-size:.9rem;line-height:1.5}
+@media(max-width:767px){.inv-hero{padding:5rem 0 3rem}.inv-hero h1{font-size:2rem}.stats-row{grid-template-columns:1fr 1fr}.stat-box{padding:1.25rem}.stat-num{font-size:1.75rem}.peace-card{flex-direction:column;gap:1rem}.peace-card .icon-box{width:40px;height:40px}}
 </style>
 </head>
 <body>
 <div hx-get="/partials/header.html" hx-swap="innerHTML" hx-trigger="load"></div>
 <main>
+
 <section class="inv-hero">
+<div class="hero-gear">
+<svg viewBox="0 0 100 100" fill="none">
+<path d="M50 10 L53 20 L60 15 L58 25 L67 23 L62 32 L70 33 L63 40 L70 45 L62 48 L67 55 L58 53 L60 62 L53 57 L50 65 L47 57 L40 62 L42 53 L33 55 L38 48 L30 45 L37 40 L30 33 L38 32 L33 23 L42 25 L40 15 L47 20Z" stroke="currentColor" stroke-width=".4" fill="none"/>
+<circle cx="50" cy="37.5" r="8" stroke="currentColor" stroke-width=".4" fill="none"/>
+</svg>
+</div>
 <div class="container reveal">
-  <div class="hero-badge" style="margin:0 auto 2rem;display:inline-flex">
-    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 11 11 13 15 9"/></svg>
-    Peace of Mind Investing
+  <div class="hero-badge" style="margin:0 auto 2rem;display:inline-flex" data-i18n="investors.badge">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+    Innovation Platform · Apps That Amplify
   </div>
-  <h1>Own Your AI.<br>Own Your Future.</h1>
-  <p class="sub">General Bots is the only enterprise AI platform that gives you complete sovereignty — no vendor lock-in, no data leaving your control, no per-seat fees. Just peace of mind and a genuine competitive advantage over Big Tech.</p>
+  <h1 data-i18n="investors.hero.title">One VPS.<br><strong>Everything.</strong></h1>
+  <p class="sub" data-i18n="investors.hero.sub">CRM talks to Email. Email creates Tickets. Chat generates Docs. Docs feeds ERP. Every app makes every other app smarter. Vibe code campaign sites, bots, AI agents on top. LLM automates literally everything. One machine, your machine, infinite.</p>
   <div class="stats-row">
-    <div class="stat-box"><div class="stat-num">10+</div><div class="stat-label">Years Production Code</div></div>
-    <div class="stat-box"><div class="stat-num">100%</div><div class="stat-label">Self-Hosted</div></div>
-    <div class="stat-box"><div class="stat-num">0</div><div class="stat-label">Per-Seat Fees</div></div>
-    <div class="stat-box"><div class="stat-num">75+</div><div class="stat-label">Enterprise Modules</div></div>
+    <div class="stat-box"><div class="stat-num">10+</div><div class="stat-label" data-i18n="investors.stat1">Years Code</div></div>
+    <div class="stat-box"><div class="stat-num">100%</div><div class="stat-label" data-i18n="investors.stat2">Self-Hosted</div></div>
+    <div class="stat-box"><div class="stat-num">$0</div><div class="stat-label" data-i18n="investors.stat3">License Fee</div></div>
+    <div class="stat-box"><div class="stat-num">75+</div><div class="stat-label" data-i18n="investors.stat4">Modules</div></div>
   </div>
-  <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:2rem">
-    <a href="/contact/" class="btn btn-primary btn-lg">Get Started</a>
-    <a href="https://docs.generalbots.org" class="btn btn-outline btn-lg">Documentation</a>
-    <a href="https://github.com/generalbots/generalbots" class="btn btn-outline btn-lg">GitHub</a>
+  <div style="display:flex;gap:.75rem;justify-content:center;flex-wrap:wrap" data-i18n-inline>
+    <a href="/contact/" class="btn btn-primary" data-i18n="investors.cta1">Get Started</a>
+    <a href="https://docs.generalbots.org" class="btn btn-outline" data-i18n="investors.cta2">Documentation</a>
+    <a href="https://github.com/generalbots/generalbots" class="btn btn-outline" data-i18n="investors.cta3">GitHub</a>
   </div>
 </div>
 </section>
 
-<section style="padding:4rem 0">
+<section class="section">
 <div class="container">
-  <h2 class="section-title">Why <strong>Peace of Mind</strong> Matters</h2>
-  <p class="section-sub">Big Tech sells you convenience. But convenience comes with hidden costs — your data, your flexibility, your autonomy. General Bots gives you everything they offer, without the strings attached.</p>
-  <div style="max-width:48rem;margin:0 auto">
-    <div style="display:grid;gap:1.5rem">
-      <div class="peace-card"><h3>🔐 Your Data Never Leaves Your Control</h3><p>Unlike OpenAI, Google, or Microsoft, General Bots runs entirely on your infrastructure. Every document, every chat, every customer interaction stays within your servers. No data is used for training, no API calls leave your network. For governments and regulated industries, this isn't a nice-to-have — it's the only acceptable option.</p></div>
-      <div class="peace-card"><h3>💰 No Per-Seat Surprises</h3><p>Microsoft Teams costs $15/user/month. Google Workspace costs $12/user/month. For a 1,000-person organization, that's $144,000–$180,000/year in licensing fees alone. General Bots costs exactly $0 in licensing. You pay only for your infrastructure — and you can scale to unlimited users without renegotiating contracts or counting seats.</p></div>
-      <div class="peace-card"><h3>🔓 Open Source = No Vendor Lock-In</h3><p>Every line of code is AGPL-licensed and auditable. If we disappear tomorrow, your system keeps running. You can fork the code, hire your own team, or migrate to any AGPL-compatible platform. Try doing that with OpenAI Frontier, Microsoft Copilot, or Google Vertex AI.</p></div>
-      <div class="peace-card"><h3>🌍 Sovereign by Design</h3><p>Built from day one for the unique requirements of Brazilian and Latin American markets: LGPD compliance, Portuguese-first language support, Brazilian tax and fiscal regulations (NF-e, SPED, PIX), and data residency within national borders. Big Tech treats LATAM as an afterthought. General Bots treats it as home.</p></div>
-      <div class="peace-card"><h3>⚡ AI That Actually Works Together</h3><p>Your CRM talks to your email. Your chat talks to your documents. Your video calls generate transcripts that feed into your knowledge base. Everything is natively integrated — not bolted together with brittle APIs and third-party middleware. This is the AI-native workspace that Big Tech is still trying to build.</p></div>
+  <h2 class="section-title" data-i18n="investors.apps.title"><strong>Every App</strong> Amplifies Every Other App</h2>
+  <p class="section-sub" data-i18n="investors.apps.sub">CRM, Email, Chat, Docs, Meet, ERP, Helpdesk — all natively integrated. Then vibe code anything on top. LLM powers all generation and automation. One VPS, your company, everything.</p>
+  <div style="max-width:44rem;margin:0 auto;display:grid;gap:1rem">
+    <div class="peace-card">
+      <div class="icon-box pink"><svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+      <div class="card-body">
+        <h3 data-i18n="investors.apps.card1.title">CRM → Email → Chat: One Continuous Flow</h3>
+        <p data-i18n="investors.apps.card1.desc">A lead enters CRM. Email auto-sends a personalized follow-up using CRM data. Chat handles the reply with full context of who the customer is and what they've bought. Every interaction is logged back to CRM automatically. No imports, no exports, no middleware — just one machine where every app feeds every other app.</p>
+      </div>
+    </div>
+    <div class="peace-card">
+      <div class="icon-box green"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
+      <div class="card-body">
+        <h3 data-i18n="investors.apps.card2.title">Chat → Docs → Meet: Knowledge That Builds Itself</h3>
+        <p data-i18n="investors.apps.card2.desc">Every Chat conversation generates a Doc. Every Meet recording gets transcribed and indexed in Docs. Docs become the knowledge base that Chat searches. No one writes documentation — it accumulates automatically. Your company's collective intelligence lives on your VPS, searchable by any app.</p>
+      </div>
+    </div>
+    <div class="peace-card">
+      <div class="icon-box blue"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+      <div class="card-body">
+        <h3 data-i18n="investors.apps.card3.title">Vibe Code Campaign Sites & Bots on Top</h3>
+        <p data-i18n="investors.apps.card3.desc">Need a product launch page? Vibe code it — it pulls from CRM, feeds leads to Email, triggers Chat. Need a WhatsApp support bot? Vibe code it — it reads Helpdesk, writes back to CRM, logs in Docs. Every custom extension inherits the full power of every foundation app. You build once on top of everything.</p>
+      </div>
+    </div>
+    <div class="peace-card">
+      <div class="icon-box amber"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
+      <div class="card-body">
+        <h3 data-i18n="investors.apps.card4.title">LLM Generates and Automates Everything</h3>
+        <p data-i18n="investors.apps.card4.desc">LLM writes email campaigns from CRM segments. Auto-replies to Chat from Docs knowledge. Generates Meet summaries into CRM notes. Creates ERP reports from sales data. Translates Social posts. Writes vibe code from prompts. Every output is generated, every workflow is automated, every action is controlled by your company on your hardware.</p>
+      </div>
+    </div>
+    <div class="peace-card">
+      <div class="icon-box purple"><svg viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
+      <div class="card-body">
+        <h3 data-i18n="investors.apps.card5.title">One VPS. Your VPS. Infinite Innovation.</h3>
+        <p data-i18n="investors.apps.card5.desc">No SaaS sprawl. No per-seat invoices. No API rate limits. No data leaving your network. CRM, Email, Chat, Docs, Meet, ERP, Social, Helpdesk, KYC, Banking — plus everything you vibe code on top. One machine, your machine, running the entire business. The innovation velocity of foundation × vibe × LLM is unmatched by any fragmented stack.</p>
+      </div>
     </div>
   </div>
 </div>
 </section>
 
+<section class="section" style="background:var(--bg-secondary)">
+<div class="container">
+  <div style="text-align:center;margin-bottom:3rem">
+    <span class="badge" style="margin-bottom:1rem;display:inline-flex">THE BIG PICTURE</span>
+    <h2 class="section-title">From <strong>6 Walled Gardens</strong><br>to <strong>Millions of AI Companies</strong></h2>
+  </div>
+  <div class="gb-infra-grid">
+    <div class="gb-infra-side">
+      <div class="gb-infra-era">TODAY</div>
+      <div class="gb-infra-heading">Big Tech Walled Gardens</div>
+      <div class="gb-infra-sub">6 companies control enterprise AI — and they license it back to you per seat.</div>
+      <svg viewBox="0 0 340 260" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto">
+        <defs>
+          <pattern id="gb-cage" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+            <rect width="20" height="20" fill="none" stroke="var(--border)" stroke-width=".5"/>
+            <line x1="0" y1="20" x2="20" y2="0" stroke="var(--border)" stroke-width=".3"/>
+          </pattern>
+        </defs>
+        <rect x="0" y="0" width="340" height="260" fill="url(#gb-cage)" opacity=".4"/>
+        <rect x="0" y="0" width="340" height="260" stroke="var(--border)" stroke-width="1" rx="8"/>
+        <line x1="0" y1="0" x2="340" y2="260" stroke="var(--border)" stroke-width="1"/>
+        <line x1="340" y1="0" x2="0" y2="260" stroke="var(--border)" stroke-width="1"/>
+        <g font-family="monospace" font-weight="800" text-anchor="middle">
+          <rect x="18" y="30" width="60" height="36" rx="4" fill="var(--bg-card)" stroke="var(--border)" stroke-width="1"/><text x="48" y="54" fill="var(--foreground)" font-size="16">MS</text>
+          <rect x="94" y="30" width="60" height="36" rx="4" fill="var(--bg-card)" stroke="var(--border)" stroke-width="1"/><text x="124" y="54" fill="var(--foreground)" font-size="16">G</text>
+          <rect x="170" y="30" width="60" height="36" rx="4" fill="var(--bg-card)" stroke="var(--border)" stroke-width="1"/><text x="200" y="54" fill="var(--foreground)" font-size="16">AMZ</text>
+          <rect x="246" y="30" width="60" height="36" rx="4" fill="var(--bg-card)" stroke="var(--border)" stroke-width="1"/><text x="276" y="54" fill="var(--foreground)" font-size="16">M</text>
+          <rect x="56" y="90" width="60" height="36" rx="4" fill="var(--bg-card)" stroke="var(--border)" stroke-width="1"/><text x="86" y="114" fill="var(--foreground)" font-size="16">OA</text>
+          <rect x="175" y="90" width="60" height="36" rx="4" fill="var(--bg-card)" stroke="var(--border)" stroke-width="1"/><text x="205" y="114" fill="var(--foreground)" font-size="16">APL</text>
+        </g>
+        <rect x="18" y="160" width="300" height="70" rx="6" fill="var(--bg-card)" stroke="var(--border)" stroke-width=".5"/>
+        <text x="170" y="184" fill="var(--fg-secondary)" font-family="monospace" font-size="9" text-anchor="middle" font-weight="700">WALLED GARDENS</text>
+        <g fill="var(--fg-secondary)" font-family="monospace" font-size="8" text-anchor="middle" opacity=".6">
+          <text x="170" y="198">Per-seat licensing fees</text>
+          <text x="170" y="210">Data lock-in / No portability</text>
+          <text x="170" y="222">Zero sovereignty options</text>
+        </g>
+      </svg>
+    </div>
+    <div class="gb-infra-arrow">
+      <svg viewBox="0 0 60 340" fill="none" xmlns="http://www.w3.org/2000/svg" style="height:260px">
+        <line x1="30" y1="0" x2="30" y2="290" stroke="var(--fg-secondary)" stroke-width="1.5" stroke-dasharray="6 6" opacity=".4"/>
+        <polygon points="30,320 22,300 38,300" fill="var(--foreground)" opacity=".5"/>
+        <line x1="30" y1="0" x2="30" y2="290" stroke="var(--foreground)" stroke-width=".3" stroke-dasharray="6 6" opacity=".15"/>
+      </svg>
+    </div>
+    <div class="gb-infra-side">
+      <div class="gb-infra-era" style="background:var(--bg-card);color:var(--foreground);border-color:var(--border)">TOMORROW</div>
+      <div class="gb-infra-heading">Millions Selling AI</div>
+      <div class="gb-infra-sub">Any company can resell enterprise AI — keep 100%, no license fees, no gatekeepers.</div>
+      <svg viewBox="0 0 340 260" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto">
+        <defs>
+          <radialGradient id="gb-bg" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="var(--foreground)" stop-opacity=".04"/><stop offset="100%" stop-color="var(--foreground)" stop-opacity="0"/></radialGradient>
+        </defs>
+        <circle cx="170" cy="130" r="120" fill="url(#gb-bg)"/>
+        <g stroke="var(--fg-secondary)" stroke-width=".5" opacity=".12">
+          <line x1="170" y1="130" x2="80" y2="40"/><line x1="170" y1="130" x2="260" y2="40"/>
+          <line x1="170" y1="130" x2="290" y2="130"/><line x1="170" y1="130" x2="260" y2="220"/>
+          <line x1="170" y1="130" x2="80" y2="220"/><line x1="170" y1="130" x2="50" y2="130"/>
+          <line x1="170" y1="130" x2="170" y2="20"/><line x1="170" y1="130" x2="170" y2="240"/>
+        </g>
+        <g stroke="var(--fg-secondary)" stroke-width=".4" opacity=".08">
+          <line x1="80" y1="40" x2="260" y2="40"/><line x1="260" y1="40" x2="290" y2="130"/>
+          <line x1="290" y1="130" x2="260" y2="220"/><line x1="260" y1="220" x2="80" y2="220"/>
+          <line x1="80" y1="220" x2="50" y2="130"/><line x1="50" y1="130" x2="80" y2="40"/>
+        </g>
+        <g stroke="var(--border)" stroke-width=".4" opacity=".15">
+          <line x1="120" y1="70" x2="220" y2="70"/><line x1="220" y1="70" x2="240" y2="130"/>
+          <line x1="240" y1="130" x2="220" y2="190"/><line x1="220" y1="190" x2="120" y2="190"/>
+          <line x1="120" y1="190" x2="100" y2="130"/><line x1="100" y1="130" x2="120" y2="70"/>
+        </g>
+        <circle cx="170" cy="130" r="4" fill="var(--foreground)" opacity=".6"/>
+        <circle cx="170" cy="130" r="2" fill="var(--foreground)"/>
+        <g fill="var(--fg-secondary)" opacity=".4">
+          <circle cx="80" cy="40" r="2.5"/><circle cx="260" cy="40" r="2.5"/>
+          <circle cx="290" cy="130" r="2.5"/><circle cx="260" cy="220" r="2.5"/>
+          <circle cx="80" cy="220" r="2.5"/><circle cx="50" cy="130" r="2.5"/>
+          <circle cx="170" cy="20" r="2.5"/><circle cx="170" cy="240" r="2.5"/>
+        </g>
+        <g fill="var(--border)" opacity=".5">
+          <circle cx="120" cy="70" r="2"/><circle cx="220" cy="70" r="2"/>
+          <circle cx="240" cy="130" r="2"/><circle cx="220" cy="190" r="2"/>
+          <circle cx="120" cy="190" r="2"/><circle cx="100" cy="130" r="2"/>
+        </g>
+        <g fill="var(--border)" opacity=".2">
+          <circle cx="170" cy="55" r="1.5"/><circle cx="215" cy="85" r="1.5"/>
+          <circle cx="235" cy="165" r="1.5"/><circle cx="125" cy="85" r="1.5"/>
+          <circle cx="105" cy="165" r="1.5"/><circle cx="170" cy="200" r="1.5"/>
+          <circle cx="60" cy="80" r="1.2"/><circle cx="280" cy="80" r="1.2"/>
+          <circle cx="280" cy="180" r="1.2"/><circle cx="60" cy="180" r="1.2"/>
+          <circle cx="110" cy="25" r="1.2"/><circle cx="230" cy="25" r="1.2"/>
+          <circle cx="230" cy="235" r="1.2"/><circle cx="110" cy="235" r="1.2"/>
+        </g>
+        <rect x="18" y="160" width="300" height="70" rx="6" fill="var(--bg-card)" stroke="var(--border)" stroke-width=".5"/>
+        <text x="170" y="184" fill="var(--fg-secondary)" font-family="monospace" font-size="9" text-anchor="middle" font-weight="700">OPEN ECOSYSTEM</text>
+        <g fill="var(--fg-secondary)" font-family="monospace" font-size="8" text-anchor="middle" opacity=".6">
+          <text x="170" y="198">Zero license cost (AGPL)</text>
+          <text x="170" y="210">Keep 100% of revenue</text>
+          <text x="170" y="222">Sovereign data, no lock-in</text>
+        </g>
+      </svg>
+    </div>
+  </div>
+</div>
+<style>
+.gb-infra-grid{display:grid;grid-template-columns:1fr auto 1fr;gap:1.5rem;align-items:start;max-width:64rem;margin:0 auto}
+.gb-infra-side{padding:1.5rem;border-radius:var(--radius);background:var(--bg-card);border:1px solid var(--border)}
+.gb-infra-era{display:inline-block;font-size:.6rem;font-weight:700;letter-spacing:.12em;padding:.25rem .65rem;border:1px solid var(--border);border-radius:2rem;color:var(--fg-secondary);margin-bottom:.75rem}
+.gb-infra-heading{font-size:1.15rem;font-weight:800;color:var(--foreground);margin-bottom:.4rem;letter-spacing:-.02em}
+.gb-infra-sub{font-size:.78rem;color:var(--fg-secondary);margin-bottom:1.25rem;line-height:1.5}
+.gb-infra-arrow{display:flex;align-items:center;justify-content:center;padding-top:2rem}
+@media(max-width:767px){
+.gb-infra-grid{grid-template-columns:1fr;gap:2rem}
+.gb-infra-arrow{transform:rotate(90deg);padding:0}
+.gb-infra-arrow svg{height:auto;width:40px}
+}
+</style>
+</section>
+
 <section class="section-dark">
 <div class="container">
-  <h2 class="section-title">Competitive Advantage: <strong>General Bots vs. Big Tech</strong></h2>
-  <p class="section-sub">Every feature Big Tech charges a premium for, General Bots includes at zero license cost. Every limitation they impose, General Bots removes.</p>
-  <div style="overflow-x:auto;max-width:48rem;margin:0 auto">
+  <h2 class="section-title" data-i18n="investors.compare.title"><strong>Integrated Stack</strong> vs. Fragmented SaaS</h2>
+  <p class="section-sub" data-i18n="investors.compare.sub">Every Big Tech tool charges per seat and keeps your data siloed. General Bots gives you all apps in one machine, with cross-app intelligence no standalone tool can match.</p>
+  <div style="overflow-x:auto;max-width:44rem;margin:0 auto">
     <table class="contrast-table">
-      <thead><tr><th>Capability</th><th>General Bots</th><th>Big Tech (M365, Google, OpenAI)</th></tr></thead>
+      <thead><tr><th data-i18n="investors.compare.col1">Capability</th><th data-i18n="investors.compare.col2">General Bots</th><th data-i18n="investors.compare.col3">Big Tech</th></tr></thead>
       <tbody>
-        <tr><td>Chat with PDFs &amp; documents</td><td class="good">✅ Native since 2019</td><td class="good">✅ Added 2023–2024</td></tr>
-        <tr><td>AI-powered email</td><td class="good">✅ Included</td><td class="bad">❌ $12–$15/user/month</td></tr>
-        <tr><td>Video conferencing</td><td class="good">✅ Included (LiveKit)</td><td class="bad">❌ Separate license</td></tr>
-        <tr><td>CRM</td><td class="good">✅ Included</td><td class="bad">❌ $150+/user/month (Salesforce)</td></tr>
-        <tr><td>Self-hosted</td><td class="good">✅ Yes</td><td class="bad">❌ No (cloud-only)</td></tr>
-        <tr><td>Data sovereignty</td><td class="good">✅ Guaranteed</td><td class="bad">❌ US/EU servers</td></tr>
-        <tr><td>LGPD/GDPR compliance</td><td class="good">✅ Pre-configured</td><td class="bad">❌ Self-configuration</td></tr>
-        <tr><td>Open source / auditable</td><td class="good">✅ AGPL</td><td class="bad">❌ Proprietary</td></tr>
-        <tr><td>Per-seat licensing</td><td class="good">✅ $0</td><td class="bad">❌ $$$$</td></tr>
-        <tr><td>Offline / air-gapped</td><td class="good">✅ Supported</td><td class="bad">❌ Impossible</td></tr>
+        <tr><td data-i18n="investors.compare.row1a">Chat with PDFs</td><td class="good" data-i18n="investors.compare.row1b">✅ Native since 2019</td><td class="good" data-i18n="investors.compare.row1c">✅ Added 2023–2024</td></tr>
+        <tr><td data-i18n="investors.compare.row2a">AI-powered email</td><td class="good" data-i18n="investors.compare.row2b">✅ Included</td><td class="bad" data-i18n="investors.compare.row2c">❌ $12–$15/user/mo</td></tr>
+        <tr><td data-i18n="investors.compare.row3a">Video conferencing</td><td class="good" data-i18n="investors.compare.row3b">✅ Included</td><td class="bad" data-i18n="investors.compare.row3c">❌ Separate license</td></tr>
+        <tr><td data-i18n="investors.compare.row4a">CRM</td><td class="good" data-i18n="investors.compare.row4b">✅ Included</td><td class="bad" data-i18n="investors.compare.row4c">❌ $150+/user/mo</td></tr>
+        <tr><td data-i18n="investors.compare.row5a">Self-hosted</td><td class="good" data-i18n="investors.compare.row5b">✅ Yes</td><td class="bad" data-i18n="investors.compare.row5c">❌ Cloud-only</td></tr>
+        <tr><td data-i18n="investors.compare.row6a">Data sovereignty</td><td class="good" data-i18n="investors.compare.row6b">✅ Guaranteed</td><td class="bad" data-i18n="investors.compare.row6c">❌ US/EU servers</td></tr>
+        <tr><td data-i18n="investors.compare.row7a">LGPD/GDPR compliance</td><td class="good" data-i18n="investors.compare.row7b">✅ Pre-configured</td><td class="bad" data-i18n="investors.compare.row7c">❌ Self-configuration</td></tr>
+        <tr><td data-i18n="investors.compare.row8a">Open source / auditable</td><td class="good" data-i18n="investors.compare.row8b">✅ AGPL</td><td class="bad" data-i18n="investors.compare.row8c">❌ Proprietary</td></tr>
+        <tr><td data-i18n="investors.compare.row9a">Per-seat licensing</td><td class="good" data-i18n="investors.compare.row9b">✅ $0</td><td class="bad" data-i18n="investors.compare.row9c">❌ $$$$</td></tr>
+        <tr><td data-i18n="investors.compare.row10a">Offline / air-gapped</td><td class="good" data-i18n="investors.compare.row10b">✅ Supported</td><td class="bad" data-i18n="investors.compare.row10c">❌ Impossible</td></tr>
       </tbody>
     </table>
   </div>
-  <div style="text-align:center;margin-top:2rem;max-width:32rem;margin-left:auto;margin-right:auto;padding:1.5rem 2rem;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius)">
-    <p style="font-size:.9rem;color:var(--fg-secondary);line-height:1.6;font-style:italic">"The average mid-sized company spends $250,000+/year on SaaS collaboration tools. General Bots replaces 75% of them at infrastructure cost only."</p>
+  <div class="quote-card">
+    <p data-i18n="investors.compare.quote">"CRM feeds Email. Email creates Chat. Chat generates Docs. Docs trains your LLM. LLM writes your campaigns. Every app makes every other app exponentially more valuable — and it all runs on one VPS you own."</p>
   </div>
 </div>
 </section>
 
-<section style="padding:4rem 0">
+<section class="section">
 <div class="container">
-  <h2 class="section-title">The <strong>Opportunity</strong></h2>
-  <p class="section-sub">The global enterprise AI market is projected to reach $185B by 2030. The LATAM market alone represents 650 million potential users — most of whom are underserved by Big Tech's expensive, US-centric solutions.</p>
-  <div class="value-prop">
-    <div class="peace-card"><h3>🏛️ Government & Smart Cities</h3><p>5,000+ Brazilian municipalities need digital transformation. General Bots offers the only platform that combines AI, compliance, sovereignty, and cost-effectiveness.</p></div>
-    <div class="peace-card"><h3>🏥 Healthcare</h3><p>HIPAA/LGPD compliance, AI-powered patient records, telehealth integration — all self-hosted. No patient data ever touches foreign servers.</p></div>
-    <div class="peace-card"><h3>🎓 Education</h3><p>Unlimited student accounts, AI tutoring, document collaboration — without paying per-seat. A university with 50,000 students saves millions annually.</p></div>
-    <div class="peace-card"><h3>⚖️ Legal & Finance</h3><p>Document analysis, contract review, compliance tracking — all on secure, self-hosted infrastructure. No confidentiality risks, no regulatory violations.</p></div>
+  <h2 class="section-title" data-i18n="investors.opportunity.title">The <strong>Opportunity</strong>: Foundation × Vibe × LLM</h2>
+  <p class="section-sub" data-i18n="investors.opportunity.sub">Every company needs CRM, Email, Chat, Docs, Meet, ERP. But nobody offers them as one integrated stack with vibe coding and LLM built in. The market for a complete, ownable platform is every business on earth.</p>
+  <div class="value-grid">
+    <div class="val-card">
+      <div class="icon-box cyan"><svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+      <div class="card-body">
+        <h3 data-i18n="investors.opportunity.card1.title">CRM ↔ Email ↔ Helpdesk: One Flow</h3>
+        <p data-i18n="investors.opportunity.card1.desc">A Municipal government deploys one VPS. Citizens email → CRM creates records → Helpdesk tracks requests → Chat answers FAQs → Docs publishes knowledge. Every citizen interaction flows through one integrated system. The city owns the data, the infrastructure, and the intelligence.</p>
+      </div>
+    </div>
+    <div class="val-card">
+      <div class="icon-box emerald"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+      <div class="card-body">
+        <h3 data-i18n="investors.opportunity.card2.title">Vibe Code Health Portals & Bots</h3>
+        <p data-i18n="investors.opportunity.card2.desc">A hospital vibes a patient portal that pulls from CRM, schedules via Email, answers via Chat, stores records in Docs, and logs to ERP. No third-party SaaS. No per-seat licensing. One VPS, full LGPD compliance, patient data never leaves the hospital's infrastructure.</p>
+      </div>
+    </div>
+    <div class="val-card">
+      <div class="icon-box violet"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
+      <div class="card-body">
+        <h3 data-i18n="investors.opportunity.card3.title">LLM Generates Everything for Education</h3>
+        <p data-i18n="investors.opportunity.card3.desc">A university with 50k students runs one VPS. LLM generates course materials in Docs, auto-answers student questions in Chat, transcribes lectures in Meet, tracks enrollments in CRM, manages finances in ERP. Unlimited users, zero per-seat cost, full data sovereignty.</p>
+      </div>
+    </div>
+    <div class="val-card">
+      <div class="icon-box rose"><svg viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
+      <div class="card-body">
+        <h3 data-i18n="investors.opportunity.card4.title">Control and Automate Absolutely Everything</h3>
+        <p data-i18n="investors.opportunity.card4.desc">Every app generates data. LLM reads that data and acts. CRM updates → LLM writes email campaign. New Chat message → LLM drafts reply from Docs. Meet ends → LLM generates summary into CRM. ERP report due → LLM compiles from all sources. Your company defines the rules; the machine executes them all.</p>
+      </div>
+    </div>
   </div>
 </div>
 </section>
 
 <section class="section-dark">
 <div class="container">
-  <h2 class="section-title">10 Years of <strong>Proven Engineering</strong></h2>
-  <p class="section-sub">We've been building this platform since 2016 — before the current AI boom, before ChatGPT, before "multi-agent" was a buzzword. What OpenAI Frontier promises for 2026, General Bots has delivered since 2019.</p>
-  <div style="max-width:48rem;margin:0 auto">
-    <div style="display:grid;gap:.75rem">
-      <div style="display:flex;align-items:flex-start;gap:.75rem;padding:.5rem 0"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--success,#00c853)" stroke-width="2" style="flex-shrink:0;margin-top:.15rem"><polyline points="20 6 9 17 4 12"/></svg><span>Multi-agent AI orchestration with any LLM (OpenAI, Claude, Llama, local models)</span></div>
-      <div style="display:flex;align-items:flex-start;gap:.75rem;padding:.5rem 0"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--success,#00c853)" stroke-width="2" style="flex-shrink:0;margin-top:.15rem"><polyline points="20 6 9 17 4 12"/></svg><span>Conversational PDF chat since 2019 — 4 years before ChatGPT added it</span></div>
-      <div style="display:flex;align-items:flex-start;gap:.75rem;padding:.5rem 0"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--success,#00c853)" stroke-width="2" style="flex-shrink:0;margin-top:.15rem"><polyline points="20 6 9 17 4 12"/></svg><span>Natural language chart generation since 2022 — 2 years before Claude Analytics</span></div>
-      <div style="display:flex;align-items:flex-start;gap:.75rem;padding:.5rem 0"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--success,#00c853)" stroke-width="2" style="flex-shrink:0;margin-top:.15rem"><polyline points="20 6 9 17 4 12"/></svg><span>Bot-to-human handoff with AI copilot since 2020</span></div>
-      <div style="display:flex;align-items:flex-start;gap:.75rem;padding:.5rem 0"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--success,#00c853)" stroke-width="2" style="flex-shrink:0;margin-top:.15rem"><polyline points="20 6 9 17 4 12"/></svg><span>Native CRM, email, video conferencing, documents — all in one platform</span></div>
-      <div style="display:flex;align-items:flex-start;gap:.75rem;padding:.5rem 0"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--success,#00c853)" stroke-width="2" style="flex-shrink:0;margin-top:.15rem"><polyline points="20 6 9 17 4 12"/></svg><span>Omnichannel: WhatsApp, Teams, Telegram, Instagram, Web — single codebase</span></div>
+  <h2 class="section-title" data-i18n="investors.engineering.title"><strong>10 Years</strong> of Building the Integrated Stack</h2>
+  <p class="section-sub" data-i18n="investors.engineering.sub">Since 2016 we've been building the only platform where CRM, Email, Chat, Docs, Meet, ERP, Helpdesk, and more live on one codebase with native cross-app intelligence. Every app shares data with every other app — no APIs, no middleware, no integration projects.</p>
+  <div class="check-list">
+    <div class="item"><svg viewBox="0 0 24 24" fill="none" stroke="var(--success,#00c853)" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="investors.engineering.f1">CRM natively feeds Email, Chat, Helpdesk, and Docs — every contact, every conversation, every document linked automatically</span></div>
+    <div class="item"><svg viewBox="0 0 24 24" fill="none" stroke="var(--success,#00c853)" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="investors.engineering.f2">Chat conversations auto-generate Docs; Docs become the knowledge base Chat searches — self-building intelligence</span></div>
+    <div class="item"><svg viewBox="0 0 24 24" fill="none" stroke="var(--success,#00c853)" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="investors.engineering.f3">Meet recordings auto-transcribe into CRM notes and Docs — every call captured, searchable, actionable</span></div>
+    <div class="item"><svg viewBox="0 0 24 24" fill="none" stroke="var(--success,#00c853)" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="investors.engineering.f4">ERP pulls from every module for real-time dashboards — sales, support, projects, finances in one view</span></div>
+    <div class="item"><svg viewBox="0 0 24 24" fill="none" stroke="var(--success,#00c853)" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="investors.engineering.f5">Vibe coding API gives every app's data to your custom extensions — campaign sites, bots, agents, portals</span></div>
+    <div class="item"><svg viewBox="0 0 24 24" fill="none" stroke="var(--success,#00c853)" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="investors.engineering.f6">LLM integration across all apps — generate, summarize, translate, automate from any app on your own hardware</span></div>
+  </div>
+</div>
+</section>
+
+<section class="section" style="background:var(--card);border-top:1px solid var(--border);border-bottom:1px solid var(--border)">
+<div class="container">
+  <div style="text-align:center;margin-bottom:2.5rem">
+    <span class="badge" style="background:rgba(0,0,0,.04);color:var(--foreground);border:none;margin-bottom:.75rem" data-i18n="investors.esg.badge">ESG · Social Empowerment</span>
+    <h2 style="font-size:clamp(1.5rem,3.5vw,2.25rem);font-weight:800;letter-spacing:-.03em;margin-bottom:.75rem" data-i18n="investors.esg.title">An intelligent partnership model,<br>designed for <span style="color:var(--foreground)">your profit</span></h2>
+    <p style="color:var(--muted-foreground);max-width:36rem;margin:0 auto;font-size:.9rem;line-height:1.7" data-i18n="investors.esg.sub">Empowering companies of any size with enterprise AI infrastructure at near-zero cost. You build a profitable business while democratizing access to AI.</p>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.25rem;max-width:56rem;margin:0 auto">
+    <div class="glass-card" style="text-align:center;padding:2rem 1.5rem">
+      <div style="display:flex;align-items:center;justify-content:center;width:52px;height:52px;border-radius:12px;background:rgba(0,0,0,.04);margin:0 auto 1rem">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--foreground)" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+      </div>
+      <h3 style="font-size:1rem;font-weight:700;margin-bottom:.4rem" data-i18n="investors.esg.setup.label">One-Time Setup</h3>
+      <div style="font-size:2rem;font-weight:900;color:var(--foreground);letter-spacing:-.04em;margin-bottom:.6rem" data-i18n="investors.esg.setup.price">R$ 7.000</div>
+      <p style="font-size:.8rem;color:var(--muted-foreground);line-height:1.6;margin:0" data-i18n="investors.esg.setup.desc">Not a membership fee — it's infrastructure cost. Covers your dedicated server setup and White Label customization (your brand, your domain). Delivered ready to sell.</p>
+    </div>
+
+    <div class="glass-card" style="text-align:center;padding:2rem 1.5rem">
+      <div style="display:flex;align-items:center;justify-content:center;width:52px;height:52px;border-radius:12px;background:rgba(0,0,0,.04);margin:0 auto 1rem">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--foreground)" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      </div>
+      <h3 style="font-size:1rem;font-weight:700;margin-bottom:.4rem" data-i18n="investors.esg.monthly.label">Per Active User / Month</h3>
+      <div style="font-size:2rem;font-weight:900;color:var(--foreground);letter-spacing:-.04em;margin-bottom:.6rem" data-i18n="investors.esg.monthly.price">R$ 16,90</div>
+      <p style="font-size:.8rem;color:var(--muted-foreground);line-height:1.6;margin:0" data-i18n="investors.esg.monthly.desc">You only pay per active user on your platform. The lowest per-user cost in the market — your expense only grows after your revenue has already increased.</p>
+    </div>
+
+    <div class="glass-card" style="text-align:center;padding:2rem 1.5rem">
+      <div style="display:flex;align-items:center;justify-content:center;width:52px;height:52px;border-radius:12px;background:rgba(0,0,0,.04);margin:0 auto 1rem">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--foreground)" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 11 11 13 15 9"/></svg>
+      </div>
+      <h3 style="font-size:1rem;font-weight:700;margin-bottom:.4rem" data-i18n="investors.esg.license.label">Zero Licensing Fees</h3>
+      <div style="font-size:2rem;font-weight:900;color:var(--foreground);letter-spacing:-.04em;margin-bottom:.6rem" data-i18n="investors.esg.license.price">R$ 0</div>
+      <p style="font-size:.8rem;color:var(--muted-foreground);line-height:1.6;margin:0" data-i18n="investors.esg.license.desc">Never pay software license fees. All modules — CRM, Email, Chat, Docs, ERP, Compliance, Vibe Code — are 100% free on your server. Your only variable cost is per active user, with no annual fees or hidden charges.</p>
+    </div>
+  </div>
+
+  <div style="max-width:42rem;margin:1.5rem auto 0;padding:1.25rem 1.75rem;background:var(--secondary);border:1px solid var(--border);border-radius:var(--radius);text-align:center">
+    <p style="font-size:.85rem;color:var(--muted-foreground);line-height:1.7;margin:0" data-i18n="investors.esg.footer"><strong style="color:var(--foreground)">ESG — Social Empowerment:</strong> This model is more than a business — it's a commitment. Companies of any size can resell complete enterprise AI under their own brand, at a fraction of Big Tech's cost. You build a profitable business while democratizing AI infrastructure. Everyone wins.</p>
+  </div>
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+  <div class="cta-box">
+    <h2 data-i18n="investors.cta.title">One VPS. Your Company. Everything.</h2>
+    <p data-i18n="investors.cta.desc">Foundation apps that amplify each other. Vibe coding to build anything. LLM to automate everything. All on one machine you own. We're looking for partners who understand the future belongs to companies that own their stack — not rent it from Big Tech.</p>
+    <div style="display:flex;gap:.75rem;justify-content:center;flex-wrap:wrap">
+      <a href="/contact/" class="btn btn-primary" data-i18n="investors.cta.btn1">Let's Talk</a>
+      <a href="https://docs.generalbots.org" class="btn btn-outline" data-i18n="investors.cta.btn2">Read the Docs</a>
+      <a href="https://github.com/generalbots/generalbots" class="btn btn-outline" data-i18n="investors.cta.btn3">Star on GitHub</a>
     </div>
   </div>
 </div>
 </section>
 
-<section style="padding:4rem 0">
-<div class="container">
-  <div class="cta-box">
-    <h2>Ready to Invest in Peace of Mind?</h2>
-    <p>General Bots is seeking strategic partners who share our vision: a world where AI serves people, not the other way around. Where data sovereignty is a right, not a premium feature. Where enterprises can compete with Big Tech using tools that are actually their own.</p>
-    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
-      <a href="/contact/" class="btn btn-primary">Let's Talk</a>
-      <a href="https://docs.generalbots.org" class="btn btn-outline">Read the Docs</a>
-      <a href="https://github.com/generalbots/generalbots" class="btn btn-outline">Star on GitHub</a>
-    </div>
-  </div>
-</div>
-</section>
 </main>
 <div hx-get="/partials/footer.html" hx-swap="innerHTML" hx-trigger="load"></div>
 <script src="https://unpkg.com/htmx.org@2.0.4"></script>
