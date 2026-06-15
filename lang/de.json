@@ -2512,5 +2512,18 @@
   "nav.apps.mobile.ops": "Betrieb und Sicherheit",
   "nav.investors": "Investors",
   "investors.title": "Investors — General Bots | Peace of Mind, Competitive Advantage",
-  "investors.meta_desc": "General Bots offers sovereign AI infrastructure that frees you from Big Tech lock-in."
+  "investors.meta_desc": "General Bots offers sovereign AI infrastructure that frees you from Big Tech lock-in.",
+  "investors.esg.badge": "ESG · Soziale Stärkung",
+  "investors.esg.title": "Ein intelligentes Partnerschaftsmodell, konzipiert für Ihren Gewinn",
+  "investors.esg.sub": "Wir unterstützen Unternehmen jeder Größe mit einer unternehmensweiten KI-Infrastruktur zu nahezu Nullkosten. ",
+  "investors.esg.setup.label": "Einmalige Einrichtung",
+  "investors.esg.setup.price": "R$ 7.000",
+  "investors.esg.setup.desc": "Kein Mitgliedsbeitrag – es handelt sich um Infrastrukturkosten. ",
+  "investors.esg.monthly.label": "Pro aktivem Benutzer/Monat",
+  "investors.esg.monthly.price": "R$ 16,90",
+  "investors.esg.monthly.desc": "Sie zahlen nur pro aktivem Benutzer auf Ihrer Plattform. ",
+  "investors.esg.license.label": "Keine Lizenzgebühren",
+  "investors.esg.license.price": "R$ 0",
+  "investors.esg.license.desc": "Zahlen Sie niemals Softwarelizenzgebühren. ",
+  "investors.esg.footer": "ESG – Social Empowerment: Dieses Modell ist mehr als ein Geschäft – es ist eine Verpflichtung. "
 }

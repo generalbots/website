@@ -2512,5 +2512,18 @@
   "nav.apps.mobile.ops": "运营与安全",
   "nav.investors": "Investors",
   "investors.title": "Investors — General Bots | Peace of Mind, Competitive Advantage",
-  "investors.meta_desc": "General Bots offers sovereign AI infrastructure that frees you from Big Tech lock-in."
+  "investors.meta_desc": "General Bots offers sovereign AI infrastructure that frees you from Big Tech lock-in.",
+  "investors.esg.license.desc": "切勿支付软件许可费。",
+  "investors.esg.title": "专为您的利润而设计的智能合作伙伴模式",
+  "investors.esg.monthly.price": "雷亚尔 16.90 雷亚尔",
+  "investors.esg.setup.price": "7000雷亚尔",
+  "investors.esg.setup.label": "一次性设置",
+  "investors.esg.monthly.desc": "您只需为平台上的活跃用户付费。",
+  "investors.esg.badge": "ESG·社会赋权",
+  "investors.esg.monthly.label": "每个活跃用户/月",
+  "investors.esg.footer": "ESG — 社会赋权：这种模式不仅仅是一项业务，更是一种承诺。",
+  "investors.esg.license.price": "雷亚尔 0",
+  "investors.esg.setup.desc": "不是会员费——而是基础设施成本。",
+  "investors.esg.license.label": "零许可费",
+  "investors.esg.sub": "以接近零的成本为任何规模的公司提供企业人工智能基础设施。"
 }

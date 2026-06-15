@@ -2593,5 +2593,18 @@
   "investors.cta.desc": "General Bots recherche des partenaires stratégiques qui partagent notre vision : un monde où l'IA est au service des gens, et non l'inverse.",
   "investors.cta.btn1": "Parlons",
   "investors.cta.btn2": "Lire les documents",
-  "investors.cta.btn3": "Étoile sur GitHub"
+  "investors.cta.btn3": "Étoile sur GitHub",
+  "investors.esg.license.desc": "Ne payez jamais de frais de licence logicielle. ",
+  "investors.esg.title": "Un modèle de partenariat intelligent, conçu pour votre profit",
+  "investors.esg.monthly.price": "16,90 R$",
+  "investors.esg.setup.price": "7 000 R$",
+  "investors.esg.setup.label": "Configuration unique",
+  "investors.esg.monthly.desc": "Vous ne payez que par utilisateur actif sur votre plateforme. ",
+  "investors.esg.badge": "ESG · Autonomisation sociale",
+  "investors.esg.monthly.label": "Par utilisateur actif / mois",
+  "investors.esg.footer": "ESG — Social Empowerment : Ce modèle est plus qu'une entreprise : c'est un engagement. ",
+  "investors.esg.license.price": "0 R$",
+  "investors.esg.setup.desc": "Il ne s’agit pas d’une cotisation, mais d’un coût d’infrastructure. ",
+  "investors.esg.license.label": "Zéro frais de licence",
+  "investors.esg.sub": "Offrez aux entreprises de toute taille une infrastructure d’IA d’entreprise à un coût quasi nul. "
 }

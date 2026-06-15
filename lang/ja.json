@@ -2512,5 +2512,18 @@
   "nav.apps.mobile.ops": "運用とセキュリティ",
   "nav.investors": "Investors",
   "investors.title": "Investors — General Bots | Peace of Mind, Competitive Advantage",
-  "investors.meta_desc": "General Bots offers sovereign AI infrastructure that frees you from Big Tech lock-in."
+  "investors.meta_desc": "General Bots offers sovereign AI infrastructure that frees you from Big Tech lock-in.",
+  "investors.esg.badge": "ESG・社会的エンパワーメント",
+  "investors.esg.title": "お客様の利益のために設計されたインテリジェントなパートナーシップ モデル",
+  "investors.esg.sub": "ほぼゼロのコストでエンタープライズ AI インフラストラクチャを使用して、あらゆる規模の企業を強化します。 ",
+  "investors.esg.setup.label": "ワンタイムセットアップ",
+  "investors.esg.setup.price": "R$7.000",
+  "investors.esg.setup.desc": "会費ではなく、インフラストラクチャのコストです。",
+  "investors.esg.monthly.label": "アクティブ ユーザーあたり/月",
+  "investors.esg.monthly.price": "R$ 16,90",
+  "investors.esg.monthly.desc": "プラットフォーム上のアクティブ ユーザーごとにのみお支払いいただきます。",
+  "investors.esg.license.label": "ライセンス料ゼロ",
+  "investors.esg.license.price": "R$0",
+  "investors.esg.license.desc": "ソフトウェアのライセンス料は絶対に支払わないでください。 ",
+  "investors.esg.footer": "ESG — 社会的エンパワーメント: このモデルは単なるビジネスではなく、コミットメントです。"
 }
