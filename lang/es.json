@@ -2509,5 +2509,8 @@
   "nav.apps.mobile.workspace": "Espacio de trabajo y reunión",
   "nav.apps.mobile.business": "Negocios y CRM",
   "nav.apps.mobile.erp": "ERP y finanzas",
-  "nav.apps.mobile.ops": "Operaciones y seguridad"
+  "nav.apps.mobile.ops": "Operaciones y seguridad",
+  "nav.investors": "Investors",
+  "investors.title": "Investors — General Bots | Peace of Mind, Competitive Advantage",
+  "investors.meta_desc": "General Bots offers sovereign AI infrastructure that frees you from Big Tech lock-in."
 }

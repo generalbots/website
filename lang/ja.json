@@ -2509,5 +2509,8 @@
   "nav.apps.mobile.workspace": "ワークスペースとミーティング",
   "nav.apps.mobile.business": "ビジネスとCRM",
   "nav.apps.mobile.erp": "ERPと財務",
-  "nav.apps.mobile.ops": "運用とセキュリティ"
+  "nav.apps.mobile.ops": "運用とセキュリティ",
+  "nav.investors": "Investors",
+  "investors.title": "Investors — General Bots | Peace of Mind, Competitive Advantage",
+  "investors.meta_desc": "General Bots offers sovereign AI infrastructure that frees you from Big Tech lock-in."
 }
