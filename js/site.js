@@ -129,7 +129,7 @@
       if(text){
         if(els[i].tagName === 'INPUT' || els[i].tagName === 'TEXTAREA') els[i].setAttribute('placeholder', text);
         else if(els[i].tagName === 'IMG') els[i].setAttribute('alt', text);
-        else els[i].textContent = text;
+        else els[i].textContent = text.replace(/&nbsp;/g,'\u00A0');
       }
     }
     document.documentElement.lang = currentLang;
