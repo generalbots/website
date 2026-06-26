@@ -56,7 +56,31 @@
     <link rel="alternate" hreflang="de" href="https://generalbots.org/de/blog/digital-twins/" />
     <link rel="alternate" hreflang="ja" href="https://generalbots.org/ja/blog/digital-twins/" />
     <link rel="alternate" hreflang="zh-cn" href="https://generalbots.org/zh-cn/blog/digital-twins/" />
-  </head>
+  
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://generalbots.org/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://generalbots.org/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Post"
+    }
+  ]
+}</script>
+</head>
 <body>
 <div hx-get="/partials/header.html" hx-swap="innerHTML" hx-trigger="load"></div>
 <main>

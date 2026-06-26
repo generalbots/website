@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>General Bots Blog</title>
+    <link>https://generalbots.org/blog/</link>
+    <description>AI, multi-agent orchestration, LLMs and open-source insights</description>
+    <language>en</language>
+    <lastBuildDate>Fri, 26 Jun 2026 13:25:14 +0000</lastBuildDate>
+    <atom:link href="https://generalbots.org/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title><![CDATA[Carl vs Wilson: Two Paths for AI in Your Enterprise]]></title>
+      <link>https://generalbots.org/blog/carl-vs-wilson/</link>
+      <guid>https://generalbots.org/blog/carl-vs-wilson/</guid>
+      <pubDate>Thu, 26 Jun 2025 00:00:00 +0000</pubDate>
+      <description><![CDATA[Comparing Carl and Wilson approaches to AI strategy in the enterprise.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Own Your Authenticator: Sovereign Identity]]></title>
+      <link>https://generalbots.org/blog/own-your-authenticator/</link>
+      <guid>https://generalbots.org/blog/own-your-authenticator/</guid>
+      <pubDate>Tue, 17 Jun 2025 00:00:00 +0000</pubDate>
+      <description><![CDATA[Why owning your authenticator is critical for sovereign AI infrastructure.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[The LLM Boom is Over: What Comes Next]]></title>
+      <link>https://generalbots.org/blog/llm-boom-is-over/</link>
+      <guid>https://generalbots.org/blog/llm-boom-is-over/</guid>
+      <pubDate>Fri, 16 May 2025 00:00:00 +0000</pubDate>
+      <description><![CDATA[Analysis of post-boom LLM landscape and what it means for enterprise AI.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Breaking Free from Proprietary Ecosystems]]></title>
+      <link>https://generalbots.org/blog/escape-from-bigtech/</link>
+      <guid>https://generalbots.org/blog/escape-from-bigtech/</guid>
+      <pubDate>Tue, 13 May 2025 00:00:00 +0000</pubDate>
+      <description><![CDATA[How to decouple from Big Tech AI vendors and build sovereign solutions.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Digital Twins for Enterprise AI]]></title>
+      <link>https://generalbots.org/blog/digital-twins/</link>
+      <guid>https://generalbots.org/blog/digital-twins/</guid>
+      <pubDate>Tue, 13 May 2025 00:00:00 +0000</pubDate>
+      <description><![CDATA[Using digital twins to simulate and optimize enterprise AI workflows.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Standardized AI Templates]]></title>
+      <link>https://generalbots.org/blog/general-bots-ai-templates/</link>
+      <guid>https://generalbots.org/blog/general-bots-ai-templates/</guid>
+      <pubDate>Sun, 05 May 2024 00:00:00 +0000</pubDate>
+      <description><![CDATA[Reusable AI templates for rapid enterprise automation deployment.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[BASIC for Everyone: Making AI Accessible]]></title>
+      <link>https://generalbots.org/blog/basic-for-everyone/</link>
+      <guid>https://generalbots.org/blog/basic-for-everyone/</guid>
+      <pubDate>Sun, 20 Apr 2025 00:00:00 +0000</pubDate>
+      <description><![CDATA[Reviving BASIC for the LLM era — democratizing AI programming.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Cost-Effective Bot Orchestration]]></title>
+      <link>https://generalbots.org/blog/cost-effective-bot-orchestration/</link>
+      <guid>https://generalbots.org/blog/cost-effective-bot-orchestration/</guid>
+      <pubDate>Sun, 20 Apr 2025 00:00:00 +0000</pubDate>
+      <description><![CDATA[Optimizing multi-agent orchestration costs without sacrificing performance.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[MCP Is the New API]]></title>
+      <link>https://generalbots.org/blog/mcp-is-the-new-api/</link>
+      <guid>https://generalbots.org/blog/mcp-is-the-new-api/</guid>
+      <pubDate>Tue, 22 Apr 2025 00:00:00 +0000</pubDate>
+      <description><![CDATA[Model Context Protocol as the next evolution of API design for AI.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Beyond Chatbots: The Future of Enterprise AI]]></title>
+      <link>https://generalbots.org/blog/beyond-chatbots/</link>
+      <guid>https://generalbots.org/blog/beyond-chatbots/</guid>
+      <pubDate>Tue, 15 Apr 2025 00:00:00 +0000</pubDate>
+      <description><![CDATA[Moving past simple chatbots to autonomous AI agents.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[What Is an LLM? A Comprehensive Guide]]></title>
+      <link>https://generalbots.org/blog/what-is-llm/</link>
+      <guid>https://generalbots.org/blog/what-is-llm/</guid>
+      <pubDate>Wed, 02 Apr 2025 00:00:00 +0000</pubDate>
+      <description><![CDATA[Complete guide to large language models and their enterprise applications.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[LLM Myths 2025: Separating Fact from Fiction]]></title>
+      <link>https://generalbots.org/blog/llm-myths-2025/</link>
+      <guid>https://generalbots.org/blog/llm-myths-2025/</guid>
+      <pubDate>Fri, 28 Mar 2025 00:00:00 +0000</pubDate>
+      <description><![CDATA[Debunking common myths about LLMs in enterprise environments.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[The Illusion of Intelligence in LLMs]]></title>
+      <link>https://generalbots.org/blog/illusion-of-intelligence/</link>
+      <guid>https://generalbots.org/blog/illusion-of-intelligence/</guid>
+      <pubDate>Sat, 05 Apr 2025 00:00:00 +0000</pubDate>
+      <description><![CDATA[Understanding the difference between simulation and genuine intelligence.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[The Hidden Costs of Enterprise SaaS]]></title>
+      <link>https://generalbots.org/blog/saas-hidden-costs/</link>
+      <guid>https://generalbots.org/blog/saas-hidden-costs/</guid>
+      <pubDate>Tue, 01 Apr 2025 00:00:00 +0000</pubDate>
+      <description><![CDATA[Why SaaS total cost of ownership often exceeds on-premise alternatives.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[NO FORMS: Conversational AI That Works]]></title>
+      <link>https://generalbots.org/blog/no-forms/</link>
+      <guid>https://generalbots.org/blog/no-forms/</guid>
+      <pubDate>Thu, 17 Apr 2025 00:00:00 +0000</pubDate>
+      <description><![CDATA[Eliminating forms with conversational AI interfaces.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[RCS vs WhatsApp: The Battle for Business Messaging]]></title>
+      <link>https://generalbots.org/blog/rcs-vs-whatsapp/</link>
+      <guid>https://generalbots.org/blog/rcs-vs-whatsapp/</guid>
+      <pubDate>Wed, 09 Apr 2025 00:00:00 +0000</pubDate>
+      <description><![CDATA[Comparing RCS and WhatsApp for enterprise customer communication.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Building LLM-Powered Enrollment Tools with BASIC]]></title>
+      <link>https://generalbots.org/blog/basic-llm-tools/</link>
+      <guid>https://generalbots.org/blog/basic-llm-tools/</guid>
+      <pubDate>Thu, 17 Apr 2025 00:00:00 +0000</pubDate>
+      <description><![CDATA[Using BASIC to build LLM-powered enrollment and registration tools.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Protocol Imperialism: The OAuth2 Trap]]></title>
+      <link>https://generalbots.org/blog/marginalized-e-mail-services/</link>
+      <guid>https://generalbots.org/blog/marginalized-e-mail-services/</guid>
+      <pubDate>Fri, 18 Apr 2025 00:00:00 +0000</pubDate>
+      <description><![CDATA[How protocol imperialism locks enterprises into proprietary ecosystems.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Economic Impact of US Tariffs on AI]]></title>
+      <link>https://generalbots.org/blog/the-economic-impact-of-us-tariffs-on-ai/</link>
+      <guid>https://generalbots.org/blog/the-economic-impact-of-us-tariffs-on-ai/</guid>
+      <pubDate>Sat, 05 Apr 2025 00:00:00 +0000</pubDate>
+      <description><![CDATA[Analyzing how US tariffs affect the global AI supply chain.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Deswindonization: Breaking Free from Big Tech]]></title>
+      <link>https://generalbots.org/blog/deswindonization/</link>
+      <guid>https://generalbots.org/blog/deswindonization/</guid>
+      <pubDate>Fri, 28 Mar 2025 00:00:00 +0000</pubDate>
+      <description><![CDATA[Strategy for systematically removing Big Tech dependencies.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[SDG & AI: Sustainable Development Goals]]></title>
+      <link>https://generalbots.org/blog/sdg-ai/</link>
+      <guid>https://generalbots.org/blog/sdg-ai/</guid>
+      <pubDate>Fri, 25 Apr 2025 00:00:00 +0000</pubDate>
+      <description><![CDATA[How AI can accelerate progress toward UN Sustainable Development Goals.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Why Pragmatismo Selected Open Source]]></title>
+      <link>https://generalbots.org/blog/why-pragmatismo-selected-open-source/</link>
+      <guid>https://generalbots.org/blog/why-pragmatismo-selected-open-source/</guid>
+      <pubDate>Sun, 11 May 2025 00:00:00 +0000</pubDate>
+      <description><![CDATA[Why Pragmatismo chose open source for sovereign AI infrastructure.]]></description>
+    </item>
+  </channel>
+</rss>
