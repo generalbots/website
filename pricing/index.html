@@ -11,7 +11,12 @@
 <meta property="og:description" content="Self-hosted multi-agent AI platform for free. Managed agentic AI orchestration, LLM workflows, autonomous agents with 99.9% uptime.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://generalbots.org/pricing/">
-<meta property="og:image" content="https://generalbots.org/logo-square.svg">
+<meta property="og:image" content="https://generalbots.org/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:alt" content="General Bots — Multi-Agent AI Platform &amp; Agentic Orchestration | Open Source">
+
 <link rel="icon" href="/favicon.ico">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="stylesheet" href="/css/site.css">
@@ -72,6 +77,21 @@
 }
 .partner-link:hover{color:var(--accent);gap:.5rem}
 </style>
+
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "General Bots \u2014 Multi-Agent AI Platform",
+  "description": "Open-source multi-agent AI orchestration platform with 75+ sovereign modules.",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD",
+    "priceValidUntil": "2027-12-31",
+    "availability": "https://schema.org/OnlineOnly",
+    "url": "https://generalbots.org/pricing/"
+  }
+}</script>
 </head>
 <body>
 <div hx-get="/partials/header.html" hx-swap="innerHTML" hx-trigger="load"></div>
@@ -281,7 +301,7 @@
 <a href="/blog/general-bots-ai-templates/" class="related-post-card">
   <time class="post-date">May 5, 2024</time>
   <h3>Standardized AI Templates</h3>
-  <p>Pre-configured orchestration blueprints for RAG, vector search, and domain-specific AI across Education, Finance, Healthcare, and more.</p>
+  <p>Pre-configured orchestration blueprints for RAG, advanced retrieval, and domain-specific AI across Education, Finance, Healthcare, and more.</p>
   <span class="read-more">Read more →</span>
 </a>
   </div>

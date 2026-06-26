@@ -1,5 +1,5 @@
 {
-    email your-email@example.com
+    email hostmaster@generalbots.org
 }
 
 # Production
@@ -14,6 +14,15 @@ generalbots.org, www.generalbots.org {
 
     try_files {path} {path}/index.html /index.html
     file_server
+
+    header {
+        Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+        X-Content-Type-Options "nosniff"
+        X-Frame-Options "DENY"
+        Referrer-Policy "strict-origin-when-cross-origin"
+        Permissions-Policy "camera=(), microphone=(), geolocation=()"
+        Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com https://gc.zgo.at; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://translate.googleapis.com"
+    }
 
     tls {
         protocols tls1.2 tls1.3

@@ -340,6 +340,17 @@ When adding or modifying pages:
 
 ---
 
+## i18n Maintenance
+
+When updating page content or terminology:
+
+1. **Update `lang/*.json` files** — all 7 languages (en, pt, es, fr, de, ja, zh-cn). Replace or remove old i18n keys when text changes. Stale keys in JSON won't render (no `[data-i18n]` element pointing to them) but accumulate as dead weight.
+2. **Search both code and JSON** before declaring a term eliminated — `data-i18n` attributes in HTML map to keys in these files.
+3. **When renaming a key**, update both the `data-i18n` attribute in HTML and all 7 language JSON files.
+4. **New pages** should add `data-i18n` attributes for translatable text, with matching keys in all language files.
+
+---
+
 ## 3rd-Party Scripts
 
 These are injected by `js/site.js` (not hardcoded in HTML):

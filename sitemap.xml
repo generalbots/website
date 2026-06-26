@@ -11,10 +11,7 @@
   <url><loc>https://generalbots.org/features/talk-to-data/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://generalbots.org/features/trainning/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://generalbots.org/features/web-automation/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://generalbots.org/general-bots/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://generalbots.org/general-bots/llm/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://generalbots.org/general-bots/open-source/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://generalbots.org/general-bots/vector-retrieval/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://generalbots.org/features/advanced-rag/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://generalbots.org/integrations/</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
   <url><loc>https://generalbots.org/integrations/channels/email/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://generalbots.org/integrations/channels/facebook-pages/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
@@ -35,9 +32,12 @@
   <url><loc>https://generalbots.org/integrations/virtual-assistants/alexa/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://generalbots.org/integrations/virtual-assistants/chat-gpt/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://generalbots.org/integrations/virtual-assistants/microsoft-copilot/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://generalbots.org/general-bots/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://generalbots.org/general-bots/llm/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://generalbots.org/general-bots/open-source/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://generalbots.org/general-bots/vector-retrieval/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://generalbots.org/pricing/</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
   <url><loc>https://generalbots.org/templates/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://generalbots.org/login/</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
   <url><loc>https://generalbots.org/resources/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://generalbots.org/resources/already-using/data-science/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://generalbots.org/resources/already-using/essential-resources/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
@@ -50,32 +50,29 @@
   <url><loc>https://generalbots.org/resources/considering/customers/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://generalbots.org/resources/considering/onboard-support/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://generalbots.org/contact/</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://generalbots.org/blog/</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://generalbots.org/blog/basic-for-everyone/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://generalbots.org/blog/basic-llm-tools/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://generalbots.org/blog/beyond-chatbots/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://generalbots.org/blog/cost-effective-bot-orchestration/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://generalbots.org/blog/digital-twins/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://generalbots.org/blog/general-bots-ai-templates/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://generalbots.org/blog/illusion-of-intelligence/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://generalbots.org/blog/llm-boom-is-over/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://generalbots.org/blog/llm-myths-2025/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://generalbots.org/blog/marginalized-e-mail-services/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://generalbots.org/blog/mcp-is-the-new-api/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://generalbots.org/blog/own-your-authenticator/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://generalbots.org/blog/rcs-vs-whatsapp/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://generalbots.org/blog/saas-hidden-costs/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://generalbots.org/blog/what-is-llm/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://generalbots.org/privacy/</loc><changefreq>monthly</changefreq><priority>0.3</priority></url>
   <url><loc>https://generalbots.org/terms/</loc><changefreq>monthly</changefreq><priority>0.3</priority></url>
-  <url><loc>https://generalbots.org/cabot/</loc><changefreq>monthly</changefreq><priority>0.3</priority></url>
-  <url><loc>https://generalbots.org/conderbot/</loc><changefreq>monthly</changefreq><priority>0.3</priority></url>
-  <url><loc>https://generalbots.org/creaprbot/</loc><changefreq>monthly</changefreq><priority>0.3</priority></url>
-  <url><loc>https://generalbots.org/dantebot/</loc><changefreq>monthly</changefreq><priority>0.3</priority></url>
-  <url><loc>https://generalbots.org/igpsports/</loc><changefreq>monthly</changefreq><priority>0.3</priority></url>
-  <url><loc>https://generalbots.org/leadsbot/</loc><changefreq>monthly</changefreq><priority>0.3</priority></url>
-  <url><loc>https://generalbots.org/lmbot/</loc><changefreq>monthly</changefreq><priority>0.3</priority></url>
-  <url><loc>https://generalbots.org/onsbot/</loc><changefreq>monthly</changefreq><priority>0.3</priority></url>
-  <url><loc>https://generalbots.org/sdpdbot/</loc><changefreq>monthly</changefreq><priority>0.3</priority></url>
-  <url><loc>https://generalbots.org/presentation/</loc><changefreq>monthly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://generalbots.org/blog/</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://generalbots.org/blog/basic-for-everyone/</loc><lastmod>2025-04-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://generalbots.org/blog/basic-llm-tools/</loc><lastmod>2025-04-17</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://generalbots.org/blog/beyond-chatbots/</loc><lastmod>2025-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://generalbots.org/blog/carl-vs-wilson/</loc><lastmod>2025-06-26</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://generalbots.org/blog/cost-effective-bot-orchestration/</loc><lastmod>2025-04-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://generalbots.org/blog/deswindonization/</loc><lastmod>2025-03-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://generalbots.org/blog/digital-twins/</loc><lastmod>2025-05-13</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://generalbots.org/blog/escape-from-bigtech/</loc><lastmod>2025-05-13</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://generalbots.org/blog/general-bots-ai-templates/</loc><lastmod>2024-05-05</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://generalbots.org/blog/illusion-of-intelligence/</loc><lastmod>2025-04-05</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://generalbots.org/blog/llm-boom-is-over/</loc><lastmod>2025-05-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://generalbots.org/blog/llm-myths-2025/</loc><lastmod>2025-03-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://generalbots.org/blog/marginalized-e-mail-services/</loc><lastmod>2025-04-18</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://generalbots.org/blog/mcp-is-the-new-api/</loc><lastmod>2025-04-22</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://generalbots.org/blog/no-forms/</loc><lastmod>2025-04-17</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://generalbots.org/blog/own-your-authenticator/</loc><lastmod>2025-06-17</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://generalbots.org/blog/rcs-vs-whatsapp/</loc><lastmod>2025-04-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://generalbots.org/blog/saas-hidden-costs/</loc><lastmod>2025-04-01</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://generalbots.org/blog/sdg-ai/</loc><lastmod>2025-04-25</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://generalbots.org/blog/the-economic-impact-of-us-tariffs-on-ai/</loc><lastmod>2025-04-05</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://generalbots.org/blog/what-is-llm/</loc><lastmod>2025-04-02</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://generalbots.org/blog/why-pragmatismo-selected-open-source/</loc><lastmod>2025-05-11</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 </urlset>
