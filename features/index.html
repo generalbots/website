@@ -20,7 +20,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/favicon.ico">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="stylesheet" href="/css/site.css">
+<link rel="stylesheet" href="/css/site.min.css">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -31,28 +31,7 @@
   "isPartOf": {"@type": "WebSite", "name": "General Bots", "url": "https://generalbots.org"}
 }
 </script>
-<style>
-/* Page-specific styles */
-.features-hero{min-height:70vh;display:flex;align-items:center;padding:8rem 0 5rem;position:relative;overflow:hidden}
-.quick-link{
-  display:inline-flex;align-items:center;padding:.4375rem 1rem;font-size:.75rem;font-weight:600;
-  color:var(--fg-secondary);background:var(--bg-card);border:1px solid var(--border);
-  border-radius:var(--radius-2xl);transition:var(--transition);backdrop-filter:var(--glass-blur);
-}
-.quick-link:hover{border-color:var(--accent);color:var(--accent-light);background:var(--accent-soft)}
 
-/* Feature matrix card with illustration area */
-.feature-showcase{position:relative}
-.feature-showcase .showcase-visual{
-  width:100%;aspect-ratio:16/9;background:var(--bg-tertiary);border-radius:var(--radius);
-  margin-bottom:1.25rem;overflow:hidden;display:flex;align-items:center;justify-content:center;
-  border:1px solid var(--border-subtle);
-}
-
-/* Audience tab panel transition */
-.audience-content{opacity:0;transform:translateY(8px);transition:opacity .3s ease,transform .3s ease}
-.audience-content.active{opacity:1;transform:translateY(0)}
-</style>
 
     <link rel="alternate" hreflang="x-default" href="https://generalbots.org/features/" />
     <link rel="alternate" hreflang="pt" href="https://generalbots.org/pt/features/" />
@@ -61,8 +40,35 @@
     <link rel="alternate" hreflang="de" href="https://generalbots.org/de/features/" />
     <link rel="alternate" hreflang="ja" href="https://generalbots.org/ja/features/" />
     <link rel="alternate" hreflang="zh-cn" href="https://generalbots.org/zh-cn/features/" />
-  </head>
+  
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What features are included in General Bots?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "General Bots provides AI bot orchestration with multi-agent support, LLM integration, BASIC scripting, industrial automation, and sovereign deployment options."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is General Bots open source?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, General Bots is fully open source and self-hosted, giving you complete control over your data and infrastructure."
+      }
+    }
+  ]
+}
+</script>
+</head>
 <body>
+<a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:0;z-index:9999;padding:0.5rem 1rem;background:#000;color:#fff;font-size:0.875rem">Skip to content</a>
+
 
 <div hx-get="/partials/header.html" hx-swap="innerHTML" hx-trigger="load"></div>
 
@@ -491,6 +497,6 @@ function switchTab(btn, tabId) {
 }
 </script>
 <script src="https://unpkg.com/htmx.org@2.0.10"></script>
-<script src="/js/site.js"></script>
+<script src="/js/site.min.js"></script>
 </body>
 </html>

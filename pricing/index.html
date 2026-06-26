@@ -20,7 +20,7 @@
 
 <link rel="icon" href="/favicon.ico">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="stylesheet" href="/css/site.css">
+<link rel="stylesheet" href="/css/site.min.css">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -30,54 +30,7 @@
   "url": "https://generalbots.org/pricing/"
 }
 </script>
-<style>
-.pricing-grid{display:grid;grid-template-columns:1fr;gap:1.25rem}
-@media(min-width:768px){.pricing-grid{grid-template-columns:1fr 1fr 1fr}}
-.pricing-card{
-  background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-xl);
-  padding:2.5rem 2rem;position:relative;overflow:hidden;transition:var(--transition);
-  backdrop-filter:var(--glass-blur);display:flex;flex-direction:column;
-}
-.pricing-card:hover{border-color:var(--border-hover);box-shadow:var(--shadow-lg);transform:translateY(-4px)}
-.pricing-card.featured{border-color:var(--accent)}
-.pricing-card.featured::before{
-  content:'';position:absolute;top:0;left:0;right:0;height:3px;
-  background:var(--accent-gradient);
-}
-.pricing-card .price-badge{
-  position:absolute;top:1.25rem;right:1.25rem;font-size:.625rem;font-weight:700;
-  text-transform:uppercase;letter-spacing:.08em;padding:.25rem .75rem;
-  background:var(--accent);color:#fff;border-radius:var(--radius-sm);
-}
-.pricing-card .price-tier{font-size:.6875rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--accent-light);margin-bottom:.75rem}
-.pricing-card .price-name{font-family:var(--font-display);font-size:1.5rem;font-weight:900;margin-bottom:.5rem}
-.pricing-card .price-value{font-family:var(--font-display);font-size:2.75rem;font-weight:900;margin-bottom:.25rem;line-height:1}
-.pricing-card .price-value span{font-size:.875rem;font-weight:500;color:var(--fg-muted)}
-.pricing-card .price-desc{font-size:.875rem;color:var(--fg-muted);margin-bottom:1.75rem;line-height:1.6}
-.pricing-card .price-features{list-style:none;padding:0;margin-bottom:2rem;flex:1}
-.pricing-card .price-features li{display:flex;align-items:center;gap:.5rem;padding:.375rem 0;font-size:.8125rem;color:var(--fg-secondary)}
-.pricing-card .price-features li svg{width:1rem;height:1rem;color:var(--accent-light);flex-shrink:0}
-.pricing-card .price-cta{margin-top:auto}
 
-.partner-card{
-  background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-xl);
-  padding:2rem;transition:var(--transition);backdrop-filter:var(--glass-blur);
-}
-.partner-card:hover{border-color:var(--border-hover);box-shadow:var(--shadow)}
-.partner-icon{
-  width:3.5rem;height:3.5rem;background:var(--accent-soft);border:1px solid var(--accent-soft);
-  border-radius:var(--radius-lg);display:flex;align-items:center;justify-content:center;
-  color:var(--accent-light);
-}
-.partner-icon svg{width:1.5rem;height:1.5rem}
-.partner-meta{font-size:.6875rem;color:var(--fg-muted);margin-top:.125rem}
-.partner-link{
-  font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;
-  color:var(--accent-light);display:inline-flex;align-items:center;gap:.375rem;
-  transition:var(--transition);
-}
-.partner-link:hover{color:var(--accent);gap:.5rem}
-</style>
 
 <script type="application/ld+json">{
   "@context": "https://schema.org",
@@ -101,8 +54,51 @@
     <link rel="alternate" hreflang="de" href="https://generalbots.org/de/pricing/" />
     <link rel="alternate" hreflang="ja" href="https://generalbots.org/ja/pricing/" />
     <link rel="alternate" hreflang="zh-cn" href="https://generalbots.org/zh-cn/pricing/" />
-  </head>
+  
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is General Bots Managed Hosting?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "General Bots Managed Hosting is a fully managed AI bot hosting service that includes the General Bots platform pre-installed and configured. Plans start at $2.40/month for the Personal plan, which covers up to 3 bots and 500 messages/day. No credit card required to start."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does the free tier work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The General Bots Personal plan includes a free tier with up to 3 bots and 500 messages per day, making it ideal for personal projects and small-scale testing. No credit card is required to get started."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I upgrade or downgrade my plan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, you can upgrade or downgrade your plan at any time. When upgrading, you get immediate access to higher limits. When downgrading, changes take effect at the next billing cycle."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What payment methods do you accept?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We accept major credit cards (Visa, Mastercard, American Express) and PayPal. All payments are processed securely."
+      }
+    }
+  ]
+}
+</script>
+</head>
 <body>
+<a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:0;z-index:9999;padding:0.5rem 1rem;background:#000;color:#fff;font-size:0.875rem">Skip to content</a>
+
 <div hx-get="/partials/header.html" hx-swap="innerHTML" hx-trigger="load"></div>
 <main style="padding-top:4rem">
 
@@ -321,6 +317,6 @@
 </main>
 <div hx-get="/partials/footer.html" hx-swap="innerHTML" hx-trigger="load"></div>
 <script src="https://unpkg.com/htmx.org@2.0.10"></script>
-<script src="/js/site.js"></script>
+<script src="/js/site.min.js"></script>
 </body>
 </html>

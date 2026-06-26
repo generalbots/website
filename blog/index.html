@@ -19,7 +19,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="/favicon.ico">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="stylesheet" href="/css/site.css">
+<link rel="stylesheet" href="/css/site.min.css">
 
 <script type="application/ld+json">{
   "@context": "https://schema.org",
@@ -41,8 +41,13 @@
     <link rel="alternate" hreflang="ja" href="https://generalbots.org/ja/blog/" />
     <link rel="alternate" hreflang="zh-cn" href="https://generalbots.org/zh-cn/blog/" />
       <link rel="alternate" type="application/rss+xml" title="General Bots Blog" href="/feed.xml" />
-  </head>
+  
+<style>.pagination-btn.active{background:var(--primary,#000)!important;color:#fff!important;border-color:var(--primary,#000)!important}.pagination-btn:hover{background:var(--secondary,#f0f0f0)}</style>
+  <meta http-equiv="last-modified" content="2026-06-26">
+</head>
 <body>
+<a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:0;z-index:9999;padding:0.5rem 1rem;background:#000;color:#fff;font-size:0.875rem">Skip to content</a>
+
 <div hx-get="/partials/header.html" hx-swap="innerHTML" hx-trigger="load"></div>
 <main style="padding-top:4rem">
 <section class="page-section bg-gray-50 vitral-bg">
@@ -175,6 +180,43 @@
 </main>
 <div hx-get="/partials/footer.html" hx-swap="innerHTML" hx-trigger="load"></div>
 <script src="https://unpkg.com/htmx.org@2.0.10"></script>
-<script src="/js/site.js"></script>
+<script src="/js/site.min.js"></script>
+<script>
+// Blog pagination — shows 10 posts per page
+;(function(){
+  var blogGrid = document.querySelector('.grid-2');
+  if(!blogGrid) return;
+  var cards = blogGrid.querySelectorAll(':scope > a, :scope > .blog-card');
+  if(cards.length <= 10) return;
+  var perPage = 10;
+  var totalPages = Math.ceil(cards.length / perPage);
+  
+  function showPage(page) {
+    for(var i = 0; i < cards.length; i++) {
+      cards[i].style.display = (i >= (page-1)*perPage && i < page*perPage) ? '' : 'none';
+    }
+    var btns = document.querySelectorAll('.pagination-btn');
+    for(var j = 0; j < btns.length; j++) {
+      btns[j].classList.toggle('active', parseInt(btns[j].dataset.page) === page);
+    }
+  }
+  
+  var nav = document.createElement('div');
+  nav.className = 'pagination-nav';
+  nav.style.cssText = 'display:flex;justify-content:center;gap:0.5rem;margin-top:3rem;flex-wrap:wrap';
+  for(var p = 1; p <= totalPages; p++) {
+    var btn = document.createElement('button');
+    btn.className = 'pagination-btn';
+    btn.textContent = p;
+    btn.dataset.page = p;
+    btn.style.cssText = 'padding:0.5rem 1rem;border:1px solid var(--border,rgba(0,0,0,0.1));background:var(--card,#fff);border-radius:var(--radius,0.5rem);cursor:pointer;font-size:0.875rem;transition:all .2s';
+    btn.addEventListener('click', function(){ showPage(parseInt(this.dataset.page)); });
+    nav.appendChild(btn);
+  }
+  blogGrid.parentNode.appendChild(nav);
+  showPage(1);
+})();
+
+</script>
 </body>
 </html>
