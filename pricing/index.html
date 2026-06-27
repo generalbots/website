@@ -102,172 +102,104 @@
 <div hx-get="/partials/header.html" hx-swap="innerHTML" hx-trigger="load"></div>
 <main style="padding-top:4rem">
 
-<!-- Hero -->
-<section class="section section-alt" style="padding:6rem 0 4rem">
+<!-- Partners Grid -->
+<section id="partners" class="section reveal" style="padding:3rem 0 4rem">
 <div class="container">
-<div class="section-header centered reveal">
-<span class="overline">
-  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M12 18h.01M8 21h8"/></svg>
-  Hosting &amp; Pricing
-</span>
-<h1 style="font-size:clamp(2rem,5vw,3.25rem);font-weight:900;letter-spacing:-.04em;margin-bottom:.75rem" data-i18n="pricing.hero">Enterprise Reliability. Open-Source Freedom.</h1>
-<p style="font-size:1.0625rem" data-i18n="pricing.hero_sub">General Bots is Open Source. You can self-host for free, or choose a certified partner for a fully managed, production-grade experience with 99.9% uptime SLAs.</p>
+<div class="section-header centered" style="margin-bottom:2.5rem">
+<span class="overline">Hosting Partners</span>
+<h2 style="font-size:clamp(1.5rem,3vw,2rem)">Choose Your Provider</h2>
 </div>
-</div>
-</section>
-
-<!-- Pricing Cards -->
-<section class="section reveal">
-<div class="container">
-<div class="pricing-grid">
-
-<!-- Self-Hosted -->
-<div class="pricing-card">
-<div class="price-tier">Starter</div>
-<div class="price-name" data-i18n="pricing.self_hosted">Self-Hosted</div>
-<div class="price-value">$0<span data-i18n="pricing.forever"> /forever</span></div>
-<p class="price-desc" data-i18n="pricing.for_developers_and_teams_who_want_full_control_over_their_in">For developers and teams who want full control over their infrastructure.</p>
-<ul class="price-features">
-<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>MIT Licensed Core</li>
-<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>Full Data Privacy</li>
-<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>Community Support</li>
-<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>Docker/K8s Templates</li>
-<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>All 75+ Applications</li>
-<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>Unlimited Users</li>
-</ul>
-<div class="price-cta">
-<a href="https://github.com/generalbots" class="btn btn-outline w-full" data-i18n="pricing.github_catalog">
-  <svg viewBox="0 0 16 16" fill="currentColor" width="16" height="16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>
-  GitHub Catalog
-</a>
-</div>
-</div>
-
-<!-- Managed Host (Featured) -->
-<div class="pricing-card featured">
-<div class="price-badge" data-i18n="pricing.recommended">Recommended</div>
-<div class="price-tier">Professional</div>
-<div class="price-name" data-i18n="pricing.managed_host">Managed Host</div>
-<div class="price-value">Partner<span data-i18n="pricing.pricing"> /Pricing</span></div>
-<p class="price-desc" data-i18n="pricing.certified_providers_offering_turn_key_managed_environments_a">Certified providers offering turn-key managed environments and support.</p>
-<ul class="price-features">
-<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>99.9% Uptime SLA</li>
-<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>24/7 Expert Support</li>
-<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>Managed Backups</li>
-<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>White-label Options</li>
-<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>Priority Updates</li>
-<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>Onboarding &amp; Training</li>
-</ul>
-<div class="price-cta">
-<a href="#partners" class="btn btn-primary w-full" data-i18n="pricing.view_partners">View Partners</a>
-</div>
-</div>
-
-<!-- Enterprise -->
-<div class="pricing-card">
-<div class="price-tier">Enterprise</div>
-<div class="price-name" data-i18n="pricing.enterprise">Enterprise</div>
-<div class="price-value">Custom<span data-i18n="pricing.quote"> /Quote</span></div>
-<p class="price-desc" data-i18n="pricing.for_large_scale_deployments_requiring_dedicated_engineering">For large-scale deployments requiring dedicated engineering and auditing.</p>
-<ul class="price-features">
-<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>Air-Gapped Install</li>
-<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>Custom LLM Tuning</li>
-<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>Dedicated Team</li>
-<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>On-Site Training</li>
-<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>Compliance Audit</li>
-<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>SLA Customization</li>
-</ul>
-<div class="price-cta">
-<a href="/contact/" class="btn btn-outline w-full" data-i18n="pricing.contact_sales">Contact Sales</a>
-</div>
-</div>
-
-</div>
-</div>
-</section>
-
-<!-- Partners -->
-<section id="partners" class="section section-alt reveal">
-<div class="container">
-<div class="section-header centered">
-<span class="overline">Partner Ecosystem</span>
-<h2 data-i18n="pricing.certified_hosting_partners">Certified Hosting Partners</h2>
-<p data-i18n="pricing.our_ecosystem_of_partners_provides_regional_expertise_and_sp">Our ecosystem of partners provides regional expertise and specialized services.</p>
-</div>
-<div class="grid-2">
-
+<div class="partners-grid">
 <div class="partner-card">
+<div class="plan-badge">Shared</div>
 <div class="flex items-center gap-6 mb-6">
 <div class="partner-icon">
-<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
-</div>
-<div>
-<h4 class="text-xl font-bold" data-i18n="pricing.pragmatismo">Pragmatismo</h4>
-<p class="partner-meta">Founding Partner &bull; Brazil</p>
-</div>
-</div>
-<p class="text-sm" style="color:var(--fg-secondary);margin-bottom:.75rem;line-height:1.6">Personal — 50GB · $3/mo &nbsp;|&nbsp; Business — 100GB · $10/mo</p>
-<p class="text-sm" style="color:var(--fg-muted);margin-bottom:1.25rem;line-height:1.4;font-size:.75rem" data-i18n="pricing.pragmatismo_starting_at">Starting at those prices without LLM.</p>
-<p class="text-sm" style="color:var(--fg-secondary);margin-bottom:1.25rem;line-height:1.6" data-i18n="pricing.full_service_implementation_and_managed_hosting_experts_in">Full-service implementation and managed hosting. Experts in the core General Bots architecture and custom RAG pipelines.</p>
-<a href="https://pragmatismo.com.br" class="partner-link">Visit Site <span>→</span></a>
-</div>
-
-<div class="partner-card">
-<div class="flex items-center gap-6 mb-6">
-<div class="partner-icon">
-<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
-</div>
-<div>
-<h4 class="text-xl font-bold" data-i18n="pricing.oerlabs">OERLabs</h4>
-<p class="partner-meta" data-i18n="pricing.global_cloud_partner">Global Cloud Partner</p>
-</div>
-</div>
-<p class="text-sm" style="color:var(--fg-secondary);margin-bottom:1.25rem;line-height:1.6" data-i18n="pricing.specializing_in_high_availability_cloud_deployments_on_aws">Specializing in high-availability cloud deployments on AWS, Azure, and GCP. Scalable infrastructure for global AI fleets.</p>
-<a href="https://oerlabs.com.br" class="partner-link">Visit Site <span>→</span></a>
-</div>
-
-<div class="partner-card">
-<div class="flex items-center gap-6 mb-6">
-<div class="partner-icon">
-<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+<img src="/img/partners/mapagency.png" alt="Map Agency">
 </div>
 <div>
 <h4 class="text-xl font-bold" data-i18n="pricing.map_agency">Map Agency</h4>
-<p class="partner-meta">CX Specialists &bull; Brazil</p>
+<p class="partner-meta">Music Art Productions &bull; Rio de Janeiro, BR</p>
 </div>
 </div>
-<p class="text-sm" style="color:var(--fg-secondary);margin-bottom:1.25rem;line-height:1.6" data-i18n="pricing.focus_on_conversational_experience_and_crm_integration_lead">Focus on conversational experience and CRM integration. Leading partner for WhatsApp Business API deployments.</p>
+<div class="partner-desc">
+<p class="text-sm" style="color:var(--fg-secondary);margin-bottom:1.25rem;line-height:1.6">Agência de Branding — autênticas ativações orgânicas, sensoriais e culturais. Especialistas em Lei Rouanet, posicionamento de marca e economia criativa.</p>
+</div>
+<a href="https://login.mapagency.com.br/signup" class="btn btn-primary btn-lg w-full" style="margin-bottom:.75rem;text-align:center;padding:.875rem 1.5rem;font-size:1rem">Sign Up</a>
 <a href="https://mapagency.com.br" class="partner-link">Visit Site <span>→</span></a>
 </div>
 
 <div class="partner-card">
+<div class="plan-badge">Alpha</div>
 <div class="flex items-center gap-6 mb-6">
 <div class="partner-icon">
-<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
+<img src="/img/partners/oerlabs.svg" alt="OERLabs">
 </div>
 <div>
-<h4 class="text-xl font-bold" data-i18n="pricing.sentient">Sentient</h4>
-<p class="partner-meta">Advanced Research &bull; US/Global</p>
+<h4 class="text-xl font-bold" data-i18n="pricing.oerlabs">OERLabs</h4>
+<p class="partner-meta">General Bots Hosting &bull; Rio de Janeiro, BR</p>
 </div>
 </div>
-<p class="text-sm" style="color:var(--fg-secondary);margin-bottom:1.25rem;line-height:1.6">Providers of the <strong style="color:var(--fg)" data-i18n="pricing.mantis">Mantis</strong> infrastructure. Optimized for large-scale enterprise AI and private cloud hardening.</p>
-<a href="https://mantis.farm" class="partner-link" data-i18n="pricing.official_provider">Official Provider <span>→</span></a>
+<div class="partner-desc">
+<p class="text-sm" style="color:var(--fg-secondary);margin-bottom:1.25rem;line-height:1.6">Bots inteligentes para educação, negócios e automação. GPT tools, integração Microsoft 365, Virtual Assistants e mais — powered by General Bots.</p>
+</div>
+<a href="https://login.oerlabs.com.br/signup" class="btn btn-primary btn-lg w-full" style="margin-bottom:.75rem;text-align:center;padding:.875rem 1.5rem;font-size:1rem">Sign Up</a>
+<a href="https://oerlabs.com.br" class="partner-link">Visit Site <span>→</span></a>
 </div>
 
 <div class="partner-card">
+<div class="plan-badge">Free · Shared · Private</div>
+<div class="flex items-center gap-6 mb-6">
+<div class="partner-icon">
+<img src="/img/partners/pragmatismo-logo.svg" alt="Pragmatismo">
+</div>
+<div>
+<h4 class="text-xl font-bold" data-i18n="pricing.pragmatismo">Pragmatismo</h4>
+<p class="partner-meta">Founding Partner &bull; Rio de Janeiro, BR</p>
+</div>
+</div>
+<div class="partner-desc">
+<p class="text-sm" style="color:var(--fg-secondary);margin-bottom:1.25rem;line-height:1.6">Free — 1 bot, 10MB &nbsp;|&nbsp; Shared — $3.99/mo, 5 bots, 500MB &nbsp;|&nbsp; Private Server — your infra, unlimited</p>
+</div>
+<a href="https://login.pragmatismo.com.br/signup" class="btn btn-primary btn-lg w-full" style="margin-bottom:.75rem;text-align:center;padding:.875rem 1.5rem;font-size:1rem">Sign Up</a>
+<a href="https://pragmatismo.com.br" class="partner-link">Visit Site <span>→</span></a>
+</div>
+
+<div class="partner-card">
+<div class="plan-badge">Private Cloud</div>
 <div class="flex items-center gap-6 mb-6">
 <div class="partner-icon">
 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
 </div>
 <div>
 <h4 class="text-xl font-bold">Dário Executive Sales</h4>
-<p class="partner-meta">Executive Head of Technology Solutions &bull; São Paulo, BR</p>
+<p class="partner-meta">Technology Solutions &bull; São Paulo, BR</p>
 </div>
 </div>
+<div class="partner-desc">
 <p class="text-sm" style="color:var(--fg-secondary);margin-bottom:.75rem;line-height:1.6">Outsourcing tech &bull; Squads ágeis &bull; Headhunter tech</p>
 <p class="text-sm" style="color:var(--fg-secondary);margin-bottom:.75rem;line-height:1.6">Profissionais certificados, KPI-driven, com compliance e redução de risco. Times multidisciplinares (Dev, Infra, BI) com entregas contínuas. Mapeamento de talentos críticos com aceleração de contratações.</p>
 <p class="text-sm" style="color:var(--fg-muted);margin-bottom:1.25rem;line-height:1.4;font-size:.75rem">Power Platform &bull; Copilots &amp; IA &bull; Microsoft 365 &bull; Teams &bull; Cibersegurança &bull; SharePoint</p>
+</div>
+<a href="https://login.darioexecutivesales.com/signup" class="btn btn-primary btn-lg w-full" style="margin-bottom:.75rem;text-align:center;padding:.875rem 1.5rem;font-size:1rem">Sign Up</a>
 <a href="https://darioexecutivesales.com" class="partner-link">Visitar Site <span>→</span></a>
+</div>
+
+<div class="partner-card">
+<div class="plan-badge">Private Cloud</div>
+<div class="flex items-center gap-6 mb-6">
+<div class="partner-icon">
+<img src="/img/partners/sentient.png" alt="Sentient">
+</div>
+<div>
+<h4 class="text-xl font-bold" data-i18n="pricing.sentient">Sentient</h4>
+<p class="partner-meta">Creative Agency, Publishing &amp; Academy &bull; Paraná, BR</p>
+</div>
+</div>
+<div class="partner-desc">
+<p class="text-sm" style="color:var(--fg-secondary);margin-bottom:1.25rem;line-height:1.6">Creative agency, publishing house and academy. Strategy, branding, narrative and product built with time, repertoire and symbolic responsibility.</p>
+</div>
+<a href="https://login.mantis.farm/signup" class="btn btn-primary btn-lg w-full" style="margin-bottom:.75rem;text-align:center;padding:.875rem 1.5rem;font-size:1rem">Sign Up</a>
+<a href="https://mantis.farm" class="partner-link" data-i18n="pricing.official_provider">Official Provider <span>→</span></a>
 </div>
 
 </div>
@@ -277,11 +209,11 @@
 <!-- CTA -->
 <section class="cta-section reveal">
 <div class="container" style="position:relative;z-index:1">
-<h2 data-i18n="pricing.launch_with_confidence">Launch with Confidence</h2>
-<p data-i18n="pricing.whether_you_want_to_diy_or_need_a_fully_managed_enterprise_s">Whether you want to DIY or need a fully managed enterprise solution, General Bots has the flexibility to grow with your organization.</p>
-<div class="flex flex-wrap gap-4 justify-center">
-<a href="/contact/" class="btn btn-primary btn-lg" data-i18n="pricing.get_started">Get Started</a>
-<a href="/contact/" class="btn btn-outline btn-lg" data-i18n="pricing.contact_us">Contact Us</a>
+<h2 style="font-size:clamp(1.25rem,2.5vw,1.75rem)">Start Free — No credit card required</h2>
+<p style="font-size:.9375rem">Free hosted plan includes 3 bots and 500 messages/day. Upgrade to shared or private cloud anytime.</p>
+<div class="flex flex-wrap gap-4 justify-center" style="margin-top:1.5rem">
+<a href="https://login.pragmatismo.com.br/signup" class="btn btn-primary btn-lg">Sign Up — Free Hosted Plan</a>
+<a href="https://github.com/generalbots" class="btn btn-outline btn-lg">Self-Hosted (Open Source)</a>
 </div>
 </div>
 </section>

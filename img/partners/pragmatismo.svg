@@ -1,0 +1,26 @@
+<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="dg1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#0891b2"/>
+    </linearGradient>
+  </defs>
+  <g>
+    <path d="M14 34V20a4 4 0 014-4h12a4 4 0 014 4v14" stroke="url(#dg1)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <path d="M10 34a2 2 0 012-2h24a2 2 0 012 2v4a2 2 0 01-2 2H12a2 2 0 01-2-2v-4z" stroke="url(#dg1)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <path d="M20 28h8" stroke="url(#dg1)" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M22 24h4" stroke="url(#dg1)" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="24" cy="14" r="3" fill="url(#dg1)" opacity="0.8">
+      <animate attributeName="r" values="3;3.5;3" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.8;1;0.8" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="18" cy="10" r="2" fill="url(#dg1)" opacity="0.6">
+      <animate attributeName="r" values="2;2.5;2" dur="2.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.6;0.9;0.6" dur="2.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="30" cy="10" r="2" fill="url(#dg1)" opacity="0.6">
+      <animate attributeName="r" values="2;2.5;2" dur="2.8s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.6;0.9;0.6" dur="2.8s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+</svg>
