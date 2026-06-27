@@ -839,7 +839,7 @@
   "hero.badge": "Código Aberto — 40+ Aplicativos",
   "hero.explore": "Explorar Todos os Apps",
   "hero.signup": "Sign Up",
-  "hero.free_plan_7_day_trial_no_cc": "Free Hosted Plan — 3 bots, 500 msg/day · No credit card required", "Explorar Todos os Apps",
+  "hero.free_plan_7_day_trial_no_cc": "Free Hosted Plan — 3 bots, 500 msg/day · No credit card required",
   "hero.github": "Ver no GitHub",
   "hero.sub": "Chat, CRM, E-mail, Drive, Calendário, Vídeo, IA de Busca, Orquestração de LLM, Automação Web, Geração de Conteúdo, Base de Conhecimento, Documentos, Planilhas, Projetos — tudo em uma plataforma aberta. Auto-hospedado, privado e construído para escalar da produtividade pessoal à implantação empresarial de IA.",
   "hero.title.line1": "Seu Desktop,",
@@ -2605,5 +2605,6 @@
   "investors.esg.cost.label": "Menor custo de venda na empresa",
   "investors.esg.cost.desc": "Zero despesas gerais de vendas. ",
   "investors.esg.sovereignty.label": "A soberania é o movimento de poder definitivo",
-  "investors.esg.sovereignty.desc": "Vendemos a posse de sua pilha – a vantagem definitiva contra a Big Tech. "
+  "investors.esg.sovereignty.desc": "Vendemos a posse de sua pilha – a vantagem definitiva contra a Big Tech. ",
+  "hero.chat.greeting": "Hey! 👋 I'm your General Bots AI assistant. I can help you explore our multi-agent platform, deploy bots, or answer questions about our sovereign AI stack. What would you like to know?"
 }

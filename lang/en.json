@@ -2605,5 +2605,6 @@
   "investors.esg.cost.label": "Lowest Cost of Sale in Enterprise",
   "investors.esg.cost.desc": "Zero sales overhead. Zero collection cost. Zero churn prevention spend. Our users want to pay because the value is undeniable. Voluntary contributions replace invoices — no dunning, no escalations, no AR team. Name one SaaS company that can say that.",
   "investors.esg.sovereignty.label": "Sovereignty Is the Ultimate Power Move",
-  "investors.esg.sovereignty.desc": "We sell owning your stack — the ultimate leverage against Big Tech. Your data never leaves your servers. Your roadmap is yours. No vendor can switch off your infrastructure. That is not weakness. That is the strongest negotiation position a company can have."
+  "investors.esg.sovereignty.desc": "We sell owning your stack — the ultimate leverage against Big Tech. Your data never leaves your servers. Your roadmap is yours. No vendor can switch off your infrastructure. That is not weakness. That is the strongest negotiation position a company can have.",
+  "hero.chat.greeting": "Hey! 👋 I'm your General Bots AI assistant. I can help you explore our multi-agent platform, deploy bots, or answer questions about our sovereign AI stack. What would you like to know?"
 }

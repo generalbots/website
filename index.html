@@ -80,14 +80,27 @@
     <a href="https://github.com/generalbots" class="btn btn-outline btn-lg">Self-Hosted (Open Source)</a>
     </div>
     <p class="hero-trial-text" data-i18n="hero.free_plan_7_day_trial_no_cc">Free Hosted Plan — 3 bots, 500 msg/day · No credit card required</p>
-    <div class="hero-chat-input-wrap">
-      <form id="hero-chat-form" class="hero-chat-form" action="https://chat.generalbots.org/" method="GET">
-        <div class="hero-chat-input-inner">
-          <svg class="hero-chat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-          <input type="text" name="q" id="hero-chat-input" class="hero-chat-input" placeholder="Ask anything to start a conversation..." autocomplete="off"/>
-          <button type="submit" class="hero-chat-send"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></button>
+    <div class="hero-chat-glass-wrap">
+      <div class="hero-chat-glass">
+        <div class="hero-chat-messages">
+          <div class="hero-chat-message assistant">
+            <div class="hero-chat-avatar">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M9 9h6M9 13h4M9 17h2"/><circle cx="17" cy="9" r="1.5" fill="currentColor" opacity="0.4"/></svg>
+            </div>
+            <div class="hero-chat-bubble">
+              <p data-i18n="hero.chat.greeting">Hey! 👋 I'm your General Bots AI assistant. I can help you explore our multi-agent platform, deploy bots, or answer questions about our sovereign AI stack. What would you like to know?</p>
+              <span class="hero-chat-time">just now</span>
+            </div>
+          </div>
         </div>
-      </form>
+        <form id="hero-chat-form" class="hero-chat-form" action="https://chat.generalbots.org/" method="GET">
+          <div class="hero-chat-input-inner">
+            <svg class="hero-chat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            <input type="text" name="q" id="hero-chat-input" class="hero-chat-input" placeholder="Ask anything to start a conversation..." autocomplete="off"/>
+            <button type="submit" class="hero-chat-send"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></button>
+          </div>
+        </form>
+      </div>
     </div>
   </div>
   <div class="hero-visual" aria-hidden="true">

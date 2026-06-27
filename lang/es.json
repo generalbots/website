@@ -837,9 +837,9 @@
   "general-bots.vector-retrieval.what_you_can_do": "Qué puedes hacer",
   "general.learn_more": "Saber Más →",
   "hero.badge": "Código Abierto — 40+ Aplicaciones",
-  "hero.explore": "Explorar Todos os Apps",
+  "hero.explore": "Explorar Todas las Apps",
   "hero.signup": "Sign Up",
-  "hero.free_plan_7_day_trial_no_cc": "Free Hosted Plan — 3 bots, 500 msg/day · No credit card required", "Explorar Todas las Apps",
+  "hero.free_plan_7_day_trial_no_cc": "Free Hosted Plan — 3 bots, 500 msg/day · No credit card required",
   "hero.github": "Ver en GitHub",
   "hero.sub": "Chat, CRM, Correo, Drive, Calendario, Video, Búsqueda con IA, Orquestación de LLM, Automatización Web, Generación de Contenido, Base de Conocimiento, Documentos, Hojas de Cálculo, Proyectos — todo en una plataforma abierta. Autohospedado, privado y construido para escalar desde la productividad personal hasta el despliegue empresarial de IA.",
   "hero.title.line1": "Tu Escritorio,",
@@ -2605,5 +2605,6 @@
   "investors.esg.cost.label": "El costo de venta más bajo en la empresa",
   "investors.esg.cost.desc": "Cero gastos generales de ventas. ",
   "investors.esg.sovereignty.label": "La soberanía es el último movimiento de poder",
-  "investors.esg.sovereignty.desc": "Vendemos ser dueños de su pila: la máxima ventaja contra las grandes tecnologías. "
+  "investors.esg.sovereignty.desc": "Vendemos ser dueños de su pila: la máxima ventaja contra las grandes tecnologías. ",
+  "hero.chat.greeting": "Hey! 👋 I'm your General Bots AI assistant. I can help you explore our multi-agent platform, deploy bots, or answer questions about our sovereign AI stack. What would you like to know?"
 }

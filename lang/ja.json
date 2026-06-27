@@ -837,9 +837,9 @@
   "general-bots.vector-retrieval.what_you_can_do": "あなたにできること",
   "general.learn_more": "もっと詳しく →",
   "hero.badge": "オープンソース — 75以上のアプリケーション",
-  "hero.explore": "Explorar Todos os Apps",
+  "hero.explore": "すべてのアプリを探す",
   "hero.signup": "Sign Up",
-  "hero.free_plan_7_day_trial_no_cc": "Free Hosted Plan — 3 bots, 500 msg/day · No credit card required", "すべてのアプリを探索",
+  "hero.free_plan_7_day_trial_no_cc": "Free Hosted Plan — 3 bots, 500 msg/day · No credit card required",
   "hero.github": "GitHubで見る",
   "hero.sub": "チャット、CRM、メール、ドライブ、カレンダー、ビデオ、AI検索、LLMオーケストレーション、Web自動化、コンテンツ生成、ナレッジベース、ドキュメント、スプレッドシート、プロジェクト — すべて一つのオープンプラットフォームで。セルフホスト、プライベート、個人の生産性からエンタープライズ規模のAI展開まで拡張できるように構築されています。",
   "hero.title.line1": "あなたのデスクトップ、",
@@ -2524,5 +2524,6 @@
   "investors.esg.cost.label": "エンタープライズでの最低の販売コスト",
   "investors.esg.cost.desc": "販売経費ゼロ。",
   "investors.esg.sovereignty.label": "主権は究極の権力の動きである",
-  "investors.esg.sovereignty.desc": "私たちはあなたのスタックを所有することを売りにしています - ビッグテックに対する究極のレバレッジです。"
+  "investors.esg.sovereignty.desc": "私たちはあなたのスタックを所有することを売りにしています - ビッグテックに対する究極のレバレッジです。",
+  "hero.chat.greeting": "Hey! 👋 I'm your General Bots AI assistant. I can help you explore our multi-agent platform, deploy bots, or answer questions about our sovereign AI stack. What would you like to know?"
 }

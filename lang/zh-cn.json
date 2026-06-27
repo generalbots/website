@@ -837,9 +837,9 @@
   "general-bots.vector-retrieval.what_you_can_do": "你能做什么",
   "general.learn_more": "了解更多 →",
   "hero.badge": "开源 — 40+ 个应用",
-  "hero.explore": "Explorar Todos os Apps",
+  "hero.explore": "探索所有应用",
   "hero.signup": "Sign Up",
-  "hero.free_plan_7_day_trial_no_cc": "Free Hosted Plan — 3 bots, 500 msg/day · No credit card required", "探索所有应用",
+  "hero.free_plan_7_day_trial_no_cc": "Free Hosted Plan — 3 bots, 500 msg/day · No credit card required",
   "hero.github": "在GitHub上查看",
   "hero.sub": "聊天、CRM、邮件、云盘、日历、视频、AI搜索、LLM编排、网页自动化、内容生成、知识库、文档、电子表格、项目管理 — 全部集成于一个开放平台。自托管、私密安全，从个人生产力到企业级AI部署均可扩展。",
   "hero.title.line1": "你的桌面，",
@@ -2524,5 +2524,6 @@
   "investors.esg.cost.label": "企业最低销售成本",
   "investors.esg.cost.desc": "零销售费用。",
   "investors.esg.sovereignty.label": "主权是最终的权力举动",
-  "investors.esg.sovereignty.desc": "我们出售拥有您的堆栈——这是对抗大型科技公司的终极杠杆。"
+  "investors.esg.sovereignty.desc": "我们出售拥有您的堆栈——这是对抗大型科技公司的终极杠杆。",
+  "hero.chat.greeting": "Hey! 👋 I'm your General Bots AI assistant. I can help you explore our multi-agent platform, deploy bots, or answer questions about our sovereign AI stack. What would you like to know?"
 }
