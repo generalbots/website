@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>LLM Orchestration — DeepSeek, Qwen, GLM, Kimi &amp; More | General Bots</title>
-<meta name="description" content="High-performance Rust-written LLM orchestrator supporting DeepSeek V3/R1, Qwen 2.5, GLM-4, Kimi, MiniMax, Yi, Step, Doubao — open-source Chinese and global models. Self-hosted, private, zero vendor lock-in.">
+<meta name="description" content="High-performance Rust-written LLM orchestrator supporting DeepSeek V4-Pro, Qwen 3.7, GLM-5.2, Kimi K2.7, MiniMax M3 — open-source Chinese and global models. Self-hosted, private, zero vendor lock-in.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://generalbots.org/general-bots/llm/">
 <link rel="icon" href="/favicon.ico">
@@ -32,7 +32,7 @@
 <div class="reveal">
 <div class="badge mb-4" style="margin-left:auto;margin-right:auto;width:fit-content" data-i18n="general-bots.llm.high_performance_llm_orchestrator">High-Performance LLM Orchestrator</div>
 <h1 class="text-4xl font-bold tracking-tighter mb-4" style="font-size:clamp(2rem,5vw,3.5rem)"><span data-i18n="general-bots.llm.hero.line1">The LLM Orchestrator.</span><br><span data-i18n="general-bots.llm.hero.line2">Built for Speed,</span><br><span data-i18n="general-bots.llm.hero.line3">Built for Choice.</span></h1>
-<p class="text-lg text-muted max-w-2xl mx-auto leading-relaxed mb-8" data-i18n="general-bots.llm.hero_sub">A high-performance, Rust-written LLM orchestration engine connecting to the world's best open models — DeepSeek V3/V4/R1, Qwen 2.5, GLM-4, Kimi, MiniMax, Yi, Step, and Doubao. Dynamic routing, semantic caching, zero vendor lock-in, complete data privacy.</p>
+<p class="text-lg text-muted max-w-2xl mx-auto leading-relaxed mb-8" data-i18n="general-bots.llm.hero_sub">A high-performance, Rust-written LLM orchestration engine connecting to the world's best open models — DeepSeek V4-Pro, Qwen 3.7, GLM-5.2, Kimi K2.7, MiniMax M3, Yi, Step, and Doubao. Dynamic routing, semantic caching, zero vendor lock-in, complete data privacy.</p>
 <div class="flex flex-wrap gap-4 justify-center">
 <a href="/pricing/" class="btn btn-primary btn-lg" data-i18n="general-bots.llm.get_started">Sign Up</a>
 <a href="https://github.com/generalbots" class="btn btn-outline btn-lg" data-i18n="general-bots.llm.view_on_github_" data-i18n="general-bots.llm.view_on_github">View on GitHub</a>
@@ -50,28 +50,28 @@
 <div class="grid-3" style="gap:1.5rem">
 <div class="glass-card p-6 card-hover">
 <div class="icon-box mb-4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
-      <h3 class="text-xl font-bold mb-2" data-i18n="general-bots.llm.glm_4_zhipu_ai">GLM-4 — Zhipu AI <span class="badge" style="background:#E8F0FE;color:#1a73e8;font-size:.625rem;padding:.125rem .375rem">0.2</span></h3>
-<p class="text-sm text-muted" data-i18n="general-bots.llm.open_source_bilingual_model_chinese_english_with_strong_re">Open-source bilingual model (Chinese/English) with strong reasoning capabilities. GLM-4-9B rivals GPT-3.5 on many benchmarks. Free to self-host, no per-token costs. Ideal for organizations that need Chinese language support or want a capable open-weight model without recurring fees.</p>
+<h3 class="text-xl font-bold mb-2" data-i18n="general-bots.llm.glm_5_2_zhipu_ai">GLM-5.2 — Zhipu AI</h3>
+<p class="text-sm text-muted" data-i18n="general-bots.llm.glm5_2_description">Zhipu AI's latest flagship — 745B MoE with 1M-token context, trained entirely on Huawei Ascend chips. Scores 94.8% on GSM8K, 88.7% MMLU, and ranks among the top open-source models on SWE-Bench Pro. Fully open weights, MIT license, self-hostable.</p>
 </div>
 <div class="glass-card p-6 card-hover">
 <div class="icon-box mb-4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
-<h3 class="text-xl font-bold mb-2" data-i18n="general-bots.llm.qwen_2_5_alibaba_cloud">Qwen 2.5 — Alibaba Cloud</h3>
-<p class="text-sm text-muted" data-i18n="general-bots.llm.one_of_the_strongest_open_weight_model_families_available_q">One of the strongest open-weight model families available. Qwen 2.5 72B competes with GPT-4 on multiple benchmarks. Available in sizes from 0.5B to 110B. The 32B and 72B variants run efficiently on consumer-grade GPUs. No API costs, no usage limits.</p>
-</div>
-    <div class="glass-card p-6 card-hover">
-      <div class="icon-box mb-4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
-      <h3 class="text-xl font-bold mb-2" data-i18n="general-bots.llm.deepseek_v3_r1">DeepSeek V3 / V4 / R1 <span class="badge" style="background:#F3E8FD;color:#9334e6;font-size:.625rem;padding:.125rem .375rem">V4</span></h3>
-      <p class="text-sm text-muted" data-i18n="general-bots.llm.the_breakout_model_of_2025_deepseek_v3_matches_gpt_4_on_rea">The breakout model family of 2025. DeepSeek V3 matches GPT-4 on reasoning and coding at roughly 5% of the API cost. DeepSeek V4 pushes further with improved reasoning and efficiency. DeepSeek R1 introduces chain-of-thought reasoning that rivals o1. Fully open weights — run on your own hardware, no per-token fees, complete data privacy.</p>
+<h3 class="text-xl font-bold mb-2" data-i18n="general-bots.llm.qwen_3_7_alibaba_cloud">Qwen 3.7 — Alibaba Cloud</h3>
+<p class="text-sm text-muted" data-i18n="general-bots.llm.qwen3_7_description">Alibaba's strongest model family — Qwen3.7-Max scores 56.6 on Intelligence Index v4.0, #1 among Chinese models. 1M-token context, 50.8% Terminal-Bench Hard, lowest hallucination rate at 22.9%. Available via API and open weights under Apache 2.0.</p>
 </div>
 <div class="glass-card p-6 card-hover">
 <div class="icon-box mb-4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
-      <h3 class="text-xl font-bold mb-2" data-i18n="general-bots.llm.kimi_moonshot_ai">Kimi — Moonshot AI <span class="badge" style="background:#FEF3E8;color:#e67e22;font-size:.625rem;padding:.125rem .375rem">2.7</span></h3>
-<p class="text-sm text-muted" data-i18n="general-bots.llm.kimi_excels_at_long_context_processing_with_a_2m_token_wind">Kimi excels at long-context processing with a 2M+ token window — read entire codebases, book-length documents, or months of conversation history in a single pass. Strong Chinese and English support. Available via API at competitive pricing.</p>
+<h3 class="text-xl font-bold mb-2" data-i18n="general-bots.llm.deepseek_v4_pro">DeepSeek V4-Pro</h3>
+<p class="text-sm text-muted" data-i18n="general-bots.llm.deepseek_v4_description">The next-generation open-weight MoE flagship — 1.6T total params, 49B active, 1M-token context. Scores 80.6% on SWE-Bench Verified (highest open-weights entry). MIT license, self-hostable. V4-Flash variant offers 284B params at $0.14/M input tokens for cost-sensitive workloads.</p>
 </div>
 <div class="glass-card p-6 card-hover">
 <div class="icon-box mb-4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
-      <h3 class="text-xl font-bold mb-2" data-i18n="general-bots.llm.minimax_hailuo_ai">MiniMax — Hailuo AI <span class="badge" style="background:#E6F4EA;color:#1e8e3e;font-size:.625rem;padding:.125rem .375rem">3.0</span></h3>
-<p class="text-sm text-muted" data-i18n="general-bots.llm.minimax_offers_competitive_performance_on_par_with_gpt_3_5_a">MiniMax offers competitive performance on par with GPT-3.5 at significantly lower cost. Their Hailuo model family excels at text generation, code completion, and structured output. Strong option for cost-sensitive deployments that don't need frontier-model capabilities.</p>
+<h3 class="text-xl font-bold mb-2" data-i18n="general-bots.llm.kimi_k2_7_code">Kimi K2.7 Code — Moonshot AI</h3>
+<p class="text-sm text-muted" data-i18n="general-bots.llm.kimi_k2_7_description">Moonshot AI's latest coding-focused 1T-MoE model. Ties GPT-5.5 on SWE-Bench Pro at 5-6x lower cost. Agent Swarm primitive spawns up to 300 sub-agents across 4,000 coordinated steps. 262K-token context with auto-compression. Open weights under MIT.</p>
+</div>
+<div class="glass-card p-6 card-hover">
+<div class="icon-box mb-4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
+<h3 class="text-xl font-bold mb-2" data-i18n="general-bots.llm.minimax_m3">MiniMax M3</h3>
+<p class="text-sm text-muted" data-i18n="general-bots.llm.minimax_m3_description">Shanghai-based MiniMax's frontier open-weight model — first to combine 1M-token context, native multimodality (image + video), and 59.0% SWE-Bench Pro (surpassing GPT-5.5). MiniMax Sparse Attention delivers 9x faster prefill. Open weights available.</p>
 </div>
 <div class="glass-card p-6 card-hover">
 <div class="icon-box mb-4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
@@ -91,23 +91,12 @@
 <div class="max-w-4xl mx-auto">
 <table class="comparison-table">
 <tr><th data-i18n="general-bots.llm.model">Model</th><th data-i18n="general-bots.llm.cost_per_1m_tokens_input">Cost per 1M tokens (input)</th><th data-i18n="general-bots.llm.self_hostable">Self-Hostable</th><th data-i18n="general-bots.llm.data_privacy">Data Privacy</th></tr>
-<tr><td>DeepSeek V3</td><td>$0.27</td><td>Yes</td><td>Yes</td></tr>
-<tr><td>Qwen 2.5 72B</td><td>$0.90</td><td>Yes</td><td>Yes</td></tr>
-<tr><td>GLM-4-9B</td><td>Free self-host</td><td>Yes</td><td>Yes</td></tr>
-<tr><td>Yi-Lightning (01.AI)</td><td>$0.14</td><td>No (API)</td><td>Yes (API)</td></tr>
-<tr><td>Kimi API</td><td>$0.50</td><td>No (API)</td><td>Yes (API)</td></tr>
-<tr><td>MiniMax API</td><td>$0.30</td><td>No (API)</td><td>Yes (API)</td></tr>
-</table>
-</div>
-<div class="max-w-4xl mx-auto mt-12">
-<h2 class="text-2xl font-bold tracking-tighter mb-6 text-center" data-i18n="general-bots.llm.model_leaderboard">Model Leaderboard</h2>
-<table class="comparison-table">
-<tr><th>Model</th><th>Score</th></tr>
-<tr><td>GPT</td><td>5.5</td></tr>
-<tr><td>Claude</td><td>4.8</td></tr>
-<tr><td>MiniMax</td><td>3.0</td></tr>
-<tr><td>Kimi</td><td>2.7</td></tr>
-<tr><td>GLM</td><td>0.2</td></tr>
+<tr><td>DeepSeek V4-Pro</td><td>$0.44</td><td>Yes</td><td>Yes</td></tr>
+<tr><td>DeepSeek V4-Flash</td><td>$0.14</td><td>Yes</td><td>Yes</td></tr>
+<tr><td>Qwen 3.7-Max</td><td>$2.50</td><td>No (API)</td><td>Yes (API)</td></tr>
+<tr><td>GLM-5.2</td><td>$0.11</td><td>Yes</td><td>Yes</td></tr>
+<tr><td>Kimi K2.7</td><td>$0.95</td><td>No (API)</td><td>Yes (API)</td></tr>
+<tr><td>MiniMax M3</td><td>$0.30</td><td>Yes</td><td>Yes</td></tr>
 </table>
 </div>
 </div>
