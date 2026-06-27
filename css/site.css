@@ -303,7 +303,7 @@ body>div[hx-get="/partials/header.html"]+main[style*="padding-top:4rem"]{padding
 .badge{color:#888888!important;border-color:rgba(136,136,136,.25)!important}
 .card-tag{color:#888888!important}
 .arch-num{background:linear-gradient(135deg,#888888,#777777)!important;-webkit-background-clip:text!important;background-clip:text!important;-webkit-text-fill-color:transparent!important}
-.hero-visual{display:flex;align-items:center;justify-content:center}
+.hero-visual{display:flex;align-items:flex-start;justify-content:center}
 .chat-chip:hover{color:#888888!important;border-color:rgba(136,136,136,.3)!important}
 .value-card::after{background:linear-gradient(135deg,#888888,#777777)!important}
 .value-card .vc-icon{background:rgba(136,136,136,.1)!important;color:#888888!important}

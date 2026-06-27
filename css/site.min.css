@@ -3,7 +3,7 @@
 /* Hero-only styles */
 .hero-grid{display:grid;grid-template-columns:1fr;gap:3rem;align-items:center}
 @media(min-width:1024px){.hero-grid{grid-template-columns:1fr 1fr}}
-.hero-visual{display:none;display:flex;align-items:center;justify-content:center}
+.hero-visual{display:none;display:flex;align-items:flex-start;justify-content:center}
 @media(min-width:1024px){.hero-visual{display:flex}}
 
 /* Value proposition cards */
