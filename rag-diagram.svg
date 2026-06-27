@@ -1,40 +1,40 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450" fill="none">
   <defs>
     <linearGradient id="pg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#ff0080"/>
-      <stop offset="100%" stop-color="#a855f7"/>
+      <stop offset="0%" stop-color="#888888"/>
+      <stop offset="100%" stop-color="#777777"/>
     </linearGradient>
     <linearGradient id="pg2" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#a855f7"/>
+      <stop offset="0%" stop-color="#777777"/>
       <stop offset="100%" stop-color="#6366f1"/>
     </linearGradient>
   </defs>
   <rect width="800" height="450" rx="20" fill="#f8f8f8"/>
   
-  <text x="400" y="50" text-anchor="middle" fill="#ff0080" font-family="system-ui,sans-serif" font-size="16" font-weight="700">RAG Architecture — Retrieval Augmented Generation</text>
+  <text x="400" y="50" text-anchor="middle" fill="#888888" font-family="system-ui,sans-serif" font-size="16" font-weight="700">RAG Architecture — Retrieval Augmented Generation</text>
   <text x="400" y="70" text-anchor="middle" fill="#999" font-family="system-ui,sans-serif" font-size="10">Multi-Agent AI with Vector Search &amp; LLM Orchestration</text>
 
-  <rect x="50" y="100" width="140" height="60" rx="10" fill="rgba(255,0,128,.06)" stroke="url(#pg)" stroke-width="1.5"/>
-  <text x="120" y="125" text-anchor="middle" fill="#ff0080" font-family="system-ui,sans-serif" font-size="10" font-weight="600">User Query</text>
+  <rect x="50" y="100" width="140" height="60" rx="10" fill="rgba(136,136,136,.06)" stroke="url(#pg)" stroke-width="1.5"/>
+  <text x="120" y="125" text-anchor="middle" fill="#888888" font-family="system-ui,sans-serif" font-size="10" font-weight="600">User Query</text>
   <text x="120" y="142" text-anchor="middle" fill="#999" font-family="system-ui,sans-serif" font-size="8">Natural Language</text>
 
   <path d="M190 130 L260 130" stroke="url(#pg)" stroke-width="2"/>
-  <polygon points="255,125 265,130 255,135" fill="#ff0080"/>
+  <polygon points="255,125 265,130 255,135" fill="#888888"/>
 
   <rect x="270" y="100" width="150" height="60" rx="10" fill="rgba(168,85,247,.06)" stroke="url(#pg2)" stroke-width="1.5"/>
-  <text x="345" y="125" text-anchor="middle" fill="#a855f7" font-family="system-ui,sans-serif" font-size="10" font-weight="600">Query Embedding</text>
+  <text x="345" y="125" text-anchor="middle" fill="#777777" font-family="system-ui,sans-serif" font-size="10" font-weight="600">Query Embedding</text>
   <text x="345" y="142" text-anchor="middle" fill="#999" font-family="system-ui,sans-serif" font-size="8">Vector Conversion</text>
 
   <path d="M420 130 L490 130" stroke="url(#pg)" stroke-width="2"/>
-  <polygon points="485,125 495,130 485,135" fill="#ff0080"/>
+  <polygon points="485,125 495,130 485,135" fill="#888888"/>
 
-  <rect x="500" y="95" width="150" height="70" rx="10" fill="rgba(255,0,128,.06)" stroke="url(#pg)" stroke-width="1.5"/>
-  <text x="575" y="120" text-anchor="middle" fill="#ff0080" font-family="system-ui,sans-serif" font-size="10" font-weight="600">Vector Search</text>
+  <rect x="500" y="95" width="150" height="70" rx="10" fill="rgba(136,136,136,.06)" stroke="url(#pg)" stroke-width="1.5"/>
+  <text x="575" y="120" text-anchor="middle" fill="#888888" font-family="system-ui,sans-serif" font-size="10" font-weight="600">Vector Search</text>
   <text x="575" y="137" text-anchor="middle" fill="#999" font-family="system-ui,sans-serif" font-size="8">Qdrant / Pinecone</text>
   <text x="575" y="150" text-anchor="middle" fill="#999" font-family="system-ui,sans-serif" font-size="8">Top-K Results</text>
 
   <path d="M650 130 L710 130" stroke="url(#pg)" stroke-width="2"/>
-  <polygon points="705,125 715,130 705,135" fill="#ff0080"/>
+  <polygon points="705,125 715,130 705,135" fill="#888888"/>
 
   <rect x="50" y="220" width="160" height="60" rx="10" fill="rgba(99,102,241,.06)" stroke="url(#pg2)" stroke-width="1.5"/>
   <text x="130" y="245" text-anchor="middle" fill="#6366f1" font-family="system-ui,sans-serif" font-size="10" font-weight="600">Document Store</text>
@@ -43,8 +43,8 @@
   <path d="M130 280 L130 310 L345 310" stroke="url(#pg)" stroke-width="1.5" stroke-dasharray="4 3"/>
   <text x="240" y="300" text-anchor="middle" fill="#bbb" font-family="system-ui,sans-serif" font-size="8">Document Chunking &amp; Indexing</text>
 
-  <rect x="640" y="210" width="120" height="80" rx="10" fill="rgba(255,0,128,.06)" stroke="url(#pg)" stroke-width="1.5"/>
-  <text x="700" y="240" text-anchor="middle" fill="#ff0080" font-family="system-ui,sans-serif" font-size="10" font-weight="600">LLM</text>
+  <rect x="640" y="210" width="120" height="80" rx="10" fill="rgba(136,136,136,.06)" stroke="url(#pg)" stroke-width="1.5"/>
+  <text x="700" y="240" text-anchor="middle" fill="#888888" font-family="system-ui,sans-serif" font-size="10" font-weight="600">LLM</text>
   <text x="700" y="257" text-anchor="middle" fill="#999" font-family="system-ui,sans-serif" font-size="8">Query + Context</text>
   <text x="700" y="274" text-anchor="middle" fill="#999" font-family="system-ui,sans-serif" font-size="8">→ Answer</text>
 
@@ -52,8 +52,8 @@
   <path d="M640 250 L635 250" stroke="url(#pg)" stroke-width="2"/>
   <text x="560" y="245" text-anchor="middle" fill="#bbb" font-family="system-ui,sans-serif" font-size="8">Context + Results → Prompt</text>
 
-  <rect x="320" y="310" width="160" height="50" rx="25" fill="rgba(255,0,128,.08)" stroke="url(#pg)" stroke-width="1.5"/>
-  <text x="400" y="340" text-anchor="middle" fill="#ff0080" font-family="system-ui,sans-serif" font-size="12" font-weight="700">AI-Powered Answer</text>
+  <rect x="320" y="310" width="160" height="50" rx="25" fill="rgba(136,136,136,.08)" stroke="url(#pg)" stroke-width="1.5"/>
+  <text x="400" y="340" text-anchor="middle" fill="#888888" font-family="system-ui,sans-serif" font-size="12" font-weight="700">AI-Powered Answer</text>
 
   <text x="400" y="420" text-anchor="middle" fill="#ccc" font-family="system-ui,sans-serif" font-size="9">General Bots — Open Source Multi-Agent AI Platform</text>
 </svg>
