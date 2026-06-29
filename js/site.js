@@ -430,8 +430,8 @@ document.addEventListener('DOMContentLoaded', function(){
 });
 
 document.body.addEventListener('htmx:afterSwap', function(e){
-  if(e.detail && e.detail.pathInfo && e.detail.pathInfo.requestPath &&
-     e.detail.pathInfo.requestPath.indexOf('/partials/') !== -1){
+  if(e.detail && e.detail.requestConfig && e.detail.requestConfig.path &&
+     e.detail.requestConfig.path.indexOf('/partials/') !== -1){
     initHeader();
     initDropdowns();
     var containers = document.querySelectorAll('.lang-flags');
