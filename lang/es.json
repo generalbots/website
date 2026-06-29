@@ -1666,7 +1666,7 @@
   "pricing.managed": "Host Gestionado",
   "pricing.managed_host": "Host administrado",
   "pricing.mantis": "Mantis",
-  "pricing.map_agency": "Agencia de mapas",
+  "pricing.map_agency": "Map Agency",
   "pricing.map_agency_b1": "Activaciones orgánicas, sensoriales y culturales auténticas",
   "pricing.map_agency_b2": "Especialistas en Ley Rouanet",
   "pricing.map_agency_b3": "Posicionamiento de marca y economía creativa",
@@ -1676,7 +1676,7 @@
   "pricing.oerlabs_b3": "Herramientas GPT e integración con Microsoft 365",
   "pricing.oerlabs_b4": "Asistentes Virtuales — impulsados por General Bots",
   "pricing.our_ecosystem_of_partners_provides_regional_expertise_and_sp": "Nuestro ecosistema de socios proporciona experiencia regional y servicios especializados.",
-  "pricing.pragmatismo": "pragmatismo",
+  "pricing.pragmatismo": "Pragmatismo",
   "pricing.pragmatismo_b1": "Free — 1 bot, 10MB",
   "pricing.pragmatismo_b2": "Shared — $3.99/mo, 5 bots, 500MB",
   "pricing.pragmatismo_b3": "Private Server — tu infraestructura, ilimitado",
@@ -1685,7 +1685,7 @@
   "pricing.quote": "/Cita",
   "pricing.recommended": "Recomendado",
   "pricing.self_hosted": "Autohospedado",
-  "pricing.sentient": "Sensible",
+  "pricing.sentient": "Sentient",
   "pricing.sentient_b1": "Agencia creativa, editorial y academia",
   "pricing.sentient_b2": "Estrategia, branding, narrativa y producto",
   "pricing.sentient_b3": "Construido con tiempo, repertorio y responsabilidad simbólica",
@@ -2626,5 +2626,9 @@
   "investors.esg.cost.desc": "Cero gastos generales de ventas. ",
   "investors.esg.sovereignty.label": "La soberanía es el último movimiento de poder",
   "investors.esg.sovereignty.desc": "Vendemos ser dueños de su pila: la máxima ventaja contra las grandes tecnologías. ",
-  "hero.chat.greeting": "Hey! 👋 I'm your General Bots AI assistant. I can help you explore our multi-agent platform, deploy bots, or answer questions about our sovereign AI stack. What would you like to know?"
+  "hero.chat.greeting": "Hey! 👋 I'm your General Bots AI assistant. I can help you explore our multi-agent platform, deploy bots, or answer questions about our sovereign AI stack. What would you like to know?",
+  "pricing.cta_start_free": "Empiece Gratis — Sin tarjeta de crédito",
+  "pricing.cta_desc": "El plan gratuito incluye 3 bots y 500 mensajes/día. Actualice a nube compartida o privada en cualquier momento.",
+  "pricing.cta_signup": "Registrarse — Plan Gratuito",
+  "pricing.cta_selfhosted": "Autoalojado (Open Source)"
 }
