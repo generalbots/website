@@ -1635,6 +1635,7 @@
   "nav.platform": "Platform",
   "nav.pricing": "Pricing",
   "nav.resources": "Resources",
+  "nav.signin": "サインイン",
   "philosophy.overline": "私たちの哲学",
   "philosophy.text": "2017年から、私たちはシンプルなアイデアを提唱してきました。人々はフォームに記入するのではなく、会話すべきです。従来のソフトウェアは、ドロップダウンやチェックボックスを使った rigid なフォームを強制します。General Botsはそれらを自然な会話に置き換えます — AIによってガイドされ、あなたのデータに裏打ちされ、すべてのチャネルに接続されています。",
   "philosophy.title": "フォームなし。会話だけ。",
