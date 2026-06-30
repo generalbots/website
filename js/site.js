@@ -38,6 +38,8 @@
   window.__toggleTheme = toggle;
   window.__setTheme = set;
   window.__updateThemeBtn = function(){ updateBtn(document.documentElement.getAttribute('data-theme') || 'dark'); };
+  var btn = document.getElementById('theme-toggle');
+  if(btn) btn.addEventListener('click', toggle);
 })();
 
 /* ===================== i18n ===================== */
