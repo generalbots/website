@@ -319,24 +319,107 @@ Use native HTML `<details>/<summary>` — no JS accordion:
 
 ---
 
-## Optimization Checklist
+## SEO & Quality Optimization Checklist
 
-When adding or modifying pages:
+Every page on this site MUST pass ALL checks below. Run this checklist on every new or modified page.
 
-- [ ] No purple/cyan/emerald accent colors (except code syntax highlighting)
-- [ ] No dark backgrounds (`hsl(260,...)`, `#1a1a2e`, etc.)
-- [ ] No `text-white` on light backgrounds — use `var(--foreground)` or dark gray
-- [ ] No neon glows or colored box-shadows
-- [ ] No gradient text except `gray-900→gray-600` for hero stat values
-- [ ] All SVG icons inline with `stroke="currentColor"`
-- [ ] FAQ uses `<details>/<summary>`, not JS
-- [ ] Mobile menu uses `#mobile-menu` + `#mobile-menu-toggle` pattern
-- [ ] Scroll-reveal sections have `.reveal` class
-- [ ] `<style>` block in `<head>` contains only page-specific overrides
-- [ ] Schema.org JSON-LD present in `<head>`
-- [ ] OG meta tags present and correct
+### Required Meta & Structured Data
+
+- [ ] `<meta charset="UTF-8">` — within first 1024 bytes
+- [ ] `<meta name="viewport" content="width=device-width,initial-scale=1">` — present
+- [ ] `<title>` — unique, descriptive, includes "| General Bots" suffix
+- [ ] `<meta name="description" content="...">` — unique per page, 120–160 chars
+- [ ] `<html lang="en">` — language attribute on root element
+- [ ] `<link rel="canonical" href="https://generalbots.org/PATH/">` — matches page path
+- [ ] `<meta name="robots" content="index, follow">` — unless noindex needed
+
+### Open Graph (Social Sharing)
+
+- [ ] `og:title` — matches `<title>` (plain text, no HTML)
+- [ ] `og:description` — matches or summarizes `<meta name="description">`
+- [ ] `og:type` — `website` for content pages, `article` for blog posts
+- [ ] `og:url` — absolute URL matching canonical
+- [ ] `og:image` — `https://generalbots.org/og-image.png`
+- [ ] `og:image:width` — `1200`
+- [ ] `og:image:height` — `630`
+- [ ] `og:image:type` — `image/png`
+- [ ] `og:image:alt` — descriptive alt text for the image
+- [ ] `og:site_name` — `General Bots`
+- [ ] `og:locale` — `en_US`
+- [ ] `twitter:card` — `summary_large_image`
+
+### Blog Posts Only (in addition to above)
+
+- [ ] JSON-LD `@type: "Article"` (not `"WebPage"`)
+- [ ] `"image"` field in JSON-LD pointing to og-image.png
+- [ ] `"mainEntityOfPage"` field in JSON-LD
+- [ ] `"datePublished"` and `"dateModified"` in ISO 8601 format
+- [ ] `"author"` as Organization with name + url
+- [ ] `"publisher"` as Organization with name + logo
+- [ ] `article:published_time` OG tag matching datePublished
+- [ ] `article:modified_time` OG tag matching dateModified
+- [ ] `article:author` OG tag
+
+### JSON-LD Structured Data
+
+- [ ] `<script type="application/ld+json">` — `WebPage` schema with `name`, `description`, `url`, `isPartOf`
+- [ ] `BreadcrumbList` schema on blog posts (list item per breadcrumb)
+- [ ] Valid JSON syntax (test with jsonlint or equivalent)
+- [ ] `@context: "https://schema.org"` — always use HTTPS
+
+### Accessibility
+
+- [ ] Skip-link: `<a href="#main-content" class="sr-only skip-link">Skip to content</a>` immediately after `<body>`
+- [ ] `<main id="main-content">` — every page has a main landmark
+- [ ] `role="main"` on `<main>`, `role="banner"` on `<header>`, `role="contentinfo"` on `<footer>`, `role="navigation"` on `<nav>`
+- [ ] All `<img>` tags have `alt` attribute (descriptive text or `aria-hidden="true"` for decorative)
+- [ ] All form `<input>` elements have associated `<label>`
+- [ ] All interactive elements keyboard-accessible
 - [ ] Contrast ≥ 4.5:1 for all body text
-- [ ] No `node_modules`, no `package.json`, no build step
+- [ ] `<details>/<summary>` for FAQ — no JS accordion
+
+### Performance
+
+- [ ] External scripts (`htmx.org`, `/js/site.min.js`) use `defer` attribute
+- [ ] All images use `loading="lazy"` (except hero/LCP images)
+- [ ] No render-blocking external resources in `<head>` (fonts via CSS `@import` is OK)
+- [ ] Scripts loaded at end of `<body>`, not in `<head>` (except JSON-LD)
+- [ ] CSS from local `/css/site.min.css` — no external CSS files
+
+### Heading Structure
+
+- [ ] Exactly one `<h1>` per page
+- [ ] Heading hierarchy: H1 → H2 → H3 (no skips, e.g. H1 → H3)
+- [ ] Blog card titles use `<h2>` (not `<h3>`) on index/archive pages
+- [ ] Section headings use sequential levels
+
+### i18n
+
+- [ ] All user-visible text wrapped in `data-i18n="key"` attributes
+- [ ] Matching key exists in all 7 language files (`lang/en.json`, `pt.json`, `es.json`, `fr.json`, `de.json`, `ja.json`, `zh-cn.json`)
+- [ ] Stale keys removed from JSON when corresponding HTML is removed
+- [ ] `hreflang` alternates present on i18n-enabled pages
+
+### Favicon & App Icons
+
+- [ ] `<link rel="icon" type="image/x-icon" href="...favicon.ico">`
+- [ ] `<link rel="icon" type="image/svg+xml" href="/img/logo.svg">`
+- [ ] `<link rel="apple-touch-icon" href="/apple-touch-icon.png">`
+
+### Sitemap
+
+- [ ] Page listed in `sitemap.xml` with correct `<loc>` URL
+- [ ] No phantom entries pointing to non-existent pages
+- [ ] `changefreq` and `priority` appropriate for the page type
+
+### Technical
+
+- [ ] No inline `onclick` attributes — use `addEventListener` in JS
+- [ ] No `http://` URLs — always `https://`
+- [ ] External `target="_blank"` links include `rel="noopener"` or `rel="noreferrer"`
+- [ ] No `<<` (double less-than) or other broken HTML patterns
+- [ ] No unclosed HTML comments (`<!--` without `-->`)
+- [ ] No `logo.svg` used as `og:image` — use `og-image.png` instead
 
 ---
 
