@@ -223,41 +223,21 @@
 
 /* ===================== Header ===================== */
 function initHeader(){
-  var mobileToggle = document.getElementById('mobile-menu-toggle');
-  var mobileMenu = document.getElementById('mobile-menu');
-  if(mobileToggle && mobileMenu){
-    mobileToggle.onclick = function(){
-      var isOpen = mobileMenu.classList.contains('open');
-      if(isOpen){
-        mobileMenu.classList.remove('open');
-        setTimeout(function(){
-          mobileMenu.classList.add('hidden');
-        }, 350);
-      }else{
-        mobileMenu.classList.remove('hidden');
-        mobileMenu.offsetHeight; // force reflow
-        mobileMenu.classList.add('open');
+  document.addEventListener('click', function(e) {
+    var t = e.target.closest('#mobile-toggle');
+    if (t) {
+      var o = document.getElementById('mobile-overlay');
+      if (o) o.classList.toggle('open');
+      return;
+    }
+    var ov = document.getElementById('mobile-overlay');
+    if (ov && ov.classList.contains('open')) {
+      if (e.target.closest('#mobile-overlay a')) {
+        ov.classList.remove('open');
+      } else if (e.target.closest('#mobile-overlay') && !e.target.closest('.mobile-overlay-inner')) {
+        ov.classList.remove('open');
       }
-      var icon = mobileToggle.querySelector('.menu-icon');
-      var closeIcon = mobileToggle.querySelector('.close-icon');
-      if(icon && closeIcon){
-        icon.classList.toggle('hidden');
-        closeIcon.classList.toggle('hidden');
-      }
-    };
-  }
-
-  document.querySelectorAll('.mobile-nav-link, .mm-link').forEach(function(link){
-    link.addEventListener('click', function(){
-      if(mobileMenu) {
-        mobileMenu.classList.remove('open');
-        mobileMenu.classList.add('hidden');
-      }
-      var icon = mobileToggle ? mobileToggle.querySelector('.menu-icon') : null;
-      var closeIcon = mobileToggle ? mobileToggle.querySelector('.close-icon') : null;
-      if(icon) icon.classList.remove('hidden');
-      if(closeIcon) closeIcon.classList.add('hidden');
-    });
+    }
   });
 
   var header = document.querySelector('.site-header');
@@ -271,9 +251,6 @@ function initHeader(){
       }
     }, {passive:true});
   }
-
-  // Init theme toggle button
-  if(window.__updateThemeBtn) window.__updateThemeBtn();
 }
 
 /* ===================== Scroll Reveal ===================== */
