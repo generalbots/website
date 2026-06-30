@@ -244,9 +244,9 @@
 </div>
 
 <div class="user-tabs">
-<div class="user-tab active" onclick="switchTab(event,'personal')" data-i18n="features.tab.personal">Personal</div>
-<div class="user-tab" onclick="switchTab(event,'business')" data-i18n="features.tab.business">Business</div>
-<div class="user-tab" onclick="switchTab(event,'enterprise')" data-i18n="features.tab.enterprise">Enterprise</div>
+<div class="user-tab active" data-switch-tab="1" data-i18n="features.tab.personal">Personal</div>
+<div class="user-tab" data-switch-tab="2" data-i18n="features.tab.business">Business</div>
+<div class="user-tab" data-switch-tab="3" data-i18n="features.tab.enterprise">Enterprise</div>
 </div>
 
 <!-- PERSONAL -->
@@ -640,5 +640,21 @@ document.getElementById('panel-'+panel).classList.add('active');
 </script>
 <script src="https://unpkg.com/htmx.org@2.0.10"></script>
 <script src="/js/site.min.js"></script>
+
+<script>
+(function() {
+  var tabs = [
+    "personal",
+    "business",
+    "enterprise",
+  ];
+  document.querySelectorAll("[data-switch-tab]").forEach(function(el) {
+    el.addEventListener("click", function() {
+      var idx = parseInt(el.getAttribute("data-switch-tab"));
+      if (tabs[idx-1]) switchTab(this, tabs[idx-1]);
+    });
+  });
+})();
+</script>
 </body>
 </html>

@@ -258,9 +258,9 @@
   <h2>One Platform, Every Scale</h2>
 </div>
 <div class="audience-tabs">
-  <button class="audience-tab active" data-tab="personal" onclick="switchTab(this,'personal')" data-i18n="features.tab.personal">Personal</button>
-  <button class="audience-tab" data-tab="business" onclick="switchTab(this,'business')" data-i18n="features.tab.business">Business</button>
-  <button class="audience-tab" data-tab="enterprise" onclick="switchTab(this,'enterprise')" data-i18n="features.tab.enterprise">Enterprise</button>
+  <button class="audience-tab active" data-tab="personal" data-switch-tab="1" data-i18n="features.tab.personal">Personal</button>
+  <button class="audience-tab" data-tab="business" data-switch-tab="2" data-i18n="features.tab.business">Business</button>
+  <button class="audience-tab" data-tab="enterprise" data-switch-tab="3" data-i18n="features.tab.enterprise">Enterprise</button>
 </div>
 <div id="tab-personal" class="audience-content active">
   <div class="usecase-card" style="max-width:700px;margin:0 auto;text-align:left">
@@ -499,5 +499,21 @@ function switchTab(btn, tabId) {
 </script>
 <script src="https://unpkg.com/htmx.org@2.0.10"></script>
 <script src="/js/site.min.js"></script>
+
+<script>
+(function() {
+  var tabs = [
+    "personal",
+    "business",
+    "enterprise",
+  ];
+  document.querySelectorAll("[data-switch-tab]").forEach(function(el) {
+    el.addEventListener("click", function() {
+      var idx = parseInt(el.getAttribute("data-switch-tab"));
+      if (tabs[idx-1]) switchTab(this, tabs[idx-1]);
+    });
+  });
+})();
+</script>
 </body>
 </html>
