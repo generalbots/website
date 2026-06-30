@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>404 — Page Not Found | General Bots</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://generalbots.org/404.html">
+<link rel="icon" type="image/x-icon" href="https://chat.pragmatismo.com.br/favicon.ico">
+<link rel="icon" type="image/svg+xml" href="https://pragmatismo.com.br/img/logo.svg">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="stylesheet" href="/css/site.min.css">
+<style>
+.not-found{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:60vh;text-align:center;padding:4rem 1.5rem}
+.not-found h1{font-size:6rem;font-weight:900;letter-spacing:-.08em;line-height:1;margin:0 0 .5rem;background:linear-gradient(135deg,var(--foreground),var(--muted-foreground));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.not-found h2{font-size:1.5rem;font-weight:700;margin:0 0 .75rem}
+.not-found p{color:var(--muted-foreground);max-width:28rem;margin:0 0 2rem;font-size:.95rem;line-height:1.6}
+.not-found .gear-icon{width:64px;height:64px;margin-bottom:1.5rem;opacity:.15;animation:gear-spin 60s linear infinite}
+@keyframes gear-spin{to{transform:rotate(360deg)}}
+</style>
+</head>
+<body>
+<div hx-get="/partials/header.html" hx-swap="innerHTML" hx-trigger="load"></div>
+<main>
+<section class="not-found">
+<svg class="gear-icon" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width=".8">
+<path d="M50 10 L53 20 L60 15 L58 25 L67 23 L62 32 L70 33 L63 40 L70 45 L62 48 L67 55 L58 53 L60 62 L53 57 L50 65 L47 57 L40 62 L42 53 L33 55 L38 48 L30 45 L37 40 L30 33 L38 32 L33 23 L42 25 L40 15 L47 20Z"/>
+<circle cx="50" cy="37.5" r="10"/>
+</svg>
+<h1>404</h1>
+<h2>Page Not Found</h2>
+<p>The page you're looking for doesn't exist or has been moved. The sovereign AI platform is still here — try the homepage or docs.</p>
+<div style="display:flex;gap:.75rem;flex-wrap:wrap;justify-content:center">
+<a href="/" class="btn btn-primary">Home</a>
+<a href="https://docs.generalbots.org" class="btn btn-outline">Docs</a>
+<a href="/contact/" class="btn btn-outline">Contact</a>
+</div>
+</section>
+</main>
+<div hx-get="/partials/footer.html" hx-swap="innerHTML" hx-trigger="load"></div>
+<script src="https://unpkg.com/htmx.org@2.0.10"></script>
+<script src="/js/site.min.js"></script>
+</body>
+</html>
