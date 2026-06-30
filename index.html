@@ -52,7 +52,7 @@
 
 <div hx-get="/partials/header.html" hx-swap="innerHTML" hx-trigger="load"></div>
 
-<main>
+<main role="main">
 
 <!-- ═══════════════ HERO ═══════════════ -->
 <section class="hero" style="position:relative;overflow:hidden">
@@ -639,8 +639,8 @@ e.target.classList.add('active');
 document.getElementById('panel-'+panel).classList.add('active');
 }
 </script>
-<script src="https://unpkg.com/htmx.org@2.0.10"></script>
-<script src="/js/site.min.js"></script>
+<script defer src="https://unpkg.com/htmx.org@2.0.10"></script>
+<script defer src="/js/site.min.js"></script>
 
 <script>
 (function() {

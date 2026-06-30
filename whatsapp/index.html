@@ -44,7 +44,7 @@
 <a href="#main-content" class="sr-only skip-link">Skip to content</a>
 
 <div hx-get="/partials/header.html" hx-swap="innerHTML" hx-trigger="load"></div>
-<main>
+<main role="main">
 <section class="hero-section" style="padding:6rem 0 3rem;position:relative;overflow:hidden">
 <div class="mesh-pattern"></div>
 <div class="container text-center reveal" style="position:relative;z-index:2">
@@ -267,7 +267,7 @@
 </section>
 </main>
 <div hx-get="/partials/footer.html" hx-swap="innerHTML" hx-trigger="load"></div>
-<script src="https://unpkg.com/htmx.org@2.0.10"></script>
-<script src="/js/site.min.js"></script>
+<script defer src="https://unpkg.com/htmx.org@2.0.10"></script>
+<script defer src="/js/site.min.js"></script>
 </body>
 </html>

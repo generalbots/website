@@ -44,7 +44,7 @@
 <body>
 <a href="#main-content" class="sr-only skip-link">Skip to content</a>
 <div hx-get="/partials/header.html" hx-swap="innerHTML" hx-trigger="load"></div>
-<main id="main-content">
+<main role="main" id="main-content">
 <section class="not-found">
 <svg class="gear-icon" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width=".8">
 <path d="M50 10 L53 20 L60 15 L58 25 L67 23 L62 32 L70 33 L63 40 L70 45 L62 48 L67 55 L58 53 L60 62 L53 57 L50 65 L47 57 L40 62 L42 53 L33 55 L38 48 L30 45 L37 40 L30 33 L38 32 L33 23 L42 25 L40 15 L47 20Z"/>
@@ -61,7 +61,7 @@
 </section>
 </main>
 <div hx-get="/partials/footer.html" hx-swap="innerHTML" hx-trigger="load"></div>
-<script src="https://unpkg.com/htmx.org@2.0.10"></script>
-<script src="/js/site.min.js"></script>
+<script defer src="https://unpkg.com/htmx.org@2.0.10"></script>
+<script defer src="/js/site.min.js"></script>
 </body>
 </html>
