@@ -36,7 +36,7 @@
   <url><loc>https://generalbots.org/general-bots/llm/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://generalbots.org/general-bots/open-source/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://generalbots.org/general-bots/vector-retrieval/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://generalbots.org/pricing/</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://generalbots.org/hosting/</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
   <url><loc>https://generalbots.org/templates/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://generalbots.org/resources/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://generalbots.org/resources/already-using/data-science/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
