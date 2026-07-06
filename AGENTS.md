@@ -9,9 +9,9 @@ All pages are hand-authored HTML with shared CSS, JS, and inline SVGs.
 
 - **HTML5** — semantic, no framework
 - **HTMX** — for any dynamic interactions (load fragments, swap content)
-- **CSS** — single file `css/site.css`, custom property system, no Tailwind
+- **CSS** — single file `css/site.min.css`, custom property system, no Tailwind
 - **SVG** — inline icons (lucide-derived), no icon font, no React component
-- **JS** — `js/site.js`, vanilla JS only (mobile menu, dropdowns, scroll reveal, 3rd-party scripts)
+- **JS** — `js/site.min.js`, vanilla JS only (mobile menu, dropdowns, scroll reveal, 3rd-party scripts)
 - **Fonts** — Inter (body) + DM Sans (headings), loaded via Google Fonts `@import`
 
 ---
@@ -163,7 +163,7 @@ HTMX is available for dynamic interactions. Use it for:
 
 ## JS Conventions
 
-File: `js/site.js` — loaded via `<script src="/js/site.js"></script>` at end of `<body>`.
+File: `js/site.min.js` — loaded via `<script defer src="/js/site.min.js"></script>` at end of `<body>`.
 
 ### What JS Handles
 
@@ -297,8 +297,8 @@ Use native HTML `<details>/<summary>` — no JS accordion:
 ```
 /
 ├── index.html
-├── css/site.css          ← shared styles (edit carefully, affects all pages)
-├── js/site.js            ← shared JS (mobile menu, dropdowns, reveal, 3rd-party)
+├── css/site.min.css      ← shared styles (edit carefully, affects all pages)
+├── js/site.min.js        ← shared JS (mobile menu, dropdowns, reveal, 3rd-party)
 ├── logo.svg              ← horizontal logo
 ├── logo-square.svg       ← square icon
 ├── favicon.ico
