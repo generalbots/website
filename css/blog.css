@@ -11,10 +11,10 @@
 /* Section Variants */
 .section{padding:3rem 0}
 .section-alt{background:var(--bg-secondary)}
-.section-dark{background:var(--primary);color:rgba(255,255,255,.9)}
+.section-dark{background:var(--accent);color:rgba(255,255,255,.9)}
 .section-dark h2,.section-dark h3,.section-dark h4{color:#fff}
 .section-dark p{color:rgba(255,255,255,.7)}
-.section-gradient{background:linear-gradient(135deg,var(--primary) 0%,hsl(225 50% 20%) 100%);color:rgba(255,255,255,.9)}
+.section-gradient{background:linear-gradient(135deg,var(--accent) 0%,hsl(225 50% 20%) 100%);color:rgba(255,255,255,.9)}
 .section-gradient h2{color:#fff}
 .section-gradient p{color:rgba(255,255,255,.7)}
 
@@ -23,17 +23,17 @@
 [data-theme="dark"] .section-label,.site-header~* .section-label{background:var(--bg-secondary)}
 
 /* Colored Badges (blog post categories) */
-.badge-blue{background:rgba(37,99,235,.1);color:#2563eb;border:1px solid rgba(37,99,235,.2)}
+.badge-blue{background:rgba(96,165,250,.1);color:#60a5fa;border:1px solid rgba(96,165,250,.2)}
 .badge-emerald{background:rgba(5,150,105,.1);color:#059669;border:1px solid rgba(5,150,105,.2)}
-.badge-purple{background:rgba(124,58,237,.1);color:#7c3aed;border:1px solid rgba(124,58,237,.2)}
+.badge-purple{background:rgba(167,139,250,.1);color:#a78bfa;border:1px solid rgba(167,139,250,.2)}
 .badge-cyan{background:rgba(8,145,178,.1);color:#0891b2;border:1px solid rgba(8,145,178,.2)}
 .badge-amber{background:rgba(217,119,6,.1);color:#d97706;border:1px solid rgba(217,119,6,.2)}
-.badge-red{background:rgba(220,38,38,.1);color:#dc2626;border:1px solid rgba(220,38,38,.2)}
-.badge-indigo{background:rgba(79,70,229,.1);color:#4f46e5;border:1px solid rgba(79,70,229,.2)}
+.badge-red{background:rgba(248,113,113,.1);color:#f87171;border:1px solid rgba(248,113,113,.2)}
+.badge-indigo{background:rgba(129,140,248,.1);color:#818cf8;border:1px solid rgba(129,140,248,.2)}
 .badge-orange{background:rgba(234,88,12,.1);color:#ea580c;border:1px solid rgba(234,88,12,.2)}
-.badge-pink{background:rgba(219,39,119,.1);color:#db2777;border:1px solid rgba(219,39,119,.2)}
-.badge-rose{background:rgba(225,29,72,.1);color:#e11d48;border:1px solid rgba(225,29,72,.2)}
-.badge-slate{background:rgba(51,65,85,.1);color:#475569;border:1px solid rgba(51,65,85,.2)}
+.badge-pink{background:rgba(244,114,182,.1);color:#f472b6;border:1px solid rgba(244,114,182,.2)}
+.badge-rose{background:rgba(251,113,133,.1);color:#fb7185;border:1px solid rgba(251,113,133,.2)}
+.badge-slate{background:rgba(148,163,184,.1);color:#94a3b8;border:1px solid rgba(148,163,184,.2)}
 
 /* Badge Row */
 .badge-row{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:.75rem}
@@ -86,7 +86,7 @@
 .callout-note{font-size:.875rem;color:var(--fg-muted);margin-top:.5rem}
 .callout-note-green{color:#059669}
 .callout-quote{font-style:italic;color:var(--fg-muted);margin:.75rem 0;padding:.5rem;border-left:3px solid var(--fg-subtle)}
-.callout-warning{background:rgba(220,38,38,.05);border-left:3px solid #dc2626;padding:.75rem;border-radius:.25rem;font-size:.875rem;color:#dc2626}
+.callout-warning{background:rgba(248,113,113,.05);border-left:3px solid #f87171;padding:.75rem;border-radius:.25rem;font-size:.875rem;color:#f87171}
 
 /* Avatar Circles */
 .avatar-circle{width:4rem;height:4rem;border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:1rem}
@@ -108,11 +108,11 @@
 .comparison-table td{padding:.875rem 1rem}
 
 /* Text Colors */
-.text-blue{color:#2563eb}
-.text-purple{color:#7c3aed}
+.text-blue{color:#60a5fa}
+.text-purple{color:#a78bfa}
 .text-orange{color:#d97706}
 .text-teal{color:#14b8a6}
-.text-red{color:#dc2626}
+.text-red{color:#f87171}
 .text-green{color:#059669}
 .text-yellow{color:#ca8a04}
 .text-amber{color:#d97706}
@@ -158,7 +158,7 @@
 .hero-image-center{display:flex;justify-content:center;margin:2rem 0}
 
 /* Step Number */
-.step-number{display:inline-flex;align-items:center;justify-content:center;width:2.5rem;height:2.5rem;border-radius:50%;background:var(--primary);color:#fff;font-weight:700;font-size:.875rem;flex-shrink:0}
+.step-number{display:inline-flex;align-items:center;justify-content:center;width:2.5rem;height:2.5rem;border-radius:50%;background:var(--accent);color:#fff;font-weight:700;font-size:.875rem;flex-shrink:0}
 
 /* Numbered List */
 .numbered-list{list-style:none;padding:0}
@@ -179,7 +179,7 @@
 .sdg-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
 @media(min-width:640px){.sdg-grid{grid-template-columns:1fr 1fr 1fr}}
 .sdg-card{text-align:center;padding:1.5rem;border:1px solid var(--border);border-radius:var(--radius)}
-.sdg-number{font-size:2rem;font-weight:700;color:var(--primary);margin-bottom:.5rem}
+.sdg-number{font-size:2rem;font-weight:700;color:var(--accent);margin-bottom:.5rem}
 .sdg-detail{font-size:.75rem;color:var(--fg-muted)}
 
 /* Timeline */
@@ -187,12 +187,12 @@
 .timeline::before{content:'';position:absolute;left:.5rem;top:0;bottom:0;width:2px;background:var(--border)}
 .timeline-item{position:relative;padding-bottom:2rem}
 .timeline-item:last-child{padding-bottom:0}
-.timeline-dot{position:absolute;left:-1.625rem;top:.25rem;width:1rem;height:1rem;border-radius:50%;background:var(--primary);border:2px solid var(--bg)}
+.timeline-dot{position:absolute;left:-1.625rem;top:.25rem;width:1rem;height:1rem;border-radius:50%;background:var(--accent);border:2px solid var(--bg)}
 .timeline-year{font-size:.75rem;color:var(--fg-muted);margin-bottom:.25rem}
 .timeline-content h4{font-weight:600;margin-bottom:.25rem}
 
 /* Blockquote XL */
-.blockquote-xl{font-size:1.25rem;line-height:1.6;font-style:italic;border-left:4px solid var(--primary);padding:1rem 1.5rem;margin:2rem 0;background:var(--bg-secondary);border-radius:0 var(--radius-sm) var(--radius-sm) 0}
+.blockquote-xl{font-size:1.25rem;line-height:1.6;font-style:italic;border-left:4px solid var(--accent);padding:1rem 1.5rem;margin:2rem 0;background:var(--bg-secondary);border-radius:0 var(--radius-sm) var(--radius-sm) 0}
 .bold-xl{font-weight:700}
 
 /* Small List */
@@ -241,7 +241,7 @@
 .container.prose{max-width:42rem}
 
 /* Section CTA dark */
-.section-cta-dark{background:var(--primary);color:rgba(255,255,255,.9);text-align:center;padding:5rem 0}
+.section-cta-dark{background:var(--accent);color:rgba(255,255,255,.9);text-align:center;padding:5rem 0}
 .section-cta-dark h2{color:#fff;margin-bottom:1rem}
 .section-cta-dark p{color:rgba(255,255,255,.7);max-width:36rem;margin:0 auto 2rem}
 

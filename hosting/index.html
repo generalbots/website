@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Pricing | General Bots — Multi-Agent AI Platform &amp; Self-Hosted</title>
+<title>Hosting | General Bots — Self-Host or Choose a Certified Hosting Partner</title>
 <meta name="description" content="Self-host the General Bots multi-agent AI platform freely, or pick a certified hosting partner for a managed instance. Open source, AGPL-3.0, full data sovereignty.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://generalbots.org/hosting/">
@@ -22,7 +22,7 @@
 <link rel="icon" type="image/x-icon" href="https://chat.pragmatismo.com.br/favicon.ico">
 <link rel="icon" type="image/svg+xml" href="https://pragmatismo.com.br/img/logo.svg">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="stylesheet" href="/css/site.min.css">
+<link rel="stylesheet" href="/css/site.min.css?v=3">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -223,6 +223,148 @@
 </div>
 </section>
 
+<!-- Plan Comparison Table -->
+<section class="section reveal" style="padding:3rem 0">
+<div class="container">
+<div class="section-header centered" style="margin-bottom:2.5rem">
+<span class="overline">Compare Plans</span>
+<h2 style="font-size:clamp(1.25rem,2.5vw,1.75rem)" data-i18n="hosting.compare_title">Self-Host vs Partner vs Dedicated</h2>
+</div>
+<div class="comparison-table-wrapper" style="overflow-x:auto;max-width:960px;margin:0 auto">
+<table class="comparison-table" style="width:100%;border-collapse:separate;border-spacing:0;font-size:.875rem">
+<thead>
+<tr>
+<th style="text-align:left;padding:1rem 1.25rem;background:#f8f8f8;border-bottom:2px solid #e5e5e5;font-weight:700;font-size:.8rem;text-transform:uppercase;letter-spacing:.04em;color:var(--fg-muted);position:sticky;top:0;z-index:2"></th>
+<th style="text-align:center;padding:1rem .75rem;background:#f8f8f8;border-bottom:2px solid #e5e5e5;font-weight:700;font-size:.8rem;text-transform:uppercase;letter-spacing:.04em;position:sticky;top:0;z-index:2" data-i18n="hosting.compare_self_host">Self-Host</th>
+<th style="text-align:center;padding:1rem .75rem;background:#f8f8f8;border-bottom:2px solid #e5e5e5;font-weight:700;font-size:.8rem;text-transform:uppercase;letter-spacing:.04em;position:sticky;top:0;z-index:2" data-i18n="hosting.compare_shared">Shared</th>
+<th style="text-align:center;padding:1rem .75rem;background:#f8f8f8;border-bottom:2px solid #e5e5e5;font-weight:700;font-size:.8rem;text-transform:uppercase;letter-spacing:.04em;position:sticky;top:0;z-index:2" data-i18n="hosting.compare_dedicated">Dedicated</th>
+<th style="text-align:center;padding:1rem .75rem;background:#f8f8f8;border-bottom:2px solid #e5e5e5;font-weight:700;font-size:.8rem;text-transform:uppercase;letter-spacing:.04em;position:sticky;top:0;z-index:2;color:#6366f1" data-i18n="hosting.compare_private">Private&nbsp;Cloud</th>
+</tr>
+</thead>
+<tbody>
+<tr style="border-bottom:1px solid #eee">
+<td style="padding:.85rem 1.25rem;font-weight:600;color:var(--fg)" data-i18n="hosting.compare_row_pricing">Pricing</td>
+<td style="text-align:center;padding:.85rem .75rem;color:var(--fg-muted)" data-i18n="hosting.compare_row_pricing_self">Free (AGPL)</td>
+<td style="text-align:center;padding:.85rem .75rem;color:var(--fg-muted)" data-i18n="hosting.compare_row_pricing_shared">Per-seat</td>
+<td style="text-align:center;padding:.85rem .75rem;color:var(--fg-muted)" data-i18n="hosting.compare_row_pricing_dedicated">Flat-rate</td>
+<td style="text-align:center;padding:.85rem .75rem;font-weight:700;color:#6366f1" data-i18n="hosting.compare_row_pricing_private">Custom</td>
+</tr>
+<tr style="border-bottom:1px solid #eee;background:#fafafa">
+<td style="padding:.85rem 1.25rem;font-weight:600;color:var(--fg)" data-i18n="hosting.compare_row_deploy">Deployment</td>
+<td style="text-align:center;padding:.85rem .75rem;color:var(--fg-muted)" data-i18n="hosting.compare_row_deploy_self">Your server</td>
+<td style="text-align:center;padding:.85rem .75rem;color:var(--fg-muted)" data-i18n="hosting.compare_row_deploy_shared">Shared partner server</td>
+<td style="text-align:center;padding:.85rem .75rem;color:var(--fg-muted)" data-i18n="hosting.compare_row_deploy_dedicated">Private partner server</td>
+<td style="text-align:center;padding:.85rem .75rem;font-weight:600;color:#6366f1" data-i18n="hosting.compare_row_deploy_private">Your cloud / on-prem</td>
+</tr>
+<tr style="border-bottom:1px solid #eee">
+<td style="padding:.85rem 1.25rem;font-weight:600;color:var(--fg)" data-i18n="hosting.compare_row_data">Data sovereignty</td>
+<td class="check-cell" style="text-align:center;padding:.85rem .75rem;color:#16a34a">✓ Full</td>
+<td class="check-cell" style="text-align:center;padding:.85rem .75rem;color:var(--fg-muted)" data-i18n="hosting.compare_row_data_shared">Shared infra</td>
+<td class="check-cell" style="text-align:center;padding:.85rem .75rem;color:#16a34a">✓ Full</td>
+<td class="check-cell" style="text-align:center;padding:.85rem .75rem;color:#16a34a">✓ Full</td>
+</tr>
+<tr style="border-bottom:1px solid #eee;background:#fafafa">
+<td style="padding:.85rem 1.25rem;font-weight:600;color:var(--fg)" data-i18n="hosting.compare_row_support">Support</td>
+<td style="text-align:center;padding:.85rem .75rem;color:var(--fg-muted)" data-i18n="hosting.compare_row_support_self">Community</td>
+<td style="text-align:center;padding:.85rem .75rem;color:var(--fg-muted)" data-i18n="hosting.compare_row_support_shared">Partner SLA</td>
+<td style="text-align:center;padding:.85rem .75rem;color:var(--fg-muted)" data-i18n="hosting.compare_row_support_dedicated">Partner SLA</td>
+<td style="text-align:center;padding:.85rem .75rem;color:var(--fg-muted);font-weight:600" data-i18n="hosting.compare_row_support_private">Advanced SLA</td>
+</tr>
+<tr style="border-bottom:1px solid #eee">
+<td style="padding:.85rem 1.25rem;font-weight:600;color:var(--fg)" data-i18n="hosting.compare_row_updates">Updates</td>
+<td style="text-align:center;padding:.85rem .75rem;color:var(--fg-muted)" data-i18n="hosting.compare_row_updates_self">Manual</td>
+<td style="text-align:center;padding:.85rem .75rem;color:var(--fg-muted)" data-i18n="hosting.compare_row_updates_shared">Managed</td>
+<td style="text-align:center;padding:.85rem .75rem;color:var(--fg-muted)" data-i18n="hosting.compare_row_updates_dedicated">Managed</td>
+<td style="text-align:center;padding:.85rem .75rem;color:var(--fg-muted);font-weight:600" data-i18n="hosting.compare_row_updates_private">Managed</td>
+</tr>
+<tr style="border-bottom:1px solid #eee;background:#fafafa">
+<td style="padding:.85rem 1.25rem;font-weight:600;color:var(--fg)" data-i18n="hosting.compare_row_backup">Backups</td>
+<td style="text-align:center;padding:.85rem .75rem;color:var(--fg-muted)" data-i18n="hosting.compare_row_backup_self">DIY</td>
+<td style="text-align:center;padding:.85rem .75rem;color:var(--fg-muted)" data-i18n="hosting.compare_row_backup_shared">Weekly</td>
+<td style="text-align:center;padding:.85rem .75rem;color:var(--fg-muted)" data-i18n="hosting.compare_row_backup_dedicated">Daily</td>
+<td style="text-align:center;padding:.85rem .75rem;color:var(--fg-muted);font-weight:600" data-i18n="hosting.compare_row_backup_private">Real-time</td>
+</tr>
+<tr style="border-bottom:1px solid #eee">
+<td style="padding:.85rem 1.25rem;font-weight:600;color:var(--fg)" data-i18n="hosting.compare_row_users">Multi-user</td>
+<td style="text-align:center;padding:.85rem .75rem;color:#16a34a">✓ Unlimited</td>
+<td style="text-align:center;padding:.85rem .75rem;color:var(--fg-muted)" data-i18n="hosting.compare_row_users_shared">Per team</td>
+<td style="text-align:center;padding:.85rem .75rem;color:#16a34a">✓ Unlimited</td>
+<td style="text-align:center;padding:.85rem .75rem;color:#16a34a">✓ Unlimited</td>
+</tr>
+<tr style="border-bottom:1px solid #eee;background:#fafafa">
+<td style="padding:.85rem 1.25rem;font-weight:600;color:var(--fg)" data-i18n="hosting.compare_row_modules">Modules</td>
+<td style="text-align:center;padding:.85rem .75rem;color:var(--fg-muted)" data-i18n="hosting.compare_row_modules_self">All</td>
+<td style="text-align:center;padding:.85rem .75rem;color:var(--fg-muted)" data-i18n="hosting.compare_row_modules_shared">All</td>
+<td style="text-align:center;padding:.85rem .75rem;color:var(--fg-muted)" data-i18n="hosting.compare_row_modules_dedicated">All</td>
+<td style="text-align:center;padding:.85rem .75rem;color:var(--fg-muted);font-weight:600" data-i18n="hosting.compare_row_modules_private">All + custom</td>
+</tr>
+<tr style="border-bottom:1px solid #eee">
+<td style="padding:.85rem 1.25rem;font-weight:600;color:var(--fg)" data-i18n="hosting.compare_row_uptime">SLA / Uptime</td>
+<td style="text-align:center;padding:.85rem .75rem;color:var(--fg-muted)" data-i18n="hosting.compare_row_uptime_self">Your uptime</td>
+<td style="text-align:center;padding:.85rem .75rem;color:var(--fg-muted)" data-i18n="hosting.compare_row_uptime_shared">99.5%</td>
+<td style="text-align:center;padding:.85rem .75rem;color:var(--fg-muted)" data-i18n="hosting.compare_row_uptime_dedicated">99.9%</td>
+<td style="text-align:center;padding:.85rem .75rem;color:#6366f1;font-weight:700" data-i18n="hosting.compare_row_uptime_private">99.99%</td>
+</tr>
+<tr style="border-bottom:1px solid #eee;background:#fafafa">
+<td style="padding:.85rem 1.25rem;font-weight:600;color:var(--fg)" data-i18n="hosting.compare_row_llm">LLM choice</td>
+<td style="text-align:center;padding:.85rem .75rem;color:#16a34a">✓ Any</td>
+<td style="text-align:center;padding:.85rem .75rem;color:#16a34a">✓ Any</td>
+<td style="text-align:center;padding:.85rem .75rem;color:#16a34a">✓ Any</td>
+<td style="text-align:center;padding:.85rem .75rem;color:#16a34a">✓ Any</td>
+</tr>
+<tr style="border-bottom:1px solid #eee">
+<td style="padding:.85rem 1.25rem;font-weight:600;color:var(--fg)" data-i18n="hosting.compare_row_ai">AI orchestration</td>
+<td style="text-align:center;padding:.85rem .75rem;color:#16a34a">✓ Full</td>
+<td style="text-align:center;padding:.85rem .75rem;color:#16a34a">✓ Full</td>
+<td style="text-align:center;padding:.85rem .75rem;color:#16a34a">✓ Full</td>
+<td style="text-align:center;padding:.85rem .75rem;color:#16a34a">✓ Full</td>
+</tr>
+<tr style="border-bottom:1px solid #eee;background:#fafafa;border-bottom:none">
+<td style="padding:.85rem 1.25rem;font-weight:600;color:var(--fg)" data-i18n="hosting.compare_row_license">License</td>
+<td style="text-align:center;padding:.85rem .75rem;color:var(--fg-muted)" data-i18n="hosting.compare_row_license_self">AGPL-3.0</td>
+<td style="text-align:center;padding:.85rem .75rem;color:var(--fg-muted)" data-i18n="hosting.compare_row_license_shared">AGPL + partner terms</td>
+<td style="text-align:center;padding:.85rem .75rem;color:var(--fg-muted)" data-i18n="hosting.compare_row_license_dedicated">AGPL + partner terms</td>
+<td style="text-align:center;padding:.85rem .75rem;font-weight:600;color:#6366f1" data-i18n="hosting.compare_row_license_private">Enterprise agreement</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+
+<style>
+.comparison-table th:first-child,
+.comparison-table td:first-child {
+  border-radius: 0;
+}
+.comparison-table th:last-child {
+  border-top-right-radius: 12px;
+}
+.comparison-table tr:last-child td:first-child {
+  border-bottom-left-radius: 12px;
+}
+.comparison-table tr:last-child td:last-child {
+  border-bottom-right-radius: 12px;
+}
+.comparison-table td {
+  font-size: .8125rem;
+}
+.comparison-table .check-cell svg {
+  vertical-align: middle;
+  width: 16px;
+  height: 16px;
+}
+@media (max-width: 640px) {
+  .comparison-table {
+    font-size: .75rem !important;
+  }
+  .comparison-table th,
+  .comparison-table td {
+    padding: .6rem .4rem !important;
+  }
+}
+</style>
+
 <!-- CTA -->
 <section class="cta-section reveal">
 <div class="container" style="position:relative;z-index:1">
@@ -266,6 +408,6 @@
 </main>
 <div hx-get="/partials/footer.html" hx-swap="innerHTML" hx-trigger="load"></div>
 <script defer src="https://unpkg.com/htmx.org@2.0.10"></script>
-<script defer src="/js/site.min.js"></script>
+<script defer src="/js/site.min.js?v=2"></script>
 </body>
 </html>
