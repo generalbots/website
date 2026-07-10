@@ -632,10 +632,10 @@
 
 <div hx-get="/partials/footer.html" hx-swap="innerHTML" hx-trigger="load"></div>
 <script>
-function switchTab(e,panel){
+function switchTab(el,panel){
 document.querySelectorAll('.user-tab').forEach(function(t){t.classList.remove('active')});
 document.querySelectorAll('.user-panel').forEach(function(p){p.classList.remove('active')});
-e.target.classList.add('active');
+el.classList.add('active');
 document.getElementById('panel-'+panel).classList.add('active');
 }
 </script>
