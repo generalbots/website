@@ -3198,5 +3198,21 @@
   "features.advanced_rag.cta_signup": "S'inscrire",
   "features.advanced_rag.cta_pricing": "Voir les prix",
   "features.advanced_rag.related_title": "Lecture connexe",
-  "features.advanced_rag.related_desc": "Du blog Général Bots"
+  "features.advanced_rag.related_desc": "Du blog Général Bots",
+  "hosting.overline": "Partenaires d'hébergement",
+  "hosting.title": "Choisissez votre fournisseur d'hébergement",
+  "hosting.badge_shared": "Commun",
+  "hosting.badge_alpha": "Alpha",
+  "hosting.badge_free_shared_private": "Gratuit · Partagé · Privé",
+  "hosting.badge_private_cloud": "Cloud privé",
+  "hosting.contact_map": "Contacter Map Agency",
+  "hosting.visit_partner": "Visiter le partenaire",
+  "hosting.contact_oerlabs": "Contacter OERLabs",
+  "hosting.try_pragmatismo": "Essayer Pragmatismo",
+  "hosting.contact_dario": "Contacter Dário Executive Sales",
+  "hosting.contact_sentient": "Contacter Sentient",
+  "hosting.compare_overline": "Comparez les forfaits",
+  "features.one_platform_every_scale": "Une plateforme, à chaque échelle",
+  "common.related_reading": "Lecture connexe",
+  "common.from_the_blog": "Du blog Général Bots"
 }

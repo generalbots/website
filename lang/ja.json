@@ -3198,5 +3198,21 @@
   "features.advanced_rag.cta_signup": "登録",
   "features.advanced_rag.cta_pricing": "価格を見る",
   "features.advanced_rag.related_title": "関連書籍",
-  "features.advanced_rag.related_desc": "一般的なボットのブログより"
+  "features.advanced_rag.related_desc": "一般的なボットのブログより",
+  "hosting.overline": "ホスティングパートナー",
+  "hosting.title": "ホスティングプロバイダーを選択してください",
+  "hosting.badge_shared": "共有",
+  "hosting.badge_alpha": "アルファ",
+  "hosting.badge_free_shared_private": "無料・共有・プライベート",
+  "hosting.badge_private_cloud": "プライベートクラウド",
+  "hosting.contact_map": "Map Agencyに連絡",
+  "hosting.visit_partner": "パートナーを訪問",
+  "hosting.contact_oerlabs": "OERLabs へのお問い合わせ",
+  "hosting.try_pragmatismo": "Pragmatismoを試す",
+  "hosting.contact_dario": "Dário Executive Salesに連絡",
+  "hosting.contact_sentient": "Sentientに連絡",
+  "hosting.compare_overline": "プランを比較する",
+  "features.one_platform_every_scale": "あらゆる規模の 1 つのプラットフォーム",
+  "common.related_reading": "関連書籍",
+  "common.from_the_blog": "General Botsブログより"
 }

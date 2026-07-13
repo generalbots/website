@@ -3198,5 +3198,21 @@
   "features.advanced_rag.cta_signup": "Sign Up",
   "features.advanced_rag.cta_pricing": "View Pricing",
   "features.advanced_rag.related_title": "Related Reading",
-  "features.advanced_rag.related_desc": "From the General Bots blog"
+  "features.advanced_rag.related_desc": "From the General Bots blog",
+  "hosting.overline": "Hosting Partners",
+  "hosting.title": "Choose Your Hosting Provider",
+  "hosting.badge_shared": "Shared",
+  "hosting.badge_alpha": "Alpha",
+  "hosting.badge_free_shared_private": "Free · Shared · Private",
+  "hosting.badge_private_cloud": "Private Cloud",
+  "hosting.contact_map": "Contact Map Agency",
+  "hosting.visit_partner": "Visit Partner",
+  "hosting.contact_oerlabs": "Contact OERLabs",
+  "hosting.try_pragmatismo": "Try Pragmatismo",
+  "hosting.contact_dario": "Contact Dário Executive Sales",
+  "hosting.contact_sentient": "Contact Sentient",
+  "hosting.compare_overline": "Compare Plans",
+  "features.one_platform_every_scale": "One Platform, Every Scale",
+  "common.related_reading": "Related Reading",
+  "common.from_the_blog": "From the General Bots blog"
 }

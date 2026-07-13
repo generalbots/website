@@ -3198,5 +3198,21 @@
   "features.advanced_rag.cta_signup": "注册",
   "features.advanced_rag.cta_pricing": "查看定价",
   "features.advanced_rag.related_title": "相关阅读",
-  "features.advanced_rag.related_desc": "来自 General Bots 博客"
+  "features.advanced_rag.related_desc": "来自 General Bots 博客",
+  "hosting.overline": "托管合作伙伴",
+  "hosting.title": "选择您的托管提供商",
+  "hosting.badge_shared": "共享",
+  "hosting.badge_alpha": "阿尔法",
+  "hosting.badge_free_shared_private": "免费 · 共享 · 私人",
+  "hosting.badge_private_cloud": "私有云",
+  "hosting.contact_map": "联系 Map Agency",
+  "hosting.visit_partner": "访问合作伙伴",
+  "hosting.contact_oerlabs": "联系 OERLabs",
+  "hosting.try_pragmatismo": "试用 Pragmatismo",
+  "hosting.contact_dario": "联系 Dário Executive Sales",
+  "hosting.contact_sentient": "联系 Sentient",
+  "hosting.compare_overline": "比较计划",
+  "features.one_platform_every_scale": "一个平台，各种规模",
+  "common.related_reading": "相关阅读",
+  "common.from_the_blog": "来自 General Bots 的博客"
 }
