@@ -4,4 +4,6 @@
 .mobile-toggle svg{width:1.25rem;height:1.25rem}
 .logo-mark img{width:34px;height:34px}
 }
+.partners-grid{display:grid;grid-template-columns:1fr;gap:1.5rem;max-width:960px;margin:0 auto}@media(min-width:640px){.partners-grid{grid-template-columns:1fr 1fr}}
+.partner-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.75rem;transition:var(--transition);backdrop-filter:var(--glass-blur)}.partner-card:hover{border-color:var(--border-hover);box-shadow:var(--shadow)}
 
