@@ -3137,5 +3137,6 @@
   "hosting.compare_row_license_self": "AGPL-3.0",
   "hosting.compare_row_license_shared": "AGPL + partner terms",
   "hosting.compare_row_license_dedicated": "AGPL + partner terms",
-  "hosting.compare_row_license_private": "Enterprise agreement"
+  "hosting.compare_row_license_private": "Enterprise agreement",
+  "hero.chat.greeting": "Hey! 👋 I'm your General Bots AI assistant. I can help you explore our multi-agent platform, deploy bots, or answer questions about our sovereign AI stack. What would you like to know?"
 }
