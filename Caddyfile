@@ -8,7 +8,7 @@ generalbots.org, www.generalbots.org {
     encode gzip
 
     @lang {
-        path_regexp lang ^/(?:pt|es|fr|de|ja|zh-cn)(/.*)?$
+        path_regexp lang ^/(?:en|pt|es|fr|de|ja|zh-cn)(/.*)?$
     }
     rewrite @lang {re.lang.1}
 
@@ -39,7 +39,7 @@ generalbots.org, www.generalbots.org {
     encode gzip
 
     @lang {
-        path_regexp lang ^/(?:pt|es|fr|de|ja|zh-cn)(/.*)?$
+        path_regexp lang ^/(?:en|pt|es|fr|de|ja|zh-cn)(/.*)?$
     }
     rewrite @lang {re.lang.1}
 
