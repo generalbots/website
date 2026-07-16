@@ -3239,7 +3239,6 @@
   "common.from_the_blog": "来自 General Bots 的博客",
   "chat.just_now": "刚才",
   "chat.placeholder": "问任何问题来开始对话...",
-  "common.preview_banner": "⚡ General Bots 目前处于预览阶段 — 功能正在快速演进。在生产环境中使用前请审阅条款。",
   "common.read_more": "阅读更多 →",
   "home.advanced_rag_memory": "高级RAG与记忆",
   "home.advanced_rag_title": "高级RAG",
@@ -3280,9 +3279,14 @@
   "blog.cta.reduce_ai_costs": "降低AI成本",
   "blog.cta.join_sustainable_future": "加入我们，通过可访问的技术共建可持续的未来",
   "footer.description": "面向自主智能体、智能体AI工作流和LLM编排的多智能体AI编排平台。自托管保障完全数据主权，或选择认证提供商。",
-  "footer.dpo": "DPO: Rodrigo Rodriguez (security@pragmatismo.com.br)",
   "footer.location": "里约热内卢 – 圣保罗 – 巴拉那州, 巴西",
-  "footer.phone": "+55 21 4040-2160",
   "footer.copyright": "General Bots — 多智能体AI编排平台 — AGPL-3.0",
-  "blog.cta.join_the_movement": "Join the Movement"
+  "blog.cta.join_the_movement": "Join the Movement",
+  "common.preview_general_bots": "General Bots",
+  "common.preview_is_currently": "目前处于",
+  "common.preview_title": "预览版",
+  "common.preview_features_evolving": "——功能正在快速演进。",
+  "common.preview_review_terms": "查看条款",
+  "common.preview_before_use": "后再投入生产使用。",
+  "footer.dpo_label": "DPO："
 }

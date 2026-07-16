@@ -3239,7 +3239,6 @@
   "common.from_the_blog": "Do blog General Bots",
   "chat.just_now": "agora mesmo",
   "chat.placeholder": "Pergunte qualquer coisa para iniciar uma conversa...",
-  "common.preview_banner": "⚡ O General Bots está atualmente em Preview — os recursos evoluem rapidamente. Revise os termos antes do uso em produção.",
   "common.read_more": "Leia mais →",
   "home.advanced_rag_memory": "RAG Avançado e Memória",
   "home.advanced_rag_title": "RAG Avançado",
@@ -3280,9 +3279,14 @@
   "blog.cta.reduce_ai_costs": "Reduza Custos de IA",
   "blog.cta.join_sustainable_future": "Junte-se a Nós na Construção de um Futuro Sustentável Através da Tecnologia Acessível",
   "footer.description": "Plataforma de orquestração de IA multiagente para agentes autônomos, fluxos de trabalho de IA agêntica e orquestração de LLM. Auto-hospede com total soberania de dados ou escolha um provedor certificado.",
-  "footer.dpo": "DPO: Rodrigo Rodriguez (security@pragmatismo.com.br)",
   "footer.location": "Rio de Janeiro – São Paulo – Paraná, Brasil",
-  "footer.phone": "+55 21 4040-2160",
   "footer.copyright": "General Bots — Plataforma Multiagente de Orquestração de IA — AGPL-3.0",
-  "blog.cta.join_the_movement": "Join the Movement"
+  "blog.cta.join_the_movement": "Join the Movement",
+  "common.preview_general_bots": "General Bots",
+  "common.preview_is_currently": "está atualmente em",
+  "common.preview_title": "Preview",
+  "common.preview_features_evolving": "— recursos em rápida evolução.",
+  "common.preview_review_terms": "Revise os termos",
+  "common.preview_before_use": "antes do uso em produção.",
+  "footer.dpo_label": "DPO:"
 }

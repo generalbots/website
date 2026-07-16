@@ -3239,7 +3239,6 @@
   "common.from_the_blog": "Aus dem General Bots-Blog",
   "chat.just_now": "gerade eben",
   "chat.placeholder": "Fragen Sie alles, um ein Gespräch zu beginnen...",
-  "common.preview_banner": "⚡ General Bots befindet sich derzeit in der Vorschau — die Funktionen entwickeln sich schnell weiter. Überprüfen Sie die Bedingungen vor dem Einsatz in der Produktion.",
   "common.read_more": "Mehr lesen →",
   "home.advanced_rag_memory": "Erweitertes RAG und Speicher",
   "home.advanced_rag_title": "Erweitertes RAG",
@@ -3280,9 +3279,14 @@
   "blog.cta.reduce_ai_costs": "KI-Kosten senken",
   "blog.cta.join_sustainable_future": "Schließen Sie Sich Uns an und Gestalten Sie eine Nachhaltige Zukunft durch Zugängliche Technologie",
   "footer.description": "Multi-Agenten-KI-Orchestrierungsplattform für autonome Agenten, agentische KI-Workflows und LLM-Orchestrierung. Selbst hosten mit vollständiger Datenhoheit oder einen zertifizierten Anbieter wählen.",
-  "footer.dpo": "DSB: Rodrigo Rodriguez (security@pragmatismo.com.br)",
   "footer.location": "Rio de Janeiro – São Paulo – Paraná, Brasilien",
-  "footer.phone": "+55 21 4040-2160",
   "footer.copyright": "General Bots — Multi-Agenten-KI-Orchestrierungsplattform — AGPL-3.0",
-  "blog.cta.join_the_movement": "Join the Movement"
+  "blog.cta.join_the_movement": "Join the Movement",
+  "common.preview_general_bots": "General Bots",
+  "common.preview_is_currently": "befindet sich derzeit in der",
+  "common.preview_title": "Vorschau",
+  "common.preview_features_evolving": "— Funktionen entwickeln sich schnell.",
+  "common.preview_review_terms": "Überprüfen Sie die Bedingungen",
+  "common.preview_before_use": "vor der Produktionsnutzung.",
+  "footer.dpo_label": "DPO:"
 }

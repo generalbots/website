@@ -3239,7 +3239,6 @@
   "common.from_the_blog": "General Botsブログより",
   "chat.just_now": "たった今",
   "chat.placeholder": "会話を始めるために何でも質問してください...",
-  "common.preview_banner": "⚡ General Botsは現在プレビュー版です — 機能は急速に進化しています。本番環境で使用する前に利用規約をご確認ください。",
   "common.read_more": "さらに詳しく→",
   "home.advanced_rag_memory": "高度なRAGとメモリー",
   "home.advanced_rag_title": "高度なRAG",
@@ -3280,9 +3279,14 @@
   "blog.cta.reduce_ai_costs": "AIコストを削減する",
   "blog.cta.join_sustainable_future": "アクセシブルなテクノロジーを通じて持続可能な未来を築くことにご参加ください",
   "footer.description": "自律エージェント、エージェンティックAIワークフロー、LLMオーケストレーションのためのマルチエージェントAIオーケストレーションプラットフォーム。完全なデータ主権でセルフホストするか、認定プロバイダーを選択してください。",
-  "footer.dpo": "DPO: Rodrigo Rodriguez (security@pragmatismo.com.br)",
   "footer.location": "リオデジャネイロ – サンパウロ – パラナ州, ブラジル",
-  "footer.phone": "+55 21 4040-2160",
   "footer.copyright": "General Bots — マルチエージェントAIオーケストレーションプラットフォーム — AGPL-3.0",
-  "blog.cta.join_the_movement": "Join the Movement"
+  "blog.cta.join_the_movement": "Join the Movement",
+  "common.preview_general_bots": "General Bots",
+  "common.preview_is_currently": "は現在",
+  "common.preview_title": "プレビュー版",
+  "common.preview_features_evolving": "— 機能は急速に進化しています。",
+  "common.preview_review_terms": "ご利用条件",
+  "common.preview_before_use": "をご確認ください。",
+  "footer.dpo_label": "DPO:"
 }
