@@ -1,0 +1,16 @@
+{
+    admin off
+}
+
+:8081 {
+    root * /home/a404010/src/generalbots.org
+    encode gzip
+
+    @lang {
+        path_regexp lang ^/(?:en|pt|es|fr|de|ja|zh-cn)(/.*)?$
+    }
+    rewrite @lang {re.lang.1}
+
+    try_files {path} {path}/index.html /index.html
+    file_server
+}
