@@ -18,54 +18,96 @@ All pages are hand-authored HTML with shared CSS, JS, and inline SVGs.
 
 ## Design System
 
-### Theme: Bright Warm-Neutral
+### Theme: Spectral Console
 
-The site uses a **white/light theme** — no dark mode, no purple/neon accents.
-Identity: gear logo (black & white), precision, automation.
+The site uses a **dark-first identity** (`color-scheme: dark`) with a `1px animated rainbow line` as its singular visual signature. Near-black editorial canvas, with rainbow applied only as thin decorative lines — never to functional UI elements. Light mode is available via toggle.
+
+Identity: precision instrumentation, sovereign infrastructure, spectrum elegance.
 
 ### CSS Custom Properties
 
 ```css
 :root {
-  --background: #FAFAFA;
-  --foreground: hsl(220 15% 15%);
-  --card: #fff;
-  --card-foreground: hsl(220 15% 15%);
-  --primary: hsl(220 10% 12%);
-  --primary-foreground: #fff;
-  --secondary: hsl(220 10% 96%);
-  --secondary-foreground: hsl(220 15% 15%);
-  --muted: hsl(220 10% 94%);
-  --muted-foreground: hsl(220 10% 45%);
-  --accent: hsl(220 10% 92%);
-  --accent-foreground: hsl(220 15% 15%);
-  --border: hsl(220 10% 90%);
-  --radius: 0.75rem;
-  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
-  --font-display: 'DM Sans', 'Inter', system-ui, sans-serif;
+  --bg: #08080a;
+  --fg: #f0f0f3;
+  --accent: #a0a0b6;            /* Neutral — not used for rainbow */
+  --rainbow: linear-gradient(90deg,#ff4d00,#fbbf24,#10b981,#06b6d4,#6366f1,#ec4899,#ff4d00);
+  --rainbow-subtle: linear-gradient(90deg,rgba(255,77,0,.4),rgba(251,191,36,.4),...);
+  --font: "Inter", system-ui, sans-serif;
+  --font-display: "Space Grotesk", "Inter", system-ui, sans-serif;
+  --mono: "Noto Sans Mono", "Liberation Mono", monospace;
+}
+
+[data-theme="light"] {
+  --bg: #fafaf8;
+  --fg: #0e0e14;
+  --rainbow: linear-gradient(90deg,#e63c00,#d97706,#059669,#0891b2,#4f46e5,#db2777,#e63c00);
 }
 ```
 
-### Color Rules
+### Rainbow Line Rules
+
+The rainbow identity is strictly **decorative only**. Applied as `border-image` with `border-image-slice:1` for a razor-thin 1px line, animated with `@keyframes rainbow-shift`.
+
+| Element | Rainbow line placement |
+|---------|------------------------|
+| Header | Bottom border (fixed) |
+| Footer | Top border |
+| Preview banner | Bottom border |
+| Hero headline | `Rebuilt.` word is rainbow gradient text |
+| Section dividers | `.section-alt` uses rainbow mask overlay |
+| Stat numbers | Rainbow gradient text, animated |
+| Ticker | Top + bottom rainbow borders |
+| Value cards | Rainbow 1px border on hover (revealed via `::before`) |
+| Feature cards | Rainbow 1px border on hover |
+| Architecture cards | Ghost numeral gets rainbow stroke on card hover |
+| Edition tier headers | Rainbow bottom underline |
+| Integration cards | Rainbow 1px border on hover |
+| Related post cards | Rainbow 1px border on hover |
+
+**Rule**: Rainbow never appears on functional UI (buttons, form controls, focus rings, navigation text, selection, badges). Those use the neutral `--accent` token.
+
+### Card Classes
+
+- `.glass-card`, `.glass-card-bright`, `.neon-border-purple/cyan/emerald` — legacy names kept for compat, all render as subtle 1px border
+- `.card` — standard elevated card with backdrop blur
+- `.value-card` / `.feat-card` / `.arch-card` / `.related-post-card` — homepage-specific card variants
+- `.spot-card` — adds mouse-tracking radial glow (`.spot-card::before` + JS `pointermove` handler)
+- `.card-hover` — lift + rainbow edge reveal
+
+### Utility Classes
+
+- `.rainbow-edge` — any element gets animated rainbow background (for `border-image`)
+- `.rainbow-line` — `<hr>`-equivalent 1px rainbow divider
+- `.grain` — fixed full-screen noise texture overlay (opacity .022)
+- `.section` — standard section padding (5rem 0)
+- `.section-alt` — section with rainbow mask overlay
+- `.btn`, `.btn-primary`, `.btn-outline`, `.btn-lg` — button system (rainbow border on `.btn-primary` hover)
+- `.reveal` — IntersectionObserver fade-in-up (0.6s cubic-bezier)
+
+### Typography
+
+- Body: **Inter** (400/500/600/700/800 weights), loaded via Google Fonts `@import`
+- Display: **Space Grotesk** (400/500/600/700 weights), loaded via Google Fonts `@import`
+- Mono: `Noto Sans Mono` / `Liberation Mono`
+- Hero H1: Space Grotesk, `clamp(2.5rem,5vw,4rem)`, `-0.035em` letter-spacing
+- Section H2: `2rem`, `-0.03em` letter-spacing
+- UI labels/badges: monospace, uppercase, `.65rem`
+
+### Color Rules (dark mode default)
 
 | Element | Value |
 |---------|-------|
-| Page background | `#FAFAFA` |
-| Text primary | `hsl(220 15% 15%)` ≈ dark gray |
-| Text secondary | `hsl(220 10% 45%)` / `.text-gray-500` equivalent |
-| Headings | `hsl(220 15% 15%)` — never purple/cyan |
-| Primary button | `var(--primary)` solid — no gradients |
-| Secondary button | Transparent + `var(--border)` border |
-| Card background | `rgba(255,255,255,.7)` glass or `#fff` solid |
-| Card border | `rgba(0,0,0,.06)` — subtle, not neon |
-| Card shadow | `0 1px 3px rgba(0,0,0,.04)` — barely visible |
-| Card hover | `translateY(-4px)` + `0 12px 32px rgba(0,0,0,.08)` |
-| Nav background | `rgba(255,255,255,.8)` + `backdrop-filter:blur(20px)` |
-| Footer background | `#FAFAFA` or `gray-50` equivalent |
-| Accent/divider | `rgba(0,0,0,.06)` — no colored lines |
-| Hero background | `linear-gradient(135deg, #f8f8f8, #fff, #f8f8f8)` |
+| Page background | `#08080a` |
+| Text primary | `#f0f0f3` |
+| Text secondary | `#9e9eb4` |
+| Accent (neutral) | `#a0a0b6` |
+| Card background | `rgba(14,14,20,.6)` glass |
+| Card border | `rgba(255,255,255,.06)` |
+| Nav background | `rgba(8,8,10,.75)` + `blur(28px)` |
+| Rainbow line | animated `var(--rainbow)` 1px `border-image` |
 
-**Forbidden**: `purple`, `cyan`, `emerald`, `neon`, `hsl(260,...)`, dark backgrounds, colored glows, gradient text (except `gray-900→gray-600` for hero stat values).
+**Forbidden in functional UI**: full-spectrum rainbow, `#ff4d00` solid, indigo, acid lime. Rainbow is for thin decorative lines only. Functional elements use `var(--accent)` (neutral).
 
 ### Card Classes
 

@@ -3267,7 +3267,7 @@
   "resources.success_stories": "Success Stories",
   "resources.the_ai_powered_org": "The AI-Powered Org",
   "slogan.banner": "Empower any person or organization to become an AI provider",
-  "stats.apps": "Integrated Applications",
+  "stats.apps": "Applications",
   "stats.channels": "Communication Channels",
   "stats.license": "Open Source",
   "stats.years": "Years in Production",
@@ -3366,5 +3366,8 @@
   "error.404_heading": "Page Not Found",
   "error.404_text": "The page you are looking for does not exist or has been moved. The sovereign AI platform is still here — try the homepage or docs.",
   "nav.home": "Home",
-  "nav.contact": "Contact"
+  "nav.contact": "Contact",
+  "stats.rust_lines": "Lines of Rust",
+  "stats.offline": "Offline Capable",
+  "stats.sovereignty": "Data Sovereignty"
 }
