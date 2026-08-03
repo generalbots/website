@@ -3,86 +3,26 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Templates | General Bots — AI Orchestration Blueprint Catalog</title>
-<meta name="description" content="Accelerate your sovereign AI deployment with pre-configured templates for Document Intelligence, Web Automation, Talk to Data, and Custom LLM Tools.">
-<meta name="robots" content="index, follow">
+<title data-i18n="apps.templates.title">Content | General Bots</title>
+<meta name="description" content="Self-hosted template management: email, WhatsApp, social, SMS, and bot templates with variables, live preview, version history, and JSON/CSV import-export." data-i18n="apps.templates.meta_desc">
 <link rel="canonical" href="https://generalbots.org/templates/">
 <meta property="og:locale" content="en_US"/>
-<meta property="og:title" content="AI-Powered Templates | General Bots Platform">
-<meta property="og:description" content="Pre-configured enterprise solutions to deploy intelligent bots and sovereign AI agents faster.">
+<meta property="og:title" content="Content | General Bots">
+<meta property="og:description" content="Self-hosted template management: email, WhatsApp, social, SMS, and bot templates with variables, live preview, version history, and JSON/CSV import-export.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://generalbots.org/templates/">
 <meta property="og:image" content="https://generalbots.org/og-image.png">
     <meta property="og:image:width" content="1200">
+    <meta name="twitter:card" content="summary_large_image"/>
     <meta property="og:image:height" content="630">
     <meta property="og:image:type" content="image/png">
     <meta property="og:image:alt" content="General Bots — Multi-Agent AI Platform &amp; Agentic Orchestration | Open Source">
 
-<meta name="twitter:card" content="summary_large_image">
+<meta name="robots" content="index, follow">
 <link rel="icon" type="image/x-icon" href="https://chat.pragmatismo.com.br/favicon.ico">
 <link rel="icon" type="image/svg+xml" href="https://pragmatismo.com.br/img/logo.svg">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="stylesheet" href="/css/site.min.css?v=4">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "Templates — General Bots Platform",
-  "description": "Accelerate your AI deployment with pre-configured templates.",
-  "url": "https://generalbots.org/templates/",
-  "isPartOf": {"@type": "WebSite", "name": "General Bots", "url": "https://generalbots.org"}
-}
-</script>
-<style>
-/* Page-specific overrides and adjustments */
-.templates-hero {
-  min-height: 60vh;
-  display: flex;
-  align-items: center;
-  padding: 8rem 0 5rem;
-  position: relative;
-  overflow: hidden;
-}
-.template-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.5rem;
-}
-@media(min-width: 768px) {
-  .template-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media(min-width: 1024px) {
-  .template-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-.t-card {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-.t-card-footer {
-  margin-top: auto;
-  padding-top: 1.5rem;
-}
-.t-link {
-  display: inline-flex;
-  align-items: center;
-  gap: .375rem;
-  font-size: .75rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: .08em;
-  color: var(--accent-light);
-  transition: var(--transition);
-}
-.t-link:hover {
-  color: var(--accent);
-  transform: translateX(2px);
-}
-</style>
+<link rel="stylesheet" href="/css/site.min.css?v=5">
 
     <link rel="alternate" hreflang="x-default" href="https://generalbots.org/templates/" />
     <link rel="alternate" hreflang="pt" href="https://generalbots.org/pt/templates/" />
@@ -91,234 +31,235 @@
     <link rel="alternate" hreflang="de" href="https://generalbots.org/de/templates/" />
     <link rel="alternate" hreflang="ja" href="https://generalbots.org/ja/templates/" />
     <link rel="alternate" hreflang="zh-cn" href="https://generalbots.org/zh-cn/templates/" />
-  </head>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "General Bots",
+  "description": "Self-hosted template management: email, WhatsApp, social, SMS, and bot templates with variables, live preview, version history, and JSON/CSV import-export.",
+  "url": "https://generalbots.org/templates/",
+  "isPartOf": {"@type": "WebSite", "name": "General Bots", "url": "https://generalbots.org"}
+}
+</script>
+</head>
 <body>
 <a href="#main-content" class="sr-only skip-link" data-i18n="common.skip_to_content">Skip to content</a>
 
-
 <div hx-get="/partials/header.html" hx-swap="innerHTML" hx-trigger="load"></div>
-
-<main role="main">
-
-<!-- ═══════════════ HERO ═══════════════ -->
-<section class="templates-hero">
+<main role="main" id="main-content">
+<section class="hero-section" style="padding:6rem 0 3rem;position:relative;overflow:hidden">
 <div class="mesh-pattern"></div>
-<div class="bloom bloom-1"></div>
-<div class="bloom bloom-2"></div>
-<div class="hero-orb hero-orb-1"></div>
-<div class="hero-orb hero-orb-2"></div>
-<div class="container" style="position:relative;z-index:2">
-  <div class="reveal text-center">
-    <div class="hero-badge" style="margin:0 auto 2rem">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/></svg>
-      Deployable Accelerators
-    </div>
-    <h1 style="font-size:clamp(2.5rem,6vw,4.5rem);font-weight:900;letter-spacing:-.05em;line-height:.92;margin-bottom:1.5rem">
-      <span data-i18n="templates.hero.line1">Deploy in</span><br><span class="gradient-word" data-i18n="templates.deploy_in_minutes">Minutes.</span>
-    </h1>
-    <p class="text-lg max-w-2xl mx-auto leading-relaxed mb-8" style="color:var(--fg-secondary);font-size:1.125rem" data-i18n="templates.our_templates_are_pre_configured_orchestration_blueprints_de">
-      Our templates are pre-configured orchestration blueprints designed for high-impact business use cases. Choose a template, customize your PROMPT.md, and launch your bot instantly.
-    </p>
-    <div class="flex flex-wrap gap-4 justify-center">
-      <a href="https://github.com/generalbots" class="btn btn-primary btn-lg" data-i18n="templates.github_catalog">GitHub Catalog</a>
-      <a href="/contact/" class="btn btn-outline btn-lg" data-i18n="templates.request_custom">Request Custom</a>
-    </div>
-  </div>
+<div class="container text-center reveal" style="position:relative;z-index:2">
+<div class="hero-badge" style="margin:0 auto 2rem">
+  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+  <span data-i18n="apps.templates.badge">Content</span>
+</div>
+<h1 class="hero-title" style="font-size:clamp(2.5rem,6vw,4rem);font-weight:900;letter-spacing:-.05em;line-height:.92;margin-bottom:1.5rem" data-i18n="apps.templates.hero_title">Reusable, branded messages, for every channel.</h1>
+<p class="text-lg max-w-2xl mx-auto" style="color:var(--fg-secondary);font-size:1.125rem;margin-bottom:2.5rem" data-i18n="apps.templates.hero_desc">Create email, WhatsApp, social, SMS, and bot-response templates with variables, conditionals, and live preview. Self-hosted on your VPS, so your content and campaigns stay on your own infrastructure.</p>
+<div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+  <a href="/hosting/" class="btn btn-primary btn-lg" data-i18n="apps.templates.cta">Self-Host Free</a>
+  <a href="/hosting/" class="btn btn-outline btn-lg" data-i18n="apps.templates.cta2">View Pricing</a>
+</div>
 </div>
 </section>
 
-<!-- ═══════════════ ACCELERATOR CATALOG ═══════════════ -->
+<div class="section-divider"></div>
+
 <section class="section reveal">
 <div class="container">
-  <div class="section-header centered">
-    <span class="overline" data-i18n="templates.catalog_overline">Pre-Built Catalogs</span>
-    <h2 data-i18n="templates.catalog_title">Accelerators for Any Workflow</h2>
-    <p data-i18n="templates.catalog_desc">Production-grade starting blocks powered by Rust orchestrators and native integration modules. Fully open source, customizable, and ready for sovereign hosting.</p>
+<div class="section-header centered">
+  <div class="overline" data-i18n="apps.templates.features_overline">Capabilities</div>
+  <h2 data-i18n="apps.templates.features_title">Everything a Modern Templates Needs</h2>
+  <p data-i18n="apps.templates.features_sub">Powerful capabilities with AI orchestration — all self-hosted on your infrastructure.</p>
+</div>
+<div class="grid-3">
+
+  <div class="bento-item">
+    <div class="bento-icon">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 6v6l4 2"/></svg>
+    </div>
+    <h3 data-i18n="apps.templates.feature_card1_title">Template Types</h3>
+    <p data-i18n="apps.templates.feature_card1_desc">Email, WhatsApp, social, bot, SMS, and notification templates, filterable by type in a single searchable library.</p>
   </div>
-
-  <div class="template-grid">
-    <!-- Template 1: AI Search -->
-    <div class="card t-card reveal reveal-delay-1">
-      <div class="flex items-center justify-between mb-4">
-        <div class="icon-box">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-        </div>
-        <span class="badge" data-i18n="templates.document_ai">Document AI</span>
-      </div>
-      <h3 class="text-xl font-bold mb-3" data-i18n="templates.ai_search_template">AI Search Template</h3>
-      <p class="text-sm text-muted leading-relaxed" data-i18n="templates.complete_document_intelligence_pipeline_supports_pdf_word">
-        Complete document intelligence pipeline. Supports PDF, Word, and Excel indexing with citation-based answers and source highlighting.
-      </p>
-      <div class="t-card-footer">
-        <a href="/features/ai-search/" class="t-link">
-          <span>Specifications</span>
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </a>
-      </div>
+  <div class="bento-item">
+    <div class="bento-icon">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
     </div>
-
-    <!-- Template 2: Crawler -->
-    <div class="card t-card reveal reveal-delay-2">
-      <div class="flex items-center justify-between mb-4">
-        <div class="icon-box">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
-        </div>
-        <span class="badge" data-i18n="templates.automation">Automation</span>
-      </div>
-      <h3 class="text-xl font-bold mb-3" data-i18n="templates.crawler_template">Crawler Template</h3>
-      <p class="text-sm text-muted leading-relaxed" data-i18n="templates.train_your_llm_with_real_time_website_data_automatically_cr">
-        Train your LLM with real-time website data. Automatically crawls, extracts clean text, and updates your vector knowledge base on a schedule.
-      </p>
-      <div class="t-card-footer">
-        <a href="/features/web-automation/" class="t-link">
-          <span>Specifications</span>
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </a>
-      </div>
-    </div>
-
-    <!-- Template 3: BI Talk to Data -->
-    <div class="card t-card reveal reveal-delay-3">
-      <div class="flex items-center justify-between mb-4">
-        <div class="icon-box">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
-        </div>
-        <span class="badge">BI</span>
-      </div>
-      <h3 class="text-xl font-bold mb-3" data-i18n="templates.talk_to_data_template">Talk to Data Template</h3>
-      <p class="text-sm text-muted leading-relaxed" data-i18n="templates.natural_language_interface_for_sql_databases_generates_real">
-        Natural language interface for SQL databases. Generates real-time charts, summaries, and executive reports directly from your data warehouse.
-      </p>
-      <div class="t-card-footer">
-        <a href="/features/talk-to-data/" class="t-link">
-          <span>Specifications</span>
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </a>
-      </div>
-    </div>
-
-    <!-- Template 4: LegalTech -->
-    <div class="card t-card reveal reveal-delay-1">
-      <div class="flex items-center justify-between mb-4">
-        <div class="icon-box">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        </div>
-        <span class="badge" data-i18n="templates.legal">Legal</span>
-      </div>
-      <h3 class="text-xl font-bold mb-3" data-i18n="templates.legaltech_template">LegalTech Template</h3>
-      <p class="text-sm text-muted leading-relaxed" data-i18n="templates.optimized_for_case_law_analysis_summarizes_legal_documents">
-        Optimized for case law analysis. Summarizes legal documents, identifies key precedents, and assists in high-volume legal research.
-      </p>
-      <div class="t-card-footer">
-        <a href="/contact/" class="t-link">
-          <span>Request Access</span>
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </a>
-      </div>
-    </div>
-
-    <!-- Template 5: LLM Server -->
-    <div class="card t-card reveal reveal-delay-2">
-      <div class="flex items-center justify-between mb-4">
-        <div class="icon-box">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
-        </div>
-        <span class="badge" data-i18n="templates.db97423871">API</span>
-      </div>
-      <h3 class="text-xl font-bold mb-3" data-i18n="templates.llm_server_template">LLM Server Template</h3>
-      <p class="text-sm text-muted leading-relaxed" data-i18n="templates.expose_your_llm_functions_as_enterprise_grade_rest_apis_inc">
-        Expose your LLM functions as enterprise-grade REST APIs. Includes built-in authentication, rate limiting, and cost-routing logic.
-      </p>
-      <div class="t-card-footer">
-        <a href="/features/create-apis-in-word/" class="t-link">
-          <span>Specifications</span>
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </a>
-      </div>
-    </div>
-
-    <!-- Template 6: EdTech -->
-    <div class="card t-card reveal reveal-delay-3">
-      <div class="flex items-center justify-between mb-4">
-        <div class="icon-box">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"/></svg>
-        </div>
-        <span class="badge" data-i18n="templates.education">Education</span>
-      </div>
-      <h3 class="text-xl font-bold mb-3" data-i18n="templates.edtech_template">EdTech Template</h3>
-      <p class="text-sm text-muted leading-relaxed" data-i18n="templates.automate_student_enrollment_faq_management_and_administrat">
-        Automate student enrollment, FAQ management, and administrative workflows. Integrated with common Learning Management Systems (LMS).
-      </p>
-      <div class="t-card-footer">
-        <a href="/contact/" class="t-link">
-          <span>Request Access</span>
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </a>
-      </div>
-    </div>
+    <h3 data-i18n="apps.templates.feature_card2_title">Dynamic Variables</h3>
+    <p data-i18n="apps.templates.feature_card2_desc">Personalize with variable placeholders, conditionals, loops, and default values — with syntax validation before sending.</p>
   </div>
+  <div class="bento-item">
+    <div class="bento-icon">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+    </div>
+    <h3 data-i18n="apps.templates.feature_card3_title">Live Preview</h3>
+    <p data-i18n="apps.templates.feature_card3_desc">See the rendered template in real time, preview mobile dimensions, and send a test copy to email or phone.</p>
+  </div>
+  <div class="bento-item">
+    <div class="bento-icon">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+    </div>
+    <h3 data-i18n="apps.templates.feature_card4_title">Version History</h3>
+    <p data-i18n="apps.templates.feature_card4_desc">Every change is versioned — diff between versions and compare any two states before rolling back.</p>
+  </div>
+  <div class="bento-item">
+    <div class="bento-icon">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+    </div>
+    <h3 data-i18n="apps.templates.feature_card5_title">Import &amp; Export</h3>
+    <p data-i18n="apps.templates.feature_card5_desc">Bulk-create templates from CSV, sync with external systems via JSON import/export, and keep the library portable.</p>
+  </div>
+  <div class="bento-item">
+    <div class="bento-icon">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+    </div>
+    <h3 data-i18n="apps.templates.feature_card6_title">Clone &amp; Organize</h3>
+    <p data-i18n="apps.templates.feature_card6_desc">Duplicate templates for A/B variations and categorize them by type or purpose to keep channels consistent.</p>
+  </div>
+</div>
 </div>
 </section>
 
-<!-- ═══════════════ CUSTOM SERVICES ═══════════════ -->
+<div class="section-divider"></div>
+
 <section class="section section-alt reveal">
-<div class="container text-center">
-  <h2 class="text-3xl font-bold tracking-tighter mb-4" data-i18n="templates.custom_development">Custom Development</h2>
-  <p class="text-lg text-muted max-w-2xl mx-auto mb-8 leading-relaxed" data-i18n="templates.need_a_specialized_template_for_your_industry_our_team_and">
-    Need a specialized template for your industry? Our team and partners can build custom accelerators tailored to your specific architecture.
-  </p>
-  <a href="/contact/" class="btn btn-primary btn-lg" data-i18n="templates.partner_with_us">Partner with Us</a>
-</div>
-</section>
-
-<!-- ═══════════════ FINAL CALLOUT ═══════════════ -->
-<section class="section reveal" style="position:relative">
-<div class="mesh-pattern"></div>
-<div class="container text-center" style="position:relative;z-index:2">
-  <h2 class="text-3xl font-bold tracking-tighter mb-4" data-i18n="templates.start_your_ai_journey_today">Start Your AI Journey Today</h2>
-  <p class="text-lg text-muted max-w-2xl mx-auto mb-8 leading-relaxed" data-i18n="templates.browse_our_github_repository_for_full_source_code_and_deploy">
-    Browse our GitHub repository for full source code and deployment guides for every template.
-  </p>
-  <div class="flex flex-wrap gap-4 justify-center">
-    <a href="https://github.com/generalbots" class="btn btn-primary btn-lg" data-i18n="templates.star_on_github">View on GitHub</a>
-    <a href="/hosting/" class="btn btn-outline btn-lg" data-i18n="templates.get_started">Sign Up</a>
-  </div>
-</div>
-</section>
-
-<section class="related-posts">
 <div class="container">
-  <h2 class="section-title" data-i18n="common.related_reading">Related Reading</h2>
-  <p class="section-desc" data-i18n="common.from_the_blog">From the General Bots blog</p>
-  <div class="related-posts-grid">
-<a href="/blog/general-bots-ai-templates/" class="related-post-card">
-  <time class="post-date" data-i18n="blog.date.general_bots_ai_templates">May 5, 2024</time>
-  <h3 data-i18n="blog.title.standardized_ai_templates">Standardized AI Templates</h3>
-  <p data-i18n="blog.desc.general_bots_ai_templates">Pre-configured orchestration blueprints for RAG, advanced retrieval, and domain-specific AI across Education, Finance, Healthcare, and more.</p>
-  <span class="read-more" data-i18n="common.read_more">Read more →</span>
-</a>
-<a href="/blog/basic-for-everyone/" class="related-post-card">
-  <time class="post-date" data-i18n="blog.date.basic_for_everyone">Apr 20, 2025</time>
-  <h3 data-i18n="blog.title.basic_for_everyone">BASIC for Everyone</h3>
-  <p data-i18n="blog.desc.basic_for_everyone">The sovereign gateway to AI using BASIC as a didactic orchestration language for web automation, data orchestration, and document synthesis.</p>
-  <span class="read-more" data-i18n="common.read_more">Read more →</span>
-</a>
-<a href="/blog/beyond-chatbots/" class="related-post-card">
-  <time class="post-date" data-i18n="blog.date.beyond_chatbots">Apr 15, 2025</time>
-  <h3 data-i18n="blog.title.beyond_chatbots">Beyond Chatbots</h3>
-  <p data-i18n="blog.desc.beyond_chatbots">Enterprise AI orchestration architecture for multi-step agents, ERP/CRM integration, and zero-friction enterprise automation.</p>
-  <span class="read-more" data-i18n="common.read_more">Read more →</span>
-</a>
+<div class="section-header centered">
+  <div class="overline" data-i18n="apps.templates.pricing_overline">Pricing</div>
+  <h2 data-i18n="apps.templates.pricing_title">One Flat Server — Zero Per-User Fees</h2>
+  <p data-i18n="apps.templates.pricing_sub">Unlike commercial SaaS suites that charge per seat, General Bots runs on your own infrastructure with unlimited users.</p>
+</div>
+<div style="display:grid;grid-template-columns:1fr;gap:1.5rem;max-width:720px;margin:0 auto">
+  <div class="tier-card featured">
+    <div class="tier-name" data-i18n="apps.templates.tier_self_hosted">Self-Hosted</div>
+    <div class="tier-title" data-i18n="apps.templates.tier_self_hosted_title">Your Infrastructure, Your Data</div>
+    <div class="tier-desc" data-i18n="apps.templates.tier_self_hosted_desc">Deploy on any VM or bare metal. No user limits, no hidden fees. Full source under AGPLv3.</div>
+    <ul class="tier-features">
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> <span data-i18n="apps.templates.tier_feature1">Unlimited users and operations</span></li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> <span data-i18n="apps.templates.tier_feature2">No per-user licensing fees</span></li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> <span data-i18n="apps.templates.tier_feature3">Full source code access (AGPLv3)</span></li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> <span data-i18n="apps.templates.tier_feature4">Self-contained Docker deployment</span></li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> <span data-i18n="apps.templates.tier_feature5">Bring your own LLM / AI backend</span></li>
+    </ul>
+    <a href="/hosting/" class="btn btn-primary" style="width:100%;margin-top:1.25rem" data-i18n="apps.templates.tier_cta">Try Hosted Instance</a>
   </div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem">
+    <div class="glass-card" style="padding:1.5rem;text-align:center">
+      <div style="font-size:0.75rem;color:var(--fg-muted);font-weight:600;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.25rem" data-i18n="apps.templates.compare_saas">Typical SaaS</div>
+      <div style="font-size:1.0625rem;font-weight:800;color:var(--fg-secondary);line-height:1.3">Per-seat pricing<br><span style="font-size:0.75rem;color:var(--fg-muted);font-weight:400">Plus overage fees</span></div>
+      <div style="font-size:0.75rem;color:var(--fg-muted);margin-top:0.25rem" data-i18n="apps.templates.compare_saas_note">plus overage fees</div>
+    </div>
+    <div class="glass-card" style="padding:1.5rem;text-align:center;border-color:var(--accent-soft)">
+      <div style="font-size:0.75rem;color:var(--accent-light);font-weight:600;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.25rem" data-i18n="apps.templates.compare_self_hosted">Self-Hosted</div>
+      <div style="font-size:1rem;font-weight:800;color:var(--accent-light);line-height:1.3">Unlimited users<br><span style="font-size:0.75rem;color:var(--fg-muted);font-weight:400">On your infrastructure</span></div>
+      <div style="font-size:0.75rem;color:var(--fg-muted);margin-top:0.25rem" data-i18n="apps.templates.compare_self_hosted_note">unlimited users</div>
+    </div>
+  </div>
+</div>
 </div>
 </section>
 
-<!-- related-posts -->
+<div class="section-divider"></div>
+
+<section class="section reveal">
+<div class="container">
+<div class="section-header centered">
+  <div class="overline" data-i18n="apps.templates.compare_overline">Comparison</div>
+  <h2 data-i18n="apps.templates.compare_title">Self-Hosted vs SaaS</h2>
+  <p data-i18n="apps.templates.compare_sub">See how the open-source General Bots Templates compares to proprietary alternatives.</p>
+</div>
+<div style="max-width:640px;margin:0 auto;overflow-x:auto">
+<table class="comparison-table">
+<thead>
+<tr><th data-i18n="apps.templates.compare_feature">Feature</th><th style="text-align:center" data-i18n="apps.templates.compare_self_hosted">Self-Hosted</th><th style="text-align:center" data-i18n="apps.templates.compare_saas">SaaS</th></tr>
+</thead>
+<tbody>
+<tr><td data-i18n="apps.templates.compare_row1_label">Per-user pricing</td><td class="check" style="text-align:center">Free</td><td class="cross">Vendor lock-in</td></tr>
+<tr><td data-i18n="apps.templates.compare_row2_label">Data ownership</td><td class="check" style="text-align:center">Yours</td><td class="cross" style="text-align:center">Theirs</td></tr>
+<tr><td data-i18n="apps.templates.compare_row3_label">Source access</td><td class="check" style="text-align:center">Full (AGPLv3)</td><td class="cross" style="text-align:center">Closed</td></tr>
+<tr><td data-i18n="apps.templates.compare_row4_label">AI model choice</td><td class="check" style="text-align:center">Any LLM</td><td class="cross" style="text-align:center">Vendor lock-in</td></tr>
+<tr><td data-i18n="apps.templates.compare_row5_label">Scalability</td><td class="check" style="text-align:center">Unlimited</td><td class="cross" style="text-align:center">Tiered</td></tr>
+<tr><td data-i18n="apps.templates.compare_row6_label">Audit &amp; compliance</td><td class="check" style="text-align:center">Full control</td><td class="cross" style="text-align:center">Limited</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+
+<div class="section-divider"></div>
+
+<section class="section section-alt reveal">
+<div class="container">
+<div class="section-header centered">
+  <div class="overline" data-i18n="apps.templates.benefits_overline">Why Choose</div>
+  <h2 data-i18n="apps.templates.benefits_title">Built for Sovereignty, Scale, and AI</h2>
+  <p data-i18n="apps.templates.benefits_sub">Thousands of teams choose General Bots for their templates infrastructure.</p>
+</div>
+<div class="feature-split">
+  <div class="feature-content">
+    <h3 data-i18n="apps.templates.benefit1_title">Zero Vendor Lock-In</h3>
+    <p data-i18n="apps.templates.benefit1_desc">Your data, your infrastructure, your control. General Bots is fully open source under AGPLv3 — no proprietary APIs, no data leaving your network, no forced upgrades.</p>
+    <ul class="feature-list">
+      <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><div><strong data-i18n="apps.templates.benefit1_item1_title">100% Open Source</strong><p data-i18n="apps.templates.benefit1_item1_desc">Audit, modify, and extend the code. Community contributions welcome.</p></div></li>
+      <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><div><strong data-i18n="apps.templates.benefit1_item2_title">AI-Native by Default</strong><p data-i18n="apps.templates.benefit1_item2_desc">LLM orchestration built in — bring any model, run it on your own hardware.</p></div></li>
+    </ul>
+  </div>
+  <div class="feature-visual">
+    <svg width="100%" height="auto" viewBox="0 0 400 280" style="max-width:400px">
+      <rect x="0" y="0" width="400" height="280" rx="12" fill="var(--svg-fill-weak)" stroke="var(--svg-stroke-weak)" stroke-width="1"/><rect x="20" y="20" width="360" height="40" rx="8" fill="var(--svg-fill-medium)" stroke="var(--svg-stroke-weak)" stroke-width="1"/><rect x="30" y="30" width="100" height="8" rx="4" fill="var(--svg-fill-weak)" opacity="0.5"/><rect x="20" y="75" width="170" height="185" rx="8" fill="var(--svg-fill-weak)" stroke="var(--svg-stroke-weak)" stroke-width="1"/><rect x="35" y="90" width="140" height="20" rx="4" fill="var(--accent-soft)" stroke="none"/><rect x="35" y="120" width="140" height="20" rx="4" fill="var(--svg-fill-weak)" opacity="0.4"/><rect x="35" y="150" width="140" height="20" rx="4" fill="var(--svg-fill-weak)" opacity="0.4"/><rect x="35" y="180" width="140" height="20" rx="4" fill="var(--svg-fill-weak)" opacity="0.4"/><rect x="35" y="210" width="100" height="20" rx="4" fill="var(--svg-fill-weak)" opacity="0.4"/><rect x="205" y="75" width="175" height="60" rx="8" fill="var(--svg-fill-weak)" stroke="var(--svg-stroke-weak)" stroke-width="1"/><text x="290" y="100" text-anchor="middle" fill="var(--fg-muted)" font-size="8" font-weight="600">AI ENGINE</text><rect x="205" y="150" width="175" height="110" rx="8" fill="var(--svg-fill-weak)" stroke="var(--svg-stroke-weak)" stroke-width="1"/><rect x="215" y="165" width="155" height="8" rx="4" fill="var(--svg-fill-weak)" opacity="0.5"/><rect x="215" y="180" width="120" height="6" rx="3" fill="var(--svg-fill-weak)" opacity="0.3"/>
+    </svg>
+  </div>
+</div>
+</div>
+</section>
+
+<div class="section-divider"></div>
+
+<section class="section reveal">
+<div class="container">
+<div class="section-header centered">
+  <div class="overline" data-i18n="apps.templates.posts_overline">From the Blog</div>
+  <h2 data-i18n="apps.templates.posts_title">Related Reading</h2>
+</div>
+<div class="grid-3">
+
+  <a href="/blog/general-bots-ai-templates/" class="glass-card" style="padding:1.5rem;display:block;text-decoration:none">
+    <div style="font-size:0.75rem;color:var(--fg-muted);margin-bottom:0.5rem">2025</div>
+    <h3 style="font-size:1rem;font-weight:700;margin-bottom:0.375rem;color:var(--fg)" data-i18n="apps.templates.post1_title">Standardized AI Templates</h3>
+    <p style="font-size:0.8125rem;color:var(--fg-secondary);line-height:1.5" data-i18n="apps.templates.post1_desc">Building the digital commons with reusable orchestration patterns for the sovereign enterprise.</p>
+    <span style="font-size:0.75rem;color:var(--accent-light);font-weight:600;margin-top:0.75rem;display:inline-block" data-i18n="apps.templates.read_more">Read More</span>
+  </a>
+  <a href="/blog/rcs-vs-whatsapp/" class="glass-card" style="padding:1.5rem;display:block;text-decoration:none">
+    <div style="font-size:0.75rem;color:var(--fg-muted);margin-bottom:0.5rem">2025</div>
+    <h3 style="font-size:1rem;font-weight:700;margin-bottom:0.375rem;color:var(--fg)" data-i18n="apps.templates.post2_title">RCS vs WhatsApp: The Architecture of Reach</h3>
+    <p style="font-size:0.8125rem;color:var(--fg-secondary);line-height:1.5" data-i18n="apps.templates.post2_desc">A technical comparison of enterprise messaging protocols—and why the right answer is both</p>
+    <span style="font-size:0.75rem;color:var(--accent-light);font-weight:600;margin-top:0.75rem;display:inline-block" data-i18n="apps.templates.read_more">Read More</span>
+  </a>
+  <a href="/blog/cost-effective-bot-orchestration/" class="glass-card" style="padding:1.5rem;display:block;text-decoration:none">
+    <div style="font-size:0.75rem;color:var(--fg-muted);margin-bottom:0.5rem">2025</div>
+    <h3 style="font-size:1rem;font-weight:700;margin-bottom:0.375rem;color:var(--fg)" data-i18n="apps.templates.post3_title">Cost-Effective Bot Orchestration: The Hybrid Strategy</h3>
+    <p style="font-size:0.8125rem;color:var(--fg-secondary);line-height:1.5" data-i18n="apps.templates.post3_desc">How General Bots reduces LLM operational costs by up to 80% through didactic routing and local processing modes — without sacrificing conversational quality.</p>
+    <span style="font-size:0.75rem;color:var(--accent-light);font-weight:600;margin-top:0.75rem;display:inline-block" data-i18n="apps.templates.read_more">Read More</span>
+  </a>
+</div>
+</div>
+</section>
+
+<div class="section-divider"></div>
+
+<section class="cta-section reveal">
+<div class="container">
+<h2 data-i18n="apps.templates.cta_title">Ready to Deploy?</h2>
+<p data-i18n="apps.templates.cta_desc">Get your own self-hosted templates platform running in minutes. No per-user fees, no vendor lock-in.</p>
+<div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;position:relative">
+  <a href="/hosting/" class="btn btn-primary btn-lg" data-i18n="apps.templates.cta_btn">Try Hosted Instance</a>
+  <a href="/contact/" class="btn btn-outline btn-lg" data-i18n="apps.templates.cta_btn2">Talk to Us</a>
+</div>
+</div>
+</section>
 </main>
-
 <div hx-get="/partials/footer.html" hx-swap="innerHTML" hx-trigger="load"></div>
-
 <script defer src="https://unpkg.com/htmx.org@2.0.10"></script>
-<script defer src="/js/site.min.js?v=4"></script>
+<script defer src="/js/site.min.js?v=5"></script>
 </body>
 </html>

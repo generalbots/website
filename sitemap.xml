@@ -117,6 +117,36 @@
   </url>
   <url>
   </url>
+  <url><loc>https://generalbots.org/chat/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://generalbots.org/research/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://generalbots.org/learn/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://generalbots.org/video/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://generalbots.org/vision/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://generalbots.org/calendar/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://generalbots.org/tasks/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://generalbots.org/plan/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://generalbots.org/minutes/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://generalbots.org/designer/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://generalbots.org/sales/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://generalbots.org/campaigns/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://generalbots.org/lists/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://generalbots.org/handoff/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://generalbots.org/billing/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://generalbots.org/products/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://generalbots.org/fraud/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://generalbots.org/hr/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://generalbots.org/biometry/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://generalbots.org/basic/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://generalbots.org/editor/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://generalbots.org/versions/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://generalbots.org/database/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://generalbots.org/terminal/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://generalbots.org/browser/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://generalbots.org/vdi/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://generalbots.org/admin/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://generalbots.org/m365/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://generalbots.org/vibecode/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://generalbots.org/goals/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
 </urlset>
   <url><loc>https://generalbots.org/banking/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://generalbots.org/compliance/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
