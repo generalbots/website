@@ -22,7 +22,7 @@
 <link rel="icon" type="image/x-icon" href="https://chat.pragmatismo.com.br/favicon.ico">
 <link rel="icon" type="image/svg+xml" href="https://pragmatismo.com.br/img/logo.svg">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="stylesheet" href="/css/site.min.css?v=3">
+<link rel="stylesheet" href="/css/site.min.css?v=4">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -231,6 +231,7 @@
 <h2 style="font-size:clamp(1.25rem,2.5vw,1.75rem)" data-i18n="hosting.compare_title">Self-Host vs Partner vs Dedicated</h2>
 </div>
 <div class="comparison-table-wrapper" style="overflow-x:auto;max-width:960px;margin:0 auto">
+<span class="table-scroll-hint" data-i18n="hosting.swipe_hint">Swipe to compare all options →</span>
 <table class="comparison-table" style="width:100%;border-collapse:separate;border-spacing:0;font-size:.875rem">
 <thead>
 <tr>
@@ -363,6 +364,50 @@
     padding: .6rem .4rem !important;
   }
 }
+
+@media (max-width: 640px) {
+  .table-scroll-hint {
+    display: inline-flex;
+    align-items: center;
+    gap: .25rem;
+    font-size: .7rem;
+    color: var(--fg-muted);
+    margin-bottom: .5rem;
+    letter-spacing: .02em;
+  }
+  .comparison-table-wrapper {
+    -webkit-overflow-scrolling: touch;
+  }
+  .comparison-table thead th {
+    position: sticky;
+    top: 0;
+  }
+  .comparison-table thead th:first-child,
+  .comparison-table tbody td:first-child {
+    position: sticky;
+    left: 0;
+  }
+  .comparison-table thead th:first-child {
+    z-index: 4;
+    box-shadow: 1px 0 0 var(--border);
+  }
+  .comparison-table tbody td:first-child {
+    z-index: 2;
+    background: var(--bg);
+    box-shadow: 1px 0 0 var(--border-subtle);
+  }
+  .comparison-table tbody tr:nth-child(even) td:first-child {
+    background: var(--bg-tertiary);
+  }
+  .comparison-table thead th:nth-child(n+2) {
+    z-index: 3;
+  }
+}
+@media (min-width: 641px) {
+  .table-scroll-hint {
+    display: none;
+  }
+}
 </style>
 
 <!-- CTA -->
@@ -408,6 +453,6 @@
 </main>
 <div hx-get="/partials/footer.html" hx-swap="innerHTML" hx-trigger="load"></div>
 <script defer src="https://unpkg.com/htmx.org@2.0.10"></script>
-<script defer src="/js/site.min.js?v=3"></script>
+<script defer src="/js/site.min.js?v=4"></script>
 </body>
 </html>
