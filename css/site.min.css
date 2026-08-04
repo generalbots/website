@@ -321,7 +321,7 @@ body{padding-top:84px!important}
 @media(max-width:860px){.dropdown-menu-apps{width:520px}.dropdown-grid-6{grid-template-columns:repeat(2,minmax(0,1fr))}}
 .mobile-grid-apps .mobile-menu-section-title{grid-column:1/-1;margin-top:.75rem;padding-left:.25rem}
 .mobile-grid-apps .mobile-menu-section-title:first-child{margin-top:0}
-.contact-hero{overflow:hidden}
+.contact-hero{position:relative;overflow:hidden}
 code{overflow-wrap:anywhere;word-break:break-word}
 @media (max-width:640px){
 [style*="1fr 1fr 1fr 1fr"]{grid-template-columns:minmax(0,1fr) minmax(0,1fr) !important}
