@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="General Bots Magazine — Nº 01, outubro de 2026 — Visualizador online. Soberania, Invisibilidade e Custo Zero.">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:title" content="General Bots Magazine — Nº 01 — Visualizador">
+<meta property="og:description" content="Leia General Bots Magazine Nº 01, outubro de 2026, no visualizador online.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://generalbots.org/gbmagazine/viewer.html">
+<meta property="og:image" content="https://generalbots.org/gbmagazine/gbm-cover.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="General Bots Magazine — Nº 01 — Visualizador">
+<meta name="twitter:description" content="Leia online. Baixe o PDF completo.">
+<title>General Bots Magazine — Nº 01 — Visualizador online</title>
+<link rel="stylesheet" href="/gbmagazine/style.css">
+<link rel="icon" type="image/svg+xml" href="/gbmagazine/gbm-logo.svg">
+<link rel="apple-touch-icon" href="/gbmagazine/gbm-cover.png">
+<style>
+  .gb-viewer {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 4rem;
+    text-align: center;
+  }
+  .gb-viewer-title {
+    font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+    font-weight: 800;
+    letter-spacing: -.02em;
+    margin-bottom: .5rem;
+  }
+  .gb-viewer-sub {
+    color: #b0b0bc;
+    margin-bottom: 1.75rem;
+  }
+  .gb-pdf-wrap {
+    position: relative;
+    max-width: 980px;
+    margin: 0 auto;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 30px 60px rgba(0,0,0,.5), 0 0 0 1px rgba(255,255,255,.06);
+    background: #0a0a0c;
+  }
+  .gb-pdf-wrap iframe {
+    width: 100%;
+    height: 760px;
+    border: none;
+    display: block;
+  }
+  .gb-viewer-actions {
+    display: flex;
+    gap: .75rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+  }
+  .gb-noiframe {
+    padding: 3rem 1rem;
+    color: #b0b0bc;
+    font-size: .95rem;
+    line-height: 1.6;
+  }
+  .gb-noiframe p + p { margin-top: 1rem; }
+  @media (max-width: 600px) {
+    .gb-pdf-wrap iframe { height: 560px; }
+  }
+</style>
+</head>
+<body>
+<header class="gb-header">
+  <div class="gb-header-inner">
+    <a href="https://generalbots.org/" class="gb-logo-link">
+      <img src="/gbmagazine/gbm-logo.svg" alt="General Bots" class="gb-logo" loading="lazy" decoding="async">
+      <span class="gb-logo-text">General Bots <span>Magazine</span></span>
+    </a>
+    <nav class="gb-nav">
+      <a href="/gbmagazine/" class="gb-nav-link">Edição atual</a>
+      <a href="https://forum.pragmatismo.com.br/" class="gb-nav-link">Fórum</a>
+      <a href="https://generalbots.org/features/" class="gb-nav-link">Recursos</a>
+    </nav>
+  </div>
+</header>
+
+<main class="gb-main">
+  <div class="gb-viewer">
+    <div class="gb-viewer-title">General Bots Magazine — Nº 01, outubro de 2026</div>
+    <p class="gb-viewer-sub">Visualizador online — Soberania, Invisibilidade e Custo Zero (Primeira Edição)</p>
+
+    <div class="gb-pdf-wrap">
+      <iframe
+        src="/gbmagazine/GeneralBotsMagazine-2026-10-01.pdf"
+        title="General Bots Magazine Nº 01 — PDF viewer"
+        allow="fullscreen"
+        loading="eager">
+      </iframe>
+    </div>
+
+    <div class="gb-viewer-actions">
+      <a href="/gbmagazine/GeneralBotsMagazine-2026-10-01.pdf" download="GeneralBotsMagazine-2026-10-01.pdf"
+         class="gb-btn gb-btn--primary gb-btn--lg">
+        <svg class="gb-btn-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+        Baixar o PDF completo (2.4 MB)
+      </a>
+      <button onclick="shareMag()" class="gb-btn gb-btn--secondary gb-btn--lg">
+        <svg class="gb-btn-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92s2.92-1.31 2.92-2.92-1.31-2.92-2.92-2.92z"/></svg>
+        Compartilhar
+      </button>
+      <a href="/gbmagazine/" class="gb-btn gb-btn--ghost gb-btn--lg">
+        <svg class="gb-btn-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+        Voltar à capa
+      </a>
+    </div>
+
+    <noscript class="gb-noiframe">
+      <p>Seu navegador não conseguiu carregar o visualizador inline.</p>
+      <p><a href="/gbmagazine/GeneralBotsMagazine-2026-10-01.pdf" download="GeneralBotsMagazine-2026-10-01.pdf"
+            class="gb-btn gb-btn--primary gb-btn--lg" style="display:inline-flex">
+        <svg class="gb-btn-icon" viewBox="0 0 24 24" fill="currentColor" style="width:18px;height:18px"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+        Abrir o PDF diretamente
+      </a></p>
+    </noscript>
+  </div>
+</main>
+
+<footer class="gb-footer">
+  <div class="gb-footer-inner">
+    <div class="gb-footer-brand">
+      <img src="/gbmagazine/gbm-logo.svg" alt="General Bots" class="gb-footer-logo" loading="lazy" decoding="async">
+      <span>General Bots Magazine — Nº 01, outubro de 2026 — Primeira Edição</span>
+    </div>
+    <div class="gb-footer-links">
+      <a href="https://generalbots.org/">generalbots.org</a>
+      <a href="https://forum.pragmatismo.com.br/">fórum</a>
+      <a href="mailto:contato@pragmatismo.com.br">contato@pragmatismo.com.br</a>
+    </div>
+    <div class="gb-footer-copy">© 2026 General Bots — 100% open source — AGPL-3.0 — feito na pavilhinha</div>
+  </div>
+</footer>
+
+<script>
+function shareMag(){
+  const url = 'https://generalbots.org/gbmagazine/';
+  const txt = 'General Bots Magazine — Nº 01, outubro de 2026: Soberania, Invisibilidade e Custo Zero (Primeira Edição).';
+  if (navigator.share && /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+    navigator.share({ title: 'General Bots Magazine — Nº 01', text: txt, url: url }).catch(()=>{});
+  } else {
+    const copy = txt + ' ' + url;
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(copy).then(()=>{
+        const b = document.createElement('button');
+        b.className = 'gb-btn gb-btn--secondary gb-btn--lg';
+        b.innerHTML = '<svg class="gb-btn-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>Copiado!';
+        b.style.display = 'inline-flex';
+        const wrap = document.querySelector('.gb-viewer-actions');
+        wrap.prepend(b);
+        setTimeout(()=>{ if(b.parentNode) b.remove(); }, 1800);
+      }).catch(()=>{});
+    }
+  }
+}
+</script>
+</body>
+</html>
