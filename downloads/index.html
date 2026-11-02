@@ -22,6 +22,14 @@
 <meta name="twitter:title" content="Downloads | General Bots">
 <meta name="twitter:description" content="Desktop builds for Linux x86_64 and Windows x64. One-line install, checksums published with every release.">
 
+<link rel="alternate" hreflang="x-default" href="https://generalbots.org/downloads/" />
+<link rel="alternate" hreflang="en" href="https://generalbots.org/downloads/" />
+<link rel="alternate" hreflang="pt" href="https://generalbots.org/pt/downloads/" />
+<link rel="alternate" hreflang="es" href="https://generalbots.org/es/downloads/" />
+<link rel="alternate" hreflang="fr" href="https://generalbots.org/fr/downloads/" />
+<link rel="alternate" hreflang="de" href="https://generalbots.org/de/downloads/" />
+<link rel="alternate" hreflang="ja" href="https://generalbots.org/ja/downloads/" />
+<link rel="alternate" hreflang="zh-cn" href="https://generalbots.org/zh-cn/downloads/" />
 <link rel="icon" type="image/x-icon" href="https://chat.pragmatismo.com.br/favicon.ico">
 <link rel="icon" type="image/svg+xml" href="https://pragmatismo.com.br/img/logo.svg">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -109,7 +117,8 @@
 .dl-tile .btn-primary:hover{background:#2c2c3a !important}
 [data-theme="dark"] .dl-tile .btn-primary{background:#f2f2f5 !important;color:#0b0b10 !important;box-shadow:0 14px 38px -18px rgba(255,255,255,.4)}
 [data-theme="dark"] .dl-tile .btn-primary:hover{background:#ffffff !important}
-.dl-tile-cmd{display:flex;align-items:flex-start;gap:.5rem;margin-top:.25rem;font-family:var(--mono);font-size:.65rem;line-height:1.6;color:var(--fg-muted)}
+.dl-tile-cmd{display:flex;align-items:flex-start;gap:.5rem;margin-top:.25rem;font-family:var(--mono);font-size:.65rem;line-height:1.6;color:var(--fg-muted);text-decoration:none}
+.dl-tile-cmd:hover{color:var(--accent-light)}
 .dl-tile-cmd svg{width:.875rem;height:.875rem;flex-shrink:0;margin-top:.1rem;color:var(--accent-light)}
 .dl-tile-cmd span{overflow-wrap:anywhere}
 .dl-badge-row{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:auto;padding-top:.5rem}
@@ -180,7 +189,7 @@
 .dl-faq details[open] summary::after{content:'\2212'}
 .dl-faq .dl-faq-body{padding:0 1.15rem 1.05rem;font-size:.8125rem;line-height:1.7;color:var(--fg-secondary)}
 .dl-faq .dl-faq-body p{margin:0}
-#tiles,#oneline,#stack,#verify{scroll-margin-top:6.5rem}
+#tiles,#install,#stack,#verify{scroll-margin-top:6.5rem}
 @media(max-width:767px){.dl-hero{padding:5.5rem 0 2rem}.dl-art{display:none}.dl-tile{padding:1.35rem}.dl-pre{font-size:.68rem}}
 </style>
 </head>
@@ -222,17 +231,18 @@
           </div>
         </div>
         <p data-i18n="downloads.linux_tile_desc">Tarball with the shell, local server, suite and a per-user installer. Unpack it and the wizard takes over.</p>
-        <a href="https://github.com/generalbots/generalbots/releases/latest/download/generalbots-linux-x86_64.tar.gz" class="btn btn-primary btn-lg">
+        <a href="https://github.com/generalbots/generalbots/releases/latest/download/generalbots-linux-x86_64.tar.gz" class="btn btn-primary btn-lg" data-gh-asset="generalbots-linux-x86_64.tar.gz">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></svg>
           <span data-i18n="downloads.hero_cta_primary">Download for Linux</span>
         </a>
-        <div class="dl-tile-cmd">
+        <a class="dl-tile-cmd" href="#install">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
           <span data-i18n="downloads.tile_cmd_linux">…or one line in a terminal — see below</span>
-        </div>
+        </a>
         <div class="dl-badge-row">
           <span class="badge" data-i18n="downloads.chip_recommended">Recommended</span>
           <span class="badge" data-i18n="downloads.chip_gtk">GTK / WebKitGTK 4.1</span>
+          <span class="badge" data-gh-tag="linux" hidden></span>
         </div>
       </div>
 
@@ -248,17 +258,18 @@
           </div>
         </div>
         <p data-i18n="downloads.windows_tile_desc">Installer built on every release when the Windows runner is green. If no file is attached, use the source build.</p>
-        <a href="https://github.com/generalbots/generalbots/releases/latest/download/generalbots-x64.exe" class="btn btn-primary btn-lg">
+        <a href="https://github.com/generalbots/generalbots/releases/latest/download/generalbots-x64.exe" class="btn btn-primary btn-lg" data-gh-asset="generalbots-x64.exe">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></svg>
           <span data-i18n="downloads.hero_cta_windows">Download for Windows</span>
         </a>
-        <div class="dl-tile-cmd">
+        <a class="dl-tile-cmd" href="#install">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
           <span data-i18n="downloads.tile_cmd_windows">…or one line in PowerShell — see below</span>
-        </div>
+        </a>
         <div class="dl-badge-row">
           <span class="badge" data-i18n="downloads.chip_best_effort">Best effort</span>
           <span class="badge" data-i18n="downloads.chip_winver">Windows 10 / 11</span>
+          <span class="badge" data-gh-tag="windows" hidden></span>
         </div>
       </div>
     </div>
@@ -273,8 +284,8 @@
     <div class="dl-note" style="margin-top:2rem;text-align:left">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
       <p>
-        <strong data-i18n="downloads.note_title">Builds are attached to tagged releases.</strong>
-        <span data-i18n="downloads.note_body">Download links always resolve to the newest release. If one returns 404, that release has no desktop build attached yet — build from source instead, or open all releases.</span>
+        <strong data-i18n="downloads.note_title">Builds ship in per-platform releases.</strong>
+        <span data-i18n="downloads.note_body">Each link resolves to the newest release that actually carries that file, so a Windows-only build never breaks the Linux download. Nothing found? Build from source instead.</span>
       </p>
     </div>
   </div>
@@ -283,7 +294,8 @@
 <div class="section-divider"></div>
 
 <!-- ═══════════════ ONE-LINE INSTALL ═══════════════ -->
-<section class="section" id="oneline">
+<span id="oneline" aria-hidden="true"></span>
+<section class="section" id="install">
   <div class="container">
     <div class="section-header centered">
       <span class="overline" data-i18n="downloads.oneline_overline">Install</span>
@@ -415,7 +427,7 @@
             <span data-i18n="downloads.copy">Copy</span>
           </button>
         </div>
-        <pre class="dl-pre" id="cmd-verify"><code>BASE=<span class="dl-hl">https://github.com/generalbots/generalbots/releases/latest/download</span>
+        <pre class="dl-pre" id="cmd-verify"><code>BASE=<span class="dl-hl" id="dl-verify-base">https://github.com/generalbots/generalbots/releases/latest/download</span>
 curl -fLO "$BASE/SHA256SUMS-linux"
 sha256sum -c SHA256SUMS-linux --ignore-missing
 
@@ -519,7 +531,7 @@ cd generalbots-$TAG-linux-x86_64 &amp;&amp; ./install.sh</code></pre>
       </details>
       <details>
         <summary data-i18n="downloads.faq5_q">Why does a download link return 404?</summary>
-        <div class="dl-faq-body"><p data-i18n="downloads.faq5_a">The link always points at the newest release. If that release carries no desktop assets, nothing resolves. Pin a published tag or build from source.</p></div>
+        <div class="dl-faq-body"><p data-i18n="downloads.faq5_a">The link resolves to the newest release that carries the build. If nothing resolves, no release has that file yet — pin a published tag or build from source.</p></div>
       </details>
       <details>
         <summary data-i18n="downloads.faq6_q">Is there a macOS build?</summary>
@@ -551,6 +563,75 @@ cd generalbots-$TAG-linux-x86_64 &amp;&amp; ./install.sh</code></pre>
 
 <script defer src="https://unpkg.com/htmx.org@2.0.10"></script>
 <script defer src="/js/site.min.js"></script>
+<script>
+/* Per-platform releases: /latest/ follows the newest release overall, so a
+   Windows-only build hides the Linux assets. Resolve each platform to the
+   newest release that actually carries its file; plain /latest/ stays as the
+   no-JS fallback. */
+(function () {
+  var API = 'https://api.github.com/repos/generalbots/generalbots/releases?per_page=30';
+  var CACHE = 'gb_release_assets';
+  var TTL = 10 * 60 * 1000;
+  var ASSETS = ['generalbots-linux-x86_64.tar.gz', 'generalbots-x64.exe', 'SHA256SUMS-linux'];
+  var TAG_KEY = { linux: 'generalbots-linux-x86_64.tar.gz', windows: 'generalbots-x64.exe' };
+
+  function apply(map) {
+    var i;
+    var links = document.querySelectorAll('[data-gh-asset]');
+    for (i = 0; i < links.length; i++) {
+      var hit = map[links[i].getAttribute('data-gh-asset')];
+      if (hit) links[i].setAttribute('href', hit.url);
+    }
+    var sums = map['SHA256SUMS-linux'];
+    var base = document.getElementById('dl-verify-base');
+    if (sums && base) base.textContent = 'https://github.com/generalbots/generalbots/releases/download/' + sums.tag;
+    var tags = document.querySelectorAll('[data-gh-tag]');
+    for (i = 0; i < tags.length; i++) {
+      var entry = map[TAG_KEY[tags[i].getAttribute('data-gh-tag')]];
+      if (entry) {
+        tags[i].textContent = entry.tag;
+        tags[i].hidden = false;
+      }
+    }
+  }
+
+  function request() {
+    if (!window.fetch) return Promise.reject();
+    return fetch(API, { headers: { Accept: 'application/vnd.github+json' } })
+      .then(function (res) { return res.ok ? res.json() : Promise.reject(); })
+      .then(function (releases) {
+        var map = {};
+        releases.forEach(function (rel) {
+          if (rel.draft) return;
+          (rel.assets || []).forEach(function (asset) {
+            if (ASSETS.indexOf(asset.name) === -1 || map[asset.name]) return;
+            map[asset.name] = {
+              tag: rel.tag_name,
+              url: 'https://github.com/generalbots/generalbots/releases/download/' + rel.tag_name + '/' + encodeURIComponent(asset.name)
+            };
+          });
+        });
+        return map;
+      });
+  }
+
+  try {
+    var raw = sessionStorage.getItem(CACHE);
+    if (raw) {
+      var data = JSON.parse(raw);
+      if (data && data.t && Date.now() - data.t < TTL) {
+        apply(data.map);
+        return;
+      }
+    }
+  } catch (e) {}
+
+  request().then(function (map) {
+    apply(map);
+    try { sessionStorage.setItem(CACHE, JSON.stringify({ t: Date.now(), map: map })); } catch (e) {}
+  })['catch'](function () {});
+})();
+</script>
 <script>
 document.addEventListener('DOMContentLoaded', function () {
   var buttons = document.querySelectorAll('.dl-copy');
