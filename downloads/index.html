@@ -141,7 +141,7 @@
 .dl-copy:hover{color:var(--accent-light);border-color:var(--accent)}
 .dl-copy svg{width:.8125rem;height:.8125rem}
 .dl-copy.done{color:var(--accent-light);border-color:var(--accent)}
-.dl-pre{margin:0;padding:1rem 1.15rem;font-family:var(--mono);font-size:.7rem;line-height:1.9;color:var(--fg-secondary);white-space:pre;overflow-x:auto;-webkit-overflow-scrolling:touch}
+.dl-pre{margin:0;padding:1rem 1.15rem;font-family:var(--mono);font-size:.64rem;line-height:2;color:var(--fg-secondary);white-space:pre;overflow-x:auto;-webkit-overflow-scrolling:touch}
 .dl-onelines{display:flex;flex-direction:column;gap:1rem}
 .dl-pre .dl-cm{color:var(--fg-muted)}
 .dl-pre .dl-hl{color:var(--fg)}
@@ -190,7 +190,6 @@
 .dl-faq details[open] summary::after{content:'\2212'}
 .dl-faq .dl-faq-body{padding:0 1.15rem 1.05rem;font-size:.8125rem;line-height:1.7;color:var(--fg-secondary)}
 .dl-faq .dl-faq-body p{margin:0}
-#tiles,#install,#stack,#verify{scroll-margin-top:6.5rem}
 @media(max-width:767px){.dl-hero{padding:5.5rem 0 2rem}.dl-art{display:none}.dl-tile{padding:1.35rem}.dl-pre{font-size:.68rem}}
 </style>
 </head>
@@ -640,6 +639,18 @@ cd generalbots-$TAG-linux-x86_64 &amp;&amp; ./install.sh</code></pre>
     try { sessionStorage.setItem(CACHE, JSON.stringify({ t: Date.now(), map: map })); } catch (e) {}
   })['catch'](function () {});
 })();
+</script>
+<script>
+/* The header and footer partials swap in after load, which moves every section
+   down. Re-run the fragment scroll once they have settled so deep links like
+   /pt/downloads/#install land on the heading and not below it. */
+window.addEventListener('load', function () {
+  var hash = window.location.hash;
+  if (!hash || hash.length < 2) return;
+  var target = document.getElementById(hash.slice(1));
+  if (!target) return;
+  setTimeout(function () { target.scrollIntoView(); }, 400);
+});
 </script>
 <script>
 document.addEventListener('DOMContentLoaded', function () {
