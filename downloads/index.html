@@ -3,21 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Downloads | General Bots — Desktop App, Server &amp; Source Code</title>
-<meta name="description" content="Download General Bots for Windows x64 and Linux x64. Desktop app, server binaries, source code, checksums, system requirements and release notes.">
+<title>Downloads | General Bots — Desktop Builds for Linux and Windows</title>
+<meta name="description" content="Download the General Bots desktop build for Linux x86_64 or Windows x64. Free and MIT licensed, with checksums, install steps and system requirements.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://generalbots.org/downloads/">
-<meta property="og:locale" content="en_US"/>
-<meta property="og:title" content="Downloads | General Bots">
-<meta property="og:description" content="Download General Bots for Windows x64 and Linux x64.">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="General Bots">
+<meta property="og:title" content="Downloads | General Bots — Desktop Builds for Linux and Windows">
+<meta property="og:description" content="Download the General Bots desktop build for Linux x86_64 or Windows x64. Free and MIT licensed, with checksums and install steps.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://generalbots.org/downloads/">
 <meta property="og:image" content="https://generalbots.org/og-image.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:image:type" content="image/png">
-    <meta property="og:image:alt" content="General Bots — Multi-Agent AI Platform">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:alt" content="General Bots — Multi-Agent AI Platform">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Downloads | General Bots">
+<meta name="twitter:description" content="Desktop builds for Linux x86_64 and Windows x64. Free, MIT licensed, checksums published with every release.">
 
 <link rel="icon" type="image/x-icon" href="https://chat.pragmatismo.com.br/favicon.ico">
 <link rel="icon" type="image/svg+xml" href="https://pragmatismo.com.br/img/logo.svg">
@@ -28,184 +31,427 @@
   "@context": "https://schema.org",
   "@type": "WebPage",
   "name": "Downloads",
-  "description": "Download General Bots for Windows x64 and Linux x64.",
-  "url": "https://generalbots.org/downloads/"
+  "description": "Download the General Bots desktop build for Linux x86_64 or Windows x64, with checksums, install steps and system requirements.",
+  "url": "https://generalbots.org/downloads/",
+  "isPartOf": { "@type": "WebSite", "name": "General Bots", "url": "https://generalbots.org/" }
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "General Bots Desktop",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Linux x86_64, Windows x64",
+  "url": "https://generalbots.org/downloads/",
+  "downloadUrl": "https://github.com/generalbots/generalbots/releases/latest/download/generalbots-linux-x86_64.tar.gz",
+  "license": "https://opensource.org/licenses/MIT",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "publisher": { "@type": "Organization", "name": "General Bots", "url": "https://generalbots.org/" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do I need root to install the desktop build?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No. The included installer writes to ~/.local/opt/general-bots and adds a launcher to your user account. Pass a different prefix to change the location." }
+    },
+    {
+      "@type": "Question",
+      "name": "Where does General Bots store its data?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Runtime state lives in ~/.local/share/generalbots. Set BOTSERVER_STACK_PATH to run an isolated stack somewhere else." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I install without internet access?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Place the component archives in an installers/ directory next to start.sh before the first run and nothing is downloaded." }
+    },
+    {
+      "@type": "Question",
+      "name": "Is there a macOS build?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Not yet published. Build from source, or run a managed instance instead." }
+    }
+  ]
+}
+</script>
+<style>
+.dl-hero{padding:6.5rem 0 2.5rem}
+.dl-hero .overline{font-size:.6875rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-light);margin-bottom:.75rem;display:inline-flex;align-items:center;gap:.5rem}
+.dl-hero .overline::before{content:'';width:1.5rem;height:1px;background:var(--accent)}
+.dl-hero h1 span{display:block}
+[data-theme="light"] .dl-hero h1 .gradient-word{background:linear-gradient(135deg,#3c3c4a,#0e0e14) !important;-webkit-background-clip:text !important;background-clip:text !important}
+#platforms,#install{scroll-margin-top:6.5rem}
+.dl-lede{font-size:1.0625rem;line-height:1.75;color:var(--fg-secondary)}
+.dl-chips{display:flex;flex-wrap:wrap;gap:.5rem;justify-content:center;margin-top:1.5rem}
+.dl-note{display:flex;gap:.75rem;align-items:flex-start;border-left:3px solid var(--accent);background:var(--bg-card);padding:1rem 1.25rem;border-radius:0 var(--radius) var(--radius) 0}
+.dl-note svg{width:1.125rem;height:1.125rem;flex-shrink:0;margin-top:.15rem;color:var(--accent-light)}
+.dl-note p{font-size:.8125rem;color:var(--fg-secondary);line-height:1.65;margin:0}
+.dl-note strong{display:block;color:var(--fg);margin-bottom:.25rem}
+.dl-card{display:flex;flex-direction:column}
+.dl-card .dl-card-top{display:flex;align-items:center;justify-content:space-between;gap:.75rem;margin-bottom:1rem}
+.dl-card .dl-icon{width:2.5rem;height:2.5rem;display:flex;align-items:center;justify-content:center;border-radius:var(--radius);background:var(--accent-soft);color:var(--accent-light)}
+.dl-card .dl-icon svg{width:1.375rem;height:1.375rem}
+.dl-card h3{font-size:1.125rem}
+.dl-card p{margin-bottom:1.25rem}
+.dl-card .btn{width:100%;margin-top:auto}
+.dl-meta{list-style:none;padding:0;margin:.875rem 0 0;font-size:.6875rem;color:var(--fg-muted);font-family:var(--mono)}
+.dl-meta li{padding:.125rem 0;overflow-wrap:anywhere}
+.dl-steps{counter-reset:step;list-style:none;padding:0;margin:0}
+.dl-steps li{position:relative;padding:0 0 1.125rem 2.25rem;font-size:.875rem;color:var(--fg-secondary);line-height:1.65}
+.dl-steps li::before{counter-increment:step;content:counter(step);position:absolute;left:0;top:.1rem;width:1.5rem;height:1.5rem;display:flex;align-items:center;justify-content:center;font-size:.6875rem;font-weight:700;color:var(--accent-light);background:var(--accent-soft);border-radius:50%}
+.dl-steps li strong{color:var(--fg);display:block;font-size:.8125rem;margin-bottom:.125rem}
+.dl-steps li span{display:block}
+.dl-steps li:last-child{padding-bottom:0}
+.dl-faq{display:flex;flex-direction:column;gap:.5rem;max-width:52rem;margin:0 auto}
+.dl-faq details{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden}
+.dl-faq details[open]{border-color:var(--border-hover)}
+.dl-faq summary{cursor:pointer;padding:1rem 1.25rem;font-size:.9rem;font-weight:700;color:var(--fg);list-style:none;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.dl-faq summary::-webkit-details-marker{display:none}
+.dl-faq summary::after{content:'+';font-family:var(--mono);font-size:1rem;color:var(--accent-light);flex-shrink:0}
+.dl-faq details[open] summary::after{content:'\2212'}
+.dl-faq .dl-faq-body{padding:0 1.25rem 1.125rem;font-size:.8125rem;line-height:1.7;color:var(--fg-secondary)}
+.dl-faq .dl-faq-body p{margin:0}
+.dl-faq .dl-faq-body code{font-family:var(--mono);font-size:.75rem;background:var(--bg-tertiary);padding:.125rem .375rem;border-radius:.25rem}
+.dl-table-wrap{overflow-x:auto;border:1px solid var(--border);border-radius:var(--radius-lg);background:var(--bg-card)}
+.dl-table-wrap .comparison-table td:first-child{white-space:nowrap}
+.dl-code{font-family:var(--mono);font-size:.72rem;line-height:1.9;color:var(--fg-secondary);white-space:pre;overflow-x:auto}
+.dl-code .dl-comment{color:var(--fg-muted)}
+@media(max-width:767px){.dl-hero{padding:5.5rem 0 2rem}.dl-code{font-size:.68rem}}
+</style>
 </head>
 <body>
 <a href="#main-content" class="sr-only skip-link" data-i18n="common.skip_to_content">Skip to content</a>
 
 <div hx-get="/partials/header.html" hx-swap="innerHTML" hx-trigger="load"></div>
-<main id="main-content" role="main" style="padding-top:4rem">
 
-<!-- Hero -->
-<section class="section reveal" style="padding:3rem 0 2rem">
-<div class="container" style="text-align:center">
-<span class="overline">Downloads</span>
-<h1 style="font-size:clamp(2rem,4vw,3rem)" data-i18n="downloads.title">Download General Bots</h1>
-<p class="lede" style="margin:0 auto;max-width:70ch" data-i18n="downloads.lede">Get the General Bots desktop app and server for Windows x64 and Linux x64. Free, open-source, MIT. Pick your platform and start in minutes.</p>
-</div>
+<main id="main-content" role="main">
+
+<!-- ═══════════════ HERO ═══════════════ -->
+<section class="dl-hero">
+  <div class="container" style="text-align:center;max-width:820px">
+    <span class="overline" data-i18n="downloads.overline">Desktop edition</span>
+    <h1 style="font-size:clamp(2rem,4.5vw,3.25rem);letter-spacing:-.035em;margin:1rem 0">
+      <span data-i18n="downloads.hero_h1a">The whole platform,</span>
+      <span class="gradient-word" data-i18n="downloads.hero_h1b">on your machine.</span>
+    </h1>
+    <p class="dl-lede" style="max-width:64ch;margin:0 auto" data-i18n="downloads.hero_sub">The desktop build ships the shell, the local server and the full web suite as one package — then provisions the services it needs into your home directory. No account, no licence key, no telemetry.</p>
+    <div class="flex flex-wrap gap-4 justify-center" style="margin-top:2rem">
+      <a href="#platforms" class="btn btn-primary btn-lg" data-i18n="downloads.hero_cta_primary">Download for Linux</a>
+      <a href="#install" class="btn btn-outline btn-lg" data-i18n="downloads.hero_cta_secondary">Install guide</a>
+      <a href="https://github.com/generalbots/generalbots/releases" class="btn btn-ghost btn-lg" target="_blank" rel="noopener" data-i18n="downloads.hero_cta_releases">All releases</a>
+    </div>
+    <div class="dl-chips">
+      <span class="badge" data-i18n="downloads.chip_mit">MIT licensed</span>
+      <span class="badge" data-i18n="downloads.chip_linux">Linux x86_64</span>
+      <span class="badge" data-i18n="downloads.chip_windows">Windows x64</span>
+      <span class="badge" data-i18n="downloads.chip_root">No root required</span>
+    </div>
+  </div>
 </section>
 
 <div class="section-divider"></div>
 
-<!-- Download cards -->
-<section class="section reveal" style="padding:2rem 0 3rem">
-<div class="container">
-<h2 style="text-align:center;margin-bottom:2rem" data-i18n="downloads.choose_platform">Choose your platform</h2>
-<div class="grid-3" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem">
-
-<!-- Windows -->
-<div class="card card-hover" style="padding:2rem;text-align:center">
-<div style="margin-bottom:1rem">
-<svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="8" height="8" rx="1"/><rect x="13" y="3" width="8" height="8" rx="1"/><rect x="3" y="13" width="8" height="8" rx="1"/><rect x="13" y="13" width="8" height="8" rx="1"/></svg>
-</div>
-<h3 style="margin:.5rem 0" data-i18n="downloads.windows_title">Windows x64</h3>
-<p style="color:var(--fg-secondary);font-size:.9rem" data-i18n="downloads.windows_desc">Windows 10 / 11 (64-bit). Installer with bundled service.</p>
-<div style="margin:1.25rem 0">
-<a href="https://github.com/generalbots/generalbots/releases/latest/download/generalbots-windows-x64.exe" class="btn btn-primary btn-lg" style="width:100%;text-align:center" data-i18n="downloads.download_windows">Download for Windows (x64)</a>
-</div>
-<p style="font-size:.75rem;color:var(--fg-muted)" data-i18n="downloads.windows_size">Installer ~ 45 MB · SHA-256 verified</p>
-</div>
-
-<!-- Linux -->
-<div class="card card-hover" style="padding:2rem;text-align:center">
-<div style="margin-bottom:1rem">
-<svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/><path d="M8 12l2 2 4-4"/></svg>
-</div>
-<h3 style="margin:.5rem 0" data-i18n="downloads.linux_title">Linux x64</h3>
-<p style="color:var(--fg-secondary);font-size:.9rem" data-i18n="downloads.linux_desc">Ubuntu 22.04+ / Debian 12+ (64-bit). AppImage + .deb package.</p>
-<div style="margin:1.25rem 0;display:flex;flex-direction:column;gap:.5rem">
-<a href="https://github.com/generalbots/generalbots/releases/latest/download/generalbots-linux-x64.AppImage" class="btn btn-primary btn-lg" style="width:100%;text-align:center" data-i18n="downloads.download_linux_appimage">Download AppImage (x64)</a>
-<a href="https://github.com/generalbots/generalbots/releases/latest/download/generalbots-linux-x64.deb" class="btn btn-outline btn-lg" style="width:100%;text-align:center" data-i18n="downloads.download_linux_deb">Download .deb (x64)</a>
-</div>
-<p style="font-size:.75rem;color:var(--fg-muted)" data-i18n="downloads.linux_size">AppImage ~ 60 MB · .deb ~ 55 MB</p>
-</div>
-
-<!-- Source -->
-<div class="card card-hover" style="padding:2rem;text-align:center">
-<div style="margin-bottom:1rem">
-<svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-</div>
-<h3 style="margin:.5rem 0" data-i18n="downloads.source_title">Source Code</h3>
-<p style="color:var(--fg-secondary);font-size:.9rem" data-i18n="downloads.source_desc">Build from source on any OS. Rust + Node.js. MIT.</p>
-<div style="margin:1.25rem 0">
-<a href="https://github.com/generalbots/generalbots" class="btn btn-outline btn-lg" style="width:100%;text-align:center" data-i18n="downloads.view_source">View on GitHub</a>
-</div>
-<p style="font-size:.75rem;color:var(--fg-muted)" data-i18n="downloads.source_note">Clone, build, deploy on your own infrastructure.</p>
-</div>
-
-</div>
-</div>
+<!-- ═══════════════ RELEASE NOTE ═══════════════ -->
+<section style="padding:2rem 0">
+  <div class="container" style="max-width:820px">
+    <div class="dl-note">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+      <p>
+        <strong data-i18n="downloads.note_title">Builds are attached to tagged releases.</strong>
+        <span data-i18n="downloads.note_body">The links below always resolve to the newest release. If one returns 404, that release has no desktop build attached yet — pin an earlier version or build from source.</span>
+      </p>
+    </div>
+  </div>
 </section>
 
-<div class="section-divider"></div>
+<!-- ═══════════════ PLATFORMS ═══════════════ -->
+<section class="section" id="platforms" style="padding-top:2rem">
+  <div class="container">
+    <div class="section-header centered">
+      <span class="overline" data-i18n="downloads.choose_platform">Choose your platform</span>
+      <h2 data-i18n="downloads.choose_title">Two builds, one platform</h2>
+      <p data-i18n="downloads.choose_sub">Linux is the primary target and the fastest path from download to a running suite. The Windows build is assembled on every release on a best-effort basis.</p>
+    </div>
 
-<!-- System requirements -->
-<section class="section reveal" style="padding:2rem 0 3rem">
-<div class="container">
-<h2 style="margin-bottom:1.5rem" data-i18n="downloads.requirements_title">System requirements</h2>
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem">
-<div class="card" style="padding:1.25rem">
-<h4 style="margin:0 0 .5rem" data-i18n="downloads.req_windows">Windows</h4>
-<ul style="margin:0;padding-left:1.25rem;color:var(--fg-secondary);font-size:.9rem">
-<li data-i18n="downloads.req_win_1">Windows 10 (1903+) or Windows 11, 64-bit</li>
-<li data-i18n="downloads.req_win_2">4 GB RAM minimum, 8 GB recommended</li>
-<li data-i18n="downloads.req_win_3">500 MB free disk space</li>
-<li data-i18n="downloads.req_win_4">Internet connection for first-run setup</li>
-</ul>
-</div>
-<div class="card" style="padding:1.25rem">
-<h4 style="margin:0 0 .5rem" data-i18n="downloads.req_linux">Linux</h4>
-<ul style="margin:0;padding-left:1.25rem;color:var(--fg-secondary);font-size:.9rem">
-<li data-i18n="downloads.req_linux_1">Ubuntu 22.04+ / Debian 12+ / Fedora 39+ (64-bit)</li>
-<li data-i18n="downloads.req_linux_2">4 GB RAM minimum, 8 GB recommended</li>
-<li data-i18n="downloads.req_linux_3">500 MB free disk space</li>
-<li data-i18n="downloads.req_linux_4">glibc 2.35+, libwebkit2gtk-4.1</li>
-</ul>
-</div>
-<div class="card" style="padding:1.25rem">
-<h4 style="margin:0 0 .5rem" data-i18n="downloads.req_common">All platforms</h4>
-<ul style="margin:0;padding-left:1.25rem;color:var(--fg-secondary);font-size:.9rem">
-<li data-i18n="downloads.req_common_1">Modern browser engine (Chromium/WebKit) for the UI</li>
-<li data-i18n="downloads.req_common_2">PostgreSQL 14+ for the server (bundled in installer)</li>
-<li data-i18n="downloads.req_common_3">Optional GPU for local LLM inference</li>
-<li data-i18n="downloads.req_common_4">Admin rights for first install only</li>
-</ul>
-</div>
-</div>
-</div>
+    <div class="grid-3">
+      <div class="card dl-card card-hover">
+        <div class="dl-card-top">
+          <div class="dl-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+          <span class="badge" data-i18n="downloads.badge_recommended">Recommended</span>
+        </div>
+        <h3 data-i18n="downloads.linux_title">Linux x86_64</h3>
+        <p data-i18n="downloads.linux_desc">Tarball with the desktop shell, local server, web suite and a per-user installer. Unpack, install, run the setup wizard.</p>
+        <a href="https://github.com/generalbots/generalbots/releases/latest/download/generalbots-linux-x86_64.tar.gz" class="btn btn-primary" data-i18n="downloads.download_linux">Download tarball</a>
+        <ul class="dl-meta">
+          <li>generalbots-linux-x86_64.tar.gz</li>
+          <li data-i18n="downloads.linux_meta1">GTK / WebKitGTK 4.1 · x86_64</li>
+          <li data-i18n="downloads.linux_meta2">No root required</li>
+        </ul>
+      </div>
+
+      <div class="card dl-card card-hover">
+        <div class="dl-card-top">
+          <div class="dl-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="8" height="8" rx="1"/><rect x="13" y="3" width="8" height="8" rx="1"/><rect x="3" y="13" width="8" height="8" rx="1"/><rect x="13" y="13" width="8" height="8" rx="1"/></svg></div>
+          <span class="badge" data-i18n="downloads.badge_best_effort">Best effort</span>
+        </div>
+        <h3 data-i18n="downloads.windows_title">Windows x64</h3>
+        <p data-i18n="downloads.windows_desc">Installer assembled by the Windows runner when the toolchain build is green. If no file is attached to the release, use the source build.</p>
+        <a href="https://github.com/generalbots/generalbots/releases/latest/download/generalbots-x64.exe" class="btn btn-outline" data-i18n="downloads.download_windows">Download installer</a>
+        <ul class="dl-meta">
+          <li>generalbots-x64.exe</li>
+          <li data-i18n="downloads.windows_meta1">Windows 10 / 11 · x64</li>
+          <li data-i18n="downloads.windows_meta2">Not covered by Linux checksums</li>
+        </ul>
+      </div>
+
+      <div class="card dl-card card-hover">
+        <div class="dl-card-top">
+          <div class="dl-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+          <span class="badge" data-i18n="downloads.badge_source">Source</span>
+        </div>
+        <h3 data-i18n="downloads.source_title">Build from source</h3>
+        <p data-i18n="downloads.source_desc">Clone the repository and build with Cargo. The same script that assembles the CI release produces the tarball locally.</p>
+        <a href="https://github.com/generalbots/generalbots" class="btn btn-outline" target="_blank" rel="noopener" data-i18n="downloads.view_source">Open repository</a>
+        <ul class="dl-meta">
+          <li>github.com/generalbots/generalbots</li>
+          <li data-i18n="downloads.source_meta1">Rust · cargo build --release</li>
+          <li data-i18n="downloads.source_meta2">Works on Linux, macOS and Windows</li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </section>
 
-<div class="section-divider"></div>
+<!-- ═══════════════ INSTALL ═══════════════ -->
+<section class="section section-alt" id="install">
+  <div class="container">
+    <div class="feature-split">
+      <div class="feature-content">
+        <span class="overline" data-i18n="downloads.install_overline">Install</span>
+        <h2 data-i18n="downloads.install_title">Four commands on Linux</h2>
+        <ol class="dl-steps">
+          <li>
+            <strong data-i18n="downloads.step1_t">Fetch the tarball</strong>
+            <span data-i18n="downloads.step1_d">The /latest/download/ URL always resolves to the newest published build.</span>
+          </li>
+          <li>
+            <strong data-i18n="downloads.step2_t">Unpack and install</strong>
+            <span data-i18n="downloads.step2_d">install.sh copies everything into ~/.local/opt/general-bots and adds a launcher plus a desktop entry.</span>
+          </li>
+          <li>
+            <strong data-i18n="downloads.step3_t">Start General Bots</strong>
+            <span data-i18n="downloads.step3_d">The first run opens the setup wizard: display name, model provider, API key.</span>
+          </li>
+          <li>
+            <strong data-i18n="downloads.step4_t">Let the wizard provision services</strong>
+            <span data-i18n="downloads.step4_d">Progress is shown per component; the suite then opens with Chat and Drive.</span>
+          </li>
+        </ol>
+      </div>
+      <div class="feature-visual">
+        <div class="code-block">
+          <div class="code-header"><span class="code-dot"></span><span class="code-dot"></span><span class="code-dot"></span><span style="margin-left:.5rem" data-i18n="downloads.code_title_install">bash — install</span></div>
+          <div class="code-body dl-code"><span class="dl-comment"># 1. download the newest build</span>
+BASE=https://github.com/generalbots/generalbots/releases/latest/download
+curl -fLO "$BASE/generalbots-linux-x86_64.tar.gz"
 
-<!-- Installation steps -->
-<section class="section reveal" style="padding:2rem 0 3rem">
-<div class="container">
-<h2 style="margin-bottom:1.5rem" data-i18n="downloads.install_title">Quick start</h2>
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem">
-<div class="card" style="padding:1.25rem">
-<div style="font-weight:700;margin-bottom:.5rem" data-i18n="downloads.install_win_title">Windows</div>
-<ol style="margin:0;padding-left:1.25rem;color:var(--fg-secondary);font-size:.9rem">
-<li data-i18n="downloads.install_win_1">Run the installer and follow the wizard.</li>
-<li data-i18n="downloads.install_win_2">Launch "General Bots" from the Start menu.</li>
-<li data-i18n="downloads.install_win_3">Complete the 2-step setup wizard.</li>
-<li data-i18n="downloads.install_win_4">Open http://localhost:3000 to chat.</li>
-</ol>
-</div>
-<div class="card" style="padding:1.25rem">
-<div style="font-weight:700;margin-bottom:.5rem" data-i18n="downloads.install_linux_title">Linux</div>
-<ol style="margin:0;padding-left:1.25rem;color:var(--fg-secondary);font-size:.9rem">
-<li data-i18n="downloads.install_linux_1">chmod +x the AppImage, or install the .deb package.</li>
-<li data-i18n="downloads.install_linux_2">Launch from your applications menu.</li>
-<li data-i18n="downloads.install_linux_3">Complete the 2-step setup wizard.</li>
-<li data-i18n="downloads.install_linux_4">Open http://localhost:3000 to chat.</li>
-</ol>
-</div>
-</div>
-</div>
+<span class="dl-comment"># 2. unpack and install for your user</span>
+tar -xzf generalbots-linux-x86_64.tar.gz
+cd generalbots-*-linux-x86_64
+./install.sh
+
+<span class="dl-comment"># 3. start it</span>
+general-bots</div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
-<div class="section-divider"></div>
+<!-- ═══════════════ VERIFY ═══════════════ -->
+<section class="section">
+  <div class="container">
+    <div class="feature-split reverse">
+      <div class="feature-content">
+        <span class="overline" data-i18n="downloads.verify_overline">Integrity</span>
+        <h2 data-i18n="downloads.verify_title">Verify before you run it</h2>
+        <p data-i18n="downloads.verify_sub">Every release publishes a SHA-256 manifest next to the tarball. Check the file you downloaded — no extra tooling, no keys to import.</p>
+        <ul class="feature-list">
+          <li>
+            <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            <div><strong data-i18n="downloads.verify_item1_t">One manifest, both names</strong><p data-i18n="downloads.verify_item1_d">SHA256SUMS-linux lists the stable alias and the versioned tarball, so the same file verifies either download.</p></div>
+          </li>
+          <li>
+            <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            <div><strong data-i18n="downloads.verify_item2_t">Skips what you did not download</strong><p data-i18n="downloads.verify_item2_d">--ignore-missing checks the entries that exist on disk and stays quiet about the rest.</p></div>
+          </li>
+        </ul>
+      </div>
+      <div class="feature-visual">
+        <div class="code-block">
+          <div class="code-header"><span class="code-dot"></span><span class="code-dot"></span><span class="code-dot"></span><span style="margin-left:.5rem" data-i18n="downloads.code_title_verify">bash — verify</span></div>
+          <div class="code-body dl-code">BASE=https://github.com/generalbots/generalbots/releases/latest/download
+curl -fLO "$BASE/SHA256SUMS-linux"
+sha256sum -c SHA256SUMS-linux --ignore-missing
 
-<!-- Checksums -->
-<section class="section reveal" style="padding:2rem 0 3rem">
-<div class="container">
-<h2 style="margin-bottom:1rem" data-i18n="downloads.checksums_title">Checksums (SHA-256)</h2>
-<p style="color:var(--fg-secondary);font-size:.9rem;margin-bottom:1rem" data-i18n="downloads.checksums_desc">Verify your download before installing. Replace the example hashes with the values published on the release page.</p>
-<div style="background:var(--bg-card);border:1px solid var(--border);border-radius:8px;padding:1rem;font-family:monospace;font-size:.8rem;overflow-x:auto">
-windows-x64.exe  &nbsp; a1b2c3d4e5f6...<br>
-linux-x64.AppImage  &nbsp; f6e5d4c3b2a1...<br>
-linux-x64.deb  &nbsp; 1234567890ab...
-</div>
-</div>
+<span class="dl-comment"># generalbots-linux-x86_64.tar.gz: OK</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
-<div class="section-divider"></div>
-
-<!-- Release notes -->
-<section class="section reveal" style="padding:2rem 0 3rem">
-<div class="container">
-<h2 style="margin-bottom:1rem" data-i18n="downloads.release_notes_title">Latest release notes</h2>
-<p style="color:var(--fg-secondary);font-size:.9rem;margin-bottom:1rem" data-i18n="downloads.release_notes_desc">See the full changelog and previous versions on GitHub.</p>
-<a href="https://github.com/generalbots/generalbots/releases" class="btn btn-outline" data-i18n="downloads.view_releases">View all releases</a>
-</div>
+<!-- ═══════════════ REQUIREMENTS ═══════════════ -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header centered">
+      <span class="overline" data-i18n="downloads.req_overline">Requirements</span>
+      <h2 data-i18n="downloads.requirements_title">What the desktop needs</h2>
+      <p data-i18n="downloads.req_sub">The download is small because it carries no service archives. The first run fetches the stack, which is where the disk space goes.</p>
+    </div>
+    <div class="dl-table-wrap" style="max-width:860px;margin:0 auto">
+      <table class="comparison-table">
+        <caption class="sr-only">System requirements for the General Bots desktop build</caption>
+        <tbody>
+          <tr>
+            <td data-i18n="downloads.req_row_os_k">Operating system</td>
+            <td data-i18n="downloads.req_row_os_v">Linux x86_64 — Ubuntu 22.04+ or an equivalent with GTK / WebKitGTK 4.1 — or Windows 10 / 11 x64</td>
+          </tr>
+          <tr>
+            <td data-i18n="downloads.req_row_lib_k">Desktop library</td>
+            <td data-i18n="downloads.req_row_lib_v">libwebkit2gtk-4.1-0 is the only required library on Linux</td>
+          </tr>
+          <tr>
+            <td data-i18n="downloads.req_row_disk_k">Disk</td>
+            <td data-i18n="downloads.req_row_disk_v">About 4 GB free for the provisioned service stack</td>
+          </tr>
+          <tr>
+            <td data-i18n="downloads.req_row_net_k">Network</td>
+            <td data-i18n="downloads.req_row_net_v">Internet access on first run to fetch services — or an installers/ bundle for offline use</td>
+          </tr>
+          <tr>
+            <td data-i18n="downloads.req_row_priv_k">Privileges</td>
+            <td data-i18n="downloads.req_row_priv_v">None. The installer and the stack stay inside your home directory</td>
+          </tr>
+          <tr>
+            <td data-i18n="downloads.req_row_gpu_k">GPU</td>
+            <td data-i18n="downloads.req_row_gpu_v">Optional. Local model inference runs on CPU without one</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </section>
 
-<div class="section-divider"></div>
+<!-- ═══════════════ AFTER INSTALL ═══════════════ -->
+<section class="section">
+  <div class="container">
+    <div class="section-header centered">
+      <span class="overline" data-i18n="downloads.runtime_overline">After install</span>
+      <h2 data-i18n="downloads.runtime_title">Where everything lives</h2>
+      <p data-i18n="downloads.runtime_sub">Nothing is installed system-wide and nothing phones home. The paths below are the whole footprint.</p>
+    </div>
+    <div class="grid-4">
+      <div class="card card-hover">
+        <h3 data-i18n="downloads.rt_services_t">Services</h3>
+        <p data-i18n="downloads.rt_services_d">PostgreSQL, Valkey, MinIO, Qdrant, Vault, Zitadel and llama.cpp, provisioned by the wizard.</p>
+      </div>
+      <div class="card card-hover">
+        <h3 data-i18n="downloads.rt_state_t">Runtime state</h3>
+        <p data-i18n="downloads.rt_state_d">~/.local/share/generalbots holds the stack, workspace and logs. Override with BOTSERVER_STACK_PATH.</p>
+      </div>
+      <div class="card card-hover">
+        <h3 data-i18n="downloads.rt_logs_t">Logs</h3>
+        <p data-i18n="downloads.rt_logs_d">wizard-provision.log and botserver-sidecar.log under ~/.local/share/generalbots/logs.</p>
+      </div>
+      <div class="card card-hover">
+        <h3 data-i18n="downloads.rt_offline_t">Offline install</h3>
+        <p data-i18n="downloads.rt_offline_d">Drop the component archives into installers/ next to start.sh and nothing is downloaded.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-<!-- Support -->
-<section class="section reveal" style="padding:2rem 0 3rem">
-<div class="container" style="text-align:center">
-<h2 style="margin-bottom:1rem" data-i18n="downloads.support_title">Need help?</h2>
-<p style="color:var(--fg-secondary);font-size:.9rem;margin-bottom:1rem" data-i18n="downloads.support_desc">Join the community or read the documentation.</p>
-<div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
-<a href="https://docs.generalbots.org" class="btn btn-outline" data-i18n="downloads.docs">Documentation</a>
-<a href="https://github.com/generalbots/generalbots/issues" class="btn btn-outline" data-i18n="downloads.issues">Report an issue</a>
-<a href="/hosting/" class="btn btn-outline" data-i18n="downloads.hosted">Try hosted instance</a>
-</div>
-</div>
+<!-- ═══════════════ PINNED URLS ═══════════════ -->
+<section class="section section-alt">
+  <div class="container" style="max-width:860px">
+    <div class="section-header">
+      <span class="overline" data-i18n="downloads.pinned_overline">Versioning</span>
+      <h2 data-i18n="downloads.pinned_title">Stable or pinned</h2>
+      <p data-i18n="downloads.pinned_sub">Use the stable URL for the current build. Pin a tag when you need a reproducible install or an older release.</p>
+    </div>
+    <div class="code-block" style="margin-bottom:1.5rem">
+      <div class="code-header"><span class="code-dot"></span><span class="code-dot"></span><span class="code-dot"></span><span style="margin-left:.5rem" data-i18n="downloads.code_title_pinned">bash — pinned release</span></div>
+      <div class="code-body dl-code"><span class="dl-comment"># stable: newest published build</span>
+BASE=https://github.com/generalbots/generalbots/releases/latest/download
+curl -fLO "$BASE/generalbots-linux-x86_64.tar.gz"
+
+<span class="dl-comment"># pinned: one tag (the tag-free alias is not published here)</span>
+TAG=v6.7.0
+BASE=https://github.com/generalbots/generalbots/releases/download/$TAG
+curl -fLO "$BASE/generalbots-$TAG-linux-x86_64.tar.gz"</div>
+    </div>
+    <div class="dl-note">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+      <p data-i18n="downloads.pinned_note">Versioned assets embed the tag in the filename. The tag-free name exists only on the /latest/ path, so replace v6.7.0 with a tag that has actually been published.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ FAQ ═══════════════ -->
+<section class="section">
+  <div class="container">
+    <div class="section-header centered">
+      <span class="overline" data-i18n="downloads.faq_overline">Questions</span>
+      <h2 data-i18n="downloads.faq_title">Before you install</h2>
+    </div>
+    <div class="dl-faq">
+      <details>
+        <summary data-i18n="downloads.faq1_q">Do I need root?</summary>
+        <div class="dl-faq-body"><p data-i18n="downloads.faq1_a">No. install.sh writes to ~/.local/opt/general-bots, links a launcher into ~/.local/bin and registers a desktop entry. Pass a different prefix as the first argument if you want another location.</p></div>
+      </details>
+      <details>
+        <summary data-i18n="downloads.faq2_q">Where does my data live?</summary>
+        <div class="dl-faq-body"><p data-i18n="downloads.faq2_a">Everything runtime-related stays in ~/.local/share/generalbots: the service stack, the workspace and the logs. Point BOTSERVER_STACK_PATH at another directory to run an isolated stack.</p></div>
+      </details>
+      <details>
+        <summary data-i18n="downloads.faq3_q">Can I install without internet access?</summary>
+        <div class="dl-faq-body"><p data-i18n="downloads.faq3_a">Yes. Put the component archives in an installers/ directory next to start.sh before the first run — when that directory has files, the wizard downloads nothing.</p></div>
+      </details>
+      <details>
+        <summary data-i18n="downloads.faq4_q">Which services get installed?</summary>
+        <div class="dl-faq-body"><p data-i18n="downloads.faq4_a">PostgreSQL, Valkey, MinIO, Qdrant, Vault, Zitadel and llama.cpp. Progress is reported per component and the full log is written to ~/.local/share/generalbots/logs.</p></div>
+      </details>
+      <details>
+        <summary data-i18n="downloads.faq5_q">Why does a download link return 404?</summary>
+        <div class="dl-faq-body"><p data-i18n="downloads.faq5_a">The link always points at the newest release. If that release carries no desktop assets, nothing resolves. Pin a published tag or build from source.</p></div>
+      </details>
+      <details>
+        <summary data-i18n="downloads.faq6_q">Is there a macOS build?</summary>
+        <div class="dl-faq-body"><p data-i18n="downloads.faq6_a">Not yet published. Build from source, or run the same software as a managed instance instead.</p></div>
+      </details>
+      <details>
+        <summary data-i18n="downloads.faq7_q">How do I upgrade?</summary>
+        <div class="dl-faq-body"><p data-i18n="downloads.faq7_a">Download the newer tarball and run its installer again. The runtime state in ~/.local/share/generalbots survives reinstalls.</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ CTA ═══════════════ -->
+<section class="cta-section">
+  <div class="container">
+    <h2 data-i18n="downloads.cta_title">Rather not run it yourself?</h2>
+    <p data-i18n="downloads.cta_sub">The desktop build and the hosted deployment run the same software. Pick a hosting partner or self-host the server edition.</p>
+    <div class="flex flex-wrap gap-4 justify-center">
+      <a href="/hosting/" class="btn btn-primary btn-lg" data-i18n="downloads.cta_hosting">Explore hosting</a>
+      <a href="https://docs.generalbots.org" class="btn btn-outline btn-lg" target="_blank" rel="noopener" data-i18n="downloads.cta_docs">Read the docs</a>
+    </div>
+  </div>
 </section>
 
 </main>
