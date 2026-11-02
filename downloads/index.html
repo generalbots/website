@@ -117,6 +117,7 @@
 .dl-tile .btn-primary:hover{background:#2c2c3a !important}
 [data-theme="dark"] .dl-tile .btn-primary{background:#f2f2f5 !important;color:#0b0b10 !important;box-shadow:0 14px 38px -18px rgba(255,255,255,.4)}
 [data-theme="dark"] .dl-tile .btn-primary:hover{background:#ffffff !important}
+.dl-tile .badge[data-gh-tag]{font-family:var(--mono);text-transform:none;letter-spacing:0;font-size:.625rem}
 .dl-tile-cmd{display:flex;align-items:flex-start;gap:.5rem;margin-top:.25rem;font-family:var(--mono);font-size:.65rem;line-height:1.6;color:var(--fg-muted);text-decoration:none}
 .dl-tile-cmd:hover{color:var(--accent-light)}
 .dl-tile-cmd svg{width:.875rem;height:.875rem;flex-shrink:0;margin-top:.1rem;color:var(--accent-light)}
@@ -314,7 +315,7 @@
             <span data-i18n="downloads.copy">Copy</span>
           </button>
         </div>
-        <pre class="dl-pre" id="cmd-linux"><code>curl -fL <span class="dl-hl">https://github.com/generalbots/generalbots/releases/latest/download/generalbots-linux-x86_64.tar.gz</span> | tar -xz &amp;&amp; <span class="dl-hl">./generalbots-*-linux-x86_64/install.sh</span></code></pre>
+        <pre class="dl-pre" id="cmd-linux"><code>curl -fL <span class="dl-hl" id="dl-linux-url">https://github.com/generalbots/generalbots/releases/latest/download/generalbots-linux-x86_64.tar.gz</span> | tar -xz &amp;&amp; <span class="dl-hl">./generalbots-*-linux-x86_64/install.sh</span></code></pre>
       </div>
 
       <div class="dl-code">
@@ -327,7 +328,7 @@
             <span data-i18n="downloads.copy">Copy</span>
           </button>
         </div>
-        <pre class="dl-pre" id="cmd-windows"><code>iwr <span class="dl-hl">https://github.com/generalbots/generalbots/releases/latest/download/generalbots-x64.exe</span> -OutFile "$env:TEMP\gb-setup.exe"; &amp; "$env:TEMP\gb-setup.exe"</code></pre>
+        <pre class="dl-pre" id="cmd-windows"><code>iwr <span class="dl-hl" id="dl-windows-url">https://github.com/generalbots/generalbots/releases/latest/download/generalbots-x64.exe</span> -OutFile "$env:TEMP\gb-setup.exe"; &amp; "$env:TEMP\gb-setup.exe"</code></pre>
       </div>
     </div>
 
@@ -492,7 +493,7 @@ sha256sum -c SHA256SUMS-linux --ignore-missing
               <span data-i18n="downloads.copy">Copy</span>
             </button>
           </div>
-          <pre class="dl-pre" id="cmd-pinned"><code>TAG=v6.7.0
+          <pre class="dl-pre" id="cmd-pinned"><code>TAG=<span id="dl-pinned-tag">v6.7.0-desktop.7</span>
 curl -fL <span class="dl-hl">https://github.com/generalbots/generalbots/releases/download/$TAG/generalbots-$TAG-linux-x86_64.tar.gz</span> | tar -xz
 cd generalbots-$TAG-linux-x86_64 &amp;&amp; ./install.sh</code></pre>
         </div>
@@ -585,6 +586,14 @@ cd generalbots-$TAG-linux-x86_64 &amp;&amp; ./install.sh</code></pre>
     var sums = map['SHA256SUMS-linux'];
     var base = document.getElementById('dl-verify-base');
     if (sums && base) base.textContent = 'https://github.com/generalbots/generalbots/releases/download/' + sums.tag;
+    var linux = map['generalbots-linux-x86_64.tar.gz'];
+    var win = map['generalbots-x64.exe'];
+    var linuxUrl = document.getElementById('dl-linux-url');
+    var winUrl = document.getElementById('dl-windows-url');
+    var pinnedTag = document.getElementById('dl-pinned-tag');
+    if (linux && linuxUrl) linuxUrl.textContent = linux.url;
+    if (win && winUrl) winUrl.textContent = win.url;
+    if (linux && pinnedTag) pinnedTag.textContent = linux.tag;
     var tags = document.querySelectorAll('[data-gh-tag]');
     for (i = 0; i < tags.length; i++) {
       var entry = map[TAG_KEY[tags[i].getAttribute('data-gh-tag')]];
