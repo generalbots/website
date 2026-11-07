@@ -4,13 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Downloads | General Bots — Desktop Builds for Linux and Windows</title>
-<meta name="description" content="Download the General Bots desktop build for Linux x86_64 or Windows x64. One-line install, SHA-256 checksums, free and MIT licensed.">
+<meta name="description" content="Download the General Bots desktop build: .deb, .rpm and AppImage for Linux x86_64, .msi and setup .exe for Windows x64. SHA-256 checksums published with every release, MIT licensed.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://generalbots.org/downloads/">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="General Bots">
 <meta property="og:title" content="Downloads | General Bots — Desktop Builds for Linux and Windows">
-<meta property="og:description" content="Download the General Bots desktop build for Linux x86_64 or Windows x64. One-line install, SHA-256 checksums, free and MIT licensed.">
+<meta property="og:description" content="Download the General Bots desktop build: .deb, .rpm and AppImage for Linux x86_64, .msi and setup .exe for Windows x64. SHA-256 checksums on every release.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://generalbots.org/downloads/">
 <meta property="og:image" content="https://generalbots.org/og-image.png">
@@ -20,7 +20,7 @@
 <meta property="og:image:alt" content="General Bots — Multi-Agent AI Platform">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Downloads | General Bots">
-<meta name="twitter:description" content="Desktop builds for Linux x86_64 and Windows x64. One-line install, checksums published with every release.">
+<meta name="twitter:description" content="Desktop builds for Linux x86_64 (.deb, .rpm, AppImage) and Windows x64 (.msi, setup). Checksums published with every release.">
 
 <link rel="alternate" hreflang="x-default" href="https://generalbots.org/downloads/" />
 <link rel="alternate" hreflang="en" href="https://generalbots.org/downloads/" />
@@ -51,6 +51,7 @@
   "name": "General Bots Desktop",
   "applicationCategory": "BusinessApplication",
   "operatingSystem": "Linux x86_64, Windows x64",
+  "softwareRequirements": "Linux: WebKitGTK 4.1, libpq, FUSE 2 for the AppImage. Windows: WebView2.",
   "url": "https://generalbots.org/downloads/",
   "downloadUrl": "https://github.com/generalbots/generalbots/releases/latest/download/generalbots-linux-x86_64.tar.gz",
   "license": "https://opensource.org/licenses/MIT",
@@ -130,6 +131,22 @@
 .dl-note svg{width:1.125rem;height:1.125rem;flex-shrink:0;margin-top:.15rem;color:var(--accent-light)}
 .dl-note p{font-size:.8125rem;color:var(--fg-secondary);line-height:1.65;margin:0}
 .dl-note strong{display:block;color:var(--fg);margin-bottom:.25rem}
+
+/* ── all assets table ───────────────────────────────── */
+.dl-table-wrap{overflow-x:auto;border:1px solid var(--border);border-radius:1rem;background:var(--bg-card);margin-top:2rem}
+.dl-table{width:100%;border-collapse:collapse;min-width:760px}
+.dl-table th,.dl-table td{padding:.7rem .9rem;text-align:left;border-bottom:1px solid var(--border-subtle);font-size:.8125rem;vertical-align:middle}
+.dl-table thead th{font-family:var(--mono);font-size:.65rem;text-transform:uppercase;letter-spacing:.08em;color:var(--fg-muted);font-weight:700;background:var(--bg-tertiary)}
+.dl-table tbody tr:last-child td{border-bottom:0}
+.dl-table tbody tr:hover{background:var(--bg-secondary)}
+.dl-table td code{font-family:var(--mono);font-size:.75rem;color:var(--fg);overflow-wrap:anywhere}
+.dl-sha{color:var(--fg-muted) !important;font-size:.6875rem !important;line-height:1.5;overflow-wrap:anywhere}
+.dl-sha.ready{color:var(--fg-secondary) !important}
+.dl-sha-copy{margin-left:.4rem;vertical-align:middle}
+.dl-sha-copy svg{width:.75rem;height:.75rem}
+.dl-table .dl-get{white-space:nowrap}
+.dl-table .dl-get a{color:var(--accent-light);font-family:var(--mono);font-size:.75rem;font-weight:600}
+.dl-table .dl-get a:hover{text-decoration:underline}
 
 /* ── code blocks ────────────────────────────────────── */
 .dl-code{background:var(--bg-secondary);border:1px solid var(--border);border-radius:.875rem;overflow:hidden;height:100%}
@@ -254,11 +271,11 @@
           </div>
           <div>
             <h2 data-i18n="downloads.windows_title">Windows x64</h2>
-            <p class="dl-tile-sub" data-i18n="downloads.windows_tile_meta">generalbots-x64.exe · best effort</p>
+            <p class="dl-tile-sub" data-i18n="downloads.windows_tile_meta">generalbots.exe · .msi · best effort</p>
           </div>
         </div>
         <p data-i18n="downloads.windows_tile_desc">Installer built on every release when the Windows runner is green. If no file is attached, use the source build.</p>
-        <a href="https://github.com/generalbots/generalbots/releases/latest/download/generalbots-x64.exe" class="btn btn-primary btn-lg" data-gh-asset="generalbots-x64.exe">
+        <a href="https://github.com/generalbots/generalbots/releases/latest/download/generalbots.exe" class="btn btn-primary btn-lg" data-gh-asset="generalbots.exe">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></svg>
           <span data-i18n="downloads.hero_cta_windows">Download for Windows</span>
         </a>
@@ -327,7 +344,7 @@
             <span data-i18n="downloads.copy">Copy</span>
           </button>
         </div>
-        <pre class="dl-pre" id="cmd-windows"><code>iwr <span class="dl-hl" id="dl-windows-url">https://github.com/generalbots/generalbots/releases/latest/download/generalbots-x64.exe</span> -OutFile "$env:TEMP\gb-setup.exe"; &amp; "$env:TEMP\gb-setup.exe"</code></pre>
+        <pre class="dl-pre" id="cmd-windows"><code>iwr <span class="dl-hl" id="dl-windows-url">https://github.com/generalbots/generalbots/releases/latest/download/generalbots.exe</span> -OutFile "$env:TEMP\gb-setup.exe"; &amp; "$env:TEMP\gb-setup.exe"</code></pre>
       </div>
     </div>
 
@@ -404,6 +421,113 @@
           </div>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ ALL ASSETS ═══════════════ -->
+<section class="section" id="all">
+  <div class="container">
+    <div class="section-header centered">
+      <span class="overline" data-i18n="downloads.all_overline">All assets</span>
+      <h2 data-i18n="downloads.all_title">Every file in the release</h2>
+      <p data-i18n="downloads.all_sub">One build, six packages. Each link resolves to the newest release that carries the file, and the SHA-256 is read from the release itself — so the value below always matches what you download.</p>
+    </div>
+
+    <div class="dl-table-wrap">
+      <table class="dl-table">
+        <caption class="sr-only" data-i18n="downloads.all_caption">Release assets</caption>
+        <thead>
+          <tr>
+            <th scope="col" data-i18n="downloads.all_col_file">File</th>
+            <th scope="col" data-i18n="downloads.all_col_platform">Platform</th>
+            <th scope="col" data-i18n="downloads.all_col_sha">SHA-256</th>
+            <th scope="col" data-i18n="downloads.all_col_get">Download</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>generalbots-linux-x86_64.tar.gz</code></td>
+            <td data-i18n="downloads.all_p_tar">—</td>
+            <td><code class="dl-sha" id="sha-1" data-checksum="generalbots-linux-x86_64.tar.gz">—</code><button class="dl-copy dl-sha-copy" type="button" data-copy-target="sha-1" aria-label="Copy the SHA-256 for generalbots-linux-x86_64.tar.gz"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></button></td>
+            <td class="dl-get"><a href="https://github.com/generalbots/generalbots/releases/latest/download/generalbots-linux-x86_64.tar.gz" data-gh-asset="generalbots-linux-x86_64.tar.gz">.tar.gz</a></td>
+          </tr>
+          <tr>
+            <td><code>generalbots</code></td>
+            <td data-i18n="downloads.all_p_single">—</td>
+            <td><code class="dl-sha" id="sha-2" data-checksum="generalbots">—</code><button class="dl-copy dl-sha-copy" type="button" data-copy-target="sha-2" aria-label="Copy the SHA-256 for generalbots"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></button></td>
+            <td class="dl-get"><a href="https://github.com/generalbots/generalbots/releases/latest/download/generalbots" data-gh-asset="generalbots">binary</a></td>
+          </tr>
+          <tr>
+            <td><code>generalbots-linux-x86_64.deb</code></td>
+            <td data-i18n="downloads.all_p_deb">—</td>
+            <td><code class="dl-sha" id="sha-3" data-checksum="generalbots-linux-x86_64.deb">—</code><button class="dl-copy dl-sha-copy" type="button" data-copy-target="sha-3" aria-label="Copy the SHA-256 for generalbots-linux-x86_64.deb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></button></td>
+            <td class="dl-get"><a href="https://github.com/generalbots/generalbots/releases/latest/download/generalbots-linux-x86_64.deb" data-gh-asset="generalbots-linux-x86_64.deb">.deb</a></td>
+          </tr>
+          <tr>
+            <td><code>generalbots-linux-x86_64.rpm</code></td>
+            <td data-i18n="downloads.all_p_rpm">—</td>
+            <td><code class="dl-sha" id="sha-4" data-checksum="generalbots-linux-x86_64.rpm">—</code><button class="dl-copy dl-sha-copy" type="button" data-copy-target="sha-4" aria-label="Copy the SHA-256 for generalbots-linux-x86_64.rpm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></button></td>
+            <td class="dl-get"><a href="https://github.com/generalbots/generalbots/releases/latest/download/generalbots-linux-x86_64.rpm" data-gh-asset="generalbots-linux-x86_64.rpm">.rpm</a></td>
+          </tr>
+          <tr>
+            <td><code>generalbots-linux-x86_64.AppImage</code></td>
+            <td data-i18n="downloads.all_p_appimage">—</td>
+            <td><code class="dl-sha" id="sha-5" data-checksum="generalbots-linux-x86_64.AppImage">—</code><button class="dl-copy dl-sha-copy" type="button" data-copy-target="sha-5" aria-label="Copy the SHA-256 for generalbots-linux-x86_64.AppImage"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></button></td>
+            <td class="dl-get"><a href="https://github.com/generalbots/generalbots/releases/latest/download/generalbots-linux-x86_64.AppImage" data-gh-asset="generalbots-linux-x86_64.AppImage">.AppImage</a></td>
+          </tr>
+          <tr>
+            <td><code>generalbots.exe</code></td>
+            <td data-i18n="downloads.all_p_win">—</td>
+            <td><code class="dl-sha" id="sha-6" data-checksum="generalbots.exe">—</code><button class="dl-copy dl-sha-copy" type="button" data-copy-target="sha-6" aria-label="Copy the SHA-256 for generalbots.exe"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></button></td>
+            <td class="dl-get"><a href="https://github.com/generalbots/generalbots/releases/latest/download/generalbots.exe" data-gh-asset="generalbots.exe">.exe</a></td>
+          </tr>
+          <tr>
+            <td><code>generalbots-x64.msi</code></td>
+            <td data-i18n="downloads.all_p_msi">—</td>
+            <td><code class="dl-sha" id="sha-7" data-checksum="generalbots-x64.msi">—</code><button class="dl-copy dl-sha-copy" type="button" data-copy-target="sha-7" aria-label="Copy the SHA-256 for generalbots-x64.msi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></button></td>
+            <td class="dl-get"><a href="https://github.com/generalbots/generalbots/releases/latest/download/generalbots-x64.msi" data-gh-asset="generalbots-x64.msi">.msi</a></td>
+          </tr>
+          <tr>
+            <td><code>generalbots-x64-setup.exe</code></td>
+            <td data-i18n="downloads.all_p_nsis">—</td>
+            <td><code class="dl-sha" id="sha-8" data-checksum="generalbots-x64-setup.exe">—</code><button class="dl-copy dl-sha-copy" type="button" data-copy-target="sha-8" aria-label="Copy the SHA-256 for generalbots-x64-setup.exe"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></button></td>
+            <td class="dl-get"><a href="https://github.com/generalbots/generalbots/releases/latest/download/generalbots-x64-setup.exe" data-gh-asset="generalbots-x64-setup.exe">.exe</a></td>
+          </tr>
+          <tr>
+            <td><code>generalbots-linux-x86_64</code></td>
+            <td data-i18n="downloads.all_p_app">—</td>
+            <td><code class="dl-sha" id="sha-9" data-checksum="generalbots-linux-x86_64">—</code><button class="dl-copy dl-sha-copy" type="button" data-copy-target="sha-9" aria-label="Copy the SHA-256 for generalbots-linux-x86_64"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></button></td>
+            <td class="dl-get"><a href="https://github.com/generalbots/generalbots/releases/latest/download/generalbots-linux-x86_64" data-gh-asset="generalbots-linux-x86_64">binary</a></td>
+          </tr>
+          <tr>
+            <td><code>botserver-linux-x86_64</code></td>
+            <td data-i18n="downloads.all_p_server">—</td>
+            <td><code class="dl-sha" id="sha-10" data-checksum="botserver-linux-x86_64">—</code><button class="dl-copy dl-sha-copy" type="button" data-copy-target="sha-10" aria-label="Copy the SHA-256 for botserver-linux-x86_64"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></button></td>
+            <td class="dl-get"><a href="https://github.com/generalbots/generalbots/releases/latest/download/botserver-linux-x86_64" data-gh-asset="botserver-linux-x86_64">binary</a></td>
+          </tr>
+          <tr>
+            <td><code>SHA256SUMS-linux</code></td>
+            <td data-i18n="downloads.all_p_sums_linux">—</td>
+            <td><code class="dl-sha" id="sha-11" data-checksum="SHA256SUMS-linux">—</code><button class="dl-copy dl-sha-copy" type="button" data-copy-target="sha-11" aria-label="Copy the SHA-256 for SHA256SUMS-linux"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></button></td>
+            <td class="dl-get"><a href="https://github.com/generalbots/generalbots/releases/latest/download/SHA256SUMS-linux" data-gh-asset="SHA256SUMS-linux">txt</a></td>
+          </tr>
+          <tr>
+            <td><code>SHA256SUMS-windows.txt</code></td>
+            <td data-i18n="downloads.all_p_sums_win">—</td>
+            <td><code class="dl-sha" id="sha-12" data-checksum="SHA256SUMS-windows.txt">—</code><button class="dl-copy dl-sha-copy" type="button" data-copy-target="sha-12" aria-label="Copy the SHA-256 for SHA256SUMS-windows.txt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></button></td>
+            <td class="dl-get"><a href="https://github.com/generalbots/generalbots/releases/latest/download/SHA256SUMS-windows.txt" data-gh-asset="SHA256SUMS-windows.txt">txt</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="dl-note" style="margin-top:1.25rem">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+      <p>
+        <strong data-i18n="downloads.all_note_title">Checksums are live.</strong>
+        <span data-i18n="downloads.all_note">Read from the GitHub release API on every page load, so they follow the newest build automatically. Select a value, copy it with the button, or download the SHA256SUMS file and run sha256sum -c.</span>
+      </p>
     </div>
   </div>
 </section>
@@ -564,16 +688,33 @@ cd generalbots-$TAG-linux-x86_64 &amp;&amp; ./install.sh</code></pre>
 <script defer src="https://unpkg.com/htmx.org@2.0.10"></script>
 <script defer src="/js/site.min.js"></script>
 <script>
-/* Per-platform releases: /latest/ follows the newest release overall, so a
-   Windows-only build hides the Linux assets. Resolve each platform to the
-   newest release that actually carries its file; plain /latest/ stays as the
-   no-JS fallback. */
+/* Release resolution: /latest/ follows the newest release overall, and Windows
+   builds are published on their own tag, so /latest/ alone can hide a platform.
+   Resolve every asset to the newest release that actually carries it, and read
+   the SHA-256 from the same API payload (asset.digest) so the table can never
+   show a stale checksum. Plain /latest/ links stay as the no-JS fallback. */
 (function () {
-  var API = 'https://api.github.com/repos/generalbots/generalbots/releases?per_page=30';
-  var CACHE = 'gb_release_assets';
+  var API = 'https://api.github.com/repos/generalbots/generalbots/releases?per_page=40';
+  var CACHE = 'gb_release_assets_v2';
   var TTL = 10 * 60 * 1000;
-  var ASSETS = ['generalbots-linux-x86_64.tar.gz', 'generalbots-x64.exe', 'SHA256SUMS-linux'];
-  var TAG_KEY = { linux: 'generalbots-linux-x86_64.tar.gz', windows: 'generalbots-x64.exe' };
+  var ASSETS = [
+    'generalbots-linux-x86_64.tar.gz',
+    'generalbots',
+    'generalbots-linux-x86_64.deb',
+    'generalbots-linux-x86_64.rpm',
+    'generalbots-linux-x86_64.AppImage',
+    'generalbots-linux-x86_64',
+    'botserver-linux-x86_64',
+    'SHA256SUMS-linux',
+    'generalbots.exe',
+    'generalbots-x64.exe',
+    'generalbots-x64.msi',
+    'generalbots-x64-setup.exe',
+    'botserver-x64.exe',
+    'botui-x64.exe',
+    'SHA256SUMS-windows.txt'
+  ];
+  var TAG_KEY = { linux: 'generalbots-linux-x86_64.tar.gz', windows: 'generalbots.exe' };
 
   function apply(map) {
     var i;
@@ -582,11 +723,20 @@ cd generalbots-$TAG-linux-x86_64 &amp;&amp; ./install.sh</code></pre>
       var hit = map[links[i].getAttribute('data-gh-asset')];
       if (hit) links[i].setAttribute('href', hit.url);
     }
+    var cells = document.querySelectorAll('[data-checksum]');
+    for (i = 0; i < cells.length; i++) {
+      var entry = map[cells[i].getAttribute('data-checksum')];
+      if (entry && entry.sha) {
+        cells[i].textContent = entry.sha;
+        cells[i].setAttribute('title', cells[i].getAttribute('data-checksum') + ' — ' + entry.tag);
+        cells[i].classList.add('ready');
+      }
+    }
     var sums = map['SHA256SUMS-linux'];
     var base = document.getElementById('dl-verify-base');
     if (sums && base) base.textContent = 'https://github.com/generalbots/generalbots/releases/download/' + sums.tag;
     var linux = map['generalbots-linux-x86_64.tar.gz'];
-    var win = map['generalbots-x64.exe'];
+    var win = map['generalbots.exe'];
     var linuxUrl = document.getElementById('dl-linux-url');
     var winUrl = document.getElementById('dl-windows-url');
     var pinnedTag = document.getElementById('dl-pinned-tag');
@@ -595,9 +745,9 @@ cd generalbots-$TAG-linux-x86_64 &amp;&amp; ./install.sh</code></pre>
     if (linux && pinnedTag) pinnedTag.textContent = linux.tag;
     var tags = document.querySelectorAll('[data-gh-tag]');
     for (i = 0; i < tags.length; i++) {
-      var entry = map[TAG_KEY[tags[i].getAttribute('data-gh-tag')]];
-      if (entry) {
-        tags[i].textContent = entry.tag;
+      var tagged = map[TAG_KEY[tags[i].getAttribute('data-gh-tag')]];
+      if (tagged) {
+        tags[i].textContent = tagged.tag;
         tags[i].hidden = false;
       }
     }
@@ -615,7 +765,8 @@ cd generalbots-$TAG-linux-x86_64 &amp;&amp; ./install.sh</code></pre>
             if (ASSETS.indexOf(asset.name) === -1 || map[asset.name]) return;
             map[asset.name] = {
               tag: rel.tag_name,
-              url: 'https://github.com/generalbots/generalbots/releases/download/' + rel.tag_name + '/' + encodeURIComponent(asset.name)
+              url: 'https://github.com/generalbots/generalbots/releases/download/' + rel.tag_name + '/' + encodeURIComponent(asset.name),
+              sha: asset.digest ? String(asset.digest).replace(/^sha256:/, '') : ''
             };
           });
         });
