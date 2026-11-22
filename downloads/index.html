@@ -259,6 +259,70 @@
 .dl-catalog-note{margin-top:1.5rem}
 @media(prefers-reduced-motion:reduce){.dl-skeleton{animation:none}}
 
+
+/* ── on-page navigation + quick guide ──────────────── */
+.dl-quicknav{display:flex;flex-wrap:wrap;gap:.5rem;justify-content:center;margin:1.5rem auto 0}
+.dl-quicknav a{display:inline-flex;align-items:center;gap:.4rem;padding:.45rem .8rem;font-size:.75rem;font-weight:700;color:var(--fg-secondary);background:var(--bg-card);border:1px solid var(--border);border-radius:999px;text-decoration:none;transition:border-color .15s,color .15s,transform .15s}
+.dl-quicknav a:hover{border-color:var(--accent);color:var(--fg);transform:translateY(-1px)}
+.dl-quicknav svg{width:.9rem;height:.9rem;color:var(--accent-light);flex-shrink:0}
+.dl-chooser{display:grid;grid-template-columns:minmax(0,1fr);gap:.85rem;margin-top:2rem}
+@media(min-width:640px){.dl-chooser{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(min-width:1100px){.dl-chooser{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.dl-choice{position:relative;display:flex;flex-direction:column;gap:.65rem;padding:1.2rem;background:var(--bg-card);border:1px solid var(--border);border-radius:1rem;text-decoration:none;color:inherit;transition:border-color .2s,transform .2s,box-shadow .2s;overflow:hidden}
+.dl-choice::before{content:'';position:absolute;top:0;left:1.2rem;right:1.2rem;height:1px;background:var(--rainbow-subtle);opacity:0;transition:opacity .2s}
+.dl-choice:hover{border-color:var(--accent);transform:translateY(-3px);box-shadow:0 16px 44px -26px var(--accent-glow)}
+.dl-choice:hover::before{opacity:1}
+.dl-choice-ico{display:flex;align-items:center;justify-content:center;width:2.75rem;height:2.75rem;border-radius:.8rem;background:var(--accent-soft);color:var(--accent-light)}
+.dl-choice-ico svg{width:1.4rem;height:1.4rem}
+.dl-choice h3{font-size:.95rem;font-weight:800;letter-spacing:-.02em;margin:0}
+.dl-choice p{font-size:.8rem;line-height:1.6;color:var(--fg-secondary);margin:0;flex:1}
+.dl-choice-more{font-family:var(--mono);font-size:.6875rem;font-weight:700;color:var(--accent-light)}
+
+/* ── mobile section ────────────────────────────────── */
+.dl-warning{display:flex;gap:.9rem;align-items:flex-start;padding:1.1rem 1.25rem;margin:2rem 0 1.5rem;border:1px solid rgba(251,191,36,.35);border-radius:.9rem;background:rgba(251,191,36,.06)}
+.dl-warning>svg{width:1.35rem;height:1.35rem;flex-shrink:0;color:#fbbf24}
+.dl-warning p{font-size:.8125rem;line-height:1.7;color:var(--fg-secondary);margin:0}
+.dl-warning strong{display:block;color:var(--fg);margin-bottom:.2rem}
+.dl-store-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:1rem}
+@media(min-width:720px){.dl-store-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.dl-store{position:relative;display:flex;flex-direction:column;gap:.85rem;padding:1.35rem;background:var(--bg-card);border:1px solid var(--border);border-radius:1rem;backdrop-filter:var(--glass-blur);transition:border-color .2s,transform .2s}
+.dl-store:hover{border-color:var(--accent);transform:translateY(-2px)}
+.dl-store::before{content:'';position:absolute;top:0;left:1.35rem;right:1.35rem;height:1px;background:var(--rainbow-subtle);opacity:0;transition:opacity .2s}
+.dl-store:hover::before{opacity:1}
+.dl-store-top{display:flex;align-items:center;gap:.8rem}
+.dl-store-ico{display:flex;align-items:center;justify-content:center;width:2.9rem;height:2.9rem;border-radius:.85rem;background:var(--accent-soft);color:var(--accent-light);flex-shrink:0}
+.dl-store-ico svg{width:1.55rem;height:1.55rem}
+.dl-store h3{font-size:1rem;font-weight:800;letter-spacing:-.02em;margin:0}
+.dl-store .dl-store-sub{font-family:var(--mono);font-size:.6875rem;color:var(--fg-muted);margin:.15rem 0 0}
+.dl-store p{font-size:.8125rem;line-height:1.65;color:var(--fg-secondary);margin:0;flex:1}
+.dl-store-btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:.8rem 1rem;text-align:center;font-size:.8125rem;font-weight:800;text-decoration:none;color:var(--fg);background:var(--bg-tertiary);border:1px solid var(--border);border-radius:.7rem;transition:border-color .15s,background .15s}
+.dl-store-btn:hover{border-color:var(--accent);background:var(--accent-soft)}
+.dl-store-btn svg{width:1rem;height:1rem;flex-shrink:0}
+.dl-store.is-soon .dl-store-btn{opacity:.75}
+.dl-dev{display:flex;flex-wrap:wrap;gap:.4rem}
+.dl-dev .badge{font-family:var(--mono);font-size:.625rem;letter-spacing:0;text-transform:none}
+.dl-mobile-art{display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;width:6rem;height:6rem;border:1px solid var(--border);border-radius:1.5rem;background:var(--bg-card);color:var(--accent-light)}
+.dl-mobile-art svg{width:3rem;height:3rem}
+
+/* ── asset card icon ───────────────────────────────── */
+.dl-asset-head{display:flex;gap:.6rem;align-items:flex-start}
+.dl-asset-ico{display:flex;align-items:center;justify-content:center;width:1.75rem;height:1.75rem;border-radius:.5rem;background:var(--accent-soft);color:var(--accent-light);flex-shrink:0}
+.dl-asset-ico svg{width:1rem;height:1rem}
+
+
+/* ── six equal platform tiles ──────────────────────── */
+@media(min-width:640px){.dl-tiles{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(min-width:1000px){.dl-tiles{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.dl-tiles .dl-tile{padding:1.35rem}
+.dl-tiles .dl-tile .btn{padding:.8rem 1rem;font-size:.875rem}
+.dl-tiles .dl-tile h2{font-size:1.15rem}
+.dl-tile-flag{position:absolute;top:.9rem;right:.9rem;padding:.2rem .45rem;font-family:var(--mono);font-size:.55rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--fg-muted);border:1px solid var(--border);border-radius:.35rem;background:var(--bg-secondary)}
+.dl-hero-art{display:flex;align-items:center;justify-content:center;width:5.5rem;height:5.5rem;margin:0 auto 1.25rem;border:1px solid var(--border);border-radius:1.5rem;background:var(--bg-card);color:var(--accent-light);backdrop-filter:var(--glass-blur)}
+.dl-hero-art svg{width:2.75rem;height:2.75rem}
+.dl-api-pill{display:inline-flex;align-items:center;gap:.35rem;padding:.45rem .8rem;font-size:.75rem;font-weight:700;color:var(--fg-secondary);background:var(--bg-card);border:1px solid var(--border);border-radius:999px;text-decoration:none;transition:border-color .15s,color .15s}
+.dl-api-pill:hover{border-color:var(--accent);color:var(--fg)}
+.dl-api-pill svg{width:.9rem;height:.9rem;color:var(--accent-light)}
+
 </style>
 </head>
 <body>
@@ -294,106 +358,91 @@
       <span class="dl-release-sep" aria-hidden="true"></span>
       <span class="dl-release-meta"><span id="dl-release-count">31</span> <span data-i18n="downloads.release_assets">assets</span></span>
       <a id="dl-release-notes" href="https://github.com/generalbots/generalbots/releases" target="_blank" rel="noopener noreferrer" data-i18n="downloads.release_notes">Release notes</a>
+      <a class="dl-api-pill" href="https://docs.generalbots.org/api/" target="_blank" rel="noopener noreferrer" data-i18n="downloads.api_link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 8-4 4 4 4M16 8l4 4-4 4M14 4l-4 16"/></svg>API docs</a>
     </div>
+    <nav class="dl-quicknav" aria-label="On this page" data-i18n="downloads.quicknav_aria">
+      <a href="#tiles"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg><span data-i18n="downloads.nav_platforms">Platforms</span></a>
+      <a href="#choose"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.6 2.6 0 1 1 3.4 2.5c-.6.2-.9.8-.9 1.4v.3"/><path d="M12 17h.01"/></svg><span data-i18n="downloads.nav_guide">Which one?</span></a>
+      <a href="#all"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 8v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8"/><rect x="2" y="3" width="20" height="5" rx="1"/><path d="M10 12h4"/></svg><span data-i18n="downloads.nav_all">All files</span></a>
+      <a href="#mobile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M11 18h2"/></svg><span data-i18n="downloads.nav_mobile">Mobile</span></a>
+      <a href="#install"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0 4-4m-4 4-4-4"/><path d="M4 17v3h16v-3"/></svg><span data-i18n="downloads.nav_install">Install</span></a>
+      <a href="#verify"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg><span data-i18n="downloads.nav_verify">Verify</span></a>
+      <a href="https://docs.generalbots.org/api/" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 8-4 4 4 4M16 8l4 4-4 4M14 4l-4 16"/></svg><span data-i18n="downloads.api_link">API docs</span></a>
+    </nav>
 
     <div class="dl-tiles">
       <!-- Linux -->
       <div class="dl-tile">
         <div class="dl-tile-top">
-          <div class="dl-tile-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="m6 8 2.5 2.5L6 13"/><path d="M11 13h4"/><path d="M8 21h8"/><path d="M12 18v3"/></svg>
-          </div>
-          <div>
-            <h2 data-i18n="downloads.linux_title">Linux x86_64</h2>
-            <p class="dl-tile-sub" data-i18n="downloads.linux_tile_meta">generalbots-linux-x86_64.tar.gz · no root</p>
-          </div>
+          <div class="dl-tile-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="m6 8 2.5 2.5L6 13"/><path d="M11 13h4"/><path d="M8 21h8"/><path d="M12 18v3"/></svg></div>
+          <div><h2 data-i18n="downloads.linux_title">Linux x86_64</h2><p class="dl-tile-sub" data-i18n="downloads.linux_tile_meta">.tar.gz · no root</p></div>
         </div>
         <p data-i18n="downloads.linux_tile_desc">Tarball with the shell, local server, suite and a per-user installer. Unpack it and the wizard takes over.</p>
-        <a href="https://github.com/generalbots/generalbots/releases/latest/download/generalbots-linux-x86_64.tar.gz" class="btn btn-primary btn-lg" data-gh-asset="generalbots-linux-x86_64.tar.gz">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></svg>
-          <span data-i18n="downloads.hero_cta_primary">Download for Linux</span>
-        </a>
-        <a class="dl-tile-cmd" href="#install">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
-          <span data-i18n="downloads.tile_cmd_linux">…or one line in a terminal — see below</span>
-        </a>
-        <div class="dl-badge-row">
-          <span class="badge" data-i18n="downloads.chip_recommended">Recommended</span>
-          <span class="badge" data-i18n="downloads.chip_gtk">GTK / WebKitGTK 4.1</span>
-          <span class="badge" data-gh-tag="linux" hidden></span>
-        </div>
+        <a href="https://github.com/generalbots/generalbots/releases/latest/download/generalbots-linux-x86_64.tar.gz" class="btn btn-primary btn-lg" data-gh-asset="generalbots-linux-x86_64.tar.gz"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></svg><span data-i18n="downloads.hero_cta_primary">Download for Linux</span></a>
+        <a class="dl-tile-cmd" href="#install"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg><span data-i18n="downloads.tile_cmd_linux">…or one line in a terminal — see below</span></a>
+        <div class="dl-badge-row"><span class="badge" data-i18n="downloads.chip_recommended">Recommended</span><span class="badge" data-i18n="downloads.chip_gtk">GTK / WebKitGTK 4.1</span><span class="badge" data-gh-tag="linux" hidden></span></div>
       </div>
 
       <!-- Windows -->
       <div class="dl-tile">
         <div class="dl-tile-top">
-          <div class="dl-tile-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="8" height="7" rx="1"/><rect x="13" y="4" width="8" height="7" rx="1"/><rect x="3" y="13" width="8" height="7" rx="1"/><rect x="13" y="13" width="8" height="7" rx="1"/></svg>
-          </div>
-          <div>
-            <h2 data-i18n="downloads.windows_title">Windows x64</h2>
-            <p class="dl-tile-sub" data-i18n="downloads.windows_tile_meta">generalbots.exe · .msi · best effort</p>
-          </div>
+          <div class="dl-tile-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="8" height="7" rx="1"/><rect x="13" y="4" width="8" height="7" rx="1"/><rect x="3" y="13" width="8" height="7" rx="1"/><rect x="13" y="13" width="8" height="7" rx="1"/></svg></div>
+          <div><h2 data-i18n="downloads.windows_title">Windows x64</h2><p class="dl-tile-sub" data-i18n="downloads.windows_tile_meta">.exe · .msi</p></div>
         </div>
         <p data-i18n="downloads.windows_tile_desc">Installer built on every release when the Windows runner is green. If no file is attached, use the source build.</p>
-        <a href="https://github.com/generalbots/generalbots/releases/latest/download/generalbots.exe" class="btn btn-primary btn-lg" data-gh-asset="generalbots.exe">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></svg>
-          <span data-i18n="downloads.hero_cta_windows">Download for Windows</span>
-        </a>
-        <a class="dl-tile-cmd" href="#install">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
-          <span data-i18n="downloads.tile_cmd_windows">…or one line in PowerShell — see below</span>
-        </a>
-        <div class="dl-badge-row">
-          <span class="badge" data-i18n="downloads.chip_best_effort">Best effort</span>
-          <span class="badge" data-i18n="downloads.chip_winver">Windows 10 / 11</span>
-          <span class="badge" data-gh-tag="windows" hidden></span>
-        </div>
+        <a href="https://github.com/generalbots/generalbots/releases/latest/download/generalbots.exe" class="btn btn-primary btn-lg" data-gh-asset="generalbots.exe"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></svg><span data-i18n="downloads.hero_cta_windows">Download for Windows</span></a>
+        <a class="dl-tile-cmd" href="#install"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg><span data-i18n="downloads.tile_cmd_windows">…or one line in PowerShell — see below</span></a>
+        <div class="dl-badge-row"><span class="badge" data-i18n="downloads.chip_best_effort">Best effort</span><span class="badge" data-i18n="downloads.chip_winver">Windows 10 / 11</span><span class="badge" data-gh-tag="windows" hidden></span></div>
       </div>
+
       <!-- macOS -->
       <div class="dl-tile">
         <div class="dl-tile-top">
-          <div class="dl-tile-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M1 20h22"/><path d="M8 17h8"/></svg>
-          </div>
-          <div>
-            <h2 data-i18n="downloads.macos_title">macOS arm64</h2>
-            <p class="dl-tile-sub" data-i18n="downloads.macos_tile_meta">.dmg · .app.zip · unsigned</p>
-          </div>
+          <div class="dl-tile-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M1 20h22"/><path d="M8 17h8"/></svg></div>
+          <div><h2 data-i18n="downloads.macos_title">macOS arm64</h2><p class="dl-tile-sub" data-i18n="downloads.macos_tile_meta">.dmg · .app.zip</p></div>
         </div>
         <p data-i18n="downloads.macos_tile_desc">Apple-silicon desktop build. Right-click the dmg and choose Open on first launch.</p>
-        <a href="https://github.com/generalbots/generalbots/releases/latest/download/generalbots-7.0.36-macos-arm64.dmg" class="btn btn-primary btn-lg" data-gh-asset="macos-dmg">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></svg>
-          <span data-i18n="downloads.macos_cta">Download for macOS</span>
-        </a>
-        <a class="dl-tile-cmd" href="#all">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
-          <span data-i18n="downloads.tile_cmd_macos">…or get the .app.zip below</span>
-        </a>
+        <a href="https://github.com/generalbots/generalbots/releases/latest/download/generalbots-7.0.36-macos-arm64.dmg" class="btn btn-primary btn-lg" data-gh-asset="macos-dmg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></svg><span data-i18n="downloads.macos_cta">Download for macOS</span></a>
+        <a class="dl-tile-cmd" href="#all"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg><span data-i18n="downloads.tile_cmd_macos">…or get the .app.zip below</span></a>
         <div class="dl-badge-row"><span class="badge" data-i18n="downloads.chip_apple_silicon">Apple silicon</span><span class="badge" data-i18n="downloads.chip_unsigned">Unsigned</span></div>
       </div>
 
       <!-- General Bots OS -->
       <div class="dl-tile">
         <div class="dl-tile-top">
-          <div class="dl-tile-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="18" rx="2"/><path d="M2 9h20"/><path d="M6 6h.01M10 6h.01"/></svg>
-          </div>
-          <div>
-            <h2 data-i18n="downloads.os_title">General Bots OS</h2>
-            <p class="dl-tile-sub" data-i18n="downloads.os_tile_meta">bootable .iso · 3 parts</p>
-          </div>
+          <div class="dl-tile-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="18" rx="2"/><path d="M2 9h20"/><path d="M6 6h.01M10 6h.01"/></svg></div>
+          <div><h2 data-i18n="downloads.os_title">General Bots OS</h2><p class="dl-tile-sub" data-i18n="downloads.os_tile_meta">bootable .iso · 3 parts</p></div>
         </div>
         <p data-i18n="downloads.os_tile_desc">A kiosk appliance with the whole stack baked in. Grab every part and the matching checksum before flashing.</p>
-        <a href="https://github.com/generalbots/generalbots/releases/latest/download/generalbots-os.iso.zst.00.part" class="btn btn-primary btn-lg" data-gh-asset="generalbots-os.iso.zst.00.part">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></svg>
-          <span data-i18n="downloads.os_cta">Download OS image</span>
-        </a>
-        <a class="dl-tile-cmd" href="#all">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
-          <span data-i18n="downloads.tile_cmd_os">…all parts and checksums below</span>
-        </a>
+        <a href="https://github.com/generalbots/generalbots/releases/latest/download/generalbots-os.iso.zst.00.part" class="btn btn-primary btn-lg" data-gh-asset="generalbots-os.iso.zst.00.part"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></svg><span data-i18n="downloads.os_cta">Download OS image</span></a>
+        <a class="dl-tile-cmd" href="#all"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg><span data-i18n="downloads.tile_cmd_os">…all parts and checksums below</span></a>
         <div class="dl-badge-row"><span class="badge" data-i18n="downloads.chip_bootable">Bootable</span><span class="badge" data-i18n="downloads.chip_three_parts">3 parts</span></div>
+      </div>
+
+      <!-- Android -->
+      <div class="dl-tile">
+        <span class="dl-tile-flag" data-i18n="downloads.tile_flag_dev">dev</span>
+        <div class="dl-tile-top">
+          <div class="dl-tile-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="7" width="14" height="12" rx="3"/><path d="M8 7 6.5 4.5M16 7l1.5-2.5"/><path d="M2 11v5M22 11v5"/><path d="M9 12h.01M15 12h.01"/><path d="M9 16h6"/></svg></div>
+          <div><h2 data-i18n="downloads.tile_android_title">Android</h2><p class="dl-tile-sub" data-i18n="downloads.tile_android_meta">.apk · .aab · dev build</p></div>
+        </div>
+        <p data-i18n="downloads.tile_android_desc">Debug-signed build for offline testing. Google Play listing is on the way.</p>
+        <a href="#mobile" class="btn btn-primary btn-lg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></svg><span data-i18n="downloads.tile_android_cta">Get the dev build</span></a>
+        <a class="dl-tile-cmd" href="https://play.google.com/store/search?q=General%20Bots&amp;c=apps" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6M10 14 21 3"/></svg><span data-i18n="downloads.tile_play_link">Google Play — soon</span></a>
+        <div class="dl-badge-row"><span class="badge" data-i18n="downloads.chip_dev">Dev only</span><span class="badge" data-i18n="downloads.chip_soon">Coming soon</span></div>
+      </div>
+
+      <!-- iOS -->
+      <div class="dl-tile">
+        <span class="dl-tile-flag" data-i18n="downloads.tile_flag_soon">soon</span>
+        <div class="dl-tile-top">
+          <div class="dl-tile-icon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.4 12.6c0-2.3 1.9-3.4 2-3.5-1.1-1.6-2.8-1.8-3.4-1.8-1.4-.2-2.8.9-3.5.9-.7 0-1.8-.9-3-.8-1.5 0-2.9.9-3.7 2.3-1.6 2.7-.4 6.8 1.1 9 .8 1.1 1.6 2.3 2.8 2.2 1.1 0 1.6-.7 2.9-.7 1.3 0 1.7.7 2.9.7 1.2 0 2-1.1 2.7-2.2.9-1.3 1.2-2.5 1.3-2.6-.1 0-2.1-.8-2.1-3.3ZM14.2 5.6c.6-.8 1-1.8.9-2.9-1 0-2.2.7-2.9 1.5-.6.7-1.1 1.8-1 2.8 1.1.1 2.2-.6 3-1.4Z"/></svg></div>
+          <div><h2 data-i18n="downloads.tile_ios_title">iOS</h2><p class="dl-tile-sub" data-i18n="downloads.tile_ios_meta">.ipa · ad-hoc · store soon</p></div>
+        </div>
+        <p data-i18n="downloads.tile_ios_desc">iPhone and iPad build. Ad-hoc IPA needs an Apple team ID in CI; the App Store listing is coming.</p>
+        <a href="#mobile" class="btn btn-primary btn-lg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6M10 14 21 3"/></svg><span data-i18n="downloads.tile_ios_cta">See iOS options</span></a>
+        <a class="dl-tile-cmd" href="https://apps.apple.com/us/search?term=General%20Bots" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6M10 14 21 3"/></svg><span data-i18n="downloads.tile_appstore_link">App Store — soon</span></a>
+        <div class="dl-badge-row"><span class="badge" data-i18n="downloads.chip_ios">iOS</span><span class="badge" data-i18n="downloads.chip_soon">Coming soon</span></div>
       </div>
     </div>
 
@@ -410,6 +459,42 @@
         <strong data-i18n="downloads.note_title">Builds ship in per-platform releases.</strong>
         <span data-i18n="downloads.note_body">Each link resolves to the newest release that actually carries that file, so a Windows-only build never breaks the Linux download. Nothing found? Build from source instead.</span>
       </p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="choose">
+  <div class="container">
+    <div class="section-header centered">
+      <span class="overline" data-i18n="downloads.choose_overline">Quick guide</span>
+      <h2 data-i18n="downloads.choose_title">Which download do you need?</h2>
+      <p data-i18n="downloads.choose_sub">Four starting points. Everything on this page resolves to the newest release that carries the file.</p>
+    </div>
+    <div class="dl-chooser">
+      <a class="dl-choice" href="#tiles">
+        <span class="dl-choice-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="M8 21h8M12 18v3"/></svg></span>
+        <h3 data-i18n="downloads.choice_desktop_t">Desktop app</h3>
+        <p data-i18n="downloads.choice_desktop_d">Chat and Drive in a native window. One download provisions everything into your home directory.</p>
+        <span class="dl-choice-more" data-i18n="downloads.choice_more">Linux · Windows · macOS →</span>
+      </a>
+      <a class="dl-choice" href="#all">
+        <span class="dl-choice-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="7" rx="1"/><rect x="3" y="14" width="18" height="7" rx="1"/><path d="M7 6.5h.01M7 17.5h.01"/></svg></span>
+        <h3 data-i18n="downloads.choice_os_t">Bootable appliance</h3>
+        <p data-i18n="downloads.choice_os_d">A kiosk image with the whole stack preinstalled. Three parts plus a checksum, ready to flash.</p>
+        <span class="dl-choice-more" data-i18n="downloads.choice_os_more">General Bots OS →</span>
+      </a>
+      <a class="dl-choice" href="#mobile">
+        <span class="dl-choice-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M11 18h2"/></svg></span>
+        <h3 data-i18n="downloads.choice_mobile_t">On your phone</h3>
+        <p data-i18n="downloads.choice_mobile_d">Store apps are coming soon. Grab the unsigned dev build today for offline testing.</p>
+        <span class="dl-choice-more" data-i18n="downloads.choice_mobile_more">Android · iOS →</span>
+      </a>
+      <a class="dl-choice" href="#all">
+        <span class="dl-choice-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 8-4 4 4 4M16 8l4 4-4 4M14 4l-4 16"/></svg></span>
+        <h3 data-i18n="downloads.choice_raw_t">Raw binaries</h3>
+        <p data-i18n="downloads.choice_raw_d">Just the shell or the server? Every file, checksum and manifest is listed in the catalog.</p>
+        <span class="dl-choice-more" data-i18n="downloads.choice_raw_more">31 files →</span>
+      </a>
     </div>
   </div>
 </section>
@@ -640,6 +725,83 @@
   </div>
 </section>
 
+<section class="section section-alt" id="mobile">
+  <div class="container">
+    <div class="dl-mobile-art" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M11 18h2"/><path d="M8 7h8M8 10h5"/></svg>
+    </div>
+    <div class="section-header centered">
+      <span class="overline" data-i18n="downloads.mobile_overline">Mobile</span>
+      <h2 data-i18n="downloads.mobile_title">General Bots in your pocket</h2>
+      <p data-i18n="downloads.mobile_sub">The same assistant on Android and iOS. Store listings are on the way — dev builds are available now for offline testing.</p>
+    </div>
+
+    <div class="dl-warning">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/><path d="M12 9v4M12 17h.01"/></svg>
+      <p>
+        <strong data-i18n="downloads.mobile_warn_title">Coming soon to the stores.</strong>
+        <span data-i18n="downloads.mobile_warn_body">The App Store and Google Play listings are not published yet — the buttons below open the store search pages for now. Dev builds are debug-signed (Android) and ad-hoc signed (iOS): they are for testing only, require sideloading, and must not be used with production data.</span>
+      </p>
+    </div>
+
+    <div class="dl-store-grid">
+      <article class="dl-store is-soon">
+        <div class="dl-store-top">
+          <span class="dl-store-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="m4 3 9 5.2L8.4 12 4 3Z"/><path d="m4 3 8.5 12.7L16 11 4 3Z"/><path d="m13 8.2 6.6 3.9a1.5 1.5 0 0 1 0 2.6l-5.2 3.1L13 8.2Z"/><path d="m8.4 12 6 9.6a1.5 1.5 0 0 0 2.5 0L8.4 12Z"/></svg></span>
+          <div><h3 data-i18n="downloads.play_title">Google Play</h3><p class="dl-store-sub" data-i18n="downloads.play_sub">Android · listing pending</p></div>
+        </div>
+        <p data-i18n="downloads.play_desc">The tested release will land on Google Play. Until then the button opens the store search so you can find us as soon as we are listed.</p>
+        <div class="dl-dev"><span class="badge" data-i18n="downloads.chip_soon">Coming soon</span><span class="badge" data-i18n="downloads.chip_android">Android</span></div>
+        <a class="dl-store-btn" href="https://play.google.com/store/search?q=General%20Bots&amp;c=apps" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6M10 14 21 3"/></svg><span data-i18n="downloads.play_btn">Find on Google Play</span></a>
+      </article>
+
+      <article class="dl-store is-soon">
+        <div class="dl-store-top">
+          <span class="dl-store-ico"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.4 12.6c0-2.3 1.9-3.4 2-3.5-1.1-1.6-2.8-1.8-3.4-1.8-1.4-.2-2.8.9-3.5.9-.7 0-1.8-.9-3-.8-1.5 0-2.9.9-3.7 2.3-1.6 2.7-.4 6.8 1.1 9 .8 1.1 1.6 2.3 2.8 2.2 1.1 0 1.6-.7 2.9-.7 1.3 0 1.7.7 2.9.7 1.2 0 2-1.1 2.7-2.2.9-1.3 1.2-2.5 1.3-2.6-.1 0-2.1-.8-2.1-3.3ZM14.2 5.6c.6-.8 1-1.8.9-2.9-1 0-2.2.7-2.9 1.5-.6.7-1.1 1.8-1 2.8 1.1.1 2.2-.6 3-1.4Z"/></svg></span>
+          <div><h3 data-i18n="downloads.appstore_title">App Store</h3><p class="dl-store-sub" data-i18n="downloads.appstore_sub">iOS · listing pending</p></div>
+        </div>
+        <p data-i18n="downloads.appstore_desc">The notarized iPhone build is on its way. Until it ships, the button opens the App Store search so you can find us as soon as we are listed.</p>
+        <div class="dl-dev"><span class="badge" data-i18n="downloads.chip_soon">Coming soon</span><span class="badge" data-i18n="downloads.chip_ios">iOS</span></div>
+        <a class="dl-store-btn" href="https://apps.apple.com/us/search?term=General%20Bots" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6M10 14 21 3"/></svg><span data-i18n="downloads.appstore_btn">Find on App Store</span></a>
+      </article>
+    </div>
+
+    <div class="section-header centered" style="margin-top:3rem">
+      <span class="overline" data-i18n="downloads.dev_overline">Testing offline</span>
+      <h3 style="font-size:clamp(1.25rem,2.4vw,1.6rem);letter-spacing:-.03em;margin:.35rem 0" data-i18n="downloads.dev_title">Get the dev build directly</h3>
+      <p data-i18n="downloads.dev_sub">No store, no account. Debug-signed Android and ad-hoc iOS builds, rebuilt on demand from the current source.</p>
+    </div>
+
+    <div class="dl-store-grid" style="margin-top:1.25rem">
+      <article class="dl-store">
+        <div class="dl-store-top">
+          <span class="dl-store-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M10 18h4M8 6h8"/></svg></span>
+          <div><h3 data-i18n="downloads.apk_title">Android dev build</h3><p class="dl-store-sub" data-i18n="downloads.apk_sub">.apk + .aab · debug signed</p></div>
+        </div>
+        <p data-i18n="downloads.apk_desc">Install the APK directly, or use the AAB for a local signed release. Enable “install unknown apps” when prompted.</p>
+        <div class="dl-dev"><span class="badge" data-i18n="downloads.chip_dev">Dev only</span><span class="badge" data-i18n="downloads.chip_android">Android</span></div>
+        <a class="dl-store-btn" href="https://generalbots.org/downloads/dev/generalbots-v7.1.0-dev-android.apk" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5M12 15V3"/></svg><span data-i18n="downloads.apk_btn">Download .apk</span></a>
+        <a class="dl-tile-cmd" href="https://generalbots.org/downloads/dev/generalbots-v7.1.0-dev-android.aab" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg><span data-i18n="downloads.apk_alt">…or the .aab bundle</span></a>
+      </article>
+
+      <article class="dl-store">
+        <div class="dl-store-top">
+          <span class="dl-store-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M11 18h2"/></svg></span>
+          <div><h3 data-i18n="downloads.ipa_title">iOS dev build</h3><p class="dl-store-sub" data-i18n="downloads.ipa_sub_pending">.ipa · awaiting signing team</p></div>
+        </div>
+        <p data-i18n="downloads.ipa_desc_pending">The ad-hoc IPA is not built yet — CI needs an Apple development team ID. The App Store listing is coming; the direct sideload build will appear here as soon as signing is configured.</p>
+        <div class="dl-dev"><span class="badge" data-i18n="downloads.chip_unavailable">Unavailable</span><span class="badge" data-i18n="downloads.chip_ios">iOS</span></div>
+        <span class="dl-store-btn" aria-disabled="true" style="opacity:.6;cursor:not-allowed"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v4M12 16h.01"/></svg><span data-i18n="downloads.ipa_pending">IPA pending signing</span></span>
+      </article>
+    </div>
+
+    <div class="dl-note" style="margin-top:1.5rem">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+      <p><strong data-i18n="downloads.dev_note_title">Dev builds are rebuilt on demand.</strong> <span data-i18n="downloads.dev_note_v2">The mobile workflow is manual: the Android debug APK and AAB are published to the mobile-dev pre-release. The ad-hoc IPA is pending an Apple development team ID in CI (the mobile workflow now accepts one at dispatch). Dev builds are unsigned for distribution, expire with their provisioning profile, and are not covered by the support or update channel.</span></p>
+    </div>
+  </div>
+</section>
+
 <!-- ═══════════════ VERIFY ═══════════════ -->
 <section class="section" id="verify">
   <div class="container">
@@ -822,6 +984,16 @@ cd generalbots-$TAG-linux-x86_64 &amp;&amp; ./install.sh</code></pre>
     if (/windows-x64|\.exe$|\.msi$|botserver-x64|botui-x64|x64-setup/i.test(name)) return 'windows';
     return 'linux';
   }
+  function groupIcon(group) {
+    var p = {
+      linux: '<rect x="2" y="4" width="20" height="13" rx="2"/><path d="m6 8 2.5 2.5L6 13M11 13h4M8 20h8"/>',
+      windows: '<rect x="3" y="4" width="8" height="7" rx="1"/><rect x="13" y="4" width="8" height="7" rx="1"/><rect x="3" y="13" width="8" height="7" rx="1"/><rect x="13" y="13" width="8" height="7" rx="1"/>',
+      macos: '<rect x="3" y="4" width="18" height="13" rx="2"/><path d="M1 20h22M8 17h8"/>',
+      os: '<rect x="2" y="3" width="20" height="18" rx="2"/><path d="M2 9h20M6 6h.01M10 6h.01"/>',
+      checksums: '<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/>'
+    }[group] || '<circle cx="12" cy="12" r="9"/>';
+    return '<span class="dl-asset-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + p + '</svg></span>';
+  }
   function human(size) {
     var n = Number(size) || 0;
     if (n < 1024) return n + ' B';
@@ -868,7 +1040,7 @@ cd generalbots-$TAG-linux-x86_64 &amp;&amp; ./install.sh</code></pre>
       ? '<code id="' + id + '">' + esc(sha) + '</code><button class="dl-asset-copy" type="button" data-copy-sha="' + id + '" aria-label="Copy SHA-256"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></button>'
       : '<code>—</code>';
     return '<article class="dl-asset-card" data-group="' + item.group + '" data-name="' + esc(item.name.toLowerCase()) + '">' +
-      '<p class="dl-asset-name">' + esc(item.name) + '</p>' +
+      '<div class="dl-asset-head">' + groupIcon(item.group) + '<p class="dl-asset-name">' + esc(item.name) + '</p></div>' +
       '<div class="dl-asset-sha"><span class="sr-only">' + esc(label('sha')) + ' </span>' + shaHTML + '</div>' +
       '<div class="dl-asset-foot"><span class="dl-asset-size">' + esc(human(item.size)) + '</span>' +
       '<a class="dl-asset-get" href="' + esc(item.url) + '" target="_blank" rel="noopener noreferrer">' + esc(label('download')) +
