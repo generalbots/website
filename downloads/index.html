@@ -323,6 +323,51 @@
 .dl-api-pill:hover{border-color:var(--accent);color:var(--fg)}
 .dl-api-pill svg{width:.9rem;height:.9rem;color:var(--accent-light)}
 
+
+/* ── sovereign OS marketing ────────────────────────── */
+.dl-os-hero{position:relative;overflow:hidden;padding:5.5rem 0 4.5rem;background:radial-gradient(70% 60% at 15% 0%,rgba(99,102,241,.10),transparent 70%),radial-gradient(60% 50% at 90% 100%,rgba(6,182,212,.07),transparent 70%);border-top:1px solid var(--border)}
+.dl-os-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:3.5rem;align-items:center}
+@media(min-width:960px){.dl-os-grid{grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr)}}
+.dl-os-logo{width:clamp(5.5rem,10vw,8rem);height:auto;filter:drop-shadow(0 18px 36px rgba(0,0,0,.45))}
+.dl-os-kicker{font-family:var(--mono);font-size:.7rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--accent-light);display:block;margin:1.5rem 0 .75rem}
+.dl-os-title{font-family:var(--font-display);font-size:clamp(2rem,4.4vw,3.25rem);line-height:1.04;letter-spacing:-.05em;margin:0 0 1.1rem}
+.dl-os-title .gradient-word{background:var(--rainbow);-webkit-background-clip:text;background-clip:text;color:transparent}
+[data-theme="light"] .dl-os-title .gradient-word{background:linear-gradient(135deg,#3c3c4a,#0e0e14);-webkit-background-clip:text;background-clip:text}
+.dl-os-lede{font-size:1rem;line-height:1.8;color:var(--fg-secondary);max-width:56ch;margin:0}
+.dl-os-points{display:grid;grid-template-columns:minmax(0,1fr);gap:.7rem;margin:2rem 0 2.25rem}
+@media(min-width:560px){.dl-os-points{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.dl-os-point{display:flex;gap:.7rem;align-items:flex-start;padding:.85rem 1rem;background:var(--bg-card);border:1px solid var(--border);border-radius:.85rem;transition:border-color .2s}
+.dl-os-point:hover{border-color:var(--accent)}
+.dl-os-point svg{width:1.15rem;height:1.15rem;flex-shrink:0;margin-top:.15rem;color:var(--accent-light)}
+.dl-os-point strong{display:block;font-size:.8125rem;color:var(--fg);margin-bottom:.15rem}
+.dl-os-point span{font-size:.75rem;line-height:1.55;color:var(--fg-muted)}
+.dl-os-visual{position:relative;padding:1.75rem;background:var(--bg-card);border:1px solid var(--border);border-radius:1.5rem;backdrop-filter:var(--glass-blur)}
+.dl-os-visual::before{content:'';position:absolute;top:0;left:1.75rem;right:1.75rem;height:1px;background:var(--rainbow);border-radius:2px}
+.dl-os-visual-head{display:flex;align-items:center;gap:.75rem;margin-bottom:1.25rem}
+.dl-os-visual-head img{width:2.75rem;height:2.75rem}
+.dl-os-visual-head h3{font-family:var(--mono);font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;margin:0}
+.dl-os-visual-head p{font-size:.7rem;color:var(--fg-muted);margin:.15rem 0 0}
+.dl-os-part{display:flex;align-items:center;gap:.85rem;padding:.8rem .9rem;border:1px solid var(--border);border-radius:.75rem;background:var(--bg-secondary);margin-bottom:.6rem}
+.dl-os-part:last-child{margin-bottom:0}
+.dl-os-part-num{font-family:var(--mono);font-size:.7rem;font-weight:800;color:var(--accent-light);background:var(--accent-soft);border-radius:.4rem;padding:.35rem .45rem}
+.dl-os-part-name{font-family:var(--mono);font-size:.75rem;color:var(--fg);overflow-wrap:anywhere;flex:1}
+.dl-os-part-size{font-family:var(--mono);font-size:.7rem;color:var(--fg-muted);white-space:nowrap}
+.dl-os-visual-foot{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:1.25rem}
+.dl-os-bigword{font-family:var(--font-display);font-size:clamp(2rem,8vw,6rem);font-weight:900;letter-spacing:-.07em;line-height:1;text-align:center;margin:3rem 0 0;color:var(--fg);opacity:.055;user-select:none;white-space:nowrap;overflow:hidden}
+@media(max-width:700px){.dl-os-bigword{font-size:1.7rem;white-space:normal;letter-spacing:-.04em}}
+
+/* ── mobile brand cards ────────────────────────────── */
+.dl-mobile-brands{display:grid;grid-template-columns:minmax(0,1fr);gap:1rem;margin:2.5rem 0 1rem}
+@media(min-width:700px){.dl-mobile-brands{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.dl-mobile-brand{position:relative;display:flex;flex-direction:column;align-items:center;gap:.85rem;padding:2.25rem 1.25rem 1.75rem;text-align:center;background:var(--bg-card);border:1px solid var(--border);border-radius:1.25rem;backdrop-filter:var(--glass-blur);transition:border-color .2s,transform .2s;overflow:hidden}
+.dl-mobile-brand:hover{border-color:var(--accent);transform:translateY(-3px)}
+.dl-mobile-brand::before{content:'';position:absolute;top:0;left:2rem;right:2rem;height:1px;background:var(--rainbow-subtle)}
+.dl-mobile-brand img{width:clamp(5rem,10vw,7rem);height:auto;filter:drop-shadow(0 14px 30px rgba(0,0,0,.4))}
+.dl-mobile-brand h3{font-family:var(--font-display);font-size:1.35rem;letter-spacing:-.03em;margin:.2rem 0 0}
+.dl-mobile-brand p{font-size:.8125rem;line-height:1.65;color:var(--fg-secondary);max-width:32ch;margin:0}
+.dl-mobile-brand .badge{font-family:var(--mono);font-size:.625rem;letter-spacing:0;text-transform:none}
+.dl-tile-icon img{width:2.4rem;height:2.4rem}
+
 </style>
 </head>
 <body>
@@ -374,7 +419,7 @@
       <!-- Linux -->
       <div class="dl-tile">
         <div class="dl-tile-top">
-          <div class="dl-tile-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="m6 8 2.5 2.5L6 13"/><path d="M11 13h4"/><path d="M8 21h8"/><path d="M12 18v3"/></svg></div>
+          <div class="dl-tile-icon"><img src="/icons/platform-linux.svg" alt="" width="38" height="38" loading="lazy"></div>
           <div><h2 data-i18n="downloads.linux_title">Linux x86_64</h2><p class="dl-tile-sub" data-i18n="downloads.linux_tile_meta">.tar.gz · no root</p></div>
         </div>
         <p data-i18n="downloads.linux_tile_desc">Tarball with the shell, local server, suite and a per-user installer. Unpack it and the wizard takes over.</p>
@@ -386,7 +431,7 @@
       <!-- Windows -->
       <div class="dl-tile">
         <div class="dl-tile-top">
-          <div class="dl-tile-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="8" height="7" rx="1"/><rect x="13" y="4" width="8" height="7" rx="1"/><rect x="3" y="13" width="8" height="7" rx="1"/><rect x="13" y="13" width="8" height="7" rx="1"/></svg></div>
+          <div class="dl-tile-icon"><img src="/icons/platform-windows.svg" alt="" width="38" height="38" loading="lazy"></div>
           <div><h2 data-i18n="downloads.windows_title">Windows x64</h2><p class="dl-tile-sub" data-i18n="downloads.windows_tile_meta">.exe · .msi</p></div>
         </div>
         <p data-i18n="downloads.windows_tile_desc">Installer built on every release when the Windows runner is green. If no file is attached, use the source build.</p>
@@ -398,7 +443,7 @@
       <!-- macOS -->
       <div class="dl-tile">
         <div class="dl-tile-top">
-          <div class="dl-tile-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M1 20h22"/><path d="M8 17h8"/></svg></div>
+          <div class="dl-tile-icon"><img src="/icons/platform-macos.svg" alt="" width="38" height="38" loading="lazy"></div>
           <div><h2 data-i18n="downloads.macos_title">macOS arm64</h2><p class="dl-tile-sub" data-i18n="downloads.macos_tile_meta">.dmg · .app.zip</p></div>
         </div>
         <p data-i18n="downloads.macos_tile_desc">Apple-silicon desktop build. Right-click the dmg and choose Open on first launch.</p>
@@ -410,7 +455,7 @@
       <!-- General Bots OS -->
       <div class="dl-tile">
         <div class="dl-tile-top">
-          <div class="dl-tile-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="18" rx="2"/><path d="M2 9h20"/><path d="M6 6h.01M10 6h.01"/></svg></div>
+          <div class="dl-tile-icon"><img src="/icons/platform-iso.svg" alt="" width="38" height="38" loading="lazy"></div>
           <div><h2 data-i18n="downloads.os_title">General Bots OS</h2><p class="dl-tile-sub" data-i18n="downloads.os_tile_meta">bootable .iso · 3 parts</p></div>
         </div>
         <p data-i18n="downloads.os_tile_desc">A kiosk appliance with the whole stack baked in. Grab every part and the matching checksum before flashing.</p>
@@ -423,7 +468,7 @@
       <div class="dl-tile">
         <span class="dl-tile-flag" data-i18n="downloads.tile_flag_dev">dev</span>
         <div class="dl-tile-top">
-          <div class="dl-tile-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="7" width="14" height="12" rx="3"/><path d="M8 7 6.5 4.5M16 7l1.5-2.5"/><path d="M2 11v5M22 11v5"/><path d="M9 12h.01M15 12h.01"/><path d="M9 16h6"/></svg></div>
+          <div class="dl-tile-icon"><img src="/icons/platform-android.svg" alt="" width="38" height="38" loading="lazy"></div>
           <div><h2 data-i18n="downloads.tile_android_title">Android</h2><p class="dl-tile-sub" data-i18n="downloads.tile_android_meta">.apk · .aab · dev build</p></div>
         </div>
         <p data-i18n="downloads.tile_android_desc">Debug-signed build for offline testing. Google Play listing is on the way.</p>
@@ -436,7 +481,7 @@
       <div class="dl-tile">
         <span class="dl-tile-flag" data-i18n="downloads.tile_flag_soon">soon</span>
         <div class="dl-tile-top">
-          <div class="dl-tile-icon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.4 12.6c0-2.3 1.9-3.4 2-3.5-1.1-1.6-2.8-1.8-3.4-1.8-1.4-.2-2.8.9-3.5.9-.7 0-1.8-.9-3-.8-1.5 0-2.9.9-3.7 2.3-1.6 2.7-.4 6.8 1.1 9 .8 1.1 1.6 2.3 2.8 2.2 1.1 0 1.6-.7 2.9-.7 1.3 0 1.7.7 2.9.7 1.2 0 2-1.1 2.7-2.2.9-1.3 1.2-2.5 1.3-2.6-.1 0-2.1-.8-2.1-3.3ZM14.2 5.6c.6-.8 1-1.8.9-2.9-1 0-2.2.7-2.9 1.5-.6.7-1.1 1.8-1 2.8 1.1.1 2.2-.6 3-1.4Z"/></svg></div>
+          <div class="dl-tile-icon"><img src="/icons/platform-iphone.svg" alt="" width="38" height="38" loading="lazy"></div>
           <div><h2 data-i18n="downloads.tile_ios_title">iOS</h2><p class="dl-tile-sub" data-i18n="downloads.tile_ios_meta">.ipa · ad-hoc · store soon</p></div>
         </div>
         <p data-i18n="downloads.tile_ios_desc">iPhone and iPad build. Ad-hoc IPA needs an Apple team ID in CI; the App Store listing is coming.</p>
@@ -503,6 +548,46 @@
 
 <!-- ═══════════════ ONE-LINE INSTALL ═══════════════ -->
 <span id="oneline" aria-hidden="true"></span>
+<section class="dl-os-hero" id="sovereign-os">
+  <div class="container">
+    <div class="dl-os-grid">
+      <div>
+        <img class="dl-os-logo" src="/icons/general-bots-os-logo.svg" alt="General Bots OS logo" width="128" height="128" loading="lazy">
+        <span class="dl-os-kicker" data-i18n="downloads.os_market_kicker">Sovereign AI operating system</span>
+        <h2 class="dl-os-title" data-i18n="downloads.os_market_title">One ISO. <span class="gradient-word">Your whole operation.</span></h2>
+        <p class="dl-os-lede" data-i18n="downloads.os_market_lede">Turn any x86_64 machine into an AI-first workstation or kiosk. Chat, Drive, agents, the local LLM runtime and every service are preinstalled and offline-capable. Boot it, sign in, work — no cloud tenant, no per-seat subscription, no telemetry.</p>
+
+        <div class="dl-os-points">
+          <div class="dl-os-point"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg><div><strong data-i18n="downloads.os_pt1_t">Sovereign by design</strong><span data-i18n="downloads.os_pt1_d">Your data, models and infrastructure stay on your hardware.</span></div></div>
+          <div class="dl-os-point"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/><circle cx="12" cy="12" r="3"/></svg><div><strong data-i18n="downloads.os_pt2_t">AI in the operating system</strong><span data-i18n="downloads.os_pt2_d">Agents and tools are first-class citizens, not another app.</span></div></div>
+          <div class="dl-os-point"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2v4M16 2v4M3 10h18"/><rect x="3" y="4" width="18" height="18" rx="2"/><path d="m9 15 2 2 4-4"/></svg><div><strong data-i18n="downloads.os_pt3_t">Offline from day one</strong><span data-i18n="downloads.os_pt3_d">No downloads at first boot. The whole stack ships in the image.</span></div></div>
+          <div class="dl-os-point"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4M6 12h3M6 9h6"/></svg><div><strong data-i18n="downloads.os_pt4_t">Kiosk or desktop</strong><span data-i18n="downloads.os_pt4_d">Runs the full shell in a hardened, single-app session.</span></div></div>
+          <div class="dl-os-point"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M7 12h10"/></svg><div><strong data-i18n="downloads.os_pt5_t">Open source core</strong><span data-i18n="downloads.os_pt5_d">MIT licensed, auditable, no lock-in and no hidden telemetry.</span></div></div>
+          <div class="dl-os-point"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5M12 15V3"/></svg><div><strong data-i18n="downloads.os_pt6_t">One image to flash</strong><span data-i18n="downloads.os_pt6_d">Three ISO parts plus a checksum — verify, reassemble, boot.</span></div></div>
+        </div>
+
+        <div style="display:flex;flex-wrap:wrap;gap:.75rem">
+          <a href="#all" class="btn btn-primary btn-lg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5M12 15V3"/></svg><span data-i18n="downloads.os_market_cta">Download General Bots OS</span></a>
+          <a href="https://docs.generalbots.org/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-lg" data-i18n="downloads.os_market_docs">Read the documentation</a>
+        </div>
+      </div>
+
+      <div class="dl-os-visual">
+        <div class="dl-os-visual-head">
+          <img src="/icons/platform-iso.svg" alt="" width="44" height="44" loading="lazy">
+          <div><h3 data-i18n="downloads.os_visual_title">Bootable ISO image</h3><p data-i18n="downloads.os_visual_sub">Debian 13 · mkosi · kiosk edition</p></div>
+        </div>
+        <div class="dl-os-part"><span class="dl-os-part-num">00</span><span class="dl-os-part-name">generalbots-os.iso.zst.00.part</span><span class="dl-os-part-size">1.00 GB</span></div>
+        <div class="dl-os-part"><span class="dl-os-part-num">01</span><span class="dl-os-part-name">generalbots-os.iso.zst.01.part</span><span class="dl-os-part-size">1.00 GB</span></div>
+        <div class="dl-os-part"><span class="dl-os-part-num">02</span><span class="dl-os-part-name">generalbots-os.iso.zst.02.part</span><span class="dl-os-part-size">200 MB</span></div>
+        <div class="dl-os-part"><span class="dl-os-part-num">✓</span><span class="dl-os-part-name">generalbots-os.iso.zst.sha256</span><span class="dl-os-part-size">418 B</span></div>
+        <div class="dl-os-visual-foot"><span class="badge" data-i18n="downloads.chip_bootable">Bootable</span><span class="badge" data-i18n="downloads.chip_offline">Offline capable</span><span class="badge">MIT</span><span class="badge">x86_64</span></div>
+      </div>
+    </div>
+    <p class="dl-os-bigword" aria-hidden="true">GENERAL BOTS OS</p>
+  </div>
+</section>
+
 <section class="section" id="install">
   <div class="container">
     <div class="section-header centered">
@@ -727,12 +812,23 @@
 
 <section class="section section-alt" id="mobile">
   <div class="container">
-    <div class="dl-mobile-art" aria-hidden="true">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M11 18h2"/><path d="M8 7h8M8 10h5"/></svg>
+    <div class="dl-mobile-brands">
+      <div class="dl-mobile-brand">
+        <img src="/icons/platform-android.svg" alt="Android" width="112" height="112" loading="lazy">
+        <h3 data-i18n="downloads.mobile_android_big">Android</h3>
+        <p data-i18n="downloads.mobile_android_big_d">Your agents in your pocket. Debug APK and AAB available now for offline testing; Google Play listing coming soon.</p>
+        <span class="badge" data-i18n="downloads.chip_dev">Dev only</span>
+      </div>
+      <div class="dl-mobile-brand">
+        <img src="/icons/platform-iphone.svg" alt="iOS" width="112" height="112" loading="lazy">
+        <h3 data-i18n="downloads.mobile_ios_big">iPhone &amp; iPad</h3>
+        <p data-i18n="downloads.mobile_ios_big_d">The same workspace on Apple silicon. App Store listing is on the way; ad-hoc IPA will appear here for sideload testing.</p>
+        <span class="badge" data-i18n="downloads.chip_soon">Coming soon</span>
+      </div>
     </div>
     <div class="section-header centered">
       <span class="overline" data-i18n="downloads.mobile_overline">Mobile</span>
-      <h2 data-i18n="downloads.mobile_title">General Bots in your pocket</h2>
+      <h2 data-i18n="downloads.mobile_title">Same assistants. Every screen.</h2>
       <p data-i18n="downloads.mobile_sub">The same assistant on Android and iOS. Store listings are on the way — dev builds are available now for offline testing.</p>
     </div>
 

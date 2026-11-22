@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Windows">
+  <title>Windows</title>
+  <defs><linearGradient id="rb" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ff4d00"/><stop offset=".18" stop-color="#fbbf24"/><stop offset=".38" stop-color="#10b981"/><stop offset=".58" stop-color="#06b6d4"/><stop offset=".78" stop-color="#6366f1"/><stop offset="1" stop-color="#ec4899"/></linearGradient></defs>
+  <rect x="4" y="4" width="120" height="120" rx="28" fill="#0e0e14" stroke="#2a2a36" stroke-width="2"/>
+  <circle cx="64" cy="60" r="39" fill="none" stroke="#34343f" stroke-width="1.5" stroke-dasharray="3 7"/>
+  <rect x="35" y="39" width="25" height="24" rx="3" fill="none" stroke="#f0f0f3" stroke-width="5"/>
+  <rect x="68" y="39" width="25" height="24" rx="3" fill="none" stroke="#f0f0f3" stroke-width="5"/>
+  <rect x="35" y="70" width="25" height="24" rx="3" fill="none" stroke="#f0f0f3" stroke-width="5"/>
+  <rect x="68" y="70" width="25" height="24" rx="3" fill="none" stroke="#f0f0f3" stroke-width="5"/>
+  <rect x="30" y="112" width="68" height="3" rx="1.5" fill="url(#rb)"/>
+</svg>
