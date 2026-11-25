@@ -1,0 +1,240 @@
+/* The permission panel and its activity trail share one frame. */
+.lite-agent-grid {
+  gap: 0;
+  overflow: hidden;
+  border: 1px solid var(--lite-line);
+  border-radius: 12px;
+  background: var(--lite-surface);
+}
+
+.lite-agent-grid .lite-image-pad,
+.lite-setup-grid .lite-image-pad,
+.lite-artifact-pad {
+  --stage-line: color-mix(in srgb, var(--lite-accent-text) 14%, transparent);
+  padding: clamp(1.25rem, 4vw, 3.5rem);
+  background:
+    linear-gradient(90deg, var(--stage-line) 1px, transparent 1px) center / 48px 100%,
+    linear-gradient(var(--stage-line) 1px, transparent 1px) center / 100% 48px,
+    color-mix(in srgb, var(--lite-accent) 6%, var(--lite-fill));
+}
+
+.lite-agent-grid .lite-image-pad {
+  border: 0;
+  border-radius: 0;
+}
+
+.lite-agent-grid .lite-trace {
+  align-content: center;
+  padding: clamp(1.25rem, 3vw, 2.75rem);
+  border: 0;
+  border-inline-start: 1px solid var(--lite-line);
+  border-radius: 0;
+}
+
+.lite-trace h3 {
+  max-width: 24ch;
+  margin-block-end: 1.4rem;
+}
+
+.lite-trace li {
+  grid-template-columns: 2rem minmax(0, 1fr);
+  gap: .85rem;
+  border: 0;
+  padding-block: 0 1.15rem;
+}
+
+.lite-trace li:last-child { padding-block-end: 0; }
+.lite-trace li:not(:last-child)::before {
+  content: "";
+  position: absolute;
+  inset-inline-start: calc(1rem - .5px);
+  inset-block: 2rem 0;
+  border-inline-start: 1px solid var(--lite-line);
+}
+
+.lite-trace-icon {
+  border: 1px solid var(--lite-line);
+  border-radius: 50%;
+  background: var(--lite-paper);
+}
+
+.lite-trace strong { font-size: .95rem; }
+
+/* A featured deliverable above a ruled index of everyday tasks. */
+.lite-work-top,
+.lite-work-start,
+.lite-work-grid {
+  overflow: hidden;
+  gap: 1px;
+  background: var(--lite-line);
+}
+
+.lite-work-top {
+  border: 1px solid var(--lite-line);
+  border-radius: 12px 12px 0 0;
+}
+
+.lite-work-grid {
+  margin-block-start: 0;
+  border: 1px solid var(--lite-line);
+  border-block-start: 0;
+  border-radius: 0 0 12px 12px;
+}
+
+.lite-work-top .lite-card,
+.lite-work-grid .lite-card {
+  border: 0;
+  border-radius: 0;
+}
+
+.lite-work-start .lite-card,
+.lite-work-grid .lite-card,
+.lite-files-copy { padding: clamp(1.25rem, 2.7vw, 2.4rem); }
+
+.lite-work-start .lite-card {
+  display: grid;
+  align-content: center;
+}
+
+.lite-work-grid h3 { font-size: clamp(1.15rem, 1.8vw, 1.5rem); }
+.lite-work-grid .lite-card p { font-size: .95rem; }
+.lite-card-icon {
+  justify-content: start;
+  width: auto;
+  height: auto;
+  background: none;
+  margin-block-end: 1rem;
+}
+.lite-card-icon svg { width: 1.4rem; height: 1.4rem; }
+
+.lite-artifact-pad { border-radius: 0; }
+.lite-formats li { background: transparent; }
+
+.lite-setup-grid {
+  align-items: stretch;
+  gap: clamp(1rem, 5vw, 5rem);
+}
+.lite-setup-grid .lite-image-pad {
+  background:
+    repeating-linear-gradient(135deg, transparent 0 6px, var(--stage-line) 6px 7px),
+    var(--lite-fill);
+}
+.lite-steps li {
+  grid-template-columns: 2.75rem minmax(0, 1fr);
+  padding-block: clamp(.95rem, 1.8vw, 1.55rem);
+}
+.lite-steps li::before {
+  justify-content: start;
+  align-items: baseline;
+  padding-block-start: .25rem;
+  width: auto;
+  height: auto;
+  border: 0;
+  background: none;
+  font: 500 1rem/1.25 var(--lite-mono);
+}
+.lite-steps li h3 { font-size: clamp(1.15rem, 2vw, 1.55rem); }
+.lite-steps p { max-width: 44ch; }
+
+.lite-compare { border-radius: 8px; }
+.lite-compare thead { background: var(--lite-surface); }
+.lite-compare thead :is(td, th) { vertical-align: middle; }
+.lite-compare thead th:last-child {
+  background: var(--lite-accent);
+  color: #21160e;
+}
+.lite-compare tbody th {
+  font-weight: 580;
+  letter-spacing: -.02em;
+}
+.lite-compare tbody td:last-child { background: color-mix(in srgb, var(--lite-accent) 6%, var(--lite-paper)); }
+
+.lite-faq details:first-child { border-block-start: 1px solid var(--lite-line); }
+.lite-faq summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.2rem;
+  list-style: none;
+  padding: 1.15rem .125rem;
+  font-size: clamp(1rem, 1.7vw, 1.25rem);
+  font-weight: 550;
+  line-height: 1.4;
+  letter-spacing: -.025em;
+}
+.lite-faq summary::-webkit-details-marker { display: none; }
+.lite-faq summary::after {
+  content: "";
+  flex: none;
+  width: .5rem;
+  height: .5rem;
+  margin-inline-end: .4rem;
+  border: solid currentColor;
+  border-width: 0 1.5px 1.5px 0;
+  color: var(--lite-accent-text);
+  transform: translateY(-.12rem) rotate(45deg);
+}
+.lite-faq details[open] summary::after { transform: translateY(.12rem) rotate(225deg); }
+.lite-faq details p { max-width: 62ch; padding: 0 1.8rem 1.25rem .125rem; }
+
+/* A halftone print of the GB mark anchors the final download panel. */
+.lite-end-inner {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: clamp(2rem, 6vw, 5.25rem);
+  text-align: start;
+  background: #211b17;
+  border-color: #40352b;
+}
+.lite-end-inner::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  pointer-events: none;
+  inset-block: 0;
+  inset-inline-end: -3.5%;
+  width: 44%;
+  mask: url("/lite/assets/brand-mark.svg") center / contain no-repeat;
+  background: radial-gradient(circle, #da9a61 1.4px, transparent 1.6px) 0 0 / 5px 5px;
+}
+.lite-end-inner h2 {
+  max-width: min(18ch, 60%);
+  color: #fff6ec;
+  text-wrap: balance;
+}
+.lite-end-inner p {
+  max-width: min(53ch, 57%);
+  margin-inline: 0;
+  color: #dbccc2;
+}
+.lite-end-inner .lite-actions { justify-content: start; margin-block-start: 1.75rem; }
+.lite-end-inner .lite-button:not(.lite-button--primary) {
+  border-color: #76685e;
+  background: #302822;
+  color: #fff6ec;
+}
+.lite-end-inner .lite-button:not(.lite-button--primary):hover { background: #41362e; }
+.lite-end-inner .lite-button:focus-visible { outline-color: #fff6ec; }
+
+@media (max-width: 720px) {
+  .lite-agent-grid .lite-trace {
+    border-inline-start: 0;
+    border-block-start: 1px solid var(--lite-line);
+  }
+  .lite-end-inner h2,
+  .lite-end-inner p { max-width: 100%; }
+  .lite-end-inner { padding-block-end: clamp(6rem, 23vw, 10rem); }
+  .lite-end-inner::before {
+    inset-block: auto -.45rem;
+    inset-inline-end: 1.25rem;
+    width: 52%;
+    aspect-ratio: 687 / 261;
+  }
+}
+
+@media (forced-colors: active) {
+  .lite-end-inner::before { display: none; }
+  .lite-work-grid .lite-card,
+  .lite-work-start .lite-card { outline: 1px solid CanvasText; }
+}

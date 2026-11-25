@@ -41,9 +41,11 @@
   "isPartOf": {"@type":"WebSite","name":"General Bots","url":"https://generalbots.org/"}
 }
 </script>
-<link rel="stylesheet" href="/lite/lite.css?v=lightbox">
+<link rel="stylesheet" href="/lite/lite.css?v=archive">
+<link rel="stylesheet" href="/lite/cover.css?v=archive">
+<link rel="stylesheet" href="/lite/details.css?v=archive">
 </head>
-<body>
+<body class="lite-site">
 <a href="#main-content" class="sr-only skip-link" data-i18n="common.skip_to_content">Skip to content</a>
 <div hx-get="/partials/header.html" hx-swap="innerHTML" hx-trigger="load">
   <header class="site-header" role="banner">
@@ -53,37 +55,35 @@
 <main id="main-content" class="lite-page" role="main">
   <section class="lite-wrap lite-hero" aria-labelledby="lite-hero-title">
     <div class="lite-hero-header">
-      <div>
+      <div class="lite-hero-copy">
         <div class="lite-identity">
           <span class="lite-lockup" role="img" aria-label="General Bots Lite"><span class="lite-mark" aria-hidden="true"></span><span class="lite-tag" aria-hidden="true">LITE</span></span>
           <span class="lite-edition" data-i18n="lite.edition">AI assistant for the public sector</span>
         </div>
-        <h1 id="lite-hero-title"><span data-i18n="lite.hero_private">Real AI, on your computer.</span> <span data-i18n="lite.hero_control">Your data. Your decision.</span></h1>
-      </div>
-      <div class="lite-intro">
-        <p data-i18n="lite.hero_copy">General Bots Lite reads documents, researches the web, creates files and helps you get work done. See where your data goes and what the assistant does along the way.</p>
-        <div class="lite-actions">
-          <a class="lite-button lite-button--primary" href="#windows"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m-4-4 4 4 4-4M5 17v4h14v-4"/></svg><span data-i18n="lite.downloads">Windows downloads</span></a>
-          <a class="lite-button" href="#how-it-works"><span data-i18n="lite.see_lite">See how it works</span><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14m-5-5 5 5 5-5"/></svg></a>
+        <h1 id="lite-hero-title"><span data-i18n="lite.hero_private">Your data.</span> <span data-i18n="lite.hero_control">Your decision.</span></h1>
+        <div class="lite-intro">
+          <p data-i18n="lite.hero_copy">Run AI on your computer or choose a provider you trust. Turn documents into reports and spreadsheets, and approve the actions your assistant takes.</p>
+          <div class="lite-actions">
+            <a class="lite-button lite-button--primary" href="#windows"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m-4-4 4 4 4-4M5 17v4h14v-4"/></svg><span data-i18n="lite.downloads">Windows downloads</span></a>
+            <a class="lite-button" href="#showcase"><span data-i18n="lite.see_lite">See how it works</span><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14m-5-5 5 5 5-5"/></svg></a>
+          </div>
+          <ul class="lite-specs">
+            <li data-i18n="lite.hero_platform">Windows 11</li>
+            <li data-i18n="lite.hero_license">MIT open source</li>
+            <li data-i18n="lite.hero_language">Brazilian Portuguese first</li>
+          </ul>
         </div>
-        <ul class="lite-specs">
-          <li data-i18n="lite.hero_platform">Windows 11</li>
-          <li data-i18n="lite.hero_license">MIT open source</li>
-          <li data-i18n="lite.hero_language">Brazilian Portuguese first</li>
-        </ul>
       </div>
+      <figure class="lite-stage">
+        <div class="lite-cover">
+          <a class="lite-image-open lite-screen--hero" href="/lite/assets/assistant.webp?v=public-sector">
+            <img class="lite-screen" src="/lite/assets/assistant.webp?v=public-sector" width="1280" height="750" alt="General Bots Lite assistant with a sample conversation" data-i18n="lite.assistant_alt" fetchpriority="high" decoding="async">
+            <svg aria-hidden="true" class="lite-image-expand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3H3v6m12-6h6v6M3 15v6h6m12-6v6h-6"/></svg>
+          </a>
+        </div>
+        <figcaption class="lite-preview" data-i18n="lite.preview">Lite development screenshots in Brazilian Portuguese with sample data.</figcaption>
+      </figure>
     </div>
-    <figure class="lite-stage">
-      <a class="lite-image-open lite-screen--hero" href="/lite/assets/assistant.webp?v=public-sector">
-        <img class="lite-screen  " src="/lite/assets/assistant.webp?v=public-sector" width="1280" height="750" alt="General Bots Lite assistant with a sample conversation" data-i18n="lite.assistant_alt" fetchpriority="high" decoding="async">
-        <svg aria-hidden="true" class="lite-image-expand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3H3v6m12-6h6v6M3 15v6h6m12-6v6h-6"/></svg>
-      </a>
-      <a class="lite-image-open lite-screen--float" href="/lite/assets/model.webp?v=pt-br">
-        <img class="lite-screen  " src="/lite/assets/model.webp?v=pt-br" width="764" height="485" alt="First-run setup with four assistant engines" data-i18n="lite.wizard_model_alt" decoding="async">
-        <svg aria-hidden="true" class="lite-image-expand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3H3v6m12-6h6v6M3 15v6h6m12-6v6h-6"/></svg>
-      </a>
-      <figcaption class="lite-preview" data-i18n="lite.preview">Lite development screenshots in Brazilian Portuguese with sample data.</figcaption>
-    </figure>
     <ul class="lite-benefits">
         <li class="lite-benefit">
           <h2><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 1 1 8 0v4"/></svg><span data-i18n="lite.privacy_title">Privacy</span></h2>
@@ -102,8 +102,21 @@
 
   <section class="lite-wrap lite-section" id="showcase" aria-labelledby="lite-difference_title">
     <div class="lite-manifesto">
-      <h2 id="lite-difference_title" data-i18n="lite.difference_title">You decide. You see what happens.</h2>
-      <p data-i18n="lite.difference_copy">The engine shows where data goes. Permission cards control agent actions. The conversation records the steps.</p>
+      <div class="lite-manifesto-copy">
+        <h2 id="lite-difference_title" data-i18n="lite.difference_title">You decide. You see what happens.</h2>
+        <p data-i18n="lite.difference_copy">The engine shows where data goes. Permission cards control agent actions. The conversation records the steps.</p>
+        <div class="lite-chapters">
+          <a href="#engines"><span data-i18n="lite.link_models">Models</span><span aria-hidden="true">↘</span></a>
+          <a href="#agent"><span data-i18n="lite.link_permissions">Permissions</span><span aria-hidden="true">↘</span></a>
+          <a href="#workflows"><span data-i18n="lite.link_files">Files</span><span aria-hidden="true">↘</span></a>
+        </div>
+      </div>
+      <div class="lite-wizard-preview">
+        <a class="lite-image-open" href="/lite/assets/model.webp?v=pt-br">
+          <img class="lite-screen" src="/lite/assets/model.webp?v=pt-br" width="764" height="485" alt="First-run setup with four assistant engines" data-i18n="lite.wizard_model_alt" loading="lazy" decoding="async">
+          <svg aria-hidden="true" class="lite-image-expand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3H3v6m12-6h6v6M3 15v6h6m12-6v6h-6"/></svg>
+        </a>
+      </div>
     </div>
   </section>
 
