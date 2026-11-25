@@ -75,8 +75,8 @@
     </div>
     <figure class="lite-stage">
       <img class="lite-screen lite-screen--hero" src="/lite/assets/assistant.webp?v=public-sector" width="1280" height="750" alt="General Bots Lite assistant with a sample conversation" data-i18n="lite.assistant_alt" fetchpriority="high" decoding="async">
-      <img class="lite-screen lite-screen--float" src="/lite/assets/model.webp" width="764" height="485" alt=""  decoding="async">
-      <figcaption class="lite-preview" data-i18n="lite.preview">Lite development screens with sample data. Interface language may vary by screen.</figcaption>
+      <img class="lite-screen lite-screen--float" src="/lite/assets/model.webp?v=pt-br" width="764" height="485" alt=""  decoding="async">
+      <figcaption class="lite-preview" data-i18n="lite.preview">Lite development screenshots in Brazilian Portuguese with sample data.</figcaption>
     </figure>
     <ul class="lite-benefits">
         <li class="lite-benefit">
@@ -104,33 +104,57 @@
   <section class="lite-wrap lite-section" id="engines" aria-labelledby="lite-engines_title">
     <div class="lite-section-heading">
       <h2 id="lite-engines_title" data-i18n="lite.engines_title">Four engines. You choose where your data goes.</h2>
-      <p data-i18n="lite.engines_copy">The engine panel shows the active engine, its destination and what it can do.</p>
+      <p data-i18n="lite.engines_copy">In Settings › Model, choose an engine and see where it processes prompts.</p>
     </div>
     <div class="lite-engine-grid">
-      <figure class="lite-image-pad">
-        <a class="lite-image-open" href="/lite/assets/model.webp?view=full">
-          <img class="lite-screen" src="/lite/assets/model.webp" width="764" height="485" alt="First-run screen listing the four assistant engines" data-i18n="lite.model_alt" loading="lazy" decoding="async">
-          <svg aria-hidden="true" class="lite-image-expand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3H3v6m12-6h6v6M3 15v6h6m12-6v6h-6"/></svg>
-        </a>
-      </figure>
-      <div class="lite-engine-options">
-        <details name="lite-engines" open>
-          <summary><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/></svg><span data-i18n="lite.engine_local">On this computer</span></summary>
+      <article class="lite-engine-card">
+        <div class="lite-engine-copy">
+          <h3><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/></svg><span data-i18n="lite.engine_local">On this computer</span></h3>
           <p data-i18n="lite.engine_local_copy">A compatible local model processes prompts on your computer after setup.</p>
-        </details>
-        <details name="lite-engines">
-          <summary><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="8" rx="2"/><rect x="3" y="13" width="18" height="8" rx="2"/><path d="M7 7h.01M7 17h.01"/></svg><span data-i18n="lite.engine_server">Your own server or key</span></summary>
+        </div>
+        <figure class="lite-image-pad">
+          <a class="lite-image-open" href="/lite/assets/settings-model-local.webp?view=full">
+            <img class="lite-screen" src="/lite/assets/settings-model-local.webp" width="1090" height="733" alt="Settings › Model showing the local model catalog" data-i18n="lite.model_local_alt" loading="lazy" decoding="async">
+            <svg aria-hidden="true" class="lite-image-expand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3H3v6m12-6h6v6M3 15v6h6m12-6v6h-6"/></svg>
+          </a>
+        </figure>
+      </article>
+      <article class="lite-engine-card">
+        <div class="lite-engine-copy">
+          <h3><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="8" rx="2"/><rect x="3" y="13" width="18" height="8" rx="2"/><path d="M7 7h.01M7 17h.01"/></svg><span data-i18n="lite.engine_server">Your own server or key</span></h3>
           <p data-i18n="lite.engine_server_copy">Prompts go to your organization’s server or the provider you select.</p>
-        </details>
-        <details name="lite-engines">
-          <summary><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6 18a4 4 0 0 1-.3-8 6 6 0 0 1 11.6-1.4A4.8 4.8 0 0 1 18 18Z"/></svg><span data-i18n="lite.engine_free">Free hosted model</span></summary>
+        </div>
+        <figure class="lite-image-pad">
+          <a class="lite-image-open" href="/lite/assets/settings-model-server.webp?view=full">
+            <img class="lite-screen" src="/lite/assets/settings-model-server.webp" width="1090" height="709" alt="Settings › Model showing organization server and provider-key choices" data-i18n="lite.model_server_alt" loading="lazy" decoding="async">
+            <svg aria-hidden="true" class="lite-image-expand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3H3v6m12-6h6v6M3 15v6h6m12-6v6h-6"/></svg>
+          </a>
+        </figure>
+      </article>
+      <article class="lite-engine-card">
+        <div class="lite-engine-copy">
+          <h3><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6 18a4 4 0 0 1-.3-8 6 6 0 0 1 11.6-1.4A4.8 4.8 0 0 1 18 18Z"/></svg><span data-i18n="lite.engine_free">Free hosted model</span></h3>
           <p data-i18n="lite.engine_free_copy">Ready to try without an API key. Prompts go to an external provider.</p>
-        </details>
-        <details name="lite-engines">
-          <summary><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="8" width="16" height="12" rx="3"/><path d="M12 8V4m-1 0h2M9 14h.01M15 14h.01M2 12v4m20-4v4"/></svg><span data-i18n="lite.engine_subscription">Subscription agent</span></summary>
+        </div>
+        <figure class="lite-image-pad">
+          <a class="lite-image-open" href="/lite/assets/settings-model-free.webp?view=full">
+            <img class="lite-screen" src="/lite/assets/settings-model-free.webp" width="1090" height="448" alt="Settings › Model showing the free hosted model" data-i18n="lite.model_free_alt" loading="lazy" decoding="async">
+            <svg aria-hidden="true" class="lite-image-expand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3H3v6m12-6h6v6M3 15v6h6m12-6v6h-6"/></svg>
+          </a>
+        </figure>
+      </article>
+      <article class="lite-engine-card">
+        <div class="lite-engine-copy">
+          <h3><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="8" width="16" height="12" rx="3"/><path d="M12 8V4m-1 0h2M9 14h.01M15 14h.01M2 12v4m20-4v4"/></svg><span data-i18n="lite.engine_subscription">Subscription agent</span></h3>
           <p data-i18n="lite.engine_subscription_copy">The agent works in an isolated workspace on your computer, while prompts go to the subscription provider.</p>
-        </details>
-      </div>
+        </div>
+        <figure class="lite-image-pad">
+          <a class="lite-image-open" href="/lite/assets/settings-model-subscription.webp?view=full">
+            <img class="lite-screen" src="/lite/assets/settings-model-subscription.webp" width="1090" height="502" alt="Settings › Model showing subscription agent choices" data-i18n="lite.model_subscription_alt" loading="lazy" decoding="async">
+            <svg aria-hidden="true" class="lite-image-expand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3H3v6m12-6h6v6M3 15v6h6m12-6v6h-6"/></svg>
+          </a>
+        </figure>
+      </article>
     </div>
   </section>
 
@@ -249,8 +273,8 @@
         <li><div><h3 data-i18n="lite.step_agent">Turn on the agent when needed</h3><p data-i18n="lite.step_agent_copy">Approve actions as the agent works in the isolated virtual machine.</p></div></li>
       </ol>
       <figure class="lite-image-pad">
-        <a class="lite-image-open" href="/lite/assets/workspace.webp?view=full">
-          <img class="lite-screen" src="/lite/assets/workspace.webp" width="764" height="485" alt="First-run screen for choosing the workspace folder" data-i18n="lite.workspace_alt" loading="lazy" decoding="async">
+        <a class="lite-image-open" href="/lite/assets/workspace.webp?view=full&amp;v=pt-br">
+          <img class="lite-screen" src="/lite/assets/workspace.webp?v=pt-br" width="764" height="485" alt="First-run screen for choosing the workspace folder" data-i18n="lite.workspace_alt" loading="lazy" decoding="async">
           <svg aria-hidden="true" class="lite-image-expand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3H3v6m12-6h6v6M3 15v6h6m12-6v6h-6"/></svg>
         </a>
       </figure>
