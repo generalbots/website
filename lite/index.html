@@ -41,7 +41,7 @@
   "isPartOf": {"@type":"WebSite","name":"General Bots","url":"https://generalbots.org/"}
 }
 </script>
-<link rel="stylesheet" href="/lite/lite.css">
+<link rel="stylesheet" href="/lite/lite.css?v=lightbox">
 </head>
 <body>
 <a href="#main-content" class="sr-only skip-link" data-i18n="common.skip_to_content">Skip to content</a>
@@ -74,8 +74,14 @@
       </div>
     </div>
     <figure class="lite-stage">
-      <img class="lite-screen lite-screen--hero" src="/lite/assets/assistant.webp?v=public-sector" width="1280" height="750" alt="General Bots Lite assistant with a sample conversation" data-i18n="lite.assistant_alt" fetchpriority="high" decoding="async">
-      <img class="lite-screen lite-screen--float" src="/lite/assets/model.webp?v=pt-br" width="764" height="485" alt=""  decoding="async">
+      <a class="lite-image-open lite-screen--hero" href="/lite/assets/assistant.webp?v=public-sector">
+        <img class="lite-screen  " src="/lite/assets/assistant.webp?v=public-sector" width="1280" height="750" alt="General Bots Lite assistant with a sample conversation" data-i18n="lite.assistant_alt" fetchpriority="high" decoding="async">
+        <svg aria-hidden="true" class="lite-image-expand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3H3v6m12-6h6v6M3 15v6h6m12-6v6h-6"/></svg>
+      </a>
+      <a class="lite-image-open lite-screen--float" href="/lite/assets/model.webp?v=pt-br">
+        <img class="lite-screen  " src="/lite/assets/model.webp?v=pt-br" width="764" height="485" alt="First-run setup with four assistant engines" data-i18n="lite.wizard_model_alt" decoding="async">
+        <svg aria-hidden="true" class="lite-image-expand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3H3v6m12-6h6v6M3 15v6h6m12-6v6h-6"/></svg>
+      </a>
       <figcaption class="lite-preview" data-i18n="lite.preview">Lite development screenshots in Brazilian Portuguese with sample data.</figcaption>
     </figure>
     <ul class="lite-benefits">
@@ -357,6 +363,23 @@
       </div>
     </div>
   </section>
+  <dialog class="lite-lightbox" id="lite-lightbox" aria-labelledby="lite-lightbox-title">
+    <div class="lite-lightbox-bar">
+      <h2 id="lite-lightbox-title" data-i18n="lite.lightbox_title">Product screenshots</h2>
+      <div class="lite-lightbox-controls">
+        <button type="button" data-lightbox-prev><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg><span class="sr-only" data-i18n="lite.lightbox_prev">Previous image</span></button>
+        <span class="lite-lightbox-count" aria-hidden="true"></span>
+        <button type="button" data-lightbox-next><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg><span class="sr-only" data-i18n="lite.lightbox_next">Next image</span></button>
+        <button type="button" data-lightbox-zoom aria-pressed="false"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5M8 10.5h5"/><path class="lite-lightbox-zoom-plus" d="M10.5 8v5"/></svg><span class="sr-only" data-i18n="lite.lightbox_zoom">Show at full size</span></button>
+        <button type="button" data-lightbox-close autofocus><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 6 12 12M18 6 6 18"/></svg><span class="sr-only" data-i18n="lite.lightbox_close">Close</span></button>
+      </div>
+    </div>
+    <figure>
+      <div class="lite-lightbox-viewport" tabindex="0" role="region" aria-labelledby="lite-lightbox-title">
+      </div>
+      <figcaption aria-live="polite" aria-atomic="true"></figcaption>
+    </figure>
+  </dialog>
 </main>
 <div hx-get="/partials/footer.html" hx-swap="innerHTML" hx-trigger="load">
   <footer class="site-footer" role="contentinfo">
@@ -365,5 +388,6 @@
 </div>
 <script defer src="/lite/vendor/htmx.min.js"></script>
 <script defer src="/js/site.min.js"></script>
+<script defer src="/lite/lightbox.js"></script>
 </body>
 </html>
