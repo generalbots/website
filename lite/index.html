@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Lite Desktop AI Assistant | General Bots</title>
-<meta name="description" content="Explore General Bots Lite, an open-source desktop AI assistant. Keep your workspace on your computer and choose how your prompts are processed.">
+<title>Lite AI for the Public Sector | General Bots</title>
+<meta name="description" content="General Bots Lite is an open-source Windows AI assistant for public-sector work. Choose an AI engine, control agent permissions, and follow each action.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://generalbots.org/lite/">
 <link rel="alternate" hreflang="x-default" href="https://generalbots.org/lite/">
@@ -15,8 +15,8 @@
 <link rel="alternate" hreflang="de" href="https://generalbots.org/de/lite/">
 <link rel="alternate" hreflang="ja" href="https://generalbots.org/ja/lite/">
 <link rel="alternate" hreflang="zh-cn" href="https://generalbots.org/zh-cn/lite/">
-<meta property="og:title" content="Lite Desktop AI Assistant | General Bots">
-<meta property="og:description" content="Explore General Bots Lite, an open-source desktop AI assistant. Keep your workspace on your computer and choose how your prompts are processed.">
+<meta property="og:title" content="Lite AI for the Public Sector | General Bots">
+<meta property="og:description" content="General Bots Lite is an open-source Windows AI assistant for public-sector work. Choose an AI engine, control agent permissions, and follow each action.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://generalbots.org/lite/">
 <meta property="og:image" content="https://generalbots.org/og-image.png">
@@ -35,185 +35,13 @@
 {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "name": "Lite Desktop AI Assistant | General Bots",
-  "description": "Explore General Bots Lite, an open-source desktop AI assistant. Keep your workspace on your computer and choose how your prompts are processed.",
+  "name": "Lite AI for the Public Sector | General Bots",
+  "description": "General Bots Lite is an open-source Windows AI assistant for public-sector work. Choose an AI engine, control agent permissions, and follow each action.",
   "url": "https://generalbots.org/lite/",
   "isPartOf": {"@type":"WebSite","name":"General Bots","url":"https://generalbots.org/"}
 }
 </script>
-<style>
-@font-face {
-  font-family: Geist; font-style: normal; font-weight: 100 900; font-display: swap;
-  src: url("/lite/assets/fonts/geist-latin-wght-normal.woff2") format("woff2");
-}
-@font-face {
-  font-family: "Geist Mono"; font-style: normal; font-weight: 100 900; font-display: swap;
-  src: url("/lite/assets/fonts/geist-mono-latin-wght-normal.woff2") format("woff2");
-}
-.lite-page {
-  --lite-paper: #0a0a0a;
-  --lite-surface: #111;
-  --lite-fill: #1b1b1b;
-  --lite-line: #262626;
-  --lite-ink: #ededed;
-  --lite-copy: #a1a1a1;
-  --lite-accent: #ffa65b;
-  --lite-accent-text: #ffa65b;
-  --lite-grid: rgb(255 255 255 / .10);
-  --lite-shadow: rgb(0 0 0 / .62);
-  --lite-font: Geist, system-ui, sans-serif;
-  --lite-mono: "Geist Mono", ui-monospace, monospace;
-  background: var(--lite-paper);
-  color: var(--lite-ink);
-  font-family: var(--lite-font);
-}
-[data-theme="light"] .lite-page {
-  --lite-paper: #fafafa;
-  --lite-surface: #fff;
-  --lite-fill: #f2f2f2;
-  --lite-line: #dedede;
-  --lite-ink: #171717;
-  --lite-copy: #4d4d4d;
-  --lite-accent-text: #8c4904;
-  --lite-grid: rgb(0 0 0 / .15);
-  --lite-shadow: rgb(36 24 12 / .19);
-}
-.lite-wrap { width: min(1220px, 100% - 3rem); margin-inline: auto; }
-.lite-hero { padding-block: clamp(8.25rem, 12vw, 10.75rem) clamp(3.5rem, 6vw, 5.5rem); }
-.lite-hero-header {
-  display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
-  align-items: end; gap: clamp(1.5rem, 5vw, 5rem); margin-block-end: clamp(2rem, 4.5vw, 3.75rem);
-}
-.lite-identity { display: flex; flex-wrap: wrap; align-items: center; gap: .8rem; margin-block-end: 1.5rem; }
-.lite-lockup { display: inline-flex; align-items: center; gap: .625rem; }
-.lite-mark {
-  display: block; width: 2.75rem; height: 1.05rem; background: var(--lite-ink);
-  mask: url("/lite/assets/brand-mark.svg") center / contain no-repeat;
-}
-.lite-tag {
-  border: 1px solid var(--lite-line); color: var(--lite-copy);
-  padding: .125rem .4rem; font: 600 .6875rem/1.25 var(--lite-mono); letter-spacing: .06em;
-}
-.lite-edition {
-  border-inline-start: 1px solid var(--lite-line); padding-inline-start: .8rem;
-  color: var(--lite-copy); font: 600 .6875rem/1.35 var(--lite-mono); text-transform: uppercase; letter-spacing: .08em;
-}
-.lite-page :is(h1, h2, h3) {
-  color: var(--lite-ink); font-family: var(--lite-font); margin: 0;
-  font-weight: 650; letter-spacing: -.055em; line-height: 1.03;
-}
-.lite-page h1 { font-size: clamp(2.85rem, 6.15vw, 6.1rem); }
-.lite-page h1 span { display: block; }
-.lite-page h1 span + span { color: var(--lite-accent-text); }
-.lite-page h2 { font-size: clamp(2.2rem, 4.8vw, 4.6rem); }
-.lite-page h3 { font-size: clamp(1.25rem, 2vw, 1.75rem); letter-spacing: -.04em; line-height: 1.18; }
-.lite-page p { color: var(--lite-copy); margin: 0; line-height: 1.6; }
-.lite-intro p { font-size: clamp(1rem, 1.6vw, 1.2rem); max-width: 38ch; }
-.lite-actions { display: flex; flex-wrap: wrap; gap: .6rem; margin-block: 1.35rem .65rem; }
-.lite-button {
-  display: inline-flex; justify-content: center; align-items: center; gap: .55rem;
-  min-height: 2.8rem; padding: .65rem .9rem; border: 1px solid var(--lite-line);
-  border-radius: 6px; background: var(--lite-surface); color: var(--lite-ink);
-  font-size: .875rem; font-weight: 650; line-height: 1.25; text-decoration: none;
-  transition: background-color .18s ease, border-color .18s ease;
-}
-.lite-button:hover { border-color: var(--lite-copy); background: var(--lite-fill); color: var(--lite-ink); }
-.lite-button--primary { background: var(--lite-accent); border-color: var(--lite-accent); color: #171717; }
-.lite-button--primary:hover { background: #ffd9b3; border-color: #ffd9b3; color: #171717; }
-.lite-page :is(a, summary):focus-visible { outline: 2px solid var(--lite-accent-text); outline-offset: 4px; }
-.lite-button svg, .lite-benefit svg { width: 1rem; height: 1rem; flex: none; }
-.lite-intro .lite-preview { font-size: .75rem; }
-.lite-stage {
-  position: relative; isolation: isolate; overflow: hidden; margin: 0;
-  padding: clamp(1rem, 5.25vw, 4.75rem) clamp(.75rem, 4.6vw, 4.15rem) clamp(1rem, 6.5vw, 5.3rem);
-  background:
-    radial-gradient(ellipse at 75% 95%, color-mix(in srgb, var(--lite-accent) 27%, transparent), transparent 60%),
-    radial-gradient(circle at center, var(--lite-grid) 1px, transparent 1.25px) 0 0 / 17px 17px,
-    var(--lite-fill);
-  border: 1px solid var(--lite-line); border-radius: 12px;
-}
-.lite-screen {
-  display: block; width: 100%; height: auto;
-  border: 1px solid color-mix(in srgb, var(--lite-ink) 20%, var(--lite-line));
-  border-radius: 7px; background: var(--lite-surface);
-  box-shadow: 0 1.4rem 3.7rem -1.35rem var(--lite-shadow);
-}
-.lite-screen--hero { position: relative; width: 88%; }
-.lite-screen--float {
-  position: absolute; z-index: 1; inset-inline-end: 3.2%; inset-block-end: 6%; width: 37%;
-  box-shadow: 0 1.4rem 3.5rem -1rem var(--lite-shadow);
-}
-.lite-benefits {
-  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));
-  list-style: none; padding: 0; margin: 0; border-block-end: 1px solid var(--lite-line);
-}
-.lite-benefit { padding: 1.35rem clamp(.9rem, 2vw, 1.65rem); }
-.lite-benefit + .lite-benefit { border-inline-start: 1px solid var(--lite-line); }
-.lite-benefit h2 {
-  display: flex; align-items: center; gap: .55rem;
-  font-size: 1.05rem; font-weight: 650; line-height: 1.3; letter-spacing: -.025em; margin-block-end: .35rem;
-}
-.lite-benefit svg { color: var(--lite-accent-text); }
-.lite-benefit p { font-size: .875rem; }
-.lite-benefit a { color: var(--lite-ink); text-underline-offset: .22em; }
-.lite-showcase { padding-block-end: clamp(3.8rem, 8vw, 7.5rem); scroll-margin-top: 7.2rem; }
-.lite-showcase > h2 { margin-block-end: clamp(1.3rem, 3vw, 2.4rem); }
-.lite-panels { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
-.lite-panel {
-  display: flex; flex-direction: column; overflow: hidden;
-  background: var(--lite-surface); border: 1px solid var(--lite-line); border-radius: 10px;
-}
-.lite-panel-visual {
-  display: grid; place-items: center; flex: 1; min-width: 0; padding: clamp(.7rem, 2.1vw, 1.65rem);
-  background:
-    radial-gradient(ellipse at bottom, color-mix(in srgb, var(--lite-accent) 17%, transparent), transparent 72%),
-    radial-gradient(circle at center, var(--lite-grid) 1px, transparent 1.25px) 0 0 / 16px 16px, var(--lite-fill);
-}
-.lite-panel-visual .lite-screen { max-height: 29rem; object-fit: contain; object-position: center; }
-.lite-panel-copy { padding: clamp(1.15rem, 2.6vw, 1.8rem); border-block-start: 1px solid var(--lite-line); }
-.lite-panel-copy p { margin-block-start: .45rem; max-width: 56ch; }
-.lite-faq {
-  display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.15fr);
-  align-items: start; gap: clamp(1.5rem, 6vw, 5.5rem);
-  border-block-start: 1px solid var(--lite-line); padding-block: clamp(2.75rem, 6vw, 5.5rem);
-}
-.lite-faq h2 { font-size: clamp(2.15rem, 4vw, 3.8rem); }
-.lite-faq details { border-block-end: 1px solid var(--lite-line); }
-.lite-faq summary { cursor: pointer; color: var(--lite-ink); font-weight: 650; padding: 1rem .25rem; }
-.lite-faq summary::marker { color: var(--lite-accent-text); }
-.lite-faq details p { padding: 0 .25rem 1rem 1.25rem; }
-.lite-end { padding-block-end: clamp(3.5rem, 8vw, 7rem); }
-.lite-end-inner {
-  background:
-    radial-gradient(ellipse at top right, color-mix(in srgb, var(--lite-accent) 13%, transparent), transparent 58%),
-    var(--lite-surface);
-  border: 1px solid var(--lite-line); border-radius: 10px;
-  text-align: center; padding: clamp(2.4rem, 6vw, 5.2rem) 1.1rem;
-}
-.lite-end .lite-actions { justify-content: center; margin-block-end: 0; }
-@media (max-width: 840px) {
-  .lite-hero-header { grid-template-columns: 1fr; }
-  .lite-page h1 { font-size: clamp(2.65rem, 9.6vw, 5rem); }
-  .lite-intro p { max-width: 48ch; }
-  .lite-faq { grid-template-columns: 1fr; }
-}
-@media (max-width: 560px) {
-  .lite-wrap { width: calc(100% - 2rem); }
-  .lite-identity { gap: .55rem; }
-  .lite-edition { padding-inline-start: .6rem; }
-  .lite-screen--hero { width: 100%; }
-  .lite-screen--float { display: none; }
-  .lite-benefits, .lite-panels { grid-template-columns: 1fr; }
-  .lite-benefit + .lite-benefit { border-inline-start: 0; border-block-start: 1px solid var(--lite-line); }
-  .lite-benefit { padding-inline: 0; }
-}
-@media (prefers-reduced-motion: reduce) {
-  .lite-button { transition: none; }
-}
-@media (forced-colors: active) {
-  .lite-mark { background: CanvasText; forced-color-adjust: none; }
-}
-</style>
+<link rel="stylesheet" href="/lite/lite.css">
 </head>
 <body>
 <a href="#main-content" class="sr-only skip-link" data-i18n="common.skip_to_content">Skip to content</a>
@@ -223,93 +51,285 @@
   </header>
 </div>
 <main id="main-content" class="lite-page" role="main">
-  <section class="lite-hero">
-    <div class="lite-wrap">
-      <div class="lite-hero-header">
-        <div>
-          <div class="lite-identity">
-            <span class="lite-lockup" role="img" aria-label="General Bots Lite"><span class="lite-mark" aria-hidden="true"></span><span class="lite-tag" aria-hidden="true">LITE</span></span>
-            <span class="lite-edition" data-i18n="lite.edition">Desktop AI assistant</span>
-          </div>
-          <h1><span data-i18n="lite.hero_private">Privacy by design.</span> <span data-i18n="lite.hero_control">AI on your terms.</span></h1>
+  <section class="lite-wrap lite-hero" aria-labelledby="lite-hero-title">
+    <div class="lite-hero-header">
+      <div>
+        <div class="lite-identity">
+          <span class="lite-lockup" role="img" aria-label="General Bots Lite"><span class="lite-mark" aria-hidden="true"></span><span class="lite-tag" aria-hidden="true">LITE</span></span>
+          <span class="lite-edition" data-i18n="lite.edition">AI assistant for the public sector</span>
         </div>
-        <div class="lite-intro">
-          <p data-i18n="lite.hero_copy">General Bots Lite gives you a workspace on your computer and the choice to run a local model or connect a provider you trust.</p>
-          <div class="lite-actions">
-            <a class="lite-button lite-button--primary" href="/downloads/">
-              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m-4-4 4 4 4-4M5 17v4h14v-4"/></svg>
-              <span data-i18n="lite.downloads">View desktop downloads</span>
-            </a>
-            <a class="lite-button" href="#showcase">
-              <span data-i18n="lite.see_lite">See Lite in action</span>
-              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14m-5-5 5 5 5-5"/></svg>
-            </a>
-          </div>
-          <p class="lite-preview" data-i18n="lite.preview">Lite interface preview. Current General Bots desktop builds are available to download.</p>
-        </div>
+        <h1 id="lite-hero-title"><span data-i18n="lite.hero_private">Real AI, on your computer.</span> <span data-i18n="lite.hero_control">Your data. Your decision.</span></h1>
       </div>
-      <figure class="lite-stage">
-        <img class="lite-screen lite-screen--hero" src="/lite/assets/assistant.webp" width="1280" height="750" alt="General Bots Lite desktop assistant" data-i18n="lite.assistant_alt" fetchpriority="high" decoding="async">
-        <img class="lite-screen lite-screen--float" src="/lite/assets/model.webp" width="764" height="485" alt="" decoding="async">
-      </figure>
-      <ul class="lite-benefits">
+      <div class="lite-intro">
+        <p data-i18n="lite.hero_copy">General Bots Lite reads documents, researches the web, creates files and helps you get work done. See where your data goes and what the assistant does along the way.</p>
+        <div class="lite-actions">
+          <a class="lite-button lite-button--primary" href="#windows"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m-4-4 4 4 4-4M5 17v4h14v-4"/></svg><span data-i18n="lite.downloads">Windows downloads</span></a>
+          <a class="lite-button" href="#how-it-works"><span data-i18n="lite.see_lite">See how it works</span><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14m-5-5 5 5 5-5"/></svg></a>
+        </div>
+        <ul class="lite-specs">
+          <li data-i18n="lite.hero_platform">Windows 11</li>
+          <li data-i18n="lite.hero_license">MIT open source</li>
+          <li data-i18n="lite.hero_language">Brazilian Portuguese first</li>
+        </ul>
+      </div>
+    </div>
+    <figure class="lite-stage">
+      <img class="lite-screen lite-screen--hero" src="/lite/assets/assistant.webp?v=public-sector" width="1280" height="750" alt="General Bots Lite assistant with a sample conversation" data-i18n="lite.assistant_alt" fetchpriority="high" decoding="async">
+      <img class="lite-screen lite-screen--float" src="/lite/assets/model.webp" width="764" height="485" alt=""  decoding="async">
+      <figcaption class="lite-preview" data-i18n="lite.preview">Lite development screens with sample data. Interface language may vary by screen.</figcaption>
+    </figure>
+    <ul class="lite-benefits">
         <li class="lite-benefit">
-          <h2><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 1 1 8 0v4"/></svg><span data-i18n="lite.privacy_title">Privacy</span></h2>
-          <p data-i18n="lite.privacy_copy">With a local model, prompts are processed on your machine.</p>
+          <h2><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 1 1 8 0v4"/></svg><span data-i18n="lite.privacy_title">Privacy</span></h2>
+          <p data-i18n="lite.privacy_copy">Review and approve a new external destination before sending prompts to it.</p>
         </li>
         <li class="lite-benefit">
-          <h2><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-3.5 7-9V5l-7-3-7 3v8c0 5.5 7 9 7 9Z"/><path d="m9 12 2 2 4-4"/></svg><span data-i18n="lite.sovereignty_title">Digital sovereignty</span></h2>
-          <p data-i18n="lite.sovereignty_copy">Choose where your workspace lives and which model powers it.</p>
+          <h2><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-3.5 7-9V5l-7-3-7 3v8c0 5.5 7 9 7 9Z"/><path d="m9 12 2 2 4-4"/></svg><span data-i18n="lite.sovereignty_title">Digital sovereignty</span></h2>
+          <p data-i18n="lite.sovereignty_copy">Choose the engine and where you keep your workspace.</p>
         </li>
         <li class="lite-benefit">
-          <h2><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 6-6 6 6 6m8-12 6 6-6 6"/></svg><span data-i18n="lite.source_title">Open source</span></h2>
+          <h2><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m8 6-6 6 6 6m8-12 6 6-6 6"/></svg><span data-i18n="lite.source_title">Open source</span></h2>
           <p><a href="https://github.com/generalbots/generalbots" data-i18n="lite.source_copy">Inspect the source code under the MIT license.</a></p>
         </li>
-      </ul>
+    </ul>
+  </section>
+
+  <section class="lite-wrap lite-section" id="showcase" aria-labelledby="lite-difference_title">
+    <div class="lite-manifesto">
+      <h2 id="lite-difference_title" data-i18n="lite.difference_title">You decide. You see what happens.</h2>
+      <p data-i18n="lite.difference_copy">The engine shows where data goes. Permission cards control agent actions. The conversation records the steps.</p>
     </div>
   </section>
-  <section class="lite-wrap lite-showcase" id="showcase" aria-labelledby="showcase-title">
-    <h2 id="showcase-title" data-i18n="lite.showcase_title">See how Lite works</h2>
-    <div class="lite-panels">
-      <article class="lite-panel">
-        <div class="lite-panel-visual">
-          <img class="lite-screen" src="/lite/assets/model.webp" width="764" height="485" alt="First-run assistant model selection in General Bots Lite" data-i18n="lite.model_alt" loading="lazy" decoding="async">
-        </div>
-        <div class="lite-panel-copy">
-          <h3 data-i18n="lite.model_title">Choose your model</h3>
-          <p data-i18n="lite.model_copy">Use a local model or connect a hosted provider. When you choose a hosted model, your prompts go to that provider.</p>
-        </div>
-      </article>
-      <article class="lite-panel">
-        <div class="lite-panel-visual">
-          <img class="lite-screen" src="/lite/assets/workspace.webp" width="764" height="485" alt="First-run workspace folder selection in General Bots Lite" data-i18n="lite.workspace_alt" loading="lazy" decoding="async">
-        </div>
-        <div class="lite-panel-copy">
-          <h3 data-i18n="lite.workspace_title">Pick your workspace</h3>
-          <p data-i18n="lite.workspace_copy">Choose the folder where Lite stores your conversations, files, and workspace database.</p>
-        </div>
+
+  <section class="lite-wrap lite-section" id="engines" aria-labelledby="lite-engines_title">
+    <div class="lite-section-heading">
+      <h2 id="lite-engines_title" data-i18n="lite.engines_title">Four engines. You choose where your data goes.</h2>
+      <p data-i18n="lite.engines_copy">The engine panel shows the active engine, its destination and what it can do.</p>
+    </div>
+    <div class="lite-engine-grid">
+      <figure class="lite-image-pad">
+        <a class="lite-image-open" href="/lite/assets/model.webp?view=full">
+          <img class="lite-screen" src="/lite/assets/model.webp" width="764" height="485" alt="First-run screen listing the four assistant engines" data-i18n="lite.model_alt" loading="lazy" decoding="async">
+          <svg aria-hidden="true" class="lite-image-expand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3H3v6m12-6h6v6M3 15v6h6m12-6v6h-6"/></svg>
+        </a>
+      </figure>
+      <div class="lite-engine-options">
+        <details name="lite-engines" open>
+          <summary><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/></svg><span data-i18n="lite.engine_local">On this computer</span></summary>
+          <p data-i18n="lite.engine_local_copy">A compatible local model processes prompts on your computer after setup.</p>
+        </details>
+        <details name="lite-engines">
+          <summary><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="8" rx="2"/><rect x="3" y="13" width="18" height="8" rx="2"/><path d="M7 7h.01M7 17h.01"/></svg><span data-i18n="lite.engine_server">Your own server or key</span></summary>
+          <p data-i18n="lite.engine_server_copy">Prompts go to your organization’s server or the provider you select.</p>
+        </details>
+        <details name="lite-engines">
+          <summary><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6 18a4 4 0 0 1-.3-8 6 6 0 0 1 11.6-1.4A4.8 4.8 0 0 1 18 18Z"/></svg><span data-i18n="lite.engine_free">Free hosted model</span></summary>
+          <p data-i18n="lite.engine_free_copy">Ready to try without an API key. Prompts go to an external provider.</p>
+        </details>
+        <details name="lite-engines">
+          <summary><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="8" width="16" height="12" rx="3"/><path d="M12 8V4m-1 0h2M9 14h.01M15 14h.01M2 12v4m20-4v4"/></svg><span data-i18n="lite.engine_subscription">Subscription agent</span></summary>
+          <p data-i18n="lite.engine_subscription_copy">The agent works in an isolated workspace on your computer, while prompts go to the subscription provider.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="lite-wrap lite-section" id="agent" aria-labelledby="lite-agent_title">
+    <div class="lite-section-heading">
+      <h2 id="lite-agent_title" data-i18n="lite.agent_title">The agent asks before it acts.</h2>
+      <p data-i18n="lite.agent_copy">Agent mode works inside an isolated virtual machine. Allow a single action, grant access within the conversation, or deny it. You can revoke access, and actions outside the virtual machine require separate approval.</p>
+    </div>
+    <div class="lite-agent-grid">
+      <figure class="lite-image-pad">
+        <a class="lite-image-open" href="/lite/assets/agent-permission.webp?view=full">
+          <img class="lite-screen" src="/lite/assets/agent-permission.webp" width="828" height="480" alt="General Bots Lite conversation showing an agent permission card with sample data" data-i18n="lite.agent_alt" loading="lazy" decoding="async">
+          <svg aria-hidden="true" class="lite-image-expand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3H3v6m12-6h6v6M3 15v6h6m12-6v6h-6"/></svg>
+        </a>
+      </figure>
+      <article class="lite-trace">
+        <h3 data-i18n="lite.trace_title">Follow the work in the conversation.</h3>
+        <ul>
+          <li>
+            <span class="lite-trace-icon"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4 4"/></svg></span>
+            <div><strong data-i18n="lite.trace_search">Web search</strong><p data-i18n="lite.trace_search_copy">See the query and the sources consulted.</p></div>
+          </li>
+          <li>
+            <span class="lite-trace-icon"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h8l4 4v14H6zM14 3v5h4M9 12h6m-6 4h6"/></svg></span>
+            <div><strong data-i18n="lite.trace_read">Page read</strong><p data-i18n="lite.trace_read_copy">See which page the assistant opened.</p></div>
+          </li>
+          <li>
+            <span class="lite-trace-icon"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="m7 9 3 3-3 3m6 0h4"/></svg></span>
+            <div><strong data-i18n="lite.trace_command">Program ran</strong><p data-i18n="lite.trace_command_copy">See the command, exit status and generated files.</p></div>
+          </li>
+          <li>
+            <span class="lite-trace-icon"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4h12v16l-6-4-6 4z"/></svg></span>
+            <div><strong data-i18n="lite.trace_memory">Memory saved</strong><p data-i18n="lite.trace_memory_copy">Review the item and undo the save.</p></div>
+          </li>
+        </ul>
       </article>
     </div>
   </section>
+
+  <section class="lite-wrap lite-section" id="workflows" aria-labelledby="lite-work_title">
+    <div class="lite-section-heading">
+      <h2 id="lite-work_title" data-i18n="lite.work_title">From a question to a file you can use.</h2>
+
+    </div>
+    <div class="lite-work-top">
+      <article class="lite-card lite-card--files">
+        <figure class="lite-image-pad lite-artifact-pad">
+          <a class="lite-image-open" href="/lite/assets/artifact.webp?view=full">
+            <img class="lite-screen" src="/lite/assets/artifact.webp" width="828" height="460" alt="General Bots Lite conversation showing generated Word and Excel files" data-i18n="lite.artifact_alt" loading="lazy" decoding="async">
+            <svg aria-hidden="true" class="lite-image-expand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3H3v6m12-6h6v6M3 15v6h6m12-6v6h-6"/></svg>
+          </a>
+        </figure>
+        <div class="lite-files-copy">
+          <h3 data-i18n="lite.files_title">Create Word, Excel and PDF files</h3>
+          <p data-i18n="lite.files_copy">A compatible agent engine can generate documents and spreadsheets with formulas and charts in the virtual machine. Download the result from the conversation or save it to Drive with permission.</p>
+          <ul class="lite-formats"><li>DOCX</li><li>XLSX</li><li>PDF</li></ul>
+        </div>
+      </article>
+      <div class="lite-work-start">
+      <article class="lite-card">
+        <span class="lite-card-icon"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h8l4 4v14H6zM14 3v5h4M9 12h6m-6 4h6"/></svg></span>
+        <h3 data-i18n="lite.documents_title">Read the documents you already have</h3>
+        <p data-i18n="lite.documents_copy">Attach PDF, Word, spreadsheets or images, paste long text, or share a web address. On-device text recognition can read scans. Photo descriptions depend on the model.</p>
+      </article>
+      <article class="lite-card">
+        <span class="lite-card-icon"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4 4"/></svg></span>
+        <h3 data-i18n="lite.research_title">Research with sources</h3>
+        <p data-i18n="lite.research_copy">For questions about current facts, Lite can search the web and cite the sites it used.</p>
+      </article>
+      </div>
+    </div>
+    <div class="lite-work-grid">
+      <article class="lite-card">
+        <span class="lite-card-icon"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v13h-9l-5 4v-4H4zM8 9h8m-8 4h6"/></svg></span>
+        <h3 data-i18n="lite.chat_title">Work in a full chat interface</h3>
+        <p data-i18n="lite.chat_copy">Follow answers as they appear. Stop, regenerate or edit a prompt, search previous chats, or export a conversation to Markdown or PDF.</p>
+      </article>
+      <article class="lite-card">
+        <span class="lite-card-icon"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4h12v16l-6-4-6 4z"/></svg></span>
+        <h3 data-i18n="lite.memory_title">Manage what Lite remembers</h3>
+        <p data-i18n="lite.memory_copy">Review, edit or delete saved memories in Settings. Memory is encrypted, kept separately for each person and can be turned off.</p>
+      </article>
+      <article class="lite-card">
+        <span class="lite-card-icon"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h7l2 2h9v12H3z"/></svg></span>
+        <h3 data-i18n="lite.drive_title">Find your work in Drive</h3>
+        <p data-i18n="lite.drive_copy">Upload files, use them in chat and find the files saved from each conversation under My files › Conversations.</p>
+      </article>
+      <article class="lite-card">
+        <span class="lite-card-icon"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h16M4 17h16"/><circle cx="8" cy="7" r="2" fill="currentColor"/><circle cx="16" cy="12" r="2" fill="currentColor"/><circle cx="10" cy="17" r="2" fill="currentColor"/></svg></span>
+        <h3 data-i18n="lite.subscription_title">Use your team’s subscriptions</h3>
+        <p data-i18n="lite.subscription_copy">Connect subscriptions you already use and check plan limits in Settings › Limits.</p>
+      </article>
+      <article class="lite-card">
+        <span class="lite-card-icon"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-3.5 7-9V5l-7-3-7 3v8c0 5.5 7 9 7 9Z"/><path d="m9 12 2 2 4-4"/></svg></span>
+        <h3 data-i18n="lite.install_title">Set up for public-sector use</h3>
+        <p data-i18n="lite.install_copy">Set a local administrator password during setup. Bundled installer components can be checked for integrity with SHA-256 and installed offline.</p>
+      </article>
+      <article class="lite-card">
+        <span class="lite-card-icon"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a9 9 0 1 0 0 18h1a2 2 0 0 0 1.4-3.4 1.2 1.2 0 0 1 .8-2H17a4 4 0 0 0 4-4c0-4.8-4.2-8.6-9-8.6Z"/><path d="M7 11h.01M10 7h.01m5 0h.01M18 11h.01"/></svg></span>
+        <h3 data-i18n="lite.access_title">Make the app yours</h3>
+        <p data-i18n="lite.access_copy">Choose the accent, light or dark theme, text size and zoom. Navigate with a keyboard or screen reader.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="lite-wrap lite-section" id="how-it-works" aria-labelledby="lite-how_title">
+    <div class="lite-section-heading">
+      <h2 id="lite-how_title" data-i18n="lite.how_title">From installation to your first task.</h2>
+
+    </div>
+    <div class="lite-setup-grid">
+      <ol class="lite-steps">
+        <li><div><h3 data-i18n="lite.step_install">Install</h3><p data-i18n="lite.step_install_copy">The Windows setup wizard checks your computer and lets you choose a workspace folder.</p></div></li>
+        <li><div><h3 data-i18n="lite.step_engine">Choose an engine</h3><p data-i18n="lite.step_engine_copy">Start with the free hosted model and change it later in Settings.</p></div></li>
+        <li><div><h3 data-i18n="lite.step_chat">Start a conversation</h3><p data-i18n="lite.step_chat_copy">Ask a question, attach a document or paste a link.</p></div></li>
+        <li><div><h3 data-i18n="lite.step_agent">Turn on the agent when needed</h3><p data-i18n="lite.step_agent_copy">Approve actions as the agent works in the isolated virtual machine.</p></div></li>
+      </ol>
+      <figure class="lite-image-pad">
+        <a class="lite-image-open" href="/lite/assets/workspace.webp?view=full">
+          <img class="lite-screen" src="/lite/assets/workspace.webp" width="764" height="485" alt="First-run screen for choosing the workspace folder" data-i18n="lite.workspace_alt" loading="lazy" decoding="async">
+          <svg aria-hidden="true" class="lite-image-expand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3H3v6m12-6h6v6M3 15v6h6m12-6v6h-6"/></svg>
+        </a>
+      </figure>
+    </div>
+  </section>
+
+  <section class="lite-wrap lite-section" id="compare" aria-labelledby="lite-compare_title">
+    <div class="lite-section-heading">
+      <h2 id="lite-compare_title" data-i18n="lite.compare_title">What you control with Lite</h2>
+
+    </div>
+    <div class="lite-compare">
+      <table aria-labelledby="lite-compare_title">
+        <thead>
+          <tr>
+            <td aria-hidden="true"></td>
+            <th scope="col" data-i18n="lite.compare_web">Typical web assistants</th>
+            <th scope="col" data-i18n="lite.compare_lite">General Bots Lite</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row" data-i18n="lite.compare_runs">Where the app runs</th>
+            <td data-i18n="lite.compare_runs_web">Hosted by the provider</td>
+            <td data-i18n="lite.compare_runs_lite">On your Windows computer</td>
+          </tr>
+          <tr>
+            <th scope="row" data-i18n="lite.compare_data">Where prompts go</th>
+            <td data-i18n="lite.compare_data_web">To the service you use</td>
+            <td data-i18n="lite.compare_data_lite">To the engine you choose, including a local model</td>
+          </tr>
+          <tr>
+            <th scope="row" data-i18n="lite.compare_approval">Agent approval controls</th>
+            <td data-i18n="lite.compare_approval_web">Varies by service</td>
+            <td data-i18n="lite.compare_approval_lite">Permission cards and a visible action history</td>
+          </tr>
+          <tr>
+            <th scope="row" data-i18n="lite.compare_code">Source code access</th>
+            <td data-i18n="lite.compare_code_web">Varies by service</td>
+            <td data-i18n="lite.compare_code_lite">Available under the MIT license</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
   <section class="lite-wrap lite-faq" aria-labelledby="lite-faq-title">
-    <h2 id="lite-faq-title" data-i18n="lite.faq_title">A few things to know</h2>
+    <h2 id="lite-faq-title" data-i18n="lite.faq_title">Frequently asked questions</h2>
     <div>
       <details>
-        <summary data-i18n="lite.offline_q">Can I use it offline?</summary>
-        <p data-i18n="lite.offline_a">Once a local model and the required components are installed, local inference can run offline. Hosted models and connected services require a connection.</p>
+        <summary data-i18n="lite.offline_q">Do I need an internet connection?</summary>
+        <p data-i18n="lite.offline_a">Once a compatible local model and its components are set up, local inference can run offline. Hosted engines and web research need a connection.</p>
       </details>
       <details>
-        <summary data-i18n="lite.data_q">Where is my workspace stored?</summary>
-        <p data-i18n="lite.data_a">Lite stores your workspace files and database on your computer, in the folder you choose during setup.</p>
+        <summary data-i18n="lite.data_q">Is my data used to train a model?</summary>
+        <p data-i18n="lite.data_a">With a local model, inference uses prompts on your computer. For an external engine, the provider’s policy applies. Lite shows the engine’s destination before you send data.</p>
+      </details>
+      <details>
+        <summary data-i18n="lite.approval_q">Can the agent change something without my knowledge?</summary>
+        <p data-i18n="lite.approval_a">The agent operates in an isolated virtual machine. Permission cards control its actions, and the conversation shows the steps it takes.</p>
+      </details>
+      <details>
+        <summary data-i18n="lite.compatibility_q">Which computers are supported?</summary>
+        <p data-i18n="lite.compatibility_a">This edition targets Windows 11. Agent mode uses WSL2. Check the setup wizard for local-model hardware requirements.</p>
+      </details>
+      <details>
+        <summary data-i18n="lite.price_q">How much does it cost?</summary>
+        <p data-i18n="lite.price_a">The application is free and MIT-licensed. Hosted engines and subscriptions follow the provider’s pricing and terms.</p>
       </details>
     </div>
   </section>
-  <section class="lite-wrap lite-end" aria-labelledby="lite-end-title">
+
+  <section class="lite-wrap lite-end" id="windows" aria-labelledby="lite-end-title">
     <div class="lite-end-inner">
-      <h2 id="lite-end-title" data-i18n="lite.cta_title">Make it your workspace.</h2>
+      <h2 id="lite-end-title" data-i18n="lite.cta_title">An AI assistant that answers to you.</h2>
+      <p data-i18n="lite.cta_copy">The current General Bots desktop downloads include Windows builds. The screenshots above preview the Lite edition for the public sector.</p>
       <div class="lite-actions">
-        <a class="lite-button lite-button--primary" href="/downloads/" data-i18n="lite.downloads">View desktop downloads</a>
-        <a class="lite-button" href="https://docs.generalbots.org/01-getting-started/installation.html" data-i18n="lite.docs">Read the documentation</a>
+        <a class="lite-button lite-button--primary" href="/downloads/#tiles"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m-4-4 4 4 4-4M5 17v4h14v-4"/></svg><span data-i18n="lite.downloads">Windows downloads</span></a>
+        <a class="lite-button" href="https://docs.generalbots.org/01-getting-started/installation.html" data-i18n="lite.docs">Read the installation guide</a>
       </div>
     </div>
   </section>
