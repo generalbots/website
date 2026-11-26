@@ -71,43 +71,57 @@ footer a:hover{color:#fff}
 <p>The twin can simulate &quot;what-if&quot; scenarios against current state data, projecting future outcomes and identifying potential failure modes before they manifest physically.</p>
 <h3>Autonomous Action</h3>
 <p>The twin can execute actions in the physical world — sending commands, updating settings, triggering workflows — based on its analysis of current and projected states.</p>
+</section>
 <section class="block"><h2><span class="num">02</span>The Orchestration Delta</h2>
 <p>In the General Bots ecosystem, a digital twin is defined by its didactic precision . Unlike generic chatbots, a twin ingests your specific business logic — programmed in BASIC or defined in Word templates — and operates as a 24/7 replica of your professional presence. This twin handles initial triage, manages scheduling, and responds to technical queries with the exact tone and authority of the original entity.</p><p>The orchestration delta is the gap between a passive data feed and an active digital replica. Crossing that delta requires three architectural layers:</p>
+</section>
 <section class="block"><h2><span class="num">03</span>Three Tiers of Implementation</h2>
 <h3>Tier 1: Preference Mapping</h3>
 <p>Before a digital twin can act, it must know who it is. Preference mapping defines the core delta of the twin&#x27;s personality, expertise boundaries, and heuristic rules. In General Bots, this is accomplished through a combination of:</p>
-<ul><li>BASIC orchestration scripts that encode decision logic and business rules.</li></ul>
-<ul><li>Word document templates that define communication style, tone, and formatting preferences.</li></ul>
-<ul><li>Configuration files that specify the twin&#x27;s scope of authority — what it can decide autonomously and what requires human escalation.</li></ul>
+<ul>
+<li>BASIC orchestration scripts that encode decision logic and business rules.</li>
+<li>Word document templates that define communication style, tone, and formatting preferences.</li>
+<li>Configuration files that specify the twin&#x27;s scope of authority — what it can decide autonomously and what requires human escalation.</li>
+</ul>
 <blockquote>&quot;A digital twin without preference mapping is just a chatbot with good data access. The preferences are what give the twin its character, its judgment, and its trustworthiness.&quot;</blockquote>
 <p>&quot;A digital twin without preference mapping is just a chatbot with good data access. The preferences are what give the twin its character, its judgment, and its trustworthiness.&quot;</p>
 <h3>Tier 2: Real-Time Ingestion</h3>
 <p>The twin must be connected to live data streams for constant state synchronization. General Bots supports ingestion from a wide range of sources:</p>
 <h3>Communication Channels</h3>
-<ul><li>Email (IMAP/SMTP connectors)</li></ul>
-<ul><li>WhatsApp and Telegram APIs</li></ul>
-<ul><li>Slack and MS Teams</li></ul>
-<ul><li>Custom webhook endpoints</li></ul>
+<ul>
+<li>Email (IMAP/SMTP connectors)</li>
+<li>WhatsApp and Telegram APIs</li>
+<li>Slack and MS Teams</li>
+<li>Custom webhook endpoints</li>
+</ul>
 <h3>Data Sources</h3>
-<ul><li>IoT sensor networks (MQTT, OPC-UA)</li></ul>
-<ul><li>ERP and CRM databases</li></ul>
-<ul><li>SCADA and manufacturing systems</li></ul>
-<ul><li>Public API feeds (weather, market data, traffic)</li></ul>
+<ul>
+<li>IoT sensor networks (MQTT, OPC-UA)</li>
+<li>ERP and CRM databases</li>
+<li>SCADA and manufacturing systems</li>
+<li>Public API feeds (weather, market data, traffic)</li>
+</ul>
 <p>The ingestion layer processes incoming data through a pipeline: raw data is parsed, validated against the twin&#x27;s schemas, enriched with context from the knowledge base, and presented to the orchestration engine for action determination.</p>
 <h3>Tier 3: Autonomous Orchestration</h3>
 <p>The highest tier grants the twin the authority to act — executing API calls, updating system states, and initiating workflows based on defined logic. In General Bots, autonomous orchestration is governed by BASIC scripts that encode the twin&#x27;s decision matrix:</p>
-<ul><li>Threshold-based triggers: &quot;IF temperature &gt; 85 THEN GOSUB ActivateCooling&quot;</li></ul>
-<ul><li>Schedule-based actions: &quot;IF time = &quot;08:00&quot; AND day = &quot;MONDAY&quot; THEN GOSUB GenerateReport&quot;</li></ul>
-<ul><li>Event-driven responses: &quot;IF status = &quot;ERROR&quot; THEN GOSUB NotifyMaintenance&quot;</li></ul>
-<ul><li>Predictive interventions: &quot;IF forecast.maintenance_probability &gt; 0.8 THEN GOSUB ScheduleInspection&quot;</li></ul>
+<ul>
+<li>Threshold-based triggers: &quot;IF temperature &gt; 85 THEN GOSUB ActivateCooling&quot;</li>
+<li>Schedule-based actions: &quot;IF time = &quot;08:00&quot; AND day = &quot;MONDAY&quot; THEN GOSUB GenerateReport&quot;</li>
+<li>Event-driven responses: &quot;IF status = &quot;ERROR&quot; THEN GOSUB NotifyMaintenance&quot;</li>
+<li>Predictive interventions: &quot;IF forecast.maintenance_probability &gt; 0.8 THEN GOSUB ScheduleInspection&quot;</li>
+</ul>
 <p>AUTONOMY IS A SPECTRUM: Not every twin needs full autonomy. General Bots allows you to configure each twin&#x27;s authority level — from &quot;suggest only&quot; (recommends actions to human operators) through &quot;supervised autonomy&quot; (acts but notifies) to &quot;full autonomy&quot; (acts independently within defined bounds).</p>
+</section>
 <section class="block"><h2><span class="num">04</span>Industrial Application: Predictive Maintenance</h2>
 <p>Consider a manufacturing plant with hundreds of machines, each generating continuous telemetry data. A traditional approach requires a team of data scientists to build custom models for each machine type. The General Bots approach collapses this complexity:</p>
-<ul><li>Create a digital twin for each machine or machine type using a BASIC template.</li></ul>
-<ul><li>Connect the twin to the machine&#x27;s telemetry stream via MQTT or OPC-UA connector.</li></ul>
-<ul><li>Define failure signatures in the twin&#x27;s preference mapping — vibration patterns, temperature thresholds, power consumption anomalies.</li></ul>
-<ul><li>Configure autonomous responses — when a signature is detected, the twin creates a work order, notifies maintenance, and adjusts production scheduling.</li></ul>
+<ul>
+<li>Create a digital twin for each machine or machine type using a BASIC template.</li>
+<li>Connect the twin to the machine&#x27;s telemetry stream via MQTT or OPC-UA connector.</li>
+<li>Define failure signatures in the twin&#x27;s preference mapping — vibration patterns, temperature thresholds, power consumption anomalies.</li>
+<li>Configure autonomous responses — when a signature is detected, the twin creates a work order, notifies maintenance, and adjusts production scheduling.</li>
+</ul>
 <p>The result is a self-maintaining manufacturing floor where every machine has a digital counterpart watching over it 24/7, predicting failures before they happen, and orchestrating responses without human intervention.</p>
+</section>
 <section class="block"><h2><span class="num">05</span>Beyond Manufacturing: The Universal Pattern</h2>
 <p>While manufacturing is the most intuitive application, the digital twin pattern applies across every industry:</p>
 <h3>Logistics</h3>
@@ -116,13 +130,17 @@ footer a:hover{color:#fff}
 <p>A digital twin of a patient&#x27;s treatment plan ingests lab results, medication adherence data, and symptom reports — then recommends adjustments to the care team and alerts for potential adverse events.</p>
 <h3>Energy</h3>
 <p>A digital twin of a power grid ingests generation data, weather forecasts, and consumption patterns — then optimizes load distribution, predicts maintenance needs, and manages renewable energy integration.</p>
+</section>
 <section class="block"><h2><span class="num">06</span>The Didactic Advantage</h2>
 <p>What sets General Bots digital twins apart is the didactic layer . Traditional digital twins require specialized simulation engineers to build and maintain complex models. General Bots collapses this stack by allowing floor managers, operations leads, and domain experts to update twin behavior via standard documents and simple BASIC scripts. The person who knows the machine best — the operator who works with it every day — can teach the twin without writing a line of traditional code.</p>
+</section>
 <section class="block"><h2><span class="num">07</span>Conclusion</h2>
 <p>The transition from a passive dashboard to an active digital twin marks the maturity of an organization&#x27;s AI strategy. It is the move from observing the data to orchestrating it. With General Bots, digital twins are no longer the exclusive domain of aerospace engineers and data scientists — they are practical tools for every enterprise that wants its systems to run themselves.</p>
+</section>
 <section class="block"><h2><span class="num">08</span>Build Your Digital Twin</h2>
 <p>Your systems already generate the data. Your teams already understand the logic. Now give them a digital replica that works as hard as they do. Start building with General Bots.</p>
-</section></div>
+</section>
+</div>
 <div class="cta"><p data-i18n="common.back_to_blog">Voltar para todos os artigos.</p>
 <a class="btn" href="/blog/" data-i18n="common.back_to_blog">← Blog</a></div>
 <footer>

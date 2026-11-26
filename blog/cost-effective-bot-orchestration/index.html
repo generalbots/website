@@ -72,40 +72,55 @@ footer a:hover{color:#fff}
 <p>Intent Classification</p><p>Traditional ML models for routing and triage. No LLM needed.</p>
 <h3>Tier 4 Generative</h3>
 <p>Full LLM</p><p>Only for high-level reasoning, nuance, and creative synthesis.</p>
+</section>
 <section class="block"><h2><span class="num">02</span>Tier 1: Deterministic Matching (The Zero-Token Layer)</h2>
 <p>The most efficient interaction is the one that never leaves your infrastructure. General Bots utilizes high-speed string matching and regex logic defined in your orchestration files to handle predictable queries. If a user asks a common FAQ, the system returns a localized response in milliseconds with zero external API cost.</p><p>This layer handles the Pareto majority of enterprise interactions: password reset procedures, holiday schedules, shipping status lookups, and policy clarifications. These queries follow predictable patterns that are easily captured in deterministic rules. There is no need to invoke a multi-billion parameter neural network to answer &quot;What time does the cafeteria close?&quot;</p>
 <blockquote>&quot;The most expensive AI interaction is the one that didn&#x27;t need to happen at all. Tier 1 eliminates 40-60% of total query volume before any generative cost is incurred.&quot;</blockquote>
 <p>&quot;The most expensive AI interaction is the one that didn&#x27;t need to happen at all. Tier 1 eliminates 40-60% of total query volume before any generative cost is incurred.&quot;</p>
+</section>
 <section class="block"><h2><span class="num">03</span>Tier 2: Vector &amp; Semantic Search (RAG-Local)</h2>
 <p>When deterministic matching fails, the system pivots to local semantic search. By utilizing on-premise vector embeddings or Elasticsearch-style indexing, General Bots identifies the most relevant didactic content from your knowledge base. This allows for flexible query matching — handling synonyms, paraphrasing, and partial matches — without the overhead of generative generation.</p><p>The critical advantage of Tier 2 is that it operates entirely within your infrastructure. The embedding model runs locally or on a dedicated server. The vector database stores your data. No data leaves your network. For regulated industries with strict data residency requirements, this is not just a cost optimization — it is a compliance necessity.</p>
+</section>
 <section class="block"><h2><span class="num">04</span>Tier 3: Traditional NLP &amp; Rule-Based Routing</h2>
 <p>For complex logic that requires intent classification but not creative reasoning, we employ traditional NLP models. These models run locally or via low-cost specialized endpoints, mapping user intent to specific BASIC tools. This tier handles form-filling, triage, and routing with surgical precision.</p><p>Tier 3 is the unsung hero of the cost optimization stack. Traditional NLP models — even sophisticated ones — cost orders of magnitude less per inference than LLMs. A well-tuned intent classifier can achieve 95%+ accuracy on domain-specific routing tasks for pennies per thousand inferences.</p>
 <h3>When to Use Tier 3</h3>
-<ul><li>User wants to enroll in a course (intent: ENROLLMENT)</li></ul>
-<ul><li>User wants to check order status (intent: ORDER_STATUS)</li></ul>
-<ul><li>User wants to file a complaint (intent: COMPLAINT)</li></ul>
-<ul><li>User wants to speak to a human (intent: ESCALATION)</li></ul>
+<ul>
+<li>User wants to enroll in a course (intent: ENROLLMENT)</li>
+<li>User wants to check order status (intent: ORDER_STATUS)</li>
+<li>User wants to file a complaint (intent: COMPLAINT)</li>
+<li>User wants to speak to a human (intent: ESCALATION)</li>
+</ul>
 <h3>When to Use Tier 4</h3>
-<ul><li>User asks for a detailed analysis of a complex situation</li></ul>
-<ul><li>User requests creative content generation</li></ul>
-<ul><li>User presents an ambiguous or novel problem</li></ul>
-<ul><li>User engages in complex multi-turn negotiation</li></ul>
+<ul>
+<li>User asks for a detailed analysis of a complex situation</li>
+<li>User requests creative content generation</li>
+<li>User presents an ambiguous or novel problem</li>
+<li>User engages in complex multi-turn negotiation</li>
+</ul>
+</section>
 <section class="block"><h2><span class="num">05</span>Tier 4: Generative Orchestration (The Intelligent Peak)</h2>
 <p>The LLM is only invoked when high-level reasoning, nuance, or creative synthesis is required. By filtering the conversational noise through the first three tiers, we ensure that your LLM token budget is reserved for interactions that provide the highest business value. Tier 4 typically handles 10-20% of total query volume but consumes 80-90% of the AI budget — which is exactly where you want it.</p>
+</section>
 <section class="block"><h2><span class="num">06</span>The Cost Breakdown</h2>
 <p>Here is a realistic cost projection for a mid-size enterprise processing 100,000 interactions per month:</p><p>Total: $405/month — compared to $3,000/month for a naive all-generative approach. That is an 86% reduction in operational AI costs.</p><p>OWNERSHIP OF THE ORCHESTRATION LAYER IS OWNERSHIP OF YOUR MARGINS. General Bots provides the didactic tools to build a sustainable, AI-first organization. The hybrid architecture is not a compromise — it is the only economically viable path to enterprise-scale AI deployment.</p>
+</section>
 <section class="block"><h2><span class="num">07</span>Implementation Strategy</h2>
 <p>Transitioning to a hybrid orchestration model does not require a complete overhaul of your existing AI infrastructure. General Bots is designed as a drop-in orchestration layer that sits between your users and your AI backend:</p>
-<ul><li>Audit your current interactions. Classify each query type by complexity and predictability.</li></ul>
-<ul><li>Define your deterministic rules. Start with the most common FAQ patterns. Capture them in BASIC orchestration files.</li></ul>
-<ul><li>Deploy local embeddings. Use your existing knowledge base as the source for Tier 2 semantic search.</li></ul>
-<ul><li>Train intent classifiers. For unambiguous routing tasks, deploy traditional NLP models.</li></ul>
-<ul><li>Route the remainder to LLM. Only the most complex interactions reach the generative tier.</li></ul>
+<ul>
+<li>Audit your current interactions. Classify each query type by complexity and predictability.</li>
+<li>Define your deterministic rules. Start with the most common FAQ patterns. Capture them in BASIC orchestration files.</li>
+<li>Deploy local embeddings. Use your existing knowledge base as the source for Tier 2 semantic search.</li>
+<li>Train intent classifiers. For unambiguous routing tasks, deploy traditional NLP models.</li>
+<li>Route the remainder to LLM. Only the most complex interactions reach the generative tier.</li>
+</ul>
+</section>
 <section class="block"><h2><span class="num">08</span>Conclusion</h2>
 <p>The hybrid orchestration model is not a theoretical ideal — it is a practical necessity. Organizations that deploy AI at scale without a tiered cost strategy will find their AI budgets growing exponentially with user adoption. General Bots provides the architectural foundation for sustainable AI deployment, combining the intelligence of LLMs with the efficiency of deterministic systems.</p><p>Cost-effective AI is not about using cheaper models. It is about not using expensive models for cheap problems.</p>
+</section>
 <section class="block"><h2><span class="num">09</span>Reduce AI Costs</h2>
 <p>Stop burning your budget on every interaction. Deploy a hybrid orchestration strategy with General Bots and reduce your AI operational costs by up to 80%.</p>
-</section></div>
+</section>
+</div>
 <div class="cta"><p data-i18n="common.back_to_blog">Voltar para todos os artigos.</p>
 <a class="btn" href="/blog/" data-i18n="common.back_to_blog">← Blog</a></div>
 <footer>

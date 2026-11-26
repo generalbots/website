@@ -65,11 +65,14 @@ footer a:hover{color:#fff}
 <p>Originally published on pragmatismo.com.br</p><p>For two decades, REST APIs have been the backbone of system integration. They were designed for human developers who read documentation, construct cURL commands, and map JSON responses to application logic. But the agentic era demands a different contract—one built for machine agents that discover, negotiate, and invoke capabilities autonomously.</p><p>Enter the Model Context Protocol (MCP): an open standard that replaces the static API surface with a didactic, self-describing interface purpose-built for LLM-driven orchestration. In the General Bots ecosystem, MCP is not merely supported—it is the fundamental bridge between natural language intent and actionable system execution.</p>
 <section class="block"><h2><span class="num">01</span>The Contextual Deficit of REST</h2>
 <p>Traditional REST APIs suffer from what we call a contextual deficit . An LLM attempting to consume a REST endpoint must:</p>
-<ul><li>Understand the schema from static documentation (OpenAPI/Swagger)</li></ul>
-<ul><li>Map natural language parameters to rigid JSON structures</li></ul>
-<ul><li>Handle authentication tokens and session management</li></ul>
-<ul><li>Parse error responses and decide on recovery strategies</li></ul>
+<ul>
+<li>Understand the schema from static documentation (OpenAPI/Swagger)</li>
+<li>Map natural language parameters to rigid JSON structures</li>
+<li>Handle authentication tokens and session management</li>
+<li>Parse error responses and decide on recovery strategies</li>
+</ul>
 <p>Every edge case, undocumented response, or ambiguous field introduces failure modes that break the agentic loop. The LLM is forced to guess—and guessing leads to hallucinations, retries, and ultimately, unreliable automation.</p>
+</section>
 <section class="block"><h2><span class="num">02</span>The MCP Difference: Didactic Interfaces for Agents</h2>
 <p>MCP inverts the traditional API paradigm. Instead of documentation written for humans, MCP provides a standardized schema that agents can read and reason about . The protocol defines:</p>
 <h3>Tool Discovery</h3>
@@ -78,11 +81,14 @@ footer a:hover{color:#fff}
 <p>The LLM and tool server negotiate parameter values through structured conversation rather than fixed schemas.</p>
 <h3>Unified Error Handling</h3>
 <p>Errors are communicated within the same protocol, allowing the agent to adapt and retry intelligently.</p>
+</section>
 <section class="block"><h2><span class="num">03</span>General Bots: BASIC as the MCP Server</h2>
 <p>We have integrated MCP directly into the General Bots orchestration core. A developer writes a simple BASIC script and implicitly defines not just the business logic, but the didactic parameters the LLM needs to understand and invoke that logic. This transforms a BASIC script into a fully MCP-compliant tool that any model—Claude, GPT, Gemini, Llama—can discover and use without additional prompt engineering.</p>
+</section>
 <section class="block"><h2><span class="num">04</span>The Case for Open Standards</h2>
 <p>Proprietary &quot;function calling&quot; ecosystems create dangerous silos. Each vendor defines its own contract format, authentication mechanism, and tool-discovery protocol. Migrating between providers requires rewriting integration layers from scratch.</p>
 <blockquote>&quot;By decoupling tool definition from model provider, MCP ensures organizations maintain sovereignty over their technical assets—regardless of which frontier model powers their agent.&quot;</blockquote>
+</section>
 <section class="block"><h2><span class="num">05</span>Architecture: How MCP Fits the Enterprise Stack</h2>
 <p>An MCP-compatible architecture in the General Bots ecosystem consists of three layers:</p>
 <h3>Agent Layer</h3>
@@ -91,17 +97,21 @@ footer a:hover{color:#fff}
 <p>General Bots hosts the MCP server, routing tool requests to BASIC scripts that implement the actual business logic.</p>
 <h3>Execution Layer</h3>
 <p>BASIC scripts execute deterministic operations—database queries, API calls, file transformations—and return structured results to the agent.</p>
+</section>
 <section class="block"><h2><span class="num">06</span>Why This Matters Now</h2>
 <p>The timing of MCP adoption is critical. As enterprises move from experimental chatbots to production agentic systems, the integration surface area explodes. Each new tool, data source, or workflow must be made accessible to the AI layer. Without a standardized protocol like MCP, organizations face an unsustainable burden of custom integration code.</p><p>MCP is the HTTP of the agentic age —a universal protocol that every tool speaks, every agent understands, and every system can rely on. The era of manual API mapping is ending. The future belongs to autonomous discovery.</p>
+</section>
 <section class="block"><h2><span class="num">07</span>Migration Path: REST to MCP</h2>
 <p>Transitioning existing REST APIs to MCP does not require rewriting your backend. General Bots provides adapters that wrap existing endpoints as MCP-compliant tools:</p>
 <h3>Wrap Existing Endpoints</h3>
 <p>Use the General Bots MCP adapter layer to expose any REST API as an MCP tool without modifying the upstream service. Define the didactic parameters in a BASIC configuration script.</p>
 <h3>Build Native MCP Tools</h3>
 <p>For new capabilities, write BASIC scripts that register as MCP tools directly. The script defines the tool name, parameter schema, and execution logic in a single file.</p>
+</section>
 <section class="block"><h2><span class="num">08</span>Adopt MCP for Your Organization</h2>
 <p>Future-proof your agentic infrastructure with the open standard for AI tool integration. General Bots makes MCP deployment seamless.</p><p>Our team will help you map your existing APIs to MCP-compliant tools in days, not months.</p>
-</section></div>
+</section>
+</div>
 <div class="cta"><p data-i18n="common.back_to_blog">Voltar para todos os artigos.</p>
 <a class="btn" href="/blog/" data-i18n="common.back_to_blog">← Blog</a></div>
 <footer>

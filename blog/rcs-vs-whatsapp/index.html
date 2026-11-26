@@ -64,16 +64,22 @@ footer a:hover{color:#fff}
 <div class="content">
 <p>A technical comparison of enterprise messaging protocols—and why the right answer is both</p><p>Originally published on pragmatismo.com.br</p>
 <section class="block"><h2><span class="num">01</span>The Contenders</h2>
+</section>
 <section class="block"><h2><span class="num">02</span>RCS: The Native Advantage</h2>
 <p>RCS is the didactic successor to SMS. It is carrier-backed and native to the OS on both Android and iOS. This means zero-install reach —no app downloads, no account creation friction, no opt-in barrier. For customer engagement, RCS represents the ultimate direct-to-consumer channel. It supports rich cards, product carousels, suggested replies, and deterministic button-driven flows without the gatekeeping of a third-party app store.</p>
+</section>
 <section class="block"><h2><span class="num">03</span>The Zero-Install Advantage</h2>
 <p>Consider the customer journey for a parcel delivery notification:</p>
-<ul><li>SMS: &quot;Your package will arrive tomorrow.&quot; No interaction, no tracking link that renders well.</li></ul>
-<ul><li>WhatsApp: Requires the customer to have WhatsApp installed, opted in, and the business to be verified by Meta.</li></ul>
-<ul><li>RCS: A rich card arrives natively showing the delivery window, map, and a &quot;Reschedule&quot; button—no app, no opt-in, no barrier.</li></ul>
+<ul>
+<li>SMS: &quot;Your package will arrive tomorrow.&quot; No interaction, no tracking link that renders well.</li>
+<li>WhatsApp: Requires the customer to have WhatsApp installed, opted in, and the business to be verified by Meta.</li>
+<li>RCS: A rich card arrives natively showing the delivery window, map, and a &quot;Reschedule&quot; button—no app, no opt-in, no barrier.</li>
+</ul>
 <p>For enterprises reaching populations that are not heavy WhatsApp users—older demographics, B2B contexts, emerging markets without smartphone saturation—RCS offers reach that WhatsApp cannot match.</p>
+</section>
 <section class="block"><h2><span class="num">04</span>WhatsApp: The Interaction Sink</h2>
 <p>WhatsApp remains the dominant interaction node in many markets, particularly Latin America, Africa, and parts of Asia. Its advantage lies in interaction density: WhatsApp users spend hours per day in the app, check notifications immediately, and trust the platform for personal communication. This makes WhatsApp ideal for high-engagement use cases: customer support conversations, order customization, and consultative sales.</p><p>However, WhatsApp is a proprietary silo . Building solely on WhatsApp creates strategic dependency on Meta&#x27;s API policies, pricing changes, and platform restrictions. In 2023, Meta changed its WhatsApp Business API pricing model overnight, catching thousands of enterprises off-guard. A &quot;PC Magazine&quot; standard of resilience requires multi-channel architecture where the intelligence lives in your orchestration layer, not in the messaging app.</p>
+</section>
 <section class="block"><h2><span class="num">05</span>The General Bots Orchestration Layer</h2>
 <p>At General Bots, we treat messaging channels as transports . The orchestration engine owns the logic, and high-fidelity connectors translate that logic into the native language of each channel—RCS JSON or WhatsApp Business API—without coupling the business rules to any single provider.</p>
 <h3>Protocol Sovereignty</h3>
@@ -82,18 +88,24 @@ footer a:hover{color:#fff}
 <p>If RCS is unavailable, the system falls back to SMS or WhatsApp automatically. If WhatsApp rate-limits your account, traffic shifts to RCS without user-facing disruption.</p>
 <h3>Unified Identity</h3>
 <p>One bot, multiple terminals. The same conversation can start on WhatsApp and continue on RCS without losing context or breaking the authentication flow.</p>
+</section>
 <section class="block"><h2><span class="num">06</span>The Hybrid Future</h2>
 <p>The question is not &quot;RCS or WhatsApp.&quot; The question is: How do we orchestrate both? In the GLM 5.1 era, a resilient enterprise communication architecture:</p>
-<ul><li>Uses RCS as the primary reach channel for broadcast, alerts, and low-friction interactions</li></ul>
-<ul><li>Uses WhatsApp as the high-engagement channel for complex conversations and relationship building</li></ul>
-<ul><li>Maintains SMS as the universal fallback for the longest possible tail of device compatibility</li></ul>
-<ul><li>Orchestrates all three through a single control plane where business logic is written once and deployed everywhere</li></ul>
+<ul>
+<li>Uses RCS as the primary reach channel for broadcast, alerts, and low-friction interactions</li>
+<li>Uses WhatsApp as the high-engagement channel for complex conversations and relationship building</li>
+<li>Maintains SMS as the universal fallback for the longest possible tail of device compatibility</li>
+<li>Orchestrates all three through a single control plane where business logic is written once and deployed everywhere</li>
+</ul>
 <blockquote>&quot;By leveraging General Bots as your central intelligence hub, you ensure that your communication architecture is as resilient as it is reach-focused. Own your channels. Own your reach.&quot;</blockquote>
+</section>
 <section class="block"><h2><span class="num">07</span>Beyond Two Channels: The Universal Transport Layer</h2>
 <p>General Bots currently supports RCS, WhatsApp, Telegram, SMS, email, push notifications, and custom webhooks. Adding a new channel requires writing a single transport connector—no changes to your business logic. As the messaging landscape evolves, your architecture evolves with it.</p>
+</section>
 <section class="block"><h2><span class="num">08</span>Build a Multi-Channel Strategy</h2>
 <p>Stop betting the business on a single messaging platform. Deploy sovereign multi-channel orchestration with General Bots and own your reach.</p><p>Our team will help you design and deploy a multi-channel messaging architecture in under two weeks.</p>
-</section></div>
+</section>
+</div>
 <div class="cta"><p data-i18n="common.back_to_blog">Voltar para todos os artigos.</p>
 <a class="btn" href="/blog/" data-i18n="common.back_to_blog">← Blog</a></div>
 <footer>

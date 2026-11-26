@@ -75,14 +75,18 @@ footer a:hover{color:#fff}
 <p>Every agentic tool in General Bots begins with a didactic contract — a formal definition of what the tool does, what parameters it requires, and what side effects it produces. This contract is written in BASIC and serves as the single source of truth for both the LLM and the human operator.</p>
 <blockquote>&quot;The PARAM keyword is not just a variable declaration. It is a promise from the system to the user: &#x27;I will collect exactly this information, validate it against these rules, and use it only for this purpose.&#x27; In an era of AI opacity, that promise has sovereign value.&quot;</blockquote>
 <p>&quot;The PARAM keyword is not just a variable declaration. It is a promise from the system to the user: &#x27;I will collect exactly this information, validate it against these rules, and use it only for this purpose.&#x27; In an era of AI opacity, that promise has sovereign value.&quot;</p>
+</section>
 <section class="block"><h2><span class="num">02</span>Orchestration of the Enrollment Delta</h2>
 <p>When an LLM detects an intent — such as a student&#x27;s desire to register for a course — it invokes the corresponding BASIC script. The script then takes control of the dialog loop, ensuring that every required piece of information is collected and validated against the organization&#x27;s rules before any data is written to the persistent layer.</p><p>The enrollment delta is the gap between the user&#x27;s raw intent (&quot;I want to sign up&quot;) and the system&#x27;s formal requirements (Full Name, ID, Course Code, Payment Method). BASIC orchestrates this delta through a structured sequence:</p>
-<ul><li>Intent Detection: The LLM classifies the user&#x27;s message and maps it to a specific BASIC tool definition.</li></ul>
-<ul><li>Parameter Collection: The BASIC script drives a conversational loop, asking for each required parameter in sequence.</li></ul>
-<ul><li>Validation: Each parameter is validated against its declared rules. Invalid inputs trigger specific error messages and retry logic.</li></ul>
-<ul><li>Confirmation: The collected data is presented to the user for final confirmation before any action is taken.</li></ul>
-<ul><li>Execution: The validated data is written to the persistence layer and the enrollment is confirmed.</li></ul>
+<ul>
+<li>Intent Detection: The LLM classifies the user&#x27;s message and maps it to a specific BASIC tool definition.</li>
+<li>Parameter Collection: The BASIC script drives a conversational loop, asking for each required parameter in sequence.</li>
+<li>Validation: Each parameter is validated against its declared rules. Invalid inputs trigger specific error messages and retry logic.</li>
+<li>Confirmation: The collected data is presented to the user for final confirmation before any action is taken.</li>
+<li>Execution: The validated data is written to the persistence layer and the enrollment is confirmed.</li>
+</ul>
 <p>KEY DISTINCTION: In a pure LLM approach, the model generates the entire dialog and data extraction logic from scratch, every time. In the General Bots approach, the LLM handles intent detection and natural language understanding, but the structured data collection and validation is handled by deterministic BASIC code. This hybrid model eliminates the hallucination risk at the data entry boundary.</p>
+</section>
 <section class="block"><h2><span class="num">03</span>Tiered Data Persistence</h2>
 <p>General Bots supports a &quot;Didactic First&quot; approach to data storage. The choice of persistence layer depends on the operational requirements of each specific tool:</p>
 <h3>CSV Flat Files</h3>
@@ -91,13 +95,17 @@ footer a:hover{color:#fff}
 <p>For enterprise-scale relational storage. Direct connections to PostgreSQL, MySQL, or SQL Server. The BASIC script executes parameterized queries with full transaction support.</p>
 <h3>API Egress</h3>
 <p>For triggering downstream workflows in ERP, LMS, or CRM systems. The BASIC script constructs the API payload from validated parameters and handles response parsing and error recovery.</p>
+</section>
 <section class="block"><h2><span class="num">04</span>Real-World Example: Course Enrollment</h2>
 <p>Consider a university that wants to deploy an AI-powered enrollment assistant. The system must handle hundreds of concurrent student interactions, each requiring identity verification, course availability checking, prerequisite validation, and registration confirmation.</p><p>With General Bots BASIC, the enrollment tool is defined in approximately 50 lines of code. The LLM handles the natural language dialog — answering questions about course prerequisites, explaining registration policies, and guiding students through the process. The BASIC tool handles the structured data collection and validation. The result is a system that combines the flexibility of conversational AI with the reliability of deterministic software.</p>
+</section>
 <section class="block"><h2><span class="num">05</span>The Sovereign Advantage</h2>
 <p>Every enrollment tool built with General Bots BASIC is fully auditable, platform-independent, and vendor-independent. The BASIC scripts are plain text files that can be version-controlled, reviewed, and tested using standard software engineering practices. There is no proprietary runtime, no hidden API dependency, and no lock-in to a specific LLM provider.</p><p>The transition from passive observation to active orchestration is the core value proposition of General Bots. By using BASIC as the orchestration language, we ensure that your AI tools remain as readable as they are powerful — and as sovereign as they are intelligent.</p>
+</section>
 <section class="block"><h2><span class="num">06</span>Build Your Agentic Tools</h2>
 <p>Your organization&#x27;s workflows are already defined — now make them agentic. General Bots gives you the tools to turn any enrollment, registration, or data collection process into a sovereign AI-powered tool.</p>
-</section></div>
+</section>
+</div>
 <div class="cta"><p data-i18n="common.back_to_blog">Voltar para todos os artigos.</p>
 <a class="btn" href="/blog/" data-i18n="common.back_to_blog">← Blog</a></div>
 <footer>

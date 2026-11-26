@@ -68,10 +68,13 @@ footer a:hover{color:#fff}
 <p>Tokens are the atomic units of text input and output. A token is not a word—it is a fragment, typically 3-4 characters in English. The word &quot;unbelievable&quot; might be two tokens: &quot;un&quot; and &quot;believable.&quot; A model&#x27;s context window defines how many tokens it can consider simultaneously. Modern models support 128K to 1M tokens.</p>
 <h3>Parameters</h3>
 <p>Parameters are the connections between neurons—the learned weights that encode linguistic patterns, factual knowledge, and reasoning capabilities. A 70-billion-parameter model has a higher resolution of understanding than a 7-billion-parameter model, but efficiency is not just about size. Architecture matters: attention mechanisms, layer design, and training methodology determine how well those parameters are utilized.</p>
+</section>
 <section class="block"><h2><span class="num">02</span>How Tokenization Works</h2>
 <p>When you type &quot;What is the capital of France?&quot;, the LLM tokenizer splits it into tokens: [&quot;What&quot;, &quot; is&quot;, &quot; the&quot;, &quot; capital&quot;, &quot; of&quot;, &quot; France&quot;, &quot;?&quot;] . Each token maps to an integer ID. The model processes these IDs through its neural network, computing probability distributions for the next token. The highest-probability continuation—&quot;Paris&quot;—is selected and appended to the sequence. This repeats token by token until the complete response is generated.</p><p>This is why LLMs are called &quot;autoregressive&quot;: each token depends on all previous tokens.</p>
+</section>
 <section class="block"><h2><span class="num">03</span>From Statistics to Utility: The Chat Interface</h2>
 <p>The chat interface that users interact with is a thin layer on top of this statistical engine. System prompts, user messages, and conversation history are concatenated into a single token sequence. The model generates responses that are statistically likely to follow from that sequence. The &quot;magic&quot; is that at 70B+ parameters, the statistical predictions align remarkably well with human expectations of coherent, knowledgeable responses.</p>
+</section>
 <section class="block"><h2><span class="num">04</span>AI Search (RAG): The De Facto Standard for Enterprise Utility</h2>
 <p>An LLM without access to your data is a creative writer—useful for brainstorming, drafting, and summarization, but unreliable for factual queries about your business. Retrieval-Augmented Generation (RAG) —which we call AI Search—solves this by injecting relevant documents into the LLM&#x27;s context window before generating a response.</p>
 <h3>Ingestion</h3>
@@ -81,6 +84,7 @@ footer a:hover{color:#fff}
 <h3>Generation</h3>
 <p>The retrieved chunks are inserted into the LLM&#x27;s context window alongside the question. The model generates an answer grounded in your data.</p>
 <blockquote>&quot;This is the difference between a toy and a tool. A vanilla LLM guesses. An LLM with RAG cites.&quot;</blockquote>
+</section>
 <section class="block"><h2><span class="num">05</span>The Sovereign Pivot</h2>
 <p>Most enterprises currently access LLMs through proprietary APIs: OpenAI, Anthropic, Google. This creates a rent-seeking dependency with three specific risks:</p><p>General Bots provides the orchestration layer to enable the sovereign pivot:</p>
 <h3>Open Weights</h3>
@@ -89,15 +93,20 @@ footer a:hover{color:#fff}
 <p>Use BASIC to control exactly how the LLM behaves: structured outputs, validation rules, fallback behavior, and safety constraints.</p>
 <h3>No Egress Fees</h3>
 <p>Keep your data—and your intelligence—in-house. Fixed infrastructure cost regardless of query volume.</p>
+</section>
 <section class="block"><h2><span class="num">06</span>Understanding the Landscape</h2>
 <p>Not all LLMs are created equal. Here is a practical categorization:</p>
+</section>
 <section class="block"><h2><span class="num">07</span>The Right-Sizing Principle</h2>
 <p>Most enterprise workloads do not require a frontier model. A 7B-parameter model running on a single GPU can handle 80% of business use cases—classification, extraction, summarization, simple Q&amp;A—at a fraction of the cost. Reserve the 70B+ models for complex reasoning and high-stakes decisions. General Bots makes it trivial to route workloads to the appropriate model based on task complexity.</p>
+</section>
 <section class="block"><h2><span class="num">08</span>Conclusion: Decoding the Future</h2>
 <p>Understanding what an LLM is—statistical prediction, not magic—is the first step toward building a rational AI strategy. The models are tools, not oracles. They require data, context, and deterministic guardrails to be useful in an enterprise setting.</p><p>With General Bots, you don&#x27;t just consume LLMs through a chat interface. You own the architecture of intelligence that makes them work for your organization. Own the model. Own the future.</p>
+</section>
 <section class="block"><h2><span class="num">09</span>Deploy Your First LLM</h2>
 <p>Stop renting intelligence from proprietary APIs. Deploy open-weight models on your own infrastructure and take control of your AI strategy.</p><p>Our team will help you select, deploy, and optimize the right model for your use case.</p>
-</section></div>
+</section>
+</div>
 <div class="cta"><p data-i18n="common.back_to_blog">Voltar para todos os artigos.</p>
 <a class="btn" href="/blog/" data-i18n="common.back_to_blog">← Blog</a></div>
 <footer>

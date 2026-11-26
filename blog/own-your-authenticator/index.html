@@ -65,10 +65,13 @@ footer a:hover{color:#fff}
 <p>Why SMS-based 2FA is a liability and sovereign authentication is the only path forward</p><p>Originally published on pragmatismo.com.br</p>
 <section class="block"><h2><span class="num">01</span>The SS7 Exploitation Vector</h2>
 <p>An adversary with access to a global roaming exchange can masquerade as a legitimate telecommunications provider. Using tools like FirstMile, they can:</p>
-<ul><li>Intercept SMS traffic —capture 2FA codes, password reset links, and OTP messages in transit</li></ul>
-<ul><li>Request location data —triangulate the physical position of any subscriber in real time</li></ul>
-<ul><li>Execute SIM swaps —reroute the victim&#x27;s number to a device under attacker control, without physical access or carrier cooperation</li></ul>
+<ul>
+<li>Intercept SMS traffic —capture 2FA codes, password reset links, and OTP messages in transit</li>
+<li>Request location data —triangulate the physical position of any subscriber in real time</li>
+<li>Execute SIM swaps —reroute the victim&#x27;s number to a device under attacker control, without physical access or carrier cooperation</li>
+</ul>
 <p>The victim receives no notification. The carrier detects nothing unusual. The authenticator app on the victim&#x27;s phone continues to function—but it is now irrelevant, because the attacker controls the phone number.</p>
+</section>
 <section class="block"><h2><span class="num">02</span>Why SMS-Based 2FA Must Die</h2>
 <p>SMS-based two-factor authentication was always a compromise between security and convenience. It was better than passwords alone—until it wasn&#x27;t. The SS7 attack vector turns SMS 2FA into a single point of failure:</p>
 <h3>No Mutual Auth</h3>
@@ -77,6 +80,7 @@ footer a:hover{color:#fff}
 <p>SMS messages are routed through multiple carriers. Any hop in the chain can be compromised without detection.</p>
 <h3>SIM Swap Blindness</h3>
 <p>Carriers do not notify users when a number is ported. The attacker controls the line before the victim knows.</p>
+</section>
 <section class="block"><h2><span class="num">03</span>The Case for Sovereign Authentication</h2>
 <p>Relying on third-party authenticator apps (Google Authenticator, MS Authenticator, Authy) merely shifts the trust surface without eliminating it. These apps are black boxes with opaque security postures. A sovereign authenticator—built on the General Bots orchestration core—provides three critical advantages:</p>
 <h3>End-to-End Cryptographic Sovereignty</h3>
@@ -85,6 +89,7 @@ footer a:hover{color:#fff}
 <p>Authenticate based on didactic parameters beyond simple codes: device proximity, biometric delta, IP reputation scores, behavioral patterns, and time-of-day heuristics. BASIC scripts define the validation rules.</p>
 <h3>Branding and UX Control</h3>
 <p>A white-labeled security application maintains the professional authority of your enterprise identity. No &quot;Powered by&quot; branding, no confusing third-party interfaces, no support calls about &quot;which app to use.&quot;</p>
+</section>
 <section class="block"><h2><span class="num">04</span>Implementation Roadmap</h2>
 <p>Deploying a sovereign authenticator via General Bots follows three architectural phases:</p>
 <h3>Secret Generation</h3>
@@ -93,14 +98,18 @@ footer a:hover{color:#fff}
 <p>Push didactic challenges via the universal channel bridging layer—push notification, WhatsApp, RCS, or custom mobile SDK—based on user preference and device capability.</p>
 <h3>Verification Logic</h3>
 <p>Use BASIC to define high-fidelity validation rules: time windows, retry limits, geographic constraints, and anomaly detection thresholds.</p>
+</section>
 <section class="block"><h2><span class="num">05</span>Beyond TOTP: Context-Aware Authentication</h2>
 <p>With General Bots, your authenticator is not limited to time-based codes. You can build authentication flows that consider device fingerprint, network reputation, biometric confidence scores, and behavioral patterns. A login attempt from a known device on the corporate network at 9 AM local time requires a simple code. An attempt from an anonymous IP at 3 AM triggers step-up authentication with additional verification channels.</p>
 <blockquote>&quot;The era of trusting third-party telecommunications infrastructure for security is over. The architectural requirement for 2025 is clear: own your authenticator, or expect your credentials to be brokered on the open market.&quot;</blockquote>
+</section>
 <section class="block"><h2><span class="num">06</span>The Cost of Inaction</h2>
 <p>SS7 exploitation is not a theoretical threat. Telecom security researchers have demonstrated mass interception campaigns targeting financial institutions, cryptocurrency exchanges, and high-net-worth individuals. For enterprises, the cost of a single compromised account—regulatory fines, forensic investigation, reputational damage, customer churn—far exceeds the investment required to deploy sovereign authentication.</p>
+</section>
 <section class="block"><h2><span class="num">07</span>Secure Your Authentication</h2>
 <p>Stop relying on compromised telecommunications infrastructure. Deploy a sovereign authenticator on the General Bots platform and take control of your security posture.</p><p>Our security team will guide you through the implementation roadmap in under 30 days.</p>
-</section></div>
+</section>
+</div>
 <div class="cta"><p data-i18n="common.back_to_blog">Voltar para todos os artigos.</p>
 <a class="btn" href="/blog/" data-i18n="common.back_to_blog">← Blog</a></div>
 <footer>
