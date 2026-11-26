@@ -1,0 +1,117 @@
+<!DOCTYPE html><html lang="pt-BR"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Own Your Authenticator | General Bots</title>
+<meta name="description" content="The recent wave of SS7 protocol exploitation has moved telecommunications security from theoretical risk to industrial emergency. Signaling System No. 7 (SS7)—t">
+<link rel="canonical" href="https://generalbots.org/blog/own-your-authenticator/">
+<link rel="icon" href="/gb-favicon-v2.ico" sizes="any">
+<meta property="og:title" content="Own Your Authenticator | General Bots"><meta property="og:description" content="The recent wave of SS7 protocol exploitation has moved telecommunications security from theoretical risk to industrial emergency. Signaling System No. 7 (SS7)—t">
+<meta property="og:type" content="website"><meta name="robots" content="index, follow">
+<style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#050505;color:#ededed;font-family:'Geist',ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif;line-height:1.7}
+body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:60px 60px;mask-image:linear-gradient(to bottom,#000,transparent 70%)}
+.wrap{position:relative;z-index:1;max-width:960px;margin:0 auto;padding:28px 24px 96px}
+.topbar{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:14px 0;border-bottom:1px solid #1f1f1f}
+.brand{display:flex;align-items:center;gap:10px;font-family:ui-monospace,monospace;font-size:11px;letter-spacing:.14em;color:#8a8a8a;text-decoration:none;border:0}
+.brand b{color:#ededed;font-weight:600}
+.back{display:inline-flex;align-items:center;gap:8px;margin:26px 0 0;font-size:13px;color:#a1a1a1;text-decoration:none;border:0}
+.back:hover{color:#fff}
+select#gbLang{background:#0d0d0d;color:#ededed;border:1px solid #333;border-radius:4px;padding:6px 10px;font-size:12px;font-family:inherit}
+.masthead{margin:34px 0 30px;padding:32px;border:1px solid #262626;background:linear-gradient(150deg,#0e0e0e,#050505 60%);box-shadow:inset 0 1px 0 rgba(255,255,255,.04)}
+.eyebrow{font-family:ui-monospace,monospace;font-size:11px;letter-spacing:.08em;font-weight:600;color:#8a8a8a}
+.eyebrow em{font-style:normal;color:#ededed}
+h1{font-size:clamp(32px,4.4vw,52px);line-height:1.08;letter-spacing:-.045em;margin:16px 0 12px;font-weight:600;text-wrap:balance}
+.lead{font-size:18px;color:#c4c4c4;margin:0;max-width:720px}
+.meta{margin-top:22px;padding-top:16px;border-top:1px solid #262626;display:flex;flex-wrap:wrap;gap:14px;font-family:ui-monospace,monospace;font-size:10.5px;letter-spacing:.06em;color:#8a8a8a}
+.meta span{border:1px solid #2e2e2e;padding:4px 8px}
+.content{display:flex;flex-direction:column;gap:14px}
+.block{padding:24px 26px;border:1px solid #262626;background:#080808}
+.block h2{margin:0 0 14px;font-size:22px;line-height:1.25;letter-spacing:-.025em;font-weight:600}
+.block h2 .num{font-family:ui-monospace,monospace;font-size:11px;color:#8a8a8a;margin-right:12px;letter-spacing:.08em}
+.block h3{margin:22px 0 6px;font-size:16px;font-weight:600;color:#ededed}
+.block p{margin:0 0 12px;font-size:15px;color:#a1a1a1;text-wrap:pretty}
+.block p:last-child{margin-bottom:0}
+.block ul{margin:0;padding:0;list-style:none;display:grid;gap:8px}
+.block li{position:relative;padding:11px 14px 11px 30px;border:1px solid #222;background:#050505;font-size:14px;color:#a1a1a1}
+.block li::before{content:'▢';position:absolute;left:10px;top:10px;color:#6a6a6a;font-family:ui-monospace,monospace}
+blockquote{margin:0;padding:18px 22px;border-left:3px solid #ededed;background:#0c0c0c;font-size:15px;color:#c4c4c4}
+.kv{display:grid;grid-template-columns:minmax(140px,220px) 1fr;gap:8px 22px;padding:4px 0}
+.kv dt{font-family:ui-monospace,monospace;font-size:11px;letter-spacing:.06em;color:#8a8a8a;padding-top:3px}
+.kv dd{margin:0;font-size:14.5px;color:#a1a1a1}
+.cta{margin-top:18px;padding:22px 26px;border:1px solid #262626;background:linear-gradient(120deg,#111,#080808);display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
+.cta p{margin:0;color:#c4c4c4;font-size:15px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;background:#fff;color:#0a0a0a;font-weight:600;font-size:13px;text-decoration:none;border:0}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,290px),1fr));gap:14px;margin-top:8px}
+.card{padding:22px;border:1px solid #262626;background:#080808;display:flex;flex-direction:column;gap:10px;text-decoration:none;color:inherit;transition:border-color .15s}
+.card:hover{border-color:#666}
+.card .date{font-family:ui-monospace,monospace;font-size:10px;letter-spacing:.08em;color:#8a8a8a}
+.card h3{margin:0;font-size:17px;line-height:1.3;letter-spacing:-.02em}
+.card p{margin:0;font-size:13.5px;color:#8a8a8a;line-height:1.55}
+.card .more{margin-top:auto;font-family:ui-monospace,monospace;font-size:11px;color:#ededed}
+footer{margin-top:56px;padding-top:22px;border-top:1px solid #262626;display:flex;flex-wrap:wrap;gap:18px;font-size:12.5px}
+footer a{color:#a1a1a1;text-decoration:none;border-bottom:1px solid #333}
+footer a:hover{color:#fff}
+#toTop{position:fixed;right:20px;bottom:20px;z-index:20;background:#ededed;color:#0a0a0a;border:0;padding:10px 14px;font:600 12px ui-monospace,monospace;cursor:pointer;opacity:.85}
+#toTop:hover{opacity:1}
+</style></head><body data-blog-slug="own-your-authenticator"><div class="wrap">
+<div class="topbar"><a class="brand" href="/"><b>&lt;GB&gt;</b> GENERAL BOTS</a><select id="gbLang" aria-label="Idioma"><option value="pt">Português</option><option value="en">English</option><option value="es">Español</option><option value="fr">Français</option><option value="de">Deutsch</option><option value="ja">日本語</option><option value="zh-cn">简体中文</option></select></div>
+<a class="back" href="/">← <span data-i18n="common.back_home">Voltar ao início</span></a>
+<div class="masthead"><div class="eyebrow">// <em>ARTIGO</em></div>
+<h1 data-i18n="title">Own Your Authenticator</h1>
+<p class="lead" data-i18n="subtitle">The recent wave of SS7 protocol exploitation has moved telecommunications security from theoretical risk to industrial emergency. Signaling System No. 7 (SS7)—the architectural foundation of global telecommunications—was designed in an era of trust. It lacks mutual authentication, assumes closed networks, and grants implicit authority to any connected exchange. For decades, this was a manageable risk. In 2025, it is an open wound.</p>
+<div class="meta"><span>June 17, 2025</span><span data-i18n="nav.blog">BLOG</span><span>GENERAL BOTS</span></div></div>
+<div class="content">
+<p>Why SMS-based 2FA is a liability and sovereign authentication is the only path forward</p><p>Originally published on pragmatismo.com.br</p>
+<section class="block"><h2><span class="num">01</span>The SS7 Exploitation Vector</h2>
+<p>An adversary with access to a global roaming exchange can masquerade as a legitimate telecommunications provider. Using tools like FirstMile, they can:</p>
+<ul><li>Intercept SMS traffic —capture 2FA codes, password reset links, and OTP messages in transit</li></ul>
+<ul><li>Request location data —triangulate the physical position of any subscriber in real time</li></ul>
+<ul><li>Execute SIM swaps —reroute the victim&#x27;s number to a device under attacker control, without physical access or carrier cooperation</li></ul>
+<p>The victim receives no notification. The carrier detects nothing unusual. The authenticator app on the victim&#x27;s phone continues to function—but it is now irrelevant, because the attacker controls the phone number.</p>
+<section class="block"><h2><span class="num">02</span>Why SMS-Based 2FA Must Die</h2>
+<p>SMS-based two-factor authentication was always a compromise between security and convenience. It was better than passwords alone—until it wasn&#x27;t. The SS7 attack vector turns SMS 2FA into a single point of failure:</p>
+<h3>No Mutual Auth</h3>
+<p>SS7 trusts any connected exchange by default. There is no cryptographic handshake, no proof of identity.</p>
+<h3>Silent Interception</h3>
+<p>SMS messages are routed through multiple carriers. Any hop in the chain can be compromised without detection.</p>
+<h3>SIM Swap Blindness</h3>
+<p>Carriers do not notify users when a number is ported. The attacker controls the line before the victim knows.</p>
+<section class="block"><h2><span class="num">03</span>The Case for Sovereign Authentication</h2>
+<p>Relying on third-party authenticator apps (Google Authenticator, MS Authenticator, Authy) merely shifts the trust surface without eliminating it. These apps are black boxes with opaque security postures. A sovereign authenticator—built on the General Bots orchestration core—provides three critical advantages:</p>
+<h3>End-to-End Cryptographic Sovereignty</h3>
+<p>Your organization holds the master keys, not a third-party cloud provider. TOTP seeds, cryptographic keys, and session tokens are generated, stored, and verified within your infrastructure. No external dependency, no supply chain risk.</p>
+<h3>Custom Logic Injection</h3>
+<p>Authenticate based on didactic parameters beyond simple codes: device proximity, biometric delta, IP reputation scores, behavioral patterns, and time-of-day heuristics. BASIC scripts define the validation rules.</p>
+<h3>Branding and UX Control</h3>
+<p>A white-labeled security application maintains the professional authority of your enterprise identity. No &quot;Powered by&quot; branding, no confusing third-party interfaces, no support calls about &quot;which app to use.&quot;</p>
+<section class="block"><h2><span class="num">04</span>Implementation Roadmap</h2>
+<p>Deploying a sovereign authenticator via General Bots follows three architectural phases:</p>
+<h3>Secret Generation</h3>
+<p>Utilize the General Bots secure vault for generating TOTP seeds and cryptographic keys. All entropy sources are configurable and auditable.</p>
+<h3>Channel Orchestration</h3>
+<p>Push didactic challenges via the universal channel bridging layer—push notification, WhatsApp, RCS, or custom mobile SDK—based on user preference and device capability.</p>
+<h3>Verification Logic</h3>
+<p>Use BASIC to define high-fidelity validation rules: time windows, retry limits, geographic constraints, and anomaly detection thresholds.</p>
+<section class="block"><h2><span class="num">05</span>Beyond TOTP: Context-Aware Authentication</h2>
+<p>With General Bots, your authenticator is not limited to time-based codes. You can build authentication flows that consider device fingerprint, network reputation, biometric confidence scores, and behavioral patterns. A login attempt from a known device on the corporate network at 9 AM local time requires a simple code. An attempt from an anonymous IP at 3 AM triggers step-up authentication with additional verification channels.</p>
+<blockquote>&quot;The era of trusting third-party telecommunications infrastructure for security is over. The architectural requirement for 2025 is clear: own your authenticator, or expect your credentials to be brokered on the open market.&quot;</blockquote>
+<section class="block"><h2><span class="num">06</span>The Cost of Inaction</h2>
+<p>SS7 exploitation is not a theoretical threat. Telecom security researchers have demonstrated mass interception campaigns targeting financial institutions, cryptocurrency exchanges, and high-net-worth individuals. For enterprises, the cost of a single compromised account—regulatory fines, forensic investigation, reputational damage, customer churn—far exceeds the investment required to deploy sovereign authentication.</p>
+<section class="block"><h2><span class="num">07</span>Secure Your Authentication</h2>
+<p>Stop relying on compromised telecommunications infrastructure. Deploy a sovereign authenticator on the General Bots platform and take control of your security posture.</p><p>Our security team will guide you through the implementation roadmap in under 30 days.</p>
+</section></div>
+<div class="cta"><p data-i18n="common.back_to_blog">Voltar para todos os artigos.</p>
+<a class="btn" href="/blog/" data-i18n="common.back_to_blog">← Blog</a></div>
+<footer>
+  <a href="/blog/" data-i18n="nav.blog">Blog</a>
+  <a href="/privacy/" data-i18n="footer.privacy">Privacidade</a>
+  <a href="/terms/" data-i18n="footer.terms">Termos</a>
+  <a href="/security/">Segurança</a>
+  <a href="/contact/" data-i18n="nav.contact">Contato</a>
+  <a href="/hosting/">Hosting</a>
+  <a href="https://docs.generalbots.org" target="_blank" rel="noopener noreferrer">Documentação ↗</a>
+  <a href="https://github.com/generalbots/generalbots" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+</footer>
+</div><button id="toTop" type="button">↑ TOPO</button>
+<script src="/js/i18n.js"></script></body></html>

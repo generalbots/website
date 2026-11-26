@@ -1,31 +1,77 @@
 <!DOCTYPE html><html lang="pt-BR"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Terms of Service | General Bots</title>
+<title>Terms of Service. | General Bots</title>
 <meta name="description" content="Termos de uso e licença do General Bots.">
-<link rel="canonical" href="https://generalbots.org/terms/">
+<link rel="canonical" href="https://generalbots.org/">
 <link rel="icon" href="/gb-favicon-v2.ico" sizes="any">
-<meta property="og:title" content="Terms of Service | General Bots">
-<meta property="og:description" content="Termos de uso e licença do General Bots.">
-<meta property="og:url" content="https://generalbots.org/terms/">
-<meta property="og:type" content="website">
-<meta name="robots" content="index, follow">
+<meta property="og:title" content="Terms of Service. | General Bots"><meta property="og:description" content="Termos de uso e licença do General Bots.">
+<meta property="og:type" content="website"><meta name="robots" content="index, follow">
 <style>
-*{box-sizing:border-box}body{margin:0;background:#000;color:#ededed;font-family:'Geist',ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif;line-height:1.65}
-a{color:#a1a1a1;text-decoration:none;border-bottom:1px solid #3a3a3a}a:hover{color:#fff}
-.wrap{max-width:820px;margin:0 auto;padding:48px 24px 88px}
-.brand{display:flex;align-items:center;gap:10px;font-family:ui-monospace,monospace;font-size:11px;letter-spacing:.12em;color:#8a8a8a}
-.mono{font-family:ui-monospace,monospace;font-size:11px;letter-spacing:.08em;color:#8a8a8a}
-h1{font-size:clamp(32px,4vw,48px);line-height:1.1;letter-spacing:-.04em;margin:38px 0 16px;font-weight:600}
-h2{font-size:19px;letter-spacing:-.02em;margin:34px 0 10px;font-weight:600;color:#ededed}
-p{font-size:15px;color:#a1a1a1;margin:0 0 14px;text-wrap:pretty}
-.lead{font-size:17px;color:#c4c4c4;max-width:640px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#050505;color:#ededed;font-family:'Geist',ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif;line-height:1.7}
+body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:60px 60px;mask-image:linear-gradient(to bottom,#000,transparent 70%)}
+.wrap{position:relative;z-index:1;max-width:960px;margin:0 auto;padding:28px 24px 96px}
+.topbar{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:14px 0;border-bottom:1px solid #1f1f1f}
+.brand{display:flex;align-items:center;gap:10px;font-family:ui-monospace,monospace;font-size:11px;letter-spacing:.14em;color:#8a8a8a;text-decoration:none;border:0}
+.brand b{color:#ededed;font-weight:600}
+.back{display:inline-flex;align-items:center;gap:8px;margin:26px 0 0;font-size:13px;color:#a1a1a1;text-decoration:none;border:0}
+.back:hover{color:#fff}
+select#gbLang{background:#0d0d0d;color:#ededed;border:1px solid #333;border-radius:4px;padding:6px 10px;font-size:12px;font-family:inherit}
+.masthead{margin:34px 0 30px;padding:32px;border:1px solid #262626;background:linear-gradient(150deg,#0e0e0e,#050505 60%);box-shadow:inset 0 1px 0 rgba(255,255,255,.04)}
+.eyebrow{font-family:ui-monospace,monospace;font-size:11px;letter-spacing:.08em;font-weight:600;color:#8a8a8a}
+.eyebrow em{font-style:normal;color:#ededed}
+h1{font-size:clamp(32px,4.4vw,52px);line-height:1.08;letter-spacing:-.045em;margin:16px 0 12px;font-weight:600;text-wrap:balance}
+.lead{font-size:18px;color:#c4c4c4;margin:0;max-width:720px}
+.meta{margin-top:22px;padding-top:16px;border-top:1px solid #262626;display:flex;flex-wrap:wrap;gap:14px;font-family:ui-monospace,monospace;font-size:10.5px;letter-spacing:.06em;color:#8a8a8a}
+.meta span{border:1px solid #2e2e2e;padding:4px 8px}
+.content{display:flex;flex-direction:column;gap:14px}
+.block{padding:24px 26px;border:1px solid #262626;background:#080808}
+.block h2{margin:0 0 14px;font-size:22px;line-height:1.25;letter-spacing:-.025em;font-weight:600}
+.block h2 .num{font-family:ui-monospace,monospace;font-size:11px;color:#8a8a8a;margin-right:12px;letter-spacing:.08em}
+.block h3{margin:22px 0 6px;font-size:16px;font-weight:600;color:#ededed}
+.block p{margin:0 0 12px;font-size:15px;color:#a1a1a1;text-wrap:pretty}
+.block p:last-child{margin-bottom:0}
+.block ul{margin:0;padding:0;list-style:none;display:grid;gap:8px}
+.block li{position:relative;padding:11px 14px 11px 30px;border:1px solid #222;background:#050505;font-size:14px;color:#a1a1a1}
+.block li::before{content:'▢';position:absolute;left:10px;top:10px;color:#6a6a6a;font-family:ui-monospace,monospace}
+blockquote{margin:0;padding:18px 22px;border-left:3px solid #ededed;background:#0c0c0c;font-size:15px;color:#c4c4c4}
+.kv{display:grid;grid-template-columns:minmax(140px,220px) 1fr;gap:8px 22px;padding:4px 0}
+.kv dt{font-family:ui-monospace,monospace;font-size:11px;letter-spacing:.06em;color:#8a8a8a;padding-top:3px}
+.kv dd{margin:0;font-size:14.5px;color:#a1a1a1}
+.cta{margin-top:18px;padding:22px 26px;border:1px solid #262626;background:linear-gradient(120deg,#111,#080808);display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
+.cta p{margin:0;color:#c4c4c4;font-size:15px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;background:#fff;color:#0a0a0a;font-weight:600;font-size:13px;text-decoration:none;border:0}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,290px),1fr));gap:14px;margin-top:8px}
+.card{padding:22px;border:1px solid #262626;background:#080808;display:flex;flex-direction:column;gap:10px;text-decoration:none;color:inherit;transition:border-color .15s}
+.card:hover{border-color:#666}
+.card .date{font-family:ui-monospace,monospace;font-size:10px;letter-spacing:.08em;color:#8a8a8a}
+.card h3{margin:0;font-size:17px;line-height:1.3;letter-spacing:-.02em}
+.card p{margin:0;font-size:13.5px;color:#8a8a8a;line-height:1.55}
+.card .more{margin-top:auto;font-family:ui-monospace,monospace;font-size:11px;color:#ededed}
+footer{margin-top:56px;padding-top:22px;border-top:1px solid #262626;display:flex;flex-wrap:wrap;gap:18px;font-size:12.5px}
+footer a{color:#a1a1a1;text-decoration:none;border-bottom:1px solid #333}
+footer a:hover{color:#fff}
+#toTop{position:fixed;right:20px;bottom:20px;z-index:20;background:#ededed;color:#0a0a0a;border:0;padding:10px 14px;font:600 12px ui-monospace,monospace;cursor:pointer;opacity:.85}
+#toTop:hover{opacity:1}
 </style></head><body><div class="wrap">
-<div class="brand"><a href="/">← General Bots</a><span>AI OS</span></div>
-<h1>Legal Framework</h1><p class="lead">Terms of Service.</p><p>Please read these terms carefully. By using General Bots, you agree to the legal framework governing our open-source platform and managed services.</p><h2>1. Usage License</h2><p>General Bots is primarily distributed under the MIT Open Source License. Managed services and enterprise deployments are governed by specific Service Level Agreements (SLAs).</p><h2>2. User Responsibilities</h2><p>Users of the platform are responsible for:</p><p>Ensuring that AI bot personalities and responses comply with local laws and ethical standards.</p><p>Maintaining the security of their own infrastructure for self-hosted instances.</p><p>Managing their own API keys and third-party integration credentials.</p><h2>3. Managed Services</h2><p>Managed hosting provided by General Bots or its certified partners is subject to a 99.9% uptime guarantee, as detailed in the technical specifications for each hosting tier.</p><h2>4. Data Ownership</h2><p>General Bots maintains a &quot;Customer First&quot; data policy. You retain 100% ownership of your document indexes, conversation logs, and bot configurations. We do not use your data to train our global models.</p><h2>5. Open Source Acknowledgments</h2><p>General Bots is built on the shoulders of open-source software. Below are the core Rust packages and key infrastructure services that power the platform. All General Bots workspace crates are</p><h2>MIT</h2><p>unless otherwise noted.</p><p>Rust Cargo Packages</p><p>Package</p><p>License</p><p>Description</p><p>botlib</p><h2>MIT</h2><p>Shared library — types, utilities, HTTP client</p><p>botschema</p><h2>MIT</h2><p>Database schema definitions</p><p>botserver</p><h2>MIT</h2><p>Main API server and orchestrator</p><p>botui</p><h2>MIT</h2><p>Pure web interface</p><p>botapp</p><h2>MIT</h2><p>Tauri desktop/mobile wrapper</p><p>botdevice</p><h2>MIT</h2><p>Android, HarmonyOS &amp; IoT</p><p>bottest</p><h2>MIT</h2><p>Test suite</p><p>botanalytics</p><h2>MIT</h2><p>Analytics &amp; reporting</p><p>botattendance</p><h2>MIT</h2><p>Attendance queue, SLA, LLM assist</p><p>botattendant</p><h2>MIT</h2><p>Contact center management</p><p>botautotask</p><h2>MIT</h2><p>Autonomous task execution</p><p>botbanking</p><h2>MIT</h2><p>Banking integration</p><p>botbasic_ai</p><h2>MIT</h2><p>BASIC AI keywords</p><p>botbasic_comms</p><h2>MIT</h2><p>BASIC communication keywords</p><p>botbasic_compiler</p><h2>MIT</h2><p>BASIC compiler</p><p>botbasic_core</p><h2>MIT</h2><p>BASIC core keywords</p><p>botbasic_data</p><h2>MIT</h2><p>BASIC data keywords</p><p>botbasic_system</p><h2>MIT</h2><p>BASIC system keywords</p><p>botbasic_types</p><h2>MIT</h2><p>Shared BASIC types</p><p>botbilling</p><h2>MIT</h2><p>Billing &amp; subscriptions</p><p>botbiometry</p><h2>MIT</h2><p>KYC / biometrics via</p><p>Zitadel</p><p>botbrazil</p><h2>MIT</h2><p>Brazilian tax compliance</p><p>botbrowser</p><h2>MIT</h2><p>Browser automation</p><p>botcalendar</p><h2>MIT</h2><p>Calendar</p><p>botchannels</p><h2>MIT</h2><p>Social channel integrations</p><p>botclock</p><h2>MIT</h2><p>Time clock</p><p>botcloud</p><h2>MIT</h2><p>SaaS dashboard</p><p>botcompliance</p><h2>MIT</h2><h2>LGPD / GDPR / HIPAA</h2><p>botcontacts</p><h2>MIT</h2><p>Contacts / CRM</p><p>botcore</p><h2>MIT</h2><p>Core engine</p><p>botcoredirectory</p><h2>MIT</h2><p>Directory (</p><p>Zitadel</p><p>)</p><p>botcoreoauth</p><h2>MIT</h2><p>OAuth (</p><p>Zitadel</p><p>)</p><p>botdashboards</p><h2>MIT</h2><p>Dashboards</p><p>botdatabase</p><h2>MIT</h2><p>Database management</p><p>botdeployment</p><h2>MIT</h2><p>Deployment</p><p>botdocs</p><h2>MIT</h2><p>Document processing</p><p>botdrive</p><h2>MIT</h2><p>S3 file storage</p><p>botemail</p><h2>MIT</h2><p>Email (IMAP/SMTP via</p><p>Stalwart</p><p>)</p><p>boteval</p><h2>MIT</h2><p>LLM evaluation</p><p>botkb</p><h2>MIT</h2><p>Knowledge base</p><p>botkyc</p><h2>MIT</h2><h2>KYC</h2><p>botlearn</p><h2>MIT</h2><h2>LMS</h2><p>botllm</p><h2>MIT</h2><p>LLM providers</p><p>botm365</p><h2>MIT</h2><p>M365 via</p><p>Zitadel</p><p>botmarketing</p><h2>MIT</h2><p>Marketing campaigns</p><p>botmeet</p><h2>MIT</h2><p>Video meet (</p><p>LiveKit</p><p>)</p><p>botmonitoring</p><h2>MIT</h2><p>Monitoring &amp; tracing</p><p>botmultimodal</p><h2>MIT</h2><p>Multimodal AI</p><p>botplan</p><h2>MIT</h2><p>Gantt + Kanban</p><p>botqdrant</p><h2>MIT</h2><p>Qdrant</p><p>vector DB</p><p>botsearch</p><h2>MIT</h2><p>Full-text search</p><p>botsecurity</p><h2>MIT</h2><p>Security guards</p><p>botsheet</p><h2>MIT</h2><p>Spreadsheets</p><p>botslides</p><h2>MIT</h2><p>Presentations</p><p>botsocial</p><h2>MIT</h2><p>Social media</p><p>botwhatsapp</p><h2>MIT</h2><p>WhatsApp Business</p><p>bottasks</p><h2>MIT</h2><p>Tasks</p><p>bottickets</p><h2>MIT</h2><p>Tickets</p><p>bottax</p><h2>MIT</h2><p>Tax</p><p>bottelegram</p><h2>MIT</h2><p>Telegram</p><p>botmsteams</p><h2>MIT</h2><p>MS Teams</p><p>botvision</p><h2>MIT</h2><p>Computer vision</p><p>boterp</p><h2>MIT</h2><h2>ERP</h2><p>botitsm</p><h2>MIT</h2><h2>ITSM</h2><p>botpos</p><h2>MIT</h2><p>Point of Sale</p><p>botweba</p><h2>MIT</h2><p>Web app builder</p><p>Infrastructure Services</p><p>Service</p><p>Role</p><p>License</p><p>Zitadel</p><p>Identity / SSO</p><p>Apache 2.0</p><p>Stalwart</p><p>Email server</p><h2>MIT</h2><p>MinIO</p><p>Object storage</p><h2>MIT</h2><p>PostgreSQL</p><p>Database</p><p>PostgreSQL</p><p>Valkey</p><p>Cache</p><h2>BSD-3</h2><p>LiveKit</p><p>Video conferencing</p><p>Apache 2.0</p><p>Qdrant</p><p>Vector database</p><p>Apache 2.0</p><p>Vault</p><p>Secrets</p><h2>BSL 1.1</h2><p>Caddy</p><p>Reverse proxy</p><p>Apache 2.0</p><p>Complete source at</p><p>github.com/GeneralBots</p><p>Legal Inquiries</p><p>For specific legal questions or custom enterprise agreements, please contact our legal team.</p><p>Email Legal</p><p>Contact Us</p><p>Related Reading</p><p>From the General Bots blog</p><p>2025</p><p>Why Pragmatismo Open-Sourced</p><p>The philosophy behind releasing 20+ OSS projects: reviving abandoned code, hybrid innovation, and community-driven development.</p><p>Read more →</p><p>2025</p><p>Escape from Big Tech</p><p>The open-source enterprise stack replacing MS, Google, and AWS with 87.5% cost savings and full data sovereignty.</p><p>Read more →</p><p>Apr 1, 2025</p><p>The Hidden Costs of SaaS</p><p>Analyzing the Big Tech Tax across productivity suites, CRM, storage, and identity with an 87.5% savings migration roadmap.</p><p>Read more →</p>
-<div style="margin-top:56px;padding-top:22px;border-top:1px solid #262626;display:flex;flex-wrap:wrap;gap:18px;font-size:12.5px">
-  <a href="/privacy/">Privacidade</a><a href="/terms/">Termos</a><a href="/security/">Segurança</a>
-  <a href="/contact/">Contato</a><a href="/hosting/">Hosting</a>
+<div class="topbar"><a class="brand" href="/"><b>&lt;GB&gt;</b> GENERAL BOTS</a><select id="gbLang" aria-label="Idioma"><option value="pt">Português</option><option value="en">English</option><option value="es">Español</option><option value="fr">Français</option><option value="de">Deutsch</option><option value="ja">日本語</option><option value="zh-cn">简体中文</option></select></div>
+<a class="back" href="/">← <span data-i18n="common.back_home">Voltar ao início</span></a>
+<div class="masthead"><div class="eyebrow">// <em>GENERAL BOTS</em></div>
+<h1 data-i18n="terms.terms_of_service">Terms of Service.</h1>
+<p class="lead" data-i18n="terms.please_read_these_terms_carefully_by_using_general_bots_yo">Please read these terms carefully. By using General Bots, you agree to the legal framework governing our open-source platform and managed services.</p>
+<div class="meta"><span>INFORMAÇÃO</span><span>ATUALIZADO 2026</span></div></div>
+<div class="content"><section class="block"><h2><span class="num">01</span><span data-i18n="terms.1_usage_license">1. Usage License</span></h2><p data-i18n="terms.general_bots_is_primarily_distributed_under_the_mit_open_sou">General Bots is primarily distributed under the MIT Open Source License. Managed services and enterprise deployments are governed by specific Service Level Agreements (SLAs).</p><section class="block"><h2><span class="num">02</span><span data-i18n="terms.2_user_responsibilities">2. User Responsibilities</span></h2><p data-i18n="terms.users_of_the_platform_are_responsible_for">Users of the platform are responsible for:</p><ul><li data-i18n="terms.ensuring_that_ai_bot_personalities_and_responses_comply_with">Ensuring that AI bot personalities and responses comply with local laws and ethical standards.</li></ul><ul><li data-i18n="terms.maintaining_the_security_of_their_own_infrastructure_for_sel">Maintaining the security of their own infrastructure for self-hosted instances.</li></ul><ul><li data-i18n="terms.managing_their_own_api_keys_and_third_party_integration_cred">Managing their own API keys and third-party integration credentials.</li></ul><section class="block"><h2><span class="num">03</span><span data-i18n="terms.3_managed_services">3. Managed Services</span></h2><p data-i18n="terms.managed_hosting_provided_by_general_bots_or_its_certified_pa">Managed hosting provided by General Bots or its certified partners is subject to a 99.9% uptime guarantee, as detailed in the technical specifications for each hosting tier.</p><section class="block"><h2><span class="num">04</span><span data-i18n="terms.4_data_ownership">4. Data Ownership</span></h2><p data-i18n="terms.general_bots_maintains_a_customer_first_data_policy_you_r">General Bots maintains a &quot;Customer First&quot; data policy. You retain 100% ownership of your document indexes, conversation logs, and bot configurations. We do not use your data to train our global models.</p><section class="block"><h2><span class="num">05</span><span data-i18n="terms.5_open_source_acknowledgments">5. Open Source Acknowledgments</span></h2><p>General Bots is built on the shoulders of open-source software. Below are the core Rust packages and key infrastructure services that power the platform. All General Bots workspace crates are MIT unless otherwise noted.</p><h3>Rust Cargo Packages</h3><h3>Infrastructure Services</h3><p>Complete source at github.com/GeneralBots</p><section class="block"><h2><span class="num">06</span><span data-i18n="terms.legal_inquiries">Legal Inquiries</span></h2><p data-i18n="terms.for_specific_legal_questions_or_custom_enterprise_agreements">For specific legal questions or custom enterprise agreements, please contact our legal team.</p></section></div>
+<div class="cta"><p>Precisa de mais informações?</p><a class="btn" href="/contact/">FALE CONOSCO →</a></div>
+<footer>
+  <a href="/blog/" data-i18n="nav.blog">Blog</a>
+  <a href="/privacy/" data-i18n="footer.privacy">Privacidade</a>
+  <a href="/terms/" data-i18n="footer.terms">Termos</a>
+  <a href="/security/">Segurança</a>
+  <a href="/contact/" data-i18n="nav.contact">Contato</a>
+  <a href="/hosting/">Hosting</a>
   <a href="https://docs.generalbots.org" target="_blank" rel="noopener noreferrer">Documentação ↗</a>
   <a href="https://github.com/generalbots/generalbots" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
-</div>
-</div></body></html>
+</footer>
+</div><button id="toTop" type="button">↑ TOPO</button>
+<script src="/js/i18n.js"></script></body></html>
