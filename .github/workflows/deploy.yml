@@ -12,11 +12,6 @@ concurrency:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    env:
-      SRV1_HOST: ${{ vars.SRV1_HOST }}
-      SRV1_USER: ${{ vars.SRV1_USER }}
-      SRV1_PASS: ${{ secrets.SRV1_PASS }}
-      SITE_ROOT: /opt/gbo/data/websites/generalbots.org
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -53,6 +48,10 @@ jobs:
           chmod +x /tmp/remote-deploy.sh
 
       - name: Upload tarball and deploy script
+        env:
+          SRV1_HOST: ${{ secrets.SRV1_HOST }}
+          SRV1_USER: ${{ secrets.SRV1_USER }}
+          SRV1_PASS: ${{ secrets.SRV1_PASS }}
         run: |
           sshpass -p "$SRV1_PASS" scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null \
             /tmp/generalbots-website.tar.gz "$SRV1_USER@$SRV1_HOST:/tmp/generalbots-website.tar.gz"
@@ -60,6 +59,10 @@ jobs:
             /tmp/remote-deploy.sh "$SRV1_USER@$SRV1_HOST:/tmp/remote-deploy.sh"
 
       - name: Run deploy on SRV1
+        env:
+          SRV1_HOST: ${{ secrets.SRV1_HOST }}
+          SRV1_USER: ${{ secrets.SRV1_USER }}
+          SRV1_PASS: ${{ secrets.SRV1_PASS }}
         run: |
           sshpass -p "$SRV1_PASS" ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null \
             "$SRV1_USER@$SRV1_HOST" "bash /tmp/remote-deploy.sh"
