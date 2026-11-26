@@ -1,12 +1,27 @@
 # Version history — generalbots.org
 
-**Current version: 1.1.0** (2026-11-26)
+**Current version: 1.2.0** (2026-11-26)
 
 This file tracks every change made to the website. Per `AGENTS.md`, any change to
 this repository must bump the version and add an entry here in the same commit.
 
 Versioning: **major** = redesign / breaking navigation change, **minor** = new
 page or section, **patch** = content, styling or bug fix.
+
+---
+
+## 1.2.0 — 2026-11-26
+
+### Added
+- Responsive mobile layout rules for the homepage: compact wrapping header with a
+  horizontally scrollable nav, and stable `gb-hero-layer` / `gb-hero-cards` hooks.
+
+### Fixed
+- Homepage no longer overflows horizontally (was 599px wide at a 390px viewport);
+  the hero now flows in the document instead of being clipped above the fold.
+- Footer edge overflow clipped on very narrow screens.
+- Verified zero horizontal page overflow on every public page at 320, 360, 390, 430,
+  600, 768, 1024 and 1280px.
 
 ---
 

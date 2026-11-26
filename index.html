@@ -407,6 +407,23 @@ a{color:#ededed;text-decoration:none}a:hover{color:#ffffff}
 @media (prefers-reduced-motion:reduce){[data-dl] [role="menu"],[data-dl] [role="menuitem"]{animation:none!important}}
 @keyframes gbHueSweep{0.00%{color:oklch(79.9% 0.15 55)}8.33%{color:oklch(79.9% 0.15 85)}16.67%{color:oklch(79.9% 0.15 115)}25.00%{color:oklch(79.9% 0.15 145)}33.33%{color:oklch(79.9% 0.15 175)}41.67%{color:oklch(79.9% 0.15 205)}50.00%{color:oklch(79.9% 0.15 235)}58.33%{color:oklch(79.9% 0.15 265)}66.67%{color:oklch(79.9% 0.15 295)}75.00%{color:oklch(79.9% 0.15 325)}83.33%{color:oklch(79.9% 0.15 355)}91.67%{color:oklch(79.9% 0.15 25)}100.00%{color:oklch(79.9% 0.15 55)}}
 @media (prefers-reduced-motion:reduce){h1 span{animation:none!important;color:#FFA65B}}
+/* Mobile: compact header, hero that flows with its content, no horizontal page scroll. */
+@media (max-width:700px){
+  header{height:auto!important;min-height:56px!important;overflow:hidden!important}
+  header>div{flex-wrap:wrap!important;gap:10px!important;padding:10px 16px!important;min-width:0!important}
+  header>div>div:empty{display:none!important}
+  header nav{flex:1 1 100%!important;min-width:0!important;width:auto!important;flex-wrap:nowrap!important;overflow-x:auto!important;gap:16px!important;font-size:12.5px!important;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  header nav::-webkit-scrollbar{display:none}
+  #gbLang{max-width:92px!important;font-size:11px!important;padding:4px 6px!important}
+  #gbTheme{padding:4px 8px!important;font-size:10px!important}
+  .gb-cta-mini{height:30px!important;padding:0 10px!important;font-size:12px!important}
+  #topo{height:auto!important;min-height:0!important;padding:32px 0!important}
+  .gb-hero-layer{position:relative!important;height:auto!important}
+  .gb-hero-inner{min-width:0!important}
+  .gb-hero-cards{flex:1 1 100%!important;min-width:0!important;padding:16px!important}
+  [data-hero-card],[data-changelog-card]{max-width:100%!important}
+  footer{overflow:hidden!important}
+}
 </style>
 </helmet>
 
@@ -428,15 +445,15 @@ a{color:#ededed;text-decoration:none}a:hover{color:#ffffff}
       </nav>
       <select id="gbLang" aria-label="Idioma" style="background:#0d0d0d;color:#ededed;border:1px solid #333;border-radius:4px;padding:4px 8px;font-size:12px"><option value="pt">Português</option><option value="en">English</option><option value="es">Español</option><option value="fr">Français</option><option value="de">Deutsch</option><option value="ja">日本語</option><option value="zh-cn">简体中文</option></select><button id="gbTheme" type="button" aria-label="Alternar modo claro" aria-pressed="false" title="Modo claro / escuro" style="background:#0d0d0d;color:#ededed;border:1px solid #333;border-radius:4px;padding:5px 10px;font-size:11px;cursor:pointer">TEMA</button>
       <div style="flex:1"></div>
-      <a href="#download" style="height:34px;display:flex;align-items:center;gap:8px;padding:0 14px;background:#ffffff;color:#0a0a0a;border-radius:6px;font-weight:600;font-size:13.5px;white-space:nowrap" style-hover="background:#e6e6e6;color:#0a0a0a"><span data-i18n="gb.cta.soon">Em breve</span></a>
+      <a href="#download" class="gb-cta-mini" style="height:34px;display:flex;align-items:center;gap:8px;padding:0 14px;background:#ffffff;color:#0a0a0a;border-radius:6px;font-weight:600;font-size:13.5px;white-space:nowrap" style-hover="background:#e6e6e6;color:#0a0a0a"><span data-i18n="gb.cta.soon">Em breve</span></a>
     </div>
   </header>
 
   <section id="topo" data-screen-label="Hero" style="position:relative;height:calc(100svh - 56px);min-height:{{ heroMinH }};overflow:hidden;border-bottom:1px solid #1f1f1f">
     <x-import component-from-global-scope="gb-prism-hero" from="assets/c27bca74-a448-447e-885c-92fb0641701f.js#/gb-prism-hero.js" intensity="{{ intensity }}" spread="{{ spread }}" speed="{{ speed }}" texture="{{ texture }}" twin="{{ twin }}" size="{{ heroSize }}" cx="{{ heroCx }}" cy="{{ heroCy }}" style="position:absolute;inset:0" hint-size="100%,100%"></x-import>
-    <div style="position:absolute;inset:0;z-index:5;pointer-events:none;display:flex;align-items:{{ heroAlign }}">
-      <div style="width:100%;max-width:1200px;margin:0 auto;padding:24px;box-sizing:border-box;display:flex;align-items:center;gap:24px;flex-wrap:wrap">
-        <div style="flex:1 1 360px;max-width:{{ heroTextW }};display:flex;flex-direction:column;gap:10px;pointer-events:none"><div data-hero-card="1" style="position:relative;z-index:2;pointer-events:auto;background:linear-gradient(150deg, rgba(255,255,255,.03), rgba(255,255,255,0) 45%, rgba(255,255,255,.015)), rgba(8,8,10,.58);-webkit-backdrop-filter:blur(48px) saturate(.85) brightness(.72);backdrop-filter:blur(48px) saturate(.85) brightness(.72);border:1px solid rgba(255,255,255,.1);border-radius:8px;box-shadow:inset 0 1px 0 rgba(255,255,255,.06)">
+    <div class="gb-hero-layer" style="position:absolute;inset:0;z-index:5;pointer-events:none;display:flex;align-items:{{ heroAlign }}">
+      <div class="gb-hero-inner" style="width:100%;max-width:1200px;margin:0 auto;padding:24px;box-sizing:border-box;display:flex;align-items:center;gap:24px;flex-wrap:wrap">
+        <div class="gb-hero-cards" style="flex:1 1 360px;max-width:{{ heroTextW }};display:flex;flex-direction:column;gap:10px;pointer-events:none"><div data-hero-card="1" style="position:relative;z-index:2;pointer-events:auto;background:linear-gradient(150deg, rgba(255,255,255,.03), rgba(255,255,255,0) 45%, rgba(255,255,255,.015)), rgba(8,8,10,.58);-webkit-backdrop-filter:blur(48px) saturate(.85) brightness(.72);backdrop-filter:blur(48px) saturate(.85) brightness(.72);border:1px solid rgba(255,255,255,.1);border-radius:8px;box-shadow:inset 0 1px 0 rgba(255,255,255,.06)">
           <div style="height:38px;display:flex;align-items:center;gap:10px;padding:0 14px;border-bottom:1px solid rgba(255,255,255,.08);font-family:'Geist Mono',ui-monospace,monospace;font-size:10.5px;letter-spacing:.06em;font-weight:600;color:#a1a1a1">
             <span style="flex:none;white-space:nowrap"><span style="font-family:'Open Sans',sans-serif;font-weight:700;letter-spacing:-0.05em;margin-right:5px;color:#8a8a8a">//</span>GENERAL BOTS LITE</span><div style="flex:1"></div><span style="flex:none;white-space:nowrap;color:#8a8a8a">VERSÃO 1.0.0</span>
           </div>
