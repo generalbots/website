@@ -5,7 +5,7 @@
 <link rel="canonical" href="https://generalbots.org/">
 <link rel="icon" href="/gb-favicon-v2.ico" sizes="any">
 <meta property="og:title" content="Build the Future Together. | General Bots"><meta property="og:description" content="Fale com a equipe General Bots.">
-<meta property="og:type" content="website"><meta name="robots" content="index, follow">
+<meta property="og:type" content="website"><meta property="og:image" content="/og-image.png"><meta name="robots" content="index, follow">
 <style>
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -49,13 +49,19 @@ blockquote{margin:0;padding:18px 22px;border-left:3px solid #ededed;background:#
 .card h3{margin:0;font-size:17px;line-height:1.3;letter-spacing:-.02em}
 .card p{margin:0;font-size:13.5px;color:#8a8a8a;line-height:1.55}
 .card .more{margin-top:auto;font-family:ui-monospace,monospace;font-size:11px;color:#ededed}
+.postimg{display:block;width:100%;max-height:320px;object-fit:cover;border:1px solid #262626;margin:0 0 14px}
 footer{margin-top:56px;padding-top:22px;border-top:1px solid #262626;display:flex;flex-wrap:wrap;gap:18px;font-size:12.5px}
 footer a{color:#a1a1a1;text-decoration:none;border-bottom:1px solid #333}
 footer a:hover{color:#fff}
 #toTop{position:fixed;right:20px;bottom:20px;z-index:20;background:#ededed;color:#0a0a0a;border:0;padding:10px 14px;font:600 12px ui-monospace,monospace;cursor:pointer;opacity:.85}
 #toTop:hover{opacity:1}
+</style><script>try{document.documentElement.dataset.theme=localStorage.getItem('gb-theme')||'system';}catch(e){document.documentElement.dataset.theme='system';}</script>
+<style>
+html[data-theme="light"] body{filter:invert(1) hue-rotate(180deg);background:#fff!important}
+html[data-theme="light"] img,html[data-theme="light"] video,html[data-theme="light"] svg{filter:invert(1) hue-rotate(180deg)}
+@media (prefers-color-scheme:light){html[data-theme="system"] body{filter:invert(1) hue-rotate(180deg);background:#fff!important}html[data-theme="system"] img,html[data-theme="system"] video,html[data-theme="system"] svg{filter:invert(1) hue-rotate(180deg)}}
 </style></head><body><div class="wrap">
-<div class="topbar"><a class="brand" href="/"><b>&lt;GB&gt;</b> GENERAL BOTS</a><select id="gbLang" aria-label="Idioma"><option value="pt">Português</option><option value="en">English</option><option value="es">Español</option><option value="fr">Français</option><option value="de">Deutsch</option><option value="ja">日本語</option><option value="zh-cn">简体中文</option></select></div>
+<div class="topbar"><a class="brand" href="/"><b>&lt;GB&gt;</b> GENERAL BOTS</a><select id="gbLang" aria-label="Idioma"><option value="pt">Português</option><option value="en">English</option><option value="es">Español</option><option value="fr">Français</option><option value="de">Deutsch</option><option value="ja">日本語</option><option value="zh-cn">简体中文</option></select><button id="gbTheme" type="button" aria-label="Alternar modo claro" aria-pressed="false" title="Modo claro / escuro" style="background:#0d0d0d;color:#ededed;border:1px solid #333;border-radius:4px;padding:6px 10px;font-size:13px;cursor:pointer">☀</button></div>
 <a class="back" href="/">← <span data-i18n="common.back_home">Voltar ao início</span></a>
 <div class="masthead"><div class="eyebrow">// <em>GENERAL BOTS</em></div>
 <h1>Build the Future Together.</h1>
@@ -63,6 +69,7 @@ footer a:hover{color:#fff}
 <div class="meta"><span>INFORMAÇÃO</span><span>ATUALIZADO 2026</span></div></div>
 <div class="content"><section class="block"><h2><span class="num">01</span><span data-i18n="contact.technical_consultation">Technical Consultation</span></h2><p data-i18n="contact.our_engineering_team_specializes_in_high_scale_ai_orchestrat">Our engineering team specializes in high-scale AI orchestration and RAG optimization. Contact us for a deep dive into how General Bots can transform your operations.</p><p>Technical &amp; Sales: info@pragmatismo.com.br</p><p>DPO &amp; Security: security@pragmatismo.com.br</p><p>International Support: +39 345 142 9009 (WhatsApp, Itália)</p><h3>Schedule a presentation</h3><p>Book a 30-minute session with one of our AI architects to see General Bots in action — available 24h.</p><p>Disponibilidade: Seg a Sex, 9h às 18h (BRT)</p></section><section class="block"><h2><span class="num">02</span><span>Global Presence</span></h2><p data-i18n="contact.headquartered_in_brazil_with_certified_partners_across_the_g">Headquartered in Brazil with certified partners across the globe.</p><p>Pragmatismo HQ Core Development &amp; R&amp;D</p><p>Enterprise Sales Managed Hosting Ops</p><p>Partner Support Customer Experience</p></section></div>
 <div class="cta"><p>Schedule a presentation — 24h</p><a class="btn" href="https://wa.me/393451429009?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20apresenta%C3%A7%C3%A3o%20do%20General%20Bots.">WHATSAPP →</a></div>
+
 <footer>
   <a href="/blog/" data-i18n="nav.blog">Blog</a>
   <a href="/privacy/" data-i18n="footer.privacy">Privacidade</a>
@@ -73,5 +80,5 @@ footer a:hover{color:#fff}
   <a href="https://docs.generalbots.org" target="_blank" rel="noopener noreferrer">Documentação ↗</a>
   <a href="https://github.com/generalbots/generalbots" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
 </footer>
-</div><button id="toTop" type="button">↑ TOPO</button>
-<script src="/js/i18n.js?v=2"></script></body></html>
+</div><button id="toTop" type="button" aria-label="Voltar ao topo">↑ TOPO</button>
+<script src="/js/i18n.js?v=2"></script><script src="/js/theme.js?v=1"></script></body></html>

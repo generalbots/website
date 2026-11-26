@@ -5,7 +5,7 @@
 <link rel="canonical" href="https://generalbots.org/">
 <link rel="icon" href="/gb-favicon-v2.ico" sizes="any">
 <meta property="og:title" content="Terms of Service. | General Bots"><meta property="og:description" content="Termos de uso e licença do General Bots.">
-<meta property="og:type" content="website"><meta name="robots" content="index, follow">
+<meta property="og:type" content="website"><meta property="og:image" content="/og-image.png"><meta name="robots" content="index, follow">
 <style>
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -49,13 +49,19 @@ blockquote{margin:0;padding:18px 22px;border-left:3px solid #ededed;background:#
 .card h3{margin:0;font-size:17px;line-height:1.3;letter-spacing:-.02em}
 .card p{margin:0;font-size:13.5px;color:#8a8a8a;line-height:1.55}
 .card .more{margin-top:auto;font-family:ui-monospace,monospace;font-size:11px;color:#ededed}
+.postimg{display:block;width:100%;max-height:320px;object-fit:cover;border:1px solid #262626;margin:0 0 14px}
 footer{margin-top:56px;padding-top:22px;border-top:1px solid #262626;display:flex;flex-wrap:wrap;gap:18px;font-size:12.5px}
 footer a{color:#a1a1a1;text-decoration:none;border-bottom:1px solid #333}
 footer a:hover{color:#fff}
 #toTop{position:fixed;right:20px;bottom:20px;z-index:20;background:#ededed;color:#0a0a0a;border:0;padding:10px 14px;font:600 12px ui-monospace,monospace;cursor:pointer;opacity:.85}
 #toTop:hover{opacity:1}
+</style><script>try{document.documentElement.dataset.theme=localStorage.getItem('gb-theme')||'system';}catch(e){document.documentElement.dataset.theme='system';}</script>
+<style>
+html[data-theme="light"] body{filter:invert(1) hue-rotate(180deg);background:#fff!important}
+html[data-theme="light"] img,html[data-theme="light"] video,html[data-theme="light"] svg{filter:invert(1) hue-rotate(180deg)}
+@media (prefers-color-scheme:light){html[data-theme="system"] body{filter:invert(1) hue-rotate(180deg);background:#fff!important}html[data-theme="system"] img,html[data-theme="system"] video,html[data-theme="system"] svg{filter:invert(1) hue-rotate(180deg)}}
 </style></head><body><div class="wrap">
-<div class="topbar"><a class="brand" href="/"><b>&lt;GB&gt;</b> GENERAL BOTS</a><select id="gbLang" aria-label="Idioma"><option value="pt">Português</option><option value="en">English</option><option value="es">Español</option><option value="fr">Français</option><option value="de">Deutsch</option><option value="ja">日本語</option><option value="zh-cn">简体中文</option></select></div>
+<div class="topbar"><a class="brand" href="/"><b>&lt;GB&gt;</b> GENERAL BOTS</a><select id="gbLang" aria-label="Idioma"><option value="pt">Português</option><option value="en">English</option><option value="es">Español</option><option value="fr">Français</option><option value="de">Deutsch</option><option value="ja">日本語</option><option value="zh-cn">简体中文</option></select><button id="gbTheme" type="button" aria-label="Alternar modo claro" aria-pressed="false" title="Modo claro / escuro" style="background:#0d0d0d;color:#ededed;border:1px solid #333;border-radius:4px;padding:6px 10px;font-size:13px;cursor:pointer">☀</button></div>
 <a class="back" href="/">← <span data-i18n="common.back_home">Voltar ao início</span></a>
 <div class="masthead"><div class="eyebrow">// <em>GENERAL BOTS</em></div>
 <h1 data-i18n="terms.terms_of_service">Terms of Service.</h1>
@@ -63,6 +69,7 @@ footer a:hover{color:#fff}
 <div class="meta"><span>INFORMAÇÃO</span><span>ATUALIZADO 2026</span></div></div>
 <div class="content"><section class="block"><h2><span class="num">01</span><span data-i18n="terms.1_usage_license">1. Usage License</span></h2><p data-i18n="terms.general_bots_is_primarily_distributed_under_the_mit_open_sou">General Bots is primarily distributed under the MIT Open Source License. Managed services and enterprise deployments are governed by specific Service Level Agreements (SLAs).</p></section><section class="block"><h2><span class="num">02</span><span data-i18n="terms.2_user_responsibilities">2. User Responsibilities</span></h2><p data-i18n="terms.users_of_the_platform_are_responsible_for">Users of the platform are responsible for:</p><ul><li data-i18n="terms.ensuring_that_ai_bot_personalities_and_responses_comply_with">Ensuring that AI bot personalities and responses comply with local laws and ethical standards.</li><li data-i18n="terms.maintaining_the_security_of_their_own_infrastructure_for_sel">Maintaining the security of their own infrastructure for self-hosted instances.</li><li data-i18n="terms.managing_their_own_api_keys_and_third_party_integration_cred">Managing their own API keys and third-party integration credentials.</li></ul></section><section class="block"><h2><span class="num">03</span><span data-i18n="terms.3_managed_services">3. Managed Services</span></h2><p data-i18n="terms.managed_hosting_provided_by_general_bots_or_its_certified_pa">Managed hosting provided by General Bots or its certified partners is subject to a 99.9% uptime guarantee, as detailed in the technical specifications for each hosting tier.</p></section><section class="block"><h2><span class="num">04</span><span data-i18n="terms.4_data_ownership">4. Data Ownership</span></h2><p data-i18n="terms.general_bots_maintains_a_customer_first_data_policy_you_r">General Bots maintains a &quot;Customer First&quot; data policy. You retain 100% ownership of your document indexes, conversation logs, and bot configurations. We do not use your data to train our global models.</p></section><section class="block"><h2><span class="num">05</span><span data-i18n="terms.5_open_source_acknowledgments">5. Open Source Acknowledgments</span></h2><p>General Bots is built on the shoulders of open-source software. Below are the core Rust packages and key infrastructure services that power the platform. All General Bots workspace crates are MIT unless otherwise noted.</p><h3>Rust Cargo Packages</h3><h3>Infrastructure Services</h3><p>Complete source at github.com/GeneralBots</p></section><section class="block"><h2><span class="num">06</span><span data-i18n="terms.legal_inquiries">Legal Inquiries</span></h2><p data-i18n="terms.for_specific_legal_questions_or_custom_enterprise_agreements">For specific legal questions or custom enterprise agreements, please contact our legal team.</p></section></div>
 <div class="cta"><p>Precisa de mais informações?</p><a class="btn" href="/contact/">FALE CONOSCO →</a></div>
+
 <footer>
   <a href="/blog/" data-i18n="nav.blog">Blog</a>
   <a href="/privacy/" data-i18n="footer.privacy">Privacidade</a>
@@ -73,5 +80,5 @@ footer a:hover{color:#fff}
   <a href="https://docs.generalbots.org" target="_blank" rel="noopener noreferrer">Documentação ↗</a>
   <a href="https://github.com/generalbots/generalbots" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
 </footer>
-</div><button id="toTop" type="button">↑ TOPO</button>
-<script src="/js/i18n.js?v=2"></script></body></html>
+</div><button id="toTop" type="button" aria-label="Voltar ao topo">↑ TOPO</button>
+<script src="/js/i18n.js?v=2"></script><script src="/js/theme.js?v=1"></script></body></html>

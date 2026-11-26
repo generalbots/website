@@ -5,7 +5,7 @@
 <link rel="canonical" href="https://generalbots.org/">
 <link rel="icon" href="/gb-favicon-v2.ico" sizes="any">
 <meta property="og:title" content="Data Sovereignty. | General Bots"><meta property="og:description" content="Como o General Bots trata dados e privacidade.">
-<meta property="og:type" content="website"><meta name="robots" content="index, follow">
+<meta property="og:type" content="website"><meta property="og:image" content="/og-image.png"><meta name="robots" content="index, follow">
 <style>
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -49,13 +49,19 @@ blockquote{margin:0;padding:18px 22px;border-left:3px solid #ededed;background:#
 .card h3{margin:0;font-size:17px;line-height:1.3;letter-spacing:-.02em}
 .card p{margin:0;font-size:13.5px;color:#8a8a8a;line-height:1.55}
 .card .more{margin-top:auto;font-family:ui-monospace,monospace;font-size:11px;color:#ededed}
+.postimg{display:block;width:100%;max-height:320px;object-fit:cover;border:1px solid #262626;margin:0 0 14px}
 footer{margin-top:56px;padding-top:22px;border-top:1px solid #262626;display:flex;flex-wrap:wrap;gap:18px;font-size:12.5px}
 footer a{color:#a1a1a1;text-decoration:none;border-bottom:1px solid #333}
 footer a:hover{color:#fff}
 #toTop{position:fixed;right:20px;bottom:20px;z-index:20;background:#ededed;color:#0a0a0a;border:0;padding:10px 14px;font:600 12px ui-monospace,monospace;cursor:pointer;opacity:.85}
 #toTop:hover{opacity:1}
+</style><script>try{document.documentElement.dataset.theme=localStorage.getItem('gb-theme')||'system';}catch(e){document.documentElement.dataset.theme='system';}</script>
+<style>
+html[data-theme="light"] body{filter:invert(1) hue-rotate(180deg);background:#fff!important}
+html[data-theme="light"] img,html[data-theme="light"] video,html[data-theme="light"] svg{filter:invert(1) hue-rotate(180deg)}
+@media (prefers-color-scheme:light){html[data-theme="system"] body{filter:invert(1) hue-rotate(180deg);background:#fff!important}html[data-theme="system"] img,html[data-theme="system"] video,html[data-theme="system"] svg{filter:invert(1) hue-rotate(180deg)}}
 </style></head><body><div class="wrap">
-<div class="topbar"><a class="brand" href="/"><b>&lt;GB&gt;</b> GENERAL BOTS</a><select id="gbLang" aria-label="Idioma"><option value="pt">Português</option><option value="en">English</option><option value="es">Español</option><option value="fr">Français</option><option value="de">Deutsch</option><option value="ja">日本語</option><option value="zh-cn">简体中文</option></select></div>
+<div class="topbar"><a class="brand" href="/"><b>&lt;GB&gt;</b> GENERAL BOTS</a><select id="gbLang" aria-label="Idioma"><option value="pt">Português</option><option value="en">English</option><option value="es">Español</option><option value="fr">Français</option><option value="de">Deutsch</option><option value="ja">日本語</option><option value="zh-cn">简体中文</option></select><button id="gbTheme" type="button" aria-label="Alternar modo claro" aria-pressed="false" title="Modo claro / escuro" style="background:#0d0d0d;color:#ededed;border:1px solid #333;border-radius:4px;padding:6px 10px;font-size:13px;cursor:pointer">☀</button></div>
 <a class="back" href="/">← <span data-i18n="common.back_home">Voltar ao início</span></a>
 <div class="masthead"><div class="eyebrow">// <em>GENERAL BOTS</em></div>
 <h1 data-i18n="privacy.data_sovereignty">Data Sovereignty.</h1>
@@ -63,6 +69,7 @@ footer a:hover{color:#fff}
 <div class="meta"><span>INFORMAÇÃO</span><span>ATUALIZADO 2026</span></div></div>
 <div class="content"><section class="block"><h2><span class="num">01</span><span data-i18n="privacy.1_information_we_collect">1. Information We Collect</span></h2><p data-i18n="privacy.we_collect_minimal_information_necessary_to_provide_and_impr">We collect minimal information necessary to provide and improve our services. This includes:</p><ul><li>Direct Communication: Information provided when you contact us via our website, email, or telephone.</li><li>Service Analytics: Anonymized usage data to help us optimize platform performance and user experience.</li><li>On-Premise Privacy: For self-hosted instances, General Bots does not collect any data. All information remains within your private infrastructure.</li></ul></section><section class="block"><h2><span class="num">02</span><span data-i18n="privacy.2_data_usage">2. Data Usage</span></h2><p data-i18n="privacy.your_information_is_used_exclusively_for">Your information is used exclusively for:</p><ul><li data-i18n="privacy.provisioning_and_maintaining_managed_hosting_environments">Provisioning and maintaining managed hosting environments.</li><li data-i18n="privacy.responding_to_technical_support_inquiries">Responding to technical support inquiries.</li><li data-i18n="privacy.platform_security_monitoring_and_threat_prevention">Platform security monitoring and threat prevention.</li></ul></section><section class="block"><h2><span class="num">03</span><span data-i18n="privacy.3_security_standards">3. Security Standards</span></h2><p data-i18n="privacy.we_implement_enterprise_grade_security_measures_including_e">We implement enterprise-grade security measures, including end-to-end encryption for communication channels and SOC 2 compliant data handling procedures for our managed services.</p></section><section class="block"><h2><span class="num">04</span><span data-i18n="privacy.4_compliance">4. Compliance</span></h2><p data-i18n="privacy.general_bots_is_designed_to_assist_organizations_in_meeting">General Bots is designed to assist organizations in meeting global data protection requirements, including LGPD (Brazil) and GDPR (Europe). Our open-source core allows for full auditability of all data processing logic.</p></section><section class="block"><h2><span class="num">05</span><span data-i18n="privacy.questions_about_privacy">Questions About Privacy?</span></h2><p data-i18n="privacy.our_data_protection_officer_is_available_to_discuss_our_secu">Our Data Protection Officer is available to discuss our security practices and your privacy rights.</p></section></div>
 <div class="cta"><p>Precisa de mais informações?</p><a class="btn" href="/contact/">FALE CONOSCO →</a></div>
+
 <footer>
   <a href="/blog/" data-i18n="nav.blog">Blog</a>
   <a href="/privacy/" data-i18n="footer.privacy">Privacidade</a>
@@ -73,5 +80,5 @@ footer a:hover{color:#fff}
   <a href="https://docs.generalbots.org" target="_blank" rel="noopener noreferrer">Documentação ↗</a>
   <a href="https://github.com/generalbots/generalbots" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
 </footer>
-</div><button id="toTop" type="button">↑ TOPO</button>
-<script src="/js/i18n.js?v=2"></script></body></html>
+</div><button id="toTop" type="button" aria-label="Voltar ao topo">↑ TOPO</button>
+<script src="/js/i18n.js?v=2"></script><script src="/js/theme.js?v=1"></script></body></html>

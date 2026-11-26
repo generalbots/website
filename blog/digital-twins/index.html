@@ -5,7 +5,7 @@
 <link rel="canonical" href="https://generalbots.org/blog/digital-twins/">
 <link rel="icon" href="/gb-favicon-v2.ico" sizes="any">
 <meta property="og:title" content="Digital Twins: Architectural Replicas of Business Logic | General Bots"><meta property="og:description" content="How digital twins — powered by sovereign AI orchestration — are transforming personal productivity and industrial system monitoring.">
-<meta property="og:type" content="website"><meta name="robots" content="index, follow">
+<meta property="og:type" content="website"><meta property="og:image" content="/og-image.png"><meta name="robots" content="index, follow">
 <style>
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -49,18 +49,25 @@ blockquote{margin:0;padding:18px 22px;border-left:3px solid #ededed;background:#
 .card h3{margin:0;font-size:17px;line-height:1.3;letter-spacing:-.02em}
 .card p{margin:0;font-size:13.5px;color:#8a8a8a;line-height:1.55}
 .card .more{margin-top:auto;font-family:ui-monospace,monospace;font-size:11px;color:#ededed}
+.postimg{display:block;width:100%;max-height:320px;object-fit:cover;border:1px solid #262626;margin:0 0 14px}
 footer{margin-top:56px;padding-top:22px;border-top:1px solid #262626;display:flex;flex-wrap:wrap;gap:18px;font-size:12.5px}
 footer a{color:#a1a1a1;text-decoration:none;border-bottom:1px solid #333}
 footer a:hover{color:#fff}
 #toTop{position:fixed;right:20px;bottom:20px;z-index:20;background:#ededed;color:#0a0a0a;border:0;padding:10px 14px;font:600 12px ui-monospace,monospace;cursor:pointer;opacity:.85}
 #toTop:hover{opacity:1}
+</style><script>try{document.documentElement.dataset.theme=localStorage.getItem('gb-theme')||'system';}catch(e){document.documentElement.dataset.theme='system';}</script>
+<style>
+html[data-theme="light"] body{filter:invert(1) hue-rotate(180deg);background:#fff!important}
+html[data-theme="light"] img,html[data-theme="light"] video,html[data-theme="light"] svg{filter:invert(1) hue-rotate(180deg)}
+@media (prefers-color-scheme:light){html[data-theme="system"] body{filter:invert(1) hue-rotate(180deg);background:#fff!important}html[data-theme="system"] img,html[data-theme="system"] video,html[data-theme="system"] svg{filter:invert(1) hue-rotate(180deg)}}
 </style></head><body data-blog-slug="digital-twins"><div class="wrap">
-<div class="topbar"><a class="brand" href="/"><b>&lt;GB&gt;</b> GENERAL BOTS</a><select id="gbLang" aria-label="Idioma"><option value="pt">Português</option><option value="en">English</option><option value="es">Español</option><option value="fr">Français</option><option value="de">Deutsch</option><option value="ja">日本語</option><option value="zh-cn">简体中文</option></select></div>
+<div class="topbar"><a class="brand" href="/"><b>&lt;GB&gt;</b> GENERAL BOTS</a><select id="gbLang" aria-label="Idioma"><option value="pt">Português</option><option value="en">English</option><option value="es">Español</option><option value="fr">Français</option><option value="de">Deutsch</option><option value="ja">日本語</option><option value="zh-cn">简体中文</option></select><button id="gbTheme" type="button" aria-label="Alternar modo claro" aria-pressed="false" title="Modo claro / escuro" style="background:#0d0d0d;color:#ededed;border:1px solid #333;border-radius:4px;padding:6px 10px;font-size:13px;cursor:pointer">☀</button></div>
 <a class="back" href="/">← <span data-i18n="common.back_home">Voltar ao início</span></a>
 <div class="masthead"><div class="eyebrow">// <em>ARTIGO</em></div>
 <h1 data-i18n="title">Digital Twins: Architectural Replicas of Business Logic</h1>
 <p class="lead" data-i18n="subtitle">How digital twins — powered by sovereign AI orchestration — are transforming personal productivity and industrial system monitoring.</p>
 <div class="meta"><span>2025-05-13</span><span data-i18n="nav.blog">BLOG</span><span>GENERAL BOTS</span></div></div>
+<img class="postimg" src="/og-image.png" alt="General Bots Lite">
 <div class="content">
 <p>Originally published on pragmatismo.com.br</p><p>A digital twin is more than a simulation — it is a virtual replica of a physical process, system, or entity that mirrors its real-world counterpart in real time. Originally developed for aerospace engineering, where NASA utilized twin models to simulate spacecraft behavior under extraterrestrial conditions, the concept has pivoted toward the enterprise. With the convergence of real-time data ingestion and Large Language Models, digital twins are now an architectural necessity for the AI-first organization.</p><p>FROM APOLLO TO ERP: NASA&#x27;s Apollo missions used digital twins to simulate spacecraft behavior in environments no human had ever experienced. Today, the same concept applies to supply chains, manufacturing lines, and customer journeys — environments no dashboard has ever fully captured.</p>
 <section class="block"><h2><span class="num">01</span>What Makes a Digital Twin?</h2>
@@ -153,5 +160,5 @@ footer a:hover{color:#fff}
   <a href="https://docs.generalbots.org" target="_blank" rel="noopener noreferrer">Documentação ↗</a>
   <a href="https://github.com/generalbots/generalbots" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
 </footer>
-</div><button id="toTop" type="button">↑ TOPO</button>
-<script src="/js/i18n.js?v=2"></script></body></html>
+</div><button id="toTop" type="button" aria-label="Voltar ao topo">↑ TOPO</button>
+<script src="/js/i18n.js?v=2"></script><script src="/js/theme.js?v=1"></script></body></html>

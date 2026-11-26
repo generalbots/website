@@ -5,7 +5,7 @@
 <link rel="canonical" href="https://generalbots.org/">
 <link rel="icon" href="/gb-favicon-v2.ico" sizes="any">
 <meta property="og:title" content="Security Bulletin. | General Bots"><meta property="og:description" content="Avisos de segurança e divulgação responsável.">
-<meta property="og:type" content="website"><meta name="robots" content="index, follow">
+<meta property="og:type" content="website"><meta property="og:image" content="/og-image.png"><meta name="robots" content="index, follow">
 <style>
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -49,13 +49,19 @@ blockquote{margin:0;padding:18px 22px;border-left:3px solid #ededed;background:#
 .card h3{margin:0;font-size:17px;line-height:1.3;letter-spacing:-.02em}
 .card p{margin:0;font-size:13.5px;color:#8a8a8a;line-height:1.55}
 .card .more{margin-top:auto;font-family:ui-monospace,monospace;font-size:11px;color:#ededed}
+.postimg{display:block;width:100%;max-height:320px;object-fit:cover;border:1px solid #262626;margin:0 0 14px}
 footer{margin-top:56px;padding-top:22px;border-top:1px solid #262626;display:flex;flex-wrap:wrap;gap:18px;font-size:12.5px}
 footer a{color:#a1a1a1;text-decoration:none;border-bottom:1px solid #333}
 footer a:hover{color:#fff}
 #toTop{position:fixed;right:20px;bottom:20px;z-index:20;background:#ededed;color:#0a0a0a;border:0;padding:10px 14px;font:600 12px ui-monospace,monospace;cursor:pointer;opacity:.85}
 #toTop:hover{opacity:1}
+</style><script>try{document.documentElement.dataset.theme=localStorage.getItem('gb-theme')||'system';}catch(e){document.documentElement.dataset.theme='system';}</script>
+<style>
+html[data-theme="light"] body{filter:invert(1) hue-rotate(180deg);background:#fff!important}
+html[data-theme="light"] img,html[data-theme="light"] video,html[data-theme="light"] svg{filter:invert(1) hue-rotate(180deg)}
+@media (prefers-color-scheme:light){html[data-theme="system"] body{filter:invert(1) hue-rotate(180deg);background:#fff!important}html[data-theme="system"] img,html[data-theme="system"] video,html[data-theme="system"] svg{filter:invert(1) hue-rotate(180deg)}}
 </style></head><body><div class="wrap">
-<div class="topbar"><a class="brand" href="/"><b>&lt;GB&gt;</b> GENERAL BOTS</a><select id="gbLang" aria-label="Idioma"><option value="pt">Português</option><option value="en">English</option><option value="es">Español</option><option value="fr">Français</option><option value="de">Deutsch</option><option value="ja">日本語</option><option value="zh-cn">简体中文</option></select></div>
+<div class="topbar"><a class="brand" href="/"><b>&lt;GB&gt;</b> GENERAL BOTS</a><select id="gbLang" aria-label="Idioma"><option value="pt">Português</option><option value="en">English</option><option value="es">Español</option><option value="fr">Français</option><option value="de">Deutsch</option><option value="ja">日本語</option><option value="zh-cn">简体中文</option></select><button id="gbTheme" type="button" aria-label="Alternar modo claro" aria-pressed="false" title="Modo claro / escuro" style="background:#0d0d0d;color:#ededed;border:1px solid #333;border-radius:4px;padding:6px 10px;font-size:13px;cursor:pointer">☀</button></div>
 <a class="back" href="/">← <span data-i18n="common.back_home">Voltar ao início</span></a>
 <div class="masthead"><div class="eyebrow">// <em>GENERAL BOTS</em></div>
 <h1 data-i18n="security.headline">Security Bulletin.</h1>
@@ -63,6 +69,7 @@ footer a:hover{color:#fff}
 <div class="meta"><span>INFORMAÇÃO</span><span>ATUALIZADO 2026</span></div></div>
 <div class="content"><p>Report privately Subscribe to feed</p><section class="block"><h2><span class="num">01</span><span data-i18n="security.status_title">No active advisories</span></h2><p data-i18n="security.status_desc">No advisories are published yet. This page is the canonical source when one is issued.</p></section><section class="block"><h2><span class="num">02</span><span data-i18n="security.report_title">Report a vulnerability</span></h2><p data-i18n="security.report_desc">Send a private report before disclosing publicly. Include affected versions, reproduction steps and impact.</p><ul><li data-i18n="security.report_step1">Email security@pragmatismo.com.br. Ask for the current PGP fingerprint in your first message if the issue is sensitive.</li><li data-i18n="security.report_step2">We acknowledge within 3 business days and triage within 10.</li><li data-i18n="security.report_step3">Coordinated disclosure: 90-day embargo, extendable by agreement.</li></ul><h3 data-i18n="security.no_bounty">No bug bounty program</h3><p data-i18n="security.no_bounty_desc">Reward budget: 0. We offer public credit only — in the hall of fame and in advisory credits.</p></section><section class="block"><h2><span class="num">03</span><span data-i18n="security.channels_title">Advisory channels</span></h2><p data-i18n="security.channels_desc">Every channel is generated from one canonical advisory source.</p><ul><li data-i18n="security.channel_csaf">CSAF 2.0 feed — for CERTs and CSIRTs</li><li data-i18n="security.channel_osv">OSV records — for dependency scanners</li><li data-i18n="security.channel_feed">RSS/Atom feed — for operators</li><li data-i18n="security.channel_offline">Offline bundle — for isolated networks</li></ul><p>security.txt · CSAF provider metadata · advisory index</p></section><section class="block"><h2><span class="num">04</span><span data-i18n="security.scope_title">Scope and supported versions</span></h2><p data-i18n="security.scope_desc">Advisories cover the server, Suite UI, desktop edition and shipped installers. Security fixes are issued for the latest release and the preceding minor.</p></section><section class="block"><h2><span class="num">05</span><span data-i18n="security.faq_title">Frequently asked questions</span></h2><p data-i18n="security.faq1_a">The forum is for discussion. Reports must go to the private security mailbox so details stay embargoed until a fix is available.</p><p data-i18n="security.faq2_a">Check the canonical URL and the published signature. The same advisory is available in CSAF and OSV form.</p></section><section class="block"><h2><span class="num">06</span><span data-i18n="blog.cta.contact">Contact</span></h2><p data-i18n="security.contact_desc">security@pragmatismo.com.br — policy and key information in /.well-known/security.txt</p></section></div>
 <div class="cta"><p>Precisa de mais informações?</p><a class="btn" href="/contact/">FALE CONOSCO →</a></div>
+
 <footer>
   <a href="/blog/" data-i18n="nav.blog">Blog</a>
   <a href="/privacy/" data-i18n="footer.privacy">Privacidade</a>
@@ -73,5 +80,5 @@ footer a:hover{color:#fff}
   <a href="https://docs.generalbots.org" target="_blank" rel="noopener noreferrer">Documentação ↗</a>
   <a href="https://github.com/generalbots/generalbots" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
 </footer>
-</div><button id="toTop" type="button">↑ TOPO</button>
-<script src="/js/i18n.js?v=2"></script></body></html>
+</div><button id="toTop" type="button" aria-label="Voltar ao topo">↑ TOPO</button>
+<script src="/js/i18n.js?v=2"></script><script src="/js/theme.js?v=1"></script></body></html>
