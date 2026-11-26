@@ -412,11 +412,13 @@ a{color:#ededed;text-decoration:none}a:hover{color:#ffffff}
   header{height:auto!important;min-height:56px!important;overflow:hidden!important}
   header>div{flex-wrap:wrap!important;gap:10px!important;padding:10px 16px!important;min-width:0!important}
   header>div>div:empty{display:none!important}
-  header nav{flex:1 1 100%!important;min-width:0!important;width:auto!important;flex-wrap:nowrap!important;overflow-x:auto!important;gap:16px!important;font-size:12.5px!important;scrollbar-width:none;-webkit-overflow-scrolling:touch}
-  header nav::-webkit-scrollbar{display:none}
-  #gbLang{max-width:92px!important;font-size:11px!important;padding:4px 6px!important}
-  #gbTheme{padding:4px 8px!important;font-size:10px!important}
-  .gb-cta-mini{height:30px!important;padding:0 10px!important;font-size:12px!important}
+  .gb-menu-toggle{display:flex!important;order:1;flex:none}
+  header nav{display:none!important}
+  header nav.is-open{display:flex!important;order:3;flex:1 1 100%!important;min-width:0!important;width:auto!important;flex-direction:column;align-items:flex-start;gap:4px!important;padding:8px 0 10px;margin-top:2px;border-top:1px solid #1f1f1f;font-size:14px!important}
+  header nav.is-open a{padding:6px 0}
+  #gbLang{max-width:88px!important;order:2;font-size:11px!important;padding:4px 6px!important}
+  #gbTheme{order:2;padding:4px 8px!important;font-size:10px!important}
+  .gb-cta-mini{order:2;height:30px!important;padding:0 8px!important;font-size:12px!important}
   #topo{height:auto!important;min-height:0!important;padding:32px 0!important}
   .gb-hero-layer{position:relative!important;height:auto!important}
   .gb-hero-inner{min-width:0!important}
@@ -435,10 +437,10 @@ a{color:#ededed;text-decoration:none}a:hover{color:#ffffff}
         <img src="assets/65d114d2-ff3c-4d4c-bed6-4746090fb970.png" alt="General Bots" style="height:18px;width:auto;display:block;filter:invert(0.93)">
         <span style="height:20px;display:flex;align-items:center;padding:0 6px;border:1px solid #333;border-radius:4px;font-family:'Geist Mono',ui-monospace,monospace;font-size:10px;letter-spacing:.12em;font-weight:600;color:#ededed">LITE</span>
       </a>
-      <nav style="display:flex;align-items:center;gap:22px;font-size:13.5px;color:#a1a1a1;flex-wrap:wrap">
+      <button id="gbMenu" class="gb-menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="gbMainNav" style="display:none;width:38px;height:34px;align-items:center;justify-content:center;flex-direction:column;gap:3px;background:#0d0d0d;color:#ededed;border:1px solid #333;border-radius:4px;cursor:pointer"><span aria-hidden="true" style="display:block;width:18px;height:2px;background:currentColor;border-radius:2px"></span><span aria-hidden="true" style="display:block;width:18px;height:2px;background:currentColor;border-radius:2px"></span><span aria-hidden="true" style="display:block;width:18px;height:2px;background:currentColor;border-radius:2px"></span></button>
+      <nav id="gbMainNav" style="display:flex;align-items:center;gap:22px;font-size:13.5px;color:#a1a1a1;flex-wrap:wrap">
         <a href="#aplicativo" style="color:#a1a1a1" style-hover="color:#ffffff"><span data-i18n="gb.nav.software">Software</span></a><a href="#oficina" style="color:#a1a1a1" style-hover="color:#ffffff"><span data-i18n="gb.nav.workshop">Oficina</span></a><a href="#maquina" style="color:#a1a1a1" style-hover="color:#ffffff"><span data-i18n="gb.nav.machine">Máquina</span></a>
         <a href="#recursos" style="color:#a1a1a1" style-hover="color:#ffffff"><span data-i18n="gb.nav.resources">Recursos</span></a>
-        <a href="/magazine/" style="color:#a1a1a1" style-hover="color:#ffffff"><span data-i18n="nav.magazine">Revistas</span></a>
         <a href="#motores" style="color:#a1a1a1" style-hover="color:#ffffff"><span data-i18n="gb.nav.engines">Motores</span></a>
         <a href="#download" style="color:#a1a1a1" style-hover="color:#ffffff"><span data-i18n="gb.nav.download">Download</span></a>
         <a href="#mantenedores" style="color:#a1a1a1" style-hover="color:#ffffff"><span data-i18n="gb.nav.maintainers">Mantenedores</span></a>
@@ -1636,4 +1638,15 @@ class Component extends DCLogic {
 </script>
 
 
+<script>
+(function(){
+  function close(){var n=document.getElementById('gbMainNav'),b=document.getElementById('gbMenu');if(n)n.classList.remove('is-open');if(b){b.setAttribute('aria-expanded','false');b.setAttribute('aria-label','Abrir menu');}}
+  document.addEventListener('click',function(e){
+    var b=e.target&&e.target.closest?e.target.closest('#gbMenu'):null;
+    if(b){var n=document.getElementById('gbMainNav');if(!n)return;var open=!n.classList.contains('is-open');n.classList.toggle('is-open',open);b.setAttribute('aria-expanded',String(open));b.setAttribute('aria-label',open?'Fechar menu':'Abrir menu');return;}
+    if(e.target&&e.target.closest&&e.target.closest('#gbMainNav a'))close();
+  },true);
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});
+})();
+</script>
 <script src="/js/i18n.js?v=2"></script><script src="/js/theme.js?v=1"></script></body></html>

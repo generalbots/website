@@ -38,6 +38,8 @@ h1{font-size:clamp(32px,4.4vw,52px);line-height:1.08;letter-spacing:-.045em;marg
 .track::-webkit-scrollbar{display:none}
 .track:focus-visible{outline:2px solid #ededed;outline-offset:4px}
 .slide{flex:0 0 100%;scroll-snap-align:center;display:grid;grid-template-columns:minmax(0,300px) minmax(0,1fr);gap:28px;padding:24px;border:1px solid #262626;background:#080808}
+.slide--feature{grid-template-columns:minmax(0,380px) minmax(0,1fr);border-color:#4a4a4a;background:linear-gradient(120deg,#141414,#080808 65%)}
+.slide--feature .info h2{font-size:clamp(30px,4vw,46px)}
 .cover-link{display:block;align-self:start;border:1px solid #333;background:#111;line-height:0;transition:border-color .15s}
 .cover-link:hover,.cover-link:focus-visible{border-color:#ededed}
 .cover{display:block;width:100%;height:auto;aspect-ratio:900/1273;object-fit:cover}
@@ -65,6 +67,7 @@ footer a:hover{color:#fff}
 @media (max-width:700px){
   .slide{grid-template-columns:1fr;gap:20px;padding:18px}
   .cover-link{max-width:260px;margin:0 auto;width:100%}
+  .slide--feature .cover-link{max-width:340px}
   .masthead{padding:24px}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.track{scroll-behavior:auto}.cover-link,.thumb,.btn{transition:none}}
@@ -84,9 +87,23 @@ html[data-theme="light"] img,html[data-theme="light"] video,html[data-theme="lig
 <div class="shelf-head"><div class="eyebrow">// <em>EDIÇÕES</em></div><div class="hint">USE ← → OU ARRASTE PARA FOLHEAR</div></div>
 <section class="carousel" role="region" aria-roledescription="carrossel" aria-label="Edições da General Bots Magazine">
   <div class="track" id="track" tabindex="0" aria-label="Use as setas do teclado para trocar de edição">
-    <article class="slide" role="group" aria-roledescription="slide" aria-label="1 de 2">
+    <article class="slide slide--feature" data-issue="2026-11" role="group" aria-roledescription="slide" aria-label="1 de 2 — novembro de 2026, em destaque">
+      <a class="cover-link" href="/magazine/viewer.html?issue=2026-11" aria-label="Ler online: edição #41, novembro de 2026">
+        <img class="cover" src="/magazine/cover-2026-11.jpg" alt="Capa da General Bots Magazine #41, novembro de 2026: O Cavalo de General Bots" width="900" height="1272" loading="eager" decoding="async">
+      </a>
+      <div class="info">
+        <div class="eyebrow">// EDIÇÃO #41 · NOVEMBRO 2026 · EM DESTAQUE</div>
+        <h2>O Cavalo de General Bots</h2>
+        <p>Sobre software livre, infraestrutura própria e custo zero — e os AI OS que rodam na sua máquina.</p>
+        <div class="actions">
+          <a class="btn" href="/magazine/viewer.html?issue=2026-11">Ler online →</a>
+          <a class="btn btn-ghost" href="/magazine/o-cavalo-de-general-bots-2026-11-41.pdf" download="o-cavalo-de-general-bots-2026-11-41.pdf">Baixar PDF · 3,1 MB ↓</a>
+        </div>
+      </div>
+    </article>
+    <article class="slide" data-issue="2026-10" role="group" aria-roledescription="slide" aria-label="2 de 2 — outubro de 2026">
       <a class="cover-link" href="/magazine/viewer.html?issue=2026-10" aria-label="Ler online: edição Nº 01, outubro de 2026">
-        <img class="cover" src="/magazine/cover-2026-10.jpg" alt="Capa da General Bots Magazine Nº 01, outubro de 2026: Preto & Branco Véio" width="900" height="1273" loading="eager" decoding="async">
+        <img class="cover" src="/magazine/cover-2026-10.jpg" alt="Capa da General Bots Magazine Nº 01, outubro de 2026: Preto & Branco Véio" width="900" height="1273" loading="lazy" decoding="async">
       </a>
       <div class="info">
         <div class="eyebrow">// Nº 01 · OUTUBRO 2026 · PRIMEIRA EDIÇÃO</div>
@@ -98,20 +115,6 @@ html[data-theme="light"] img,html[data-theme="light"] video,html[data-theme="lig
         </div>
       </div>
     </article>
-    <article class="slide" role="group" aria-roledescription="slide" aria-label="2 de 2">
-      <a class="cover-link" href="/magazine/viewer.html?issue=2026-11" aria-label="Ler online: edição #41, novembro de 2026">
-        <img class="cover" src="/magazine/cover-2026-11.jpg" alt="Capa da General Bots Magazine #41, novembro de 2026: O Cavalo de General Bots" width="900" height="1272" loading="lazy" decoding="async">
-      </a>
-      <div class="info">
-        <div class="eyebrow">// EDIÇÃO #41 · NOVEMBRO 2026</div>
-        <h2>O Cavalo de General Bots</h2>
-        <p>Sobre software livre, infraestrutura própria e custo zero — e os AI OS que rodam na sua máquina.</p>
-        <div class="actions">
-          <a class="btn" href="/magazine/viewer.html?issue=2026-11">Ler online →</a>
-          <a class="btn btn-ghost" href="/magazine/o-cavalo-de-general-bots-2026-11-41.pdf" download="o-cavalo-de-general-bots-2026-11-41.pdf">Baixar PDF · 3,1 MB ↓</a>
-        </div>
-      </div>
-    </article>
   </div>
   <div class="controls">
     <button class="arrow" id="prev" type="button" aria-label="Edição anterior">←</button>
@@ -119,8 +122,8 @@ html[data-theme="light"] img,html[data-theme="light"] video,html[data-theme="lig
     <span class="count" id="count" aria-live="polite">1 / 2</span>
   </div>
   <div class="thumbs" id="thumbs" aria-label="Escolher edição">
-    <button class="thumb" type="button" aria-label="Mostrar edição Nº 01, outubro de 2026" aria-current="true"><img src="/magazine/cover-2026-10.jpg" alt="" width="52" height="74" loading="lazy"></button>
-    <button class="thumb" type="button" aria-label="Mostrar edição #41, novembro de 2026" aria-current="false"><img src="/magazine/cover-2026-11.jpg" alt="" width="52" height="74" loading="lazy"></button>
+    <button class="thumb" type="button" aria-label="Mostrar edição #41, novembro de 2026, em destaque" aria-current="true"><img src="/magazine/cover-2026-11.jpg" alt="" width="52" height="74" loading="lazy"></button>
+    <button class="thumb" type="button" aria-label="Mostrar edição Nº 01, outubro de 2026" aria-current="false"><img src="/magazine/cover-2026-10.jpg" alt="" width="52" height="74" loading="lazy"></button>
   </div>
 </section>
 

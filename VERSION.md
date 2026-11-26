@@ -1,12 +1,25 @@
 # Version history — generalbots.org
 
-**Current version: 1.2.0** (2026-11-26)
+**Current version: 1.3.0** (2026-11-26)
 
 This file tracks every change made to the website. Per `AGENTS.md`, any change to
 this repository must bump the version and add an entry here in the same commit.
 
 Versioning: **major** = redesign / breaking navigation change, **minor** = new
 page or section, **patch** = content, styling or bug fix.
+
+---
+
+## 1.3.0 — 2026-11-26
+
+### Changed
+- Magazine link is now footer-only; removed from the homepage header navigation.
+- November 2026 (#41) is the featured, first slide with a larger cover and heading;
+  October 2026 is second. Thumbnail order and slide labels follow the new order.
+
+### Added
+- Mobile hamburger button (`#gbMenu`) that opens/closes the homepage navigation,
+  with `aria-expanded`, Escape-to-close and close-on-link-click.
 
 ---
 

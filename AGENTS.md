@@ -48,8 +48,10 @@ applies to everyone and every agent, including small fixes.
 - Use semantic HTML, one `<h1>` per page, descriptive `alt` text, visible focus,
   `aria-label` on icon-only controls, and `prefers-reduced-motion` handling.
 - External links use `target="_blank" rel="noopener noreferrer"`.
-- New sections need a menu item (homepage header nav + site-wide footer), a sitemap
-  entry and a deploy-verification path.
+- New sections need a link in the site-wide footer (add to the homepage header nav
+  only when explicitly requested), a sitemap entry and a deploy-verification path.
+- On mobile the homepage uses a hamburger button that toggles the header nav; keep
+  the toggle keyboard accessible (`aria-expanded`, Escape closes).
 
 ## Mobile friendliness
 
