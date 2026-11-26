@@ -2,6 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://generalbots.org/</loc><lastmod>2026-11-26</lastmod><priority>1.0</priority></url>
   <url><loc>https://generalbots.org/blog/</loc><lastmod>2026-11-26</lastmod><priority>0.8</priority></url>
+  <url><loc>https://generalbots.org/magazine/</loc><lastmod>2026-11-26</lastmod><priority>0.8</priority></url>
   <url><loc>https://generalbots.org/blog/general-bots-ai-templates/</loc><lastmod>2026-11-26</lastmod><priority>0.6</priority></url>
   <url><loc>https://generalbots.org/blog/llm-boom-is-over/</loc><lastmod>2026-11-26</lastmod><priority>0.6</priority></url>
   <url><loc>https://generalbots.org/blog/llm-myths-2025/</loc><lastmod>2026-11-26</lastmod><priority>0.6</priority></url>

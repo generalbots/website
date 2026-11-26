@@ -69,7 +69,7 @@ jobs:
 
       - name: Verify
         run: |
-          for path in / /blog/ /privacy/ /hosting/ /sitemap.xml /og-image.png; do
+          for path in / /blog/ /magazine/ /magazine/viewer.html /privacy/ /hosting/ /sitemap.xml /og-image.png; do
             code=$(curl -sS -o /dev/null -w '%{http_code}' --max-time 30 "https://generalbots.org$path")
             echo "$path -> $code"
             test "$code" = "200"

@@ -1,0 +1,66 @@
+<!DOCTYPE html><html lang="pt-BR"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leitura online | General Bots Magazine</title>
+<meta name="description" content="Leia online a edição da General Bots Magazine.">
+<meta name="robots" content="noindex, follow">
+<link rel="icon" href="/gb-favicon-v2.ico" sizes="any">
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#050505;color:#ededed;font-family:'Geist',ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif;line-height:1.6}
+.wrap{max-width:1100px;margin:0 auto;padding:24px 20px 64px}
+.topbar{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;padding-bottom:14px;border-bottom:1px solid #1f1f1f}
+.brand{font-family:ui-monospace,monospace;font-size:11px;letter-spacing:.14em;color:#8a8a8a;text-decoration:none}
+.brand b{color:#ededed}
+.eyebrow{font-family:ui-monospace,monospace;font-size:11px;letter-spacing:.08em;color:#8a8a8a}
+h1{font-size:clamp(24px,3.4vw,34px);line-height:1.15;letter-spacing:-.035em;margin:10px 0 6px;font-weight:600}
+.sub{color:#a1a1a1;margin:0 0 18px;font-size:14px}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 15px;background:#fff;color:#0a0a0a;font-weight:600;font-size:13px;text-decoration:none;border:0}
+.btn:hover{background:#d6d6d6}
+.btn-ghost{background:transparent;color:#ededed;border:1px solid #3a3a3a}
+.btn-ghost:hover{background:#151515}
+.frame{border:1px solid #262626;background:#0a0a0a;overflow:hidden}
+.frame iframe{display:block;width:100%;height:min(78vh,900px);border:0}
+.fallback{padding:24px;font-size:14px;color:#a1a1a1}
+.fallback a{color:#ededed}
+@media (max-width:600px){.frame iframe{height:70vh}}
+</style><script>try{document.documentElement.dataset.theme=localStorage.getItem('gb-theme')||'system';}catch(e){document.documentElement.dataset.theme='system';}</script>
+<style>
+html[data-theme="light"] body{filter:invert(1) hue-rotate(180deg);background:#fff!important}
+html[data-theme="light"] img,html[data-theme="light"] video,html[data-theme="light"] svg{filter:invert(1) hue-rotate(180deg)}
+@media (prefers-color-scheme:light){html[data-theme="system"] body{filter:invert(1) hue-rotate(180deg);background:#fff!important}html[data-theme="system"] img,html[data-theme="system"] video,html[data-theme="system"] svg{filter:invert(1) hue-rotate(180deg)}}
+</style></head><body><div class="wrap">
+<div class="topbar"><a class="brand" href="/"><b>&lt;GB&gt;</b> GENERAL BOTS MAGAZINE</a><a class="brand" href="/magazine/">← Todas as revistas</a></div>
+<div class="eyebrow" id="eyebrow">// LEITURA ONLINE</div>
+<h1 id="title">General Bots Magazine</h1>
+<p class="sub" id="sub">Folheie a edição completa no navegador.</p>
+<div class="actions">
+  <a class="btn btn-ghost" href="/magazine/">← Voltar às revistas</a>
+  <a class="btn" id="download" href="#" download>↓ Baixar PDF</a>
+</div>
+<div class="frame">
+  <iframe id="pdf" title="Leitor de PDF da General Bots Magazine" src="about:blank">
+    <p class="fallback">Seu navegador não exibe PDFs embutidos. <a id="fallback-link" href="#">Abra o PDF em uma nova aba</a>.</p>
+  </iframe>
+</div>
+</div>
+<script>
+(function(){
+  var issues={
+    '2026-10':{title:'Nº 01 — Outubro 2026 · Preto & Branco Véio',eyebrow:'// Nº 01 · OUTUBRO 2026 · PRIMEIRA EDIÇÃO',sub:'Soberania, invisibilidade e custo zero — a primeira edição da General Bots Magazine.',file:'general-bots-magazine-2026-10-01.pdf'},
+    '2026-11':{title:'#41 — Novembro 2026 · O Cavalo de General Bots',eyebrow:'// EDIÇÃO #41 · NOVEMBRO 2026',sub:'Sobre software livre, infraestrutura própria e custo zero — e os AI OS que rodam na sua máquina.',file:'o-cavalo-de-general-bots-2026-11-41.pdf'}
+  };
+  var key=new URLSearchParams(location.search).get('issue');
+  var issue=issues[key]||issues['2026-11'];
+  document.getElementById('eyebrow').textContent=issue.eyebrow;
+  document.getElementById('title').textContent=issue.title;
+  document.getElementById('sub').textContent=issue.sub;
+  document.title=issue.title+' | General Bots Magazine';
+  var url='/magazine/'+issue.file;
+  document.getElementById('download').href=url;
+  document.getElementById('download').setAttribute('download',issue.file);
+  var fallback=document.getElementById('fallback-link');if(fallback)fallback.href=url;
+  document.getElementById('pdf').src=url+'#view=FitH';
+})();
+</script>
+<script src="/js/theme.js?v=1"></script></body></html>
