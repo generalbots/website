@@ -1,0 +1,74 @@
+name: Deploy website to SRV1 proxy
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: website-srv1-deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      SRV1_HOST: ${{ vars.SRV1_HOST }}
+      SRV1_USER: ${{ vars.SRV1_USER }}
+      SRV1_PASS: ${{ secrets.SRV1_PASS }}
+      SITE_ROOT: /opt/gbo/data/websites/generalbots.org
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install sshpass
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq sshpass
+
+      - name: Package site
+        run: tar czf /tmp/generalbots-website.tar.gz --exclude=.git -C "$GITHUB_WORKSPACE" .
+
+      - name: Build remote deploy script
+        run: |
+          cat > /tmp/remote-deploy.sh <<'REMOTE'
+          #!/bin/bash
+          set -e
+          sudo incus file push /tmp/generalbots-website.tar.gz proxy/tmp/generalbots-website.tar.gz >/dev/null
+          sudo incus exec proxy -- bash -lc 'set -e
+            STAMP=$(date +%Y%m%d-%H%M%S)
+            S=/tmp/gb-site-stage
+            rm -rf "$S"
+            mkdir -p "$S"
+            tar xzf /tmp/generalbots-website.tar.gz -C "$S"
+            if [ -d /opt/gbo/data/websites/generalbots.org/.well-known ]; then
+              cp -a /opt/gbo/data/websites/generalbots.org/.well-known "$S"/
+            fi
+            if [ -d /opt/gbo/data/websites/generalbots.org ]; then
+              cp -a /opt/gbo/data/websites/generalbots.org "/tmp/generalbots.org.bak-$STAMP"
+            fi
+            rm -rf /opt/gbo/data/websites/generalbots.org
+            mv "$S" /opt/gbo/data/websites/generalbots.org
+            chown -R gbuser:gbuser /opt/gbo/data/websites/generalbots.org
+            echo "DEPLOYED stamp=$STAMP files=$(find /opt/gbo/data/websites/generalbots.org -type f | wc -l)"'
+          REMOTE
+          chmod +x /tmp/remote-deploy.sh
+
+      - name: Upload tarball and deploy script
+        run: |
+          sshpass -p "$SRV1_PASS" scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null \
+            /tmp/generalbots-website.tar.gz "$SRV1_USER@$SRV1_HOST:/tmp/generalbots-website.tar.gz"
+          sshpass -p "$SRV1_PASS" scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null \
+            /tmp/remote-deploy.sh "$SRV1_USER@$SRV1_HOST:/tmp/remote-deploy.sh"
+
+      - name: Run deploy on SRV1
+        run: |
+          sshpass -p "$SRV1_PASS" ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null \
+            "$SRV1_USER@$SRV1_HOST" "bash /tmp/remote-deploy.sh"
+
+      - name: Verify
+        run: |
+          for path in / /blog/ /privacy/ /hosting/ /sitemap.xml /og-image.png; do
+            code=$(curl -sS -o /dev/null -w '%{http_code}' --max-time 30 "https://generalbots.org$path")
+            echo "$path -> $code"
+            test "$code" = "200"
+          done
+          curl -sf --max-time 30 https://generalbots.org/ | grep -q "General Bots Lite"
