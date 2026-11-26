@@ -15,8 +15,12 @@ async function apply(lang){
  }catch(e){console.warn('[i18n]',e);}
 }
 window.gbSetLang=apply;
+// Delegated listener survives React/DC re-rendering of the header select.
+document.addEventListener('change',function(e){
+ if(e.target&&e.target.id==='gbLang')apply(e.target.value);
+},true);
 document.addEventListener('DOMContentLoaded',function(){
- var sel=document.getElementById('gbLang'); if(sel){sel.value=detect();sel.addEventListener('change',function(){apply(this.value);});}
+ var sel=document.getElementById('gbLang'); if(sel)sel.value=detect();
  apply(detect());
  var t=document.getElementById('toTop'); if(t)t.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
 });
