@@ -1,6 +1,6 @@
 (function(){
 var LANGS=["pt", "en", "es", "fr", "de", "ja", "zh-cn"];
-function detect(){var p=new URLSearchParams(location.search).get('lang');if(p&&LANGS.indexOf(p)>=0)return p;var s=localStorage.getItem('gb-lang');return s&&LANGS.indexOf(s)>=0?s:(navigator.language||'pt').split('-')[0].toLowerCase();}
+function detect(){var p=new URLSearchParams(location.search).get('lang');if(p&&LANGS.indexOf(p)>=0)return p;var s=localStorage.getItem('gb-lang');return s&&LANGS.indexOf(s)>=0?s:'pt';}
 function text(el,key,dict){if(!key||!dict[key])return;if(el.dataset.i18nHtml!==undefined)el.innerHTML=dict[key];else el.textContent=dict[key];}
 async function apply(lang){
  if(LANGS.indexOf(lang)<0)lang='pt';
