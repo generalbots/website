@@ -1,12 +1,22 @@
 # Version history — generalbots.org
 
-**Current version: 1.3.1** (2026-11-27)
+**Current version: 1.4.0** (2026-11-27)
 
 This file tracks every change made to the website. Per `AGENTS.md`, any change to
 this repository must bump the version and add an entry here in the same commit.
 
 Versioning: **major** = redesign / breaking navigation change, **minor** = new
 page or section, **patch** = content, styling or bug fix.
+
+---
+
+## 1.4.0 — 2026-11-27
+
+### Fixed
+- Homepage demo panels no longer get clipped on phones: the chat, oficina, máquina
+  and motores mocks now stack vertically below ~700px instead of sitting side by side.
+- Verified the live site at 320/360/390/430/600/768/1024/1280px with no horizontal
+  page scroll, and confirmed the mobile menu and magazine carousel still work.
 
 ---
 
