@@ -1,12 +1,28 @@
 # Version history — generalbots.org
 
-**Current version: 1.4.0** (2026-11-27)
+**Current version: 1.5.0** (2026-11-27)
 
 This file tracks every change made to the website. Per `AGENTS.md`, any change to
 this repository must bump the version and add an entry here in the same commit.
 
 Versioning: **major** = redesign / breaking navigation change, **minor** = new
 page or section, **patch** = content, styling or bug fix.
+
+---
+
+## 1.5.0 — 2026-11-27
+
+### Added
+- Italian (`it`), Korean (`ko`) and Russian (`ru`) to the language selector, the
+  head language detector, `js/i18n.js` and the translation dictionaries (site and blog).
+- Small loading spinner shown while translations are applied.
+
+### Fixed
+- Removed the source-language flash: pages now start hidden via
+  `html[data-i18n-loading]` and are revealed only after the dictionary is applied and
+  the x-dc runtime has mounted.
+- Translated previously missing runtime-interpolated strings such as
+  "SUA MÁQUINA VIRTUAL", "Ajustes", "ESCALA", "OPACIDADE", "Sobre" and others.
 
 ---
 

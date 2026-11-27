@@ -53,6 +53,19 @@ applies to everyone and every agent, including small fixes.
 - On mobile the homepage uses a hamburger button that toggles the header nav; keep
   the toggle keyboard accessible (`aria-expanded`, Escape closes).
 
+## i18n
+
+- Supported languages: pt, en, es, fr, de, ja, zh-cn, it, ko, ru. Every new language
+  needs an option in every language `<select>`, an entry in `LANGS` in `js/i18n.js`,
+  an entry in the head language detector, `lang/<code>.json` and the blog post files
+  under `lang/blog/<slug>/<code>.json`.
+- Pages start with `html[data-i18n-loading]` set by an inline `<head>` script; the
+  body stays hidden (with a small spinner) until translations are applied and, on
+  x-dc pages, the runtime has mounted. Never remove that gate — the source language
+  must not flash before the target language is applied.
+- Translation index: `lang/_index.json` maps source strings to keys; dynamic x-dc
+  text is wrapped and translated by `autoWrap`/MutationObserver in `js/i18n.js`.
+
 ## Mobile friendliness
 
 Every page must remain usable down to a 360px viewport:
