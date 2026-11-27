@@ -7,7 +7,7 @@
 
   const VERT = 'attribute vec2 a_position;void main(){gl_Position=vec4(a_position,0.0,1.0);}';
   const FRAG = `precision highp float;
-uniform vec2 u_resolution;uniform vec2 u_pointer;uniform vec2 u_origin;uniform float u_time;uniform float u_dpr;uniform float u_intensity;uniform float u_spread;
+uniform vec2 u_resolution;uniform vec2 u_pointer;uniform vec2 u_origin;uniform float u_time;uniform float u_dpr;uniform float u_intensity;uniform float u_light;uniform float u_spread;
 float hash12(vec2 p){vec3 p3=fract(vec3(p.xyx)*0.1031);p3+=dot(p3,p3.yzx+33.33);return fract((p3.x+p3.y)*p3.z);}
 float valueNoise(vec2 p){vec2 i=floor(p);vec2 f=fract(p);f=f*f*(3.0-2.0*f);return mix(mix(hash12(i),hash12(i+vec2(1.0,0.0)),f.x),mix(hash12(i+vec2(0.0,1.0)),hash12(i+vec2(1.0,1.0)),f.x),f.y);}
 float bellNoise(vec2 px){float d=hash12(px+vec2(17.0,31.0))+hash12(px+vec2(47.0,13.0))+hash12(px+vec2(71.0,59.0))+hash12(px+vec2(101.0,7.0));return (d-2.0)*0.5;}
@@ -43,7 +43,15 @@ void main(){vec2 uv=gl_FragCoord.xy/u_resolution.xy;float aspect=u_resolution.x/
  float lit=plusM*reveal*u_intensity;
  color+=mix(sc,vec3(1.0),0.45)*lit*0.85;alpha+=lit*0.5;
  float cg=exp(-length(local)*31.0)*0.68*u_intensity;color+=vec3(1.0,0.98,0.92)*cg;alpha+=cg;
- gl_FragColor=vec4(color,clamp(alpha,0.0,0.94));}`;
+ if(u_light>0.5){
+ vec3 c=vec3(0.0);float o=0.0;
+ float hl=clamp(halo*0.6,0.0,1.0);c=hc*hl;o=hl;
+ float sb=clamp(ba*1.1+inner*0.5,0.0,1.0);vec3 scol=clamp(spec*1.05,0.0,1.0);c=scol*sb+c*(1.0-sb);o=sb+o*(1.0-sb);
+ float dots=clamp(lit*0.8,0.0,1.0);vec3 dc=mix(sc,vec3(1.0),0.55);c=dc*dots+c*(1.0-dots);o=dots+o*(1.0-dots);
+ float bs=clamp(exp(-abs(wx)*45.0)*wm*smoothstep(0.02,0.14,distance(p,prism))*u_intensity*0.5,0.0,1.0);float gt=fract(wa*0.45-u_time*0.035);vec3 bgc=mix(gt<0.88?spectrum(gt/0.88):mix(spectrum(1.0),spectrum(0.0),smoothstep(0.0,1.0,(gt-0.88)/0.12)),vec3(1.0),0.5);bs*=0.6;c=bgc*bs+c*(1.0-bs);o=bs+o*(1.0-bs);
+ float bw=clamp(inc*1.1,0.0,1.0);c=vec3(1.0)*bw+c*(1.0-bw);o=bw+o*(1.0-bw);
+ float cgw=clamp(cg,0.0,1.0);c=vec3(1.0)*cgw+c*(1.0-cgw);o=cgw+o*(1.0-cgw);
+ gl_FragColor=vec4(c,clamp(o,0.0,0.97));}else{gl_FragColor=vec4(color,clamp(alpha,0.0,0.94));}}`;
 
   const A = (id, p) => (window.__resources && window.__resources[id]) || p;
   const CSS = () => `
@@ -102,7 +110,22 @@ img{position:absolute;display:block;max-width:none;pointer-events:none;user-sele
 .cog.o{-webkit-mask:url('${A('hCogO', 'assets/gb-cog-outer.png')}') center/contain no-repeat;mask:url('${A('hCogO', 'assets/gb-cog-outer.png')}') center/contain no-repeat;animation:gbSpin 18s linear infinite}
 .cog.i{-webkit-mask:url('${A('hCogI', 'assets/gb-cog-inner.png')}') center/contain no-repeat;mask:url('${A('hCogI', 'assets/gb-cog-inner.png')}') center/contain no-repeat}
 @keyframes gbSpin{to{transform:rotate(360deg)}}@keyframes gbSpinR{to{transform:rotate(-360deg)}}
-@media (prefers-reduced-motion:reduce){.cog{animation:none}}`;
+@media (prefers-reduced-motion:reduce){.cog{animation:none}}
+:host([theme="light"]){background:#eeeeec}
+:host([theme="light"]) .tex{background:#eeeeec}
+:host([theme="light"]) .tex::after{display:block;background:url('${A('hFundoL', BASE + 'fundo-claro.jpg')}') center/cover;opacity:1;filter:brightness(.965)}
+:host([theme="light"]) .pat{z-index:2;pointer-events:none;background-image:radial-gradient(circle,rgba(0,0,0,.5) 1px,transparent 1.6px),linear-gradient(rgba(0,0,0,.09) 1px,transparent 1px),linear-gradient(90deg,rgba(0,0,0,.09) 1px,transparent 1px);background-size:72px 72px,72px 72px,72px 72px;background-position:-36px -36px,-0.5px -0.5px,-0.5px -0.5px;
+ -webkit-mask-image:radial-gradient(ellipse 75% 85% at 55% 45%,rgba(0,0,0,.95) 0%,rgba(0,0,0,.7) 35%,rgba(0,0,0,.3) 65%,transparent 92%);mask-image:radial-gradient(ellipse 75% 85% at 55% 45%,rgba(0,0,0,.95) 0%,rgba(0,0,0,.7) 35%,rgba(0,0,0,.3) 65%,transparent 92%)}
+:host([theme="light"]) .pp{z-index:2;pointer-events:none;background-image:radial-gradient(circle,rgba(0,0,0,.7) 1px,transparent 1.6px),linear-gradient(rgba(0,0,0,.12) 1px,transparent 1px),linear-gradient(90deg,rgba(0,0,0,.12) 1px,transparent 1px);background-size:72px 72px,72px 72px,72px 72px;background-position:-36px -36px,-0.5px -0.5px,-0.5px -0.5px;opacity:var(--pa,0);-webkit-mask-image:radial-gradient(circle at var(--pcx,58%) var(--pcy,45%),transparent calc(var(--pr,0px) - 140px),#000 var(--pr,0px),transparent calc(var(--pr,0px) + 60px));mask-image:radial-gradient(circle at var(--pcx,58%) var(--pcy,45%),transparent calc(var(--pr,0px) - 140px),#000 var(--pr,0px),transparent calc(var(--pr,0px) + 60px))}
+:host([theme="light"]) .flw{top:52.4%}
+:host([theme="light"]) .disc{background:rgba(255,255,255,.55);backdrop-filter:blur(10px) saturate(1.1);-webkit-backdrop-filter:blur(10px) saturate(1.1)}
+:host([theme="light"]) .cog{background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .22 0'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)'/%3E%3C/svg%3E") 0 0/60px 60px,#171717;backdrop-filter:none;-webkit-backdrop-filter:none}
+:host([theme="light"]) .gear.hi{opacity:0}
+:host([theme="light"]) .ring{background:#3a3a3a}
+:host([theme="light"]) .g2:not(.line){background-color:#fafafa}
+:host([theme="light"]) .g2.line{background:rgba(0,0,0,.28)}
+:host([theme="light"]) .vig{background:radial-gradient(circle at 50% 47%,transparent 22%,rgb(235 235 233/.2) 62%,rgb(235 235 233/.6) 115%)}
+`;
 
   class GbPrismHero extends HTMLElement {
     static get observedAttributes() { return ['intensity', 'spread', 'speed', 'size', 'cx', 'cy', 'texture']; }
@@ -212,7 +235,7 @@ img{position:absolute;display:block;max-width:none;pointer-events:none;user-sele
       const buf = gl.createBuffer(); gl.bindBuffer(gl.ARRAY_BUFFER, buf);
       gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1, -1, 1, -1, -1, 1, -1, 1, 1, -1, 1, 1]), gl.STATIC_DRAW);
       const U = n => gl.getUniformLocation(pr, n), pos = gl.getAttribLocation(pr, 'a_position');
-      const u = { res: U('u_resolution'), ptr: U('u_pointer'), org: U('u_origin'), t: U('u_time'), dpr: U('u_dpr'), i: U('u_intensity'), s: U('u_spread') };
+      const u = { res: U('u_resolution'), ptr: U('u_pointer'), org: U('u_origin'), t: U('u_time'), dpr: U('u_dpr'), i: U('u_intensity'), s: U('u_spread'), l: U('u_light') };
       const rm = matchMedia('(prefers-reduced-motion: reduce)');
       const p = { x: REST.x, y: REST.y }, o = { x: .5, y: .5 };
       let clock = 0, prev = 0, vis = true;
@@ -258,7 +281,7 @@ img{position:absolute;display:block;max-width:none;pointer-events:none;user-sele
         gl.enable(gl.BLEND); gl.blendFunc(gl.ONE, gl.ONE_MINUS_SRC_ALPHA); gl.useProgram(pr);
         gl.enableVertexAttribArray(pos); gl.bindBuffer(gl.ARRAY_BUFFER, buf); gl.vertexAttribPointer(pos, 2, gl.FLOAT, false, 0, 0);
         gl.uniform2f(u.res, c.width, c.height); gl.uniform2f(u.ptr, p.x, p.y); gl.uniform2f(u.org, o.x, o.y);
-        gl.uniform1f(u.t, clock); gl.uniform1f(u.dpr, dpr); gl.uniform1f(u.i, this.num('intensity', 1)); gl.uniform1f(u.s, this.num('spread', 1) * breath);
+        gl.uniform1f(u.t, clock); gl.uniform1f(u.dpr, dpr); gl.uniform1f(u.i, this.num('intensity', 1)); gl.uniform1f(u.l, this.getAttribute('theme') === 'light' ? 1 : 0); gl.uniform1f(u.s, this.num('spread', 1) * breath);
         gl.drawArrays(gl.TRIANGLES, 0, 6);
         if (vis) this.raf = requestAnimationFrame(frame);
       };
