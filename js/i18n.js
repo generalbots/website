@@ -88,16 +88,23 @@ async function apply(lang){
    var d=base,slug=document.body.dataset.blogSlug;
    if(slug&&slug!=='blog'){try{var post=await (await fetch('/lang/blog/'+slug+'/'+lang+'.json')).json();d=Object.assign({},base,post);}catch(e){}}
    DICT=d; LANG=lang; DONE=new WeakSet();
+   syncSelect();
    await loadIndex();
    autoWrap(document.documentElement);
    applyTo(document.documentElement);
    document.documentElement.lang=(lang==='pt'?'pt-BR':lang);
    try{localStorage.setItem('gb-lang',lang);}catch(e){}
-   var sel=document.getElementById('gbLang'); if(sel)sel.value=lang;
+   syncSelect();
    revealWhenReady();
   }catch(e){console.warn('[i18n]',e);reveal();}
 }
 window.gbSetLang=apply;
+// The homepage runtime re-renders the header after translations are applied,
+// resetting the select to its first option. Keep it on the active locale.
+function syncSelect(){
+  var sel=document.getElementById('gbLang');
+  if(sel&&sel.value!==LANG)sel.value=LANG;
+}
 // Delegated listener survives React/DC re-rendering of the header select.
 document.addEventListener('change',function(e){
   if(e.target&&e.target.id==='gbLang')apply(e.target.value);
@@ -108,6 +115,7 @@ function observe(){
   if(!window.MutationObserver)return;
   var mo=new MutationObserver(function(muts){
    if(!Object.keys(DICT).length)return;
+   syncSelect();
    muts.forEach(function(m){
     m.addedNodes.forEach(function(n){
      if(n.nodeType!==1)return;
@@ -121,8 +129,10 @@ function observe(){
 }
 function start(){
   if(STARTED)return; STARTED=true;
-  var sel=document.getElementById('gbLang'); if(sel)sel.value=detect();
-  apply(detect());
+  var initial=detect();
+  var sel=document.getElementById('gbLang'); if(sel)sel.value=initial;
+  LANG=initial;
+  apply(initial);
   var t=document.getElementById('toTop'); if(t)t.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
   observe();
 }

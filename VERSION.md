@@ -1,12 +1,22 @@
 # Version history — generalbots.org
 
-**Current version: 1.5.1** (2026-11-27)
+**Current version: 1.5.2** (2026-11-27)
 
 This file tracks every change made to the website. Per `AGENTS.md`, any change to
 this repository must bump the version and add an entry here in the same commit.
 
 Versioning: **major** = redesign / breaking navigation change, **minor** = new
 page or section, **patch** = content, styling or bug fix.
+
+---
+
+## 1.5.2 — 2026-11-27
+
+### Fixed
+- The homepage x-dc runtime re-renders the header after translations are applied,
+  which reset the language combo to Português even on `/en` and other locale URLs.
+  `js/i18n.js` now keeps `#gbLang` in sync with the active locale during the apply
+  step and when the runtime replaces header nodes, so the combo stays correct.
 
 ---
 
