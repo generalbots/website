@@ -1,12 +1,22 @@
 # Version history — generalbots.org
 
-**Current version: 1.6.1** (2026-11-27)
+**Current version: 1.6.2** (2026-11-27)
 
 This file tracks every change made to the website. Per `AGENTS.md`, any change to
 this repository must bump the version and add an entry here in the same commit.
 
 Versioning: **major** = redesign / breaking navigation change, **minor** = new
 page or section, **patch** = content, styling or bug fix.
+
+---
+
+## 1.6.2 — 2026-11-27
+
+### Fixed
+- All Lite download CTAs now point to the pinned `gblite-1.0.0` Windows MSI
+  (`generalbots-gblite-1.0.0-windows-x64.msi`) instead of "Coming soon". The
+  header, hero, changelog and the Windows platform tile use named i18n keys in
+  all ten locale catalogs; macOS and Linux remain clearly marked as unavailable.
 
 ---
 

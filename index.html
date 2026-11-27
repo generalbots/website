@@ -442,7 +442,7 @@ a{color:#ededed;text-decoration:none}a:hover{color:#ffffff}
 </nav>
 <select aria-label="Idioma" data-i18n-attr="aria-label:auto.009433886003" id="gbLang" style="background:#0d0d0d;color:#ededed;border:1px solid #333;border-radius:4px;padding:4px 8px;font-size:12px"><option value="pt">Português</option><option value="en">English</option><option value="es">Español</option><option value="fr">Français</option><option value="de">Deutsch</option><option value="ja">日本語</option><option value="zh-cn">简体中文</option><option value="it">Italiano</option><option value="ko">한국어</option><option value="ru">Русский</option></select><button aria-label="Alternar modo claro" aria-pressed="false" data-i18n="auto.41227a56e518" data-i18n-attr="aria-label:auto.62c92c84f854,title:auto.e4bf401038f8" id="gbTheme" style="background:#0d0d0d;color:#ededed;border:1px solid #333;border-radius:4px;padding:5px 10px;font-size:11px;cursor:pointer" title="Modo claro / escuro" type="button">TEMA</button>
 <div style="flex:1"></div>
-<a class="gb-cta-mini" href="#download" style="height:34px;display:flex;align-items:center;gap:8px;padding:0 14px;background:#ffffff;color:#0a0a0a;border-radius:6px;font-weight:600;font-size:13.5px;white-space:nowrap" style-hover="background:#e6e6e6;color:#0a0a0a"><span data-i18n="gb.cta.soon">Em breve</span></a>
+<a class="gb-cta-mini" href="https://github.com/generalbots/generalbots/releases/download/gblite-1.0.0/generalbots-gblite-1.0.0-windows-x64.msi" target="_blank" rel="noopener noreferrer" style="height:34px;display:flex;align-items:center;gap:8px;padding:0 14px;background:#ffffff;color:#0a0a0a;border-radius:6px;font-weight:600;font-size:13.5px;white-space:nowrap" style-hover="background:#e6e6e6;color:#0a0a0a"><span data-i18n="gb.cta.download">Baixar grátis</span></a>
 </div>
 </header>
 <section data-screen-label="Hero" id="topo" style="position:relative;height:calc(100svh - 56px);min-height:{{ heroMinH }};overflow:hidden;border-bottom:1px solid #1f1f1f">
@@ -464,7 +464,7 @@ a{color:#ededed;text-decoration:none}a:hover{color:#ffffff}
 <div style="width:12px;flex:none;border-right:1px solid rgba(255,255,255,.08)"></div>
 <div style="flex:1;min-width:0;display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding:14px 14px 14px 20px">
 <div data-dl="1" style="position:relative;display:flex">
-<a href="#download" style="height:42px;display:flex;align-items:center;gap:10px;padding:0 16px;background:#ffffff;color:#0a0a0a;border-radius:6px 0 0 6px;font-weight:600;font-size:14.5px" style-hover="background:#e6e6e6;color:#0a0a0a"><svg height="15" sc-camel-view-box="0 0 24 24" style="display:block;fill:none;stroke:currentColor;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round" width="15"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg><span data-i18n="gb.cta.soon">Em breve</span></a>
+<a href="https://github.com/generalbots/generalbots/releases/download/gblite-1.0.0/generalbots-gblite-1.0.0-windows-x64.msi" target="_blank" rel="noopener noreferrer" style="height:42px;display:flex;align-items:center;gap:10px;padding:0 16px;background:#ffffff;color:#0a0a0a;border-radius:6px 0 0 6px;font-weight:600;font-size:14.5px" style-hover="background:#e6e6e6;color:#0a0a0a"><svg height="15" sc-camel-view-box="0 0 24 24" style="display:block;fill:none;stroke:currentColor;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round" width="15"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg><span data-i18n="gb.cta.download">Baixar grátis</span></a>
 <button aria-expanded="{{ dlOpen }}" aria-label="Outras versões" data-i18n-attr="aria-label:auto.b21c4b3ae5db" sc-camel-on-click="{{ toggleDl }}" style="width:40px;height:42px;display:grid;place-items:center;padding:0;background:#ffffff;color:#0a0a0a;border:none;border-left:1px solid rgba(0,0,0,.14);border-radius:0 6px 6px 0;cursor:pointer" style-hover="background:#e6e6e6"><svg height="14" sc-camel-view-box="0 0 24 24" style="display:block;fill:none;stroke:currentColor;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;transition:transform .2s;transform:{{ dlChevron }}" width="14"><path d="m6 9 6 6 6-6"></path></svg></button>
 <sc-if hint-placeholder-val="{{ false }}" value="{{ dlOpen }}">
 <div role="menu" style="position:absolute;z-index:30;left:0;top:calc(100% + 6px);transform-origin:top left;animation:gbMenuIn .22s cubic-bezier(.22,1,.36,1) both;width:min(360px,80vw);background:#0a0a0a;border:1px solid #262626;border-radius:8px;box-shadow:0 24px 60px -12px rgba(0,0,0,.85);overflow:hidden">
@@ -473,7 +473,7 @@ a{color:#ededed;text-decoration:none}a:hover{color:#ffffff}
 <a href="{{ p.href }}" role="menuitem" sc-camel-on-click="{{ closeDl }}" style="animation:gbRowIn .28s cubic-bezier(.22,1,.36,1) both;animation-delay:{{ p.dly }};display:flex;align-items:center;gap:12px;padding:10px 12px;border-bottom:1px solid #161616;background:{{ p.menuBg }};color:#ededed;cursor:{{ p.cursor }}" style-hover="background:#141414;color:#ededed">
 <div style="width:32px;height:32px;flex:none;display:grid;place-items:center;border:1px solid #333;border-radius:6px;color:#ededed"><svg height="16" sc-camel-view-box="0 0 24 24" style="display:block;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round" width="16"><path d="{{ p.icon }}"></path></svg></div>
 <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:1px"><span style="font-size:14px;font-weight:600">{{ p.name }}</span><span style="font-size:12.5px;color:#8a8a8a;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ p.req }}</span></div>
-<span style="flex:none;font-family:'Geist Mono',ui-monospace,monospace;font-size:10px;letter-spacing:.06em;font-weight:600;color:{{ p.tagColor }}">{{ p.tag }}</span>
+<span style="flex:none;font-family:'Geist Mono',ui-monospace,monospace;font-size:10px;letter-spacing:.06em;font-weight:600;color:{{ p.tagColor }}" data-i18n="{{ p.tagKey }}">{{ p.tag }}</span>
 </a>
 </sc-for>
 <div data-i18n="auto.f4e59893be08" style="height:32px;display:flex;align-items:center;padding:0 12px;font-family:'Geist Mono',ui-monospace,monospace;font-size:10.5px;letter-spacing:.06em;font-weight:600;color:#737373">VERSÃO 1.0.0 · LICENÇA MIT</div>
@@ -556,7 +556,7 @@ a{color:#ededed;text-decoration:none}a:hover{color:#ffffff}
 </div>
 <div style="flex:none;display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding:12px 16px;border-top:1px solid #1f1f1f;background:#0f0f0f">
 <span data-i18n="auto.2fb0c2c53ebf" style="flex:1 1 200px;font-family:'Geist Mono',ui-monospace,monospace;font-size:10.5px;letter-spacing:.06em;font-weight:600;color:#737373">WINDOWS 10 E 11 · 64 BITS · LICENÇA MIT</span>
-<span aria-disabled="true" style="height:38px;display:flex;align-items:center;gap:10px;padding:0 14px;background:#ffffff;color:#0a0a0a;border-radius:6px;font-weight:600;font-size:14px;cursor:default"><svg height="14" sc-camel-view-box="0 0 24 24" style="display:block;fill:currentColor" width="14"><path d="M3 5.5 10 4.5v7H3zM11 4.4 21 3v8.5H11zM3 12.5h7v7l-7-1zM11 12.5h10V21l-10-1.4z"></path></svg><span data-i18n="auto.fea80bf9d6a8">Em breve para Windows</span></span>
+<a href="https://github.com/generalbots/generalbots/releases/download/gblite-1.0.0/generalbots-gblite-1.0.0-windows-x64.msi" target="_blank" rel="noopener noreferrer" style="height:38px;display:flex;align-items:center;gap:10px;padding:0 14px;background:#ffffff;color:#0a0a0a;border-radius:6px;font-weight:600;font-size:14px" style-hover="background:#e6e6e6;color:#0a0a0a"><svg height="14" sc-camel-view-box="0 0 24 24" style="display:block;fill:currentColor" width="14"><path d="M3 5.5 10 4.5v7H3zM11 4.4 21 3v8.5H11zM3 12.5h7v7l-7-1zM11 12.5h10V21l-10-1.4z"></path></svg><span data-i18n="gb.cta.windows">Baixar para Windows</span></a>
 </div>
 </div>
 </div>
@@ -1109,8 +1109,8 @@ a{color:#ededed;text-decoration:none}a:hover{color:#ffffff}
 <div style="max-width:1200px;margin:0 auto;border-left:1px solid #1f1f1f;border-right:1px solid #1f1f1f;box-sizing:border-box;display:flow-root">
 <div style="padding:88px 32px 40px;display:flex;flex-direction:column;gap:14px;max-width:720px">
 <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;letter-spacing:.06em;font-weight:600;color:#a1a1a1"><span style="font-family:'Open Sans',sans-serif;font-weight:700;letter-spacing:-0.05em;margin-right:5px;color:#8a8a8a">//</span><span data-i18n="auto.564af6829fbc">DOWNLOAD</span></span>
-<h2 data-i18n="auto.dc8aa192d54f" style="margin:0;font-size:clamp(30px,3.6vw,44px);line-height:1.08;font-weight:600;letter-spacing:-0.04em;text-wrap:balance">General Bots Lite: em breve.</h2>
-<p data-i18n="auto.9bf64e834421" style="margin:0;font-size:16px;color:#a1a1a1;max-width:560px;text-wrap:pretty">Grátis e de código aberto. Os instaladores para Windows, macOS e Linux chegam em breve.</p>
+<h2 data-i18n="gb.download.heading" style="margin:0;font-size:clamp(30px,3.6vw,44px);line-height:1.08;font-weight:600;letter-spacing:-0.04em;text-wrap:balance">General Bots Lite: disponível para Windows.</h2>
+<p data-i18n="gb.download.lead" style="margin:0;font-size:16px;color:#a1a1a1;max-width:560px;text-wrap:pretty">Grátis e de código aberto. Baixe o instalador para Windows 10 e 11 (64 bits). Versões para macOS e Linux em breve.</p>
 <a href="/code-signing/" style="align-self:flex-start;display:inline-flex;align-items:center;gap:6px;font-size:13px;color:#ededed;text-decoration:none;border-bottom:1px solid #3a3a3a;padding-bottom:3px" style-hover="border-color:#ededed"><span data-i18n="code-signing.download_link">Política de assinatura de código</span><span aria-hidden="true" style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px">→</span></a>
 </div>
 <div style="padding:0 32px 32px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:16px">
@@ -1120,9 +1120,9 @@ a{color:#ededed;text-decoration:none}a:hover{color:#ffffff}
 <div style="display:flex;align-items:center;gap:12px">
 <div style="width:36px;height:36px;display:grid;place-items:center;border:1px solid #333;border-radius:6px;color:#ededed"><svg height="18" sc-camel-view-box="0 0 24 24" style="display:block;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round" width="18"><path d="{{ p.icon }}"></path></svg></div>
 <div style="flex:1;display:flex;flex-direction:column;gap:1px"><span style="font-size:17px;font-weight:600">{{ p.name }}</span><span style="font-size:13px;color:#8a8a8a">{{ p.req }}</span></div>
-<span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:10px;letter-spacing:.06em;font-weight:600;color:{{ p.tagColor }}">{{ p.tag }}</span>
+<span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:10px;letter-spacing:.06em;font-weight:600;color:{{ p.tagColor }}" data-i18n="{{ p.tagKey }}">{{ p.tag }}</span>
 </div>
-<span aria-disabled="true" style="height:40px;display:flex;align-items:center;justify-content:center;gap:8px;border-radius:6px;font-weight:600;font-size:14px;background:{{ p.btnBg }};color:{{ p.btnColor }};border:1px solid {{ p.btnBd }};cursor:{{ p.cursor }}">{{ p.cta }}</span>
+<sc-if hint-placeholder-val="{{ false }}" value="{{ p.canDownload }}"><a href="{{ p.href }}" target="_blank" rel="noopener noreferrer" style="height:40px;display:flex;align-items:center;justify-content:center;gap:8px;border-radius:6px;font-weight:600;font-size:14px;background:{{ p.btnBg }};color:{{ p.btnColor }};border:1px solid {{ p.btnBd }};cursor:pointer" style-hover="background:#e6e6e6;color:#0a0a0a"><span data-i18n="{{ p.ctaKey }}">{{ p.cta }}</span></a></sc-if><sc-if hint-placeholder-val="{{ false }}" value="{{ p.soon }}"><span aria-disabled="true" style="height:40px;display:flex;align-items:center;justify-content:center;gap:8px;border-radius:6px;font-weight:600;font-size:14px;background:{{ p.btnBg }};color:{{ p.btnColor }};border:1px solid {{ p.btnBd }};cursor:default"><span data-i18n="{{ p.ctaKey }}">{{ p.cta }}</span></span></sc-if>
 <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:10.5px;letter-spacing:.04em;font-weight:600;color:#8a8a8a">{{ p.meta }}</span>
 </div>
 </sc-for>
@@ -1259,6 +1259,7 @@ a{color:#ededed;text-decoration:none}a:hover{color:#ffffff}
 </div>
 </x-dc>
 <script data-dc-script="" data-props='{"intensity":{"editor":"range","default":1,"min":0.3,"max":1.6,"step":0.05,"tsType":"number","section":"Luz"},"spread":{"editor":"range","default":1.8,"min":0.4,"max":2.4,"step":0.05,"tsType":"number","section":"Luz"},"speed":{"editor":"range","default":1,"min":0,"max":3,"step":0.1,"tsType":"number","section":"Luz"},"texture":{"editor":"range","default":0.8,"min":0,"max":1,"step":0.05,"tsType":"number","section":"Fundo"},"twin":{"editor":"boolean","default":true,"tsType":"boolean","section":"Engrenagem"}}' type="text/x-dc">
+const GB_LITE_MSI = "https://github.com/generalbots/generalbots/releases/download/gblite-1.0.0/generalbots-gblite-1.0.0-windows-x64.msi";
 class Component extends DCLogic {
   state = { w: typeof window !== "undefined" ? window.innerWidth : 1440 };
   componentDidMount() {
@@ -1559,10 +1560,12 @@ class Component extends DCLogic {
     ].map(([name, sub, where, n, cost], i, a) => ({ name, sub, where, cost, meter: meter(n), bd: i === a.length - 1 ? "none" : "1px solid #262626" }));
     const plat = (name, req, icon, main, meta) => ({
       name, req, icon, main, meta,
-      tag: "EM BREVE", tagColor: main ? "#ededed" : "#8a8a8a",
-      cta: "Em breve",
+      tag: main ? "DISPONÍVEL" : "EM BREVE", tagColor: main ? "#ededed" : "#8a8a8a",
+      tagKey: main ? "gb.platform.available" : "gb.platform.soon",
+      cta: main ? "Baixar grátis" : "Em breve", ctaKey: main ? "gb.cta.download" : "gb.cta.soon",
+      canDownload: main, soon: !main,
       btnBg: main ? "#ffffff" : "transparent", btnColor: main ? "#0a0a0a" : "#ededed", btnBd: main ? "#ffffff" : "#333333",
-      bg: main ? "#0a0a0a" : "#000000", menuBg: main ? "#111111" : "transparent", href: "#download", cursor: "default"
+      bg: main ? "#0a0a0a" : "#000000", menuBg: main ? "#111111" : "transparent", href: main ? GB_LITE_MSI : "#download", cursor: main ? "pointer" : "default"
     });
     return {
       ...hero,
