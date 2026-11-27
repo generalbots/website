@@ -1,12 +1,31 @@
 # Version history — generalbots.org
 
-**Current version: 1.5.2** (2026-11-27)
+**Current version: 1.6.0** (2026-11-27)
 
 This file tracks every change made to the website. Per `AGENTS.md`, any change to
 this repository must bump the version and add an entry here in the same commit.
 
 Versioning: **major** = redesign / breaking navigation change, **minor** = new
 page or section, **patch** = content, styling or bug fix.
+
+---
+
+## 1.6.0 — 2026-11-27
+
+### Added
+- New `/code-signing/` policy page with the exact SignPath attribution sentence,
+  generic signing-team roles (owner, authorized signer, manual approver) and a link
+  to the privacy policy. Named `data-i18n` keys were added to all ten locale
+  catalogs; no personal names or contact details appear on the page.
+- Visible links to the code-signing policy in the homepage footer, in the homepage
+  `#download` section and in the privacy-page footer; sitemap and deploy smoke test
+  updated with `/code-signing/`.
+
+### Fixed
+- Renamed the stale `home.trust_agpl` locale key to `home.trust_mit` in every
+  catalog; the Russian value now reads `MIT` instead of an auto-translated
+  institution name. The remaining AGPL mention in `index.html` is a correct
+  third-party attribution for MinIO and is intentionally kept.
 
 ---
 
