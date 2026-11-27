@@ -1,11 +1,11 @@
-<!DOCTYPE html><html lang="pt-BR"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Protocol Imperialism: The OAuth2 Trap | General Bots</title>
-<meta name="description" content="How proprietary authentication standards are weaponized to marginalize independent communication infrastructure.">
-<link rel="canonical" href="https://generalbots.org/blog/marginalized-e-mail-services/">
-<link rel="icon" href="/gb-favicon-v2.ico" sizes="any">
-<meta property="og:title" content="Protocol Imperialism: The OAuth2 Trap | General Bots"><meta property="og:description" content="How proprietary authentication standards are weaponized to marginalize independent communication infrastructure.">
-<meta property="og:type" content="website"><meta property="og:image" content="/og-image.png"><meta name="robots" content="index, follow">
+<!DOCTYPE html><html lang="pt-BR"><head><meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title data-i18n="auto.04d959aa371b">Protocol Imperialism: The OAuth2 Trap | General Bots</title>
+<meta content="How proprietary authentication standards are weaponized to marginalize independent communication infrastructure." data-i18n="auto.13e1e5be5bd5" data-i18n-attr="content" name="description"/>
+<link href="https://generalbots.org/blog/marginalized-e-mail-services/" rel="canonical"/>
+<link href="/gb-favicon-v2.ico" rel="icon" sizes="any"/>
+<meta content="Protocol Imperialism: The OAuth2 Trap | General Bots" data-i18n="auto.04d959aa371b" data-i18n-attr="content" property="og:title"/><meta content="How proprietary authentication standards are weaponized to marginalize independent communication infrastructure." data-i18n="auto.13e1e5be5bd5" data-i18n-attr="content" property="og:description"/>
+<meta content="website" property="og:type"/><meta content="/og-image.png" property="og:image"/><meta content="index, follow" name="robots"/>
 <style>
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -61,45 +61,45 @@ html[data-theme="light"] body{filter:invert(1) hue-rotate(180deg);background:#ff
 html[data-theme="light"] img,html[data-theme="light"] video,html[data-theme="light"] svg{filter:invert(1) hue-rotate(180deg)}
 @media (prefers-color-scheme:light){html[data-theme="system"] body{filter:invert(1) hue-rotate(180deg);background:#fff!important}html[data-theme="system"] img,html[data-theme="system"] video,html[data-theme="system"] svg{filter:invert(1) hue-rotate(180deg)}}
 </style></head><body data-blog-slug="marginalized-e-mail-services"><div class="wrap">
-<div class="topbar"><a class="brand" href="/"><b>&lt;GB&gt;</b> GENERAL BOTS</a><select id="gbLang" aria-label="Idioma"><option value="pt">Português</option><option value="en">English</option><option value="es">Español</option><option value="fr">Français</option><option value="de">Deutsch</option><option value="ja">日本語</option><option value="zh-cn">简体中文</option></select><button id="gbTheme" type="button" aria-label="Alternar modo claro" aria-pressed="false" title="Modo claro / escuro" style="background:#0d0d0d;color:#ededed;border:1px solid #333;border-radius:4px;padding:6px 10px;font-size:11px;cursor:pointer">TEMA</button></div>
+<div class="topbar"><a class="brand" href="/"><b>&lt;GB&gt;</b> GENERAL BOTS</a><select aria-label="Idioma" data-i18n-attr="aria-label:auto.009433886003" id="gbLang"><option value="pt">Português</option><option value="en">English</option><option value="es">Español</option><option value="fr">Français</option><option value="de">Deutsch</option><option value="ja">日本語</option><option value="zh-cn">简体中文</option></select><button aria-label="Alternar modo claro" aria-pressed="false" data-i18n="auto.41227a56e518" data-i18n-attr="aria-label:auto.62c92c84f854,title:auto.e4bf401038f8" id="gbTheme" style="background:#0d0d0d;color:#ededed;border:1px solid #333;border-radius:4px;padding:6px 10px;font-size:11px;cursor:pointer" title="Modo claro / escuro" type="button">TEMA</button></div>
 <a class="back" href="/">← <span data-i18n="common.back_home">Voltar ao início</span></a>
-<div class="masthead"><div class="eyebrow">// <em>ARTIGO</em></div>
+<div class="masthead"><div class="eyebrow">// <em data-i18n="auto.9afa0e47f21c">ARTIGO</em></div>
 <h1 data-i18n="title">Protocol Imperialism: The OAuth2 Trap</h1>
 <p class="lead" data-i18n="subtitle">How proprietary authentication standards are weaponized to marginalize independent communication infrastructure.</p>
-<div class="meta"><span>April 18, 2025</span><span data-i18n="nav.blog">BLOG</span><span>GENERAL BOTS</span></div></div>
-<img class="postimg" src="/og-image.png" alt="General Bots Lite">
+<div class="meta"><span data-i18n="auto.0036440a8c28">April 18, 2025</span><span data-i18n="nav.blog">BLOG</span><span>GENERAL BOTS</span></div></div>
+<img alt="General Bots Lite" class="postimg" src="/og-image.png"/>
 <div class="content">
-<p>Originally published on pragmatismo.com.br</p><p>Email was designed as a federated, decentralized protocol — one of the last remaining bastions of the original internet ethos. However, the rise of &quot;Managed Identity&quot; (OAuth2) has created a new form of protocol imperialism . From a didactic perspective, OAuth2 is presented as a security upgrade, but in practice, it acts as a gatekeeper that favors Big Tech incumbents at the expense of sovereign servers.</p>
-<section class="block"><h2><span class="num">01</span>The Artificial Security Delta</h2>
-<p>Corporations often block &quot;Less Secure Apps&quot; — those using standard IMAP/SMTP — to force users into OAuth2-compliant clients. While the technical rationale is to prevent credential theft, the implementation is biased: it whitelists corporate domains while flagging independent servers as &quot;untrusted.&quot;</p><p>OAuth2 eliminates password-based authentication, reducing credential theft and phishing risk. Token-based access with scoped permissions is objectively more secure than password-based IMAP.</p><p>The same providers that block &quot;less secure apps&quot; maintain privileged access for their own clients. Independent email servers — even those running perfectly secure configurations — are systematically excluded. The security argument is selectively applied.</p>
+<p data-i18n="auto.41aec6b3294f">Originally published on pragmatismo.com.br</p><p data-i18n="auto.971cf7769e82">Email was designed as a federated, decentralized protocol — one of the last remaining bastions of the original internet ethos. However, the rise of "Managed Identity" (OAuth2) has created a new form of protocol imperialism . From a didactic perspective, OAuth2 is presented as a security upgrade, but in practice, it acts as a gatekeeper that favors Big Tech incumbents at the expense of sovereign servers.</p>
+<section class="block"><h2><span class="num">01</span><span data-i18n="auto.1cbcb5d914c1">The Artificial Security Delta</span></h2>
+<p data-i18n="auto.907ddf02ba4c">Corporations often block "Less Secure Apps" — those using standard IMAP/SMTP — to force users into OAuth2-compliant clients. While the technical rationale is to prevent credential theft, the implementation is biased: it whitelists corporate domains while flagging independent servers as "untrusted."</p><p data-i18n="auto.03a814ec8795">OAuth2 eliminates password-based authentication, reducing credential theft and phishing risk. Token-based access with scoped permissions is objectively more secure than password-based IMAP.</p><p data-i18n="auto.284ae49afa69">The same providers that block "less secure apps" maintain privileged access for their own clients. Independent email servers — even those running perfectly secure configurations — are systematically excluded. The security argument is selectively applied.</p>
 </section>
-<section class="block"><h2><span class="num">02</span>Building the Sovereign Response</h2>
-<p>The General Bots approach to communication sovereignty involves building our own high-fidelity connectors. Instead of relying on proprietary whitelists, we leverage three strategies:</p>
+<section class="block"><h2><span class="num">02</span><span data-i18n="auto.97fc6881013d">Building the Sovereign Response</span></h2>
+<p data-i18n="auto.bd5d4aa17148">The General Bots approach to communication sovereignty involves building our own high-fidelity connectors. Instead of relying on proprietary whitelists, we leverage three strategies:</p>
 </section>
-<section class="block"><h2><span class="num">03</span>The Economics of Protocol Imperialism</h2>
-<p>The shift to OAuth2-as-gatekeeper has real economic consequences. Organizations running independent mail servers face:</p><p>Forced migration to corporate email platforms or constant compatibility workarounds to maintain independent server access.</p><p>Once dependent on OAuth2 providers, switching costs rise dramatically. The protocol becomes a moat around the platform.</p><p>OAuth2 flows route through corporate identity servers, creating audit trails of who communicates with whom, when, and through which applications.</p>
-<blockquote>&quot;In the General Bots era, true value is found in systems that are Independent by Design. By acknowledging the OAuth2 trap, organizations can build on a foundation of genuine sovereignty — not permissioned access to someone else&#x27;s infrastructure.&quot;</blockquote>
+<section class="block"><h2><span class="num">03</span><span data-i18n="auto.6b5f11187086">The Economics of Protocol Imperialism</span></h2>
+<p data-i18n="auto.980941a84f09">The shift to OAuth2-as-gatekeeper has real economic consequences. Organizations running independent mail servers face:</p><p data-i18n="auto.4a9182b4cd99">Forced migration to corporate email platforms or constant compatibility workarounds to maintain independent server access.</p><p data-i18n="auto.40601bffb2b4">Once dependent on OAuth2 providers, switching costs rise dramatically. The protocol becomes a moat around the platform.</p><p data-i18n="auto.815f947c1f99">OAuth2 flows route through corporate identity servers, creating audit trails of who communicates with whom, when, and through which applications.</p>
+<blockquote data-i18n="auto.3c68ffe5b15d">"In the General Bots era, true value is found in systems that are Independent by Design. By acknowledging the OAuth2 trap, organizations can build on a foundation of genuine sovereignty — not permissioned access to someone else's infrastructure."</blockquote>
 </section>
-<section class="block"><h2><span class="num">04</span>Reclaim Your Email Infrastructure</h2>
-<p>We are not just building bots; we are reclaiming the digital commons. One protocol at a time.</p>
+<section class="block"><h2><span class="num">04</span><span data-i18n="auto.140a06acfcaa">Reclaim Your Email Infrastructure</span></h2>
+<p data-i18n="auto.45e650dc31f6">We are not just building bots; we are reclaiming the digital commons. One protocol at a time.</p>
 </section>
 </div>
 <div class="cta"><p data-i18n="common.back_to_blog">Voltar para todos os artigos.</p>
-<a class="btn" href="/blog/" data-i18n="common.back_to_blog">← Blog</a></div>
+<a class="btn" data-i18n="common.back_to_blog" href="/blog/">← Blog</a></div>
 <footer>
-  <a href="https://sentient.net.br" target="_blank" rel="noopener noreferrer">Sentient ↗</a>
-  <a href="https://pragmatismo.com.br" target="_blank" rel="noopener noreferrer">Pragmatismo ↗</a>
-  <a href="https://mapagency.com.br" target="_blank" rel="noopener noreferrer">Map Agency ↗</a>
-  <a href="https://darioexecutivesales.com" target="_blank" rel="noopener noreferrer">Dário Executive Sales ↗</a>
-  <a href="https://oerlabs.com.br" target="_blank" rel="noopener noreferrer">OER Labs ↗</a>
-  <a href="/blog/" data-i18n="nav.blog">Blog</a><a href="/magazine/" data-i18n="nav.magazine">Revistas</a>
-  <a href="/privacy/" data-i18n="footer.privacy">Privacidade</a>
-  <a href="/terms/" data-i18n="footer.terms">Termos</a>
-  <a href="/security/">Segurança</a>
-  <a href="/contact/" data-i18n="nav.contact">Contato</a>
-  <a href="/hosting/">Hosting</a>
-  <a href="https://docs.generalbots.org" target="_blank" rel="noopener noreferrer">Documentação ↗</a>
-  <a href="https://github.com/generalbots/generalbots" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+<a data-i18n="auto.986871b2e286" href="https://sentient.net.br" rel="noopener noreferrer" target="_blank">Sentient ↗</a>
+<a data-i18n="auto.1895deb4a6b4" href="https://pragmatismo.com.br" rel="noopener noreferrer" target="_blank">Pragmatismo ↗</a>
+<a data-i18n="auto.e84bdcd56da4" href="https://mapagency.com.br" rel="noopener noreferrer" target="_blank">Map Agency ↗</a>
+<a data-i18n="auto.458125333a3c" href="https://darioexecutivesales.com" rel="noopener noreferrer" target="_blank">Dário Executive Sales ↗</a>
+<a data-i18n="auto.6d28d08cd510" href="https://oerlabs.com.br" rel="noopener noreferrer" target="_blank">OER Labs ↗</a>
+<a data-i18n="nav.blog" href="/blog/">Blog</a><a data-i18n="nav.magazine" href="/magazine/">Revistas</a>
+<a data-i18n="footer.privacy" href="/privacy/">Privacidade</a>
+<a data-i18n="footer.terms" href="/terms/">Termos</a>
+<a data-i18n="auto.27a0286c70df" href="/security/">Segurança</a>
+<a data-i18n="nav.contact" href="/contact/">Contato</a>
+<a data-i18n="auto.8766cde61214" href="/hosting/">Hosting</a>
+<a data-i18n="auto.9584a968ebe0" href="https://docs.generalbots.org" rel="noopener noreferrer" target="_blank">Documentação ↗</a>
+<a data-i18n="auto.548b068fc17c" href="https://github.com/generalbots/generalbots" rel="noopener noreferrer" target="_blank">GitHub ↗</a>
 </footer>
-</div><button id="toTop" type="button" aria-label="Voltar ao topo">↑ TOPO</button>
-<script src="/js/i18n.js?v=2"></script><script src="/js/theme.js?v=1"></script></body></html>
+</div><button aria-label="Voltar ao topo" data-i18n="auto.25fea8b21fad" data-i18n-attr="aria-label:auto.a740f5b83d92" id="toTop" type="button">↑ TOPO</button>
+<script src="/js/i18n.js?v=3"></script><script src="/js/theme.js?v=1"></script></body></html>

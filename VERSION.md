@@ -1,12 +1,33 @@
 # Version history — generalbots.org
 
-**Current version: 1.3.0** (2026-11-26)
+**Current version: 1.3.1** (2026-11-27)
 
 This file tracks every change made to the website. Per `AGENTS.md`, any change to
 this repository must bump the version and add an entry here in the same commit.
 
 Versioning: **major** = redesign / breaking navigation change, **minor** = new
 page or section, **patch** = content, styling or bug fix.
+
+---
+
+## 1.3.1 — 2026-11-27
+
+### Fixed
+- Every visible string on every page is now routed through the i18n system. All 22
+  blog posts had their article bodies, headings, dates and "related" cards hardcoded
+  in English; they are now translated in all seven supported languages.
+- Section pages (`/contact/`, `/hosting/`, `/privacy/`, `/security/`, `/terms/`,
+  `/magazine/`, `/blog/`) and the homepage now translate their previously hardcoded
+  labels, buttons, footers, SEO `<title>`/meta descriptions and ARIA labels.
+- Added the missing `common.back_home` and `nav.magazine` translation keys and fixed
+  the untranslated `common.back_to_blog` value in all language files.
+- `i18n.js` now supports attribute translation (`data-i18n-attr`), array values and
+  dynamically mounted content (MutationObserver), so x-dc components render in the
+  selected language too.
+
+### Added
+- `lang/_index.json` maps source strings to i18n keys so text rendered at runtime is
+  translated automatically.
 
 ---
 

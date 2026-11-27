@@ -1,11 +1,11 @@
-<!DOCTYPE html><html lang="pt-BR"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Cost-Effective Bot Orchestration: The Hybrid Strategy | General Bots</title>
-<meta name="description" content="How General Bots reduces LLM operational costs by up to 80% through didactic routing and local processing modes — without sacrificing conversational quality.">
-<link rel="canonical" href="https://generalbots.org/blog/cost-effective-bot-orchestration/">
-<link rel="icon" href="/gb-favicon-v2.ico" sizes="any">
-<meta property="og:title" content="Cost-Effective Bot Orchestration: The Hybrid Strategy | General Bots"><meta property="og:description" content="How General Bots reduces LLM operational costs by up to 80% through didactic routing and local processing modes — without sacrificing conversational quality.">
-<meta property="og:type" content="website"><meta property="og:image" content="/og-image.png"><meta name="robots" content="index, follow">
+<!DOCTYPE html><html lang="pt-BR"><head><meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title data-i18n="auto.9691fc272f1f">Cost-Effective Bot Orchestration: The Hybrid Strategy | General Bots</title>
+<meta content="How General Bots reduces LLM operational costs by up to 80% through didactic routing and local processing modes — without sacrificing conversational quality." data-i18n="auto.152facba8a49" data-i18n-attr="content" name="description"/>
+<link href="https://generalbots.org/blog/cost-effective-bot-orchestration/" rel="canonical"/>
+<link href="/gb-favicon-v2.ico" rel="icon" sizes="any"/>
+<meta content="Cost-Effective Bot Orchestration: The Hybrid Strategy | General Bots" data-i18n="auto.9691fc272f1f" data-i18n-attr="content" property="og:title"/><meta content="How General Bots reduces LLM operational costs by up to 80% through didactic routing and local processing modes — without sacrificing conversational quality." data-i18n="auto.152facba8a49" data-i18n-attr="content" property="og:description"/>
+<meta content="website" property="og:type"/><meta content="/og-image.png" property="og:image"/><meta content="index, follow" name="robots"/>
 <style>
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -61,89 +61,89 @@ html[data-theme="light"] body{filter:invert(1) hue-rotate(180deg);background:#ff
 html[data-theme="light"] img,html[data-theme="light"] video,html[data-theme="light"] svg{filter:invert(1) hue-rotate(180deg)}
 @media (prefers-color-scheme:light){html[data-theme="system"] body{filter:invert(1) hue-rotate(180deg);background:#fff!important}html[data-theme="system"] img,html[data-theme="system"] video,html[data-theme="system"] svg{filter:invert(1) hue-rotate(180deg)}}
 </style></head><body data-blog-slug="cost-effective-bot-orchestration"><div class="wrap">
-<div class="topbar"><a class="brand" href="/"><b>&lt;GB&gt;</b> GENERAL BOTS</a><select id="gbLang" aria-label="Idioma"><option value="pt">Português</option><option value="en">English</option><option value="es">Español</option><option value="fr">Français</option><option value="de">Deutsch</option><option value="ja">日本語</option><option value="zh-cn">简体中文</option></select><button id="gbTheme" type="button" aria-label="Alternar modo claro" aria-pressed="false" title="Modo claro / escuro" style="background:#0d0d0d;color:#ededed;border:1px solid #333;border-radius:4px;padding:6px 10px;font-size:11px;cursor:pointer">TEMA</button></div>
+<div class="topbar"><a class="brand" href="/"><b>&lt;GB&gt;</b> GENERAL BOTS</a><select aria-label="Idioma" data-i18n-attr="aria-label:auto.009433886003" id="gbLang"><option value="pt">Português</option><option value="en">English</option><option value="es">Español</option><option value="fr">Français</option><option value="de">Deutsch</option><option value="ja">日本語</option><option value="zh-cn">简体中文</option></select><button aria-label="Alternar modo claro" aria-pressed="false" data-i18n="auto.41227a56e518" data-i18n-attr="aria-label:auto.62c92c84f854,title:auto.e4bf401038f8" id="gbTheme" style="background:#0d0d0d;color:#ededed;border:1px solid #333;border-radius:4px;padding:6px 10px;font-size:11px;cursor:pointer" title="Modo claro / escuro" type="button">TEMA</button></div>
 <a class="back" href="/">← <span data-i18n="common.back_home">Voltar ao início</span></a>
-<div class="masthead"><div class="eyebrow">// <em>ARTIGO</em></div>
+<div class="masthead"><div class="eyebrow">// <em data-i18n="auto.9afa0e47f21c">ARTIGO</em></div>
 <h1 data-i18n="title">Cost-Effective Bot Orchestration: The Hybrid Strategy</h1>
 <p class="lead" data-i18n="subtitle">How General Bots reduces LLM operational costs by up to 80% through didactic routing and local processing modes — without sacrificing conversational quality.</p>
 <div class="meta"><span>2025-04-20</span><span data-i18n="nav.blog">BLOG</span><span>GENERAL BOTS</span></div></div>
-<img class="postimg" src="/og-image.png" alt="General Bots Lite">
+<img alt="General Bots Lite" class="postimg" src="/og-image.png"/>
 <div class="content">
-<p>Originally published on pragmatismo.com.br</p><p>In the enterprise environment, the primary barrier to AI adoption is not intelligence — it is unit economics. A naive strategy that routes every user interaction to a state-of-the-art LLM is financially unsustainable at scale. General Bots solves this through a four-tier hybrid orchestration architecture designed to maximize conversational quality while minimizing token egress.</p><p>THE MATH: If every employee sends 10 AI queries per day at $0.03 per query, a 1,000-person organization spends $600 per day — $156,000 per year — on inference costs alone. Most of those queries could be handled by Tier 1 or Tier 2 at near-zero cost.</p>
-<section class="block"><h2><span class="num">01</span>The Four Tiers of Hybrid Orchestration</h2>
-<h3>Tier 1 Deterministic</h3>
-<p>Zero Token</p><p>Exact match, regex, FAQ routing. Milliseconds. No API cost.</p>
-<h3>Tier 2 Semantic</h3>
-<p>RAG-Local</p><p>Advanced RAG over local embeddings. Flexible matching, low cost.</p>
-<h3>Tier 3 NLP</h3>
-<p>Intent Classification</p><p>Traditional ML models for routing and triage. No LLM needed.</p>
-<h3>Tier 4 Generative</h3>
-<p>Full LLM</p><p>Only for high-level reasoning, nuance, and creative synthesis.</p>
+<p data-i18n="auto.41aec6b3294f">Originally published on pragmatismo.com.br</p><p data-i18n="auto.de0f535a9d0b">In the enterprise environment, the primary barrier to AI adoption is not intelligence — it is unit economics. A naive strategy that routes every user interaction to a state-of-the-art LLM is financially unsustainable at scale. General Bots solves this through a four-tier hybrid orchestration architecture designed to maximize conversational quality while minimizing token egress.</p><p data-i18n="auto.20d0b5bffb36">THE MATH: If every employee sends 10 AI queries per day at $0.03 per query, a 1,000-person organization spends $600 per day — $156,000 per year — on inference costs alone. Most of those queries could be handled by Tier 1 or Tier 2 at near-zero cost.</p>
+<section class="block"><h2><span class="num">01</span><span data-i18n="auto.6c771a06eaed">The Four Tiers of Hybrid Orchestration</span></h2>
+<h3 data-i18n="auto.55c9e90e5dd9">Tier 1 Deterministic</h3>
+<p data-i18n="auto.27e0bd7bcc45">Zero Token</p><p data-i18n="auto.3443e498b5b7">Exact match, regex, FAQ routing. Milliseconds. No API cost.</p>
+<h3 data-i18n="auto.64cf37fd7f86">Tier 2 Semantic</h3>
+<p data-i18n="auto.5d48a2e2f31e">RAG-Local</p><p data-i18n="auto.f68cf681fdae">Advanced RAG over local embeddings. Flexible matching, low cost.</p>
+<h3 data-i18n="auto.3c632a580c7a">Tier 3 NLP</h3>
+<p data-i18n="auto.737de130a167">Intent Classification</p><p data-i18n="auto.0a6871dfb952">Traditional ML models for routing and triage. No LLM needed.</p>
+<h3 data-i18n="auto.e23e7fffd387">Tier 4 Generative</h3>
+<p data-i18n="auto.410747a1724b">Full LLM</p><p data-i18n="auto.8cbd717dea95">Only for high-level reasoning, nuance, and creative synthesis.</p>
 </section>
-<section class="block"><h2><span class="num">02</span>Tier 1: Deterministic Matching (The Zero-Token Layer)</h2>
-<p>The most efficient interaction is the one that never leaves your infrastructure. General Bots utilizes high-speed string matching and regex logic defined in your orchestration files to handle predictable queries. If a user asks a common FAQ, the system returns a localized response in milliseconds with zero external API cost.</p><p>This layer handles the Pareto majority of enterprise interactions: password reset procedures, holiday schedules, shipping status lookups, and policy clarifications. These queries follow predictable patterns that are easily captured in deterministic rules. There is no need to invoke a multi-billion parameter neural network to answer &quot;What time does the cafeteria close?&quot;</p>
-<blockquote>&quot;The most expensive AI interaction is the one that didn&#x27;t need to happen at all. Tier 1 eliminates 40-60% of total query volume before any generative cost is incurred.&quot;</blockquote>
-<p>&quot;The most expensive AI interaction is the one that didn&#x27;t need to happen at all. Tier 1 eliminates 40-60% of total query volume before any generative cost is incurred.&quot;</p>
+<section class="block"><h2><span class="num">02</span><span data-i18n="auto.e693e811000d">Tier 1: Deterministic Matching (The Zero-Token Layer)</span></h2>
+<p data-i18n="auto.6c59ed2258b7">The most efficient interaction is the one that never leaves your infrastructure. General Bots utilizes high-speed string matching and regex logic defined in your orchestration files to handle predictable queries. If a user asks a common FAQ, the system returns a localized response in milliseconds with zero external API cost.</p><p data-i18n="auto.f4bce76933e4">This layer handles the Pareto majority of enterprise interactions: password reset procedures, holiday schedules, shipping status lookups, and policy clarifications. These queries follow predictable patterns that are easily captured in deterministic rules. There is no need to invoke a multi-billion parameter neural network to answer "What time does the cafeteria close?"</p>
+<blockquote data-i18n="auto.eda456a11c2a">"The most expensive AI interaction is the one that didn't need to happen at all. Tier 1 eliminates 40-60% of total query volume before any generative cost is incurred."</blockquote>
+<p data-i18n="auto.eda456a11c2a">"The most expensive AI interaction is the one that didn't need to happen at all. Tier 1 eliminates 40-60% of total query volume before any generative cost is incurred."</p>
 </section>
-<section class="block"><h2><span class="num">03</span>Tier 2: Vector &amp; Semantic Search (RAG-Local)</h2>
-<p>When deterministic matching fails, the system pivots to local semantic search. By utilizing on-premise vector embeddings or Elasticsearch-style indexing, General Bots identifies the most relevant didactic content from your knowledge base. This allows for flexible query matching — handling synonyms, paraphrasing, and partial matches — without the overhead of generative generation.</p><p>The critical advantage of Tier 2 is that it operates entirely within your infrastructure. The embedding model runs locally or on a dedicated server. The vector database stores your data. No data leaves your network. For regulated industries with strict data residency requirements, this is not just a cost optimization — it is a compliance necessity.</p>
+<section class="block"><h2><span class="num">03</span><span data-i18n="auto.211164402320">Tier 2: Vector &amp; Semantic Search (RAG-Local)</span></h2>
+<p data-i18n="auto.e0092aa126e0">When deterministic matching fails, the system pivots to local semantic search. By utilizing on-premise vector embeddings or Elasticsearch-style indexing, General Bots identifies the most relevant didactic content from your knowledge base. This allows for flexible query matching — handling synonyms, paraphrasing, and partial matches — without the overhead of generative generation.</p><p data-i18n="auto.81124ac9dd0d">The critical advantage of Tier 2 is that it operates entirely within your infrastructure. The embedding model runs locally or on a dedicated server. The vector database stores your data. No data leaves your network. For regulated industries with strict data residency requirements, this is not just a cost optimization — it is a compliance necessity.</p>
 </section>
-<section class="block"><h2><span class="num">04</span>Tier 3: Traditional NLP &amp; Rule-Based Routing</h2>
-<p>For complex logic that requires intent classification but not creative reasoning, we employ traditional NLP models. These models run locally or via low-cost specialized endpoints, mapping user intent to specific BASIC tools. This tier handles form-filling, triage, and routing with surgical precision.</p><p>Tier 3 is the unsung hero of the cost optimization stack. Traditional NLP models — even sophisticated ones — cost orders of magnitude less per inference than LLMs. A well-tuned intent classifier can achieve 95%+ accuracy on domain-specific routing tasks for pennies per thousand inferences.</p>
-<h3>When to Use Tier 3</h3>
+<section class="block"><h2><span class="num">04</span><span data-i18n="auto.18f0a9c7f610">Tier 3: Traditional NLP &amp; Rule-Based Routing</span></h2>
+<p data-i18n="auto.ec7c93f2ca66">For complex logic that requires intent classification but not creative reasoning, we employ traditional NLP models. These models run locally or via low-cost specialized endpoints, mapping user intent to specific BASIC tools. This tier handles form-filling, triage, and routing with surgical precision.</p><p data-i18n="auto.7f7ae4e0623e">Tier 3 is the unsung hero of the cost optimization stack. Traditional NLP models — even sophisticated ones — cost orders of magnitude less per inference than LLMs. A well-tuned intent classifier can achieve 95%+ accuracy on domain-specific routing tasks for pennies per thousand inferences.</p>
+<h3 data-i18n="auto.cec5e2ab15c6">When to Use Tier 3</h3>
 <ul>
-<li>User wants to enroll in a course (intent: ENROLLMENT)</li>
-<li>User wants to check order status (intent: ORDER_STATUS)</li>
-<li>User wants to file a complaint (intent: COMPLAINT)</li>
-<li>User wants to speak to a human (intent: ESCALATION)</li>
+<li data-i18n="auto.252155e2d4c5">User wants to enroll in a course (intent: ENROLLMENT)</li>
+<li data-i18n="auto.3539179867b9">User wants to check order status (intent: ORDER_STATUS)</li>
+<li data-i18n="auto.66b774f2c470">User wants to file a complaint (intent: COMPLAINT)</li>
+<li data-i18n="auto.df87d38d502e">User wants to speak to a human (intent: ESCALATION)</li>
 </ul>
-<h3>When to Use Tier 4</h3>
+<h3 data-i18n="auto.85c68a03d41b">When to Use Tier 4</h3>
 <ul>
-<li>User asks for a detailed analysis of a complex situation</li>
-<li>User requests creative content generation</li>
-<li>User presents an ambiguous or novel problem</li>
-<li>User engages in complex multi-turn negotiation</li>
-</ul>
-</section>
-<section class="block"><h2><span class="num">05</span>Tier 4: Generative Orchestration (The Intelligent Peak)</h2>
-<p>The LLM is only invoked when high-level reasoning, nuance, or creative synthesis is required. By filtering the conversational noise through the first three tiers, we ensure that your LLM token budget is reserved for interactions that provide the highest business value. Tier 4 typically handles 10-20% of total query volume but consumes 80-90% of the AI budget — which is exactly where you want it.</p>
-</section>
-<section class="block"><h2><span class="num">06</span>The Cost Breakdown</h2>
-<p>Here is a realistic cost projection for a mid-size enterprise processing 100,000 interactions per month:</p><p>Total: $405/month — compared to $3,000/month for a naive all-generative approach. That is an 86% reduction in operational AI costs.</p><p>OWNERSHIP OF THE ORCHESTRATION LAYER IS OWNERSHIP OF YOUR MARGINS. General Bots provides the didactic tools to build a sustainable, AI-first organization. The hybrid architecture is not a compromise — it is the only economically viable path to enterprise-scale AI deployment.</p>
-</section>
-<section class="block"><h2><span class="num">07</span>Implementation Strategy</h2>
-<p>Transitioning to a hybrid orchestration model does not require a complete overhaul of your existing AI infrastructure. General Bots is designed as a drop-in orchestration layer that sits between your users and your AI backend:</p>
-<ul>
-<li>Audit your current interactions. Classify each query type by complexity and predictability.</li>
-<li>Define your deterministic rules. Start with the most common FAQ patterns. Capture them in BASIC orchestration files.</li>
-<li>Deploy local embeddings. Use your existing knowledge base as the source for Tier 2 semantic search.</li>
-<li>Train intent classifiers. For unambiguous routing tasks, deploy traditional NLP models.</li>
-<li>Route the remainder to LLM. Only the most complex interactions reach the generative tier.</li>
+<li data-i18n="auto.cc0e3a7e1cf9">User asks for a detailed analysis of a complex situation</li>
+<li data-i18n="auto.e5c8ee52fbfe">User requests creative content generation</li>
+<li data-i18n="auto.f49822a2562f">User presents an ambiguous or novel problem</li>
+<li data-i18n="auto.b6d4cbb3b36c">User engages in complex multi-turn negotiation</li>
 </ul>
 </section>
-<section class="block"><h2><span class="num">08</span>Conclusion</h2>
-<p>The hybrid orchestration model is not a theoretical ideal — it is a practical necessity. Organizations that deploy AI at scale without a tiered cost strategy will find their AI budgets growing exponentially with user adoption. General Bots provides the architectural foundation for sustainable AI deployment, combining the intelligence of LLMs with the efficiency of deterministic systems.</p><p>Cost-effective AI is not about using cheaper models. It is about not using expensive models for cheap problems.</p>
+<section class="block"><h2><span class="num">05</span><span data-i18n="auto.fd0a38264892">Tier 4: Generative Orchestration (The Intelligent Peak)</span></h2>
+<p data-i18n="auto.cc7d8e1c27a6">The LLM is only invoked when high-level reasoning, nuance, or creative synthesis is required. By filtering the conversational noise through the first three tiers, we ensure that your LLM token budget is reserved for interactions that provide the highest business value. Tier 4 typically handles 10-20% of total query volume but consumes 80-90% of the AI budget — which is exactly where you want it.</p>
 </section>
-<section class="block"><h2><span class="num">09</span>Reduce AI Costs</h2>
-<p>Stop burning your budget on every interaction. Deploy a hybrid orchestration strategy with General Bots and reduce your AI operational costs by up to 80%.</p>
+<section class="block"><h2><span class="num">06</span><span data-i18n="auto.8ff9299096d1">The Cost Breakdown</span></h2>
+<p data-i18n="auto.dc0a821fc675">Here is a realistic cost projection for a mid-size enterprise processing 100,000 interactions per month:</p><p data-i18n="auto.30beae1dfb91">Total: $405/month — compared to $3,000/month for a naive all-generative approach. That is an 86% reduction in operational AI costs.</p><p data-i18n="auto.1cf45535080c">OWNERSHIP OF THE ORCHESTRATION LAYER IS OWNERSHIP OF YOUR MARGINS. General Bots provides the didactic tools to build a sustainable, AI-first organization. The hybrid architecture is not a compromise — it is the only economically viable path to enterprise-scale AI deployment.</p>
+</section>
+<section class="block"><h2><span class="num">07</span><span data-i18n="auto.4a6eeaef1817">Implementation Strategy</span></h2>
+<p data-i18n="auto.af4898400c04">Transitioning to a hybrid orchestration model does not require a complete overhaul of your existing AI infrastructure. General Bots is designed as a drop-in orchestration layer that sits between your users and your AI backend:</p>
+<ul>
+<li data-i18n="auto.52d7d92c45d2">Audit your current interactions. Classify each query type by complexity and predictability.</li>
+<li data-i18n="auto.f7c98c89eaa2">Define your deterministic rules. Start with the most common FAQ patterns. Capture them in BASIC orchestration files.</li>
+<li data-i18n="auto.947a6047d278">Deploy local embeddings. Use your existing knowledge base as the source for Tier 2 semantic search.</li>
+<li data-i18n="auto.5e79fd9a3eac">Train intent classifiers. For unambiguous routing tasks, deploy traditional NLP models.</li>
+<li data-i18n="auto.29d9d598a915">Route the remainder to LLM. Only the most complex interactions reach the generative tier.</li>
+</ul>
+</section>
+<section class="block"><h2><span class="num">08</span><span data-i18n="auto.e39262defe80">Conclusion</span></h2>
+<p data-i18n="auto.e1ded1bf6eac">The hybrid orchestration model is not a theoretical ideal — it is a practical necessity. Organizations that deploy AI at scale without a tiered cost strategy will find their AI budgets growing exponentially with user adoption. General Bots provides the architectural foundation for sustainable AI deployment, combining the intelligence of LLMs with the efficiency of deterministic systems.</p><p data-i18n="auto.07f97a817c37">Cost-effective AI is not about using cheaper models. It is about not using expensive models for cheap problems.</p>
+</section>
+<section class="block"><h2><span class="num">09</span><span data-i18n="auto.14921ec6ac29">Reduce AI Costs</span></h2>
+<p data-i18n="auto.a6e9eb320df4">Stop burning your budget on every interaction. Deploy a hybrid orchestration strategy with General Bots and reduce your AI operational costs by up to 80%.</p>
 </section>
 </div>
 <div class="cta"><p data-i18n="common.back_to_blog">Voltar para todos os artigos.</p>
-<a class="btn" href="/blog/" data-i18n="common.back_to_blog">← Blog</a></div>
+<a class="btn" data-i18n="common.back_to_blog" href="/blog/">← Blog</a></div>
 <footer>
-  <a href="https://sentient.net.br" target="_blank" rel="noopener noreferrer">Sentient ↗</a>
-  <a href="https://pragmatismo.com.br" target="_blank" rel="noopener noreferrer">Pragmatismo ↗</a>
-  <a href="https://mapagency.com.br" target="_blank" rel="noopener noreferrer">Map Agency ↗</a>
-  <a href="https://darioexecutivesales.com" target="_blank" rel="noopener noreferrer">Dário Executive Sales ↗</a>
-  <a href="https://oerlabs.com.br" target="_blank" rel="noopener noreferrer">OER Labs ↗</a>
-  <a href="/blog/" data-i18n="nav.blog">Blog</a><a href="/magazine/" data-i18n="nav.magazine">Revistas</a>
-  <a href="/privacy/" data-i18n="footer.privacy">Privacidade</a>
-  <a href="/terms/" data-i18n="footer.terms">Termos</a>
-  <a href="/security/">Segurança</a>
-  <a href="/contact/" data-i18n="nav.contact">Contato</a>
-  <a href="/hosting/">Hosting</a>
-  <a href="https://docs.generalbots.org" target="_blank" rel="noopener noreferrer">Documentação ↗</a>
-  <a href="https://github.com/generalbots/generalbots" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+<a data-i18n="auto.986871b2e286" href="https://sentient.net.br" rel="noopener noreferrer" target="_blank">Sentient ↗</a>
+<a data-i18n="auto.1895deb4a6b4" href="https://pragmatismo.com.br" rel="noopener noreferrer" target="_blank">Pragmatismo ↗</a>
+<a data-i18n="auto.e84bdcd56da4" href="https://mapagency.com.br" rel="noopener noreferrer" target="_blank">Map Agency ↗</a>
+<a data-i18n="auto.458125333a3c" href="https://darioexecutivesales.com" rel="noopener noreferrer" target="_blank">Dário Executive Sales ↗</a>
+<a data-i18n="auto.6d28d08cd510" href="https://oerlabs.com.br" rel="noopener noreferrer" target="_blank">OER Labs ↗</a>
+<a data-i18n="nav.blog" href="/blog/">Blog</a><a data-i18n="nav.magazine" href="/magazine/">Revistas</a>
+<a data-i18n="footer.privacy" href="/privacy/">Privacidade</a>
+<a data-i18n="footer.terms" href="/terms/">Termos</a>
+<a data-i18n="auto.27a0286c70df" href="/security/">Segurança</a>
+<a data-i18n="nav.contact" href="/contact/">Contato</a>
+<a data-i18n="auto.8766cde61214" href="/hosting/">Hosting</a>
+<a data-i18n="auto.9584a968ebe0" href="https://docs.generalbots.org" rel="noopener noreferrer" target="_blank">Documentação ↗</a>
+<a data-i18n="auto.548b068fc17c" href="https://github.com/generalbots/generalbots" rel="noopener noreferrer" target="_blank">GitHub ↗</a>
 </footer>
-</div><button id="toTop" type="button" aria-label="Voltar ao topo">↑ TOPO</button>
-<script src="/js/i18n.js?v=2"></script><script src="/js/theme.js?v=1"></script></body></html>
+</div><button aria-label="Voltar ao topo" data-i18n="auto.25fea8b21fad" data-i18n-attr="aria-label:auto.a740f5b83d92" id="toTop" type="button">↑ TOPO</button>
+<script src="/js/i18n.js?v=3"></script><script src="/js/theme.js?v=1"></script></body></html>

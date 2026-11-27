@@ -1,11 +1,11 @@
-<!DOCTYPE html><html lang="pt-BR"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>LLM Myths 2025 | General Bots</title>
-<meta name="description" content="The enterprise AI space is saturated with high-fidelity marketing that obscures underlying technical realities. To build a sovereign infrastructure, one must fi">
-<link rel="canonical" href="https://generalbots.org/blog/llm-myths-2025/">
-<link rel="icon" href="/gb-favicon-v2.ico" sizes="any">
-<meta property="og:title" content="LLM Myths 2025 | General Bots"><meta property="og:description" content="The enterprise AI space is saturated with high-fidelity marketing that obscures underlying technical realities. To build a sovereign infrastructure, one must fi">
-<meta property="og:type" content="website"><meta property="og:image" content="/og-image.png"><meta name="robots" content="index, follow">
+<!DOCTYPE html><html lang="pt-BR"><head><meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title data-i18n="auto.1780768c2e77">LLM Myths 2025 | General Bots</title>
+<meta content="The enterprise AI space is saturated with high-fidelity marketing that obscures underlying technical realities. To build a sovereign infrastructure, one must fi" data-i18n="auto.dc308dad7739" data-i18n-attr="content" name="description"/>
+<link href="https://generalbots.org/blog/llm-myths-2025/" rel="canonical"/>
+<link href="/gb-favicon-v2.ico" rel="icon" sizes="any"/>
+<meta content="LLM Myths 2025 | General Bots" data-i18n="auto.1780768c2e77" data-i18n-attr="content" property="og:title"/><meta content="The enterprise AI space is saturated with high-fidelity marketing that obscures underlying technical realities. To build a sovereign infrastructure, one must fi" data-i18n="auto.dc308dad7739" data-i18n-attr="content" property="og:description"/>
+<meta content="website" property="og:type"/><meta content="/og-image.png" property="og:image"/><meta content="index, follow" name="robots"/>
 <style>
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -61,51 +61,51 @@ html[data-theme="light"] body{filter:invert(1) hue-rotate(180deg);background:#ff
 html[data-theme="light"] img,html[data-theme="light"] video,html[data-theme="light"] svg{filter:invert(1) hue-rotate(180deg)}
 @media (prefers-color-scheme:light){html[data-theme="system"] body{filter:invert(1) hue-rotate(180deg);background:#fff!important}html[data-theme="system"] img,html[data-theme="system"] video,html[data-theme="system"] svg{filter:invert(1) hue-rotate(180deg)}}
 </style></head><body data-blog-slug="llm-myths-2025"><div class="wrap">
-<div class="topbar"><a class="brand" href="/"><b>&lt;GB&gt;</b> GENERAL BOTS</a><select id="gbLang" aria-label="Idioma"><option value="pt">Português</option><option value="en">English</option><option value="es">Español</option><option value="fr">Français</option><option value="de">Deutsch</option><option value="ja">日本語</option><option value="zh-cn">简体中文</option></select><button id="gbTheme" type="button" aria-label="Alternar modo claro" aria-pressed="false" title="Modo claro / escuro" style="background:#0d0d0d;color:#ededed;border:1px solid #333;border-radius:4px;padding:6px 10px;font-size:11px;cursor:pointer">TEMA</button></div>
+<div class="topbar"><a class="brand" href="/"><b>&lt;GB&gt;</b> GENERAL BOTS</a><select aria-label="Idioma" data-i18n-attr="aria-label:auto.009433886003" id="gbLang"><option value="pt">Português</option><option value="en">English</option><option value="es">Español</option><option value="fr">Français</option><option value="de">Deutsch</option><option value="ja">日本語</option><option value="zh-cn">简体中文</option></select><button aria-label="Alternar modo claro" aria-pressed="false" data-i18n="auto.41227a56e518" data-i18n-attr="aria-label:auto.62c92c84f854,title:auto.e4bf401038f8" id="gbTheme" style="background:#0d0d0d;color:#ededed;border:1px solid #333;border-radius:4px;padding:6px 10px;font-size:11px;cursor:pointer" title="Modo claro / escuro" type="button">TEMA</button></div>
 <a class="back" href="/">← <span data-i18n="common.back_home">Voltar ao início</span></a>
-<div class="masthead"><div class="eyebrow">// <em>ARTIGO</em></div>
+<div class="masthead"><div class="eyebrow">// <em data-i18n="auto.9afa0e47f21c">ARTIGO</em></div>
 <h1 data-i18n="title">LLM Myths 2025</h1>
 <p class="lead" data-i18n="subtitle">The enterprise AI space is saturated with high-fidelity marketing that obscures underlying technical realities. To build a sovereign infrastructure, one must first dismantle the myths of the proprietary stack. Here are the three most dangerous misconceptions in 2025.</p>
-<div class="meta"><span>March 28, 2025</span><span data-i18n="nav.blog">BLOG</span><span>GENERAL BOTS</span></div></div>
-<img class="postimg" src="/og-image.png" alt="General Bots Lite">
+<div class="meta"><span data-i18n="auto.2622d35b480f">March 28, 2025</span><span data-i18n="nav.blog">BLOG</span><span>GENERAL BOTS</span></div></div>
+<img alt="General Bots Lite" class="postimg" src="/og-image.png"/>
 <div class="content">
-<p>A didactic deconstruction of the misconceptions holding enterprise AI back.</p><p>Originally published on pragmatismo.com.br</p>
-<h3>&quot;Scale is the Only Moat&quot;</h3>
-<p>The dominant narrative claims that only companies with the largest clusters and the most parameters will survive the AI revolution. This is a convenient story for hyperscalers selling compute.</p>
-<h3>Orchestration Depth &gt; Parameter Count</h3>
-<p>While parameter count matters for general knowledge, Orchestration Depth is the true competitive advantage for enterprises. A smaller, sovereign model (DeepSeek, Llama 3) running within a targeted orchestration framework consistently outperforms a massive proprietary model that lacks context-specific deterministic logic. Precision beats scale when the task is specific and the data is proprietary.</p>
-<h3>&quot;SaaS is More Secure&quot;</h3>
-<p>This is perhaps the most dangerous misconception in enterprise AI procurement. The argument goes: cloud providers have dedicated security teams, so your data is safer with them than on your own infrastructure.</p>
-<h3>True Security is Sovereignty</h3>
-<p>In a SaaS model, your data — the Architecture of Intelligence for your business — is processed on third-party hardware. True security is found only in sovereignty . On-premises deployment ensures your data and models never leave your firewall. No third-party access. No data exfiltration risk. No compliance uncertainty.</p>
-<h3>&quot;AI is a Commodity&quot;</h3>
-<p>The belief that all AI models are interchangeable and the only differentiator is price. If this were true, every organization using AI would achieve the same results.</p>
-<h3>Connectors Create Value Delta</h3>
-<p>The delta in performance comes from the Connectors . How you link your models to SQL databases, Word documents, legacy APIs, and proprietary data sources — via BASIC scripts — is where the value is created. General Bots is not a tool; it is a system for creating non-commoditized intelligence assets that are deeply integrated with your existing infrastructure.</p>
-<section class="block"><h2><span class="num">01</span>The Path to Sovereignty</h2>
-<p>Debunking these myths is the first step toward a strategic exit from Big Tech dependency. Organizations that internalize these realities can build AI infrastructure that is:</p>
-<blockquote>&quot;Own your stack. Own your intelligence. The myths of the proprietary era are designed to keep you dependent — sovereignty is the only exit.&quot;</blockquote>
+<p data-i18n="auto.1e58d07e5bc8">A didactic deconstruction of the misconceptions holding enterprise AI back.</p><p data-i18n="auto.41aec6b3294f">Originally published on pragmatismo.com.br</p>
+<h3 data-i18n="auto.7884e935fa19">"Scale is the Only Moat"</h3>
+<p data-i18n="auto.2525e97517ba">The dominant narrative claims that only companies with the largest clusters and the most parameters will survive the AI revolution. This is a convenient story for hyperscalers selling compute.</p>
+<h3 data-i18n="auto.7a2aaa083a0a">Orchestration Depth &gt; Parameter Count</h3>
+<p data-i18n="auto.1cd8ee4f5b75">While parameter count matters for general knowledge, Orchestration Depth is the true competitive advantage for enterprises. A smaller, sovereign model (DeepSeek, Llama 3) running within a targeted orchestration framework consistently outperforms a massive proprietary model that lacks context-specific deterministic logic. Precision beats scale when the task is specific and the data is proprietary.</p>
+<h3 data-i18n="auto.01c27e558ee9">"SaaS is More Secure"</h3>
+<p data-i18n="auto.ed4434eb5dc6">This is perhaps the most dangerous misconception in enterprise AI procurement. The argument goes: cloud providers have dedicated security teams, so your data is safer with them than on your own infrastructure.</p>
+<h3 data-i18n="auto.360d785ad20c">True Security is Sovereignty</h3>
+<p data-i18n="auto.8fee5f59916e">In a SaaS model, your data — the Architecture of Intelligence for your business — is processed on third-party hardware. True security is found only in sovereignty . On-premises deployment ensures your data and models never leave your firewall. No third-party access. No data exfiltration risk. No compliance uncertainty.</p>
+<h3 data-i18n="auto.1efbe0b4be57">"AI is a Commodity"</h3>
+<p data-i18n="auto.55d31124df3a">The belief that all AI models are interchangeable and the only differentiator is price. If this were true, every organization using AI would achieve the same results.</p>
+<h3 data-i18n="auto.39592f77ec71">Connectors Create Value Delta</h3>
+<p data-i18n="auto.9d6ee05da631">The delta in performance comes from the Connectors . How you link your models to SQL databases, Word documents, legacy APIs, and proprietary data sources — via BASIC scripts — is where the value is created. General Bots is not a tool; it is a system for creating non-commoditized intelligence assets that are deeply integrated with your existing infrastructure.</p>
+<section class="block"><h2><span class="num">01</span><span data-i18n="auto.90d737acc3f7">The Path to Sovereignty</span></h2>
+<p data-i18n="auto.396f493053dc">Debunking these myths is the first step toward a strategic exit from Big Tech dependency. Organizations that internalize these realities can build AI infrastructure that is:</p>
+<blockquote data-i18n="auto.845a4c4334d5">"Own your stack. Own your intelligence. The myths of the proprietary era are designed to keep you dependent — sovereignty is the only exit."</blockquote>
 </section>
-<section class="block"><h2><span class="num">02</span>Debunk Your AI Strategy</h2>
-<p>Build on an open, didactic foundation. Own your stack. Own your intelligence.</p>
+<section class="block"><h2><span class="num">02</span><span data-i18n="auto.9e6a463a39f5">Debunk Your AI Strategy</span></h2>
+<p data-i18n="auto.21e1a2497ea1">Build on an open, didactic foundation. Own your stack. Own your intelligence.</p>
 </section>
 </div>
 <div class="cta"><p data-i18n="common.back_to_blog">Voltar para todos os artigos.</p>
-<a class="btn" href="/blog/" data-i18n="common.back_to_blog">← Blog</a></div>
+<a class="btn" data-i18n="common.back_to_blog" href="/blog/">← Blog</a></div>
 <footer>
-  <a href="https://sentient.net.br" target="_blank" rel="noopener noreferrer">Sentient ↗</a>
-  <a href="https://pragmatismo.com.br" target="_blank" rel="noopener noreferrer">Pragmatismo ↗</a>
-  <a href="https://mapagency.com.br" target="_blank" rel="noopener noreferrer">Map Agency ↗</a>
-  <a href="https://darioexecutivesales.com" target="_blank" rel="noopener noreferrer">Dário Executive Sales ↗</a>
-  <a href="https://oerlabs.com.br" target="_blank" rel="noopener noreferrer">OER Labs ↗</a>
-  <a href="/blog/" data-i18n="nav.blog">Blog</a><a href="/magazine/" data-i18n="nav.magazine">Revistas</a>
-  <a href="/privacy/" data-i18n="footer.privacy">Privacidade</a>
-  <a href="/terms/" data-i18n="footer.terms">Termos</a>
-  <a href="/security/">Segurança</a>
-  <a href="/contact/" data-i18n="nav.contact">Contato</a>
-  <a href="/hosting/">Hosting</a>
-  <a href="https://docs.generalbots.org" target="_blank" rel="noopener noreferrer">Documentação ↗</a>
-  <a href="https://github.com/generalbots/generalbots" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+<a data-i18n="auto.986871b2e286" href="https://sentient.net.br" rel="noopener noreferrer" target="_blank">Sentient ↗</a>
+<a data-i18n="auto.1895deb4a6b4" href="https://pragmatismo.com.br" rel="noopener noreferrer" target="_blank">Pragmatismo ↗</a>
+<a data-i18n="auto.e84bdcd56da4" href="https://mapagency.com.br" rel="noopener noreferrer" target="_blank">Map Agency ↗</a>
+<a data-i18n="auto.458125333a3c" href="https://darioexecutivesales.com" rel="noopener noreferrer" target="_blank">Dário Executive Sales ↗</a>
+<a data-i18n="auto.6d28d08cd510" href="https://oerlabs.com.br" rel="noopener noreferrer" target="_blank">OER Labs ↗</a>
+<a data-i18n="nav.blog" href="/blog/">Blog</a><a data-i18n="nav.magazine" href="/magazine/">Revistas</a>
+<a data-i18n="footer.privacy" href="/privacy/">Privacidade</a>
+<a data-i18n="footer.terms" href="/terms/">Termos</a>
+<a data-i18n="auto.27a0286c70df" href="/security/">Segurança</a>
+<a data-i18n="nav.contact" href="/contact/">Contato</a>
+<a data-i18n="auto.8766cde61214" href="/hosting/">Hosting</a>
+<a data-i18n="auto.9584a968ebe0" href="https://docs.generalbots.org" rel="noopener noreferrer" target="_blank">Documentação ↗</a>
+<a data-i18n="auto.548b068fc17c" href="https://github.com/generalbots/generalbots" rel="noopener noreferrer" target="_blank">GitHub ↗</a>
 </footer>
-</div><button id="toTop" type="button" aria-label="Voltar ao topo">↑ TOPO</button>
-<script src="/js/i18n.js?v=2"></script><script src="/js/theme.js?v=1"></script></body></html>
+</div><button aria-label="Voltar ao topo" data-i18n="auto.25fea8b21fad" data-i18n-attr="aria-label:auto.a740f5b83d92" id="toTop" type="button">↑ TOPO</button>
+<script src="/js/i18n.js?v=3"></script><script src="/js/theme.js?v=1"></script></body></html>

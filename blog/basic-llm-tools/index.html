@@ -1,11 +1,11 @@
-<!DOCTYPE html><html lang="pt-BR"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Building LLM-Powered Enrollment Tools with BASIC | General Bots</title>
-<meta name="description" content="Technical exploration of how to bridge the gap between Large Language Models and actionable business systems through sovereign BASIC orchestration.">
-<link rel="canonical" href="https://generalbots.org/blog/basic-llm-tools/">
-<link rel="icon" href="/gb-favicon-v2.ico" sizes="any">
-<meta property="og:title" content="Building LLM-Powered Enrollment Tools with BASIC | General Bots"><meta property="og:description" content="Technical exploration of how to bridge the gap between Large Language Models and actionable business systems through sovereign BASIC orchestration.">
-<meta property="og:type" content="website"><meta property="og:image" content="/og-image.png"><meta name="robots" content="index, follow">
+<!DOCTYPE html><html lang="pt-BR"><head><meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title data-i18n="auto.d48b66fb6682">Building LLM-Powered Enrollment Tools with BASIC | General Bots</title>
+<meta content="Technical exploration of how to bridge the gap between Large Language Models and actionable business systems through sovereign BASIC orchestration." data-i18n="auto.2e2b4b3875f7" data-i18n-attr="content" name="description"/>
+<link href="https://generalbots.org/blog/basic-llm-tools/" rel="canonical"/>
+<link href="/gb-favicon-v2.ico" rel="icon" sizes="any"/>
+<meta content="Building LLM-Powered Enrollment Tools with BASIC | General Bots" data-i18n="auto.d48b66fb6682" data-i18n-attr="content" property="og:title"/><meta content="Technical exploration of how to bridge the gap between Large Language Models and actionable business systems through sovereign BASIC orchestration." data-i18n="auto.2e2b4b3875f7" data-i18n-attr="content" property="og:description"/>
+<meta content="website" property="og:type"/><meta content="/og-image.png" property="og:image"/><meta content="index, follow" name="robots"/>
 <style>
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -61,74 +61,74 @@ html[data-theme="light"] body{filter:invert(1) hue-rotate(180deg);background:#ff
 html[data-theme="light"] img,html[data-theme="light"] video,html[data-theme="light"] svg{filter:invert(1) hue-rotate(180deg)}
 @media (prefers-color-scheme:light){html[data-theme="system"] body{filter:invert(1) hue-rotate(180deg);background:#fff!important}html[data-theme="system"] img,html[data-theme="system"] video,html[data-theme="system"] svg{filter:invert(1) hue-rotate(180deg)}}
 </style></head><body data-blog-slug="basic-llm-tools"><div class="wrap">
-<div class="topbar"><a class="brand" href="/"><b>&lt;GB&gt;</b> GENERAL BOTS</a><select id="gbLang" aria-label="Idioma"><option value="pt">Português</option><option value="en">English</option><option value="es">Español</option><option value="fr">Français</option><option value="de">Deutsch</option><option value="ja">日本語</option><option value="zh-cn">简体中文</option></select><button id="gbTheme" type="button" aria-label="Alternar modo claro" aria-pressed="false" title="Modo claro / escuro" style="background:#0d0d0d;color:#ededed;border:1px solid #333;border-radius:4px;padding:6px 10px;font-size:11px;cursor:pointer">TEMA</button></div>
+<div class="topbar"><a class="brand" href="/"><b>&lt;GB&gt;</b> GENERAL BOTS</a><select aria-label="Idioma" data-i18n-attr="aria-label:auto.009433886003" id="gbLang"><option value="pt">Português</option><option value="en">English</option><option value="es">Español</option><option value="fr">Français</option><option value="de">Deutsch</option><option value="ja">日本語</option><option value="zh-cn">简体中文</option></select><button aria-label="Alternar modo claro" aria-pressed="false" data-i18n="auto.41227a56e518" data-i18n-attr="aria-label:auto.62c92c84f854,title:auto.e4bf401038f8" id="gbTheme" style="background:#0d0d0d;color:#ededed;border:1px solid #333;border-radius:4px;padding:6px 10px;font-size:11px;cursor:pointer" title="Modo claro / escuro" type="button">TEMA</button></div>
 <a class="back" href="/">← <span data-i18n="common.back_home">Voltar ao início</span></a>
-<div class="masthead"><div class="eyebrow">// <em>ARTIGO</em></div>
+<div class="masthead"><div class="eyebrow">// <em data-i18n="auto.9afa0e47f21c">ARTIGO</em></div>
 <h1 data-i18n="title">Building LLM-Powered Enrollment Tools with BASIC</h1>
 <p class="lead" data-i18n="subtitle">Technical exploration of how to bridge the gap between Large Language Models and actionable business systems through sovereign BASIC orchestration.</p>
 <div class="meta"><span>2025-04-17</span><span data-i18n="nav.blog">BLOG</span><span>GENERAL BOTS</span></div></div>
-<img class="postimg" src="/og-image.png" alt="General Bots Lite">
+<img alt="General Bots Lite" class="postimg" src="/og-image.png"/>
 <div class="content">
-<p>Originally published on pragmatismo.com.br</p><p>Large Language Models are extraordinary text generators, but they lack one critical capability: the intrinsic authority to execute actions within a secure business environment. To transition from a &quot;chatbot&quot; to an &quot;agent,&quot; an LLM requires a didactic bridge — a tool definition that it can understand and execute with surgical precision. General Bots implements this bridge using a modernized BASIC engine.</p><p>THE CORE INSIGHT: An LLM without tools is a pundit — full of opinions, incapable of action. An LLM with BASIC tools is an operator — constrained by logic, auditable by design, and capable of changing the real world.</p>
-<section class="block"><h2><span class="num">01</span>The Structural Requirements of an Agentic Tool</h2>
-<p>An enrollment tool is not just a form — it is a state machine. It must handle identity verification, parameter validation, conditional branching, and persistent storage. In the General Bots ecosystem, these requirements are defined using the PARAM and VALIDATE keywords, which provide the LLM with a rigid schema that eliminates the variability of natural language extraction.</p>
-<h3>PARAM Name$, &quot;Full Name&quot;, 3, 100</h3>
-<p>Declares a string parameter with a human-readable label and character length constraints. The LLM knows exactly what to ask for and how to validate it.</p>
-<h3>VALIDATE Email$, &quot;EMAIL&quot;</h3>
-<p>Specifies a validation rule for the parameter. Built-in types include EMAIL, CPF, PHONE, DATE, and custom regex patterns. The LLM cannot proceed until validation passes.</p>
-<h3>IF VALID THEN GOSUB RegisterStudent</h3>
-<p>Conditional branching based on validation results. The LLM delegates execution to a deterministic subroutine that handles the database write, API call, or document generation.</p>
-<h3>The Didactic Contract</h3>
-<p>Every agentic tool in General Bots begins with a didactic contract — a formal definition of what the tool does, what parameters it requires, and what side effects it produces. This contract is written in BASIC and serves as the single source of truth for both the LLM and the human operator.</p>
-<blockquote>&quot;The PARAM keyword is not just a variable declaration. It is a promise from the system to the user: &#x27;I will collect exactly this information, validate it against these rules, and use it only for this purpose.&#x27; In an era of AI opacity, that promise has sovereign value.&quot;</blockquote>
-<p>&quot;The PARAM keyword is not just a variable declaration. It is a promise from the system to the user: &#x27;I will collect exactly this information, validate it against these rules, and use it only for this purpose.&#x27; In an era of AI opacity, that promise has sovereign value.&quot;</p>
+<p data-i18n="auto.41aec6b3294f">Originally published on pragmatismo.com.br</p><p data-i18n="auto.b31cd4cdad10">Large Language Models are extraordinary text generators, but they lack one critical capability: the intrinsic authority to execute actions within a secure business environment. To transition from a "chatbot" to an "agent," an LLM requires a didactic bridge — a tool definition that it can understand and execute with surgical precision. General Bots implements this bridge using a modernized BASIC engine.</p><p data-i18n="auto.ccdba75a5c8c">THE CORE INSIGHT: An LLM without tools is a pundit — full of opinions, incapable of action. An LLM with BASIC tools is an operator — constrained by logic, auditable by design, and capable of changing the real world.</p>
+<section class="block"><h2><span class="num">01</span><span data-i18n="auto.f6ecc7e5b1b0">The Structural Requirements of an Agentic Tool</span></h2>
+<p data-i18n="auto.7c34cf2d8995">An enrollment tool is not just a form — it is a state machine. It must handle identity verification, parameter validation, conditional branching, and persistent storage. In the General Bots ecosystem, these requirements are defined using the PARAM and VALIDATE keywords, which provide the LLM with a rigid schema that eliminates the variability of natural language extraction.</p>
+<h3 data-i18n="auto.dbd8fac18eaf">PARAM Name$, "Full Name", 3, 100</h3>
+<p data-i18n="auto.114880ab2a88">Declares a string parameter with a human-readable label and character length constraints. The LLM knows exactly what to ask for and how to validate it.</p>
+<h3 data-i18n="auto.f794e7eb851a">VALIDATE Email$, "EMAIL"</h3>
+<p data-i18n="auto.08c7b82574ba">Specifies a validation rule for the parameter. Built-in types include EMAIL, CPF, PHONE, DATE, and custom regex patterns. The LLM cannot proceed until validation passes.</p>
+<h3 data-i18n="auto.4ab1011fe431">IF VALID THEN GOSUB RegisterStudent</h3>
+<p data-i18n="auto.f6a7e65ad8c2">Conditional branching based on validation results. The LLM delegates execution to a deterministic subroutine that handles the database write, API call, or document generation.</p>
+<h3 data-i18n="auto.2a255aafbc68">The Didactic Contract</h3>
+<p data-i18n="auto.c500c25a77ab">Every agentic tool in General Bots begins with a didactic contract — a formal definition of what the tool does, what parameters it requires, and what side effects it produces. This contract is written in BASIC and serves as the single source of truth for both the LLM and the human operator.</p>
+<blockquote data-i18n="auto.f2d3c3dca30c">"The PARAM keyword is not just a variable declaration. It is a promise from the system to the user: 'I will collect exactly this information, validate it against these rules, and use it only for this purpose.' In an era of AI opacity, that promise has sovereign value."</blockquote>
+<p data-i18n="auto.f2d3c3dca30c">"The PARAM keyword is not just a variable declaration. It is a promise from the system to the user: 'I will collect exactly this information, validate it against these rules, and use it only for this purpose.' In an era of AI opacity, that promise has sovereign value."</p>
 </section>
-<section class="block"><h2><span class="num">02</span>Orchestration of the Enrollment Delta</h2>
-<p>When an LLM detects an intent — such as a student&#x27;s desire to register for a course — it invokes the corresponding BASIC script. The script then takes control of the dialog loop, ensuring that every required piece of information is collected and validated against the organization&#x27;s rules before any data is written to the persistent layer.</p><p>The enrollment delta is the gap between the user&#x27;s raw intent (&quot;I want to sign up&quot;) and the system&#x27;s formal requirements (Full Name, ID, Course Code, Payment Method). BASIC orchestrates this delta through a structured sequence:</p>
+<section class="block"><h2><span class="num">02</span><span data-i18n="auto.b32cfe53c825">Orchestration of the Enrollment Delta</span></h2>
+<p data-i18n="auto.138841d54ff6">When an LLM detects an intent — such as a student's desire to register for a course — it invokes the corresponding BASIC script. The script then takes control of the dialog loop, ensuring that every required piece of information is collected and validated against the organization's rules before any data is written to the persistent layer.</p><p data-i18n="auto.bc5d1a0a88cd">The enrollment delta is the gap between the user's raw intent ("I want to sign up") and the system's formal requirements (Full Name, ID, Course Code, Payment Method). BASIC orchestrates this delta through a structured sequence:</p>
 <ul>
-<li>Intent Detection: The LLM classifies the user&#x27;s message and maps it to a specific BASIC tool definition.</li>
-<li>Parameter Collection: The BASIC script drives a conversational loop, asking for each required parameter in sequence.</li>
-<li>Validation: Each parameter is validated against its declared rules. Invalid inputs trigger specific error messages and retry logic.</li>
-<li>Confirmation: The collected data is presented to the user for final confirmation before any action is taken.</li>
-<li>Execution: The validated data is written to the persistence layer and the enrollment is confirmed.</li>
+<li data-i18n="auto.fc9422ba7f17">Intent Detection: The LLM classifies the user's message and maps it to a specific BASIC tool definition.</li>
+<li data-i18n="auto.444f5e386e90">Parameter Collection: The BASIC script drives a conversational loop, asking for each required parameter in sequence.</li>
+<li data-i18n="auto.2b2edb3ba0d8">Validation: Each parameter is validated against its declared rules. Invalid inputs trigger specific error messages and retry logic.</li>
+<li data-i18n="auto.c0d64104c935">Confirmation: The collected data is presented to the user for final confirmation before any action is taken.</li>
+<li data-i18n="auto.2634010ffb31">Execution: The validated data is written to the persistence layer and the enrollment is confirmed.</li>
 </ul>
-<p>KEY DISTINCTION: In a pure LLM approach, the model generates the entire dialog and data extraction logic from scratch, every time. In the General Bots approach, the LLM handles intent detection and natural language understanding, but the structured data collection and validation is handled by deterministic BASIC code. This hybrid model eliminates the hallucination risk at the data entry boundary.</p>
+<p data-i18n="auto.e773228b5023">KEY DISTINCTION: In a pure LLM approach, the model generates the entire dialog and data extraction logic from scratch, every time. In the General Bots approach, the LLM handles intent detection and natural language understanding, but the structured data collection and validation is handled by deterministic BASIC code. This hybrid model eliminates the hallucination risk at the data entry boundary.</p>
 </section>
-<section class="block"><h2><span class="num">03</span>Tiered Data Persistence</h2>
-<p>General Bots supports a &quot;Didactic First&quot; approach to data storage. The choice of persistence layer depends on the operational requirements of each specific tool:</p>
-<h3>CSV Flat Files</h3>
-<p>For rapid iteration and auditability. Every enrollment is appended to a human-readable CSV file that can be opened in any spreadsheet application. Ideal for pilot programs and low-volume workflows.</p>
-<h3>SQL Integration</h3>
-<p>For enterprise-scale relational storage. Direct connections to PostgreSQL, MySQL, or SQL Server. The BASIC script executes parameterized queries with full transaction support.</p>
-<h3>API Egress</h3>
-<p>For triggering downstream workflows in ERP, LMS, or CRM systems. The BASIC script constructs the API payload from validated parameters and handles response parsing and error recovery.</p>
+<section class="block"><h2><span class="num">03</span><span data-i18n="auto.c64275d7c17c">Tiered Data Persistence</span></h2>
+<p data-i18n="auto.6e8b70a66c6e">General Bots supports a "Didactic First" approach to data storage. The choice of persistence layer depends on the operational requirements of each specific tool:</p>
+<h3 data-i18n="auto.fb2b1e8c893c">CSV Flat Files</h3>
+<p data-i18n="auto.4f556840f325">For rapid iteration and auditability. Every enrollment is appended to a human-readable CSV file that can be opened in any spreadsheet application. Ideal for pilot programs and low-volume workflows.</p>
+<h3 data-i18n="auto.bb227c76a84b">SQL Integration</h3>
+<p data-i18n="auto.bbc37982b50d">For enterprise-scale relational storage. Direct connections to PostgreSQL, MySQL, or SQL Server. The BASIC script executes parameterized queries with full transaction support.</p>
+<h3 data-i18n="auto.98c5ca6e62c2">API Egress</h3>
+<p data-i18n="auto.e8588fc8359e">For triggering downstream workflows in ERP, LMS, or CRM systems. The BASIC script constructs the API payload from validated parameters and handles response parsing and error recovery.</p>
 </section>
-<section class="block"><h2><span class="num">04</span>Real-World Example: Course Enrollment</h2>
-<p>Consider a university that wants to deploy an AI-powered enrollment assistant. The system must handle hundreds of concurrent student interactions, each requiring identity verification, course availability checking, prerequisite validation, and registration confirmation.</p><p>With General Bots BASIC, the enrollment tool is defined in approximately 50 lines of code. The LLM handles the natural language dialog — answering questions about course prerequisites, explaining registration policies, and guiding students through the process. The BASIC tool handles the structured data collection and validation. The result is a system that combines the flexibility of conversational AI with the reliability of deterministic software.</p>
+<section class="block"><h2><span class="num">04</span><span data-i18n="auto.d322474f0540">Real-World Example: Course Enrollment</span></h2>
+<p data-i18n="auto.691bbe334276">Consider a university that wants to deploy an AI-powered enrollment assistant. The system must handle hundreds of concurrent student interactions, each requiring identity verification, course availability checking, prerequisite validation, and registration confirmation.</p><p data-i18n="auto.bc9d4c799334">With General Bots BASIC, the enrollment tool is defined in approximately 50 lines of code. The LLM handles the natural language dialog — answering questions about course prerequisites, explaining registration policies, and guiding students through the process. The BASIC tool handles the structured data collection and validation. The result is a system that combines the flexibility of conversational AI with the reliability of deterministic software.</p>
 </section>
-<section class="block"><h2><span class="num">05</span>The Sovereign Advantage</h2>
-<p>Every enrollment tool built with General Bots BASIC is fully auditable, platform-independent, and vendor-independent. The BASIC scripts are plain text files that can be version-controlled, reviewed, and tested using standard software engineering practices. There is no proprietary runtime, no hidden API dependency, and no lock-in to a specific LLM provider.</p><p>The transition from passive observation to active orchestration is the core value proposition of General Bots. By using BASIC as the orchestration language, we ensure that your AI tools remain as readable as they are powerful — and as sovereign as they are intelligent.</p>
+<section class="block"><h2><span class="num">05</span><span data-i18n="auto.8a6ca9bce753">The Sovereign Advantage</span></h2>
+<p data-i18n="auto.059a4a1e14be">Every enrollment tool built with General Bots BASIC is fully auditable, platform-independent, and vendor-independent. The BASIC scripts are plain text files that can be version-controlled, reviewed, and tested using standard software engineering practices. There is no proprietary runtime, no hidden API dependency, and no lock-in to a specific LLM provider.</p><p data-i18n="auto.d73746dcdc58">The transition from passive observation to active orchestration is the core value proposition of General Bots. By using BASIC as the orchestration language, we ensure that your AI tools remain as readable as they are powerful — and as sovereign as they are intelligent.</p>
 </section>
-<section class="block"><h2><span class="num">06</span>Build Your Agentic Tools</h2>
-<p>Your organization&#x27;s workflows are already defined — now make them agentic. General Bots gives you the tools to turn any enrollment, registration, or data collection process into a sovereign AI-powered tool.</p>
+<section class="block"><h2><span class="num">06</span><span data-i18n="auto.4e0976c47020">Build Your Agentic Tools</span></h2>
+<p data-i18n="auto.b8eeb74fbf80">Your organization's workflows are already defined — now make them agentic. General Bots gives you the tools to turn any enrollment, registration, or data collection process into a sovereign AI-powered tool.</p>
 </section>
 </div>
 <div class="cta"><p data-i18n="common.back_to_blog">Voltar para todos os artigos.</p>
-<a class="btn" href="/blog/" data-i18n="common.back_to_blog">← Blog</a></div>
+<a class="btn" data-i18n="common.back_to_blog" href="/blog/">← Blog</a></div>
 <footer>
-  <a href="https://sentient.net.br" target="_blank" rel="noopener noreferrer">Sentient ↗</a>
-  <a href="https://pragmatismo.com.br" target="_blank" rel="noopener noreferrer">Pragmatismo ↗</a>
-  <a href="https://mapagency.com.br" target="_blank" rel="noopener noreferrer">Map Agency ↗</a>
-  <a href="https://darioexecutivesales.com" target="_blank" rel="noopener noreferrer">Dário Executive Sales ↗</a>
-  <a href="https://oerlabs.com.br" target="_blank" rel="noopener noreferrer">OER Labs ↗</a>
-  <a href="/blog/" data-i18n="nav.blog">Blog</a><a href="/magazine/" data-i18n="nav.magazine">Revistas</a>
-  <a href="/privacy/" data-i18n="footer.privacy">Privacidade</a>
-  <a href="/terms/" data-i18n="footer.terms">Termos</a>
-  <a href="/security/">Segurança</a>
-  <a href="/contact/" data-i18n="nav.contact">Contato</a>
-  <a href="/hosting/">Hosting</a>
-  <a href="https://docs.generalbots.org" target="_blank" rel="noopener noreferrer">Documentação ↗</a>
-  <a href="https://github.com/generalbots/generalbots" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+<a data-i18n="auto.986871b2e286" href="https://sentient.net.br" rel="noopener noreferrer" target="_blank">Sentient ↗</a>
+<a data-i18n="auto.1895deb4a6b4" href="https://pragmatismo.com.br" rel="noopener noreferrer" target="_blank">Pragmatismo ↗</a>
+<a data-i18n="auto.e84bdcd56da4" href="https://mapagency.com.br" rel="noopener noreferrer" target="_blank">Map Agency ↗</a>
+<a data-i18n="auto.458125333a3c" href="https://darioexecutivesales.com" rel="noopener noreferrer" target="_blank">Dário Executive Sales ↗</a>
+<a data-i18n="auto.6d28d08cd510" href="https://oerlabs.com.br" rel="noopener noreferrer" target="_blank">OER Labs ↗</a>
+<a data-i18n="nav.blog" href="/blog/">Blog</a><a data-i18n="nav.magazine" href="/magazine/">Revistas</a>
+<a data-i18n="footer.privacy" href="/privacy/">Privacidade</a>
+<a data-i18n="footer.terms" href="/terms/">Termos</a>
+<a data-i18n="auto.27a0286c70df" href="/security/">Segurança</a>
+<a data-i18n="nav.contact" href="/contact/">Contato</a>
+<a data-i18n="auto.8766cde61214" href="/hosting/">Hosting</a>
+<a data-i18n="auto.9584a968ebe0" href="https://docs.generalbots.org" rel="noopener noreferrer" target="_blank">Documentação ↗</a>
+<a data-i18n="auto.548b068fc17c" href="https://github.com/generalbots/generalbots" rel="noopener noreferrer" target="_blank">GitHub ↗</a>
 </footer>
-</div><button id="toTop" type="button" aria-label="Voltar ao topo">↑ TOPO</button>
-<script src="/js/i18n.js?v=2"></script><script src="/js/theme.js?v=1"></script></body></html>
+</div><button aria-label="Voltar ao topo" data-i18n="auto.25fea8b21fad" data-i18n-attr="aria-label:auto.a740f5b83d92" id="toTop" type="button">↑ TOPO</button>
+<script src="/js/i18n.js?v=3"></script><script src="/js/theme.js?v=1"></script></body></html>

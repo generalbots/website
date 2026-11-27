@@ -1,11 +1,11 @@
-<!DOCTYPE html><html lang="pt-BR"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>What Is an LLM? A Practical Guide | General Bots</title>
-<meta name="description" content="Tokens, parameters, RAG, and the sovereign AI pivot—everything you need to understand Large Language Models">
-<link rel="canonical" href="https://generalbots.org/blog/what-is-llm/">
-<link rel="icon" href="/gb-favicon-v2.ico" sizes="any">
-<meta property="og:title" content="What Is an LLM? A Practical Guide | General Bots"><meta property="og:description" content="Tokens, parameters, RAG, and the sovereign AI pivot—everything you need to understand Large Language Models">
-<meta property="og:type" content="website"><meta property="og:image" content="/og-image.png"><meta name="robots" content="index, follow">
+<!DOCTYPE html><html lang="pt-BR"><head><meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title data-i18n="auto.3667c0121028">What Is an LLM? A Practical Guide | General Bots</title>
+<meta content="Tokens, parameters, RAG, and the sovereign AI pivot—everything you need to understand Large Language Models" data-i18n="auto.bf45600031ba" data-i18n-attr="content" name="description"/>
+<link href="https://generalbots.org/blog/what-is-llm/" rel="canonical"/>
+<link href="/gb-favicon-v2.ico" rel="icon" sizes="any"/>
+<meta content="What Is an LLM? A Practical Guide | General Bots" data-i18n="auto.3667c0121028" data-i18n-attr="content" property="og:title"/><meta content="Tokens, parameters, RAG, and the sovereign AI pivot—everything you need to understand Large Language Models" data-i18n="auto.bf45600031ba" data-i18n-attr="content" property="og:description"/>
+<meta content="website" property="og:type"/><meta content="/og-image.png" property="og:image"/><meta content="index, follow" name="robots"/>
 <style>
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -61,75 +61,75 @@ html[data-theme="light"] body{filter:invert(1) hue-rotate(180deg);background:#ff
 html[data-theme="light"] img,html[data-theme="light"] video,html[data-theme="light"] svg{filter:invert(1) hue-rotate(180deg)}
 @media (prefers-color-scheme:light){html[data-theme="system"] body{filter:invert(1) hue-rotate(180deg);background:#fff!important}html[data-theme="system"] img,html[data-theme="system"] video,html[data-theme="system"] svg{filter:invert(1) hue-rotate(180deg)}}
 </style></head><body data-blog-slug="what-is-llm"><div class="wrap">
-<div class="topbar"><a class="brand" href="/"><b>&lt;GB&gt;</b> GENERAL BOTS</a><select id="gbLang" aria-label="Idioma"><option value="pt">Português</option><option value="en">English</option><option value="es">Español</option><option value="fr">Français</option><option value="de">Deutsch</option><option value="ja">日本語</option><option value="zh-cn">简体中文</option></select><button id="gbTheme" type="button" aria-label="Alternar modo claro" aria-pressed="false" title="Modo claro / escuro" style="background:#0d0d0d;color:#ededed;border:1px solid #333;border-radius:4px;padding:6px 10px;font-size:11px;cursor:pointer">TEMA</button></div>
+<div class="topbar"><a class="brand" href="/"><b>&lt;GB&gt;</b> GENERAL BOTS</a><select aria-label="Idioma" data-i18n-attr="aria-label:auto.009433886003" id="gbLang"><option value="pt">Português</option><option value="en">English</option><option value="es">Español</option><option value="fr">Français</option><option value="de">Deutsch</option><option value="ja">日本語</option><option value="zh-cn">简体中文</option></select><button aria-label="Alternar modo claro" aria-pressed="false" data-i18n="auto.41227a56e518" data-i18n-attr="aria-label:auto.62c92c84f854,title:auto.e4bf401038f8" id="gbTheme" style="background:#0d0d0d;color:#ededed;border:1px solid #333;border-radius:4px;padding:6px 10px;font-size:11px;cursor:pointer" title="Modo claro / escuro" type="button">TEMA</button></div>
 <a class="back" href="/">← <span data-i18n="common.back_home">Voltar ao início</span></a>
-<div class="masthead"><div class="eyebrow">// <em>ARTIGO</em></div>
+<div class="masthead"><div class="eyebrow">// <em data-i18n="auto.9afa0e47f21c">ARTIGO</em></div>
 <h1 data-i18n="title">What Is an LLM? A Practical Guide</h1>
 <p class="lead" data-i18n="subtitle">Tokens, parameters, RAG, and the sovereign AI pivot—everything you need to understand Large Language Models</p>
-<div class="meta"><span>April 2, 2025</span><span data-i18n="nav.blog">BLOG</span><span>GENERAL BOTS</span></div></div>
-<img class="postimg" src="/og-image.png" alt="General Bots Lite">
+<div class="meta"><span data-i18n="auto.3a49d2cc3975">April 2, 2025</span><span data-i18n="nav.blog">BLOG</span><span>GENERAL BOTS</span></div></div>
+<img alt="General Bots Lite" class="postimg" src="/og-image.png"/>
 <div class="content">
-<p>Originally published on pragmatismo.com.br</p><p>A Large Language Model (LLM) is, at its core, a statistical prediction node . It is an architecture of neural weights trained on a vast corpus of human knowledge to predict the next token in a sequence. To understand LLMs, we must look past the chat interface and analyze the mathematical reality of the weights and biases that power them.</p>
-<section class="block"><h2><span class="num">01</span>Tokens and Parameters: The Units of Intelligence</h2>
-<h3>Tokens</h3>
-<p>Tokens are the atomic units of text input and output. A token is not a word—it is a fragment, typically 3-4 characters in English. The word &quot;unbelievable&quot; might be two tokens: &quot;un&quot; and &quot;believable.&quot; A model&#x27;s context window defines how many tokens it can consider simultaneously. Modern models support 128K to 1M tokens.</p>
-<h3>Parameters</h3>
-<p>Parameters are the connections between neurons—the learned weights that encode linguistic patterns, factual knowledge, and reasoning capabilities. A 70-billion-parameter model has a higher resolution of understanding than a 7-billion-parameter model, but efficiency is not just about size. Architecture matters: attention mechanisms, layer design, and training methodology determine how well those parameters are utilized.</p>
+<p data-i18n="auto.41aec6b3294f">Originally published on pragmatismo.com.br</p><p data-i18n="auto.3e16a884eb8f">A Large Language Model (LLM) is, at its core, a statistical prediction node . It is an architecture of neural weights trained on a vast corpus of human knowledge to predict the next token in a sequence. To understand LLMs, we must look past the chat interface and analyze the mathematical reality of the weights and biases that power them.</p>
+<section class="block"><h2><span class="num">01</span><span data-i18n="auto.8037b17dae84">Tokens and Parameters: The Units of Intelligence</span></h2>
+<h3 data-i18n="auto.c38c6c1f3a27">Tokens</h3>
+<p data-i18n="auto.ae1670ba5bda">Tokens are the atomic units of text input and output. A token is not a word—it is a fragment, typically 3-4 characters in English. The word "unbelievable" might be two tokens: "un" and "believable." A model's context window defines how many tokens it can consider simultaneously. Modern models support 128K to 1M tokens.</p>
+<h3 data-i18n="auto.a975eea30db9">Parameters</h3>
+<p data-i18n="auto.aa9e8ff6c89e">Parameters are the connections between neurons—the learned weights that encode linguistic patterns, factual knowledge, and reasoning capabilities. A 70-billion-parameter model has a higher resolution of understanding than a 7-billion-parameter model, but efficiency is not just about size. Architecture matters: attention mechanisms, layer design, and training methodology determine how well those parameters are utilized.</p>
 </section>
-<section class="block"><h2><span class="num">02</span>How Tokenization Works</h2>
-<p>When you type &quot;What is the capital of France?&quot;, the LLM tokenizer splits it into tokens: [&quot;What&quot;, &quot; is&quot;, &quot; the&quot;, &quot; capital&quot;, &quot; of&quot;, &quot; France&quot;, &quot;?&quot;] . Each token maps to an integer ID. The model processes these IDs through its neural network, computing probability distributions for the next token. The highest-probability continuation—&quot;Paris&quot;—is selected and appended to the sequence. This repeats token by token until the complete response is generated.</p><p>This is why LLMs are called &quot;autoregressive&quot;: each token depends on all previous tokens.</p>
+<section class="block"><h2><span class="num">02</span><span data-i18n="auto.35b0a8db3272">How Tokenization Works</span></h2>
+<p data-i18n="auto.b834d795834f">When you type "What is the capital of France?", the LLM tokenizer splits it into tokens: ["What", " is", " the", " capital", " of", " France", "?"] . Each token maps to an integer ID. The model processes these IDs through its neural network, computing probability distributions for the next token. The highest-probability continuation—"Paris"—is selected and appended to the sequence. This repeats token by token until the complete response is generated.</p><p data-i18n="auto.de01332bd8ac">This is why LLMs are called "autoregressive": each token depends on all previous tokens.</p>
 </section>
-<section class="block"><h2><span class="num">03</span>From Statistics to Utility: The Chat Interface</h2>
-<p>The chat interface that users interact with is a thin layer on top of this statistical engine. System prompts, user messages, and conversation history are concatenated into a single token sequence. The model generates responses that are statistically likely to follow from that sequence. The &quot;magic&quot; is that at 70B+ parameters, the statistical predictions align remarkably well with human expectations of coherent, knowledgeable responses.</p>
+<section class="block"><h2><span class="num">03</span><span data-i18n="auto.79d33e502a20">From Statistics to Utility: The Chat Interface</span></h2>
+<p data-i18n="auto.d5cb37e75d7a">The chat interface that users interact with is a thin layer on top of this statistical engine. System prompts, user messages, and conversation history are concatenated into a single token sequence. The model generates responses that are statistically likely to follow from that sequence. The "magic" is that at 70B+ parameters, the statistical predictions align remarkably well with human expectations of coherent, knowledgeable responses.</p>
 </section>
-<section class="block"><h2><span class="num">04</span>AI Search (RAG): The De Facto Standard for Enterprise Utility</h2>
-<p>An LLM without access to your data is a creative writer—useful for brainstorming, drafting, and summarization, but unreliable for factual queries about your business. Retrieval-Augmented Generation (RAG) —which we call AI Search—solves this by injecting relevant documents into the LLM&#x27;s context window before generating a response.</p>
-<h3>Ingestion</h3>
-<p>Documents, emails, database records, and knowledge base articles are chunked, embedded into vectors, and stored in a vector database.</p>
-<h3>Retrieval</h3>
-<p>When a user asks a question, the system searches the vector database for chunks semantically similar to the query.</p>
-<h3>Generation</h3>
-<p>The retrieved chunks are inserted into the LLM&#x27;s context window alongside the question. The model generates an answer grounded in your data.</p>
-<blockquote>&quot;This is the difference between a toy and a tool. A vanilla LLM guesses. An LLM with RAG cites.&quot;</blockquote>
+<section class="block"><h2><span class="num">04</span><span data-i18n="auto.ff2fa413c4d9">AI Search (RAG): The De Facto Standard for Enterprise Utility</span></h2>
+<p data-i18n="auto.b4a563211775">An LLM without access to your data is a creative writer—useful for brainstorming, drafting, and summarization, but unreliable for factual queries about your business. Retrieval-Augmented Generation (RAG) —which we call AI Search—solves this by injecting relevant documents into the LLM's context window before generating a response.</p>
+<h3 data-i18n="auto.ee02ed5523e4">Ingestion</h3>
+<p data-i18n="auto.43cabdc1cfcc">Documents, emails, database records, and knowledge base articles are chunked, embedded into vectors, and stored in a vector database.</p>
+<h3 data-i18n="auto.01335793c783">Retrieval</h3>
+<p data-i18n="auto.6a33ec2c30ae">When a user asks a question, the system searches the vector database for chunks semantically similar to the query.</p>
+<h3 data-i18n="auto.8d441fb5f62f">Generation</h3>
+<p data-i18n="auto.33b4bcd26103">The retrieved chunks are inserted into the LLM's context window alongside the question. The model generates an answer grounded in your data.</p>
+<blockquote data-i18n="auto.6e12de401b37">"This is the difference between a toy and a tool. A vanilla LLM guesses. An LLM with RAG cites."</blockquote>
 </section>
-<section class="block"><h2><span class="num">05</span>The Sovereign Pivot</h2>
-<p>Most enterprises currently access LLMs through proprietary APIs: OpenAI, Anthropic, Google. This creates a rent-seeking dependency with three specific risks:</p><p>General Bots provides the orchestration layer to enable the sovereign pivot:</p>
-<h3>Open Weights</h3>
-<p>Run models like Llama 3, Mistral, or DeepSeek on your own hardware. No API keys, no usage limits, no data leaving your perimeter.</p>
-<h3>Deterministic Logic</h3>
-<p>Use BASIC to control exactly how the LLM behaves: structured outputs, validation rules, fallback behavior, and safety constraints.</p>
-<h3>No Egress Fees</h3>
-<p>Keep your data—and your intelligence—in-house. Fixed infrastructure cost regardless of query volume.</p>
+<section class="block"><h2><span class="num">05</span><span data-i18n="auto.f41158020724">The Sovereign Pivot</span></h2>
+<p data-i18n="auto.638f5e75b3c0">Most enterprises currently access LLMs through proprietary APIs: OpenAI, Anthropic, Google. This creates a rent-seeking dependency with three specific risks:</p><p data-i18n="auto.8fadbbbdecb5">General Bots provides the orchestration layer to enable the sovereign pivot:</p>
+<h3 data-i18n="auto.51a7ca26d985">Open Weights</h3>
+<p data-i18n="auto.0e7f0d512c68">Run models like Llama 3, Mistral, or DeepSeek on your own hardware. No API keys, no usage limits, no data leaving your perimeter.</p>
+<h3 data-i18n="auto.f9c053484708">Deterministic Logic</h3>
+<p data-i18n="auto.c9d22b7d32fa">Use BASIC to control exactly how the LLM behaves: structured outputs, validation rules, fallback behavior, and safety constraints.</p>
+<h3 data-i18n="auto.a94ce79dc53b">No Egress Fees</h3>
+<p data-i18n="auto.27674b1dece9">Keep your data—and your intelligence—in-house. Fixed infrastructure cost regardless of query volume.</p>
 </section>
-<section class="block"><h2><span class="num">06</span>Understanding the Landscape</h2>
-<p>Not all LLMs are created equal. Here is a practical categorization:</p>
+<section class="block"><h2><span class="num">06</span><span data-i18n="auto.cd45e10b57c0">Understanding the Landscape</span></h2>
+<p data-i18n="auto.e2b96746cc61">Not all LLMs are created equal. Here is a practical categorization:</p>
 </section>
-<section class="block"><h2><span class="num">07</span>The Right-Sizing Principle</h2>
-<p>Most enterprise workloads do not require a frontier model. A 7B-parameter model running on a single GPU can handle 80% of business use cases—classification, extraction, summarization, simple Q&amp;A—at a fraction of the cost. Reserve the 70B+ models for complex reasoning and high-stakes decisions. General Bots makes it trivial to route workloads to the appropriate model based on task complexity.</p>
+<section class="block"><h2><span class="num">07</span><span data-i18n="auto.7221c45d7cb7">The Right-Sizing Principle</span></h2>
+<p data-i18n="auto.80249096d399">Most enterprise workloads do not require a frontier model. A 7B-parameter model running on a single GPU can handle 80% of business use cases—classification, extraction, summarization, simple Q&amp;A—at a fraction of the cost. Reserve the 70B+ models for complex reasoning and high-stakes decisions. General Bots makes it trivial to route workloads to the appropriate model based on task complexity.</p>
 </section>
-<section class="block"><h2><span class="num">08</span>Conclusion: Decoding the Future</h2>
-<p>Understanding what an LLM is—statistical prediction, not magic—is the first step toward building a rational AI strategy. The models are tools, not oracles. They require data, context, and deterministic guardrails to be useful in an enterprise setting.</p><p>With General Bots, you don&#x27;t just consume LLMs through a chat interface. You own the architecture of intelligence that makes them work for your organization. Own the model. Own the future.</p>
+<section class="block"><h2><span class="num">08</span><span data-i18n="auto.327ca952fd57">Conclusion: Decoding the Future</span></h2>
+<p data-i18n="auto.9d7f9fe86370">Understanding what an LLM is—statistical prediction, not magic—is the first step toward building a rational AI strategy. The models are tools, not oracles. They require data, context, and deterministic guardrails to be useful in an enterprise setting.</p><p data-i18n="auto.27c4ecb18283">With General Bots, you don't just consume LLMs through a chat interface. You own the architecture of intelligence that makes them work for your organization. Own the model. Own the future.</p>
 </section>
-<section class="block"><h2><span class="num">09</span>Deploy Your First LLM</h2>
-<p>Stop renting intelligence from proprietary APIs. Deploy open-weight models on your own infrastructure and take control of your AI strategy.</p><p>Our team will help you select, deploy, and optimize the right model for your use case.</p>
+<section class="block"><h2><span class="num">09</span><span data-i18n="auto.73aa398bd463">Deploy Your First LLM</span></h2>
+<p data-i18n="auto.f8e8f9134311">Stop renting intelligence from proprietary APIs. Deploy open-weight models on your own infrastructure and take control of your AI strategy.</p><p data-i18n="auto.6728abac4a43">Our team will help you select, deploy, and optimize the right model for your use case.</p>
 </section>
 </div>
 <div class="cta"><p data-i18n="common.back_to_blog">Voltar para todos os artigos.</p>
-<a class="btn" href="/blog/" data-i18n="common.back_to_blog">← Blog</a></div>
+<a class="btn" data-i18n="common.back_to_blog" href="/blog/">← Blog</a></div>
 <footer>
-  <a href="https://sentient.net.br" target="_blank" rel="noopener noreferrer">Sentient ↗</a>
-  <a href="https://pragmatismo.com.br" target="_blank" rel="noopener noreferrer">Pragmatismo ↗</a>
-  <a href="https://mapagency.com.br" target="_blank" rel="noopener noreferrer">Map Agency ↗</a>
-  <a href="https://darioexecutivesales.com" target="_blank" rel="noopener noreferrer">Dário Executive Sales ↗</a>
-  <a href="https://oerlabs.com.br" target="_blank" rel="noopener noreferrer">OER Labs ↗</a>
-  <a href="/blog/" data-i18n="nav.blog">Blog</a><a href="/magazine/" data-i18n="nav.magazine">Revistas</a>
-  <a href="/privacy/" data-i18n="footer.privacy">Privacidade</a>
-  <a href="/terms/" data-i18n="footer.terms">Termos</a>
-  <a href="/security/">Segurança</a>
-  <a href="/contact/" data-i18n="nav.contact">Contato</a>
-  <a href="/hosting/">Hosting</a>
-  <a href="https://docs.generalbots.org" target="_blank" rel="noopener noreferrer">Documentação ↗</a>
-  <a href="https://github.com/generalbots/generalbots" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+<a data-i18n="auto.986871b2e286" href="https://sentient.net.br" rel="noopener noreferrer" target="_blank">Sentient ↗</a>
+<a data-i18n="auto.1895deb4a6b4" href="https://pragmatismo.com.br" rel="noopener noreferrer" target="_blank">Pragmatismo ↗</a>
+<a data-i18n="auto.e84bdcd56da4" href="https://mapagency.com.br" rel="noopener noreferrer" target="_blank">Map Agency ↗</a>
+<a data-i18n="auto.458125333a3c" href="https://darioexecutivesales.com" rel="noopener noreferrer" target="_blank">Dário Executive Sales ↗</a>
+<a data-i18n="auto.6d28d08cd510" href="https://oerlabs.com.br" rel="noopener noreferrer" target="_blank">OER Labs ↗</a>
+<a data-i18n="nav.blog" href="/blog/">Blog</a><a data-i18n="nav.magazine" href="/magazine/">Revistas</a>
+<a data-i18n="footer.privacy" href="/privacy/">Privacidade</a>
+<a data-i18n="footer.terms" href="/terms/">Termos</a>
+<a data-i18n="auto.27a0286c70df" href="/security/">Segurança</a>
+<a data-i18n="nav.contact" href="/contact/">Contato</a>
+<a data-i18n="auto.8766cde61214" href="/hosting/">Hosting</a>
+<a data-i18n="auto.9584a968ebe0" href="https://docs.generalbots.org" rel="noopener noreferrer" target="_blank">Documentação ↗</a>
+<a data-i18n="auto.548b068fc17c" href="https://github.com/generalbots/generalbots" rel="noopener noreferrer" target="_blank">GitHub ↗</a>
 </footer>
-</div><button id="toTop" type="button" aria-label="Voltar ao topo">↑ TOPO</button>
-<script src="/js/i18n.js?v=2"></script><script src="/js/theme.js?v=1"></script></body></html>
+</div><button aria-label="Voltar ao topo" data-i18n="auto.25fea8b21fad" data-i18n-attr="aria-label:auto.a740f5b83d92" id="toTop" type="button">↑ TOPO</button>
+<script src="/js/i18n.js?v=3"></script><script src="/js/theme.js?v=1"></script></body></html>

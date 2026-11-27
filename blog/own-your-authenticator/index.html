@@ -1,11 +1,11 @@
-<!DOCTYPE html><html lang="pt-BR"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Own Your Authenticator | General Bots</title>
-<meta name="description" content="The recent wave of SS7 protocol exploitation has moved telecommunications security from theoretical risk to industrial emergency. Signaling System No. 7 (SS7)—t">
-<link rel="canonical" href="https://generalbots.org/blog/own-your-authenticator/">
-<link rel="icon" href="/gb-favicon-v2.ico" sizes="any">
-<meta property="og:title" content="Own Your Authenticator | General Bots"><meta property="og:description" content="The recent wave of SS7 protocol exploitation has moved telecommunications security from theoretical risk to industrial emergency. Signaling System No. 7 (SS7)—t">
-<meta property="og:type" content="website"><meta property="og:image" content="/og-image.png"><meta name="robots" content="index, follow">
+<!DOCTYPE html><html lang="pt-BR"><head><meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title data-i18n="auto.702c98f74e9f">Own Your Authenticator | General Bots</title>
+<meta content="The recent wave of SS7 protocol exploitation has moved telecommunications security from theoretical risk to industrial emergency. Signaling System No. 7 (SS7)—t" data-i18n="auto.39860f83324c" data-i18n-attr="content" name="description"/>
+<link href="https://generalbots.org/blog/own-your-authenticator/" rel="canonical"/>
+<link href="/gb-favicon-v2.ico" rel="icon" sizes="any"/>
+<meta content="Own Your Authenticator | General Bots" data-i18n="auto.702c98f74e9f" data-i18n-attr="content" property="og:title"/><meta content="The recent wave of SS7 protocol exploitation has moved telecommunications security from theoretical risk to industrial emergency. Signaling System No. 7 (SS7)—t" data-i18n="auto.39860f83324c" data-i18n-attr="content" property="og:description"/>
+<meta content="website" property="og:type"/><meta content="/og-image.png" property="og:image"/><meta content="index, follow" name="robots"/>
 <style>
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -61,78 +61,78 @@ html[data-theme="light"] body{filter:invert(1) hue-rotate(180deg);background:#ff
 html[data-theme="light"] img,html[data-theme="light"] video,html[data-theme="light"] svg{filter:invert(1) hue-rotate(180deg)}
 @media (prefers-color-scheme:light){html[data-theme="system"] body{filter:invert(1) hue-rotate(180deg);background:#fff!important}html[data-theme="system"] img,html[data-theme="system"] video,html[data-theme="system"] svg{filter:invert(1) hue-rotate(180deg)}}
 </style></head><body data-blog-slug="own-your-authenticator"><div class="wrap">
-<div class="topbar"><a class="brand" href="/"><b>&lt;GB&gt;</b> GENERAL BOTS</a><select id="gbLang" aria-label="Idioma"><option value="pt">Português</option><option value="en">English</option><option value="es">Español</option><option value="fr">Français</option><option value="de">Deutsch</option><option value="ja">日本語</option><option value="zh-cn">简体中文</option></select><button id="gbTheme" type="button" aria-label="Alternar modo claro" aria-pressed="false" title="Modo claro / escuro" style="background:#0d0d0d;color:#ededed;border:1px solid #333;border-radius:4px;padding:6px 10px;font-size:11px;cursor:pointer">TEMA</button></div>
+<div class="topbar"><a class="brand" href="/"><b>&lt;GB&gt;</b> GENERAL BOTS</a><select aria-label="Idioma" data-i18n-attr="aria-label:auto.009433886003" id="gbLang"><option value="pt">Português</option><option value="en">English</option><option value="es">Español</option><option value="fr">Français</option><option value="de">Deutsch</option><option value="ja">日本語</option><option value="zh-cn">简体中文</option></select><button aria-label="Alternar modo claro" aria-pressed="false" data-i18n="auto.41227a56e518" data-i18n-attr="aria-label:auto.62c92c84f854,title:auto.e4bf401038f8" id="gbTheme" style="background:#0d0d0d;color:#ededed;border:1px solid #333;border-radius:4px;padding:6px 10px;font-size:11px;cursor:pointer" title="Modo claro / escuro" type="button">TEMA</button></div>
 <a class="back" href="/">← <span data-i18n="common.back_home">Voltar ao início</span></a>
-<div class="masthead"><div class="eyebrow">// <em>ARTIGO</em></div>
+<div class="masthead"><div class="eyebrow">// <em data-i18n="auto.9afa0e47f21c">ARTIGO</em></div>
 <h1 data-i18n="title">Own Your Authenticator</h1>
 <p class="lead" data-i18n="subtitle">The recent wave of SS7 protocol exploitation has moved telecommunications security from theoretical risk to industrial emergency. Signaling System No. 7 (SS7)—the architectural foundation of global telecommunications—was designed in an era of trust. It lacks mutual authentication, assumes closed networks, and grants implicit authority to any connected exchange. For decades, this was a manageable risk. In 2025, it is an open wound.</p>
-<div class="meta"><span>June 17, 2025</span><span data-i18n="nav.blog">BLOG</span><span>GENERAL BOTS</span></div></div>
-<img class="postimg" src="/og-image.png" alt="General Bots Lite">
+<div class="meta"><span data-i18n="auto.47a830b97548">June 17, 2025</span><span data-i18n="nav.blog">BLOG</span><span>GENERAL BOTS</span></div></div>
+<img alt="General Bots Lite" class="postimg" src="/og-image.png"/>
 <div class="content">
-<p>Why SMS-based 2FA is a liability and sovereign authentication is the only path forward</p><p>Originally published on pragmatismo.com.br</p>
-<section class="block"><h2><span class="num">01</span>The SS7 Exploitation Vector</h2>
-<p>An adversary with access to a global roaming exchange can masquerade as a legitimate telecommunications provider. Using tools like FirstMile, they can:</p>
+<p data-i18n="auto.00e1e520eea2">Why SMS-based 2FA is a liability and sovereign authentication is the only path forward</p><p data-i18n="auto.41aec6b3294f">Originally published on pragmatismo.com.br</p>
+<section class="block"><h2><span class="num">01</span><span data-i18n="auto.38a65ce4edaa">The SS7 Exploitation Vector</span></h2>
+<p data-i18n="auto.68cce20277e0">An adversary with access to a global roaming exchange can masquerade as a legitimate telecommunications provider. Using tools like FirstMile, they can:</p>
 <ul>
-<li>Intercept SMS traffic —capture 2FA codes, password reset links, and OTP messages in transit</li>
-<li>Request location data —triangulate the physical position of any subscriber in real time</li>
-<li>Execute SIM swaps —reroute the victim&#x27;s number to a device under attacker control, without physical access or carrier cooperation</li>
+<li data-i18n="auto.6e68d35a11ad">Intercept SMS traffic —capture 2FA codes, password reset links, and OTP messages in transit</li>
+<li data-i18n="auto.4f8b6b9dfe42">Request location data —triangulate the physical position of any subscriber in real time</li>
+<li data-i18n="auto.fae11e3df767">Execute SIM swaps —reroute the victim's number to a device under attacker control, without physical access or carrier cooperation</li>
 </ul>
-<p>The victim receives no notification. The carrier detects nothing unusual. The authenticator app on the victim&#x27;s phone continues to function—but it is now irrelevant, because the attacker controls the phone number.</p>
+<p data-i18n="auto.2c4e8c15e1be">The victim receives no notification. The carrier detects nothing unusual. The authenticator app on the victim's phone continues to function—but it is now irrelevant, because the attacker controls the phone number.</p>
 </section>
-<section class="block"><h2><span class="num">02</span>Why SMS-Based 2FA Must Die</h2>
-<p>SMS-based two-factor authentication was always a compromise between security and convenience. It was better than passwords alone—until it wasn&#x27;t. The SS7 attack vector turns SMS 2FA into a single point of failure:</p>
-<h3>No Mutual Auth</h3>
-<p>SS7 trusts any connected exchange by default. There is no cryptographic handshake, no proof of identity.</p>
-<h3>Silent Interception</h3>
-<p>SMS messages are routed through multiple carriers. Any hop in the chain can be compromised without detection.</p>
-<h3>SIM Swap Blindness</h3>
-<p>Carriers do not notify users when a number is ported. The attacker controls the line before the victim knows.</p>
+<section class="block"><h2><span class="num">02</span><span data-i18n="auto.b0dc7547b89c">Why SMS-Based 2FA Must Die</span></h2>
+<p data-i18n="auto.8d2697007e0b">SMS-based two-factor authentication was always a compromise between security and convenience. It was better than passwords alone—until it wasn't. The SS7 attack vector turns SMS 2FA into a single point of failure:</p>
+<h3 data-i18n="auto.3a871a5a90d8">No Mutual Auth</h3>
+<p data-i18n="auto.c8cd85b32d6f">SS7 trusts any connected exchange by default. There is no cryptographic handshake, no proof of identity.</p>
+<h3 data-i18n="auto.1cf3f780160d">Silent Interception</h3>
+<p data-i18n="auto.27d92ac77926">SMS messages are routed through multiple carriers. Any hop in the chain can be compromised without detection.</p>
+<h3 data-i18n="auto.2e92b8bce380">SIM Swap Blindness</h3>
+<p data-i18n="auto.4a4d618f671a">Carriers do not notify users when a number is ported. The attacker controls the line before the victim knows.</p>
 </section>
-<section class="block"><h2><span class="num">03</span>The Case for Sovereign Authentication</h2>
-<p>Relying on third-party authenticator apps (Google Authenticator, MS Authenticator, Authy) merely shifts the trust surface without eliminating it. These apps are black boxes with opaque security postures. A sovereign authenticator—built on the General Bots orchestration core—provides three critical advantages:</p>
-<h3>End-to-End Cryptographic Sovereignty</h3>
-<p>Your organization holds the master keys, not a third-party cloud provider. TOTP seeds, cryptographic keys, and session tokens are generated, stored, and verified within your infrastructure. No external dependency, no supply chain risk.</p>
-<h3>Custom Logic Injection</h3>
-<p>Authenticate based on didactic parameters beyond simple codes: device proximity, biometric delta, IP reputation scores, behavioral patterns, and time-of-day heuristics. BASIC scripts define the validation rules.</p>
-<h3>Branding and UX Control</h3>
-<p>A white-labeled security application maintains the professional authority of your enterprise identity. No &quot;Powered by&quot; branding, no confusing third-party interfaces, no support calls about &quot;which app to use.&quot;</p>
+<section class="block"><h2><span class="num">03</span><span data-i18n="auto.0023846c2490">The Case for Sovereign Authentication</span></h2>
+<p data-i18n="auto.9f9652a8f1bc">Relying on third-party authenticator apps (Google Authenticator, MS Authenticator, Authy) merely shifts the trust surface without eliminating it. These apps are black boxes with opaque security postures. A sovereign authenticator—built on the General Bots orchestration core—provides three critical advantages:</p>
+<h3 data-i18n="auto.652efc893534">End-to-End Cryptographic Sovereignty</h3>
+<p data-i18n="auto.bfccc677a8dd">Your organization holds the master keys, not a third-party cloud provider. TOTP seeds, cryptographic keys, and session tokens are generated, stored, and verified within your infrastructure. No external dependency, no supply chain risk.</p>
+<h3 data-i18n="auto.d36055aa60b4">Custom Logic Injection</h3>
+<p data-i18n="auto.04cdcf60f6df">Authenticate based on didactic parameters beyond simple codes: device proximity, biometric delta, IP reputation scores, behavioral patterns, and time-of-day heuristics. BASIC scripts define the validation rules.</p>
+<h3 data-i18n="auto.031335354fda">Branding and UX Control</h3>
+<p data-i18n="auto.70a08fdfc968">A white-labeled security application maintains the professional authority of your enterprise identity. No "Powered by" branding, no confusing third-party interfaces, no support calls about "which app to use."</p>
 </section>
-<section class="block"><h2><span class="num">04</span>Implementation Roadmap</h2>
-<p>Deploying a sovereign authenticator via General Bots follows three architectural phases:</p>
-<h3>Secret Generation</h3>
-<p>Utilize the General Bots secure vault for generating TOTP seeds and cryptographic keys. All entropy sources are configurable and auditable.</p>
-<h3>Channel Orchestration</h3>
-<p>Push didactic challenges via the universal channel bridging layer—push notification, WhatsApp, RCS, or custom mobile SDK—based on user preference and device capability.</p>
-<h3>Verification Logic</h3>
-<p>Use BASIC to define high-fidelity validation rules: time windows, retry limits, geographic constraints, and anomaly detection thresholds.</p>
+<section class="block"><h2><span class="num">04</span><span data-i18n="auto.ce65db236542">Implementation Roadmap</span></h2>
+<p data-i18n="auto.ff8e4bd210e7">Deploying a sovereign authenticator via General Bots follows three architectural phases:</p>
+<h3 data-i18n="auto.31cdfb29a94d">Secret Generation</h3>
+<p data-i18n="auto.8b96303644b0">Utilize the General Bots secure vault for generating TOTP seeds and cryptographic keys. All entropy sources are configurable and auditable.</p>
+<h3 data-i18n="auto.fb7a8256b303">Channel Orchestration</h3>
+<p data-i18n="auto.3e4ef2b06dae">Push didactic challenges via the universal channel bridging layer—push notification, WhatsApp, RCS, or custom mobile SDK—based on user preference and device capability.</p>
+<h3 data-i18n="auto.18b535e2eba3">Verification Logic</h3>
+<p data-i18n="auto.211d8fccefd8">Use BASIC to define high-fidelity validation rules: time windows, retry limits, geographic constraints, and anomaly detection thresholds.</p>
 </section>
-<section class="block"><h2><span class="num">05</span>Beyond TOTP: Context-Aware Authentication</h2>
-<p>With General Bots, your authenticator is not limited to time-based codes. You can build authentication flows that consider device fingerprint, network reputation, biometric confidence scores, and behavioral patterns. A login attempt from a known device on the corporate network at 9 AM local time requires a simple code. An attempt from an anonymous IP at 3 AM triggers step-up authentication with additional verification channels.</p>
-<blockquote>&quot;The era of trusting third-party telecommunications infrastructure for security is over. The architectural requirement for 2025 is clear: own your authenticator, or expect your credentials to be brokered on the open market.&quot;</blockquote>
+<section class="block"><h2><span class="num">05</span><span data-i18n="auto.71dfb209b121">Beyond TOTP: Context-Aware Authentication</span></h2>
+<p data-i18n="auto.19bddc5a19a0">With General Bots, your authenticator is not limited to time-based codes. You can build authentication flows that consider device fingerprint, network reputation, biometric confidence scores, and behavioral patterns. A login attempt from a known device on the corporate network at 9 AM local time requires a simple code. An attempt from an anonymous IP at 3 AM triggers step-up authentication with additional verification channels.</p>
+<blockquote data-i18n="auto.98c14c0e1be4">"The era of trusting third-party telecommunications infrastructure for security is over. The architectural requirement for 2025 is clear: own your authenticator, or expect your credentials to be brokered on the open market."</blockquote>
 </section>
-<section class="block"><h2><span class="num">06</span>The Cost of Inaction</h2>
-<p>SS7 exploitation is not a theoretical threat. Telecom security researchers have demonstrated mass interception campaigns targeting financial institutions, cryptocurrency exchanges, and high-net-worth individuals. For enterprises, the cost of a single compromised account—regulatory fines, forensic investigation, reputational damage, customer churn—far exceeds the investment required to deploy sovereign authentication.</p>
+<section class="block"><h2><span class="num">06</span><span data-i18n="auto.6376449b04a0">The Cost of Inaction</span></h2>
+<p data-i18n="auto.86671eb877c6">SS7 exploitation is not a theoretical threat. Telecom security researchers have demonstrated mass interception campaigns targeting financial institutions, cryptocurrency exchanges, and high-net-worth individuals. For enterprises, the cost of a single compromised account—regulatory fines, forensic investigation, reputational damage, customer churn—far exceeds the investment required to deploy sovereign authentication.</p>
 </section>
-<section class="block"><h2><span class="num">07</span>Secure Your Authentication</h2>
-<p>Stop relying on compromised telecommunications infrastructure. Deploy a sovereign authenticator on the General Bots platform and take control of your security posture.</p><p>Our security team will guide you through the implementation roadmap in under 30 days.</p>
+<section class="block"><h2><span class="num">07</span><span data-i18n="auto.26a0ccd977f3">Secure Your Authentication</span></h2>
+<p data-i18n="auto.968a2eac3a86">Stop relying on compromised telecommunications infrastructure. Deploy a sovereign authenticator on the General Bots platform and take control of your security posture.</p><p data-i18n="auto.8219a4488f40">Our security team will guide you through the implementation roadmap in under 30 days.</p>
 </section>
 </div>
 <div class="cta"><p data-i18n="common.back_to_blog">Voltar para todos os artigos.</p>
-<a class="btn" href="/blog/" data-i18n="common.back_to_blog">← Blog</a></div>
+<a class="btn" data-i18n="common.back_to_blog" href="/blog/">← Blog</a></div>
 <footer>
-  <a href="https://sentient.net.br" target="_blank" rel="noopener noreferrer">Sentient ↗</a>
-  <a href="https://pragmatismo.com.br" target="_blank" rel="noopener noreferrer">Pragmatismo ↗</a>
-  <a href="https://mapagency.com.br" target="_blank" rel="noopener noreferrer">Map Agency ↗</a>
-  <a href="https://darioexecutivesales.com" target="_blank" rel="noopener noreferrer">Dário Executive Sales ↗</a>
-  <a href="https://oerlabs.com.br" target="_blank" rel="noopener noreferrer">OER Labs ↗</a>
-  <a href="/blog/" data-i18n="nav.blog">Blog</a><a href="/magazine/" data-i18n="nav.magazine">Revistas</a>
-  <a href="/privacy/" data-i18n="footer.privacy">Privacidade</a>
-  <a href="/terms/" data-i18n="footer.terms">Termos</a>
-  <a href="/security/">Segurança</a>
-  <a href="/contact/" data-i18n="nav.contact">Contato</a>
-  <a href="/hosting/">Hosting</a>
-  <a href="https://docs.generalbots.org" target="_blank" rel="noopener noreferrer">Documentação ↗</a>
-  <a href="https://github.com/generalbots/generalbots" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+<a data-i18n="auto.986871b2e286" href="https://sentient.net.br" rel="noopener noreferrer" target="_blank">Sentient ↗</a>
+<a data-i18n="auto.1895deb4a6b4" href="https://pragmatismo.com.br" rel="noopener noreferrer" target="_blank">Pragmatismo ↗</a>
+<a data-i18n="auto.e84bdcd56da4" href="https://mapagency.com.br" rel="noopener noreferrer" target="_blank">Map Agency ↗</a>
+<a data-i18n="auto.458125333a3c" href="https://darioexecutivesales.com" rel="noopener noreferrer" target="_blank">Dário Executive Sales ↗</a>
+<a data-i18n="auto.6d28d08cd510" href="https://oerlabs.com.br" rel="noopener noreferrer" target="_blank">OER Labs ↗</a>
+<a data-i18n="nav.blog" href="/blog/">Blog</a><a data-i18n="nav.magazine" href="/magazine/">Revistas</a>
+<a data-i18n="footer.privacy" href="/privacy/">Privacidade</a>
+<a data-i18n="footer.terms" href="/terms/">Termos</a>
+<a data-i18n="auto.27a0286c70df" href="/security/">Segurança</a>
+<a data-i18n="nav.contact" href="/contact/">Contato</a>
+<a data-i18n="auto.8766cde61214" href="/hosting/">Hosting</a>
+<a data-i18n="auto.9584a968ebe0" href="https://docs.generalbots.org" rel="noopener noreferrer" target="_blank">Documentação ↗</a>
+<a data-i18n="auto.548b068fc17c" href="https://github.com/generalbots/generalbots" rel="noopener noreferrer" target="_blank">GitHub ↗</a>
 </footer>
-</div><button id="toTop" type="button" aria-label="Voltar ao topo">↑ TOPO</button>
-<script src="/js/i18n.js?v=2"></script><script src="/js/theme.js?v=1"></script></body></html>
+</div><button aria-label="Voltar ao topo" data-i18n="auto.25fea8b21fad" data-i18n-attr="aria-label:auto.a740f5b83d92" id="toTop" type="button">↑ TOPO</button>
+<script src="/js/i18n.js?v=3"></script><script src="/js/theme.js?v=1"></script></body></html>
