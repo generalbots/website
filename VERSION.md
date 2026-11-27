@@ -1,12 +1,22 @@
 # Version history — generalbots.org
 
-**Current version: 1.6.0** (2026-11-27)
+**Current version: 1.6.1** (2026-11-27)
 
 This file tracks every change made to the website. Per `AGENTS.md`, any change to
 this repository must bump the version and add an entry here in the same commit.
 
 Versioning: **major** = redesign / breaking navigation change, **minor** = new
 page or section, **patch** = content, styling or bug fix.
+
+---
+
+## 1.6.1 — 2026-11-27
+
+### Removed
+- Availability line "Disponibilidade: Seg a Sex, 9h às 18h (BRT)" from the
+  `/contact/` page. Dropped the `auto.133c800f3321` key and the stale, unused
+  `contact.availability_mon_fri_9am_6pm_brt` key from all ten locale catalogs and
+  from the translation index.
 
 ---
 
