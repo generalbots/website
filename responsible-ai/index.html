@@ -1,0 +1,71 @@
+<!DOCTYPE html><html lang="pt-BR"><head>
+<script>(function(){var L=["pt","en","es","fr","de","ja","zh-cn","it","ko","ru"],q=new URLSearchParams(location.search).get("lang"),s=null,p=location.pathname.split("/")[1]||"";p=p.toLowerCase();if(p==="pt-br")p="pt";try{s=localStorage.getItem("gb-lang");}catch(e){}var l=L.indexOf(q)>=0?q:(L.indexOf(p)>=0?p:(L.indexOf(s)>=0?s:"pt"));document.documentElement.setAttribute("lang",l==="pt"?"pt-BR":l);document.documentElement.setAttribute("data-i18n-loading","");["/lang/"+l+".json","/lang/_index.json"].forEach(function(h){var k=document.createElement("link");k.rel="preload";k.as="fetch";k.href=h;k.crossOrigin="anonymous";document.head.appendChild(k);});})();</script>
+<style>html[data-i18n-loading]{background:#050505}html[data-i18n-loading] body{visibility:hidden!important}html[data-i18n-loading]::before{content:"";position:fixed;left:50%;top:50%;width:26px;height:26px;margin:-13px;border:2px solid #333;border-top-color:#ededed;border-radius:50%;animation:gbI18nSpin .8s linear infinite;z-index:9999}@keyframes gbI18nSpin{to{transform:rotate(360deg)}}</style>
+<noscript><style>html[data-i18n-loading] body{visibility:visible!important}</style></noscript>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title data-i18n="responsible-ai.page_title">Política de IA responsável | General Bots</title>
+<meta content="Política de IA responsável: dados locais, código aberto MIT, sem telemetria em instalações auto-hospedadas e controle humano sobre modelos e agentes." data-i18n="responsible-ai.meta_description" data-i18n-attr="content" name="description"/>
+<link href="https://generalbots.org/responsible-ai/" rel="canonical"/>
+<link href="/gb-favicon-v2.ico" rel="icon" sizes="any"/>
+<meta content="Política de IA responsável | General Bots" data-i18n="responsible-ai.page_title" data-i18n-attr="content" property="og:title"/><meta content="Política de IA responsável: dados locais, código aberto MIT, sem telemetria em instalações auto-hospedadas e controle humano sobre modelos e agentes." data-i18n="responsible-ai.meta_description" data-i18n-attr="content" property="og:description"/>
+<meta content="website" property="og:type"/><meta content="/og-image.png" property="og:image"/><meta content="index, follow" name="robots"/>
+<style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#050505;color:#ededed;font-family:'Geist',ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif;line-height:1.7}
+body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:60px 60px;mask-image:linear-gradient(to bottom,#000,transparent 70%)}
+.wrap{position:relative;z-index:1;max-width:960px;margin:0 auto;padding:28px 24px 96px}
+.topbar{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:14px 0;border-bottom:1px solid #1f1f1f}
+.brand{display:flex;align-items:center;gap:10px;font-family:ui-monospace,monospace;font-size:11px;letter-spacing:.14em;color:#8a8a8a;text-decoration:none;border:0}
+.brand b{color:#ededed;font-weight:600}
+.back{display:inline-flex;align-items:center;gap:8px;margin:26px 0 0;font-size:13px;color:#a1a1a1;text-decoration:none;border:0}
+.back:hover{color:#fff}
+select#gbLang{background:#0d0d0d;color:#ededed;border:1px solid #333;border-radius:4px;padding:6px 10px;font-size:12px;font-family:inherit}
+.masthead{margin:34px 0 30px;padding:32px;border:1px solid #262626;background:linear-gradient(150deg,#0e0e0e,#050505 60%)}
+.eyebrow{font-family:ui-monospace,monospace;font-size:11px;letter-spacing:.08em;font-weight:600;color:#8a8a8a}
+.eyebrow em{font-style:normal;color:#ededed}
+h1{font-size:clamp(32px,4.4vw,52px);line-height:1.08;letter-spacing:-.045em;margin:16px 0 12px;font-weight:600;text-wrap:balance}
+.lead{font-size:18px;color:#c4c4c4;margin:0;max-width:720px}
+.meta{margin-top:22px;padding-top:16px;border-top:1px solid #262626;display:flex;flex-wrap:wrap;gap:14px;font-family:ui-monospace,monospace;font-size:10.5px;letter-spacing:.06em;color:#8a8a8a}
+.meta span{border:1px solid #2e2e2e;padding:4px 8px}
+.content{display:flex;flex-direction:column;gap:14px}
+.block{padding:24px 26px;border:1px solid #262626;background:#080808}
+.block h2{margin:0 0 14px;font-size:22px;line-height:1.25;letter-spacing:-.025em;font-weight:600}
+.block h2 .num{font-family:ui-monospace,monospace;font-size:11px;color:#8a8a8a;margin-right:12px;letter-spacing:.08em}
+.block p{margin:0;font-size:15px;color:#a1a1a1;text-wrap:pretty}
+.cta{margin-top:18px;padding:22px 26px;border:1px solid #262626;background:linear-gradient(120deg,#111,#080808);display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
+.cta p{margin:0;color:#c4c4c4;font-size:15px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;background:#fff;color:#0a0a0a;font-weight:600;font-size:13px;text-decoration:none;border:0}
+footer{margin-top:56px;padding-top:22px;border-top:1px solid #262626;display:flex;flex-wrap:wrap;gap:18px;font-size:12.5px}
+footer a{color:#a1a1a1;text-decoration:none;border-bottom:1px solid #333}
+footer a:hover{color:#fff}
+#toTop{position:fixed;right:20px;bottom:20px;z-index:20;background:#ededed;color:#0a0a0a;border:0;padding:10px 14px;font:600 12px ui-monospace,monospace;cursor:pointer;opacity:.85}
+#toTop:hover{opacity:1}
+@media(max-width:700px){.wrap{padding:20px 16px 72px}.masthead,.block,.cta{padding:20px}.topbar{gap:10px}}
+</style><script>try{document.documentElement.dataset.theme=localStorage.getItem('gb-theme')||'system';}catch(e){document.documentElement.dataset.theme='system';}</script>
+<style>
+html[data-theme="light"] body{filter:invert(1) hue-rotate(180deg);background:#fff!important}
+html[data-theme="light"] img,html[data-theme="light"] video,html[data-theme="light"] svg{filter:invert(1) hue-rotate(180deg)}
+@media (prefers-color-scheme:light){html[data-theme="system"] body{filter:invert(1) hue-rotate(180deg);background:#fff!important}html[data-theme="system"] img,html[data-theme="system"] video,html[data-theme="system"] svg{filter:invert(1) hue-rotate(180deg)}}
+</style></head><body><div class="wrap">
+<div class="topbar"><a class="brand" href="/"><b>&lt;GB&gt;</b> GENERAL BOTS</a><select aria-label="Idioma" data-i18n-attr="aria-label:auto.009433886003" id="gbLang"><option value="pt">Português</option><option value="en">English</option><option value="es">Español</option><option value="fr">Français</option><option value="de">Deutsch</option><option value="ja">日本語</option><option value="zh-cn">简体中文</option><option value="it">Italiano</option><option value="ko">한국어</option><option value="ru">Русский</option></select><button aria-label="Alternar modo claro" aria-pressed="false" data-i18n="auto.41227a56e518" data-i18n-attr="aria-label:auto.62c92c84f854,title:auto.e4bf401038f8" id="gbTheme" style="background:#0d0d0d;color:#ededed;border:1px solid #333;border-radius:4px;padding:6px 10px;font-size:11px;cursor:pointer" title="Modo claro / escuro" type="button">TEMA</button></div>
+<a class="back" href="/">← <span data-i18n="common.back_home">Voltar ao início</span></a>
+<div class="masthead"><div class="eyebrow">// <em>GENERAL BOTS</em></div>
+<h1 data-i18n="responsible-ai.title">Política de IA responsável</h1>
+<p class="lead" data-i18n="responsible-ai.lead">Como o General Bots aborda a IA: os dados ficam onde você executa o sistema, o código é aberto e as pessoas mantêm o controle.</p>
+<div class="meta"><span data-i18n="responsible-ai.meta_policy">POLÍTICA</span></div></div>
+<div class="content"><section class="block"><h2><span class="num">01</span><span data-i18n="responsible-ai.local_first_heading">Dados locais e controle auto-hospedado</span></h2><p data-i18n="responsible-ai.local_first_desc">O General Bots executa na infraestrutura que você escolhe. Conversas, documentos e bases de conhecimento permanecem no seu ambiente; você decide onde os modelos rodam e o que sai da sua rede.</p></section><section class="block"><h2><span class="num">02</span><span data-i18n="responsible-ai.open_source_heading">Transparência de código aberto</span></h2><p data-i18n="responsible-ai.open_source_desc">O código-fonte é publicado sob a licença MIT. Qualquer pessoa pode inspecionar, auditar, modificar e estender como a plataforma lida com modelos, prompts e agentes.</p></section><section class="block"><h2><span class="num">03</span><span data-i18n="responsible-ai.no_telemetry_heading">Sem telemetria em instalações auto-hospedadas</span></h2><p data-i18n="responsible-ai.no_telemetry_desc">Instalações auto-hospedadas não enviam telemetria de uso para nós. Não há beacon de análise nem coleta automática de dados na versão auto-hospedada.</p></section><section class="block"><h2><span class="num">04</span><span data-i18n="responsible-ai.human_control_heading">Controle humano sobre modelos e agentes</span></h2><p data-i18n="responsible-ai.human_control_desc">Você escolhe quais modelos e agentes ativar e o que eles podem acessar. Ações automatizadas ocorrem apenas dentro das permissões que você concede, e uma pessoa pode revisar ou interrompê-las.</p></section></div>
+<div class="cta"><p data-i18n="responsible-ai.security_intro">Encontrou um problema de segurança na plataforma ou em um componente de IA? Reporte em privado.</p><a class="btn" data-i18n="responsible-ai.security_link" href="/security/">Ler a política de segurança →</a></div>
+<footer>
+<a data-i18n="footer.privacy" href="/privacy/">Privacidade</a>
+<a data-i18n="code-signing.footer_link" href="/code-signing/">Assinatura de código</a>
+<a data-i18n="footer.terms" href="/terms/">Termos</a>
+<a data-i18n="auto.27a0286c70df" href="/security/">Segurança</a>
+<a data-i18n="responsible-ai.footer_link" href="/responsible-ai/">IA responsável</a>
+<a data-i18n="nav.blog" href="/blog/">Blog</a><a data-i18n="nav.magazine" href="/magazine/">Revistas</a>
+<a data-i18n="nav.contact" href="/contact/">Contato</a>
+<a data-i18n="auto.8766cde61214" href="/hosting/">Hosting</a>
+</footer>
+</div><button aria-label="Voltar ao topo" data-i18n="auto.25fea8b21fad" data-i18n-attr="aria-label:auto.a740f5b83d92" id="toTop" type="button">↑ TOPO</button>
+<script src="/js/i18n.js?v=3"></script><script src="/js/theme.js?v=1"></script></body></html>

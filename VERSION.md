@@ -1,12 +1,20 @@
 # Version history — generalbots.org
 
-**Current version: 1.6.2** (2026-11-27)
+**Current version: 1.7.0** (2026-11-27)
 
 This file tracks every change made to the website. Per `AGENTS.md`, any change to
 this repository must bump the version and add an entry here in the same commit.
 
 Versioning: **major** = redesign / breaking navigation change, **minor** = new
 page or section, **patch** = content, styling or bug fix.
+
+---
+
+## 1.7.0 — 2026-11-27
+
+### Added
+- New `/responsible-ai/` policy page describing local-first, self-hosted data control, MIT open-source transparency, no telemetry in self-hosted instances and human control over models and agents, with a link to `/security/` for private vulnerability disclosure. No certifications, audit claims or legal-compliance claims are made. Named `data-i18n` keys were added to all ten locale catalogs.
+- Visible links to the responsible-AI policy in the homepage footer and in the code-signing, privacy and security page footers; sitemap and deploy smoke test updated with `/responsible-ai/`.
 
 ---
 
