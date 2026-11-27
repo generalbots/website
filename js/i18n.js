@@ -5,6 +5,11 @@ var DONE=new WeakSet(), STARTED=false, REVEAL=null;
 function detect(){
   var p=new URLSearchParams(location.search).get('lang');
   if(p&&LANGS.indexOf(p)>=0)return p;
+  // A locale path prefix (/it, /en, …) wins over the remembered language so
+  // opening /it always selects Italian, regardless of a previous selection.
+  var path=(location.pathname.split('/')[1]||'').toLowerCase();
+  if(path==='pt-br')path='pt';
+  if(LANGS.indexOf(path)>=0)return path;
   var s=null;try{s=localStorage.getItem('gb-lang');}catch(e){}
   return s&&LANGS.indexOf(s)>=0?s:'pt';
 }

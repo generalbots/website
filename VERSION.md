@@ -1,12 +1,29 @@
 # Version history — generalbots.org
 
-**Current version: 1.5.0** (2026-11-27)
+**Current version: 1.5.1** (2026-11-27)
 
 This file tracks every change made to the website. Per `AGENTS.md`, any change to
 this repository must bump the version and add an entry here in the same commit.
 
 Versioning: **major** = redesign / breaking navigation change, **minor** = new
 page or section, **patch** = content, styling or bug fix.
+
+---
+
+## 1.5.1 — 2026-11-27
+
+### Removed
+- "Mantenedores" link from the homepage top navigation. The maintainers section
+  and the contact links remain reachable on the page and in the footer.
+
+### Fixed
+- Locale URL prefixes now drive the language selector: `/it` opens the site in
+  Italian, and every supported prefix (`/pt`, `/en`, `/es`, `/fr`, `/de`, `/ja`,
+  `/zh-cn`, `/it`, `/ko`, `/ru`) selects its language in the head detector and in
+  `js/i18n.js`. Precedence is `?lang=` → path prefix → saved language → pt, so a
+  locale URL always wins over a language remembered from a previous visit.
+- Updated all 31 page head detectors together with the shared runtime so the
+  selector and the preloaded dictionary always agree before the page is revealed.
 
 ---
 
