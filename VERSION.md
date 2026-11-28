@@ -1,12 +1,24 @@
 # Version history — generalbots.org
 
-**Current version: 1.7.5** (2026-11-28)
+**Current version: 1.7.6** (2026-11-28)
 
 This file tracks every change made to the website. Per `AGENTS.md`, any change to
 this repository must bump the version and add an entry here in the same commit.
 
 Versioning: **major** = redesign / breaking navigation change, **minor** = new
 page or section, **patch** = content, styling or bug fix.
+
+---
+
+## 1.7.6 — 2026-11-28
+
+### Changed
+- Refined the landing header with an active section indicator, a Maintainers link, and grouped theme and language controls.
+- Added Magazines, Terms, Security, and Responsible AI to the landing footer menu.
+
+### Fixed
+- Matched the footer illustration divider to the active theme and restored the black GB logo in light mode.
+- Removed links to the inactive Dário Executive Sales website.
 
 ---
 
