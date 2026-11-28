@@ -1,12 +1,24 @@
 # Version history — generalbots.org
 
-**Current version: 1.7.2** (2026-11-27)
+**Current version: 1.7.3** (2026-11-28)
 
 This file tracks every change made to the website. Per `AGENTS.md`, any change to
 this repository must bump the version and add an entry here in the same commit.
 
 Versioning: **major** = redesign / breaking navigation change, **minor** = new
 page or section, **patch** = content, styling or bug fix.
+
+---
+
+## 1.7.3 — 2026-11-28
+
+### Changed
+- Added the landing design’s ASCII gear transition when switching themes or languages. It respects the system’s reduced-motion preference.
+
+### Fixed
+- Localized the hero headline, controls and animated chat across all ten languages. Corrected landing copy and restored the Pragmatismo name.
+- Kept the hero card within the viewport at narrow widths.
+- Restored the Windows installer link in the landing page’s download controls.
 
 ---
 

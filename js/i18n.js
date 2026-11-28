@@ -2,6 +2,8 @@
 var LANGS=["pt", "en", "es", "fr", "de", "ja", "zh-cn", "it", "ko", "ru"];
 var DICT={}, LANG='pt', INDEX=null;
 var DONE=new WeakSet(), STARTED=false, REVEAL=null;
+var request=0, pendingLang=null;
+var catalogVersion=window.gbCatalogVersion||'';
 function detect(){
   var p=new URLSearchParams(location.search).get('lang');
   if(p&&LANGS.indexOf(p)>=0)return p;
@@ -23,23 +25,25 @@ function attrs(el,d){
   });
 }
 function text(el,key,d){
-  var v=value(d,key); if(v===null)return;
-  if(el.dataset.i18nHtml!==undefined)el.innerHTML=v; else el.textContent=v;
+  var v=key&&value(d,key);
+  if(v){
+   if(el.dataset.i18nHtml!==undefined)el.innerHTML=v; else el.textContent=v;
+  }
   attrs(el,d);
 }
 function applyTo(root){
   if(!root||!root.querySelectorAll)return;
-  var list=root.querySelectorAll('[data-i18n]');
-  if(root.dataset&&root.dataset.i18n&&!DONE.has(root))list=[root].concat(Array.prototype.slice.call(list));
+  var selector='[data-i18n],[data-i18n-attr]';
+  var list=Array.from(root.querySelectorAll(selector));
+  if(root.matches&&root.matches(selector))list.unshift(root);
   list.forEach(function(el){
    if(DONE.has(el))return;
-   var k=el.dataset.i18n; if(!k)return;
-   text(el,k,DICT); DONE.add(el);
+   text(el,el.dataset.i18n,DICT); DONE.add(el);
   });
 }
 async function loadIndex(){
   if(INDEX)return;
-  try{INDEX=await (await fetch('/lang/_index.json')).json();}catch(e){INDEX={};}
+  try{INDEX=await (await fetch('/lang/_index.json'+catalogVersion)).json();}catch(e){INDEX={};}
 }
 // Dynamic text rendered by x-dc components has no static data-i18n attributes.
 // Wrap any text node whose exact source string is in the translation index.
@@ -51,7 +55,7 @@ function autoWrap(root){
    var v=node.nodeValue.trim(), key=INDEX[v];
    if(!key||!DICT[key])return;
    var p=node.parentElement;
-   if(!p||p.closest('[data-i18n],[data-i18n-html],script,style,option,select'))return;
+   if(!p||p.closest('[data-i18n],[data-i18n-html],[data-i18n-rendered],script,style,option,select'))return;
    var span=document.createElement('span');
    span.setAttribute('data-i18n',key);
    span.textContent=node.nodeValue;
@@ -81,33 +85,60 @@ function revealWhenReady(){
     }
   },80);
 }
-async function apply(lang){
+async function apply(lang,change){
   if(LANGS.indexOf(lang)<0)lang='pt';
+  var id=++request;
+  pendingLang=lang;
   try{
-   var base=await (await fetch('/lang/'+lang+'.json')).json();
+   var response=await fetch('/lang/'+lang+'.json'+catalogVersion);
+   if(!response.ok)throw new Error('Cannot load locale '+lang);
+   var base=await response.json();
    var d=base,slug=document.body.dataset.blogSlug;
    if(slug&&slug!=='blog'){try{var post=await (await fetch('/lang/blog/'+slug+'/'+lang+'.json')).json();d=Object.assign({},base,post);}catch(e){}}
-   DICT=d; LANG=lang; DONE=new WeakSet();
-   syncSelect();
    await loadIndex();
-   autoWrap(document.documentElement);
-   applyTo(document.documentElement);
-   document.documentElement.lang=(lang==='pt'?'pt-BR':lang);
-   try{localStorage.setItem('gb-lang',lang);}catch(e){}
-   syncSelect();
-   revealWhenReady();
-  }catch(e){console.warn('[i18n]',e);reveal();}
+   if(id!==request)return;
+   var commit=function(){
+    if(id!==request)return;
+    DICT=d; LANG=lang; DONE=new WeakSet();
+    autoWrap(document.documentElement);
+    applyTo(document.documentElement);
+    document.documentElement.lang=(lang==='pt'?'pt-BR':lang);
+    try{localStorage.setItem('gb-lang',lang);}catch(e){}
+    window.dispatchEvent(new Event('gb-language'));
+    revealWhenReady();
+   };
+   if(change&&window.GBFlood&&lang!==LANG){
+    if(window.GBFlood.busy())await window.GBFlood.whenIdle();
+    if(id!==request)return;
+    await window.GBFlood.swap({
+     theme:window.gbEffectiveTheme(),
+     label:'//'+value(d,'auto.009433886003')+' > //'+lang.toUpperCase(),
+     x:change.x,y:change.y
+    },commit);
+   }else commit();
+  }catch(e){if(id===request){console.warn('[i18n]',e);reveal();}}
+  finally{if(id===request){pendingLang=null;syncSelect();}}
 }
 window.gbSetLang=apply;
+window.gbTranslate=function(key,fallback){return value(DICT,key)||fallback;};
+window.gbTranslateSource=function(source){
+  var key=INDEX&&INDEX[source.trim()];
+  var translated=key&&value(DICT,key);
+  return translated?source.replace(source.trim(),function(){return translated;}):source;
+};
 // The homepage runtime re-renders the header after translations are applied,
 // resetting the select to its first option. Keep it on the active locale.
 function syncSelect(){
   var sel=document.getElementById('gbLang');
-  if(sel&&sel.value!==LANG)sel.value=LANG;
+  var selected=pendingLang||LANG;
+  if(sel&&sel.value!==selected)sel.value=selected;
 }
 // Delegated listener survives React/DC re-rendering of the header select.
 document.addEventListener('change',function(e){
-  if(e.target&&e.target.id==='gbLang')apply(e.target.value);
+  if(e.target&&e.target.id==='gbLang'){
+   var rect=e.target.getBoundingClientRect();
+   apply(e.target.value,{x:(rect.left+rect.width/2)/innerWidth,y:(rect.top+rect.height/2)/innerHeight});
+  }
 },true);
 // The homepage (and other x-dc pages) mount content after DOMContentLoaded.
 // Re-apply translations to any elements added later and to replacements.
@@ -121,7 +152,6 @@ function observe(){
      if(n.nodeType!==1)return;
      autoWrap(n);
      applyTo(n);
-     n.querySelectorAll&&n.querySelectorAll('[data-i18n]').forEach(function(el){if(!DONE.has(el)){text(el,el.dataset.i18n,DICT);DONE.add(el);}});
     });
    });
   });
