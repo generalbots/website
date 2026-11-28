@@ -1,12 +1,19 @@
 # Version history — generalbots.org
 
-**Current version: 1.7.9** (2026-11-28)
+**Current version: 1.7.10** (2026-11-28)
 
 This file tracks every change made to the website. Per `AGENTS.md`, any change to
 this repository must bump the version and add an entry here in the same commit.
 
 Versioning: **major** = redesign / breaking navigation change, **minor** = new
 page or section, **patch** = content, styling or bug fix.
+
+---
+
+## 1.7.10 — 2026-11-28
+
+### Changed
+- Updated the landing footer’s closing phrase in all ten languages.
 
 ---
 
