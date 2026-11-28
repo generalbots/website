@@ -260,6 +260,30 @@
     cur.dog = setTimeout(finish, 2 * D + 3000);
   }
 
+  let scrollRevision = 0;
+  function applyWithoutScroll(change) {
+    const revision = ++scrollRevision;
+    const root = document.documentElement;
+    const left = window.scrollX, top = window.scrollY;
+    root.setAttribute('data-gb-switching', '');
+    const restore = () => {
+      if (window.scrollX !== left || window.scrollY !== top) {
+        window.scrollTo({ left, top, behavior: 'instant' });
+      }
+    };
+    try {
+      change();
+      restore();
+    } finally {
+      // The landing renderer can commit its layout on the next frame.
+      requestAnimationFrame(() => requestAnimationFrame(() => {
+        if (revision !== scrollRevision) return;
+        restore();
+        root.removeAttribute('data-gb-switching');
+      }));
+    }
+  }
+
   let idle = Promise.resolve();
   window.GBFlood = {
     busy: () => !!cur,
@@ -267,12 +291,12 @@
     swap(options, change) {
       if (cur) return idle;
       if (reduce()) {
-        change();
+        applyWithoutScroll(change);
         return idle;
       }
       idle = new Promise((resolve, reject) => {
         const apply = () => {
-          try { change(); }
+          try { applyWithoutScroll(change); }
           catch (error) { reject(error); }
         };
         try {

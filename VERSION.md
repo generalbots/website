@@ -1,12 +1,22 @@
 # Version history — generalbots.org
 
-**Current version: 1.7.3** (2026-11-28)
+**Current version: 1.7.4** (2026-11-28)
 
 This file tracks every change made to the website. Per `AGENTS.md`, any change to
 this repository must bump the version and add an entry here in the same commit.
 
 Versioning: **major** = redesign / breaking navigation change, **minor** = new
 page or section, **patch** = content, styling or bug fix.
+
+---
+
+## 1.7.4 — 2026-11-28
+
+### Fixed
+- Kept the landing page at the same scroll position when switching theme or language.
+- Removed the flare seam from the cogwheel on phones.
+- Gave Resources a white surface and dark presentation-card pattern in light mode.
+- Matched the footer’s credits and layout to the landing design and grouped the site links below the primary navigation.
 
 ---
 

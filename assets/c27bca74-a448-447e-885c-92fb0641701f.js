@@ -82,6 +82,8 @@ img{position:absolute;display:block;max-width:none;pointer-events:none;user-sele
 .flare{z-index:4;inset:0;width:100%;height:100%;object-fit:cover;mix-blend-mode:screen;transform:translate(calc(3.37% + var(--px)*-2px),calc(2.75% + var(--py)*-1.5px))}
 .flw{position:absolute;left:50%;top:49.4%;width:166.667%;aspect-ratio:1;transform:translate(-50%,-50%);pointer-events:none}
 .flw .flare{transform-origin:49.04% 49.03%}
+/* The raster flare has a horizontal seam when scaled down on phones. */
+@media (max-width:760px){.flw{display:none}}
 @media (prefers-reduced-motion:reduce){.flw .flare{animation:none}}
 .flw .flare{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;mix-blend-mode:screen;
  translate:calc(0.96% + var(--fx,0)*18px) calc(0.97% + var(--fy,0)*12px);
