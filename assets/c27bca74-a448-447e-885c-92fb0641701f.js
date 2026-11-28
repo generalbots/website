@@ -100,6 +100,7 @@ img{position:absolute;display:block;max-width:none;pointer-events:none;user-sele
 .g2.line{background:rgba(255,255,255,.1);backdrop-filter:none;-webkit-backdrop-filter:none;
  -webkit-mask:url('${A('hSmL', 'assets/gb-cog-small-line2.svg')}') center/contain no-repeat;mask:url('${A('hSmL', 'assets/gb-cog-small-line2.svg')}') center/contain no-repeat}
 :host([twin="0"]) .g2,:host([twin="false"]) .g2{display:none}
+@media (max-width:760px){.g2{left:65.545%;top:49.195%;width:46.31%;height:46.31%;-webkit-mask-size:90.909% 90.909%;mask-size:90.909% 90.909%}.g2.line{display:none}}
 @keyframes gbSpinG2{from{transform:rotate(7.5deg)}to{transform:rotate(-352.5deg)}}
 @media (prefers-reduced-motion:reduce){.g2{animation:none}}
 .origin{position:absolute;left:50%;top:49.4%;width:1px;height:1px}
