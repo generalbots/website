@@ -7,14 +7,15 @@
 // GBFlood.swap(opts, fn)  cover → fn() → reveal (same page)
 // opts: { theme:'dark'|'light' (destination), label, style:'Enxame'|'Origem'|'Ruído', color:'Arco-íris'|'Mono', speed, art, x, y (0–1 origin) }
 (() => {
-  if (window.GBFlood) return;
+  const inWorker = typeof WorkerGlobalScope !== 'undefined' && self instanceof WorkerGlobalScope;
+  if (!inWorker && window.GBFlood) return;
   const TH = { dark: { bg: '#000000', ink: '#ededed', L: '79.9%' }, light: { bg: '#ffffff', ink: '#171717', L: '52%' } };
   const GL = 'cseo6%&8@()x01{}<>/\\=+*#';
   const MONO = '"Geist Mono", ui-monospace, SFMono-Regular, Menlo, monospace';
   const reduce = () => window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
   const clamp = (v, a, b) => v < a ? a : v > b ? b : v;
 
-  // ── renderer · self-contained (stringified into the worker), device pixels throughout ──
+  // ── renderer · shared by the worker and main thread, device pixels throughout ──
   function core(post) {
     const RAMP = 'cseo6%&8@', MAIL = 'cs(oe)x', FLYG = '01{}<>/\\=+*#', FLY = 200;
     const clamp = (v, a, b) => v < a ? a : v > b ? b : v;
@@ -170,7 +171,14 @@
     };
   }
 
-  // ── main thread ──
+  if (inWorker) {
+    const render = core(message => self.postMessage(message));
+    self.onmessage = event => render(event.data);
+    return;
+  }
+
+  // Load the worker from this same script so it works under the site's CSP.
+  const workerUrl = document.currentScript?.src;
   const canOff = typeof OffscreenCanvas !== 'undefined' && !!HTMLCanvasElement.prototype.transferControlToOffscreen && typeof Worker !== 'undefined';
   let wk = null, local = null, cur = null;
 
@@ -219,11 +227,8 @@
 
   function engine() {
     if (wk || local) return;
-    if (canOff) try {
-      const src = 'const h=(' + core.toString() + ')(m=>postMessage(m));onmessage=e=>h(e.data);';
-      const url = URL.createObjectURL(new Blob([src], { type: 'text/javascript' }));
-      try { wk = new Worker(url); }
-      finally { URL.revokeObjectURL(url); }
+    if (canOff && workerUrl) try {
+      wk = new Worker(workerUrl);
       wk.onmessage = e => onMsg(e.data);
       wk.onerror = () => { wk.terminate(); wk = null; local = core(onMsg); finish(); };
       return;
