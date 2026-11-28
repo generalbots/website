@@ -397,20 +397,30 @@ html[data-gb-switching]{overflow-anchor:none}
 .gb-header-row{flex:1;max-width:1200px;margin:0 auto;padding:0 24px;display:flex;align-items:center;gap:clamp(10px,1.35vw,20px);box-sizing:border-box;min-width:0}
 .gb-header-brand{display:flex;align-items:center;gap:8px;flex:none}
 .gb-header-nav{margin-inline:auto;display:flex;align-items:stretch;gap:clamp(9px,1.15vw,17px);font-size:13px;white-space:nowrap}
-.gb-header-nav a{position:relative;display:flex;align-items:center;min-height:56px;color:var(--gb-a1a1a1)}
+.gb-header-nav a{position:relative;display:flex;align-items:center;min-height:56px;color:var(--gb-a1a1a1);transition:color .2s ease}
 .gb-header-nav a:hover,.gb-header-nav a[aria-current="location"]{color:var(--gb-ededed)}
-.gb-header-nav a[aria-current="location"]::after{content:"";position:absolute;inset:auto 0 0;height:2px;background:var(--gb-ededed)}
+.gb-header-nav a::after{content:"";position:absolute;inset:auto 2px 7px;height:2px;border-radius:2px;background:var(--gb-ededed);opacity:0;transform:scaleX(.4);transition:transform .28s cubic-bezier(.22,1,.36,1),opacity .2s ease}
+.gb-header-nav a[aria-current="location"]::after{opacity:1;transform:scaleX(1)}
 .gb-header-tools{display:flex;align-items:stretch;flex:none;border:1px solid var(--gb-262626);border-radius:6px;background:var(--gb-0f0f0f);color:var(--gb-ededed)}
-.gb-language-control{position:relative;display:flex;align-items:center;min-height:40px;padding-inline:10px;cursor:pointer}
+.gb-language-control{position:relative}
+.gb-language-control summary{display:flex;align-items:center;min-height:40px;padding-inline:10px;cursor:pointer;list-style:none;border-radius:5px 0 0 5px}
+.gb-language-control summary::-webkit-details-marker{display:none}
 .gb-control-icons{display:flex;align-items:center;gap:6px;font:600 11px 'Geist Mono',ui-monospace,monospace}
 .gb-control-icons svg,.gb-header-row [data-mobile-menu] svg{fill:none;stroke:currentColor;stroke-width:1.65;stroke-linecap:round;stroke-linejoin:round}
-.gb-control-chevron{color:var(--gb-a1a1a1)}
-.gb-language-control select{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:pointer}
+.gb-control-chevron{color:var(--gb-a1a1a1);transition:transform .2s ease}
+.gb-language-control[open] .gb-control-chevron{transform:rotate(180deg)}
+.gb-language-menu{position:absolute;z-index:1;inset-block-start:calc(100% + 7px);inset-inline-end:0;width:min(220px,calc(100vw - 32px));max-height:calc(100dvh - 72px);box-sizing:border-box;margin:0;padding:5px;list-style:none;overflow:auto;overscroll-behavior:contain;background:var(--gb-0a0a0a);border:1px solid var(--gb-262626);border-radius:8px;box-shadow:var(--gb-log-shadow);transform-origin:top right;animation:gbMenuIn .2s cubic-bezier(.22,1,.36,1) both}
+.gb-language-menu button{width:100%;min-height:40px;display:grid;grid-template-columns:38px minmax(0,1fr) 14px;align-items:center;gap:8px;padding:0 8px;border:0;border-radius:5px;background:transparent;color:var(--gb-ededed);font:inherit;font-size:13px;text-align:start;cursor:pointer}
+.gb-language-menu button:hover,.gb-language-menu button:focus-visible,.gb-language-menu button[aria-current="true"]{background:var(--gb-111111)}
+.gb-language-menu button:focus-visible{outline:2px solid var(--gb-8a8a8a);outline-offset:-2px}
+.gb-language-code{color:var(--gb-8a8a8a);font:600 10px 'Geist Mono',ui-monospace,monospace}
+.gb-language-menu svg{visibility:hidden;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.gb-language-menu button[aria-current="true"] svg{visibility:visible}
 .gb-header-row #gbTheme,.gb-header-row [data-mobile-menu]{width:42px;min-height:40px;padding:0;display:grid;place-items:center;flex:none;background:transparent;color:var(--gb-ededed);cursor:pointer}
 .gb-header-row #gbTheme{border:0;border-inline-start:1px solid var(--gb-262626);border-radius:0 5px 5px 0}
 .gb-header-row [data-mobile-menu]{display:none;border:1px solid var(--gb-262626);border-radius:6px;background:var(--gb-0f0f0f)}
-.gb-language-control:hover,.gb-header-row #gbTheme:hover,.gb-header-row [data-mobile-menu]:hover{background:var(--gb-161616)}
-.gb-language-control:focus-within,.gb-header-row :is(button,a):focus-visible,.gb-menu-panel a:focus-visible{outline:2px solid var(--gb-ededed);outline-offset:2px}
+.gb-language-control summary:hover,.gb-language-control[open] summary,.gb-header-row #gbTheme:hover,.gb-header-row [data-mobile-menu]:hover{background:var(--gb-161616)}
+.gb-language-control summary:focus-visible,.gb-header-row :is(#gbTheme,[data-mobile-menu],a):focus-visible,.gb-menu-panel a:focus-visible{outline:2px solid var(--gb-ededed);outline-offset:2px}
 .gb-current-section,.gb-menu-panel{display:none}
 section[id]{scroll-margin-top:56px}
 @media (max-width:1100px){
@@ -424,8 +434,8 @@ section[id]{scroll-margin-top:56px}
   .gb-menu-panel nav a[aria-current="location"]{box-shadow:inset 2px 0 var(--gb-ededed);background:var(--gb-0f0f0f);color:var(--gb-ededed);font-weight:600}
 }
 @media (max-width:480px){.gb-header-row:has(.gb-current-section:not(:empty)) .gb-header-brand > span{display:none!important}}
-@media (max-width:380px){.gb-control-chevron{display:none}.gb-language-control{padding-inline:8px}}
-@media (prefers-reduced-motion:reduce){.gb-menu-panel{animation:none}}
+@media (max-width:380px){.gb-control-chevron{display:none}.gb-language-control summary{padding-inline:8px}}
+@media (prefers-reduced-motion:reduce){.gb-menu-panel,.gb-language-menu{animation:none}.gb-header-nav a,.gb-header-nav a::after,.gb-control-chevron{transition:none}}
 
 a{color:var(--gb-ededed);text-decoration:none}a:hover{color:var(--gb-ffffff)}
 ::selection{background:var(--gb-sel-bg);color:var(--gb-sel-color)}
@@ -492,10 +502,20 @@ footer nav a::after{content:"";position:absolute;inset:50% 0 auto;height:40px;tr
 </nav>
 <span class="gb-current-section" data-i18n-rendered="">{{ navCurrent }}</span>
 <div class="gb-header-tools">
-<label class="gb-language-control">
+<details class="gb-language-control">
+<summary aria-label="Idioma" data-i18n-attr="aria-label:auto.009433886003" sc-camel-on-click="{{ closeNav }}">
 <span aria-hidden="true" class="gb-control-icons"><svg height="16" width="16" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/></svg><span>{{ langLabel }}</span><svg class="gb-control-chevron" height="12" width="12" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></span>
-<select aria-label="Idioma" data-i18n-attr="aria-label:auto.009433886003" id="gbLang"><option value="pt">Português</option><option value="en">English</option><option value="es">Español</option><option value="fr">Français</option><option value="de">Deutsch</option><option value="ja">日本語</option><option value="zh-cn">简体中文</option><option value="it">Italiano</option><option value="ko">한국어</option><option value="ru">Русский</option></select>
-</label>
+</summary>
+<ul class="gb-language-menu">
+<sc-for as="language" list="{{ languageOptions }}">
+<li><button type="button" aria-current="{{ language.current }}" sc-camel-on-click="{{ language.pick }}">
+<span class="gb-language-code" aria-hidden="true">{{ language.code }}</span>
+<span lang="{{ language.tag }}" data-i18n-rendered="">{{ language.name }}</span>
+<svg aria-hidden="true" height="14" width="14" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg>
+</button></li>
+</sc-for>
+</ul>
+</details>
 <button aria-label="Modo claro" aria-pressed="false" data-i18n-attr="aria-label:gb.theme.label,title:gb.theme.label" data-icons="1" id="gbTheme" title="Modo claro" type="button"><svg aria-hidden="true" height="16" width="16" viewBox="0 0 24 24" style="display:var(--gb-sun);fill:none;stroke:currentColor;stroke-width:1.65;stroke-linecap:round;stroke-linejoin:round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg><svg aria-hidden="true" height="16" width="16" viewBox="0 0 24 24" style="display:var(--gb-moon);fill:none;stroke:currentColor;stroke-width:1.65;stroke-linecap:round;stroke-linejoin:round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
 </div>
 <button aria-expanded="{{ navOpen }}" aria-label="Menu" data-i18n-attr="aria-label:gb.nav.menu" data-mobile-menu="" aria-controls="gbMobileNav" sc-camel-on-click="{{ toggleNav }}" type="button"><svg aria-hidden="true" height="18" viewBox="0 0 24 24" style="display:block;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round" width="18"><path d="{{ navIcon }}"></path></svg></button>
@@ -1327,6 +1347,18 @@ footer nav a::after{content:"";position:absolute;inset:50% 0 auto;height:40px;tr
 </div>
 </x-dc>
 <script data-dc-script="" data-props='{"intensity":{"editor":"range","default":1,"min":0.3,"max":1.6,"step":0.05,"tsType":"number","section":"Luz"},"spread":{"editor":"range","default":1.8,"min":0.4,"max":2.4,"step":0.05,"tsType":"number","section":"Luz"},"speed":{"editor":"range","default":1,"min":0,"max":3,"step":0.1,"tsType":"number","section":"Luz"},"texture":{"editor":"range","default":0.8,"min":0,"max":1,"step":0.05,"tsType":"number","section":"Fundo"},"twin":{"editor":"boolean","default":true,"tsType":"boolean","section":"Engrenagem"}}' type="text/x-dc">
+const GB_LANGUAGES = [
+  ["pt", "Português"],
+  ["en", "English"],
+  ["es", "Español"],
+  ["fr", "Français"],
+  ["de", "Deutsch"],
+  ["ja", "日本語"],
+  ["zh-cn", "简体中文"],
+  ["it", "Italiano"],
+  ["ko", "한국어"],
+  ["ru", "Русский"]
+];
 const GB_NAV_SECTIONS = [
   ["aplicativo", "software", "Software"],
   ["oficina", "workshop", "Oficina"],
@@ -1347,9 +1379,13 @@ class Component extends DCLogic {
     this.updateActiveSection();
     this.onGbTheme = () => this.setState({}); window.addEventListener("gb-theme", this.onGbTheme);
     this.onGbLanguage = () => { this.setState({}); this.updateActiveSection(); }; window.addEventListener("gb-language", this.onGbLanguage);
-    this.onDoc = e => { if (this.state.dlOpen && !(e.target.closest && e.target.closest('[data-dl]'))) this.setState({ dlOpen: false }); };
+    this.onDoc = e => {
+      const language = document.querySelector(".gb-language-control[open]");
+      if (language && !language.contains(e.target)) language.open = false;
+      if (this.state.dlOpen && !e.target.closest?.("[data-dl]")) this.setState({ dlOpen: false });
+    };
     document.addEventListener("pointerdown", this.onDoc);
-    this.onK = e => { if (e.key === "Escape" && this.state.navOpen) { this.setState({ navOpen: false }); document.querySelector("[data-mobile-menu]")?.focus(); } if (e.key === "Escape" && this.state.dlOpen) this.setState({ dlOpen: false }); if (e.key === "Escape" && this.state.logOpen) this.setLog(false); if ((e.key === "Enter" || e.key === " ") && e.target && e.target.dataset && e.target.dataset.changelogCard) { e.preventDefault(); this.setLog(true); } };
+    this.onK = e => { if (this.handleLanguageKeys(e)) return; if (e.key === "Escape" && this.state.navOpen) { this.setState({ navOpen: false }); document.querySelector("[data-mobile-menu]")?.focus(); } if (e.key === "Escape" && this.state.dlOpen) this.setState({ dlOpen: false }); if (e.key === "Escape" && this.state.logOpen) this.setLog(false); if ((e.key === "Enter" || e.key === " ") && e.target && e.target.dataset && e.target.dataset.changelogCard) { e.preventDefault(); this.setLog(true); } };
     window.addEventListener("keydown", this.onK);
     this.simStart();
     this.onApScroll = () => { const a = document.querySelector("[data-appearance]"), o = document.getElementById("oficina"); if (!a || !o) return; const ob = o.getBoundingClientRect(), mq = document.getElementById("recursos") || document.getElementById("maquina"), end = (mq || o).getBoundingClientRect().bottom; const fx = a.getBoundingClientRect().bottom < 56 && end > 120; const full = ob.top > window.innerHeight * 0.55; if (fx !== !!this.state.apFixed || full !== (this.state.apFull !== false)) this.setState({ apFixed: fx, apFull: full }); };
@@ -1357,7 +1393,7 @@ class Component extends DCLogic {
     this.cpuT = setInterval(() => this.setState(s => { const a = (s.cpu || [28, 22, 34, 30, 26, 41, 35, 47, 39, 31, 44, 37, 29, 42, 33, 18]).slice(1), last = a[a.length - 1]; const n = Math.round(Math.min(92, Math.max(6, last + (Math.random() - 0.48) * 22 + (Math.random() < 0.12 ? 30 : 0)))); return { cpu: [...a, n] }; }), 900);
     this.applyChat(); requestAnimationFrame(() => this.applyChat());
   }
-  componentWillUnmount() { this.navReady?.disconnect(); cancelAnimationFrame(this.navFrame); window.removeEventListener("scroll", this.updateActiveSection); window.removeEventListener("resize", this.onR); window.removeEventListener("gb-theme", this.onGbTheme); window.removeEventListener("gb-language", this.onGbLanguage); window.removeEventListener("keydown", this.onK); document.removeEventListener("pointerdown", this.onDoc); clearInterval(this.simTimer); clearInterval(this.cpuT); document.removeEventListener("scroll", this.onApScroll, { capture: true }); this.simIO && this.simIO.disconnect(); document.body.style.overflow = ""; }
+  componentWillUnmount() { this.navReady?.disconnect(); cancelAnimationFrame(this.navFrame); this.sectionAnimation?.cancel(); window.removeEventListener("scroll", this.updateActiveSection); window.removeEventListener("resize", this.onR); window.removeEventListener("gb-theme", this.onGbTheme); window.removeEventListener("gb-language", this.onGbLanguage); window.removeEventListener("keydown", this.onK); document.removeEventListener("pointerdown", this.onDoc); clearInterval(this.simTimer); clearInterval(this.cpuT); document.removeEventListener("scroll", this.onApScroll, { capture: true }); this.simIO && this.simIO.disconnect(); document.body.style.overflow = ""; }
   openInitialSection() {
     if (performance.getEntriesByType("navigation")[0]?.type !== "navigate") return;
     const hash = window.location.hash;
@@ -1373,6 +1409,47 @@ class Component extends DCLogic {
     this.navReady = new MutationObserver(open);
     this.navReady.observe(root, { attributes: true, attributeFilter: ["data-i18n-loading"] });
     open();
+  }
+  languageOptions() {
+    const current = document.documentElement.lang.toLowerCase().replace("pt-br", "pt");
+    return {
+      langLabel: current.split("-")[0].toUpperCase(),
+      languageOptions: GB_LANGUAGES.map(([code, name]) => ({
+        code: code.toUpperCase(), name, tag: code === "pt" ? "pt-BR" : code,
+        current: code === current ? "true" : undefined,
+        pick: event => {
+          const picker = event.currentTarget.closest("details");
+          const trigger = picker.querySelector("summary");
+          const { left, top, width, height } = trigger.getBoundingClientRect();
+          picker.open = false;
+          trigger.focus({ preventScroll: true });
+          if (code !== current) window.gbSetLang?.(code, {
+            x: (left + width / 2) / window.innerWidth,
+            y: (top + height / 2) / window.innerHeight
+          });
+        }
+      }))
+    };
+  }
+  handleLanguageKeys(event) {
+    const picker = document.querySelector(".gb-language-control[open]");
+    if (event.key === "Escape" && picker) {
+      picker.open = false;
+      picker.querySelector("summary").focus({ preventScroll: true });
+      event.preventDefault();
+      return true;
+    }
+    const control = event.target.closest?.(".gb-language-control");
+    const keys = ["ArrowDown", "ArrowUp", "Home", "End"];
+    if (!control || !keys.includes(event.key)) return false;
+    control.open = true;
+    const options = [...control.querySelectorAll(".gb-language-menu button")];
+    const index = options.indexOf(event.target);
+    const next = event.key === "Home" ? 0 : event.key === "End" ? options.length - 1
+      : event.key === "ArrowUp" ? (index < 0 ? options.length - 1 : index - 1) : index + 1;
+    options[(next + options.length) % options.length]?.focus();
+    event.preventDefault();
+    return true;
   }
   headerNav() {
     const navItems = GB_NAV_SECTIONS.map(([id, key, label]) => ({
@@ -1395,7 +1472,17 @@ class Component extends DCLogic {
       if (scrollBottom >= document.documentElement.scrollHeight - 2) {
         activeSection = this.navSections.at(-1)?.id ?? activeSection;
       }
-      if (activeSection !== this.state.activeSection) this.setState({ activeSection });
+      if (activeSection !== this.state.activeSection) {
+        this.setState({ activeSection }, () => {
+          const indicator = document.querySelector(".gb-current-section");
+          if (!indicator?.getClientRects().length || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+          this.sectionAnimation?.cancel();
+          this.sectionAnimation = indicator.animate(
+            [{ opacity: .45, transform: "translateY(3px)" }, { opacity: 1, transform: "none" }],
+            { duration: 240, easing: "cubic-bezier(.22,1,.36,1)" }
+          );
+        });
+      }
     });
   };
   simStart() {
@@ -1719,7 +1806,8 @@ class Component extends DCLogic {
       sideCollapsed: !!this.state.sideC, sideOpen: !this.state.sideC, toggleSide: () => this.setState(s => ({ sideC: !s.sideC })),
       logOpen: !!this.state.logOpen,
       ...this.headerNav(),
-      heroTheme: this.siteLight() ? "light" : "dark", navOpen: !!this.state.navOpen, langLabel: document.documentElement.lang === "pt-BR" ? "PT" : document.documentElement.lang.split("-")[0].toUpperCase(), toggleNav: () => this.setState(s => ({ navOpen: !s.navOpen })), closeNav: () => this.setState({ navOpen: false }), navIcon: this.state.navOpen ? "M6 6l12 12M18 6 6 18" : "M4 7h16M4 12h16M4 17h16",
+      ...this.languageOptions(),
+      heroTheme: this.siteLight() ? "light" : "dark", navOpen: !!this.state.navOpen, toggleNav: () => this.setState(s => ({ navOpen: !s.navOpen })), closeNav: () => this.setState({ navOpen: false }), navIcon: this.state.navOpen ? "M6 6l12 12M18 6 6 18" : "M4 7h16M4 12h16M4 17h16",
       dlOpen: !!this.state.dlOpen, dlChevron: this.state.dlOpen ? "rotate(180deg)" : "none",
       toggleDl: () => this.setState(s => ({ dlOpen: !s.dlOpen })), closeDl: () => this.setState({ dlOpen: false }),
       logSections: this._log || (this._log = this.changelog()),
