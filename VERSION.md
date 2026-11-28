@@ -1,12 +1,19 @@
 # Version history — generalbots.org
 
-**Current version: 1.7.11** (2026-11-28)
+**Current version: 1.7.12** (2026-11-28)
 
 This file tracks every change made to the website. Per `AGENTS.md`, any change to
 this repository must bump the version and add an entry here in the same commit.
 
 Versioning: **major** = redesign / breaking navigation change, **minor** = new
 page or section, **patch** = content, styling or bug fix.
+
+---
+
+## 1.7.12 — 2026-11-28
+
+### Fixed
+- Eliminated the six SVG path rendering errors in the homepage console: icon templates now declare their dynamic `d` binding via `sc-camel-d` instead of an unresolved `{{ ... }}` placeholder in the attribute, so the browser never parses an invalid path command while the x-dc runtime mounts.
 
 ---
 
