@@ -1,12 +1,19 @@
 # Version history — generalbots.org
 
-**Current version: 1.7.10** (2026-11-28)
+**Current version: 1.7.11** (2026-11-28)
 
 This file tracks every change made to the website. Per `AGENTS.md`, any change to
 this repository must bump the version and add an entry here in the same commit.
 
 Versioning: **major** = redesign / breaking navigation change, **minor** = new
 page or section, **patch** = content, styling or bug fix.
+
+---
+
+## 1.7.11 — 2026-11-28
+
+### Changed
+- Replaced the November 2026 magazine PDF (issue #41, "O Cavalo de General Bots") with the v10 revision (34 pages, 5.1 MB). The public URL `/magazine/o-cavalo-de-general-bots-2026-11-41.pdf`, cover and viewer entry are unchanged; only the file and the localized download-size labels (plus the HTML fallback text) were updated.
 
 ---
 
